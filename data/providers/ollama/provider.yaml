@@ -1,0 +1,10 @@
+apiVersion: relay.wyolet.dev/v1
+kind: Provider
+metadata:
+    name: ollama
+    displayName: Ollama
+    description: Run large language models locally with Ollama.
+spec:
+    homepageURL: https://ollama.com
+    icon:
+      path: /provider/ollama.png
