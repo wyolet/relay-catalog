@@ -2,8 +2,8 @@ apiVersion: relay.wyolet.dev/v1
 kind: RateLimit
 metadata:
   name: openai-tier-5-rl
-  displayName: OpenAI Tier 5 rate limits
-  description: "OpenAI Usage Tier 5 ($1000+ paid, 30+ days). Numbers reflect gpt-5.4 defaults per devtk.ai (May 2026): 15,000 RPM / 40M TPM. Binding constraint is typically RPM, not TPM."
+  displayName: OpenAI Tier 5 — standard
+  description: "OpenAI Usage Tier 5 default caps. Applies to gpt-5/5.4/5.5 family unless overridden."
   owner:
     kind: host
     name: openai
@@ -20,6 +20,46 @@ spec:
       strategy: sliding-window
 ---
 apiVersion: relay.wyolet.dev/v1
+kind: RateLimit
+metadata:
+  name: openai-tier-5-gpt-5-5-pro-rl
+  displayName: OpenAI Tier 5 — gpt-5.5-pro
+  owner:
+    kind: host
+    name: openai
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 2000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 4000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1
+kind: RateLimit
+metadata:
+  name: openai-tier-5-gpt-5-4-pro-rl
+  displayName: OpenAI Tier 5 — gpt-5.4-pro
+  owner:
+    kind: host
+    name: openai
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 10000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 30000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1
 kind: Policy
 metadata:
   name: openai-tier-5
@@ -28,4 +68,10 @@ metadata:
     kind: host
     name: openai
 spec:
-  rateLimit: openai-tier-5-rl
+  rlBindings:
+    - models: ["openai/gpt-5.5-pro"]
+      rateLimit: openai-tier-5-gpt-5-5-pro-rl
+    - models: ["openai/gpt-5.4-pro"]
+      rateLimit: openai-tier-5-gpt-5-4-pro-rl
+    - models: ["openai"]
+      rateLimit: openai-tier-5-rl
