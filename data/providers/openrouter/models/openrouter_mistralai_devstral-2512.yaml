@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter/mistralai/devstral-2512
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: openrouter/mistralai/devstral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openrouter
+          upstreamName: openrouter/mistralai/devstral-2512
+          adapter: openai
+    family: openrouter/mistralai/devstral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 65536
+    contextWindowTotal: 262144
+    snapshots:
+        - name: openrouter/mistralai/devstral-2512
+          originalName: openrouter/mistralai/devstral-2512
+    pointer: openrouter/mistralai/devstral-2512

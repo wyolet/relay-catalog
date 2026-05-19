@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: github_copilot/gpt-4o-2024-08-06
+    owner:
+        kind: provider
+        name: github_copilot
+    labels:
+        family: github_copilot/gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: github_copilot
+          upstreamName: github_copilot/gpt-4o-2024-08-06
+          adapter: openai
+    family: github_copilot/gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 64000
+    contextWindowOutput: 16384
+    contextWindowTotal: 64000
+    snapshots:
+        - name: github_copilot/gpt-4o-2024-08-06
+          releasedAt: "2024-08-06"
+          originalName: github_copilot/gpt-4o-2024-08-06
+    pointer: github_copilot/gpt-4o-2024-08-06

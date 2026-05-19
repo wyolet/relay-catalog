@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: fireworks_ai/kimi-k2p5
+    owner:
+        kind: provider
+        name: fireworks_ai
+    labels:
+        family: fireworks_ai/kimi
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: fireworks_ai
+          upstreamName: fireworks_ai/kimi-k2p5
+          adapter: openai
+    family: fireworks_ai/kimi
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    snapshots:
+        - name: fireworks_ai/kimi-k2p5
+          originalName: fireworks_ai/kimi-k2p5
+    pointer: fireworks_ai/kimi-k2p5

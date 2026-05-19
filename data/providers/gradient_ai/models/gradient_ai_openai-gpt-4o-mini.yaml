@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gradient_ai/openai-gpt-4o-mini
+    owner:
+        kind: provider
+        name: gradient_ai
+    labels:
+        family: gradient_ai/openai
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: gradient_ai
+          upstreamName: gradient_ai/openai-gpt-4o-mini
+          adapter: openai
+    family: gradient_ai/openai
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    snapshots:
+        - name: gradient_ai/openai-gpt-4o-mini
+          originalName: gradient_ai/openai-gpt-4o-mini
+    pointer: gradient_ai/openai-gpt-4o-mini

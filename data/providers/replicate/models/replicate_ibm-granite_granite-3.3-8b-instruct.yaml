@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: replicate/ibm-granite/granite-3.3-8b-instruct
+    owner:
+        kind: provider
+        name: replicate
+    labels:
+        family: replicate/ibm
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: replicate
+          upstreamName: replicate/ibm-granite/granite-3.3-8b-instruct
+          adapter: openai
+    family: replicate/ibm
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: replicate/ibm-granite/granite-3.3-8b-instruct
+          originalName: replicate/ibm-granite/granite-3.3-8b-instruct
+    pointer: replicate/ibm-granite/granite-3.3-8b-instruct

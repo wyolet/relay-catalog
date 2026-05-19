@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: moonshot
+    displayName: Moonshot
+    description: Moonshot — auto-imported, requires hand curation.
+    owner:
+        kind: system
+spec: {}

@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: databricks-databricks_databricks-claude-opus-4-5
+    owner:
+        kind: host
+        id: databricks
+spec:
+    currency: USD
+    targetModels:
+        - databricks/databricks-claude-opus-4-5
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 5.00003
+        - meter: tokens.output
+          unit: per_million
+          amount: 25.000010000000003

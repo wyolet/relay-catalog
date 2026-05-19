@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: azure_ai/MAI-DS-R1
+    owner:
+        kind: provider
+        name: azure_ai
+    labels:
+        family: azure_ai/MAI
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: azure_ai
+          upstreamName: azure_ai/MAI-DS-R1
+          adapter: openai
+    family: azure_ai/MAI
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    snapshots:
+        - name: azure_ai/MAI-DS-R1
+          originalName: azure_ai/MAI-DS-R1
+    pointer: azure_ai/MAI-DS-R1

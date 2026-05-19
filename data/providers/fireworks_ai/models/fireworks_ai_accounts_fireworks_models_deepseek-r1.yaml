@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: fireworks_ai/accounts/fireworks/models/deepseek-r1
+    owner:
+        kind: provider
+        name: fireworks_ai
+    labels:
+        family: fireworks_ai/accounts/fireworks/models/deepseek
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: fireworks_ai
+          upstreamName: fireworks_ai/accounts/fireworks/models/deepseek-r1
+          adapter: openai
+    family: fireworks_ai/accounts/fireworks/models/deepseek
+    capabilities:
+        chat: true
+        streaming: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 20480
+    contextWindowTotal: 128000
+    snapshots:
+        - name: fireworks_ai/accounts/fireworks/models/deepseek-r1
+          originalName: fireworks_ai/accounts/fireworks/models/deepseek-r1
+    pointer: fireworks_ai/accounts/fireworks/models/deepseek-r1

@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cerebras/llama-3.3-70b
+    owner:
+        kind: provider
+        name: cerebras
+    labels:
+        family: cerebras/llama
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: cerebras
+          upstreamName: cerebras/llama-3.3-70b
+          adapter: openai
+    family: cerebras/llama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: cerebras/llama-3.3-70b
+          originalName: cerebras/llama-3.3-70b
+    pointer: cerebras/llama-3.3-70b

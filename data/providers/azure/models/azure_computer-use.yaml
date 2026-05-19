@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: azure/computer-use
+    owner:
+        kind: provider
+        name: azure
+    labels:
+        family: azure/computer
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: azure
+          upstreamName: azure/computer-use
+          adapter: openai
+    family: azure/computer
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        vision: true
+        reasoning: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 1024
+    contextWindowTotal: 8192
+    aliases:
+        - azure/computer-use-preview
+    snapshots:
+        - name: azure/computer-use
+          originalName: azure/computer-use
+    pointer: azure/computer-use

@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: codestral/codestral
+    owner:
+        kind: provider
+        name: codestral
+    labels:
+        family: codestral/codestral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: codestral
+          upstreamName: codestral/codestral
+          adapter: openai
+    family: codestral/codestral
+    capabilities:
+        chat: true
+        streaming: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 8191
+    contextWindowTotal: 32000
+    aliases:
+        - codestral/codestral-latest
+    snapshots:
+        - name: codestral/codestral
+          originalName: codestral/codestral
+    pointer: codestral/codestral

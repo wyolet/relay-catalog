@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: novita/meta-llama/llama-3.3-70b-instruct
+    owner:
+        kind: provider
+        name: novita
+    labels:
+        family: novita/meta
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: novita
+          upstreamName: novita/meta-llama/llama-3.3-70b-instruct
+          adapter: openai
+    family: novita/meta
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 120000
+    contextWindowTotal: 131072
+    snapshots:
+        - name: novita/meta-llama/llama-3.3-70b-instruct
+          originalName: novita/meta-llama/llama-3.3-70b-instruct
+    pointer: novita/meta-llama/llama-3.3-70b-instruct

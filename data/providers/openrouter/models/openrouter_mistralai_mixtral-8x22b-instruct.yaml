@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter/mistralai/mixtral-8x22b-instruct
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: openrouter/mistralai/mixtral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openrouter
+          upstreamName: openrouter/mistralai/mixtral-8x22b-instruct
+          adapter: openai
+    family: openrouter/mistralai/mixtral
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 65536
+    contextWindowOutput: 65536
+    contextWindowTotal: 65536
+    snapshots:
+        - name: openrouter/mistralai/mixtral-8x22b-instruct
+          originalName: openrouter/mistralai/mixtral-8x22b-instruct
+    pointer: openrouter/mistralai/mixtral-8x22b-instruct

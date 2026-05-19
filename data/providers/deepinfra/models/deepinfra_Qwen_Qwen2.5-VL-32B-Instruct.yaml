@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepinfra/Qwen/Qwen2.5-VL-32B-Instruct
+    owner:
+        kind: provider
+        name: deepinfra
+    labels:
+        family: deepinfra/Qwen/Qwen2.5
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: deepinfra
+          upstreamName: deepinfra/Qwen/Qwen2.5-VL-32B-Instruct
+          adapter: openai
+    family: deepinfra/Qwen/Qwen2.5
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: deepinfra/Qwen/Qwen2.5-VL-32B-Instruct
+          originalName: deepinfra/Qwen/Qwen2.5-VL-32B-Instruct
+    pointer: deepinfra/Qwen/Qwen2.5-VL-32B-Instruct

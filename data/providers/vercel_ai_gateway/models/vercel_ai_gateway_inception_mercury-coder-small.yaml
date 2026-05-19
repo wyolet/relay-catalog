@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: vercel_ai_gateway/inception/mercury-coder-small
+    owner:
+        kind: provider
+        name: vercel_ai_gateway
+    labels:
+        family: vercel_ai_gateway/inception/mercury
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vercel_ai_gateway
+          upstreamName: vercel_ai_gateway/inception/mercury-coder-small
+          adapter: openai
+    family: vercel_ai_gateway/inception/mercury
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 16384
+    contextWindowTotal: 32000
+    snapshots:
+        - name: vercel_ai_gateway/inception/mercury-coder-small
+          originalName: vercel_ai_gateway/inception/mercury-coder-small
+    pointer: vercel_ai_gateway/inception/mercury-coder-small

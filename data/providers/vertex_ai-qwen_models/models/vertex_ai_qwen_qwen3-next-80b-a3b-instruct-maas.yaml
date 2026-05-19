@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: vertex_ai/qwen/qwen3-next-80b-a3b-instruct-maas
+    owner:
+        kind: provider
+        name: vertex_ai-qwen_models
+    labels:
+        family: vertex_ai/qwen/qwen3
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vertex_ai-qwen_models
+          upstreamName: vertex_ai/qwen/qwen3-next-80b-a3b-instruct-maas
+          adapter: openai
+    family: vertex_ai/qwen/qwen3
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    snapshots:
+        - name: vertex_ai/qwen/qwen3-next-80b-a3b-instruct-maas
+          originalName: vertex_ai/qwen/qwen3-next-80b-a3b-instruct-maas
+    pointer: vertex_ai/qwen/qwen3-next-80b-a3b-instruct-maas

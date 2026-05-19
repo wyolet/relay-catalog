@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: vercel_ai_gateway/mistral/mistral-saba-24b
+    owner:
+        kind: provider
+        name: vercel_ai_gateway
+    labels:
+        family: vercel_ai_gateway/mistral/mistral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vercel_ai_gateway
+          upstreamName: vercel_ai_gateway/mistral/mistral-saba-24b
+          adapter: openai
+    family: vercel_ai_gateway/mistral/mistral
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    snapshots:
+        - name: vercel_ai_gateway/mistral/mistral-saba-24b
+          originalName: vercel_ai_gateway/mistral/mistral-saba-24b
+    pointer: vercel_ai_gateway/mistral/mistral-saba-24b

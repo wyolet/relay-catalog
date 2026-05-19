@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: novita/qwen/qwen3-max
+    owner:
+        kind: provider
+        name: novita
+    labels:
+        family: novita/qwen/qwen3
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: novita
+          upstreamName: novita/qwen/qwen3-max
+          adapter: openai
+    family: novita/qwen/qwen3
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 65536
+    contextWindowTotal: 262144
+    snapshots:
+        - name: novita/qwen/qwen3-max
+          originalName: novita/qwen/qwen3-max
+    pointer: novita/qwen/qwen3-max

@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepinfra/meta-llama/Llama-Guard-4-12B
+    owner:
+        kind: provider
+        name: deepinfra
+    labels:
+        family: deepinfra/meta
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: deepinfra
+          upstreamName: deepinfra/meta-llama/Llama-Guard-4-12B
+          adapter: openai
+    family: deepinfra/meta
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 163840
+    contextWindowOutput: 163840
+    contextWindowTotal: 163840
+    snapshots:
+        - name: deepinfra/meta-llama/Llama-Guard-4-12B
+          originalName: deepinfra/meta-llama/Llama-Guard-4-12B
+    pointer: deepinfra/meta-llama/Llama-Guard-4-12B

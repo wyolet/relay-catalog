@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: gmi-gmi_openai_gpt-4o-mini
+    owner:
+        kind: host
+        id: gmi
+spec:
+    currency: USD
+    targetModels:
+        - gmi/openai/gpt-4o-mini
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.15
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.6

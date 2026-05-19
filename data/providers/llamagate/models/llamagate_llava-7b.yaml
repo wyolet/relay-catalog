@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llamagate/llava-7b
+    owner:
+        kind: provider
+        name: llamagate
+    labels:
+        family: llamagate/llava
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: llamagate
+          upstreamName: llamagate/llava-7b
+          adapter: openai
+    family: llamagate/llava
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 4096
+    contextWindowOutput: 2048
+    contextWindowTotal: 4096
+    snapshots:
+        - name: llamagate/llava-7b
+          originalName: llamagate/llava-7b
+    pointer: llamagate/llava-7b

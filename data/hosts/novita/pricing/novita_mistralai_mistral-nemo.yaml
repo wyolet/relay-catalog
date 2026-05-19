@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: novita-novita_mistralai_mistral-nemo
+    owner:
+        kind: host
+        id: novita
+spec:
+    currency: USD
+    targetModels:
+        - novita/mistralai/mistral-nemo
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.04
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.16999999999999998

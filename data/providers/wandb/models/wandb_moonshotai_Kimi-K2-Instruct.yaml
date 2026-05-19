@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: wandb/moonshotai/Kimi-K2-Instruct
+    owner:
+        kind: provider
+        name: wandb
+    labels:
+        family: wandb/moonshotai/Kimi
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: wandb
+          upstreamName: wandb/moonshotai/Kimi-K2-Instruct
+          adapter: openai
+    family: wandb/moonshotai/Kimi
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: wandb/moonshotai/Kimi-K2-Instruct
+          originalName: wandb/moonshotai/Kimi-K2-Instruct
+    pointer: wandb/moonshotai/Kimi-K2-Instruct

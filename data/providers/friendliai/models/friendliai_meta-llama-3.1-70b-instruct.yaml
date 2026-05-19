@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: friendliai/meta-llama-3.1-70b-instruct
+    owner:
+        kind: provider
+        name: friendliai
+    labels:
+        family: friendliai/meta
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: friendliai
+          upstreamName: friendliai/meta-llama-3.1-70b-instruct
+          adapter: openai
+    family: friendliai/meta
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    snapshots:
+        - name: friendliai/meta-llama-3.1-70b-instruct
+          originalName: friendliai/meta-llama-3.1-70b-instruct
+    pointer: friendliai/meta-llama-3.1-70b-instruct

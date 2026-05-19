@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: deepinfra-deepinfra_allenai_olmOCR-7B-0725-FP8
+    owner:
+        kind: host
+        id: deepinfra
+spec:
+    currency: USD
+    targetModels:
+        - deepinfra/allenai/olmOCR-7B-0725-FP8
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.27
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.5

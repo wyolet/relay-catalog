@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: azure/gpt-35-turbo
+    owner:
+        kind: provider
+        name: azure
+    labels:
+        family: azure/gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: azure
+          upstreamName: azure/gpt-35-turbo
+          adapter: openai
+    family: azure/gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 4097
+    contextWindowOutput: 4096
+    contextWindowTotal: 4097
+    snapshots:
+        - name: azure/gpt-35-turbo
+          originalName: azure/gpt-35-turbo
+    pointer: azure/gpt-35-turbo

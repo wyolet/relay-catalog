@@ -1,0 +1,24 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: minimax-minimax_MiniMax-M2.5-lightning
+    owner:
+        kind: host
+        id: minimax
+spec:
+    currency: USD
+    targetModels:
+        - minimax/MiniMax-M2.5-lightning
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.4
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.375
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.03

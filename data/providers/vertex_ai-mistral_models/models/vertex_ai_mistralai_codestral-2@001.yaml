@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: vertex_ai/mistralai/codestral-2@001
+    owner:
+        kind: provider
+        name: vertex_ai-mistral_models
+    labels:
+        family: vertex_ai/mistralai/codestral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vertex_ai-mistral_models
+          upstreamName: vertex_ai/mistralai/codestral-2@001
+          adapter: openai
+    family: vertex_ai/mistralai/codestral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: vertex_ai/mistralai/codestral-2@001
+          originalName: vertex_ai/mistralai/codestral-2@001
+    pointer: vertex_ai/mistralai/codestral-2@001

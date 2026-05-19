@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: databricks-databricks_databricks-gemma-3-12b
+    owner:
+        kind: host
+        id: databricks
+spec:
+    currency: USD
+    targetModels:
+        - databricks/databricks-gemma-3-12b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.15000999999999998
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.5000100000000001

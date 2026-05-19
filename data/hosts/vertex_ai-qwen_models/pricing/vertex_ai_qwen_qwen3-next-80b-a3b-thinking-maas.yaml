@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: vertex_ai-qwen_models-vertex_ai_qwen_qwen3-next-80b-a3b-thinking-maas
+    owner:
+        kind: host
+        id: vertex_ai-qwen_models
+spec:
+    currency: USD
+    targetModels:
+        - vertex_ai/qwen/qwen3-next-80b-a3b-thinking-maas
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.15
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.2

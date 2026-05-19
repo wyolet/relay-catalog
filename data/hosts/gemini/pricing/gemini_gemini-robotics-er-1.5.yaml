@@ -1,0 +1,21 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: gemini-gemini_gemini-robotics-er-1.5
+    owner:
+        kind: host
+        id: gemini
+spec:
+    currency: USD
+    targetModels:
+        - gemini/gemini-robotics-er-1.5
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.5
+        - meter: tokens.reasoning
+          unit: per_million
+          amount: 2.5

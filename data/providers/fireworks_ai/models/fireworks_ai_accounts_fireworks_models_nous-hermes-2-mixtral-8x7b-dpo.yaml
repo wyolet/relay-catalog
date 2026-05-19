@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: fireworks_ai/accounts/fireworks/models/nous-hermes-2-mixtral-8x7b-dpo
+    owner:
+        kind: provider
+        name: fireworks_ai
+    labels:
+        family: fireworks_ai/accounts/fireworks/models/nous
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: fireworks_ai
+          upstreamName: fireworks_ai/accounts/fireworks/models/nous-hermes-2-mixtral-8x7b-dpo
+          adapter: openai
+    family: fireworks_ai/accounts/fireworks/models/nous
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    snapshots:
+        - name: fireworks_ai/accounts/fireworks/models/nous-hermes-2-mixtral-8x7b-dpo
+          originalName: fireworks_ai/accounts/fireworks/models/nous-hermes-2-mixtral-8x7b-dpo
+    pointer: fireworks_ai/accounts/fireworks/models/nous-hermes-2-mixtral-8x7b-dpo

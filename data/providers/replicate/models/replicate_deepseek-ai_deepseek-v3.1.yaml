@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: replicate/deepseek-ai/deepseek-v3.1
+    owner:
+        kind: provider
+        name: replicate
+    labels:
+        family: replicate/deepseek
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: replicate
+          upstreamName: replicate/deepseek-ai/deepseek-v3.1
+          adapter: openai
+    family: replicate/deepseek
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 163840
+    contextWindowOutput: 163840
+    contextWindowTotal: 163840
+    snapshots:
+        - name: replicate/deepseek-ai/deepseek-v3.1
+          originalName: replicate/deepseek-ai/deepseek-v3.1
+    pointer: replicate/deepseek-ai/deepseek-v3.1

@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: novita/Sao10K/L3-8B-Stheno-v3.2
+    owner:
+        kind: provider
+        name: novita
+    labels:
+        family: novita/Sao10K/L3
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: novita
+          upstreamName: novita/Sao10K/L3-8B-Stheno-v3.2
+          adapter: openai
+    family: novita/Sao10K/L3
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 32000
+    contextWindowTotal: 8192
+    snapshots:
+        - name: novita/Sao10K/L3-8B-Stheno-v3.2
+          originalName: novita/Sao10K/L3-8B-Stheno-v3.2
+    pointer: novita/Sao10K/L3-8B-Stheno-v3.2

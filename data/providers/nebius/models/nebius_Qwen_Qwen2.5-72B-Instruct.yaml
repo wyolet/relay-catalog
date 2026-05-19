@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nebius/Qwen/Qwen2.5-72B-Instruct
+    owner:
+        kind: provider
+        name: nebius
+    labels:
+        family: nebius/Qwen/Qwen2.5
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: nebius
+          upstreamName: nebius/Qwen/Qwen2.5-72B-Instruct
+          adapter: openai
+    family: nebius/Qwen/Qwen2.5
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: nebius/Qwen/Qwen2.5-72B-Instruct
+          originalName: nebius/Qwen/Qwen2.5-72B-Instruct
+    pointer: nebius/Qwen/Qwen2.5-72B-Instruct

@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: fireworks_ai/accounts/fireworks/models/nemotron-nano-v2-12b-vl
+    owner:
+        kind: provider
+        name: fireworks_ai
+    labels:
+        family: fireworks_ai/accounts/fireworks/models/nemotron
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: fireworks_ai
+          upstreamName: fireworks_ai/accounts/fireworks/models/nemotron-nano-v2-12b-vl
+          adapter: openai
+    family: fireworks_ai/accounts/fireworks/models/nemotron
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 4096
+    contextWindowOutput: 4096
+    contextWindowTotal: 4096
+    snapshots:
+        - name: fireworks_ai/accounts/fireworks/models/nemotron-nano-v2-12b-vl
+          originalName: fireworks_ai/accounts/fireworks/models/nemotron-nano-v2-12b-vl
+    pointer: fireworks_ai/accounts/fireworks/models/nemotron-nano-v2-12b-vl

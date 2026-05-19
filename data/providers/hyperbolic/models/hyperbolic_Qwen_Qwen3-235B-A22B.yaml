@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: hyperbolic/Qwen/Qwen3-235B-A22B
+    owner:
+        kind: provider
+        name: hyperbolic
+    labels:
+        family: hyperbolic/Qwen/Qwen3
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: hyperbolic
+          upstreamName: hyperbolic/Qwen/Qwen3-235B-A22B
+          adapter: openai
+    family: hyperbolic/Qwen/Qwen3
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    snapshots:
+        - name: hyperbolic/Qwen/Qwen3-235B-A22B
+          originalName: hyperbolic/Qwen/Qwen3-235B-A22B
+    pointer: hyperbolic/Qwen/Qwen3-235B-A22B

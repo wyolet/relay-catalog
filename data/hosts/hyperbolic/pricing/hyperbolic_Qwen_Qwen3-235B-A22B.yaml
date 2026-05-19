@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: hyperbolic-hyperbolic_Qwen_Qwen3-235B-A22B
+    owner:
+        kind: host
+        id: hyperbolic
+spec:
+    currency: USD
+    targetModels:
+        - hyperbolic/Qwen/Qwen3-235B-A22B
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.output
+          unit: per_million
+          amount: 2

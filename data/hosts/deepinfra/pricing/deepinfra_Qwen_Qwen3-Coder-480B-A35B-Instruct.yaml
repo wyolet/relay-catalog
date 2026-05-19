@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: deepinfra-deepinfra_Qwen_Qwen3-Coder-480B-A35B-Instruct
+    owner:
+        kind: host
+        id: deepinfra
+spec:
+    currency: USD
+    targetModels:
+        - deepinfra/Qwen/Qwen3-Coder-480B-A35B-Instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.39999999999999997
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.5999999999999999

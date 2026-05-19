@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: watsonx/ibm/granite-ttm-512-96-r2
+    owner:
+        kind: provider
+        name: watsonx
+    labels:
+        family: watsonx/ibm/granite
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: watsonx
+          upstreamName: watsonx/ibm/granite-ttm-512-96-r2
+          adapter: openai
+    family: watsonx/ibm/granite
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 512
+    contextWindowOutput: 512
+    contextWindowTotal: 512
+    snapshots:
+        - name: watsonx/ibm/granite-ttm-512-96-r2
+          originalName: watsonx/ibm/granite-ttm-512-96-r2
+    pointer: watsonx/ibm/granite-ttm-512-96-r2

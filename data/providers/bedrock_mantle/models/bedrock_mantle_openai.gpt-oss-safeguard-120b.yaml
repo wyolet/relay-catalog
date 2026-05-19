@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: bedrock_mantle/openai.gpt-oss-safeguard-120b
+    owner:
+        kind: provider
+        name: bedrock_mantle
+    labels:
+        family: bedrock_mantle/openai.gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock_mantle
+          upstreamName: bedrock_mantle/openai.gpt-oss-safeguard-120b
+          adapter: openai
+    family: bedrock_mantle/openai.gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 65536
+    contextWindowTotal: 131072
+    snapshots:
+        - name: bedrock_mantle/openai.gpt-oss-safeguard-120b
+          originalName: bedrock_mantle/openai.gpt-oss-safeguard-120b
+    pointer: bedrock_mantle/openai.gpt-oss-safeguard-120b

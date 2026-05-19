@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: azure_ai/jais-30b-chat
+    owner:
+        kind: provider
+        name: azure_ai
+    labels:
+        family: azure_ai/jais
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: azure_ai
+          upstreamName: azure_ai/jais-30b-chat
+          adapter: openai
+    family: azure_ai/jais
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    snapshots:
+        - name: azure_ai/jais-30b-chat
+          originalName: azure_ai/jais-30b-chat
+    pointer: azure_ai/jais-30b-chat

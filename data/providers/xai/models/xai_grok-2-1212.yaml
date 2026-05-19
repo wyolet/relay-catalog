@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: xai/grok-2-1212
+    owner:
+        kind: provider
+        name: xai
+    labels:
+        family: xai/grok
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: xai
+          upstreamName: xai/grok-2-1212
+          adapter: openai
+    family: xai/grok
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        webSearch: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    snapshots:
+        - name: xai/grok-2-1212
+          originalName: xai/grok-2-1212
+    pointer: xai/grok-2-1212

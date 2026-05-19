@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter/openai/gpt-4o
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: openrouter/openai/gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openrouter
+          upstreamName: openrouter/openai/gpt-4o-2024-05-13
+          adapter: openai
+    family: openrouter/openai/gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        vision: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    snapshots:
+        - name: openrouter/openai/gpt-4o-2024-05-13
+          releasedAt: "2024-05-13"
+          originalName: openrouter/openai/gpt-4o-2024-05-13
+    pointer: openrouter/openai/gpt-4o-2024-05-13

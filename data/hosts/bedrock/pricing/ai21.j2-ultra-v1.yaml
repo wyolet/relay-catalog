@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: bedrock-ai21.j2-ultra-v1
+    owner:
+        kind: host
+        id: bedrock
+spec:
+    currency: USD
+    targetModels:
+        - ai21.j2-ultra-v1
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 18.8
+        - meter: tokens.output
+          unit: per_million
+          amount: 18.8

@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepinfra/mistralai/Mistral-Small-24B-Instruct-2501
+    owner:
+        kind: provider
+        name: deepinfra
+    labels:
+        family: deepinfra/mistralai/Mistral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: deepinfra
+          upstreamName: deepinfra/mistralai/Mistral-Small-24B-Instruct-2501
+          adapter: openai
+    family: deepinfra/mistralai/Mistral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    snapshots:
+        - name: deepinfra/mistralai/Mistral-Small-24B-Instruct-2501
+          originalName: deepinfra/mistralai/Mistral-Small-24B-Instruct-2501
+    pointer: deepinfra/mistralai/Mistral-Small-24B-Instruct-2501

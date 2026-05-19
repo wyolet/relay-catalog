@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: gemini-gemini_gemini-gemma-2-9b-it
+    owner:
+        kind: host
+        id: gemini
+spec:
+    currency: USD
+    targetModels:
+        - gemini/gemini-gemma-2-9b-it
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.35
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.0499999999999998

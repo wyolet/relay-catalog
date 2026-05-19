@@ -1,0 +1,21 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: dashscope-dashscope_qwen-plus-2025-07-14
+    owner:
+        kind: host
+        id: dashscope
+spec:
+    currency: USD
+    targetModels:
+        - dashscope/qwen-plus-2025-07-14
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.39999999999999997
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.2
+        - meter: tokens.reasoning
+          unit: per_million
+          amount: 4

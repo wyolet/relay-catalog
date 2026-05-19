@@ -1,0 +1,24 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: vertex_ai-anthropic_models-vertex_ai_claude-opus-4-7@default
+    owner:
+        kind: host
+        id: vertex_ai-anthropic_models
+spec:
+    currency: USD
+    targetModels:
+        - vertex_ai/claude-opus-4-7@default
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 5
+        - meter: tokens.output
+          unit: per_million
+          amount: 25
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 6.25
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.5

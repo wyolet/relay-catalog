@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: wandb/deepseek-ai/DeepSeek-V3.1
+    owner:
+        kind: provider
+        name: wandb
+    labels:
+        family: wandb/deepseek
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: wandb
+          upstreamName: wandb/deepseek-ai/DeepSeek-V3.1
+          adapter: openai
+    family: wandb/deepseek
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: wandb/deepseek-ai/DeepSeek-V3.1
+          originalName: wandb/deepseek-ai/DeepSeek-V3.1
+    pointer: wandb/deepseek-ai/DeepSeek-V3.1

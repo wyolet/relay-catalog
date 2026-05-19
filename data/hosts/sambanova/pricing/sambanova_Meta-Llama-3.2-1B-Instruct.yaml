@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: sambanova-sambanova_Meta-Llama-3.2-1B-Instruct
+    owner:
+        kind: host
+        id: sambanova
+spec:
+    currency: USD
+    targetModels:
+        - sambanova/Meta-Llama-3.2-1B-Instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.04
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.08

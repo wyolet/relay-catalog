@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: replicate/anthropic/claude-3.7-sonnet
+    owner:
+        kind: provider
+        name: replicate
+    labels:
+        family: replicate/anthropic/claude
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: replicate
+          upstreamName: replicate/anthropic/claude-3.7-sonnet
+          adapter: openai
+    family: replicate/anthropic/claude
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        vision: true
+        promptCache: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: replicate/anthropic/claude-3.7-sonnet
+          originalName: replicate/anthropic/claude-3.7-sonnet
+    pointer: replicate/anthropic/claude-3.7-sonnet

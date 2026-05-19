@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: watsonx/ibm/granite-3-8b-instruct
+    owner:
+        kind: provider
+        name: watsonx
+    labels:
+        family: watsonx/ibm/granite
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: watsonx
+          upstreamName: watsonx/ibm/granite-3-8b-instruct
+          adapter: openai
+    family: watsonx/ibm/granite
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 1024
+    contextWindowTotal: 8192
+    snapshots:
+        - name: watsonx/ibm/granite-3-8b-instruct
+          originalName: watsonx/ibm/granite-3-8b-instruct
+    pointer: watsonx/ibm/granite-3-8b-instruct

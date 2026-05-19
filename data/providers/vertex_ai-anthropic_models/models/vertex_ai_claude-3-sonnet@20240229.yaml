@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: vertex_ai/claude-3-sonnet@20240229
+    owner:
+        kind: provider
+        name: vertex_ai-anthropic_models
+    labels:
+        family: vertex_ai/claude
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vertex_ai-anthropic_models
+          upstreamName: vertex_ai/claude-3-sonnet@20240229
+          adapter: openai
+    family: vertex_ai/claude
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 4096
+    contextWindowTotal: 200000
+    snapshots:
+        - name: vertex_ai/claude-3-sonnet@20240229
+          originalName: vertex_ai/claude-3-sonnet@20240229
+    pointer: vertex_ai/claude-3-sonnet@20240229

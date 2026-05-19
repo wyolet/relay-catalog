@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepinfra/mistralai/Mistral-Nemo-Instruct-2407
+    owner:
+        kind: provider
+        name: deepinfra
+    labels:
+        family: deepinfra/mistralai/Mistral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: deepinfra
+          upstreamName: deepinfra/mistralai/Mistral-Nemo-Instruct-2407
+          adapter: openai
+    family: deepinfra/mistralai/Mistral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    snapshots:
+        - name: deepinfra/mistralai/Mistral-Nemo-Instruct-2407
+          originalName: deepinfra/mistralai/Mistral-Nemo-Instruct-2407
+    pointer: deepinfra/mistralai/Mistral-Nemo-Instruct-2407

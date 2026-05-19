@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: fireworks_ai-fireworks_ai_accounts_fireworks_models_qwen2p5-coder-0p5b-instruct
+    owner:
+        kind: host
+        id: fireworks_ai
+spec:
+    currency: USD
+    targetModels:
+        - fireworks_ai/accounts/fireworks/models/qwen2p5-coder-0p5b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.09999999999999999
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.09999999999999999

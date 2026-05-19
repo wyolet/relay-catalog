@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gmi/anthropic/claude-sonnet-4.5
+    owner:
+        kind: provider
+        name: gmi
+    labels:
+        family: gmi/anthropic/claude
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: gmi
+          upstreamName: gmi/anthropic/claude-sonnet-4.5
+          adapter: openai
+    family: gmi/anthropic/claude
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 409600
+    contextWindowOutput: 32000
+    contextWindowTotal: 409600
+    snapshots:
+        - name: gmi/anthropic/claude-sonnet-4.5
+          originalName: gmi/anthropic/claude-sonnet-4.5
+    pointer: gmi/anthropic/claude-sonnet-4.5

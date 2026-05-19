@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: oci/google.gemini-2.5-flash-lite
+    owner:
+        kind: provider
+        name: oci
+    labels:
+        family: oci/google.gemini
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: oci
+          upstreamName: oci/google.gemini-2.5-flash-lite
+          adapter: openai
+    family: oci/google.gemini
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 65536
+    contextWindowTotal: 1048576
+    snapshots:
+        - name: oci/google.gemini-2.5-flash-lite
+          originalName: oci/google.gemini-2.5-flash-lite
+    pointer: oci/google.gemini-2.5-flash-lite

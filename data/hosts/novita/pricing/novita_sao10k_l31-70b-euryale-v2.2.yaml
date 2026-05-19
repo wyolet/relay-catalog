@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: novita-novita_sao10k_l31-70b-euryale-v2.2
+    owner:
+        kind: host
+        id: novita
+spec:
+    currency: USD
+    targetModels:
+        - novita/sao10k/l31-70b-euryale-v2.2
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.48
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.48

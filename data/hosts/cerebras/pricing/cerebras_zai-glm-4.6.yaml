@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: cerebras-cerebras_zai-glm-4.6
+    owner:
+        kind: host
+        id: cerebras
+spec:
+    currency: USD
+    targetModels:
+        - cerebras/zai-glm-4.6
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2.25
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.75

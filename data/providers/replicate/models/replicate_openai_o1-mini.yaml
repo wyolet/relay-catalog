@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: replicate/openai/o1-mini
+    owner:
+        kind: provider
+        name: replicate
+    labels:
+        family: replicate/openai/o1
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: replicate
+          upstreamName: replicate/openai/o1-mini
+          adapter: openai
+    family: replicate/openai/o1
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: replicate/openai/o1-mini
+          originalName: replicate/openai/o1-mini
+    pointer: replicate/openai/o1-mini

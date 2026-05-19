@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: vercel_ai_gateway-vercel_ai_gateway_meta_llama-3-8b
+    owner:
+        kind: host
+        id: vercel_ai_gateway
+spec:
+    currency: USD
+    targetModels:
+        - vercel_ai_gateway/meta/llama-3-8b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.049999999999999996
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.08

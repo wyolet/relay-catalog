@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: us.deepseek.r1-v1:0
+    owner:
+        kind: provider
+        name: bedrock_converse
+    labels:
+        family: us.deepseek.r1
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock_converse
+          upstreamName: us.deepseek.r1-v1:0
+          adapter: openai
+    family: us.deepseek.r1
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    snapshots:
+        - name: us.deepseek.r1-v1:0
+          originalName: us.deepseek.r1-v1:0
+    pointer: us.deepseek.r1-v1:0

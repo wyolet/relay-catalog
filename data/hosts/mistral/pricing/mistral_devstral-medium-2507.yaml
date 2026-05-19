@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: mistral-mistral_devstral-medium-2507
+    owner:
+        kind: host
+        id: mistral
+spec:
+    currency: USD
+    targetModels:
+        - mistral/devstral-medium-2507
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.39999999999999997
+        - meter: tokens.output
+          unit: per_million
+          amount: 2

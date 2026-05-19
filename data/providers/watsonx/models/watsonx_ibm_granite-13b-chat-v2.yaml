@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: watsonx/ibm/granite-13b-chat-v2
+    owner:
+        kind: provider
+        name: watsonx
+    labels:
+        family: watsonx/ibm/granite
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: watsonx
+          upstreamName: watsonx/ibm/granite-13b-chat-v2
+          adapter: openai
+    family: watsonx/ibm/granite
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    snapshots:
+        - name: watsonx/ibm/granite-13b-chat-v2
+          originalName: watsonx/ibm/granite-13b-chat-v2
+    pointer: watsonx/ibm/granite-13b-chat-v2

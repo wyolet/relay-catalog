@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: sambanova/DeepSeek-R1
+    owner:
+        kind: provider
+        name: sambanova
+    labels:
+        family: sambanova/DeepSeek
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: sambanova
+          upstreamName: sambanova/DeepSeek-R1
+          adapter: openai
+    family: sambanova/DeepSeek
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    snapshots:
+        - name: sambanova/DeepSeek-R1
+          originalName: sambanova/DeepSeek-R1
+    pointer: sambanova/DeepSeek-R1

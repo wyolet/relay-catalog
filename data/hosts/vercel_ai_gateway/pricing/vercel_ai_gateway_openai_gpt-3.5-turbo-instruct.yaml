@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: vercel_ai_gateway-vercel_ai_gateway_openai_gpt-3.5-turbo-instruct
+    owner:
+        kind: host
+        id: vercel_ai_gateway
+spec:
+    currency: USD
+    targetModels:
+        - vercel_ai_gateway/openai/gpt-3.5-turbo-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 2

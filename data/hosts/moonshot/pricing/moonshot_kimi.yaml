@@ -1,0 +1,21 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: moonshot-moonshot_kimi
+    owner:
+        kind: host
+        id: moonshot
+spec:
+    currency: USD
+    targetModels:
+        - moonshot/kimi
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.output
+          unit: per_million
+          amount: 5
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.15

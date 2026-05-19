@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nlp_cloud-chatdolphin
+    owner:
+        kind: host
+        id: nlp_cloud
+spec:
+    currency: USD
+    targetModels:
+        - chatdolphin
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.5

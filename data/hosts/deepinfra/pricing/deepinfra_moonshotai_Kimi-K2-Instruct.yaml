@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: deepinfra-deepinfra_moonshotai_Kimi-K2-Instruct
+    owner:
+        kind: host
+        id: deepinfra
+spec:
+    currency: USD
+    targetModels:
+        - deepinfra/moonshotai/Kimi-K2-Instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 2

@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: anyscale-anyscale_meta-llama_Llama-2-70b-chat-hf
+    owner:
+        kind: host
+        id: anyscale
+spec:
+    currency: USD
+    targetModels:
+        - anyscale/meta-llama/Llama-2-70b-chat-hf
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1
+        - meter: tokens.output
+          unit: per_million
+          amount: 1

@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: ovhcloud-ovhcloud_Qwen2.5-Coder-32B-Instruct
+    owner:
+        kind: host
+        id: ovhcloud
+spec:
+    currency: USD
+    targetModels:
+        - ovhcloud/Qwen2.5-Coder-32B-Instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.87
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.87

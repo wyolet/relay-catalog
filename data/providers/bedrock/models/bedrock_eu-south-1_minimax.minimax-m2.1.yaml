@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: bedrock/eu-south-1/minimax.minimax-m2.1
+    owner:
+        kind: provider
+        name: bedrock
+    labels:
+        family: bedrock/eu
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock
+          upstreamName: bedrock/eu-south-1/minimax.minimax-m2.1
+          adapter: openai
+    family: bedrock/eu
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 196000
+    contextWindowOutput: 8192
+    contextWindowTotal: 196000
+    snapshots:
+        - name: bedrock/eu-south-1/minimax.minimax-m2.1
+          originalName: bedrock/eu-south-1/minimax.minimax-m2.1
+    pointer: bedrock/eu-south-1/minimax.minimax-m2.1

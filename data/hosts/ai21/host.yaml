@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: ai21
+    displayName: Ai21
+    owner:
+        kind: system
+spec:
+    baseURL: ""

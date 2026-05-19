@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: openrouter-openrouter_mistralai_mistral-small-3.1-24b-instruct
+    owner:
+        kind: host
+        id: openrouter
+spec:
+    currency: USD
+    targetModels:
+        - openrouter/mistralai/mistral-small-3.1-24b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.09999999999999999
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.3

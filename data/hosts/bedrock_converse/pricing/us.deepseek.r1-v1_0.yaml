@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: bedrock_converse-us.deepseek.r1-v1_0
+    owner:
+        kind: host
+        id: bedrock_converse
+spec:
+    currency: USD
+    targetModels:
+        - us.deepseek.r1-v1:0
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.35
+        - meter: tokens.output
+          unit: per_million
+          amount: 5.4

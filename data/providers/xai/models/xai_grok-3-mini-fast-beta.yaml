@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: xai/grok-3-mini-fast-beta
+    owner:
+        kind: provider
+        name: xai
+    labels:
+        family: xai/grok
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: xai
+          upstreamName: xai/grok-3-mini-fast-beta
+          adapter: openai
+    family: xai/grok
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        webSearch: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    snapshots:
+        - name: xai/grok-3-mini-fast-beta
+          originalName: xai/grok-3-mini-fast-beta
+    pointer: xai/grok-3-mini-fast-beta

@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: wandb-wandb_Qwen_Qwen3-235B-A22B-Thinking-2507
+    owner:
+        kind: host
+        id: wandb
+spec:
+    currency: USD
+    targetModels:
+        - wandb/Qwen/Qwen3-235B-A22B-Thinking-2507
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 10000
+        - meter: tokens.output
+          unit: per_million
+          amount: 10000

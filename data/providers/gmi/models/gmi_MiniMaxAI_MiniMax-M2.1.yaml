@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gmi/MiniMaxAI/MiniMax-M2.1
+    owner:
+        kind: provider
+        name: gmi
+    labels:
+        family: gmi/MiniMaxAI/MiniMax
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: gmi
+          upstreamName: gmi/MiniMaxAI/MiniMax-M2.1
+          adapter: openai
+    family: gmi/MiniMaxAI/MiniMax
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 196608
+    contextWindowOutput: 16384
+    contextWindowTotal: 196608
+    snapshots:
+        - name: gmi/MiniMaxAI/MiniMax-M2.1
+          originalName: gmi/MiniMaxAI/MiniMax-M2.1
+    pointer: gmi/MiniMaxAI/MiniMax-M2.1

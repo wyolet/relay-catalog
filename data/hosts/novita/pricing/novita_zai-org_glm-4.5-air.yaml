@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: novita-novita_zai-org_glm-4.5-air
+    owner:
+        kind: host
+        id: novita
+spec:
+    currency: USD
+    targetModels:
+        - novita/zai-org/glm-4.5-air
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.13
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.85

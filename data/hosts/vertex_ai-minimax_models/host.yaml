@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: vertex_ai-minimax_models
+    displayName: Vertex Ai Minimax Models
+    owner:
+        kind: system
+spec:
+    baseURL: ""

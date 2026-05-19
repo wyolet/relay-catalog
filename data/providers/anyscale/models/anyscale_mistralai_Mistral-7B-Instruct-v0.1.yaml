@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: anyscale/mistralai/Mistral-7B-Instruct-v0.1
+    owner:
+        kind: provider
+        name: anyscale
+    labels:
+        family: anyscale/mistralai/Mistral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: anyscale
+          upstreamName: anyscale/mistralai/Mistral-7B-Instruct-v0.1
+          adapter: openai
+    family: anyscale/mistralai/Mistral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 16384
+    contextWindowTotal: 16384
+    snapshots:
+        - name: anyscale/mistralai/Mistral-7B-Instruct-v0.1
+          originalName: anyscale/mistralai/Mistral-7B-Instruct-v0.1
+    pointer: anyscale/mistralai/Mistral-7B-Instruct-v0.1

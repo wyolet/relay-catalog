@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepinfra/moonshotai/Kimi-K2-Instruct-0905
+    owner:
+        kind: provider
+        name: deepinfra
+    labels:
+        family: deepinfra/moonshotai/Kimi
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: deepinfra
+          upstreamName: deepinfra/moonshotai/Kimi-K2-Instruct-0905
+          adapter: openai
+    family: deepinfra/moonshotai/Kimi
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    snapshots:
+        - name: deepinfra/moonshotai/Kimi-K2-Instruct-0905
+          originalName: deepinfra/moonshotai/Kimi-K2-Instruct-0905
+    pointer: deepinfra/moonshotai/Kimi-K2-Instruct-0905

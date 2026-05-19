@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gmi/Qwen/Qwen3-VL-235B-A22B-Instruct-FP8
+    owner:
+        kind: provider
+        name: gmi
+    labels:
+        family: gmi/Qwen/Qwen3
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: gmi
+          upstreamName: gmi/Qwen/Qwen3-VL-235B-A22B-Instruct-FP8
+          adapter: openai
+    family: gmi/Qwen/Qwen3
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 16384
+    contextWindowTotal: 262144
+    snapshots:
+        - name: gmi/Qwen/Qwen3-VL-235B-A22B-Instruct-FP8
+          originalName: gmi/Qwen/Qwen3-VL-235B-A22B-Instruct-FP8
+    pointer: gmi/Qwen/Qwen3-VL-235B-A22B-Instruct-FP8

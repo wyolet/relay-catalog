@@ -1,0 +1,21 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: azure-azure_eu_gpt-4o-mini
+    owner:
+        kind: host
+        id: azure
+spec:
+    currency: USD
+    targetModels:
+        - azure/eu/gpt-4o-mini
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.165
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.66
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.083

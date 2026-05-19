@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ai21.jamba-1-5-mini-v1:0
+    owner:
+        kind: provider
+        name: bedrock
+    labels:
+        family: ai21.jamba
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock
+          upstreamName: ai21.jamba-1-5-mini-v1:0
+          adapter: openai
+    family: ai21.jamba
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 256000
+    contextWindowTotal: 256000
+    snapshots:
+        - name: ai21.jamba-1-5-mini-v1:0
+          originalName: ai21.jamba-1-5-mini-v1:0
+    pointer: ai21.jamba-1-5-mini-v1:0

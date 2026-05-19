@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nebius-nebius_Qwen_Qwen2.5-Coder-7B
+    owner:
+        kind: host
+        id: nebius
+spec:
+    currency: USD
+    targetModels:
+        - nebius/Qwen/Qwen2.5-Coder-7B
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.01
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.03

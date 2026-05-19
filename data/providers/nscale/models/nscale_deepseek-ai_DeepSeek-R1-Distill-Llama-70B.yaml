@@ -1,0 +1,29 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nscale/deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+    owner:
+        kind: provider
+        name: nscale
+    labels:
+        family: nscale/deepseek
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: nscale
+          upstreamName: nscale/deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+          adapter: openai
+    family: nscale/deepseek
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: nscale/deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+          originalName: nscale/deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+    pointer: nscale/deepseek-ai/DeepSeek-R1-Distill-Llama-70B

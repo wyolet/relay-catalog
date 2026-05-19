@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter/z-ai/glm-5
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: openrouter/z
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openrouter
+          upstreamName: openrouter/z-ai/glm-5
+          adapter: openai
+    family: openrouter/z
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 202752
+    contextWindowOutput: 128000
+    contextWindowTotal: 202752
+    snapshots:
+        - name: openrouter/z-ai/glm-5
+          originalName: openrouter/z-ai/glm-5
+    pointer: openrouter/z-ai/glm-5

@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: bedrock-bedrock_us-west-2_anthropic.claude-v2_1
+    owner:
+        kind: host
+        id: bedrock
+spec:
+    currency: USD
+    targetModels:
+        - bedrock/us-west-2/anthropic.claude-v2:1
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 8
+        - meter: tokens.output
+          unit: per_million
+          amount: 24

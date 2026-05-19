@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: medlm-medium
+    owner:
+        kind: provider
+        name: vertex_ai-language-models
+    labels:
+        family: medlm
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vertex_ai-language-models
+          upstreamName: medlm-medium
+          adapter: openai
+    family: medlm
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 8192
+    contextWindowTotal: 32768
+    snapshots:
+        - name: medlm-medium
+          originalName: medlm-medium
+    pointer: medlm-medium
