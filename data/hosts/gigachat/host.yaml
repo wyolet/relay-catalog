@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: gigachat
+    displayName: Gigachat
+    owner:
+        kind: system
+spec:
+    baseURL: ""

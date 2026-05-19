@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: heroku/claude-3-5-sonnet
+    owner:
+        kind: provider
+        name: heroku
+    labels:
+        family: heroku/claude
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: heroku
+          upstreamName: heroku/claude-3-5-sonnet
+          adapter: openai
+    family: heroku/claude
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 8192
+    contextWindowTotal: 200000
+    aliases:
+        - heroku/claude-3-5-sonnet-latest
+    snapshots:
+        - name: heroku/claude-3-5-sonnet
+          originalName: heroku/claude-3-5-sonnet
+    pointer: heroku/claude-3-5-sonnet

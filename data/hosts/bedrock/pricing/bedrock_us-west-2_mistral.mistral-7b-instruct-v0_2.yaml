@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: bedrock-bedrock_us-west-2_mistral.mistral-7b-instruct-v0_2
+    owner:
+        kind: host
+        id: bedrock
+spec:
+    currency: USD
+    targetModels:
+        - bedrock/us-west-2/mistral.mistral-7b-instruct-v0:2
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.15
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.19999999999999998

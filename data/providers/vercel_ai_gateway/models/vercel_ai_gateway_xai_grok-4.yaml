@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: vercel_ai_gateway/xai/grok-4
+    owner:
+        kind: provider
+        name: vercel_ai_gateway
+    labels:
+        family: vercel_ai_gateway/xai/grok
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vercel_ai_gateway
+          upstreamName: vercel_ai_gateway/xai/grok-4
+          adapter: openai
+    family: vercel_ai_gateway/xai/grok
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 256000
+    contextWindowTotal: 256000
+    snapshots:
+        - name: vercel_ai_gateway/xai/grok-4
+          originalName: vercel_ai_gateway/xai/grok-4
+    pointer: vercel_ai_gateway/xai/grok-4

@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: wandb-wandb_deepseek-ai_DeepSeek-V3-0324
+    owner:
+        kind: host
+        id: wandb
+spec:
+    currency: USD
+    targetModels:
+        - wandb/deepseek-ai/DeepSeek-V3-0324
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 114000
+        - meter: tokens.output
+          unit: per_million
+          amount: 275000

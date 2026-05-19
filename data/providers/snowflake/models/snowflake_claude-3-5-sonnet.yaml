@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: snowflake/claude-3-5-sonnet
+    owner:
+        kind: provider
+        name: snowflake
+    labels:
+        family: snowflake/claude
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: snowflake
+          upstreamName: snowflake/claude-3-5-sonnet
+          adapter: openai
+    family: snowflake/claude
+    capabilities:
+        chat: true
+        streaming: true
+        computerUse: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 18000
+    contextWindowOutput: 8192
+    contextWindowTotal: 18000
+    snapshots:
+        - name: snowflake/claude-3-5-sonnet
+          originalName: snowflake/claude-3-5-sonnet
+    pointer: snowflake/claude-3-5-sonnet

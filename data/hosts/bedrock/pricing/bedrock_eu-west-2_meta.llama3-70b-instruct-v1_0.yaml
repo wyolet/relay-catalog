@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: bedrock-bedrock_eu-west-2_meta.llama3-70b-instruct-v1_0
+    owner:
+        kind: host
+        id: bedrock
+spec:
+    currency: USD
+    targetModels:
+        - bedrock/eu-west-2/meta.llama3-70b-instruct-v1:0
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 3.45
+        - meter: tokens.output
+          unit: per_million
+          amount: 4.55

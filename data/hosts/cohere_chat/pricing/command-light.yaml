@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: cohere_chat-command-light
+    owner:
+        kind: host
+        id: cohere_chat
+spec:
+    currency: USD
+    targetModels:
+        - command-light
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.6

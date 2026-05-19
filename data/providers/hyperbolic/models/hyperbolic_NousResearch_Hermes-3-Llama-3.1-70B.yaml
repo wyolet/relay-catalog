@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: hyperbolic/NousResearch/Hermes-3-Llama-3.1-70B
+    owner:
+        kind: provider
+        name: hyperbolic
+    labels:
+        family: hyperbolic/NousResearch/Hermes
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: hyperbolic
+          upstreamName: hyperbolic/NousResearch/Hermes-3-Llama-3.1-70B
+          adapter: openai
+    family: hyperbolic/NousResearch/Hermes
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    snapshots:
+        - name: hyperbolic/NousResearch/Hermes-3-Llama-3.1-70B
+          originalName: hyperbolic/NousResearch/Hermes-3-Llama-3.1-70B
+    pointer: hyperbolic/NousResearch/Hermes-3-Llama-3.1-70B

@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: together_ai/meta-llama/Llama-4-Scout-17B-16E-Instruct
+    owner:
+        kind: provider
+        name: together_ai
+    labels:
+        family: together_ai/meta
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: together_ai
+          upstreamName: together_ai/meta-llama/Llama-4-Scout-17B-16E-Instruct
+          adapter: openai
+    family: together_ai/meta
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: together_ai/meta-llama/Llama-4-Scout-17B-16E-Instruct
+          originalName: together_ai/meta-llama/Llama-4-Scout-17B-16E-Instruct
+    pointer: together_ai/meta-llama/Llama-4-Scout-17B-16E-Instruct

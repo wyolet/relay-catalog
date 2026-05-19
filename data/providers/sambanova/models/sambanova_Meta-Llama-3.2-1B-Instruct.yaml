@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: sambanova/Meta-Llama-3.2-1B-Instruct
+    owner:
+        kind: provider
+        name: sambanova
+    labels:
+        family: sambanova/Meta
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: sambanova
+          upstreamName: sambanova/Meta-Llama-3.2-1B-Instruct
+          adapter: openai
+    family: sambanova/Meta
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 16384
+    contextWindowTotal: 16384
+    snapshots:
+        - name: sambanova/Meta-Llama-3.2-1B-Instruct
+          originalName: sambanova/Meta-Llama-3.2-1B-Instruct
+    pointer: sambanova/Meta-Llama-3.2-1B-Instruct

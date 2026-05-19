@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nebius-nebius_Qwen_Qwen2.5-VL-72B-Instruct
+    owner:
+        kind: host
+        id: nebius
+spec:
+    currency: USD
+    targetModels:
+        - nebius/Qwen/Qwen2.5-VL-72B-Instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.13
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.39999999999999997

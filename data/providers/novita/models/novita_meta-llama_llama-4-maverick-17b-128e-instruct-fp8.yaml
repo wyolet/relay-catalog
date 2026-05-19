@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: novita/meta-llama/llama-4-maverick-17b-128e-instruct-fp8
+    owner:
+        kind: provider
+        name: novita
+    labels:
+        family: novita/meta
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: novita
+          upstreamName: novita/meta-llama/llama-4-maverick-17b-128e-instruct-fp8
+          adapter: openai
+    family: novita/meta
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 8192
+    contextWindowTotal: 1048576
+    snapshots:
+        - name: novita/meta-llama/llama-4-maverick-17b-128e-instruct-fp8
+          originalName: novita/meta-llama/llama-4-maverick-17b-128e-instruct-fp8
+    pointer: novita/meta-llama/llama-4-maverick-17b-128e-instruct-fp8

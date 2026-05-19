@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: novita/nousresearch/hermes-2-pro-llama-3-8b
+    owner:
+        kind: provider
+        name: novita
+    labels:
+        family: novita/nousresearch/hermes
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: novita
+          upstreamName: novita/nousresearch/hermes-2-pro-llama-3-8b
+          adapter: openai
+    family: novita/nousresearch/hermes
+    capabilities:
+        chat: true
+        streaming: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    snapshots:
+        - name: novita/nousresearch/hermes-2-pro-llama-3-8b
+          originalName: novita/nousresearch/hermes-2-pro-llama-3-8b
+    pointer: novita/nousresearch/hermes-2-pro-llama-3-8b

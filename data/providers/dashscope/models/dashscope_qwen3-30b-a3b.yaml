@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: dashscope/qwen3-30b-a3b
+    owner:
+        kind: provider
+        name: dashscope
+    labels:
+        family: dashscope/qwen3
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: dashscope
+          upstreamName: dashscope/qwen3-30b-a3b
+          adapter: openai
+    family: dashscope/qwen3
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 129024
+    contextWindowOutput: 16384
+    contextWindowTotal: 129024
+    snapshots:
+        - name: dashscope/qwen3-30b-a3b
+          originalName: dashscope/qwen3-30b-a3b
+    pointer: dashscope/qwen3-30b-a3b

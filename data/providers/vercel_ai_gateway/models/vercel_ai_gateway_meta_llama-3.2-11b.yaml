@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: vercel_ai_gateway/meta/llama-3.2-11b
+    owner:
+        kind: provider
+        name: vercel_ai_gateway
+    labels:
+        family: vercel_ai_gateway/meta/llama
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vercel_ai_gateway
+          upstreamName: vercel_ai_gateway/meta/llama-3.2-11b
+          adapter: openai
+    family: vercel_ai_gateway/meta/llama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    snapshots:
+        - name: vercel_ai_gateway/meta/llama-3.2-11b
+          originalName: vercel_ai_gateway/meta/llama-3.2-11b
+    pointer: vercel_ai_gateway/meta/llama-3.2-11b

@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nebius/nvidia/Llama-3.3-Nemotron-Super-49B-v1
+    owner:
+        kind: provider
+        name: nebius
+    labels:
+        family: nebius/nvidia/Llama
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: nebius
+          upstreamName: nebius/nvidia/Llama-3.3-Nemotron-Super-49B-v1
+          adapter: openai
+    family: nebius/nvidia/Llama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    snapshots:
+        - name: nebius/nvidia/Llama-3.3-Nemotron-Super-49B-v1
+          originalName: nebius/nvidia/Llama-3.3-Nemotron-Super-49B-v1
+    pointer: nebius/nvidia/Llama-3.3-Nemotron-Super-49B-v1

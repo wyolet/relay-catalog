@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: lambda_ai/lfm-40b
+    owner:
+        kind: provider
+        name: lambda_ai
+    labels:
+        family: lambda_ai/lfm
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: lambda_ai
+          upstreamName: lambda_ai/lfm-40b
+          adapter: openai
+    family: lambda_ai/lfm
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    snapshots:
+        - name: lambda_ai/lfm-40b
+          originalName: lambda_ai/lfm-40b
+    pointer: lambda_ai/lfm-40b

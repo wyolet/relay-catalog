@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: together_ai
+    displayName: Together Ai
+    owner:
+        kind: system
+spec:
+    baseURL: ""

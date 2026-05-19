@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gigachat/GigaChat-2-Lite
+    owner:
+        kind: provider
+        name: gigachat
+    labels:
+        family: gigachat/GigaChat
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: gigachat
+          upstreamName: gigachat/GigaChat-2-Lite
+          adapter: openai
+    family: gigachat/GigaChat
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    snapshots:
+        - name: gigachat/GigaChat-2-Lite
+          originalName: gigachat/GigaChat-2-Lite
+    pointer: gigachat/GigaChat-2-Lite

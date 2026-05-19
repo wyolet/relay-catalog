@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: deepinfra-deepinfra_Qwen_Qwen3-235B-A22B
+    owner:
+        kind: host
+        id: deepinfra
+spec:
+    currency: USD
+    targetModels:
+        - deepinfra/Qwen/Qwen3-235B-A22B
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.18
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.54

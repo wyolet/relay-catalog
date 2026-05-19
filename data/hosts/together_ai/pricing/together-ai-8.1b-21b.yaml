@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: together_ai-together-ai-8.1b-21b
+    owner:
+        kind: host
+        id: together_ai
+spec:
+    currency: USD
+    targetModels:
+        - together-ai-8.1b-21b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.3

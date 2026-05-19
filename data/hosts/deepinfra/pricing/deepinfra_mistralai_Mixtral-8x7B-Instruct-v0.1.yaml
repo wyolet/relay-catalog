@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: deepinfra-deepinfra_mistralai_Mixtral-8x7B-Instruct-v0.1
+    owner:
+        kind: host
+        id: deepinfra
+spec:
+    currency: USD
+    targetModels:
+        - deepinfra/mistralai/Mixtral-8x7B-Instruct-v0.1
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.39999999999999997
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.39999999999999997

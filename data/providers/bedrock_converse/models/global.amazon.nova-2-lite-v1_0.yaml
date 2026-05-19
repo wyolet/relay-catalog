@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: global.amazon.nova-2-lite-v1:0
+    owner:
+        kind: provider
+        name: bedrock_converse
+    labels:
+        family: global.amazon.nova
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock_converse
+          upstreamName: global.amazon.nova-2-lite-v1:0
+          adapter: openai
+    family: global.amazon.nova
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        fileInput: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 64000
+    contextWindowTotal: 1000000
+    snapshots:
+        - name: global.amazon.nova-2-lite-v1:0
+          originalName: global.amazon.nova-2-lite-v1:0
+    pointer: global.amazon.nova-2-lite-v1:0

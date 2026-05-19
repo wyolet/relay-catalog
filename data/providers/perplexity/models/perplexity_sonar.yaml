@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: perplexity/sonar
+    owner:
+        kind: provider
+        name: perplexity
+    labels:
+        family: perplexity/sonar
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: perplexity
+          upstreamName: perplexity/sonar
+          adapter: openai
+    family: perplexity/sonar
+    capabilities:
+        chat: true
+        streaming: true
+        webSearch: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: perplexity/sonar
+          originalName: perplexity/sonar
+    pointer: perplexity/sonar

@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter/openrouter/bodybuilder
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: openrouter/openrouter/bodybuilder
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openrouter
+          upstreamName: openrouter/openrouter/bodybuilder
+          adapter: openai
+    family: openrouter/openrouter/bodybuilder
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: openrouter/openrouter/bodybuilder
+          originalName: openrouter/openrouter/bodybuilder
+    pointer: openrouter/openrouter/bodybuilder

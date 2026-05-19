@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: together_ai/Qwen/Qwen3-235B-A22B-Thinking-2507
+    owner:
+        kind: provider
+        name: together_ai
+    labels:
+        family: together_ai/Qwen/Qwen3
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: together_ai
+          upstreamName: together_ai/Qwen/Qwen3-235B-A22B-Thinking-2507
+          adapter: openai
+    family: together_ai/Qwen/Qwen3
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowTotal: 256000
+    snapshots:
+        - name: together_ai/Qwen/Qwen3-235B-A22B-Thinking-2507
+          originalName: together_ai/Qwen/Qwen3-235B-A22B-Thinking-2507
+    pointer: together_ai/Qwen/Qwen3-235B-A22B-Thinking-2507

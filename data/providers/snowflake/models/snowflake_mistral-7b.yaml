@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: snowflake/mistral-7b
+    owner:
+        kind: provider
+        name: snowflake
+    labels:
+        family: snowflake/mistral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: snowflake
+          upstreamName: snowflake/mistral-7b
+          adapter: openai
+    family: snowflake/mistral
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 8192
+    contextWindowTotal: 32000
+    snapshots:
+        - name: snowflake/mistral-7b
+          originalName: snowflake/mistral-7b
+    pointer: snowflake/mistral-7b

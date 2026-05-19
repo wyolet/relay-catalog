@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter/openrouter/auto
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: openrouter/openrouter/auto
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openrouter
+          upstreamName: openrouter/openrouter/auto
+          adapter: openai
+    family: openrouter/openrouter/auto
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        structuredOutputs: true
+        audioInput: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+        output:
+            - text
+    contextWindowInput: 2000000
+    contextWindowOutput: 2000000
+    contextWindowTotal: 2000000
+    snapshots:
+        - name: openrouter/openrouter/auto
+          originalName: openrouter/openrouter/auto
+    pointer: openrouter/openrouter/auto

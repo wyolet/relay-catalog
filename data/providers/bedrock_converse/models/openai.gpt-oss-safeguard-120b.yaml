@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai.gpt-oss-safeguard-120b
+    owner:
+        kind: provider
+        name: bedrock_converse
+    labels:
+        family: openai.gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock_converse
+          upstreamName: openai.gpt-oss-safeguard-120b
+          adapter: openai
+    family: openai.gpt
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    snapshots:
+        - name: openai.gpt-oss-safeguard-120b
+          originalName: openai.gpt-oss-safeguard-120b
+    pointer: openai.gpt-oss-safeguard-120b

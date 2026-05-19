@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nebius-nebius_Qwen_QwQ-32B
+    owner:
+        kind: host
+        id: nebius
+spec:
+    currency: USD
+    targetModels:
+        - nebius/Qwen/QwQ-32B
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.15
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.44999999999999996

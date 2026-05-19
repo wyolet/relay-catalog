@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: github_copilot/gpt-3.5-turbo
+    owner:
+        kind: provider
+        name: github_copilot
+    labels:
+        family: github_copilot/gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: github_copilot
+          upstreamName: github_copilot/gpt-3.5-turbo
+          adapter: openai
+    family: github_copilot/gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 4096
+    contextWindowTotal: 16384
+    snapshots:
+        - name: github_copilot/gpt-3.5-turbo
+          originalName: github_copilot/gpt-3.5-turbo
+    pointer: github_copilot/gpt-3.5-turbo

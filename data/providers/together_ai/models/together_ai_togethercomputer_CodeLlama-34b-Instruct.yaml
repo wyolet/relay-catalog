@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: together_ai/togethercomputer/CodeLlama-34b-Instruct
+    owner:
+        kind: provider
+        name: together_ai
+    labels:
+        family: together_ai/togethercomputer/CodeLlama
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: together_ai
+          upstreamName: together_ai/togethercomputer/CodeLlama-34b-Instruct
+          adapter: openai
+    family: together_ai/togethercomputer/CodeLlama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: together_ai/togethercomputer/CodeLlama-34b-Instruct
+          originalName: together_ai/togethercomputer/CodeLlama-34b-Instruct
+    pointer: together_ai/togethercomputer/CodeLlama-34b-Instruct

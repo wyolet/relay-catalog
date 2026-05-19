@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: azure/us/o1-mini
+    owner:
+        kind: provider
+        name: azure
+    labels:
+        family: azure/us/o1
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: azure
+          upstreamName: azure/us/o1-mini-2024-09-12
+          adapter: openai
+    family: azure/us/o1
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        promptCache: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 65536
+    contextWindowTotal: 128000
+    snapshots:
+        - name: azure/us/o1-mini-2024-09-12
+          releasedAt: "2024-09-12"
+          originalName: azure/us/o1-mini-2024-09-12
+    pointer: azure/us/o1-mini-2024-09-12

@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepinfra/deepseek-ai/DeepSeek-R1-Turbo
+    owner:
+        kind: provider
+        name: deepinfra
+    labels:
+        family: deepinfra/deepseek
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: deepinfra
+          upstreamName: deepinfra/deepseek-ai/DeepSeek-R1-Turbo
+          adapter: openai
+    family: deepinfra/deepseek
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 40960
+    contextWindowOutput: 40960
+    contextWindowTotal: 40960
+    snapshots:
+        - name: deepinfra/deepseek-ai/DeepSeek-R1-Turbo
+          originalName: deepinfra/deepseek-ai/DeepSeek-R1-Turbo
+    pointer: deepinfra/deepseek-ai/DeepSeek-R1-Turbo

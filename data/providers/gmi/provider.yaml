@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: gmi
+    displayName: Gmi
+    description: Gmi — auto-imported, requires hand curation.
+    owner:
+        kind: system
+spec: {}

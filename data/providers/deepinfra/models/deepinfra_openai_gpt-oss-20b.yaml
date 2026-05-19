@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepinfra/openai/gpt-oss-20b
+    owner:
+        kind: provider
+        name: deepinfra
+    labels:
+        family: deepinfra/openai/gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: deepinfra
+          upstreamName: deepinfra/openai/gpt-oss-20b
+          adapter: openai
+    family: deepinfra/openai/gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    snapshots:
+        - name: deepinfra/openai/gpt-oss-20b
+          originalName: deepinfra/openai/gpt-oss-20b
+    pointer: deepinfra/openai/gpt-oss-20b

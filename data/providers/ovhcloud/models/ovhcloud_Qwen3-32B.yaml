@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ovhcloud/Qwen3-32B
+    owner:
+        kind: provider
+        name: ovhcloud
+    labels:
+        family: ovhcloud/Qwen3
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ovhcloud
+          upstreamName: ovhcloud/Qwen3-32B
+          adapter: openai
+    family: ovhcloud/Qwen3
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 32000
+    contextWindowTotal: 32000
+    snapshots:
+        - name: ovhcloud/Qwen3-32B
+          originalName: ovhcloud/Qwen3-32B
+    pointer: ovhcloud/Qwen3-32B

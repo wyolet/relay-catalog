@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: vertex_ai-ai21_models
+    displayName: Vertex Ai Ai21 Models
+    owner:
+        kind: system
+spec:
+    baseURL: ""

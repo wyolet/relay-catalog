@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: watsonx-watsonx_meta-llama_llama-4-maverick-17b
+    owner:
+        kind: host
+        id: watsonx
+spec:
+    currency: USD
+    targetModels:
+        - watsonx/meta-llama/llama-4-maverick-17b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.35
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.4

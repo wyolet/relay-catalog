@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: crusoe/meta-llama/Llama-3.3-70B-Instruct
+    owner:
+        kind: provider
+        name: crusoe
+    labels:
+        family: crusoe/meta
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: crusoe
+          upstreamName: crusoe/meta-llama/Llama-3.3-70B-Instruct
+          adapter: openai
+    family: crusoe/meta
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    snapshots:
+        - name: crusoe/meta-llama/Llama-3.3-70B-Instruct
+          originalName: crusoe/meta-llama/Llama-3.3-70B-Instruct
+    pointer: crusoe/meta-llama/Llama-3.3-70B-Instruct

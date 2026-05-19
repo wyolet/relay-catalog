@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: command-a-03-2025
+    owner:
+        kind: provider
+        name: cohere_chat
+    labels:
+        family: command
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: cohere_chat
+          upstreamName: command-a-03-2025
+          adapter: openai
+    family: command
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 8000
+    contextWindowTotal: 256000
+    snapshots:
+        - name: command-a-03-2025
+          originalName: command-a-03-2025
+    pointer: command-a-03-2025

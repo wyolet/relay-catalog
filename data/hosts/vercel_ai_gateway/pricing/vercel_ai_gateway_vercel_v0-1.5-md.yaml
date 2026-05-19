@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: vercel_ai_gateway-vercel_ai_gateway_vercel_v0-1.5-md
+    owner:
+        kind: host
+        id: vercel_ai_gateway
+spec:
+    currency: USD
+    targetModels:
+        - vercel_ai_gateway/vercel/v0-1.5-md
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 3
+        - meter: tokens.output
+          unit: per_million
+          amount: 15

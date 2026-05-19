@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter/switchpoint/router
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: openrouter/switchpoint/router
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openrouter
+          upstreamName: openrouter/switchpoint/router
+          adapter: openai
+    family: openrouter/switchpoint/router
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    snapshots:
+        - name: openrouter/switchpoint/router
+          originalName: openrouter/switchpoint/router
+    pointer: openrouter/switchpoint/router

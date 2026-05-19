@@ -1,0 +1,15 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: perplexity-perplexity_sonar-medium-online
+    owner:
+        kind: host
+        id: perplexity
+spec:
+    currency: USD
+    targetModels:
+        - perplexity/sonar-medium-online
+    rates:
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.7999999999999998

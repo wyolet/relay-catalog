@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepinfra/anthropic/claude-3-7-sonnet
+    owner:
+        kind: provider
+        name: deepinfra
+    labels:
+        family: deepinfra/anthropic/claude
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: deepinfra
+          upstreamName: deepinfra/anthropic/claude-3-7-sonnet
+          adapter: openai
+    family: deepinfra/anthropic/claude
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 200000
+    contextWindowTotal: 200000
+    aliases:
+        - deepinfra/anthropic/claude-3-7-sonnet-latest
+    snapshots:
+        - name: deepinfra/anthropic/claude-3-7-sonnet
+          originalName: deepinfra/anthropic/claude-3-7-sonnet
+    pointer: deepinfra/anthropic/claude-3-7-sonnet

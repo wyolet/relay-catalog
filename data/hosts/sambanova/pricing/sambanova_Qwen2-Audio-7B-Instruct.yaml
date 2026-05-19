@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: sambanova-sambanova_Qwen2-Audio-7B-Instruct
+    owner:
+        kind: host
+        id: sambanova
+spec:
+    currency: USD
+    targetModels:
+        - sambanova/Qwen2-Audio-7B-Instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 100

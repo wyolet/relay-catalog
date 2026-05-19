@@ -1,0 +1,47 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini/gemini-3.1-pro
+    owner:
+        kind: provider
+        name: gemini
+    labels:
+        family: gemini/gemini
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: gemini
+          upstreamName: gemini/gemini-3.1-pro
+          adapter: openai
+    family: gemini/gemini
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        batch: true
+        webSearch: true
+        fileInput: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+            - file
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 65536
+    contextWindowTotal: 1048576
+    aliases:
+        - gemini/gemini-3.1-pro-preview
+    snapshots:
+        - name: gemini/gemini-3.1-pro
+          originalName: gemini/gemini-3.1-pro
+    pointer: gemini/gemini-3.1-pro

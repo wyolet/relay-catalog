@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nebius-nebius_NousResearch_Hermes-3-Llama-3.1-405B
+    owner:
+        kind: host
+        id: nebius
+spec:
+    currency: USD
+    targetModels:
+        - nebius/NousResearch/Hermes-3-Llama-3.1-405B
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1
+        - meter: tokens.output
+          unit: per_million
+          amount: 3

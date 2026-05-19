@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nebius/Qwen/QwQ-32B
+    owner:
+        kind: provider
+        name: nebius
+    labels:
+        family: nebius/Qwen/QwQ
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: nebius
+          upstreamName: nebius/Qwen/QwQ-32B
+          adapter: openai
+    family: nebius/Qwen/QwQ
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    snapshots:
+        - name: nebius/Qwen/QwQ-32B
+          originalName: nebius/Qwen/QwQ-32B
+    pointer: nebius/Qwen/QwQ-32B

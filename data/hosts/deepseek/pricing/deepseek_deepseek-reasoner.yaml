@@ -1,0 +1,21 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: deepseek-deepseek_deepseek-reasoner
+    owner:
+        kind: host
+        id: deepseek
+spec:
+    currency: USD
+    targetModels:
+        - deepseek/deepseek-reasoner
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.28
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.42
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.028

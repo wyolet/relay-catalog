@@ -1,0 +1,29 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: baseten/MiniMaxAI/MiniMax-M2.5
+    owner:
+        kind: provider
+        name: baseten
+    labels:
+        family: baseten/MiniMaxAI/MiniMax
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: baseten
+          upstreamName: baseten/MiniMaxAI/MiniMax-M2.5
+          adapter: openai
+    family: baseten/MiniMaxAI/MiniMax
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: baseten/MiniMaxAI/MiniMax-M2.5
+          originalName: baseten/MiniMaxAI/MiniMax-M2.5
+    pointer: baseten/MiniMaxAI/MiniMax-M2.5

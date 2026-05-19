@@ -1,0 +1,15 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: vercel_ai_gateway-vercel_ai_gateway_cohere_embed-v4.0
+    owner:
+        kind: host
+        id: vercel_ai_gateway
+spec:
+    currency: USD
+    targetModels:
+        - vercel_ai_gateway/cohere/embed-v4.0
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.12

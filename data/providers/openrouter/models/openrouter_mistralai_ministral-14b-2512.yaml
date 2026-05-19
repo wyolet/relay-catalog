@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter/mistralai/ministral-14b-2512
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: openrouter/mistralai/ministral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openrouter
+          upstreamName: openrouter/mistralai/ministral-14b-2512
+          adapter: openai
+    family: openrouter/mistralai/ministral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    snapshots:
+        - name: openrouter/mistralai/ministral-14b-2512
+          originalName: openrouter/mistralai/ministral-14b-2512
+    pointer: openrouter/mistralai/ministral-14b-2512

@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: novita/sao10k/l31-70b-euryale-v2.2
+    owner:
+        kind: provider
+        name: novita
+    labels:
+        family: novita/sao10k/l31
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: novita
+          upstreamName: novita/sao10k/l31-70b-euryale-v2.2
+          adapter: openai
+    family: novita/sao10k/l31
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    snapshots:
+        - name: novita/sao10k/l31-70b-euryale-v2.2
+          originalName: novita/sao10k/l31-70b-euryale-v2.2
+    pointer: novita/sao10k/l31-70b-euryale-v2.2

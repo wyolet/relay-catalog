@@ -1,0 +1,24 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: vercel_ai_gateway-vercel_ai_gateway_anthropic_claude-3.7-sonnet
+    owner:
+        kind: host
+        id: vercel_ai_gateway
+spec:
+    currency: USD
+    targetModels:
+        - vercel_ai_gateway/anthropic/claude-3.7-sonnet
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 3
+        - meter: tokens.output
+          unit: per_million
+          amount: 15
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 3.75
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.3

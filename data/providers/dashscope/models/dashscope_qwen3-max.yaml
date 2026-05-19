@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: dashscope/qwen3-max
+    owner:
+        kind: provider
+        name: dashscope
+    labels:
+        family: dashscope/qwen3
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: dashscope
+          upstreamName: dashscope/qwen3-max-2026-01-23
+          adapter: openai
+    family: dashscope/qwen3
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 258048
+    contextWindowOutput: 65536
+    contextWindowTotal: 258048
+    aliases:
+        - dashscope/qwen3-max-preview
+    snapshots:
+        - name: dashscope/qwen3-max-2026-01-23
+          releasedAt: "2026-01-23"
+          originalName: dashscope/qwen3-max-2026-01-23
+    pointer: dashscope/qwen3-max-2026-01-23

@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: azure_ai/Llama-3.2-90B-Vision-Instruct
+    owner:
+        kind: provider
+        name: azure_ai
+    labels:
+        family: azure_ai/Llama
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: azure_ai
+          upstreamName: azure_ai/Llama-3.2-90B-Vision-Instruct
+          adapter: openai
+    family: azure_ai/Llama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 2048
+    contextWindowTotal: 128000
+    snapshots:
+        - name: azure_ai/Llama-3.2-90B-Vision-Instruct
+          originalName: azure_ai/Llama-3.2-90B-Vision-Instruct
+    pointer: azure_ai/Llama-3.2-90B-Vision-Instruct

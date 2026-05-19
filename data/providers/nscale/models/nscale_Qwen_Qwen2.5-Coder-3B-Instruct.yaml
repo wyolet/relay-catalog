@@ -1,0 +1,29 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nscale/Qwen/Qwen2.5-Coder-3B-Instruct
+    owner:
+        kind: provider
+        name: nscale
+    labels:
+        family: nscale/Qwen/Qwen2.5
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: nscale
+          upstreamName: nscale/Qwen/Qwen2.5-Coder-3B-Instruct
+          adapter: openai
+    family: nscale/Qwen/Qwen2.5
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: nscale/Qwen/Qwen2.5-Coder-3B-Instruct
+          originalName: nscale/Qwen/Qwen2.5-Coder-3B-Instruct
+    pointer: nscale/Qwen/Qwen2.5-Coder-3B-Instruct

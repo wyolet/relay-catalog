@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: ai21
+    displayName: Ai21
+    description: Ai21 — auto-imported, requires hand curation.
+    owner:
+        kind: system
+spec: {}

@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: heroku
+    displayName: Heroku
+    description: Heroku — auto-imported, requires hand curation.
+    owner:
+        kind: system
+spec: {}

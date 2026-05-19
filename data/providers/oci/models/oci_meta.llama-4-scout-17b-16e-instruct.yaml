@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: oci/meta.llama-4-scout-17b-16e-instruct
+    owner:
+        kind: provider
+        name: oci
+    labels:
+        family: oci/meta.llama
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: oci
+          upstreamName: oci/meta.llama-4-scout-17b-16e-instruct
+          adapter: openai
+    family: oci/meta.llama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 192000
+    contextWindowOutput: 4000
+    contextWindowTotal: 192000
+    snapshots:
+        - name: oci/meta.llama-4-scout-17b-16e-instruct
+          originalName: oci/meta.llama-4-scout-17b-16e-instruct
+    pointer: oci/meta.llama-4-scout-17b-16e-instruct

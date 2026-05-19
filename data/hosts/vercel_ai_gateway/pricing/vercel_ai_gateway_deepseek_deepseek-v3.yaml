@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: vercel_ai_gateway-vercel_ai_gateway_deepseek_deepseek-v3
+    owner:
+        kind: host
+        id: vercel_ai_gateway
+spec:
+    currency: USD
+    targetModels:
+        - vercel_ai_gateway/deepseek/deepseek-v3
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.8999999999999999
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.8999999999999999

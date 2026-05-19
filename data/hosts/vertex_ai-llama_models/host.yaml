@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: vertex_ai-llama_models
+    displayName: Vertex Ai Llama Models
+    owner:
+        kind: system
+spec:
+    baseURL: ""

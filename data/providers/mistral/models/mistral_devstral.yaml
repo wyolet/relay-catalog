@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral/devstral
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: mistral/devstral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: mistral
+          upstreamName: mistral/devstral
+          adapter: openai
+    family: mistral/devstral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        structuredOutputs: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 256000
+    contextWindowTotal: 256000
+    aliases:
+        - mistral/devstral-latest
+    snapshots:
+        - name: mistral/devstral
+          originalName: mistral/devstral
+    pointer: mistral/devstral

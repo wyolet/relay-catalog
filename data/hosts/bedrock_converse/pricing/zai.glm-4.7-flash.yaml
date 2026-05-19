@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: bedrock_converse-zai.glm-4.7-flash
+    owner:
+        kind: host
+        id: bedrock_converse
+spec:
+    currency: USD
+    targetModels:
+        - zai.glm-4.7-flash
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.07
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.39999999999999997

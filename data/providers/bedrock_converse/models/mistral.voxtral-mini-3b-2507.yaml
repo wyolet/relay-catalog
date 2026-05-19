@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral.voxtral-mini-3b-2507
+    owner:
+        kind: provider
+        name: bedrock_converse
+    labels:
+        family: mistral.voxtral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock_converse
+          upstreamName: mistral.voxtral-mini-3b-2507
+          adapter: openai
+    family: mistral.voxtral
+    capabilities:
+        chat: true
+        streaming: true
+        structuredOutputs: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - audio
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    snapshots:
+        - name: mistral.voxtral-mini-3b-2507
+          originalName: mistral.voxtral-mini-3b-2507
+    pointer: mistral.voxtral-mini-3b-2507

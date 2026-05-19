@@ -1,0 +1,45 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: azure_ai/gpt-5.4-mini
+    owner:
+        kind: provider
+        name: azure_ai
+    labels:
+        family: azure_ai/gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: azure_ai
+          upstreamName: azure_ai/gpt-5.4-mini-2026-03-17
+          adapter: openai
+    family: azure_ai/gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        batch: true
+        webSearch: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 400000
+    contextWindowOutput: 128000
+    contextWindowTotal: 400000
+    snapshots:
+        - name: azure_ai/gpt-5.4-mini-2026-03-17
+          releasedAt: "2026-03-17"
+          originalName: azure_ai/gpt-5.4-mini-2026-03-17
+    pointer: azure_ai/gpt-5.4-mini-2026-03-17

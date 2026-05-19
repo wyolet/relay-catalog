@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: meta.llama4-maverick-17b-instruct-v1:0
+    owner:
+        kind: provider
+        name: bedrock_converse
+    labels:
+        family: meta.llama4
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock_converse
+          upstreamName: meta.llama4-maverick-17b-instruct-v1:0
+          adapter: openai
+    family: meta.llama4
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    snapshots:
+        - name: meta.llama4-maverick-17b-instruct-v1:0
+          originalName: meta.llama4-maverick-17b-instruct-v1:0
+    pointer: meta.llama4-maverick-17b-instruct-v1:0

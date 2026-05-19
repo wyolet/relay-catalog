@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: dashscope/qwq-plus
+    owner:
+        kind: provider
+        name: dashscope
+    labels:
+        family: dashscope/qwq
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: dashscope
+          upstreamName: dashscope/qwq-plus
+          adapter: openai
+    family: dashscope/qwq
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 98304
+    contextWindowOutput: 8192
+    contextWindowTotal: 98304
+    snapshots:
+        - name: dashscope/qwq-plus
+          originalName: dashscope/qwq-plus
+    pointer: dashscope/qwq-plus

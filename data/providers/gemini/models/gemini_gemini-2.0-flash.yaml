@@ -1,0 +1,46 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini/gemini-2.0-flash
+    owner:
+        kind: provider
+        name: gemini
+    labels:
+        family: gemini/gemini
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: gemini
+          upstreamName: gemini/gemini-2.0-flash
+          adapter: openai
+    family: gemini/gemini
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        structuredOutputs: true
+        webSearch: true
+        audioInput: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+        output:
+            - text
+            - audio
+    contextWindowInput: 1048576
+    contextWindowOutput: 8192
+    contextWindowTotal: 1048576
+    deprecation:
+        status: deprecated
+        sunsetDate: "2026-06-01"
+    snapshots:
+        - name: gemini/gemini-2.0-flash
+          originalName: gemini/gemini-2.0-flash
+    pointer: gemini/gemini-2.0-flash

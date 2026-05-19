@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini/gemini-2.5-flash-native-audio
+    owner:
+        kind: provider
+        name: gemini
+    labels:
+        family: gemini/gemini
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: gemini
+          upstreamName: gemini/gemini-2.5-flash-native-audio
+          adapter: openai
+    family: gemini/gemini
+    capabilities:
+        chat: true
+        streaming: true
+        audioInput: true
+        audioOutput: true
+    modalities:
+        input:
+            - text
+            - audio
+        output:
+            - text
+            - audio
+    contextWindowInput: 1048576
+    contextWindowOutput: 8192
+    contextWindowTotal: 1048576
+    aliases:
+        - gemini/gemini-2.5-flash-native-audio-latest
+    snapshots:
+        - name: gemini/gemini-2.5-flash-native-audio
+          originalName: gemini/gemini-2.5-flash-native-audio
+    pointer: gemini/gemini-2.5-flash-native-audio

@@ -1,0 +1,44 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: azure/us/gpt-5
+    owner:
+        kind: provider
+        name: azure
+    labels:
+        family: azure/us/gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: azure
+          upstreamName: azure/us/gpt-5-2025-08-07
+          adapter: openai
+    family: azure/us/gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        batch: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 272000
+    contextWindowOutput: 128000
+    contextWindowTotal: 272000
+    snapshots:
+        - name: azure/us/gpt-5-2025-08-07
+          releasedAt: "2025-08-07"
+          originalName: azure/us/gpt-5-2025-08-07
+    pointer: azure/us/gpt-5-2025-08-07

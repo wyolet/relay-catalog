@@ -1,0 +1,24 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: bedrock-bedrock_us-gov-west-1_anthropic.claude-haiku-4-5-20251001-v1_0
+    owner:
+        kind: host
+        id: bedrock
+spec:
+    currency: USD
+    targetModels:
+        - bedrock/us-gov-west-1/anthropic.claude-haiku-4-5-20251001-v1:0
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.2
+        - meter: tokens.output
+          unit: per_million
+          amount: 6
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 1.5
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.12

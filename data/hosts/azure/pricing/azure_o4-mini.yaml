@@ -1,0 +1,21 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: azure-azure_o4-mini
+    owner:
+        kind: host
+        id: azure
+spec:
+    currency: USD
+    targetModels:
+        - azure/o4-mini
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.1
+        - meter: tokens.output
+          unit: per_million
+          amount: 4.4
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.275

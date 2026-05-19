@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: writer.palmyra-x5-v1:0
+    owner:
+        kind: provider
+        name: bedrock_converse
+    labels:
+        family: writer.palmyra
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock_converse
+          upstreamName: writer.palmyra-x5-v1:0
+          adapter: openai
+    family: writer.palmyra
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        fileInput: true
+    modalities:
+        input:
+            - text
+            - file
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 8192
+    contextWindowTotal: 1000000
+    snapshots:
+        - name: writer.palmyra-x5-v1:0
+          originalName: writer.palmyra-x5-v1:0
+    pointer: writer.palmyra-x5-v1:0

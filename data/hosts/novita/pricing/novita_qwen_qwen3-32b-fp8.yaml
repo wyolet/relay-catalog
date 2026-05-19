@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: novita-novita_qwen_qwen3-32b-fp8
+    owner:
+        kind: host
+        id: novita
+spec:
+    currency: USD
+    targetModels:
+        - novita/qwen/qwen3-32b-fp8
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.09999999999999999
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.44999999999999996

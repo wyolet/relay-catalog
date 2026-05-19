@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: sarvam/sarvam-m
+    owner:
+        kind: provider
+        name: sarvam
+    labels:
+        family: sarvam/sarvam
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: sarvam
+          upstreamName: sarvam/sarvam-m
+          adapter: openai
+    family: sarvam/sarvam
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 32000
+    contextWindowTotal: 8192
+    snapshots:
+        - name: sarvam/sarvam-m
+          originalName: sarvam/sarvam-m
+    pointer: sarvam/sarvam-m

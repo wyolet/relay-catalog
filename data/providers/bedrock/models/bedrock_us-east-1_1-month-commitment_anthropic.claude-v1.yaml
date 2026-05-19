@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: bedrock/us-east-1/1-month-commitment/anthropic.claude-v1
+    owner:
+        kind: provider
+        name: bedrock
+    labels:
+        family: bedrock/us
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock
+          upstreamName: bedrock/us-east-1/1-month-commitment/anthropic.claude-v1
+          adapter: openai
+    family: bedrock/us
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 100000
+    contextWindowOutput: 8191
+    contextWindowTotal: 100000
+    snapshots:
+        - name: bedrock/us-east-1/1-month-commitment/anthropic.claude-v1
+          originalName: bedrock/us-east-1/1-month-commitment/anthropic.claude-v1
+    pointer: bedrock/us-east-1/1-month-commitment/anthropic.claude-v1

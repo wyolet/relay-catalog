@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: us.meta.llama3-2-1b-instruct-v1:0
+    owner:
+        kind: provider
+        name: bedrock
+    labels:
+        family: us.meta.llama3
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock
+          upstreamName: us.meta.llama3-2-1b-instruct-v1:0
+          adapter: openai
+    family: us.meta.llama3
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    snapshots:
+        - name: us.meta.llama3-2-1b-instruct-v1:0
+          originalName: us.meta.llama3-2-1b-instruct-v1:0
+    pointer: us.meta.llama3-2-1b-instruct-v1:0

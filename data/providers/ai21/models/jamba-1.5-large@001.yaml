@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: jamba-1.5-large@001
+    owner:
+        kind: provider
+        name: ai21
+    labels:
+        family: jamba
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ai21
+          upstreamName: jamba-1.5-large@001
+          adapter: openai
+    family: jamba
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 256000
+    contextWindowTotal: 256000
+    snapshots:
+        - name: jamba-1.5-large@001
+          originalName: jamba-1.5-large@001
+    pointer: jamba-1.5-large@001

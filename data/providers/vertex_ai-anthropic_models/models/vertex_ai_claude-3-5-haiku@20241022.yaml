@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: vertex_ai/claude-3-5-haiku@20241022
+    owner:
+        kind: provider
+        name: vertex_ai-anthropic_models
+    labels:
+        family: vertex_ai/claude
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vertex_ai-anthropic_models
+          upstreamName: vertex_ai/claude-3-5-haiku@20241022
+          adapter: openai
+    family: vertex_ai/claude
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        fileInput: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+            - file
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 8192
+    contextWindowTotal: 200000
+    snapshots:
+        - name: vertex_ai/claude-3-5-haiku@20241022
+          originalName: vertex_ai/claude-3-5-haiku@20241022
+    pointer: vertex_ai/claude-3-5-haiku@20241022

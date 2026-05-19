@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepinfra/Sao10K/L3-8B-Lunaris-v1-Turbo
+    owner:
+        kind: provider
+        name: deepinfra
+    labels:
+        family: deepinfra/Sao10K/L3
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: deepinfra
+          upstreamName: deepinfra/Sao10K/L3-8B-Lunaris-v1-Turbo
+          adapter: openai
+    family: deepinfra/Sao10K/L3
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    snapshots:
+        - name: deepinfra/Sao10K/L3-8B-Lunaris-v1-Turbo
+          originalName: deepinfra/Sao10K/L3-8B-Lunaris-v1-Turbo
+    pointer: deepinfra/Sao10K/L3-8B-Lunaris-v1-Turbo

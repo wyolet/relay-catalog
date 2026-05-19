@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: bedrock/us-gov-west-1/amazon.titan-text-premier-v1:0
+    owner:
+        kind: provider
+        name: bedrock
+    labels:
+        family: bedrock/us
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock
+          upstreamName: bedrock/us-gov-west-1/amazon.titan-text-premier-v1:0
+          adapter: openai
+    family: bedrock/us
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 42000
+    contextWindowOutput: 32000
+    contextWindowTotal: 42000
+    snapshots:
+        - name: bedrock/us-gov-west-1/amazon.titan-text-premier-v1:0
+          originalName: bedrock/us-gov-west-1/amazon.titan-text-premier-v1:0
+    pointer: bedrock/us-gov-west-1/amazon.titan-text-premier-v1:0

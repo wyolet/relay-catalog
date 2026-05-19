@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter/openai/o1
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: openrouter/openai/o1
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openrouter
+          upstreamName: openrouter/openai/o1
+          adapter: openai
+    family: openrouter/openai/o1
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        vision: true
+        promptCache: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 100000
+    contextWindowTotal: 200000
+    snapshots:
+        - name: openrouter/openai/o1
+          originalName: openrouter/openai/o1
+    pointer: openrouter/openai/o1

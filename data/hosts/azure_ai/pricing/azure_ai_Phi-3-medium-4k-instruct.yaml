@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: azure_ai-azure_ai_Phi-3-medium-4k-instruct
+    owner:
+        kind: host
+        id: azure_ai
+spec:
+    currency: USD
+    targetModels:
+        - azure_ai/Phi-3-medium-4k-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.16999999999999998
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.6799999999999999

@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gradient_ai/anthropic-claude-3-opus
+    owner:
+        kind: provider
+        name: gradient_ai
+    labels:
+        family: gradient_ai/anthropic
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: gradient_ai
+          upstreamName: gradient_ai/anthropic-claude-3-opus
+          adapter: openai
+    family: gradient_ai/anthropic
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 1024
+    contextWindowTotal: 200000
+    snapshots:
+        - name: gradient_ai/anthropic-claude-3-opus
+          originalName: gradient_ai/anthropic-claude-3-opus
+    pointer: gradient_ai/anthropic-claude-3-opus
