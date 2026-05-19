@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: ollama/deepseek-v3.1:671b-cloud
@@ -8,7 +8,7 @@ metadata:
     labels:
         family: ollama/deepseek
         source: litellm
-        source_version: "2026-05-14"
+        source_version: "2026-05-20"
 spec:
     hosts:
         - host: ollama
@@ -27,3 +27,7 @@ spec:
     contextWindowInput: 163840
     contextWindowOutput: 163840
     contextWindowTotal: 163840
+    snapshots:
+        - name: ollama/deepseek-v3.1:671b-cloud
+          originalName: ollama/deepseek-v3.1:671b-cloud
+    pointer: ollama/deepseek-v3.1:671b-cloud

@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claude-3-opus
+    owner:
+        kind: provider
+        name: anthropic
+    labels:
+        family: claude
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: anthropic
+          upstreamName: claude-3-opus-20240229
+          adapter: anthropic
+    family: claude
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        structuredOutputs: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 4096
+    contextWindowTotal: 200000
+    deprecation:
+        status: sunset
+        sunsetDate: "2026-05-01"
+    snapshots:
+        - name: claude-3-opus-20240229
+          releasedAt: "2024-02-29"
+          originalName: claude-3-opus-20240229
+    pointer: claude-3-opus-20240229

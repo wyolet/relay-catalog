@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: claude-sonnet-4-6
@@ -8,14 +8,11 @@ metadata:
     labels:
         family: claude
         source: litellm
-        source_version: "2026-05-14"
+        source_version: "2026-05-20"
 spec:
     hosts:
         - host: anthropic
           upstreamName: claude-sonnet-4-6
-          adapter: anthropic
-        - host: amazon-bedrock
-          upstreamName: anthropic.claude-sonnet-4-6-v1:0
           adapter: anthropic
     family: claude
     capabilities:
@@ -39,3 +36,7 @@ spec:
     contextWindowInput: 1000000
     contextWindowOutput: 64000
     contextWindowTotal: 1000000
+    snapshots:
+        - name: claude-sonnet-4-6
+          originalName: claude-sonnet-4-6
+    pointer: claude-sonnet-4-6

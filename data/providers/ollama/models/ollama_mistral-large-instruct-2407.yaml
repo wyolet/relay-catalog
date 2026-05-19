@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: ollama/mistral-large-instruct-2407
@@ -8,7 +8,7 @@ metadata:
     labels:
         family: ollama/mistral
         source: litellm
-        source_version: "2026-05-14"
+        source_version: "2026-05-20"
 spec:
     hosts:
         - host: ollama
@@ -27,3 +27,7 @@ spec:
     contextWindowInput: 65536
     contextWindowOutput: 8192
     contextWindowTotal: 65536
+    snapshots:
+        - name: ollama/mistral-large-instruct-2407
+          originalName: ollama/mistral-large-instruct-2407
+    pointer: ollama/mistral-large-instruct-2407

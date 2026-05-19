@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: gpt-audio-mini
@@ -8,11 +8,11 @@ metadata:
     labels:
         family: gpt
         source: litellm
-        source_version: "2026-05-14"
+        source_version: "2026-05-20"
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-audio-mini
+          upstreamName: gpt-audio-mini-2025-12-15
           adapter: openai
     family: gpt
     capabilities:
@@ -34,3 +34,11 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 16384
     contextWindowTotal: 128000
+    snapshots:
+        - name: gpt-audio-mini-2025-10-06
+          releasedAt: "2025-10-06"
+          originalName: gpt-audio-mini-2025-10-06
+        - name: gpt-audio-mini-2025-12-15
+          releasedAt: "2025-12-15"
+          originalName: gpt-audio-mini-2025-12-15
+    pointer: gpt-audio-mini-2025-12-15

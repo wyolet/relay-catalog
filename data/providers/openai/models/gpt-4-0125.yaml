@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-4-0125
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openai
+          upstreamName: gpt-4-0125
+          adapter: openai
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    deprecation:
+        status: sunset
+        sunsetDate: "2026-03-26"
+    aliases:
+        - gpt-4-0125-preview
+    snapshots:
+        - name: gpt-4-0125
+          originalName: gpt-4-0125
+    pointer: gpt-4-0125

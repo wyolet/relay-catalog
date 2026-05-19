@@ -1,8 +1,10 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Host
 metadata:
     name: anthropic
     displayName: Anthropic
+    owner:
+        kind: system
 spec:
     baseURL: https://api.anthropic.com
     homepageURL: https://www.anthropic.com
@@ -10,10 +12,4 @@ spec:
     consoleURL: https://console.anthropic.com
     statusPageURL: https://status.anthropic.com
     icon:
-      path: /provider/anthropic.svg
-    policies:
-      - anthropic-tier-1
-      - anthropic-tier-2
-      - anthropic-tier-3
-      - anthropic-tier-4
-    defaultPolicy: anthropic-tier-1
+        path: /provider/anthropic.svg

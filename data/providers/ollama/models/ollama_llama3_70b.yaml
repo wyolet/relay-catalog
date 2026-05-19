@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: ollama/llama3:70b
@@ -8,7 +8,7 @@ metadata:
     labels:
         family: ollama/llama3:70b
         source: litellm
-        source_version: "2026-05-14"
+        source_version: "2026-05-20"
 spec:
     hosts:
         - host: ollama
@@ -26,3 +26,7 @@ spec:
     contextWindowInput: 8192
     contextWindowOutput: 8192
     contextWindowTotal: 8192
+    snapshots:
+        - name: ollama/llama3:70b
+          originalName: ollama/llama3:70b
+    pointer: ollama/llama3:70b

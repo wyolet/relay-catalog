@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: RateLimit
 metadata:
   name: openai-tier-3-rl
@@ -19,7 +19,7 @@ spec:
       window: 1m
       strategy: sliding-window
 ---
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: RateLimit
 metadata:
   name: openai-tier-3-gpt-5-5-pro-rl
@@ -39,7 +39,7 @@ spec:
       window: 1m
       strategy: sliding-window
 ---
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: RateLimit
 metadata:
   name: openai-tier-3-gpt-5-4-pro-rl
@@ -59,7 +59,7 @@ spec:
       window: 1m
       strategy: sliding-window
 ---
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Policy
 metadata:
   name: openai-tier-3

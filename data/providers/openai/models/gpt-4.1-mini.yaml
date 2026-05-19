@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: gpt-4.1-mini
@@ -8,11 +8,11 @@ metadata:
     labels:
         family: gpt
         source: litellm
-        source_version: "2026-05-14"
+        source_version: "2026-05-20"
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-4.1-mini
+          upstreamName: gpt-4.1-mini-2025-04-14
           adapter: openai
     family: gpt
     capabilities:
@@ -37,3 +37,8 @@ spec:
     contextWindowInput: 1047576
     contextWindowOutput: 32768
     contextWindowTotal: 1047576
+    snapshots:
+        - name: gpt-4.1-mini-2025-04-14
+          releasedAt: "2025-04-14"
+          originalName: gpt-4.1-mini-2025-04-14
+    pointer: gpt-4.1-mini-2025-04-14

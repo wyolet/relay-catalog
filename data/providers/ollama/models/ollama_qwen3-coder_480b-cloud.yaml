@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: ollama/qwen3-coder:480b-cloud
@@ -8,7 +8,7 @@ metadata:
     labels:
         family: ollama/qwen3
         source: litellm
-        source_version: "2026-05-14"
+        source_version: "2026-05-20"
 spec:
     hosts:
         - host: ollama
@@ -27,3 +27,7 @@ spec:
     contextWindowInput: 262144
     contextWindowOutput: 262144
     contextWindowTotal: 262144
+    snapshots:
+        - name: ollama/qwen3-coder:480b-cloud
+          originalName: ollama/qwen3-coder:480b-cloud
+    pointer: ollama/qwen3-coder:480b-cloud

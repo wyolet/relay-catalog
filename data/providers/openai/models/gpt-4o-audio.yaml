@@ -1,0 +1,45 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-4o-audio
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openai
+          upstreamName: gpt-4o-audio-preview-2025-06-03
+          adapter: openai
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        audioInput: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - audio
+        output:
+            - text
+            - audio
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    aliases:
+        - gpt-4o-audio-preview
+    snapshots:
+        - name: gpt-4o-audio-preview-2024-12-17
+          releasedAt: "2024-12-17"
+          originalName: gpt-4o-audio-preview-2024-12-17
+        - name: gpt-4o-audio-preview-2025-06-03
+          releasedAt: "2025-06-03"
+          originalName: gpt-4o-audio-preview-2025-06-03
+    pointer: gpt-4o-audio-preview-2025-06-03

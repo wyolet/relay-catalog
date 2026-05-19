@@ -1,0 +1,44 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claude-sonnet-4-5
+    owner:
+        kind: provider
+        name: anthropic
+    labels:
+        family: claude
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: anthropic
+          upstreamName: claude-sonnet-4-5-20250929
+          adapter: anthropic
+    family: claude
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        computerUse: true
+        webSearch: true
+        fileInput: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 64000
+    contextWindowTotal: 200000
+    snapshots:
+        - name: claude-sonnet-4-5-20250929
+          releasedAt: "2025-09-29"
+          originalName: claude-sonnet-4-5-20250929
+    pointer: claude-sonnet-4-5-20250929
