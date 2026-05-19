@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-32b-v1-0
+    owner:
+        kind: provider
+        name: bedrock_converse
+    labels:
+        family: qwen
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock_converse
+          upstreamName: qwen.qwen3-32b-v1:0
+          adapter: openai
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 16384
+    contextWindowTotal: 131072
+    snapshots:
+        - name: qwen-qwen3-32b-v1-0
+          originalName: qwen.qwen3-32b-v1:0
+    pointer: qwen-qwen3-32b-v1-0

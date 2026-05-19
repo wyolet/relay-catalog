@@ -12,7 +12,7 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-sonnet-4-5-20250929
+          upstreamName: claude-sonnet-4-5
           adapter: anthropic
     family: claude
     capabilities:
@@ -38,7 +38,7 @@ spec:
     contextWindowOutput: 64000
     contextWindowTotal: 200000
     snapshots:
+        - name: claude-sonnet-4-5
         - name: claude-sonnet-4-5-20250929
           releasedAt: "2025-09-29"
-          originalName: claude-sonnet-4-5-20250929
-    pointer: claude-sonnet-4-5-20250929
+    pointer: claude-sonnet-4-5

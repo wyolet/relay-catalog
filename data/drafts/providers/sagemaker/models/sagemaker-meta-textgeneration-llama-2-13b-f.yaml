@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: sagemaker-meta-textgeneration-llama-2-13b-f
+    owner:
+        kind: provider
+        name: sagemaker
+    labels:
+        family: sagemaker
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: sagemaker
+          upstreamName: sagemaker/meta-textgeneration-llama-2-13b-f
+          adapter: openai
+    family: sagemaker
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 4096
+    contextWindowOutput: 4096
+    contextWindowTotal: 4096
+    snapshots:
+        - name: sagemaker-meta-textgeneration-llama-2-13b-f
+          originalName: sagemaker/meta-textgeneration-llama-2-13b-f
+    pointer: sagemaker-meta-textgeneration-llama-2-13b-f

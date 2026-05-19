@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nebius-nebius-google-gemma-3-27b-it
+    owner:
+        kind: host
+        id: nebius
+spec:
+    currency: USD
+    targetModels:
+        - nebius-google-gemma-3-27b-it
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.06
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.19999999999999998

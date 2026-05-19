@@ -1,0 +1,29 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: us-twelvelabs-pegasus-1-2-v1-0
+    owner:
+        kind: provider
+        name: bedrock
+    labels:
+        family: us
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock
+          upstreamName: us.twelvelabs.pegasus-1-2-v1:0
+          adapter: openai
+    family: us
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: us-twelvelabs-pegasus-1-2-v1-0
+          originalName: us.twelvelabs.pegasus-1-2-v1:0
+    pointer: us-twelvelabs-pegasus-1-2-v1-0

@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: together-ai-openai-gpt-oss-20b
+    owner:
+        kind: provider
+        name: together_ai
+    labels:
+        family: together
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: together_ai
+          upstreamName: together_ai/openai/gpt-oss-20b
+          adapter: openai
+    family: together
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: together-ai-openai-gpt-oss-20b
+          originalName: together_ai/openai/gpt-oss-20b
+    pointer: together-ai-openai-gpt-oss-20b

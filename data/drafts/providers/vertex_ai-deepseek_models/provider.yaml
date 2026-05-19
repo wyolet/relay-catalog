@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: vertex_ai-deepseek_models
+    displayName: Vertex Ai Deepseek Models
+    description: Vertex Ai Deepseek Models — auto-imported, requires hand curation.
+spec: {}

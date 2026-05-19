@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: openrouter-openrouter-z-ai-glm-4-6-exacto
+    owner:
+        kind: host
+        id: openrouter
+spec:
+    currency: USD
+    targetModels:
+        - openrouter-z-ai-glm-4-6-exacto
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.44999999999999996
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.9

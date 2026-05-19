@@ -35,10 +35,8 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 16384
     contextWindowTotal: 128000
-    aliases:
-        - gpt-4o-search-preview
     snapshots:
+        - name: gpt-4o-search-preview
         - name: gpt-4o-search-preview-2025-03-11
           releasedAt: "2025-03-11"
-          originalName: gpt-4o-search-preview-2025-03-11
     pointer: gpt-4o-search-preview-2025-03-11

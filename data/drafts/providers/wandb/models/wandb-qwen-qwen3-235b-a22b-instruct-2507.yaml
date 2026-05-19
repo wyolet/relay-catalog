@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: wandb-qwen-qwen3-235b-a22b-instruct-2507
+    owner:
+        kind: provider
+        name: wandb
+    labels:
+        family: wandb
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: wandb
+          upstreamName: wandb/Qwen/Qwen3-235B-A22B-Instruct-2507
+          adapter: openai
+    family: wandb
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    snapshots:
+        - name: wandb-qwen-qwen3-235b-a22b-instruct-2507
+          originalName: wandb/Qwen/Qwen3-235B-A22B-Instruct-2507
+    pointer: wandb-qwen-qwen3-235b-a22b-instruct-2507

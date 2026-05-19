@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter-gryphe-mythomax-l2-13b
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: openrouter
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openrouter
+          upstreamName: openrouter/gryphe/mythomax-l2-13b
+          adapter: openai
+    family: openrouter
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    snapshots:
+        - name: openrouter-gryphe-mythomax-l2-13b
+          originalName: openrouter/gryphe/mythomax-l2-13b
+    pointer: openrouter-gryphe-mythomax-l2-13b

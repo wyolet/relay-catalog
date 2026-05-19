@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: fireworks-ai-accounts-fireworks-models-yi-34b-200k-capybara
+    owner:
+        kind: provider
+        name: fireworks_ai
+    labels:
+        family: fireworks
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: fireworks_ai
+          upstreamName: fireworks_ai/accounts/fireworks/models/yi-34b-200k-capybara
+          adapter: openai
+    family: fireworks
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 200000
+    contextWindowTotal: 200000
+    snapshots:
+        - name: fireworks-ai-accounts-fireworks-models-yi-34b-200k-capybara
+          originalName: fireworks_ai/accounts/fireworks/models/yi-34b-200k-capybara
+    pointer: fireworks-ai-accounts-fireworks-models-yi-34b-200k-capybara

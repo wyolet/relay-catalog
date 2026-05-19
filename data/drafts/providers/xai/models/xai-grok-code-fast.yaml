@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: xai-grok-code-fast
+    owner:
+        kind: provider
+        name: xai
+    labels:
+        family: xai
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: xai
+          upstreamName: xai/grok-code-fast
+          adapter: openai
+    family: xai
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 256000
+    contextWindowTotal: 256000
+    snapshots:
+        - name: xai-grok-code-fast
+          originalName: xai/grok-code-fast
+    pointer: xai-grok-code-fast

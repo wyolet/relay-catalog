@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: azure_ai-azure-ai-jamba-instruct
+    owner:
+        kind: host
+        id: azure_ai
+spec:
+    currency: USD
+    targetModels:
+        - azure-ai-jamba-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.7

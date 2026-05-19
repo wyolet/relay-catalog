@@ -12,7 +12,7 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-opus-4-7-20260416
+          upstreamName: claude-opus-4-7
           adapter: anthropic
     family: claude
     capabilities:
@@ -36,7 +36,7 @@ spec:
     contextWindowOutput: 128000
     contextWindowTotal: 1000000
     snapshots:
+        - name: claude-opus-4-7
         - name: claude-opus-4-7-20260416
           releasedAt: "2026-04-16"
-          originalName: claude-opus-4-7-20260416
-    pointer: claude-opus-4-7-20260416
+    pointer: claude-opus-4-7

@@ -1,0 +1,21 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: xai-xai-grok-3-mini-beta
+    owner:
+        kind: host
+        id: xai
+spec:
+    currency: USD
+    targetModels:
+        - xai-grok-3-mini-beta
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.075

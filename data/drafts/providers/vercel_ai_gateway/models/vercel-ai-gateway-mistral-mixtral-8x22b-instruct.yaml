@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: vercel-ai-gateway-mistral-mixtral-8x22b-instruct
+    owner:
+        kind: provider
+        name: vercel_ai_gateway
+    labels:
+        family: vercel
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vercel_ai_gateway
+          upstreamName: vercel_ai_gateway/mistral/mixtral-8x22b-instruct
+          adapter: openai
+    family: vercel
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 65536
+    contextWindowOutput: 2048
+    contextWindowTotal: 65536
+    snapshots:
+        - name: vercel-ai-gateway-mistral-mixtral-8x22b-instruct
+          originalName: vercel_ai_gateway/mistral/mixtral-8x22b-instruct
+    pointer: vercel-ai-gateway-mistral-mixtral-8x22b-instruct

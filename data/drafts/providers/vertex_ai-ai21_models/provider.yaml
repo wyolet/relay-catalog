@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: vertex_ai-ai21_models
+    displayName: Vertex Ai Ai21 Models
+    description: Vertex Ai Ai21 Models — auto-imported, requires hand curation.
+spec: {}

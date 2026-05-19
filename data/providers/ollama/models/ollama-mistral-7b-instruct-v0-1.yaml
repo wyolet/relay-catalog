@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ollama-mistral-7b-instruct-v0-1
+    owner:
+        kind: provider
+        name: ollama
+    labels:
+        family: ollama
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama
+          upstreamName: ollama/mistral-7B-Instruct-v0.1
+          adapter: openai
+    family: ollama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    snapshots:
+        - name: ollama-mistral-7b-instruct-v0-1
+          originalName: ollama/mistral-7B-Instruct-v0.1
+    pointer: ollama-mistral-7b-instruct-v0-1

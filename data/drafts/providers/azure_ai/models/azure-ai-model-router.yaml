@@ -1,0 +1,29 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: azure-ai-model-router
+    owner:
+        kind: provider
+        name: azure_ai
+    labels:
+        family: azure
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: azure_ai
+          upstreamName: azure_ai/model_router
+          adapter: openai
+    family: azure
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: azure-ai-model-router
+          originalName: azure_ai/model_router
+    pointer: azure-ai-model-router

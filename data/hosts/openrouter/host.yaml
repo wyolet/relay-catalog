@@ -1,9 +1,0 @@
-apiVersion: relay.wyolet.dev/v1alpha2
-kind: Host
-metadata:
-    name: openrouter
-    displayName: Openrouter
-    owner:
-        kind: system
-spec:
-    baseURL: ""

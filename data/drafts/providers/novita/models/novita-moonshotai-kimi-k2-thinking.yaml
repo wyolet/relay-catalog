@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: novita-moonshotai-kimi-k2-thinking
+    owner:
+        kind: provider
+        name: novita
+    labels:
+        family: novita
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: novita
+          upstreamName: novita/moonshotai/kimi-k2-thinking
+          adapter: openai
+    family: novita
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        reasoning: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    snapshots:
+        - name: novita-moonshotai-kimi-k2-thinking
+          originalName: novita/moonshotai/kimi-k2-thinking
+    pointer: novita-moonshotai-kimi-k2-thinking

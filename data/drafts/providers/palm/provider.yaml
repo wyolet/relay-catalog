@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: palm
+    displayName: Palm
+    description: Palm — auto-imported, requires hand curation.
+spec: {}

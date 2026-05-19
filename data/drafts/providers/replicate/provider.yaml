@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: replicate
+    displayName: Replicate
+    description: Replicate — auto-imported, requires hand curation.
+spec: {}

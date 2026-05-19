@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: azure_ai
+    displayName: Azure Ai
+spec:
+    baseURL: ""

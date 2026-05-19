@@ -1,0 +1,21 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: zai-zai-glm-5
+    owner:
+        kind: host
+        id: zai
+spec:
+    currency: USD
+    targetModels:
+        - zai-glm-5
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.1999999999999997
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.19999999999999998

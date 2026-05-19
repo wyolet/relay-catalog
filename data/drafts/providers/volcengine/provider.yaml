@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: volcengine
+    displayName: Volcengine
+    description: Volcengine — auto-imported, requires hand curation.
+spec: {}

@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: azure_ai-azure-ai-meta-llama-3-1-405b-instruct
+    owner:
+        kind: host
+        id: azure_ai
+spec:
+    currency: USD
+    targetModels:
+        - azure-ai-meta-llama-3-1-405b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 5.33
+        - meter: tokens.output
+          unit: per_million
+          amount: 16

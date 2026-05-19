@@ -1,9 +1,0 @@
-apiVersion: relay.wyolet.dev/v1alpha2
-kind: Provider
-metadata:
-    name: nlp_cloud
-    displayName: Nlp Cloud
-    description: Nlp Cloud — auto-imported, requires hand curation.
-    owner:
-        kind: system
-spec: {}

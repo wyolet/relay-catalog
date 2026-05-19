@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nebius-google-gemma-3-27b-it
+    owner:
+        kind: provider
+        name: nebius
+    labels:
+        family: nebius
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: nebius
+          upstreamName: nebius/google/gemma-3-27b-it
+          adapter: openai
+    family: nebius
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: nebius-google-gemma-3-27b-it
+          originalName: nebius/google/gemma-3-27b-it
+    pointer: nebius-google-gemma-3-27b-it

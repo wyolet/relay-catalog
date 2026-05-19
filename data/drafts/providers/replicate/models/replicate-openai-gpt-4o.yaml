@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: replicate-openai-gpt-4o
+    owner:
+        kind: provider
+        name: replicate
+    labels:
+        family: replicate
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: replicate
+          upstreamName: replicate/openai/gpt-4o
+          adapter: openai
+    family: replicate
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        vision: true
+        structuredOutputs: true
+        audioInput: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+        output:
+            - text
+            - audio
+    snapshots:
+        - name: replicate-openai-gpt-4o
+          originalName: replicate/openai/gpt-4o
+    pointer: replicate-openai-gpt-4o

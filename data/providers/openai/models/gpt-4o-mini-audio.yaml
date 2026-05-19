@@ -33,10 +33,8 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 16384
     contextWindowTotal: 128000
-    aliases:
-        - gpt-4o-mini-audio-preview
     snapshots:
+        - name: gpt-4o-mini-audio-preview
         - name: gpt-4o-mini-audio-preview-2024-12-17
           releasedAt: "2024-12-17"
-          originalName: gpt-4o-mini-audio-preview-2024-12-17
     pointer: gpt-4o-mini-audio-preview-2024-12-17

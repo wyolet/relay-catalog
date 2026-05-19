@@ -38,5 +38,4 @@ spec:
     contextWindowTotal: 1000000
     snapshots:
         - name: claude-sonnet-4-6
-          originalName: claude-sonnet-4-6
     pointer: claude-sonnet-4-6

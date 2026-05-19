@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: deepinfra-deepinfra-openai-gpt-oss-120b
+    owner:
+        kind: host
+        id: deepinfra
+spec:
+    currency: USD
+    targetModels:
+        - deepinfra-openai-gpt-oss-120b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.049999999999999996
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.44999999999999996

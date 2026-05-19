@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: oci-cohere-command-a-03-2025
+    owner:
+        kind: provider
+        name: oci
+    labels:
+        family: oci
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: oci
+          upstreamName: oci/cohere.command-a-03-2025
+          adapter: openai
+    family: oci
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 4000
+    contextWindowTotal: 256000
+    snapshots:
+        - name: oci-cohere-command-a-03-2025
+          originalName: oci/cohere.command-a-03-2025
+    pointer: oci-cohere-command-a-03-2025

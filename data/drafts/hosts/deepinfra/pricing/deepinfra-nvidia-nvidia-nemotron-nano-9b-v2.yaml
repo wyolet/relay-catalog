@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: deepinfra-deepinfra-nvidia-nvidia-nemotron-nano-9b-v2
+    owner:
+        kind: host
+        id: deepinfra
+spec:
+    currency: USD
+    targetModels:
+        - deepinfra-nvidia-nvidia-nemotron-nano-9b-v2
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.04
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.16

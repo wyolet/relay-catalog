@@ -1,0 +1,24 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: bedrock-bedrock-us-gov-west-1-anthropic-claude-sonnet-4-5-20250929-v1-0
+    owner:
+        kind: host
+        id: bedrock
+spec:
+    currency: USD
+    targetModels:
+        - bedrock-us-gov-west-1-anthropic-claude-sonnet-4-5-20250929-v1-0
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 3.3000000000000003
+        - meter: tokens.output
+          unit: per_million
+          amount: 16.5
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 4.125
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.33

@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: vercel-ai-gateway-openai-gpt-4-1
+    owner:
+        kind: provider
+        name: vercel_ai_gateway
+    labels:
+        family: vercel
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vercel_ai_gateway
+          upstreamName: vercel_ai_gateway/openai/gpt-4.1
+          adapter: openai
+    family: vercel
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1047576
+    contextWindowOutput: 32768
+    contextWindowTotal: 1047576
+    snapshots:
+        - name: vercel-ai-gateway-openai-gpt-4-1
+          originalName: vercel_ai_gateway/openai/gpt-4.1
+    pointer: vercel-ai-gateway-openai-gpt-4-1

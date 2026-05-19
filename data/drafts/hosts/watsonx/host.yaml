@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: watsonx
+    displayName: Watsonx
+spec:
+    baseURL: ""

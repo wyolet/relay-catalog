@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: bedrock-ai21-jamba-1-5-mini-v1-0
+    owner:
+        kind: host
+        id: bedrock
+spec:
+    currency: USD
+    targetModels:
+        - ai21-jamba-1-5-mini-v1-0
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.19999999999999998
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.39999999999999997

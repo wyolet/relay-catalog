@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: replicate-replicate-ibm-granite-granite-3-3-8b-instruct
+    owner:
+        kind: host
+        id: replicate
+spec:
+    currency: USD
+    targetModels:
+        - replicate-ibm-granite-granite-3-3-8b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.03
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.25

@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: perplexity-llama-3-1-70b-instruct
+    owner:
+        kind: provider
+        name: perplexity
+    labels:
+        family: perplexity
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: perplexity
+          upstreamName: perplexity/llama-3.1-70b-instruct
+          adapter: openai
+    family: perplexity
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    snapshots:
+        - name: perplexity-llama-3-1-70b-instruct
+          originalName: perplexity/llama-3.1-70b-instruct
+    pointer: perplexity-llama-3-1-70b-instruct

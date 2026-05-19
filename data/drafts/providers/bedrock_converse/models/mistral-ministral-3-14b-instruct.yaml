@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-ministral-3-14b-instruct
+    owner:
+        kind: provider
+        name: bedrock_converse
+    labels:
+        family: mistral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock_converse
+          upstreamName: mistral.ministral-3-14b-instruct
+          adapter: openai
+    family: mistral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    snapshots:
+        - name: mistral-ministral-3-14b-instruct
+          originalName: mistral.ministral-3-14b-instruct
+    pointer: mistral-ministral-3-14b-instruct

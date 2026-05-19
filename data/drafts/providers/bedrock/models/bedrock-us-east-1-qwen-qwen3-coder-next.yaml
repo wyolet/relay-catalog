@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: bedrock-us-east-1-qwen-qwen3-coder-next
+    owner:
+        kind: provider
+        name: bedrock
+    labels:
+        family: bedrock
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock
+          upstreamName: bedrock/us-east-1/qwen.qwen3-coder-next
+          adapter: openai
+    family: bedrock
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 8192
+    contextWindowTotal: 262144
+    snapshots:
+        - name: bedrock-us-east-1-qwen-qwen3-coder-next
+          originalName: bedrock/us-east-1/qwen.qwen3-coder-next
+    pointer: bedrock-us-east-1-qwen-qwen3-coder-next

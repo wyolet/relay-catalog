@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: eu-anthropic-claude-3-5-haiku-20241022-v1-0
+    owner:
+        kind: provider
+        name: bedrock
+    labels:
+        family: eu
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock
+          upstreamName: eu.anthropic.claude-3-5-haiku-20241022-v1:0
+          adapter: openai
+    family: eu
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        structuredOutputs: true
+        fileInput: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+            - file
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 8192
+    contextWindowTotal: 200000
+    snapshots:
+        - name: eu-anthropic-claude-3-5-haiku-20241022-v1-0
+          originalName: eu.anthropic.claude-3-5-haiku-20241022-v1:0
+    pointer: eu-anthropic-claude-3-5-haiku-20241022-v1-0

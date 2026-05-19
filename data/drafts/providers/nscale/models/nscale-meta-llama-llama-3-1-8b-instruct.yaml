@@ -1,0 +1,29 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nscale-meta-llama-llama-3-1-8b-instruct
+    owner:
+        kind: provider
+        name: nscale
+    labels:
+        family: nscale
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: nscale
+          upstreamName: nscale/meta-llama/Llama-3.1-8B-Instruct
+          adapter: openai
+    family: nscale
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: nscale-meta-llama-llama-3-1-8b-instruct
+          originalName: nscale/meta-llama/Llama-3.1-8B-Instruct
+    pointer: nscale-meta-llama-llama-3-1-8b-instruct

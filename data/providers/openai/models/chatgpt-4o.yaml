@@ -12,7 +12,7 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: chatgpt-4o
+          upstreamName: chatgpt-4o-latest
           adapter: openai
     family: chatgpt
     capabilities:
@@ -34,9 +34,6 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 4096
     contextWindowTotal: 128000
-    aliases:
-        - chatgpt-4o-latest
     snapshots:
-        - name: chatgpt-4o
-          originalName: chatgpt-4o
-    pointer: chatgpt-4o
+        - name: chatgpt-4o-latest
+    pointer: chatgpt-4o-latest

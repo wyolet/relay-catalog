@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: bedrock-eu-west-3-mistral-mixtral-8x7b-instruct-v0-1
+    owner:
+        kind: provider
+        name: bedrock
+    labels:
+        family: bedrock
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock
+          upstreamName: bedrock/eu-west-3/mistral.mixtral-8x7b-instruct-v0:1
+          adapter: openai
+    family: bedrock
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 8191
+    contextWindowTotal: 32000
+    snapshots:
+        - name: bedrock-eu-west-3-mistral-mixtral-8x7b-instruct-v0-1
+          originalName: bedrock/eu-west-3/mistral.mixtral-8x7b-instruct-v0:1
+    pointer: bedrock-eu-west-3-mistral-mixtral-8x7b-instruct-v0-1

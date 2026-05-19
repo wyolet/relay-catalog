@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: together-ai-meta-llama-meta-llama-3-1-405b-instruct-turbo
+    owner:
+        kind: provider
+        name: together_ai
+    labels:
+        family: together
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: together_ai
+          upstreamName: together_ai/meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo
+          adapter: openai
+    family: together
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: together-ai-meta-llama-meta-llama-3-1-405b-instruct-turbo
+          originalName: together_ai/meta-llama/Meta-Llama-3.1-405B-Instruct-Turbo
+    pointer: together-ai-meta-llama-meta-llama-3-1-405b-instruct-turbo

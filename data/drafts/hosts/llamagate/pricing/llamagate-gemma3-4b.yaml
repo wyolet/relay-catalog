@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: llamagate-llamagate-gemma3-4b
+    owner:
+        kind: host
+        id: llamagate
+spec:
+    currency: USD
+    targetModels:
+        - llamagate-gemma3-4b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.03
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.08

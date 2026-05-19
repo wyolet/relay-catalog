@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: bedrock-us-gov-east-1-anthropic-claude-3-haiku-20240307-v1-0
+    owner:
+        kind: provider
+        name: bedrock
+    labels:
+        family: bedrock
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock
+          upstreamName: bedrock/us-gov-east-1/anthropic.claude-3-haiku-20240307-v1:0
+          adapter: openai
+    family: bedrock
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        structuredOutputs: true
+        fileInput: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 4096
+    contextWindowTotal: 200000
+    snapshots:
+        - name: bedrock-us-gov-east-1-anthropic-claude-3-haiku-20240307-v1-0
+          originalName: bedrock/us-gov-east-1/anthropic.claude-3-haiku-20240307-v1:0
+    pointer: bedrock-us-gov-east-1-anthropic-claude-3-haiku-20240307-v1-0

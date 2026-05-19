@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: oci-xai-grok-4
+    owner:
+        kind: provider
+        name: oci
+    labels:
+        family: oci
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: oci
+          upstreamName: oci/xai.grok-4
+          adapter: openai
+    family: oci
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: oci-xai-grok-4
+          originalName: oci/xai.grok-4
+    pointer: oci-xai-grok-4

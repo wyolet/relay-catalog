@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: azure-ai-phi-3-small-128k-instruct
+    owner:
+        kind: provider
+        name: azure_ai
+    labels:
+        family: azure
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: azure_ai
+          upstreamName: azure_ai/Phi-3-small-128k-instruct
+          adapter: openai
+    family: azure
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    snapshots:
+        - name: azure-ai-phi-3-small-128k-instruct
+          originalName: azure_ai/Phi-3-small-128k-instruct
+    pointer: azure-ai-phi-3-small-128k-instruct

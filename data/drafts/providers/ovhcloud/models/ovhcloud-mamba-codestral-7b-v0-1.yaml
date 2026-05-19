@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ovhcloud-mamba-codestral-7b-v0-1
+    owner:
+        kind: provider
+        name: ovhcloud
+    labels:
+        family: ovhcloud
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ovhcloud
+          upstreamName: ovhcloud/mamba-codestral-7B-v0.1
+          adapter: openai
+    family: ovhcloud
+    capabilities:
+        chat: true
+        streaming: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 256000
+    contextWindowTotal: 256000
+    snapshots:
+        - name: ovhcloud-mamba-codestral-7b-v0-1
+          originalName: ovhcloud/mamba-codestral-7B-v0.1
+    pointer: ovhcloud-mamba-codestral-7b-v0-1

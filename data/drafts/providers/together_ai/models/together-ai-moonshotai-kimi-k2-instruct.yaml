@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: together-ai-moonshotai-kimi-k2-instruct
+    owner:
+        kind: provider
+        name: together_ai
+    labels:
+        family: together
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: together_ai
+          upstreamName: together_ai/moonshotai/Kimi-K2-Instruct
+          adapter: openai
+    family: together
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: together-ai-moonshotai-kimi-k2-instruct
+          originalName: together_ai/moonshotai/Kimi-K2-Instruct
+    pointer: together-ai-moonshotai-kimi-k2-instruct

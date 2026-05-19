@@ -12,7 +12,7 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: o3-2025-04-16
+          upstreamName: o3
           adapter: openai
     family: o3
     capabilities:
@@ -37,7 +37,7 @@ spec:
     contextWindowOutput: 100000
     contextWindowTotal: 200000
     snapshots:
+        - name: o3
         - name: o3-2025-04-16
           releasedAt: "2025-04-16"
-          originalName: o3-2025-04-16
-    pointer: o3-2025-04-16
+    pointer: o3

@@ -1,0 +1,15 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: vercel_ai_gateway-vercel-ai-gateway-amazon-titan-embed-text-v2
+    owner:
+        kind: host
+        id: vercel_ai_gateway
+spec:
+    currency: USD
+    targetModels:
+        - vercel-ai-gateway-amazon-titan-embed-text-v2
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.02

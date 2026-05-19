@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ft-o4-mini
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: ft
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openai
+          upstreamName: ft:o4-mini-2025-04-16
+          adapter: openai
+    family: ft
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 100000
+    contextWindowTotal: 200000
+    snapshots:
+        - name: ft-o4-mini-2025-04-16
+          releasedAt: "2025-04-16"
+          originalName: ft:o4-mini-2025-04-16
+    pointer: ft-o4-mini-2025-04-16

@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: bedrock-us-gov-west-1-anthropic-claude-haiku-4-5-20251001-v1-0
+    owner:
+        kind: provider
+        name: bedrock
+    labels:
+        family: bedrock
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock
+          upstreamName: bedrock/us-gov-west-1/anthropic.claude-haiku-4-5-20251001-v1:0
+          adapter: openai
+    family: bedrock
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        computerUse: true
+        fileInput: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 64000
+    contextWindowTotal: 200000
+    snapshots:
+        - name: bedrock-us-gov-west-1-anthropic-claude-haiku-4-5-20251001-v1-0
+          originalName: bedrock/us-gov-west-1/anthropic.claude-haiku-4-5-20251001-v1:0
+    pointer: bedrock-us-gov-west-1-anthropic-claude-haiku-4-5-20251001-v1-0

@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ovhcloud-qwen2-5-vl-72b-instruct
+    owner:
+        kind: provider
+        name: ovhcloud
+    labels:
+        family: ovhcloud
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ovhcloud
+          upstreamName: ovhcloud/Qwen2.5-VL-72B-Instruct
+          adapter: openai
+    family: ovhcloud
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 32000
+    contextWindowTotal: 32000
+    snapshots:
+        - name: ovhcloud-qwen2-5-vl-72b-instruct
+          originalName: ovhcloud/Qwen2.5-VL-72B-Instruct
+    pointer: ovhcloud-qwen2-5-vl-72b-instruct

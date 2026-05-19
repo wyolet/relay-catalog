@@ -1,0 +1,24 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: bedrock-apac-anthropic-claude-3-haiku-20240307-v1-0
+    owner:
+        kind: host
+        id: bedrock
+spec:
+    currency: USD
+    targetModels:
+        - apac-anthropic-claude-3-haiku-20240307-v1-0
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.25
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.25
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.3125
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.024999999999999998

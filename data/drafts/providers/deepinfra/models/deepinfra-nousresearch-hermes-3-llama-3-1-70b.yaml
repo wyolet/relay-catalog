@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepinfra-nousresearch-hermes-3-llama-3-1-70b
+    owner:
+        kind: provider
+        name: deepinfra
+    labels:
+        family: deepinfra
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: deepinfra
+          upstreamName: deepinfra/NousResearch/Hermes-3-Llama-3.1-70B
+          adapter: openai
+    family: deepinfra
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    snapshots:
+        - name: deepinfra-nousresearch-hermes-3-llama-3-1-70b
+          originalName: deepinfra/NousResearch/Hermes-3-Llama-3.1-70B
+    pointer: deepinfra-nousresearch-hermes-3-llama-3-1-70b

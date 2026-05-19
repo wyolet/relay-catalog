@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: sambanova-deepseek-r1-distill-llama-70b
+    owner:
+        kind: provider
+        name: sambanova
+    labels:
+        family: sambanova
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: sambanova
+          upstreamName: sambanova/DeepSeek-R1-Distill-Llama-70B
+          adapter: openai
+    family: sambanova
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    snapshots:
+        - name: sambanova-deepseek-r1-distill-llama-70b
+          originalName: sambanova/DeepSeek-R1-Distill-Llama-70B
+    pointer: sambanova-deepseek-r1-distill-llama-70b

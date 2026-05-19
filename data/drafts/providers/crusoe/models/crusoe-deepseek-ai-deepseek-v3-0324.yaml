@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: crusoe-deepseek-ai-deepseek-v3-0324
+    owner:
+        kind: provider
+        name: crusoe
+    labels:
+        family: crusoe
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: crusoe
+          upstreamName: crusoe/deepseek-ai/DeepSeek-V3-0324
+          adapter: openai
+    family: crusoe
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 163840
+    contextWindowOutput: 163840
+    contextWindowTotal: 163840
+    snapshots:
+        - name: crusoe-deepseek-ai-deepseek-v3-0324
+          originalName: crusoe/deepseek-ai/DeepSeek-V3-0324
+    pointer: crusoe-deepseek-ai-deepseek-v3-0324

@@ -35,9 +35,7 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 16384
     contextWindowTotal: 128000
-    aliases:
-        - gpt-5-chat-latest
     snapshots:
         - name: gpt-5-chat
-          originalName: gpt-5-chat
+        - name: gpt-5-chat-latest
     pointer: gpt-5-chat

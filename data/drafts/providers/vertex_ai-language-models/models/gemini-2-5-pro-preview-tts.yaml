@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-2-5-pro-preview-tts
+    owner:
+        kind: provider
+        name: vertex_ai-language-models
+    labels:
+        family: gemini
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vertex_ai-language-models
+          upstreamName: gemini-2.5-pro-preview-tts
+          adapter: openai
+    family: gemini
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        vision: true
+        promptCache: true
+        structuredOutputs: true
+        webSearch: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 65535
+    contextWindowTotal: 1048576
+    snapshots:
+        - name: gemini-2-5-pro-preview-tts
+          originalName: gemini-2.5-pro-preview-tts
+    pointer: gemini-2-5-pro-preview-tts

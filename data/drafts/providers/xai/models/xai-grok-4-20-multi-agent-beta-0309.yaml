@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: xai-grok-4-20-multi-agent-beta-0309
+    owner:
+        kind: provider
+        name: xai
+    labels:
+        family: xai
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: xai
+          upstreamName: xai/grok-4.20-multi-agent-beta-0309
+          adapter: openai
+    family: xai
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        webSearch: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 2000000
+    contextWindowOutput: 2000000
+    contextWindowTotal: 2000000
+    snapshots:
+        - name: xai-grok-4-20-multi-agent-beta-0309
+          originalName: xai/grok-4.20-multi-agent-beta-0309
+    pointer: xai-grok-4-20-multi-agent-beta-0309

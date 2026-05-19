@@ -12,7 +12,7 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-haiku-4-5-20251001
+          upstreamName: claude-haiku-4-5
           adapter: anthropic
     family: claude
     capabilities:
@@ -37,7 +37,7 @@ spec:
     contextWindowOutput: 64000
     contextWindowTotal: 200000
     snapshots:
+        - name: claude-haiku-4-5
         - name: claude-haiku-4-5-20251001
           releasedAt: "2025-10-01"
-          originalName: claude-haiku-4-5-20251001
-    pointer: claude-haiku-4-5-20251001
+    pointer: claude-haiku-4-5

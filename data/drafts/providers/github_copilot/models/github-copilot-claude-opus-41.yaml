@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: github-copilot-claude-opus-41
+    owner:
+        kind: provider
+        name: github_copilot
+    labels:
+        family: github
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: github_copilot
+          upstreamName: github_copilot/claude-opus-41
+          adapter: openai
+    family: github
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 80000
+    contextWindowOutput: 16000
+    contextWindowTotal: 80000
+    snapshots:
+        - name: github-copilot-claude-opus-41
+          originalName: github_copilot/claude-opus-41
+    pointer: github-copilot-claude-opus-41

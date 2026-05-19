@@ -12,7 +12,7 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-4o-mini-2024-07-18
+          upstreamName: gpt-4o-mini
           adapter: openai
     family: gpt
     capabilities:
@@ -36,7 +36,7 @@ spec:
     contextWindowOutput: 16384
     contextWindowTotal: 128000
     snapshots:
+        - name: gpt-4o-mini
         - name: gpt-4o-mini-2024-07-18
           releasedAt: "2024-07-18"
-          originalName: gpt-4o-mini-2024-07-18
-    pointer: gpt-4o-mini-2024-07-18
+    pointer: gpt-4o-mini

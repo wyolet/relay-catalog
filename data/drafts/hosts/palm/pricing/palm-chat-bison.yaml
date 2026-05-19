@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: palm-palm-chat-bison
+    owner:
+        kind: host
+        id: palm
+spec:
+    currency: USD
+    targetModels:
+        - palm-chat-bison
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.125
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.125

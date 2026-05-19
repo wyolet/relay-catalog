@@ -3,8 +3,6 @@ kind: Host
 metadata:
     name: ollama
     displayName: Ollama
-    owner:
-        kind: system
 spec:
     baseURL: http://host.docker.internal:11434
     homepageURL: https://ollama.com

@@ -12,7 +12,7 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: o4-mini-2025-04-16
+          upstreamName: o4-mini
           adapter: openai
     family: o-series
     capabilities:
@@ -36,7 +36,7 @@ spec:
     contextWindowOutput: 100000
     contextWindowTotal: 200000
     snapshots:
+        - name: o4-mini
         - name: o4-mini-2025-04-16
           releasedAt: "2025-04-16"
-          originalName: o4-mini-2025-04-16
-    pointer: o4-mini-2025-04-16
+    pointer: o4-mini

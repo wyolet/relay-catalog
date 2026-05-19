@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepinfra-microsoft-wizardlm-2-8x22b
+    owner:
+        kind: provider
+        name: deepinfra
+    labels:
+        family: deepinfra
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: deepinfra
+          upstreamName: deepinfra/microsoft/WizardLM-2-8x22B
+          adapter: openai
+    family: deepinfra
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 65536
+    contextWindowOutput: 65536
+    contextWindowTotal: 65536
+    snapshots:
+        - name: deepinfra-microsoft-wizardlm-2-8x22b
+          originalName: deepinfra/microsoft/WizardLM-2-8x22B
+    pointer: deepinfra-microsoft-wizardlm-2-8x22b

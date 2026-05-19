@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: vertex_ai-openai_models
+    displayName: Vertex Ai Openai Models
+    description: Vertex Ai Openai Models — auto-imported, requires hand curation.
+spec: {}

@@ -1,0 +1,29 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: baseten-nvidia-nemotron-120b-a12b
+    owner:
+        kind: provider
+        name: baseten
+    labels:
+        family: baseten
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: baseten
+          upstreamName: baseten/nvidia/Nemotron-120B-A12B
+          adapter: openai
+    family: baseten
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: baseten-nvidia-nemotron-120b-a12b
+          originalName: baseten/nvidia/Nemotron-120B-A12B
+    pointer: baseten-nvidia-nemotron-120b-a12b

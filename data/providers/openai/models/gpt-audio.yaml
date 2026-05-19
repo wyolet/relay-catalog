@@ -12,7 +12,7 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-audio-2025-08-28
+          upstreamName: gpt-audio
           adapter: openai
     family: gpt
     capabilities:
@@ -35,7 +35,7 @@ spec:
     contextWindowOutput: 16384
     contextWindowTotal: 128000
     snapshots:
+        - name: gpt-audio
         - name: gpt-audio-2025-08-28
           releasedAt: "2025-08-28"
-          originalName: gpt-audio-2025-08-28
-    pointer: gpt-audio-2025-08-28
+    pointer: gpt-audio

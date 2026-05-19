@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: azure_ai-azure-ai-llama-4-maverick-17b-128e-instruct-fp8
+    owner:
+        kind: host
+        id: azure_ai
+spec:
+    currency: USD
+    targetModels:
+        - azure-ai-llama-4-maverick-17b-128e-instruct-fp8
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.4100000000000001
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.35

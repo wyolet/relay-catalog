@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: fireworks-ai-accounts-fireworks-models-llamaguard-7b
+    owner:
+        kind: provider
+        name: fireworks_ai
+    labels:
+        family: fireworks
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: fireworks_ai
+          upstreamName: fireworks_ai/accounts/fireworks/models/llamaguard-7b
+          adapter: openai
+    family: fireworks
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 4096
+    contextWindowOutput: 4096
+    contextWindowTotal: 4096
+    snapshots:
+        - name: fireworks-ai-accounts-fireworks-models-llamaguard-7b
+          originalName: fireworks_ai/accounts/fireworks/models/llamaguard-7b
+    pointer: fireworks-ai-accounts-fireworks-models-llamaguard-7b

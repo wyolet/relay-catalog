@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-gemini-exp-1206
+    owner:
+        kind: provider
+        name: gemini
+    labels:
+        family: gemini
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: gemini
+          upstreamName: gemini/gemini-exp-1206
+          adapter: openai
+    family: gemini
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 2097152
+    contextWindowOutput: 8192
+    contextWindowTotal: 2097152
+    snapshots:
+        - name: gemini-gemini-exp-1206
+          originalName: gemini/gemini-exp-1206
+    pointer: gemini-gemini-exp-1206

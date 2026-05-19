@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: gemini-gemini-2-5-flash-native-audio-preview-12-2025
+    owner:
+        kind: host
+        id: gemini
+spec:
+    currency: USD
+    targetModels:
+        - gemini-2-5-flash-native-audio-preview-12-2025
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.5

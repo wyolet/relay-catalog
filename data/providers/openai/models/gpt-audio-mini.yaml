@@ -12,7 +12,7 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-audio-mini-2025-12-15
+          upstreamName: gpt-audio-mini
           adapter: openai
     family: gpt
     capabilities:
@@ -35,10 +35,9 @@ spec:
     contextWindowOutput: 16384
     contextWindowTotal: 128000
     snapshots:
+        - name: gpt-audio-mini
         - name: gpt-audio-mini-2025-10-06
           releasedAt: "2025-10-06"
-          originalName: gpt-audio-mini-2025-10-06
         - name: gpt-audio-mini-2025-12-15
           releasedAt: "2025-12-15"
-          originalName: gpt-audio-mini-2025-12-15
-    pointer: gpt-audio-mini-2025-12-15
+    pointer: gpt-audio-mini

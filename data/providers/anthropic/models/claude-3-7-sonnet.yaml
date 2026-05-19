@@ -43,5 +43,4 @@ spec:
     snapshots:
         - name: claude-3-7-sonnet-20250219
           releasedAt: "2025-02-19"
-          originalName: claude-3-7-sonnet-20250219
     pointer: claude-3-7-sonnet-20250219

@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: ovhcloud-ovhcloud-deepseek-r1-distill-llama-70b
+    owner:
+        kind: host
+        id: ovhcloud
+spec:
+    currency: USD
+    targetModels:
+        - ovhcloud-deepseek-r1-distill-llama-70b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.67
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.67

@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-robotics-er-1-5
+    owner:
+        kind: provider
+        name: vertex_ai-language-models
+    labels:
+        family: gemini
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vertex_ai-language-models
+          upstreamName: gemini-robotics-er-1.5-preview
+          adapter: openai
+    family: gemini
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        vision: true
+        reasoning: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 65535
+    contextWindowTotal: 1048576
+    snapshots:
+        - name: gemini-robotics-er-1-5-preview
+          originalName: gemini-robotics-er-1.5-preview
+    pointer: gemini-robotics-er-1-5-preview

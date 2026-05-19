@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: fireworks-ai-accounts-fireworks-models-qwen3-vl-30b-a3b-thinkin
+    owner:
+        kind: provider
+        name: fireworks_ai
+    labels:
+        family: fireworks
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: fireworks_ai
+          upstreamName: fireworks_ai/accounts/fireworks/models/qwen3-vl-30b-a3b-thinking
+          adapter: openai
+    family: fireworks
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    snapshots:
+        - name: fireworks-ai-accounts-fireworks-models-qwen3-vl-30b-a3b-thinkin
+          originalName: fireworks_ai/accounts/fireworks/models/qwen3-vl-30b-a3b-thinking
+    pointer: fireworks-ai-accounts-fireworks-models-qwen3-vl-30b-a3b-thinkin

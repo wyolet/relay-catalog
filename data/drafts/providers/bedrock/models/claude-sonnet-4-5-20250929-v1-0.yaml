@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claude-sonnet-4-5-20250929-v1-0
+    owner:
+        kind: provider
+        name: bedrock
+    labels:
+        family: claude
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock
+          upstreamName: claude-sonnet-4-5-20250929-v1:0
+          adapter: openai
+    family: claude
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        computerUse: true
+        fileInput: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 64000
+    contextWindowTotal: 200000
+    snapshots:
+        - name: claude-sonnet-4-5-20250929-v1-0
+          originalName: claude-sonnet-4-5-20250929-v1:0
+    pointer: claude-sonnet-4-5-20250929-v1-0

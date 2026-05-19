@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: groq-moonshotai-kimi-k2-instruct-0905
+    owner:
+        kind: provider
+        name: groq
+    labels:
+        family: groq
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: groq
+          upstreamName: groq/moonshotai/kimi-k2-instruct-0905
+          adapter: openai
+    family: groq
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 16384
+    contextWindowTotal: 262144
+    snapshots:
+        - name: groq-moonshotai-kimi-k2-instruct-0905
+          originalName: groq/moonshotai/kimi-k2-instruct-0905
+    pointer: groq-moonshotai-kimi-k2-instruct-0905

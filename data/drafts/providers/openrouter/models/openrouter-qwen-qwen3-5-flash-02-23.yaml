@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter-qwen-qwen3-5-flash-02-23
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: openrouter
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openrouter
+          upstreamName: openrouter/qwen/qwen3.5-flash-02-23
+          adapter: openai
+    family: openrouter
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 65536
+    contextWindowTotal: 1000000
+    snapshots:
+        - name: openrouter-qwen-qwen3-5-flash-02-23
+          originalName: openrouter/qwen/qwen3.5-flash-02-23
+    pointer: openrouter-qwen-qwen3-5-flash-02-23

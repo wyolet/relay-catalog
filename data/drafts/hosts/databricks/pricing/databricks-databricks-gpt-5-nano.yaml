@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: databricks-databricks-databricks-gpt-5-nano
+    owner:
+        kind: host
+        id: databricks
+spec:
+    currency: USD
+    targetModels:
+        - databricks-databricks-gpt-5-nano
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.049980000000000004
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.39998000000000006

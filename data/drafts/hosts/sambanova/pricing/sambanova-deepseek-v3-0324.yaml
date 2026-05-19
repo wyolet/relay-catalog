@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: sambanova-sambanova-deepseek-v3-0324
+    owner:
+        kind: host
+        id: sambanova
+spec:
+    currency: USD
+    targetModels:
+        - sambanova-deepseek-v3-0324
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 3
+        - meter: tokens.output
+          unit: per_million
+          amount: 4.5

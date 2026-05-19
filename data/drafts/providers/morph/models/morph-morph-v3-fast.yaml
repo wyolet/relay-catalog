@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: morph-morph-v3-fast
+    owner:
+        kind: provider
+        name: morph
+    labels:
+        family: morph
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: morph
+          upstreamName: morph/morph-v3-fast
+          adapter: openai
+    family: morph
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16000
+    contextWindowOutput: 16000
+    contextWindowTotal: 16000
+    snapshots:
+        - name: morph-morph-v3-fast
+          originalName: morph/morph-v3-fast
+    pointer: morph-morph-v3-fast

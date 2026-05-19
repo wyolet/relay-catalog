@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepinfra-meta-llama-llama-3-2-3b-instruct
+    owner:
+        kind: provider
+        name: deepinfra
+    labels:
+        family: deepinfra
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: deepinfra
+          upstreamName: deepinfra/meta-llama/Llama-3.2-3B-Instruct
+          adapter: openai
+    family: deepinfra
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    snapshots:
+        - name: deepinfra-meta-llama-llama-3-2-3b-instruct
+          originalName: deepinfra/meta-llama/Llama-3.2-3B-Instruct
+    pointer: deepinfra-meta-llama-llama-3-2-3b-instruct

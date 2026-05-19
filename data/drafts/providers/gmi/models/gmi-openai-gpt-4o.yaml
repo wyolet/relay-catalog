@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gmi-openai-gpt-4o
+    owner:
+        kind: provider
+        name: gmi
+    labels:
+        family: gmi
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: gmi
+          upstreamName: gmi/openai/gpt-4o
+          adapter: openai
+    family: gmi
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 16384
+    contextWindowTotal: 131072
+    snapshots:
+        - name: gmi-openai-gpt-4o
+          originalName: gmi/openai/gpt-4o
+    pointer: gmi-openai-gpt-4o

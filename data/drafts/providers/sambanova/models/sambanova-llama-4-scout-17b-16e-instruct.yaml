@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: sambanova-llama-4-scout-17b-16e-instruct
+    owner:
+        kind: provider
+        name: sambanova
+    labels:
+        family: sambanova
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: sambanova
+          upstreamName: sambanova/Llama-4-Scout-17B-16E-Instruct
+          adapter: openai
+    family: sambanova
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    snapshots:
+        - name: sambanova-llama-4-scout-17b-16e-instruct
+          originalName: sambanova/Llama-4-Scout-17B-16E-Instruct
+    pointer: sambanova-llama-4-scout-17b-16e-instruct

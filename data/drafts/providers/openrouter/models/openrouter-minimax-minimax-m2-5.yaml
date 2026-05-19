@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter-minimax-minimax-m2-5
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: openrouter
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openrouter
+          upstreamName: openrouter/minimax/minimax-m2.5
+          adapter: openai
+    family: openrouter
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 196608
+    contextWindowOutput: 65536
+    contextWindowTotal: 196608
+    snapshots:
+        - name: openrouter-minimax-minimax-m2-5
+          originalName: openrouter/minimax/minimax-m2.5
+    pointer: openrouter-minimax-minimax-m2-5

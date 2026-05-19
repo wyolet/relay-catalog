@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: vercel-ai-gateway-alibaba-qwen-3-235b
+    owner:
+        kind: provider
+        name: vercel_ai_gateway
+    labels:
+        family: vercel
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vercel_ai_gateway
+          upstreamName: vercel_ai_gateway/alibaba/qwen-3-235b
+          adapter: openai
+    family: vercel
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 40960
+    contextWindowOutput: 16384
+    contextWindowTotal: 40960
+    snapshots:
+        - name: vercel-ai-gateway-alibaba-qwen-3-235b
+          originalName: vercel_ai_gateway/alibaba/qwen-3-235b
+    pointer: vercel-ai-gateway-alibaba-qwen-3-235b

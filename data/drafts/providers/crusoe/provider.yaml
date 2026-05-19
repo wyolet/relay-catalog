@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: crusoe
+    displayName: Crusoe
+    description: Crusoe — auto-imported, requires hand curation.
+spec: {}

@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: hyperbolic-meta-llama-llama-3-2-3b-instruct
+    owner:
+        kind: provider
+        name: hyperbolic
+    labels:
+        family: hyperbolic
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: hyperbolic
+          upstreamName: hyperbolic/meta-llama/Llama-3.2-3B-Instruct
+          adapter: openai
+    family: hyperbolic
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    snapshots:
+        - name: hyperbolic-meta-llama-llama-3-2-3b-instruct
+          originalName: hyperbolic/meta-llama/Llama-3.2-3B-Instruct
+    pointer: hyperbolic-meta-llama-llama-3-2-3b-instruct
