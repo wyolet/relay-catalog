@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: ft:gpt-3.5-turbo-1106
@@ -8,7 +8,7 @@ metadata:
     labels:
         family: ft:gpt
         source: litellm
-        source_version: "2026-05-14"
+        source_version: "2026-05-20"
 spec:
     hosts:
         - host: openai
@@ -27,3 +27,7 @@ spec:
     contextWindowInput: 16385
     contextWindowOutput: 4096
     contextWindowTotal: 16385
+    snapshots:
+        - name: ft:gpt-3.5-turbo-1106
+          originalName: ft:gpt-3.5-turbo-1106
+    pointer: ft:gpt-3.5-turbo-1106

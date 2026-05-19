@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: o3-mini
@@ -8,11 +8,11 @@ metadata:
     labels:
         family: o-series
         source: litellm
-        source_version: "2026-05-14"
+        source_version: "2026-05-20"
 spec:
     hosts:
         - host: openai
-          upstreamName: o3-mini
+          upstreamName: o3-mini-2025-01-31
           adapter: openai
     family: o-series
     capabilities:
@@ -30,3 +30,8 @@ spec:
     contextWindowInput: 200000
     contextWindowOutput: 100000
     contextWindowTotal: 200000
+    snapshots:
+        - name: o3-mini-2025-01-31
+          releasedAt: "2025-01-31"
+          originalName: o3-mini-2025-01-31
+    pointer: o3-mini-2025-01-31

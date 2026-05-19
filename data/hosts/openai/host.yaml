@@ -1,8 +1,10 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Host
 metadata:
     name: openai
     displayName: OpenAI
+    owner:
+        kind: system
 spec:
     baseURL: https://api.openai.com
     homepageURL: https://openai.com
@@ -10,11 +12,4 @@ spec:
     consoleURL: https://platform.openai.com
     statusPageURL: https://status.openai.com
     icon:
-      path: /provider/openai.svg
-    policies:
-      - openai-tier-1
-      - openai-tier-2
-      - openai-tier-3
-      - openai-tier-4
-      - openai-tier-5
-    defaultPolicy: openai-tier-1
+        path: /provider/openai.svg

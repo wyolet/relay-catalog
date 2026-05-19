@@ -1,12 +1,14 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Provider
 metadata:
     name: openai
     displayName: OpenAI
     description: GPT models from OpenAI.
+    owner:
+        kind: system
 spec:
     homepageURL: https://openai.com
     docsURL: https://platform.openai.com/docs
     statusPageURL: https://status.openai.com
     icon:
-      path: /provider/openai.svg
+        path: /provider/openai.svg

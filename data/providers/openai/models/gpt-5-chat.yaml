@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: gpt-5-chat
@@ -8,7 +8,7 @@ metadata:
     labels:
         family: gpt
         source: litellm
-        source_version: "2026-05-14"
+        source_version: "2026-05-20"
 spec:
     hosts:
         - host: openai
@@ -37,3 +37,7 @@ spec:
     contextWindowTotal: 128000
     aliases:
         - gpt-5-chat-latest
+    snapshots:
+        - name: gpt-5-chat
+          originalName: gpt-5-chat
+    pointer: gpt-5-chat

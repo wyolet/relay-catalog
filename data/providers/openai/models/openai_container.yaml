@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: openai/container
@@ -8,7 +8,7 @@ metadata:
     labels:
         family: openai/container
         source: litellm
-        source_version: "2026-05-14"
+        source_version: "2026-05-20"
 spec:
     hosts:
         - host: openai
@@ -23,3 +23,7 @@ spec:
             - text
         output:
             - text
+    snapshots:
+        - name: openai/container
+          originalName: openai/container
+    pointer: openai/container

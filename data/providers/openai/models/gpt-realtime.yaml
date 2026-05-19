@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: gpt-realtime
@@ -8,11 +8,11 @@ metadata:
     labels:
         family: gpt
         source: litellm
-        source_version: "2026-05-14"
+        source_version: "2026-05-20"
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-realtime
+          upstreamName: gpt-realtime-2025-08-28
           adapter: openai
     family: gpt
     capabilities:
@@ -33,3 +33,8 @@ spec:
     contextWindowInput: 32000
     contextWindowOutput: 4096
     contextWindowTotal: 32000
+    snapshots:
+        - name: gpt-realtime-2025-08-28
+          releasedAt: "2025-08-28"
+          originalName: gpt-realtime-2025-08-28
+    pointer: gpt-realtime-2025-08-28

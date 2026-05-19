@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: gpt-5
@@ -8,11 +8,11 @@ metadata:
     labels:
         family: gpt
         source: litellm
-        source_version: "2026-05-14"
+        source_version: "2026-05-20"
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-5
+          upstreamName: gpt-5-2025-08-07
           adapter: openai
     family: gpt
     capabilities:
@@ -38,3 +38,8 @@ spec:
     contextWindowInput: 272000
     contextWindowOutput: 128000
     contextWindowTotal: 272000
+    snapshots:
+        - name: gpt-5-2025-08-07
+          releasedAt: "2025-08-07"
+          originalName: gpt-5-2025-08-07
+    pointer: gpt-5-2025-08-07

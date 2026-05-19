@@ -1,10 +1,10 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
     name: openai-gpt-4-0314
     owner:
         kind: host
-        name: openai
+        id: openai
 spec:
     currency: USD
     targetModels:

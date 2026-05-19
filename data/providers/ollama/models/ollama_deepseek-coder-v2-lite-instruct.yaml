@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: ollama/deepseek-coder-v2-lite-instruct
@@ -8,7 +8,7 @@ metadata:
     labels:
         family: ollama/deepseek
         source: litellm
-        source_version: "2026-05-14"
+        source_version: "2026-05-20"
 spec:
     hosts:
         - host: ollama
@@ -27,3 +27,7 @@ spec:
     contextWindowInput: 32768
     contextWindowOutput: 8192
     contextWindowTotal: 32768
+    snapshots:
+        - name: ollama/deepseek-coder-v2-lite-instruct
+          originalName: ollama/deepseek-coder-v2-lite-instruct
+    pointer: ollama/deepseek-coder-v2-lite-instruct
