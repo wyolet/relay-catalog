@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ollama-deepseek-coder-v2-instruct
+    owner:
+        kind: provider
+        name: ollama
+    labels:
+        family: ollama
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama
+          upstreamName: ollama/deepseek-coder-v2-instruct
+          adapter: openai
+    family: ollama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 8192
+    contextWindowTotal: 32768
+    snapshots:
+        - name: ollama-deepseek-coder-v2-instruct
+          originalName: ollama/deepseek-coder-v2-instruct
+    pointer: ollama-deepseek-coder-v2-instruct

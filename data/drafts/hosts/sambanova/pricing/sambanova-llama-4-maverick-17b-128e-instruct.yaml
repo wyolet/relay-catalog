@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: sambanova-sambanova-llama-4-maverick-17b-128e-instruct
+    owner:
+        kind: host
+        id: sambanova
+spec:
+    currency: USD
+    targetModels:
+        - sambanova-llama-4-maverick-17b-128e-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.63
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.7999999999999998

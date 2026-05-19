@@ -42,5 +42,4 @@ spec:
     snapshots:
         - name: claude-opus-4-20250514
           releasedAt: "2025-05-14"
-          originalName: claude-opus-4-20250514
     pointer: claude-opus-4-20250514

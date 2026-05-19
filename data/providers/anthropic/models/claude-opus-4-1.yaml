@@ -12,7 +12,7 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-opus-4-1-20250805
+          upstreamName: claude-opus-4-1
           adapter: anthropic
     family: claude
     capabilities:
@@ -40,7 +40,7 @@ spec:
         status: deprecated
         sunsetDate: "2026-08-05"
     snapshots:
+        - name: claude-opus-4-1
         - name: claude-opus-4-1-20250805
           releasedAt: "2025-08-05"
-          originalName: claude-opus-4-1-20250805
-    pointer: claude-opus-4-1-20250805
+    pointer: claude-opus-4-1

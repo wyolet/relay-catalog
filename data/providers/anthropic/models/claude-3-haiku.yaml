@@ -35,5 +35,4 @@ spec:
     snapshots:
         - name: claude-3-haiku-20240307
           releasedAt: "2024-03-07"
-          originalName: claude-3-haiku-20240307
     pointer: claude-3-haiku-20240307

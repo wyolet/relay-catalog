@@ -1,9 +1,0 @@
-apiVersion: relay.wyolet.dev/v1alpha2
-kind: Provider
-metadata:
-    name: oci
-    displayName: Oci
-    description: Oci — auto-imported, requires hand curation.
-    owner:
-        kind: system
-spec: {}

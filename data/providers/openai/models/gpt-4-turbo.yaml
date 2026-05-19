@@ -12,7 +12,7 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-4-turbo-2024-04-09
+          upstreamName: gpt-4-turbo
           adapter: openai
     family: gpt
     capabilities:
@@ -34,10 +34,9 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 4096
     contextWindowTotal: 128000
-    aliases:
-        - gpt-4-turbo-preview
     snapshots:
+        - name: gpt-4-turbo
         - name: gpt-4-turbo-2024-04-09
           releasedAt: "2024-04-09"
-          originalName: gpt-4-turbo-2024-04-09
-    pointer: gpt-4-turbo-2024-04-09
+        - name: gpt-4-turbo-preview
+    pointer: gpt-4-turbo

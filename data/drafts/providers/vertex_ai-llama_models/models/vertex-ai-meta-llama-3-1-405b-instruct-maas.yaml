@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: vertex-ai-meta-llama-3-1-405b-instruct-maas
+    owner:
+        kind: provider
+        name: vertex_ai-llama_models
+    labels:
+        family: vertex
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vertex_ai-llama_models
+          upstreamName: vertex_ai/meta/llama-3.1-405b-instruct-maas
+          adapter: openai
+    family: vertex
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 2048
+    contextWindowTotal: 128000
+    snapshots:
+        - name: vertex-ai-meta-llama-3-1-405b-instruct-maas
+          originalName: vertex_ai/meta/llama-3.1-405b-instruct-maas
+    pointer: vertex-ai-meta-llama-3-1-405b-instruct-maas

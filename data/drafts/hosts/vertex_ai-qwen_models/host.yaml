@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: vertex_ai-qwen_models
+    displayName: Vertex Ai Qwen Models
+spec:
+    baseURL: ""

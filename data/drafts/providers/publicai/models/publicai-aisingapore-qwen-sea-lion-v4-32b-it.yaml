@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: publicai-aisingapore-qwen-sea-lion-v4-32b-it
+    owner:
+        kind: provider
+        name: publicai
+    labels:
+        family: publicai
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: publicai
+          upstreamName: publicai/aisingapore/Qwen-SEA-LION-v4-32B-IT
+          adapter: openai
+    family: publicai
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 4096
+    contextWindowTotal: 32768
+    snapshots:
+        - name: publicai-aisingapore-qwen-sea-lion-v4-32b-it
+          originalName: publicai/aisingapore/Qwen-SEA-LION-v4-32B-IT
+    pointer: publicai-aisingapore-qwen-sea-lion-v4-32b-it

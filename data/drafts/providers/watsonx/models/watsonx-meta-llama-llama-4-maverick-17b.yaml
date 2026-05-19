@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: watsonx-meta-llama-llama-4-maverick-17b
+    owner:
+        kind: provider
+        name: watsonx
+    labels:
+        family: watsonx
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: watsonx
+          upstreamName: watsonx/meta-llama/llama-4-maverick-17b
+          adapter: openai
+    family: watsonx
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: watsonx-meta-llama-llama-4-maverick-17b
+          originalName: watsonx/meta-llama/llama-4-maverick-17b
+    pointer: watsonx-meta-llama-llama-4-maverick-17b

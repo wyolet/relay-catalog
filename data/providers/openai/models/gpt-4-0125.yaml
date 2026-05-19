@@ -12,7 +12,7 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-4-0125
+          upstreamName: gpt-4-0125-preview
           adapter: openai
     family: gpt
     capabilities:
@@ -33,9 +33,6 @@ spec:
     deprecation:
         status: sunset
         sunsetDate: "2026-03-26"
-    aliases:
-        - gpt-4-0125-preview
     snapshots:
-        - name: gpt-4-0125
-          originalName: gpt-4-0125
-    pointer: gpt-4-0125
+        - name: gpt-4-0125-preview
+    pointer: gpt-4-0125-preview

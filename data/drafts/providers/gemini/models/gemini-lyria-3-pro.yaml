@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-lyria-3-pro
+    owner:
+        kind: provider
+        name: gemini
+    labels:
+        family: gemini
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: gemini
+          upstreamName: gemini/lyria-3-pro-preview
+          adapter: openai
+    family: gemini
+    capabilities:
+        chat: true
+        streaming: true
+        audioOutput: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+            - audio
+    contextWindowInput: 131072
+    contextWindowOutput: 8192
+    contextWindowTotal: 131072
+    snapshots:
+        - name: gemini-lyria-3-pro-preview
+          originalName: gemini/lyria-3-pro-preview
+    pointer: gemini-lyria-3-pro-preview

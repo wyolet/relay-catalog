@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: azure-eu-gpt-4o-mini-realtime
+    owner:
+        kind: provider
+        name: azure
+    labels:
+        family: azure
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: azure
+          upstreamName: azure/eu/gpt-4o-mini-realtime-preview-2024-12-17
+          adapter: openai
+    family: azure
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        audioInput: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - audio
+        output:
+            - text
+            - audio
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    snapshots:
+        - name: azure-eu-gpt-4o-mini-realtime-preview-2024-12-17
+          releasedAt: "2024-12-17"
+          originalName: azure/eu/gpt-4o-mini-realtime-preview-2024-12-17
+    pointer: azure-eu-gpt-4o-mini-realtime-preview-2024-12-17

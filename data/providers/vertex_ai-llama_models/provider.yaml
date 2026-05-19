@@ -1,9 +1,0 @@
-apiVersion: relay.wyolet.dev/v1alpha2
-kind: Provider
-metadata:
-    name: vertex_ai-llama_models
-    displayName: Vertex Ai Llama Models
-    description: Vertex Ai Llama Models — auto-imported, requires hand curation.
-    owner:
-        kind: system
-spec: {}

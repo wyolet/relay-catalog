@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: lemonade-qwen3-4b-instruct-2507-gguf
+    owner:
+        kind: provider
+        name: lemonade
+    labels:
+        family: lemonade
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: lemonade
+          upstreamName: lemonade/Qwen3-4B-Instruct-2507-GGUF
+          adapter: openai
+    family: lemonade
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 32768
+    contextWindowTotal: 262144
+    snapshots:
+        - name: lemonade-qwen3-4b-instruct-2507-gguf
+          originalName: lemonade/Qwen3-4B-Instruct-2507-GGUF
+    pointer: lemonade-qwen3-4b-instruct-2507-gguf

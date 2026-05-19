@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter-anthropic-claude-sonnet-4-5
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: openrouter
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openrouter
+          upstreamName: openrouter/anthropic/claude-sonnet-4.5
+          adapter: openai
+    family: openrouter
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        computerUse: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 1000000
+    contextWindowTotal: 1000000
+    snapshots:
+        - name: openrouter-anthropic-claude-sonnet-4-5
+          originalName: openrouter/anthropic/claude-sonnet-4.5
+    pointer: openrouter-anthropic-claude-sonnet-4-5

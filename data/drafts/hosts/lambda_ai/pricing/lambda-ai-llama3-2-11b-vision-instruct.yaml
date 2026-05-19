@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: lambda_ai-lambda-ai-llama3-2-11b-vision-instruct
+    owner:
+        kind: host
+        id: lambda_ai
+spec:
+    currency: USD
+    targetModels:
+        - lambda-ai-llama3-2-11b-vision-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.015
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.024999999999999998

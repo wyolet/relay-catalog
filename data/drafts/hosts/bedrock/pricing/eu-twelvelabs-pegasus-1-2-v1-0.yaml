@@ -1,0 +1,15 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: bedrock-eu-twelvelabs-pegasus-1-2-v1-0
+    owner:
+        kind: host
+        id: bedrock
+spec:
+    currency: USD
+    targetModels:
+        - eu-twelvelabs-pegasus-1-2-v1-0
+    rates:
+        - meter: tokens.output
+          unit: per_million
+          amount: 7.5

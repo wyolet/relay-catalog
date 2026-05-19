@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: jp-anthropic-claude-sonnet-4-6
+    owner:
+        kind: provider
+        name: bedrock_converse
+    labels:
+        family: jp
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock_converse
+          upstreamName: jp.anthropic.claude-sonnet-4-6
+          adapter: openai
+    family: jp
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        computerUse: true
+        fileInput: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 64000
+    contextWindowTotal: 1000000
+    snapshots:
+        - name: jp-anthropic-claude-sonnet-4-6
+          originalName: jp.anthropic.claude-sonnet-4-6
+    pointer: jp-anthropic-claude-sonnet-4-6

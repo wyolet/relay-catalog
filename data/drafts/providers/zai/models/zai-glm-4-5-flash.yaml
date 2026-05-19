@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: zai-glm-4-5-flash
+    owner:
+        kind: provider
+        name: zai
+    labels:
+        family: zai
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: zai
+          upstreamName: zai/glm-4.5-flash
+          adapter: openai
+    family: zai
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: zai-glm-4-5-flash
+          originalName: zai/glm-4.5-flash
+    pointer: zai-glm-4-5-flash

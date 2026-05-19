@@ -40,5 +40,4 @@ spec:
     snapshots:
         - name: claude-4-sonnet-20250514
           releasedAt: "2025-05-14"
-          originalName: claude-4-sonnet-20250514
     pointer: claude-4-sonnet-20250514

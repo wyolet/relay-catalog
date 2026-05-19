@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: vertex-ai-meta-llama3-70b-instruct-maas
+    owner:
+        kind: provider
+        name: vertex_ai-llama_models
+    labels:
+        family: vertex
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vertex_ai-llama_models
+          upstreamName: vertex_ai/meta/llama3-70b-instruct-maas
+          adapter: openai
+    family: vertex
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 32000
+    contextWindowTotal: 32000
+    snapshots:
+        - name: vertex-ai-meta-llama3-70b-instruct-maas
+          originalName: vertex_ai/meta/llama3-70b-instruct-maas
+    pointer: vertex-ai-meta-llama3-70b-instruct-maas

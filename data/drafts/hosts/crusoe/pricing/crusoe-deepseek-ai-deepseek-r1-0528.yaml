@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: crusoe-crusoe-deepseek-ai-deepseek-r1-0528
+    owner:
+        kind: host
+        id: crusoe
+spec:
+    currency: USD
+    targetModels:
+        - crusoe-deepseek-ai-deepseek-r1-0528
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 3
+        - meter: tokens.output
+          unit: per_million
+          amount: 7

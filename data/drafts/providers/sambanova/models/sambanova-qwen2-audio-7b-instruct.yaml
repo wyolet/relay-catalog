@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: sambanova-qwen2-audio-7b-instruct
+    owner:
+        kind: provider
+        name: sambanova
+    labels:
+        family: sambanova
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: sambanova
+          upstreamName: sambanova/Qwen2-Audio-7B-Instruct
+          adapter: openai
+    family: sambanova
+    capabilities:
+        chat: true
+        streaming: true
+        audioInput: true
+    modalities:
+        input:
+            - text
+            - audio
+        output:
+            - text
+    contextWindowInput: 4096
+    contextWindowOutput: 4096
+    contextWindowTotal: 4096
+    snapshots:
+        - name: sambanova-qwen2-audio-7b-instruct
+          originalName: sambanova/Qwen2-Audio-7B-Instruct
+    pointer: sambanova-qwen2-audio-7b-instruct

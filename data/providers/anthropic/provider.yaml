@@ -4,8 +4,6 @@ metadata:
     name: anthropic
     displayName: Anthropic
     description: Claude models from Anthropic.
-    owner:
-        kind: system
 spec:
     homepageURL: https://www.anthropic.com
     docsURL: https://docs.anthropic.com

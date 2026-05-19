@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cohere-command-text-v14
+    owner:
+        kind: provider
+        name: bedrock
+    labels:
+        family: cohere
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock
+          upstreamName: cohere.command-text-v14
+          adapter: openai
+    family: cohere
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 4096
+    contextWindowOutput: 4096
+    contextWindowTotal: 4096
+    snapshots:
+        - name: cohere-command-text-v14
+          originalName: cohere.command-text-v14
+    pointer: cohere-command-text-v14

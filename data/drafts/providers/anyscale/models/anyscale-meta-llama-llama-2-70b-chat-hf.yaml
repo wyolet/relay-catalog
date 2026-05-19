@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: anyscale-meta-llama-llama-2-70b-chat-hf
+    owner:
+        kind: provider
+        name: anyscale
+    labels:
+        family: anyscale
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: anyscale
+          upstreamName: anyscale/meta-llama/Llama-2-70b-chat-hf
+          adapter: openai
+    family: anyscale
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 4096
+    contextWindowOutput: 4096
+    contextWindowTotal: 4096
+    snapshots:
+        - name: anyscale-meta-llama-llama-2-70b-chat-hf
+          originalName: anyscale/meta-llama/Llama-2-70b-chat-hf
+    pointer: anyscale-meta-llama-llama-2-70b-chat-hf

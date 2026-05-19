@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: databricks-databricks-claude-opus-4
+    owner:
+        kind: provider
+        name: databricks
+    labels:
+        family: databricks
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: databricks
+          upstreamName: databricks/databricks-claude-opus-4
+          adapter: openai
+    family: databricks
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 32000
+    contextWindowTotal: 200000
+    snapshots:
+        - name: databricks-databricks-claude-opus-4
+          originalName: databricks/databricks-claude-opus-4
+    pointer: databricks-databricks-claude-opus-4

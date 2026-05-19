@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-devstral-2-123b
+    owner:
+        kind: provider
+        name: bedrock_converse
+    labels:
+        family: mistral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock_converse
+          upstreamName: mistral.devstral-2-123b
+          adapter: openai
+    family: mistral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 8192
+    contextWindowTotal: 256000
+    snapshots:
+        - name: mistral-devstral-2-123b
+          originalName: mistral.devstral-2-123b
+    pointer: mistral-devstral-2-123b

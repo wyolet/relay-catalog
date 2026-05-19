@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: vertex_ai-mistral_models-vertex-ai-mistral-large-2411-001
+    owner:
+        kind: host
+        id: vertex_ai-mistral_models
+spec:
+    currency: USD
+    targetModels:
+        - vertex-ai-mistral-large-2411-001
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.output
+          unit: per_million
+          amount: 6

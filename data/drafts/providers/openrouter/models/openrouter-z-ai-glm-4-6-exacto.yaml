@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter-z-ai-glm-4-6-exacto
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: openrouter
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openrouter
+          upstreamName: openrouter/z-ai/glm-4.6:exacto
+          adapter: openai
+    family: openrouter
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 202800
+    contextWindowOutput: 131000
+    contextWindowTotal: 202800
+    snapshots:
+        - name: openrouter-z-ai-glm-4-6-exacto
+          originalName: openrouter/z-ai/glm-4.6:exacto
+    pointer: openrouter-z-ai-glm-4-6-exacto

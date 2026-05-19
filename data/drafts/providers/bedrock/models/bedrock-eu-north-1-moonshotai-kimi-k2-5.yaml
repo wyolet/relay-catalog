@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: bedrock-eu-north-1-moonshotai-kimi-k2-5
+    owner:
+        kind: provider
+        name: bedrock
+    labels:
+        family: bedrock
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock
+          upstreamName: bedrock/eu-north-1/moonshotai.kimi-k2.5
+          adapter: openai
+    family: bedrock
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    snapshots:
+        - name: bedrock-eu-north-1-moonshotai-kimi-k2-5
+          originalName: bedrock/eu-north-1/moonshotai.kimi-k2.5
+    pointer: bedrock-eu-north-1-moonshotai-kimi-k2-5

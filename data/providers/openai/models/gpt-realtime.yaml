@@ -12,7 +12,7 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-realtime-2025-08-28
+          upstreamName: gpt-realtime
           adapter: openai
     family: gpt
     capabilities:
@@ -34,7 +34,7 @@ spec:
     contextWindowOutput: 4096
     contextWindowTotal: 32000
     snapshots:
+        - name: gpt-realtime
         - name: gpt-realtime-2025-08-28
           releasedAt: "2025-08-28"
-          originalName: gpt-realtime-2025-08-28
-    pointer: gpt-realtime-2025-08-28
+    pointer: gpt-realtime

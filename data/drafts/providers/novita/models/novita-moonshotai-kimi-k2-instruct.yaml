@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: novita-moonshotai-kimi-k2-instruct
+    owner:
+        kind: provider
+        name: novita
+    labels:
+        family: novita
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: novita
+          upstreamName: novita/moonshotai/kimi-k2-instruct
+          adapter: openai
+    family: novita
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    snapshots:
+        - name: novita-moonshotai-kimi-k2-instruct
+          originalName: novita/moonshotai/kimi-k2-instruct
+    pointer: novita-moonshotai-kimi-k2-instruct

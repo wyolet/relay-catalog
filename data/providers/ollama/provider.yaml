@@ -4,8 +4,6 @@ metadata:
     name: ollama
     displayName: Ollama
     description: Run large language models locally with Ollama.
-    owner:
-        kind: system
 spec:
     homepageURL: https://ollama.com
     icon:

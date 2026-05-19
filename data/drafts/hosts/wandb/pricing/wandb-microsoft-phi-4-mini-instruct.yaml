@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: wandb-wandb-microsoft-phi-4-mini-instruct
+    owner:
+        kind: host
+        id: wandb
+spec:
+    currency: USD
+    targetModels:
+        - wandb-microsoft-phi-4-mini-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 8000
+        - meter: tokens.output
+          unit: per_million
+          amount: 35000

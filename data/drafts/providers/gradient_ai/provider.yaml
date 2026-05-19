@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: gradient_ai
+    displayName: Gradient Ai
+    description: Gradient Ai — auto-imported, requires hand curation.
+spec: {}

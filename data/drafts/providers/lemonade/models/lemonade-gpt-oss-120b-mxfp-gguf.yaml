@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: lemonade-gpt-oss-120b-mxfp-gguf
+    owner:
+        kind: provider
+        name: lemonade
+    labels:
+        family: lemonade
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: lemonade
+          upstreamName: lemonade/gpt-oss-120b-mxfp-GGUF
+          adapter: openai
+    family: lemonade
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 32768
+    contextWindowTotal: 131072
+    snapshots:
+        - name: lemonade-gpt-oss-120b-mxfp-gguf
+          originalName: lemonade/gpt-oss-120b-mxfp-GGUF
+    pointer: lemonade-gpt-oss-120b-mxfp-gguf

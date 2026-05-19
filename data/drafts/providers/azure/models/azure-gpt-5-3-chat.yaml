@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: azure-gpt-5-3-chat
+    owner:
+        kind: provider
+        name: azure
+    labels:
+        family: azure
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: azure
+          upstreamName: azure/gpt-5.3-chat
+          adapter: openai
+    family: azure
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    snapshots:
+        - name: azure-gpt-5-3-chat
+          originalName: azure/gpt-5.3-chat
+    pointer: azure-gpt-5-3-chat

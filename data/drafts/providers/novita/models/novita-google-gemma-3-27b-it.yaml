@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: novita-google-gemma-3-27b-it
+    owner:
+        kind: provider
+        name: novita
+    labels:
+        family: novita
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: novita
+          upstreamName: novita/google/gemma-3-27b-it
+          adapter: openai
+    family: novita
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 98304
+    contextWindowOutput: 16384
+    contextWindowTotal: 98304
+    snapshots:
+        - name: novita-google-gemma-3-27b-it
+          originalName: novita/google/gemma-3-27b-it
+    pointer: novita-google-gemma-3-27b-it

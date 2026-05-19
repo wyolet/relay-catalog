@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter-openai-gpt-5-codex
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: openrouter
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openrouter
+          upstreamName: openrouter/openai/gpt-5-codex
+          adapter: openai
+    family: openrouter
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 272000
+    contextWindowOutput: 128000
+    contextWindowTotal: 272000
+    snapshots:
+        - name: openrouter-openai-gpt-5-codex
+          originalName: openrouter/openai/gpt-5-codex
+    pointer: openrouter-openai-gpt-5-codex

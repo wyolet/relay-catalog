@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: gigachat
+    displayName: Gigachat
+    description: Gigachat — auto-imported, requires hand curation.
+spec: {}

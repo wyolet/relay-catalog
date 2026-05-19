@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: meta-llama-llama-4-maverick-17b-128e-instruct-fp8
+    owner:
+        kind: provider
+        name: meta_llama
+    labels:
+        family: meta
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: meta_llama
+          upstreamName: meta_llama/Llama-4-Maverick-17B-128E-Instruct-FP8
+          adapter: openai
+    family: meta
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 4028
+    contextWindowTotal: 1000000
+    snapshots:
+        - name: meta-llama-llama-4-maverick-17b-128e-instruct-fp8
+          originalName: meta_llama/Llama-4-Maverick-17B-128E-Instruct-FP8
+    pointer: meta-llama-llama-4-maverick-17b-128e-instruct-fp8

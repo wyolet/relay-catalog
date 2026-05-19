@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: groq-llama-3-3-70b-versatile
+    owner:
+        kind: provider
+        name: groq
+    labels:
+        family: groq
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: groq
+          upstreamName: groq/llama-3.3-70b-versatile
+          adapter: openai
+    family: groq
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32768
+    contextWindowTotal: 128000
+    snapshots:
+        - name: groq-llama-3-3-70b-versatile
+          originalName: groq/llama-3.3-70b-versatile
+    pointer: groq-llama-3-3-70b-versatile

@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepinfra-microsoft-phi-4
+    owner:
+        kind: provider
+        name: deepinfra
+    labels:
+        family: deepinfra
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: deepinfra
+          upstreamName: deepinfra/microsoft/phi-4
+          adapter: openai
+    family: deepinfra
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 16384
+    contextWindowTotal: 16384
+    snapshots:
+        - name: deepinfra-microsoft-phi-4
+          originalName: deepinfra/microsoft/phi-4
+    pointer: deepinfra-microsoft-phi-4

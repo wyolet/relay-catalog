@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: vertex-ai-claude-sonnet-4-6-default
+    owner:
+        kind: provider
+        name: vertex_ai-anthropic_models
+    labels:
+        family: vertex
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vertex_ai-anthropic_models
+          upstreamName: vertex_ai/claude-sonnet-4-6@default
+          adapter: openai
+    family: vertex
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        computerUse: true
+        fileInput: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 64000
+    contextWindowTotal: 1000000
+    snapshots:
+        - name: vertex-ai-claude-sonnet-4-6-default
+          originalName: vertex_ai/claude-sonnet-4-6@default
+    pointer: vertex-ai-claude-sonnet-4-6-default

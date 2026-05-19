@@ -1,0 +1,28 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: together-ai-up-to-4b
+    owner:
+        kind: provider
+        name: together_ai
+    labels:
+        family: together
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: together_ai
+          upstreamName: together-ai-up-to-4b
+          adapter: openai
+    family: together
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: together-ai-up-to-4b
+    pointer: together-ai-up-to-4b

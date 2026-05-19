@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: featherless_ai
+    displayName: Featherless Ai
+    description: Featherless Ai — auto-imported, requires hand curation.
+spec: {}

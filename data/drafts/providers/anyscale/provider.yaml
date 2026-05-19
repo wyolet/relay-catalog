@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: anyscale
+    displayName: Anyscale
+    description: Anyscale — auto-imported, requires hand curation.
+spec: {}

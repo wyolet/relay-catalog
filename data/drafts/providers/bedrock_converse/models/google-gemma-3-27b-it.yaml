@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: google-gemma-3-27b-it
+    owner:
+        kind: provider
+        name: bedrock_converse
+    labels:
+        family: google
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock_converse
+          upstreamName: google.gemma-3-27b-it
+          adapter: openai
+    family: google
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    snapshots:
+        - name: google-gemma-3-27b-it
+          originalName: google.gemma-3-27b-it
+    pointer: google-gemma-3-27b-it

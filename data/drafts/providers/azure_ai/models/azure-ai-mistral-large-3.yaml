@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: azure-ai-mistral-large-3
+    owner:
+        kind: provider
+        name: azure_ai
+    labels:
+        family: azure
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: azure_ai
+          upstreamName: azure_ai/mistral-large-3
+          adapter: openai
+    family: azure
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 8191
+    contextWindowTotal: 256000
+    snapshots:
+        - name: azure-ai-mistral-large-3
+          originalName: azure_ai/mistral-large-3
+    pointer: azure-ai-mistral-large-3

@@ -12,7 +12,7 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: o1-2024-12-17
+          upstreamName: o1
           adapter: openai
     family: o1
     capabilities:
@@ -37,7 +37,7 @@ spec:
     contextWindowOutput: 100000
     contextWindowTotal: 200000
     snapshots:
+        - name: o1
         - name: o1-2024-12-17
           releasedAt: "2024-12-17"
-          originalName: o1-2024-12-17
-    pointer: o1-2024-12-17
+    pointer: o1

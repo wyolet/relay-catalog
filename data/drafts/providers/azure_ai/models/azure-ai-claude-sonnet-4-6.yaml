@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: azure-ai-claude-sonnet-4-6
+    owner:
+        kind: provider
+        name: azure_ai
+    labels:
+        family: azure
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: azure_ai
+          upstreamName: azure_ai/claude-sonnet-4-6
+          adapter: openai
+    family: azure
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        computerUse: true
+        fileInput: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 64000
+    contextWindowTotal: 1000000
+    snapshots:
+        - name: azure-ai-claude-sonnet-4-6
+          originalName: azure_ai/claude-sonnet-4-6
+    pointer: azure-ai-claude-sonnet-4-6

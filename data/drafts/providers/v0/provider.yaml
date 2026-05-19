@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: v0
+    displayName: V0
+    description: V0 — auto-imported, requires hand curation.
+spec: {}

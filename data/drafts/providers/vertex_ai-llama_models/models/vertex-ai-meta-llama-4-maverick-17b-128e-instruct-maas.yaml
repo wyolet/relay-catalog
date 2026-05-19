@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: vertex-ai-meta-llama-4-maverick-17b-128e-instruct-maas
+    owner:
+        kind: provider
+        name: vertex_ai-llama_models
+    labels:
+        family: vertex
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: vertex_ai-llama_models
+          upstreamName: vertex_ai/meta/llama-4-maverick-17b-128e-instruct-maas
+          adapter: openai
+    family: vertex
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 1000000
+    contextWindowTotal: 1000000
+    snapshots:
+        - name: vertex-ai-meta-llama-4-maverick-17b-128e-instruct-maas
+          originalName: vertex_ai/meta/llama-4-maverick-17b-128e-instruct-maas
+    pointer: vertex-ai-meta-llama-4-maverick-17b-128e-instruct-maas

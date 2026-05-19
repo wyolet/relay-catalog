@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: groq-openai-gpt-oss-120b
+    owner:
+        kind: provider
+        name: groq
+    labels:
+        family: groq
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: groq
+          upstreamName: groq/openai/gpt-oss-120b
+          adapter: openai
+    family: groq
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        reasoning: true
+        structuredOutputs: true
+        webSearch: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 32766
+    contextWindowTotal: 131072
+    snapshots:
+        - name: groq-openai-gpt-oss-120b
+          originalName: groq/openai/gpt-oss-120b
+    pointer: groq-openai-gpt-oss-120b

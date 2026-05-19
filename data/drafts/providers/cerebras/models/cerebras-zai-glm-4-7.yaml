@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cerebras-zai-glm-4-7
+    owner:
+        kind: provider
+        name: cerebras
+    labels:
+        family: cerebras
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: cerebras
+          upstreamName: cerebras/zai-glm-4.7
+          adapter: openai
+    family: cerebras
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: cerebras-zai-glm-4-7
+          originalName: cerebras/zai-glm-4.7
+    pointer: cerebras-zai-glm-4-7

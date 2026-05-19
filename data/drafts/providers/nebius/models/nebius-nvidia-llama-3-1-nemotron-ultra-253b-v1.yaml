@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nebius-nvidia-llama-3-1-nemotron-ultra-253b-v1
+    owner:
+        kind: provider
+        name: nebius
+    labels:
+        family: nebius
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: nebius
+          upstreamName: nebius/nvidia/Llama-3.1-Nemotron-Ultra-253B-v1
+          adapter: openai
+    family: nebius
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: nebius-nvidia-llama-3-1-nemotron-ultra-253b-v1
+          originalName: nebius/nvidia/Llama-3.1-Nemotron-Ultra-253B-v1
+    pointer: nebius-nvidia-llama-3-1-nemotron-ultra-253b-v1

@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: meta_llama
+    displayName: Meta Llama
+    description: Meta Llama — auto-imported, requires hand curation.
+spec: {}

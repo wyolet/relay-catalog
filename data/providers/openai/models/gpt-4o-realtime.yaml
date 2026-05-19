@@ -33,13 +33,10 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 4096
     contextWindowTotal: 128000
-    aliases:
-        - gpt-4o-realtime-preview
     snapshots:
+        - name: gpt-4o-realtime-preview
         - name: gpt-4o-realtime-preview-2024-12-17
           releasedAt: "2024-12-17"
-          originalName: gpt-4o-realtime-preview-2024-12-17
         - name: gpt-4o-realtime-preview-2025-06-03
           releasedAt: "2025-06-03"
-          originalName: gpt-4o-realtime-preview-2025-06-03
     pointer: gpt-4o-realtime-preview-2025-06-03

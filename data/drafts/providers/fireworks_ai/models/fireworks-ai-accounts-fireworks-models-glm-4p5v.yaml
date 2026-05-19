@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: fireworks-ai-accounts-fireworks-models-glm-4p5v
+    owner:
+        kind: provider
+        name: fireworks_ai
+    labels:
+        family: fireworks
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: fireworks_ai
+          upstreamName: fireworks_ai/accounts/fireworks/models/glm-4p5v
+          adapter: openai
+    family: fireworks
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    snapshots:
+        - name: fireworks-ai-accounts-fireworks-models-glm-4p5v
+          originalName: fireworks_ai/accounts/fireworks/models/glm-4p5v
+    pointer: fireworks-ai-accounts-fireworks-models-glm-4p5v

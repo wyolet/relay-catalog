@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: bedrock-bedrock-moonshotai-kimi-k2-thinking
+    owner:
+        kind: host
+        id: bedrock
+spec:
+    currency: USD
+    targetModels:
+        - bedrock-moonshotai-kimi-k2-thinking
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.73
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.03

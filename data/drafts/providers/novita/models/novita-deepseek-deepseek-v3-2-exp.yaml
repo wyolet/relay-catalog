@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: novita-deepseek-deepseek-v3-2-exp
+    owner:
+        kind: provider
+        name: novita
+    labels:
+        family: novita
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: novita
+          upstreamName: novita/deepseek/deepseek-v3.2-exp
+          adapter: openai
+    family: novita
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        reasoning: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 163840
+    contextWindowOutput: 65536
+    contextWindowTotal: 163840
+    snapshots:
+        - name: novita-deepseek-deepseek-v3-2-exp
+          originalName: novita/deepseek/deepseek-v3.2-exp
+    pointer: novita-deepseek-deepseek-v3-2-exp

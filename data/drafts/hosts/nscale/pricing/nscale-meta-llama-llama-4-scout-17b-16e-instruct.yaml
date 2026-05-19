@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nscale-nscale-meta-llama-llama-4-scout-17b-16e-instruct
+    owner:
+        kind: host
+        id: nscale
+spec:
+    currency: USD
+    targetModels:
+        - nscale-meta-llama-llama-4-scout-17b-16e-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.09
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.29

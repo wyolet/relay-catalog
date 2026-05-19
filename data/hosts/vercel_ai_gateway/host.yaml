@@ -1,9 +1,0 @@
-apiVersion: relay.wyolet.dev/v1alpha2
-kind: Host
-metadata:
-    name: vercel_ai_gateway
-    displayName: Vercel Ai Gateway
-    owner:
-        kind: system
-spec:
-    baseURL: ""

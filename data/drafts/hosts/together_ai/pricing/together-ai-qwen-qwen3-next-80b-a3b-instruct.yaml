@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: together_ai-together-ai-qwen-qwen3-next-80b-a3b-instruct
+    owner:
+        kind: host
+        id: together_ai
+spec:
+    currency: USD
+    targetModels:
+        - together-ai-qwen-qwen3-next-80b-a3b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.15
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.5

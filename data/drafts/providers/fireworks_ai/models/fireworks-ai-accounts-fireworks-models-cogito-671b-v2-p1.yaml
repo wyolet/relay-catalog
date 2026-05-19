@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: fireworks-ai-accounts-fireworks-models-cogito-671b-v2-p1
+    owner:
+        kind: provider
+        name: fireworks_ai
+    labels:
+        family: fireworks
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: fireworks_ai
+          upstreamName: fireworks_ai/accounts/fireworks/models/cogito-671b-v2-p1
+          adapter: openai
+    family: fireworks
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 163840
+    contextWindowOutput: 163840
+    contextWindowTotal: 163840
+    snapshots:
+        - name: fireworks-ai-accounts-fireworks-models-cogito-671b-v2-p1
+          originalName: fireworks_ai/accounts/fireworks/models/cogito-671b-v2-p1
+    pointer: fireworks-ai-accounts-fireworks-models-cogito-671b-v2-p1

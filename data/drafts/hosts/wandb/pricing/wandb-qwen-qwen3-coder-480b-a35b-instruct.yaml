@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: wandb-wandb-qwen-qwen3-coder-480b-a35b-instruct
+    owner:
+        kind: host
+        id: wandb
+spec:
+    currency: USD
+    targetModels:
+        - wandb-qwen-qwen3-coder-480b-a35b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 100000
+        - meter: tokens.output
+          unit: per_million
+          amount: 150000

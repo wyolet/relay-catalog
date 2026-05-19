@@ -1,9 +1,0 @@
-apiVersion: relay.wyolet.dev/v1alpha2
-kind: Provider
-metadata:
-    name: azure_ai
-    displayName: Azure Ai
-    description: Azure Ai — auto-imported, requires hand curation.
-    owner:
-        kind: system
-spec: {}

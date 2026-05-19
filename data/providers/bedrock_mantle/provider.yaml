@@ -1,9 +1,0 @@
-apiVersion: relay.wyolet.dev/v1alpha2
-kind: Provider
-metadata:
-    name: bedrock_mantle
-    displayName: Bedrock Mantle
-    description: Bedrock Mantle — auto-imported, requires hand curation.
-    owner:
-        kind: system
-spec: {}

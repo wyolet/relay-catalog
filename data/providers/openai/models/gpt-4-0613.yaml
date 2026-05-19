@@ -34,5 +34,4 @@ spec:
         sunsetDate: "2025-06-06"
     snapshots:
         - name: gpt-4-0613
-          originalName: gpt-4-0613
     pointer: gpt-4-0613

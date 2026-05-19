@@ -38,5 +38,4 @@ spec:
     snapshots:
         - name: claude-3-opus-20240229
           releasedAt: "2024-02-29"
-          originalName: claude-3-opus-20240229
     pointer: claude-3-opus-20240229

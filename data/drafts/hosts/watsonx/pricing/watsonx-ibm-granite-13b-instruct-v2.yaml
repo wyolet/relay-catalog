@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: watsonx-watsonx-ibm-granite-13b-instruct-v2
+    owner:
+        kind: host
+        id: watsonx
+spec:
+    currency: USD
+    targetModels:
+        - watsonx-ibm-granite-13b-instruct-v2
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.6
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.6

@@ -1,0 +1,29 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: baseten-openai-gpt-oss-120b
+    owner:
+        kind: provider
+        name: baseten
+    labels:
+        family: baseten
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: baseten
+          upstreamName: baseten/openai/gpt-oss-120b
+          adapter: openai
+    family: baseten
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: baseten-openai-gpt-oss-120b
+          originalName: baseten/openai/gpt-oss-120b
+    pointer: baseten-openai-gpt-oss-120b

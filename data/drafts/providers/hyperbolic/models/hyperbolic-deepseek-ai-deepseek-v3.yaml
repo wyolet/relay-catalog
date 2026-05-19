@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: hyperbolic-deepseek-ai-deepseek-v3
+    owner:
+        kind: provider
+        name: hyperbolic
+    labels:
+        family: hyperbolic
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: hyperbolic
+          upstreamName: hyperbolic/deepseek-ai/DeepSeek-V3
+          adapter: openai
+    family: hyperbolic
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    snapshots:
+        - name: hyperbolic-deepseek-ai-deepseek-v3
+          originalName: hyperbolic/deepseek-ai/DeepSeek-V3
+    pointer: hyperbolic-deepseek-ai-deepseek-v3

@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ai21-jamba-instruct-v1-0
+    owner:
+        kind: provider
+        name: bedrock
+    labels:
+        family: ai21
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: bedrock
+          upstreamName: ai21.jamba-instruct-v1:0
+          adapter: openai
+    family: ai21
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 70000
+    contextWindowOutput: 4096
+    contextWindowTotal: 70000
+    snapshots:
+        - name: ai21-jamba-instruct-v1-0
+          originalName: ai21.jamba-instruct-v1:0
+    pointer: ai21-jamba-instruct-v1-0

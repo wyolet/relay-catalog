@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: command-r-plus
+    owner:
+        kind: provider
+        name: cohere_chat
+    labels:
+        family: command
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: cohere_chat
+          upstreamName: command-r-plus
+          adapter: openai
+    family: command
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    snapshots:
+        - name: command-r-plus
+    pointer: command-r-plus

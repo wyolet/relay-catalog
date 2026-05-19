@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-mistral-tiny
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: mistral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: mistral
+          upstreamName: mistral/mistral-tiny
+          adapter: openai
+    family: mistral
+    capabilities:
+        chat: true
+        streaming: true
+        structuredOutputs: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 8191
+    contextWindowTotal: 32000
+    snapshots:
+        - name: mistral-mistral-tiny
+          originalName: mistral/mistral-tiny
+    pointer: mistral-mistral-tiny

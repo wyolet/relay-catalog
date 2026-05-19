@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nebius-mistralai-mistral-nemo-instruct-2407
+    owner:
+        kind: provider
+        name: nebius
+    labels:
+        family: nebius
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: nebius
+          upstreamName: nebius/mistralai/Mistral-Nemo-Instruct-2407
+          adapter: openai
+    family: nebius
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: nebius-mistralai-mistral-nemo-instruct-2407
+          originalName: nebius/mistralai/Mistral-Nemo-Instruct-2407
+    pointer: nebius-mistralai-mistral-nemo-instruct-2407

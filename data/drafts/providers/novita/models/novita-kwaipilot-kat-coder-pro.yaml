@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: novita-kwaipilot-kat-coder-pro
+    owner:
+        kind: provider
+        name: novita
+    labels:
+        family: novita
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: novita
+          upstreamName: novita/kwaipilot/kat-coder-pro
+          adapter: openai
+    family: novita
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 128000
+    contextWindowTotal: 256000
+    snapshots:
+        - name: novita-kwaipilot-kat-coder-pro
+          originalName: novita/kwaipilot/kat-coder-pro
+    pointer: novita-kwaipilot-kat-coder-pro

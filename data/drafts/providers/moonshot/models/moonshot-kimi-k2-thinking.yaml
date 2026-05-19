@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: moonshot-kimi-k2-thinking
+    owner:
+        kind: provider
+        name: moonshot
+    labels:
+        family: moonshot
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: moonshot
+          upstreamName: moonshot/kimi-k2-thinking
+          adapter: openai
+    family: moonshot
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        webSearch: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    snapshots:
+        - name: moonshot-kimi-k2-thinking
+          originalName: moonshot/kimi-k2-thinking
+    pointer: moonshot-kimi-k2-thinking

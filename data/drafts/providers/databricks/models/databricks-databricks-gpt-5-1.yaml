@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: databricks-databricks-gpt-5-1
+    owner:
+        kind: provider
+        name: databricks
+    labels:
+        family: databricks
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: databricks
+          upstreamName: databricks/databricks-gpt-5-1
+          adapter: openai
+    family: databricks
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 272000
+    contextWindowOutput: 128000
+    contextWindowTotal: 272000
+    snapshots:
+        - name: databricks-databricks-gpt-5-1
+          originalName: databricks/databricks-gpt-5-1
+    pointer: databricks-databricks-gpt-5-1

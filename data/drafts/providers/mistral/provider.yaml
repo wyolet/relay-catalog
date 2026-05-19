@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: mistral
+    displayName: Mistral
+    description: Mistral — auto-imported, requires hand curation.
+spec: {}

@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: azure
+    displayName: Azure
+    description: Azure — auto-imported, requires hand curation.
+spec: {}

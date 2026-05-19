@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: vertex_ai-mistral_models
+    displayName: Vertex Ai Mistral Models
+    description: Vertex Ai Mistral Models — auto-imported, requires hand curation.
+spec: {}

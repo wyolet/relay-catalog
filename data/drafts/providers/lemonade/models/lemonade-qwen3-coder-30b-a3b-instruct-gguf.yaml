@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: lemonade-qwen3-coder-30b-a3b-instruct-gguf
+    owner:
+        kind: provider
+        name: lemonade
+    labels:
+        family: lemonade
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: lemonade
+          upstreamName: lemonade/Qwen3-Coder-30B-A3B-Instruct-GGUF
+          adapter: openai
+    family: lemonade
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        structuredOutputs: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 32768
+    contextWindowTotal: 262144
+    snapshots:
+        - name: lemonade-qwen3-coder-30b-a3b-instruct-gguf
+          originalName: lemonade/Qwen3-Coder-30B-A3B-Instruct-GGUF
+    pointer: lemonade-qwen3-coder-30b-a3b-instruct-gguf

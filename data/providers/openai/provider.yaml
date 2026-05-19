@@ -4,8 +4,6 @@ metadata:
     name: openai
     displayName: OpenAI
     description: GPT models from OpenAI.
-    owner:
-        kind: system
 spec:
     homepageURL: https://openai.com
     docsURL: https://platform.openai.com/docs

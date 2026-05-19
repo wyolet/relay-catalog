@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: moonshot-moonshot-v1-128k-0430
+    owner:
+        kind: provider
+        name: moonshot
+    labels:
+        family: moonshot
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: moonshot
+          upstreamName: moonshot/moonshot-v1-128k-0430
+          adapter: openai
+    family: moonshot
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    snapshots:
+        - name: moonshot-moonshot-v1-128k-0430
+          originalName: moonshot/moonshot-v1-128k-0430
+    pointer: moonshot-moonshot-v1-128k-0430

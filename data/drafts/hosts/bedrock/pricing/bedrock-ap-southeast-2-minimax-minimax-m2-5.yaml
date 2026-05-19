@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: bedrock-bedrock-ap-southeast-2-minimax-minimax-m2-5
+    owner:
+        kind: host
+        id: bedrock
+spec:
+    currency: USD
+    targetModels:
+        - bedrock-ap-southeast-2-minimax-minimax-m2-5
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.309
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.236

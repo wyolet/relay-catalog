@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: databricks-databricks-meta-llama-3-70b-instruct
+    owner:
+        kind: provider
+        name: databricks
+    labels:
+        family: databricks
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: databricks
+          upstreamName: databricks/databricks-meta-llama-3-70b-instruct
+          adapter: openai
+    family: databricks
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    snapshots:
+        - name: databricks-databricks-meta-llama-3-70b-instruct
+          originalName: databricks/databricks-meta-llama-3-70b-instruct
+    pointer: databricks-databricks-meta-llama-3-70b-instruct

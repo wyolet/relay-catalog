@@ -1,0 +1,21 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: vercel_ai_gateway-vercel-ai-gateway-zai-glm-4-6
+    owner:
+        kind: host
+        id: vercel_ai_gateway
+spec:
+    currency: USD
+    targetModels:
+        - vercel-ai-gateway-zai-glm-4-6
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.44999999999999996
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.7999999999999998
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.11

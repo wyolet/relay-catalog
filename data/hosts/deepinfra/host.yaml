@@ -1,9 +1,0 @@
-apiVersion: relay.wyolet.dev/v1alpha2
-kind: Host
-metadata:
-    name: deepinfra
-    displayName: Deepinfra
-    owner:
-        kind: system
-spec:
-    baseURL: ""

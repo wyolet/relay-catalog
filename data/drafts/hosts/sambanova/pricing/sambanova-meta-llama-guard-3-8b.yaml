@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: sambanova-sambanova-meta-llama-guard-3-8b
+    owner:
+        kind: host
+        id: sambanova
+spec:
+    currency: USD
+    targetModels:
+        - sambanova-meta-llama-guard-3-8b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.3

@@ -1,0 +1,18 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: watsonx-watsonx-bigscience-mt0-xxl-13b
+    owner:
+        kind: host
+        id: watsonx
+spec:
+    currency: USD
+    targetModels:
+        - watsonx-bigscience-mt0-xxl-13b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 500
+        - meter: tokens.output
+          unit: per_million
+          amount: 2000
