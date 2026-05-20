@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: granite3-1-moe-1b
+    displayName: Granite 3.1 MOE 1B
+    owner:
+        kind: provider
+        name: ibm
+    labels:
+        family: granite3.1-moe
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: granite3.1-moe
+          adapter: openai
+    family: granite3.1-moe
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: granite3-1-moe-1b
+          originalName: granite3.1-moe:1b
+    pointer: granite3-1-moe-1b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: granite3-1-moe-3b
+    displayName: Granite 3.1 MOE 3B
+    owner:
+        kind: provider
+        name: ibm
+    labels:
+        family: granite3.1-moe
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: granite3.1-moe
+          adapter: openai
+    family: granite3.1-moe
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: granite3-1-moe-3b
+          originalName: granite3.1-moe:3b
+    pointer: granite3-1-moe-3b

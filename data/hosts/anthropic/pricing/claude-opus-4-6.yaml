@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
     name: anthropic-claude-opus-4-6
+    displayName: Claude Opus 4.6 pricing
     owner:
         kind: host
         id: anthropic

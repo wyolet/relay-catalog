@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: olmo2-7b
+    displayName: OLMo 2 7B
+    owner:
+        kind: provider
+        name: allenai
+    labels:
+        family: olmo2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: olmo2
+          adapter: openai
+    family: olmo2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: olmo2-7b
+          originalName: olmo2:7b
+    pointer: olmo2-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: olmo2-13b
+    displayName: OLMo 2 13B
+    owner:
+        kind: provider
+        name: allenai
+    labels:
+        family: olmo2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: olmo2
+          adapter: openai
+    family: olmo2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: olmo2-13b
+          originalName: olmo2:13b
+    pointer: olmo2-13b

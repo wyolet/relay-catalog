@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openhermes
+    displayName: OpenHermes
+    owner:
+        kind: provider
+        name: nous
+    labels:
+        family: openhermes
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: openhermes
+          adapter: openai
+    family: openhermes
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: openhermes-latest
+          originalName: openhermes:latest
+        - name: openhermes-7b
+          originalName: openhermes:7b
+    pointer: openhermes-7b

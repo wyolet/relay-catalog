@@ -1,0 +1,101 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llava-7b
+    displayName: LLaVA 7B
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: llava
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: llava
+          adapter: openai
+    family: llava
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: llava-7b
+          originalName: llava:7b
+    pointer: llava-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llava-13b
+    displayName: LLaVA 13B
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: llava
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: llava
+          adapter: openai
+    family: llava
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: llava-13b
+          originalName: llava:13b
+    pointer: llava-13b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llava-34b
+    displayName: LLaVA 34B
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: llava
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: llava
+          adapter: openai
+    family: llava
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: llava-34b
+          originalName: llava:34b
+    pointer: llava-34b

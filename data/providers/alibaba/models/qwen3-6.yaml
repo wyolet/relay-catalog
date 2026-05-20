@@ -1,0 +1,67 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-6-27b
+    displayName: Qwen 3.6 27B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen3.6
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen3.6
+          adapter: openai
+    family: qwen3.6
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: qwen3-6-27b
+          originalName: qwen3.6:27b
+    pointer: qwen3-6-27b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-6-35b
+    displayName: Qwen 3.6 35B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen3.6
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen3.6
+          adapter: openai
+    family: qwen3.6
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: qwen3-6-35b
+          originalName: qwen3.6:35b
+    pointer: qwen3-6-35b

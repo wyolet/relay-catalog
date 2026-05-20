@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mxbai-embed-large
+    displayName: MixedBread Embed Large
+    owner:
+        kind: provider
+        name: mixedbread
+    labels:
+        family: mxbai-embed-large
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: mxbai-embed-large
+          adapter: openai
+    family: mxbai-embed-large
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: mxbai-embed-large-latest
+          originalName: mxbai-embed-large:latest
+        - name: mxbai-embed-large-335m
+          originalName: mxbai-embed-large:335m
+    pointer: mxbai-embed-large-335m

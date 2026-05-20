@@ -1,0 +1,98 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: stable-beluga-7b
+    displayName: Stable Beluga 7B
+    owner:
+        kind: provider
+        name: stability
+    labels:
+        family: stable-beluga
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: stable-beluga
+          adapter: openai
+    family: stable-beluga
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: stable-beluga-7b
+          originalName: stable-beluga:7b
+    pointer: stable-beluga-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: stable-beluga-13b
+    displayName: Stable Beluga 13B
+    owner:
+        kind: provider
+        name: stability
+    labels:
+        family: stable-beluga
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: stable-beluga
+          adapter: openai
+    family: stable-beluga
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: stable-beluga-13b
+          originalName: stable-beluga:13b
+    pointer: stable-beluga-13b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: stable-beluga-70b
+    displayName: Stable Beluga 70B
+    owner:
+        kind: provider
+        name: stability
+    labels:
+        family: stable-beluga
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: stable-beluga
+          adapter: openai
+    family: stable-beluga
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: stable-beluga-70b
+          originalName: stable-beluga:70b
+    pointer: stable-beluga-70b

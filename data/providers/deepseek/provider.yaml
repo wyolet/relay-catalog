@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: deepseek
+    displayName: DeepSeek
+    description: DeepSeek — code and general-purpose language models from DeepSeek AI.
+spec: {}

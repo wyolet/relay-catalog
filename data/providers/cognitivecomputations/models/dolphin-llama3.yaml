@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: dolphin-llama3-8b
+    displayName: Dolphin Llama 3 8B
+    owner:
+        kind: provider
+        name: cognitivecomputations
+    labels:
+        family: dolphin-llama3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: dolphin-llama3
+          adapter: openai
+    family: dolphin-llama3
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: dolphin-llama3-8b
+          originalName: dolphin-llama3:8b
+    pointer: dolphin-llama3-8b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: dolphin-llama3-70b
+    displayName: Dolphin Llama 3 70B
+    owner:
+        kind: provider
+        name: cognitivecomputations
+    labels:
+        family: dolphin-llama3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: dolphin-llama3
+          adapter: openai
+    family: dolphin-llama3
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: dolphin-llama3-70b
+          originalName: dolphin-llama3:70b
+    pointer: dolphin-llama3-70b

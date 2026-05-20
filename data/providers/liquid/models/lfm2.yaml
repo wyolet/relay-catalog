@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: lfm2
+    displayName: LFM 2
+    owner:
+        kind: provider
+        name: liquid
+    labels:
+        family: lfm2
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: lfm2
+          adapter: openai
+    family: lfm2
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: lfm2-latest
+          originalName: lfm2:latest
+        - name: lfm2-24b
+          originalName: lfm2:24b
+    pointer: lfm2-24b

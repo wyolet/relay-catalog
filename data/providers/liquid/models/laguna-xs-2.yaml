@@ -1,0 +1,44 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: laguna-xs-2
+    displayName: Laguna XS.2
+    owner:
+        kind: provider
+        name: liquid
+    labels:
+        family: laguna-xs.2
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: laguna-xs.2
+          adapter: openai
+    family: laguna-xs.2
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: laguna-xs-2-latest
+          originalName: laguna-xs.2:latest
+        - name: laguna-xs-2-mxfp8
+          originalName: laguna-xs.2:mxfp8
+        - name: laguna-xs-2-nvfp4
+          originalName: laguna-xs.2:nvfp4
+        - name: laguna-xs-2-q4-k-m
+          originalName: laguna-xs.2:q4_K_M
+        - name: laguna-xs-2-q8-0
+          originalName: laguna-xs.2:q8_0
+        - name: laguna-xs-2-bf16
+          originalName: laguna-xs.2:bf16
+        - name: laguna-xs-2-mlx-bf16
+          originalName: laguna-xs.2:mlx-bf16
+    pointer: laguna-xs-2-mlx-bf16

@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: aya-expanse-8b
+    displayName: Aya Expanse 8B
+    owner:
+        kind: provider
+        name: cohere
+    labels:
+        family: aya-expanse
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: aya-expanse
+          adapter: openai
+    family: aya-expanse
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: aya-expanse-8b
+          originalName: aya-expanse:8b
+    pointer: aya-expanse-8b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: aya-expanse-32b
+    displayName: Aya Expanse 32B
+    owner:
+        kind: provider
+        name: cohere
+    labels:
+        family: aya-expanse
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: aya-expanse
+          adapter: openai
+    family: aya-expanse
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: aya-expanse-32b
+          originalName: aya-expanse:32b
+    pointer: aya-expanse-32b

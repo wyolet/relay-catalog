@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-v4-flash
+    displayName: DeepSeek V4 Flash
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-v4-flash
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: deepseek-v4-flash
+          adapter: openai
+    family: deepseek-v4-flash
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-v4-flash-cloud
+          originalName: deepseek-v4-flash:cloud
+    pointer: deepseek-v4-flash-cloud
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-v4-pro
+    displayName: DeepSeek V4 Pro
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-v4-pro
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: deepseek-v4-pro
+          adapter: openai
+    family: deepseek-v4-pro
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-v4-pro-cloud
+          originalName: deepseek-v4-pro:cloud
+    pointer: deepseek-v4-pro-cloud

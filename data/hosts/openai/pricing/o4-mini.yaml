@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
     name: openai-o4-mini
+    displayName: O4 Mini pricing
     owner:
         kind: host
         id: openai

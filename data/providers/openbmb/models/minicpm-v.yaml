@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: minicpm-v
+    displayName: MiniCPM-V
+    owner:
+        kind: provider
+        name: openbmb
+    labels:
+        family: minicpm-v
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: minicpm-v
+          adapter: openai
+    family: minicpm-v
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: minicpm-v-latest
+          originalName: minicpm-v:latest
+        - name: minicpm-v-8b
+          originalName: minicpm-v:8b
+    pointer: minicpm-v-8b

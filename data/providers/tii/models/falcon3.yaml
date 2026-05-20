@@ -1,0 +1,131 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: falcon3-1b
+    displayName: Falcon 3 1B
+    owner:
+        kind: provider
+        name: tii
+    labels:
+        family: falcon3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: falcon3
+          adapter: openai
+    family: falcon3
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: falcon3-1b
+          originalName: falcon3:1b
+    pointer: falcon3-1b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: falcon3-3b
+    displayName: Falcon 3 3B
+    owner:
+        kind: provider
+        name: tii
+    labels:
+        family: falcon3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: falcon3
+          adapter: openai
+    family: falcon3
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: falcon3-3b
+          originalName: falcon3:3b
+    pointer: falcon3-3b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: falcon3-7b
+    displayName: Falcon 3 7B
+    owner:
+        kind: provider
+        name: tii
+    labels:
+        family: falcon3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: falcon3
+          adapter: openai
+    family: falcon3
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: falcon3-7b
+          originalName: falcon3:7b
+    pointer: falcon3-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: falcon3-10b
+    displayName: Falcon 3 10B
+    owner:
+        kind: provider
+        name: tii
+    labels:
+        family: falcon3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: falcon3
+          adapter: openai
+    family: falcon3
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: falcon3-10b
+          originalName: falcon3:10b
+    pointer: falcon3-10b

@@ -1,0 +1,122 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ministral-3-3b
+    displayName: Ministral 3 3B
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: ministral-3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: ministral-3
+          adapter: openai
+          snapshots: [ministral-3-3b]
+        - host: ollama-cloud
+          upstreamName: ministral-3
+          adapter: openai
+          snapshots: [ministral-3-3b-cloud]
+    family: ministral-3
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: ministral-3-3b
+          originalName: ministral-3:3b
+        - name: ministral-3-3b-cloud
+          originalName: ministral-3:3b-cloud
+    pointer: ministral-3-3b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ministral-3-8b
+    displayName: Ministral 3 8B
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: ministral-3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: ministral-3
+          adapter: openai
+          snapshots: [ministral-3-8b]
+        - host: ollama-cloud
+          upstreamName: ministral-3
+          adapter: openai
+          snapshots: [ministral-3-8b-cloud]
+    family: ministral-3
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: ministral-3-8b
+          originalName: ministral-3:8b
+        - name: ministral-3-8b-cloud
+          originalName: ministral-3:8b-cloud
+    pointer: ministral-3-8b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ministral-3-14b
+    displayName: Ministral 3 14B
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: ministral-3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: ministral-3
+          adapter: openai
+          snapshots: [ministral-3-14b]
+        - host: ollama-cloud
+          upstreamName: ministral-3
+          adapter: openai
+          snapshots: [ministral-3-14b-cloud]
+    family: ministral-3
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: ministral-3-14b
+          originalName: ministral-3:14b
+        - name: ministral-3-14b-cloud
+          originalName: ministral-3:14b-cloud
+    pointer: ministral-3-14b

@@ -1,0 +1,98 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: starcoder2-3b
+    displayName: StarCoder 2 3B
+    owner:
+        kind: provider
+        name: bigcode
+    labels:
+        family: starcoder2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: starcoder2
+          adapter: openai
+    family: starcoder2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: starcoder2-3b
+          originalName: starcoder2:3b
+    pointer: starcoder2-3b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: starcoder2-7b
+    displayName: StarCoder 2 7B
+    owner:
+        kind: provider
+        name: bigcode
+    labels:
+        family: starcoder2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: starcoder2
+          adapter: openai
+    family: starcoder2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: starcoder2-7b
+          originalName: starcoder2:7b
+    pointer: starcoder2-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: starcoder2-15b
+    displayName: StarCoder 2 15B
+    owner:
+        kind: provider
+        name: bigcode
+    labels:
+        family: starcoder2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: starcoder2
+          adapter: openai
+    family: starcoder2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: starcoder2-15b
+          originalName: starcoder2:15b
+    pointer: starcoder2-15b

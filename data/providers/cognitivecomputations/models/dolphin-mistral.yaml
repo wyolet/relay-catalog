@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: dolphin-mistral
+    displayName: Dolphin Mistral
+    owner:
+        kind: provider
+        name: cognitivecomputations
+    labels:
+        family: dolphin-mistral
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: dolphin-mistral
+          adapter: openai
+    family: dolphin-mistral
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: dolphin-mistral-latest
+          originalName: dolphin-mistral:latest
+        - name: dolphin-mistral-7b
+          originalName: dolphin-mistral:7b
+    pointer: dolphin-mistral-7b

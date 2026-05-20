@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: internlm2-7b
+    displayName: InternLM 2 7B
+    owner:
+        kind: provider
+        name: internlm
+    labels:
+        family: internlm2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: internlm2
+          adapter: openai
+    family: internlm2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: internlm2-7b
+          originalName: internlm2:7b
+    pointer: internlm2-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: internlm2-20b
+    displayName: InternLM 2 20B
+    owner:
+        kind: provider
+        name: internlm
+    labels:
+        family: internlm2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: internlm2
+          adapter: openai
+    family: internlm2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: internlm2-20b
+          originalName: internlm2:20b
+    pointer: internlm2-20b

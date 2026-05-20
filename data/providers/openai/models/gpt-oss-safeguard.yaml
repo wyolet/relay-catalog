@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-oss-safeguard-20b
+    displayName: GPT OSS Safeguard 20B
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: gpt-oss-safeguard
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: gpt-oss-safeguard
+          adapter: openai
+    family: gpt-oss-safeguard
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: gpt-oss-safeguard-20b
+          originalName: gpt-oss-safeguard:20b
+    pointer: gpt-oss-safeguard-20b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-oss-safeguard-120b
+    displayName: GPT OSS Safeguard 120B
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: gpt-oss-safeguard
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: gpt-oss-safeguard
+          adapter: openai
+    family: gpt-oss-safeguard
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: gpt-oss-safeguard-120b
+          originalName: gpt-oss-safeguard:120b
+    pointer: gpt-oss-safeguard-120b

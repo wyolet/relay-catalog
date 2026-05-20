@@ -1,0 +1,164 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cogito-3b
+    displayName: Cogito 3B
+    owner:
+        kind: provider
+        name: cogito
+    labels:
+        family: cogito
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: cogito
+          adapter: openai
+    family: cogito
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: cogito-3b
+          originalName: cogito:3b
+    pointer: cogito-3b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cogito-8b
+    displayName: Cogito 8B
+    owner:
+        kind: provider
+        name: cogito
+    labels:
+        family: cogito
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: cogito
+          adapter: openai
+    family: cogito
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: cogito-8b
+          originalName: cogito:8b
+    pointer: cogito-8b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cogito-14b
+    displayName: Cogito 14B
+    owner:
+        kind: provider
+        name: cogito
+    labels:
+        family: cogito
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: cogito
+          adapter: openai
+    family: cogito
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: cogito-14b
+          originalName: cogito:14b
+    pointer: cogito-14b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cogito-32b
+    displayName: Cogito 32B
+    owner:
+        kind: provider
+        name: cogito
+    labels:
+        family: cogito
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: cogito
+          adapter: openai
+    family: cogito
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: cogito-32b
+          originalName: cogito:32b
+    pointer: cogito-32b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cogito-70b
+    displayName: Cogito 70B
+    owner:
+        kind: provider
+        name: cogito
+    labels:
+        family: cogito
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: cogito
+          adapter: openai
+    family: cogito
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: cogito-70b
+          originalName: cogito:70b
+    pointer: cogito-70b

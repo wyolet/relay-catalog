@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
     name: openai-gpt-4-0613
+    displayName: GPT-4 (2023-06-13) pricing
     owner:
         kind: host
         id: openai

@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: bge-m3
+    displayName: BGE M3
+    owner:
+        kind: provider
+        name: baai
+    labels:
+        family: bge-m3
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: bge-m3
+          adapter: openai
+    family: bge-m3
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: bge-m3-latest
+          originalName: bge-m3:latest
+        - name: bge-m3-567m
+          originalName: bge-m3:567m
+    pointer: bge-m3-567m

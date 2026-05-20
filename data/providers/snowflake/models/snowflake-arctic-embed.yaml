@@ -1,0 +1,123 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: snowflake-arctic-embed-22m
+    displayName: Snowflake Arctic Embed 22M
+    owner:
+        kind: provider
+        name: snowflake
+    labels:
+        family: snowflake-arctic-embed
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: snowflake-arctic-embed
+          adapter: openai
+    family: snowflake-arctic-embed
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: snowflake-arctic-embed-22m
+          originalName: snowflake-arctic-embed:22m
+    pointer: snowflake-arctic-embed-22m
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: snowflake-arctic-embed-110m
+    displayName: Snowflake Arctic Embed 110M
+    owner:
+        kind: provider
+        name: snowflake
+    labels:
+        family: snowflake-arctic-embed
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: snowflake-arctic-embed
+          adapter: openai
+    family: snowflake-arctic-embed
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: snowflake-arctic-embed-110m
+          originalName: snowflake-arctic-embed:110m
+    pointer: snowflake-arctic-embed-110m
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: snowflake-arctic-embed-137m
+    displayName: Snowflake Arctic Embed 137M
+    owner:
+        kind: provider
+        name: snowflake
+    labels:
+        family: snowflake-arctic-embed
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: snowflake-arctic-embed
+          adapter: openai
+    family: snowflake-arctic-embed
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: snowflake-arctic-embed-137m
+          originalName: snowflake-arctic-embed:137m
+    pointer: snowflake-arctic-embed-137m
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: snowflake-arctic-embed-335m
+    displayName: Snowflake Arctic Embed 335M
+    owner:
+        kind: provider
+        name: snowflake
+    labels:
+        family: snowflake-arctic-embed
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: snowflake-arctic-embed
+          adapter: openai
+    family: snowflake-arctic-embed
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: snowflake-arctic-embed-335m
+          originalName: snowflake-arctic-embed:335m
+    pointer: snowflake-arctic-embed-335m

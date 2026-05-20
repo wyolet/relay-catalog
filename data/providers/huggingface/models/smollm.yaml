@@ -1,0 +1,98 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: smollm-135m
+    displayName: SmolLM 135M
+    owner:
+        kind: provider
+        name: huggingface
+    labels:
+        family: smollm
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: smollm
+          adapter: openai
+    family: smollm
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: smollm-135m
+          originalName: smollm:135m
+    pointer: smollm-135m
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: smollm-360m
+    displayName: SmolLM 360M
+    owner:
+        kind: provider
+        name: huggingface
+    labels:
+        family: smollm
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: smollm
+          adapter: openai
+    family: smollm
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: smollm-360m
+          originalName: smollm:360m
+    pointer: smollm-360m
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: smollm-1-7b
+    displayName: SmolLM 1 7B
+    owner:
+        kind: provider
+        name: huggingface
+    labels:
+        family: smollm
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: smollm
+          adapter: openai
+    family: smollm
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: smollm-1-7b
+          originalName: smollm:1.7b
+    pointer: smollm-1-7b

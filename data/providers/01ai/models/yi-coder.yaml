@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: yi-coder-1-5b
+    displayName: Yi Coder 1 5B
+    owner:
+        kind: provider
+        name: 01ai
+    labels:
+        family: yi-coder
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: yi-coder
+          adapter: openai
+    family: yi-coder
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: yi-coder-1-5b
+          originalName: yi-coder:1.5b
+    pointer: yi-coder-1-5b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: yi-coder-9b
+    displayName: Yi Coder 9B
+    owner:
+        kind: provider
+        name: 01ai
+    labels:
+        family: yi-coder
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: yi-coder
+          adapter: openai
+    family: yi-coder
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: yi-coder-9b
+          originalName: yi-coder:9b
+    pointer: yi-coder-9b

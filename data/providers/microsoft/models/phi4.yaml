@@ -1,0 +1,139 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: phi4
+    displayName: Phi 4
+    owner:
+        kind: provider
+        name: microsoft
+    labels:
+        family: phi4
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: phi4
+          adapter: openai
+    family: phi4
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: phi4-latest
+          originalName: phi4:latest
+        - name: phi4-14b
+          originalName: phi4:14b
+    pointer: phi4-14b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: phi4-mini
+    displayName: Phi 4 Mini
+    owner:
+        kind: provider
+        name: microsoft
+    labels:
+        family: phi4-mini
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: phi4-mini
+          adapter: openai
+    family: phi4-mini
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: phi4-mini-latest
+          originalName: phi4-mini:latest
+        - name: phi4-mini-3-8b
+          originalName: phi4-mini:3.8b
+    pointer: phi4-mini-3-8b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: phi4-reasoning
+    displayName: Phi 4 Reasoning
+    owner:
+        kind: provider
+        name: microsoft
+    labels:
+        family: phi4-reasoning
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: phi4-reasoning
+          adapter: openai
+    family: phi4-reasoning
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: phi4-reasoning-latest
+          originalName: phi4-reasoning:latest
+        - name: phi4-reasoning-14b
+          originalName: phi4-reasoning:14b
+    pointer: phi4-reasoning-14b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: phi4-mini-reasoning
+    displayName: Phi 4 Mini Reasoning
+    owner:
+        kind: provider
+        name: microsoft
+    labels:
+        family: phi4-mini-reasoning
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: phi4-mini-reasoning
+          adapter: openai
+    family: phi4-mini-reasoning
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: phi4-mini-reasoning-latest
+          originalName: phi4-mini-reasoning:latest
+        - name: phi4-mini-reasoning-3-8b
+          originalName: phi4-mini-reasoning:3.8b
+    pointer: phi4-mini-reasoning-3-8b

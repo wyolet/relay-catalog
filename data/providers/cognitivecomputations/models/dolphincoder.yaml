@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: dolphincoder-7b
+    displayName: DolphinCoder 7B
+    owner:
+        kind: provider
+        name: cognitivecomputations
+    labels:
+        family: dolphincoder
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: dolphincoder
+          adapter: openai
+    family: dolphincoder
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: dolphincoder-7b
+          originalName: dolphincoder:7b
+    pointer: dolphincoder-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: dolphincoder-15b
+    displayName: DolphinCoder 15B
+    owner:
+        kind: provider
+        name: cognitivecomputations
+    labels:
+        family: dolphincoder
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: dolphincoder
+          adapter: openai
+    family: dolphincoder
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: dolphincoder-15b
+          originalName: dolphincoder:15b
+    pointer: dolphincoder-15b

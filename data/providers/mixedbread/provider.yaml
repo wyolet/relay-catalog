@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: mixedbread
+    displayName: Mixedbread AI
+    description: Mixedbread AI — model originator.
+spec: {}

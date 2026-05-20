@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: claude-haiku-4-5
+    displayName: Claude Haiku 4.5
     owner:
         kind: provider
         name: anthropic

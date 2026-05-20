@@ -1,0 +1,230 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-r1-1-5b
+    displayName: DeepSeek R1 1 5B
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-r1
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepseek-r1
+          adapter: openai
+    family: deepseek-r1
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-r1-1-5b
+          originalName: deepseek-r1:1.5b
+    pointer: deepseek-r1-1-5b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-r1-7b
+    displayName: DeepSeek R1 7B
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-r1
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepseek-r1
+          adapter: openai
+    family: deepseek-r1
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-r1-7b
+          originalName: deepseek-r1:7b
+    pointer: deepseek-r1-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-r1-8b
+    displayName: DeepSeek R1 8B
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-r1
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepseek-r1
+          adapter: openai
+    family: deepseek-r1
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-r1-8b
+          originalName: deepseek-r1:8b
+    pointer: deepseek-r1-8b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-r1-14b
+    displayName: DeepSeek R1 14B
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-r1
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepseek-r1
+          adapter: openai
+    family: deepseek-r1
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-r1-14b
+          originalName: deepseek-r1:14b
+    pointer: deepseek-r1-14b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-r1-32b
+    displayName: DeepSeek R1 32B
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-r1
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepseek-r1
+          adapter: openai
+    family: deepseek-r1
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-r1-32b
+          originalName: deepseek-r1:32b
+    pointer: deepseek-r1-32b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-r1-70b
+    displayName: DeepSeek R1 70B
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-r1
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepseek-r1
+          adapter: openai
+    family: deepseek-r1
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-r1-70b
+          originalName: deepseek-r1:70b
+    pointer: deepseek-r1-70b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-r1-671b
+    displayName: DeepSeek R1 671B
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-r1
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepseek-r1
+          adapter: openai
+    family: deepseek-r1
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-r1-671b
+          originalName: deepseek-r1:671b
+    pointer: deepseek-r1-671b

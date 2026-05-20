@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma-2b
+    displayName: Gemma 2B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemma
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: gemma
+          adapter: openai
+    family: gemma
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: gemma-2b
+          originalName: gemma:2b
+    pointer: gemma-2b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma-7b
+    displayName: Gemma 7B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemma
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: gemma
+          adapter: openai
+    family: gemma
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: gemma-7b
+          originalName: gemma:7b
+    pointer: gemma-7b

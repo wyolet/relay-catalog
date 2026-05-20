@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: ft-o4-mini
+    displayName: Fine-tuned O4 Mini
     owner:
         kind: provider
         name: openai

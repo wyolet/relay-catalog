@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: bakllava
+    displayName: BakLLaVA
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: bakllava
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: bakllava
+          adapter: openai
+    family: bakllava
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: bakllava-latest
+          originalName: bakllava:latest
+        - name: bakllava-7b
+          originalName: bakllava:7b
+    pointer: bakllava-7b

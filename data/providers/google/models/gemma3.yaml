@@ -1,0 +1,196 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma3-270m
+    displayName: Gemma 3 270M
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemma3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: gemma3
+          adapter: openai
+        - host: ollama-self
+          upstreamName: gemma3
+          adapter: openai
+    family: gemma3
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: gemma3-270m
+          originalName: gemma3:270m
+    pointer: gemma3-270m
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma3-1b
+    displayName: Gemma 3 1B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemma3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: gemma3
+          adapter: openai
+        - host: ollama-self
+          upstreamName: gemma3
+          adapter: openai
+    family: gemma3
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: gemma3-1b
+          originalName: gemma3:1b
+    pointer: gemma3-1b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma3-4b
+    displayName: Gemma 3 4B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemma3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: gemma3
+          adapter: openai
+          snapshots: [gemma3-4b]
+        - host: ollama-cloud
+          upstreamName: gemma3
+          adapter: openai
+          snapshots: [gemma3-4b-cloud]
+    family: gemma3
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: gemma3-4b
+          originalName: gemma3:4b
+        - name: gemma3-4b-cloud
+          originalName: gemma3:4b-cloud
+    pointer: gemma3-4b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma3-12b
+    displayName: Gemma 3 12B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemma3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: gemma3
+          adapter: openai
+          snapshots: [gemma3-12b]
+        - host: ollama-cloud
+          upstreamName: gemma3
+          adapter: openai
+          snapshots: [gemma3-12b-cloud]
+    family: gemma3
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: gemma3-12b
+          originalName: gemma3:12b
+        - name: gemma3-12b-cloud
+          originalName: gemma3:12b-cloud
+    pointer: gemma3-12b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma3-27b
+    displayName: Gemma 3 27B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemma3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: gemma3
+          adapter: openai
+          snapshots: [gemma3-27b]
+        - host: ollama-cloud
+          upstreamName: gemma3
+          adapter: openai
+          snapshots: [gemma3-27b-cloud]
+    family: gemma3
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: gemma3-27b
+          originalName: gemma3:27b
+        - name: gemma3-27b-cloud
+          originalName: gemma3:27b-cloud
+    pointer: gemma3-27b

@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: internlm
+    displayName: InternLM
+    description: InternLM — language models from Shanghai AI Laboratory.
+spec: {}

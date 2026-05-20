@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
     name: openai-ft-gpt-4-1-mini
+    displayName: Fine-tuned GPT-4.1 Mini pricing
     owner:
         kind: host
         id: openai

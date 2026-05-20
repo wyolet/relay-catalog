@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: tii
+    displayName: Technology Innovation Institute
+    description: Technology Innovation Institute — model originator.
+spec: {}

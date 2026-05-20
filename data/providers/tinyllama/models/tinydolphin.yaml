@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: tinydolphin
+    displayName: TinyDolphin
+    owner:
+        kind: provider
+        name: tinyllama
+    labels:
+        family: tinydolphin
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: tinydolphin
+          adapter: openai
+    family: tinydolphin
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: tinydolphin-latest
+          originalName: tinydolphin:latest
+        - name: tinydolphin-1-1b
+          originalName: tinydolphin:1.1b
+    pointer: tinydolphin-1-1b

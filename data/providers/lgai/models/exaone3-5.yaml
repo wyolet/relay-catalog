@@ -1,0 +1,98 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: exaone3-5-2-4b
+    displayName: EXAONE 3.5 2 4B
+    owner:
+        kind: provider
+        name: lgai
+    labels:
+        family: exaone3.5
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: exaone3.5
+          adapter: openai
+    family: exaone3.5
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: exaone3-5-2-4b
+          originalName: exaone3.5:2.4b
+    pointer: exaone3-5-2-4b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: exaone3-5-7-8b
+    displayName: EXAONE 3.5 7 8B
+    owner:
+        kind: provider
+        name: lgai
+    labels:
+        family: exaone3.5
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: exaone3.5
+          adapter: openai
+    family: exaone3.5
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: exaone3-5-7-8b
+          originalName: exaone3.5:7.8b
+    pointer: exaone3-5-7-8b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: exaone3-5-32b
+    displayName: EXAONE 3.5 32B
+    owner:
+        kind: provider
+        name: lgai
+    labels:
+        family: exaone3.5
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: exaone3.5
+          adapter: openai
+    family: exaone3.5
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: exaone3-5-32b
+          originalName: exaone3.5:32b
+    pointer: exaone3-5-32b

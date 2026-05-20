@@ -1,0 +1,100 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-v2-16b
+    displayName: DeepSeek V2 16B
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-v2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepseek-v2
+          adapter: openai
+    family: deepseek-v2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-v2-16b
+          originalName: deepseek-v2:16b
+    pointer: deepseek-v2-16b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-v2-236b
+    displayName: DeepSeek V2 236B
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-v2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepseek-v2
+          adapter: openai
+    family: deepseek-v2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-v2-236b
+          originalName: deepseek-v2:236b
+    pointer: deepseek-v2-236b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-v2-5
+    displayName: DeepSeek V2.5
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-v2.5
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepseek-v2.5
+          adapter: openai
+    family: deepseek-v2.5
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-v2-5-latest
+          originalName: deepseek-v2.5:latest
+        - name: deepseek-v2-5-236b
+          originalName: deepseek-v2.5:236b
+    pointer: deepseek-v2-5-236b

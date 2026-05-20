@@ -1,0 +1,100 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: olmo-3-1
+    displayName: OLMo 3.1
+    owner:
+        kind: provider
+        name: allenai
+    labels:
+        family: olmo-3.1
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: olmo-3.1
+          adapter: openai
+    family: olmo-3.1
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: olmo-3-1-latest
+          originalName: olmo-3.1:latest
+        - name: olmo-3-1-32b
+          originalName: olmo-3.1:32b
+    pointer: olmo-3-1-32b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: olmo-3-7b
+    displayName: OLMo 3 7B
+    owner:
+        kind: provider
+        name: allenai
+    labels:
+        family: olmo-3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: olmo-3
+          adapter: openai
+    family: olmo-3
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: olmo-3-7b
+          originalName: olmo-3:7b
+    pointer: olmo-3-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: olmo-3-32b
+    displayName: OLMo 3 32B
+    owner:
+        kind: provider
+        name: allenai
+    labels:
+        family: olmo-3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: olmo-3
+          adapter: openai
+    family: olmo-3
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: olmo-3-32b
+          originalName: olmo-3:32b
+    pointer: olmo-3-32b

@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama3-3
+    displayName: Llama 3.3
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: llama3.3
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: llama3.3
+          adapter: openai
+    family: llama3.3
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: llama3-3-latest
+          originalName: llama3.3:latest
+        - name: llama3-3-70b
+          originalName: llama3.3:70b
+    pointer: llama3-3-70b

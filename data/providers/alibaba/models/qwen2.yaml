@@ -1,0 +1,131 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-0-5b
+    displayName: Qwen 2 0 5B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen2
+          adapter: openai
+    family: qwen2
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen2-0-5b
+          originalName: qwen2:0.5b
+    pointer: qwen2-0-5b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-1-5b
+    displayName: Qwen 2 1 5B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen2
+          adapter: openai
+    family: qwen2
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen2-1-5b
+          originalName: qwen2:1.5b
+    pointer: qwen2-1-5b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-7b
+    displayName: Qwen 2 7B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen2
+          adapter: openai
+    family: qwen2
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen2-7b
+          originalName: qwen2:7b
+    pointer: qwen2-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-72b
+    displayName: Qwen 2 72B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen2
+          adapter: openai
+    family: qwen2
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen2-72b
+          originalName: qwen2:72b
+    pointer: qwen2-72b

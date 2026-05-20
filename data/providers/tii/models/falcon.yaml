@@ -1,0 +1,98 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: falcon-7b
+    displayName: Falcon 7B
+    owner:
+        kind: provider
+        name: tii
+    labels:
+        family: falcon
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: falcon
+          adapter: openai
+    family: falcon
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: falcon-7b
+          originalName: falcon:7b
+    pointer: falcon-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: falcon-40b
+    displayName: Falcon 40B
+    owner:
+        kind: provider
+        name: tii
+    labels:
+        family: falcon
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: falcon
+          adapter: openai
+    family: falcon
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: falcon-40b
+          originalName: falcon:40b
+    pointer: falcon-40b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: falcon-180b
+    displayName: Falcon 180B
+    owner:
+        kind: provider
+        name: tii
+    labels:
+        family: falcon
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: falcon
+          adapter: openai
+    family: falcon
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: falcon-180b
+          originalName: falcon:180b
+    pointer: falcon-180b

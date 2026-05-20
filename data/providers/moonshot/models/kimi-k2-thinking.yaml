@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kimi-k2-thinking
+    displayName: Kimi K2 Thinking
+    owner:
+        kind: provider
+        name: moonshot
+    labels:
+        family: kimi-k2-thinking
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: kimi-k2-thinking
+          adapter: openai
+    family: kimi-k2-thinking
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: kimi-k2-thinking-cloud
+          originalName: kimi-k2-thinking:cloud
+    pointer: kimi-k2-thinking-cloud

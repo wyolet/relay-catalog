@@ -1,0 +1,75 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nemotron-3-nano-4b
+    displayName: Nemotron 3 Nano 4B
+    owner:
+        kind: provider
+        name: nvidia
+    labels:
+        family: nemotron-3-nano
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: nemotron-3-nano
+          adapter: openai
+        - host: ollama-self
+          upstreamName: nemotron-3-nano
+          adapter: openai
+    family: nemotron-3-nano
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: nemotron-3-nano-4b
+          originalName: nemotron-3-nano:4b
+    pointer: nemotron-3-nano-4b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nemotron-3-nano-30b
+    displayName: Nemotron 3 Nano 30B
+    owner:
+        kind: provider
+        name: nvidia
+    labels:
+        family: nemotron-3-nano
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: nemotron-3-nano
+          adapter: openai
+          snapshots: [nemotron-3-nano-30b]
+        - host: ollama-cloud
+          upstreamName: nemotron-3-nano
+          adapter: openai
+          snapshots: [nemotron-3-nano-30b-cloud]
+    family: nemotron-3-nano
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: nemotron-3-nano-30b
+          originalName: nemotron-3-nano:30b
+        - name: nemotron-3-nano-30b-cloud
+          originalName: nemotron-3-nano:30b-cloud
+    pointer: nemotron-3-nano-30b

@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: gpt-5-3-chat
+    displayName: GPT-5.3 Chat
     owner:
         kind: provider
         name: openai

@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nemotron-cascade-2
+    displayName: Nemotron Cascade 2
+    owner:
+        kind: provider
+        name: nvidia
+    labels:
+        family: nemotron-cascade-2
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: nemotron-cascade-2
+          adapter: openai
+    family: nemotron-cascade-2
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: nemotron-cascade-2-latest
+          originalName: nemotron-cascade-2:latest
+        - name: nemotron-cascade-2-30b
+          originalName: nemotron-cascade-2:30b
+    pointer: nemotron-cascade-2-30b

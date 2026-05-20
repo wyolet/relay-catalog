@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: moondream
+    displayName: Moondream
+    owner:
+        kind: provider
+        name: community
+    labels:
+        family: moondream
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: moondream
+          adapter: openai
+    family: moondream
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: moondream-latest
+          originalName: moondream:latest
+        - name: moondream-1-8b
+          originalName: moondream:1.8b
+    pointer: moondream-1-8b

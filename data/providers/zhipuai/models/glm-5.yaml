@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: glm-5
+    displayName: GLM 5
+    owner:
+        kind: provider
+        name: zhipuai
+    labels:
+        family: glm-5
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: glm-5
+          adapter: openai
+    family: glm-5
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: glm-5-cloud
+          originalName: glm-5:cloud
+    pointer: glm-5-cloud
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: glm-5-1
+    displayName: GLM 5.1
+    owner:
+        kind: provider
+        name: zhipuai
+    labels:
+        family: glm-5.1
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: glm-5.1
+          adapter: openai
+    family: glm-5.1
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: glm-5-1-cloud
+          originalName: glm-5.1:cloud
+    pointer: glm-5-1-cloud

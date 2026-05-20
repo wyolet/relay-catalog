@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: nous
+    displayName: Nous Research
+    description: Nous Research — model originator.
+spec: {}

@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cogito-2-1
+    displayName: Cogito 2.1
+    owner:
+        kind: provider
+        name: cogito
+    labels:
+        family: cogito-2.1
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: cogito-2.1
+          adapter: openai
+          snapshots: [cogito-2-1-latest, cogito-2-1-671b]
+        - host: ollama-cloud
+          upstreamName: cogito-2.1
+          adapter: openai
+          snapshots: [cogito-2-1-671b-cloud]
+    family: cogito-2.1
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: cogito-2-1-latest
+          originalName: cogito-2.1:latest
+        - name: cogito-2-1-671b
+          originalName: cogito-2.1:671b
+        - name: cogito-2-1-671b-cloud
+          originalName: cogito-2.1:671b-cloud
+    pointer: cogito-2-1-671b

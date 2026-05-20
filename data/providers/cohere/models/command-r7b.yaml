@@ -1,0 +1,69 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: command-r7b
+    displayName: Command R7B
+    owner:
+        kind: provider
+        name: cohere
+    labels:
+        family: command-r7b
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: command-r7b
+          adapter: openai
+    family: command-r7b
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: command-r7b-latest
+          originalName: command-r7b:latest
+        - name: command-r7b-7b
+          originalName: command-r7b:7b
+    pointer: command-r7b-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: command-r7b-arabic
+    displayName: Command R7B Arabic
+    owner:
+        kind: provider
+        name: cohere
+    labels:
+        family: command-r7b-arabic
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: command-r7b-arabic
+          adapter: openai
+    family: command-r7b-arabic
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: command-r7b-arabic-latest
+          originalName: command-r7b-arabic:latest
+        - name: command-r7b-arabic-7b
+          originalName: command-r7b-arabic:7b
+    pointer: command-r7b-arabic-7b

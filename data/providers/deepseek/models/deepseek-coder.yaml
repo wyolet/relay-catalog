@@ -1,0 +1,98 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-coder-1-3b
+    displayName: DeepSeek Coder 1 3B
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-coder
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepseek-coder
+          adapter: openai
+    family: deepseek-coder
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-coder-1-3b
+          originalName: deepseek-coder:1.3b
+    pointer: deepseek-coder-1-3b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-coder-6-7b
+    displayName: DeepSeek Coder 6 7B
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-coder
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepseek-coder
+          adapter: openai
+    family: deepseek-coder
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-coder-6-7b
+          originalName: deepseek-coder:6.7b
+    pointer: deepseek-coder-6-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-coder-33b
+    displayName: DeepSeek Coder 33B
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-coder
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepseek-coder
+          adapter: openai
+    family: deepseek-coder
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-coder-33b
+          originalName: deepseek-coder:33b
+    pointer: deepseek-coder-33b

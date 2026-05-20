@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: chatgpt-4o
+    displayName: ChatGPT-4o
     owner:
         kind: provider
         name: openai

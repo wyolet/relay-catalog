@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: falcon2
+    displayName: Falcon 2
+    owner:
+        kind: provider
+        name: tii
+    labels:
+        family: falcon2
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: falcon2
+          adapter: openai
+    family: falcon2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: falcon2-latest
+          originalName: falcon2:latest
+        - name: falcon2-11b
+          originalName: falcon2:11b
+    pointer: falcon2-11b

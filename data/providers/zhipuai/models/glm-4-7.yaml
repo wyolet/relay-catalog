@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: glm-4-7
+    displayName: GLM 4.7
+    owner:
+        kind: provider
+        name: zhipuai
+    labels:
+        family: glm-4.7
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: glm-4.7
+          adapter: openai
+    family: glm-4.7
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: glm-4-7-cloud
+          originalName: glm-4.7:cloud
+    pointer: glm-4-7-cloud
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: glm-4-7-flash
+    displayName: GLM 4.7 Flash
+    owner:
+        kind: provider
+        name: zhipuai
+    labels:
+        family: glm-4.7-flash
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: glm-4.7-flash
+          adapter: openai
+    family: glm-4.7-flash
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: glm-4-7-flash-cloud
+          originalName: glm-4.7-flash:cloud
+    pointer: glm-4-7-flash-cloud

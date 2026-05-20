@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepscaler
+    displayName: DeepScaler
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepscaler
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepscaler
+          adapter: openai
+    family: deepscaler
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepscaler-latest
+          originalName: deepscaler:latest
+        - name: deepscaler-1-5b
+          originalName: deepscaler:1.5b
+    pointer: deepscaler-1-5b

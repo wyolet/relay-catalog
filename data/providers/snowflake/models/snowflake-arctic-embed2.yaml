@@ -1,0 +1,61 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: snowflake-arctic-embed2-137m
+    displayName: Snowflake Arctic Embed 2 137M
+    owner:
+        kind: provider
+        name: snowflake
+    labels:
+        family: snowflake-arctic-embed2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: snowflake-arctic-embed2
+          adapter: openai
+    family: snowflake-arctic-embed2
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: snowflake-arctic-embed2-137m
+          originalName: snowflake-arctic-embed2:137m
+    pointer: snowflake-arctic-embed2-137m
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: snowflake-arctic-embed2-568m
+    displayName: Snowflake Arctic Embed 2 568M
+    owner:
+        kind: provider
+        name: snowflake
+    labels:
+        family: snowflake-arctic-embed2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: snowflake-arctic-embed2
+          adapter: openai
+    family: snowflake-arctic-embed2
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: snowflake-arctic-embed2-568m
+          originalName: snowflake-arctic-embed2:568m
+    pointer: snowflake-arctic-embed2-568m

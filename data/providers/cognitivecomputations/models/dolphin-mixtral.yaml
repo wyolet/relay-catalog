@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: dolphin-mixtral-8x7b
+    displayName: Dolphin Mixtral 8x7B
+    owner:
+        kind: provider
+        name: cognitivecomputations
+    labels:
+        family: dolphin-mixtral
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: dolphin-mixtral
+          adapter: openai
+    family: dolphin-mixtral
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: dolphin-mixtral-8x7b
+          originalName: dolphin-mixtral:8x7b
+    pointer: dolphin-mixtral-8x7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: dolphin-mixtral-8x22b
+    displayName: Dolphin Mixtral 8x22B
+    owner:
+        kind: provider
+        name: cognitivecomputations
+    labels:
+        family: dolphin-mixtral
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: dolphin-mixtral
+          adapter: openai
+    family: dolphin-mixtral
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: dolphin-mixtral-8x22b
+          originalName: dolphin-mixtral:8x22b
+    pointer: dolphin-mixtral-8x22b

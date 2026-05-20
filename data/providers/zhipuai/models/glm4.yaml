@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: glm4
+    displayName: GLM 4
+    owner:
+        kind: provider
+        name: zhipuai
+    labels:
+        family: glm4
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: glm4
+          adapter: openai
+    family: glm4
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: glm4-latest
+          originalName: glm4:latest
+        - name: glm4-9b
+          originalName: glm4:9b
+    pointer: glm4-9b

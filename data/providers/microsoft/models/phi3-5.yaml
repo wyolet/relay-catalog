@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: phi3-5
+    displayName: Phi 3.5
+    owner:
+        kind: provider
+        name: microsoft
+    labels:
+        family: phi3.5
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: phi3.5
+          adapter: openai
+    family: phi3.5
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: phi3-5-latest
+          originalName: phi3.5:latest
+        - name: phi3-5-3-8b
+          originalName: phi3.5:3.8b
+    pointer: phi3-5-3-8b

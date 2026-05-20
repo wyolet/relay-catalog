@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: dolphin3
+    displayName: Dolphin 3
+    owner:
+        kind: provider
+        name: cognitivecomputations
+    labels:
+        family: dolphin3
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: dolphin3
+          adapter: openai
+    family: dolphin3
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: dolphin3-latest
+          originalName: dolphin3:latest
+        - name: dolphin3-8b
+          originalName: dolphin3:8b
+    pointer: dolphin3-8b

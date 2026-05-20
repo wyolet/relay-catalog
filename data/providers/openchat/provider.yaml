@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: openchat
+    displayName: OpenChat
+    description: OpenChat — model originator.
+spec: {}

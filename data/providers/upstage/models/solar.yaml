@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: solar
+    displayName: Solar
+    owner:
+        kind: provider
+        name: upstage
+    labels:
+        family: solar
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: solar
+          adapter: openai
+    family: solar
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: solar-latest
+          originalName: solar:latest
+        - name: solar-10-7b
+          originalName: solar:10.7b
+    pointer: solar-10-7b

@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-3-flash-preview
+    displayName: Gemini 3 Flash Preview
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemini-3-flash-preview
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: gemini-3-flash-preview
+          adapter: openai
+          snapshots: [gemini-3-flash-preview-latest]
+        - host: ollama-cloud
+          upstreamName: gemini-3-flash-preview
+          adapter: openai
+          snapshots: [gemini-3-flash-preview-cloud]
+    family: gemini-3-flash-preview
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: gemini-3-flash-preview-latest
+          originalName: gemini-3-flash-preview:latest
+        - name: gemini-3-flash-preview-cloud
+          originalName: gemini-3-flash-preview:cloud
+    pointer: gemini-3-flash-preview-latest

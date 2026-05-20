@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama2-chinese-7b
+    displayName: Llama 2 Chinese 7B
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: llama2-chinese
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: llama2-chinese
+          adapter: openai
+    family: llama2-chinese
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: llama2-chinese-7b
+          originalName: llama2-chinese:7b
+    pointer: llama2-chinese-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama2-chinese-13b
+    displayName: Llama 2 Chinese 13B
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: llama2-chinese
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: llama2-chinese
+          adapter: openai
+    family: llama2-chinese
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: llama2-chinese-13b
+          originalName: llama2-chinese:13b
+    pointer: llama2-chinese-13b

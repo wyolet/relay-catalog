@@ -1,0 +1,299 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-5-0-8b
+    displayName: Qwen 3.5 0 8B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen3.5
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: qwen3.5
+          adapter: openai
+        - host: ollama-self
+          upstreamName: qwen3.5
+          adapter: openai
+    family: qwen3.5
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: qwen3-5-0-8b
+          originalName: qwen3.5:0.8b
+    pointer: qwen3-5-0-8b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-5-2b
+    displayName: Qwen 3.5 2B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen3.5
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: qwen3.5
+          adapter: openai
+        - host: ollama-self
+          upstreamName: qwen3.5
+          adapter: openai
+    family: qwen3.5
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: qwen3-5-2b
+          originalName: qwen3.5:2b
+    pointer: qwen3-5-2b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-5-4b
+    displayName: Qwen 3.5 4B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen3.5
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: qwen3.5
+          adapter: openai
+        - host: ollama-self
+          upstreamName: qwen3.5
+          adapter: openai
+    family: qwen3.5
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: qwen3-5-4b
+          originalName: qwen3.5:4b
+    pointer: qwen3-5-4b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-5-9b
+    displayName: Qwen 3.5 9B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen3.5
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: qwen3.5
+          adapter: openai
+        - host: ollama-self
+          upstreamName: qwen3.5
+          adapter: openai
+    family: qwen3.5
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: qwen3-5-9b
+          originalName: qwen3.5:9b
+    pointer: qwen3-5-9b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-5-27b
+    displayName: Qwen 3.5 27B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen3.5
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: qwen3.5
+          adapter: openai
+        - host: ollama-self
+          upstreamName: qwen3.5
+          adapter: openai
+    family: qwen3.5
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: qwen3-5-27b
+          originalName: qwen3.5:27b
+    pointer: qwen3-5-27b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-5-35b
+    displayName: Qwen 3.5 35B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen3.5
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: qwen3.5
+          adapter: openai
+        - host: ollama-self
+          upstreamName: qwen3.5
+          adapter: openai
+    family: qwen3.5
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: qwen3-5-35b
+          originalName: qwen3.5:35b
+    pointer: qwen3-5-35b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-5-122b
+    displayName: Qwen 3.5 122B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen3.5
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: qwen3.5
+          adapter: openai
+        - host: ollama-self
+          upstreamName: qwen3.5
+          adapter: openai
+    family: qwen3.5
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: qwen3-5-122b
+          originalName: qwen3.5:122b
+    pointer: qwen3-5-122b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-5-397b
+    displayName: Qwen 3.5 397B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen3.5
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen3.5
+          adapter: openai
+          snapshots: [qwen3-5-397b]
+        - host: ollama-cloud
+          upstreamName: qwen3.5
+          adapter: openai
+          snapshots: [qwen3-5-397b-cloud]
+    family: qwen3.5
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: qwen3-5-397b
+          originalName: qwen3.5:397b
+        - name: qwen3-5-397b-cloud
+          originalName: qwen3.5:397b-cloud
+    pointer: qwen3-5-397b

@@ -1,0 +1,155 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma4-e2b
+    displayName: Gemma 4 E2B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemma4
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: gemma4
+          adapter: openai
+        - host: ollama-self
+          upstreamName: gemma4
+          adapter: openai
+    family: gemma4
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+        output:
+            - text
+    snapshots:
+        - name: gemma4-e2b
+          originalName: gemma4:e2b
+    pointer: gemma4-e2b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma4-e4b
+    displayName: Gemma 4 E4B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemma4
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: gemma4
+          adapter: openai
+        - host: ollama-self
+          upstreamName: gemma4
+          adapter: openai
+    family: gemma4
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+        output:
+            - text
+    snapshots:
+        - name: gemma4-e4b
+          originalName: gemma4:e4b
+    pointer: gemma4-e4b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma4-26b
+    displayName: Gemma 4 26B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemma4
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: gemma4
+          adapter: openai
+        - host: ollama-self
+          upstreamName: gemma4
+          adapter: openai
+    family: gemma4
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+        output:
+            - text
+    snapshots:
+        - name: gemma4-26b
+          originalName: gemma4:26b
+    pointer: gemma4-26b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma4-31b
+    displayName: Gemma 4 31B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemma4
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: gemma4
+          adapter: openai
+          snapshots: [gemma4-31b]
+        - host: ollama-cloud
+          upstreamName: gemma4
+          adapter: openai
+          snapshots: [gemma4-31b-cloud]
+    family: gemma4
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+        output:
+            - text
+    snapshots:
+        - name: gemma4-31b
+          originalName: gemma4:31b
+        - name: gemma4-31b-cloud
+          originalName: gemma4:31b-cloud
+    pointer: gemma4-31b

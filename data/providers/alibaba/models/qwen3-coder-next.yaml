@@ -1,0 +1,43 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-coder-next
+    displayName: Qwen 3 Coder Next
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen3-coder-next
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen3-coder-next
+          adapter: openai
+          snapshots: [qwen3-coder-next-latest, qwen3-coder-next-q4-k-m, qwen3-coder-next-q8-0]
+        - host: ollama-cloud
+          upstreamName: qwen3-coder-next
+          adapter: openai
+          snapshots: [qwen3-coder-next-cloud]
+    family: qwen3-coder-next
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen3-coder-next-latest
+          originalName: qwen3-coder-next:latest
+        - name: qwen3-coder-next-q4-k-m
+          originalName: qwen3-coder-next:q4_K_M
+        - name: qwen3-coder-next-q8-0
+          originalName: qwen3-coder-next:q8_0
+        - name: qwen3-coder-next-cloud
+          originalName: qwen3-coder-next:cloud
+    pointer: qwen3-coder-next-q8-0
