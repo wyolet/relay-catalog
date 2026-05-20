@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: tinyllama
+    displayName: TinyLlama
+    owner:
+        kind: provider
+        name: tinyllama
+    labels:
+        family: tinyllama
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: tinyllama
+          adapter: openai
+    family: tinyllama
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: tinyllama-latest
+          originalName: tinyllama:latest
+        - name: tinyllama-1-1b
+          originalName: tinyllama:1.1b
+    pointer: tinyllama-1-1b

@@ -1,0 +1,98 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma2-2b
+    displayName: Gemma 2 2B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemma2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: gemma2
+          adapter: openai
+    family: gemma2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: gemma2-2b
+          originalName: gemma2:2b
+    pointer: gemma2-2b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma2-9b
+    displayName: Gemma 2 9B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemma2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: gemma2
+          adapter: openai
+    family: gemma2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: gemma2-9b
+          originalName: gemma2:9b
+    pointer: gemma2-9b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma2-27b
+    displayName: Gemma 2 27B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemma2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: gemma2
+          adapter: openai
+    family: gemma2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: gemma2-27b
+          originalName: gemma2:27b
+    pointer: gemma2-27b

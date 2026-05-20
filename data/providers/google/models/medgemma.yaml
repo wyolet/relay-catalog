@@ -1,0 +1,67 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: medgemma-4b
+    displayName: MedGemma 4B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: medgemma
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: medgemma
+          adapter: openai
+    family: medgemma
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: medgemma-4b
+          originalName: medgemma:4b
+    pointer: medgemma-4b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: medgemma-27b
+    displayName: MedGemma 27B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: medgemma
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: medgemma
+          adapter: openai
+    family: medgemma
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: medgemma-27b
+          originalName: medgemma:27b
+    pointer: medgemma-27b

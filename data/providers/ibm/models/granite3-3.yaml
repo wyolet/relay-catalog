@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: granite3-3
+    displayName: Granite 3.3
+    owner:
+        kind: provider
+        name: ibm
+    labels:
+        family: granite3.3
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: granite3.3
+          adapter: openai
+    family: granite3.3
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: granite3-3-latest
+          originalName: granite3.3:latest
+        - name: granite3-3-8b
+          originalName: granite3.3:8b
+    pointer: granite3-3-8b

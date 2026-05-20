@@ -1,0 +1,67 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: translategemma-4b
+    displayName: TranslateGemma 4B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: translategemma
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: translategemma
+          adapter: openai
+    family: translategemma
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: translategemma-4b
+          originalName: translategemma:4b
+    pointer: translategemma-4b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: translategemma-27b
+    displayName: TranslateGemma 27B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: translategemma
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: translategemma
+          adapter: openai
+    family: translategemma
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: translategemma-27b
+          originalName: translategemma:27b
+    pointer: translategemma-27b

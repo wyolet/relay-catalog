@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-medium-3-5
+    displayName: Mistral Medium 3.5
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: mistral-medium-3.5
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: mistral-medium-3.5
+          adapter: openai
+    family: mistral-medium-3.5
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: mistral-medium-3-5-latest
+          originalName: mistral-medium-3.5:latest
+        - name: mistral-medium-3-5-128b
+          originalName: mistral-medium-3.5:128b
+    pointer: mistral-medium-3-5-128b

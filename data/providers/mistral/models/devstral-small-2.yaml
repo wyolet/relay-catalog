@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: devstral-small-2
+    displayName: Devstral Small 2
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: devstral-small-2
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: devstral-small-2
+          adapter: openai
+    family: devstral-small-2
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: devstral-small-2-latest
+          originalName: devstral-small-2:latest
+    pointer: devstral-small-2-latest

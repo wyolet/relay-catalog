@@ -1,0 +1,106 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-small
+    displayName: Mistral Small
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: mistral-small
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: mistral-small
+          adapter: openai
+    family: mistral-small
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: mistral-small-latest
+          originalName: mistral-small:latest
+        - name: mistral-small-22b
+          originalName: mistral-small:22b
+    pointer: mistral-small-22b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-small3-1
+    displayName: Mistral Small 3.1
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: mistral-small3.1
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: mistral-small3.1
+          adapter: openai
+    family: mistral-small3.1
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: mistral-small3-1-latest
+          originalName: mistral-small3.1:latest
+        - name: mistral-small3-1-24b
+          originalName: mistral-small3.1:24b
+    pointer: mistral-small3-1-24b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-small3-2
+    displayName: Mistral Small 3.2
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: mistral-small3.2
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: mistral-small3.2
+          adapter: openai
+    family: mistral-small3.2
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: mistral-small3-2-latest
+          originalName: mistral-small3.2:latest
+        - name: mistral-small3-2-24b
+          originalName: mistral-small3.2:24b
+    pointer: mistral-small3-2-24b

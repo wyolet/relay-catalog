@@ -1,0 +1,100 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kimi-k2
+    displayName: Kimi K2
+    owner:
+        kind: provider
+        name: moonshot
+    labels:
+        family: kimi-k2
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: kimi-k2
+          adapter: openai
+    family: kimi-k2
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: kimi-k2-1t-cloud
+          originalName: kimi-k2:1t-cloud
+    pointer: kimi-k2-1t-cloud
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kimi-k2-5
+    displayName: Kimi K2.5
+    owner:
+        kind: provider
+        name: moonshot
+    labels:
+        family: kimi-k2.5
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: kimi-k2.5
+          adapter: openai
+    family: kimi-k2.5
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: kimi-k2-5-cloud
+          originalName: kimi-k2.5:cloud
+    pointer: kimi-k2-5-cloud
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kimi-k2-6
+    displayName: Kimi K2.6
+    owner:
+        kind: provider
+        name: moonshot
+    labels:
+        family: kimi-k2.6
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: kimi-k2.6
+          adapter: openai
+    family: kimi-k2.6
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: kimi-k2-6-cloud
+          originalName: kimi-k2.6:cloud
+    pointer: kimi-k2-6-cloud

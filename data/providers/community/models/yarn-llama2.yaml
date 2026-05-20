@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: yarn-llama2-7b
+    displayName: Yarn Llama 2 7B
+    owner:
+        kind: provider
+        name: community
+    labels:
+        family: yarn-llama2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: yarn-llama2
+          adapter: openai
+    family: yarn-llama2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: yarn-llama2-7b
+          originalName: yarn-llama2:7b
+    pointer: yarn-llama2-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: yarn-llama2-13b
+    displayName: Yarn Llama 2 13B
+    owner:
+        kind: provider
+        name: community
+    labels:
+        family: yarn-llama2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: yarn-llama2
+          adapter: openai
+    family: yarn-llama2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: yarn-llama2-13b
+          originalName: yarn-llama2:13b
+    pointer: yarn-llama2-13b

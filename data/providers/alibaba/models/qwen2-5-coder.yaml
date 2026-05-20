@@ -1,0 +1,197 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-5-coder-0-5b
+    displayName: Qwen 2.5 Coder 0 5B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen2.5-coder
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen2.5-coder
+          adapter: openai
+    family: qwen2.5-coder
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen2-5-coder-0-5b
+          originalName: qwen2.5-coder:0.5b
+    pointer: qwen2-5-coder-0-5b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-5-coder-1-5b
+    displayName: Qwen 2.5 Coder 1 5B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen2.5-coder
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen2.5-coder
+          adapter: openai
+    family: qwen2.5-coder
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen2-5-coder-1-5b
+          originalName: qwen2.5-coder:1.5b
+    pointer: qwen2-5-coder-1-5b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-5-coder-3b
+    displayName: Qwen 2.5 Coder 3B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen2.5-coder
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen2.5-coder
+          adapter: openai
+    family: qwen2.5-coder
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen2-5-coder-3b
+          originalName: qwen2.5-coder:3b
+    pointer: qwen2-5-coder-3b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-5-coder-7b
+    displayName: Qwen 2.5 Coder 7B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen2.5-coder
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen2.5-coder
+          adapter: openai
+    family: qwen2.5-coder
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen2-5-coder-7b
+          originalName: qwen2.5-coder:7b
+    pointer: qwen2-5-coder-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-5-coder-14b
+    displayName: Qwen 2.5 Coder 14B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen2.5-coder
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen2.5-coder
+          adapter: openai
+    family: qwen2.5-coder
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen2-5-coder-14b
+          originalName: qwen2.5-coder:14b
+    pointer: qwen2-5-coder-14b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-5-coder-32b
+    displayName: Qwen 2.5 Coder 32B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen2.5-coder
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen2.5-coder
+          adapter: openai
+    family: qwen2.5-coder
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen2-5-coder-32b
+          originalName: qwen2.5-coder:32b
+    pointer: qwen2-5-coder-32b

@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama4
+    displayName: Llama 4
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: llama4
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: llama4
+          adapter: openai
+    family: llama4
+    capabilities:
+        chat: true
+        tools: true
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: llama4-latest
+          originalName: llama4:latest
+        - name: llama4-scout
+          originalName: llama4:scout
+        - name: llama4-maverick
+          originalName: llama4:maverick
+    pointer: llama4-maverick

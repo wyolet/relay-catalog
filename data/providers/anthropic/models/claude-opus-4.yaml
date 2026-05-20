@@ -1,7 +1,52 @@
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
+    name: claude-4-opus
+    displayName: Claude 4 Opus
+    owner:
+        kind: provider
+        name: anthropic
+    labels:
+        family: claude
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: anthropic
+          upstreamName: claude-4-opus-20250514
+          adapter: anthropic
+    family: claude
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        computerUse: true
+        fileInput: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 32000
+    contextWindowTotal: 200000
+    snapshots:
+        - name: claude-4-opus-20250514
+          releasedAt: "2025-05-14"
+    pointer: claude-4-opus-20250514
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
     name: claude-opus-4
+    displayName: Claude Opus 4
     owner:
         kind: provider
         name: anthropic
@@ -43,3 +88,184 @@ spec:
         - name: claude-opus-4-20250514
           releasedAt: "2025-05-14"
     pointer: claude-opus-4-20250514
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claude-opus-4-1
+    displayName: Claude Opus 4.1
+    owner:
+        kind: provider
+        name: anthropic
+    labels:
+        family: claude
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: anthropic
+          upstreamName: claude-opus-4-1
+          adapter: anthropic
+    family: claude
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        computerUse: true
+        fileInput: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 32000
+    contextWindowTotal: 200000
+    deprecation:
+        status: deprecated
+        sunsetDate: "2026-08-05"
+    snapshots:
+        - name: claude-opus-4-1
+        - name: claude-opus-4-1-20250805
+          releasedAt: "2025-08-05"
+    pointer: claude-opus-4-1
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claude-opus-4-5
+    displayName: Claude Opus 4.5
+    owner:
+        kind: provider
+        name: anthropic
+    labels:
+        family: claude
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: anthropic
+          upstreamName: claude-opus-4-5
+          adapter: anthropic
+    family: claude
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        computerUse: true
+        fileInput: true
+        assistantPrefill: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 64000
+    contextWindowTotal: 200000
+    snapshots:
+        - name: claude-opus-4-5
+        - name: claude-opus-4-5-20251101
+          releasedAt: "2025-11-01"
+    pointer: claude-opus-4-5
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claude-opus-4-6
+    displayName: Claude Opus 4.6
+    owner:
+        kind: provider
+        name: anthropic
+    labels:
+        family: claude
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: anthropic
+          upstreamName: claude-opus-4-6
+          adapter: anthropic
+    family: claude
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        computerUse: true
+        fileInput: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1000000
+    snapshots:
+        - name: claude-opus-4-6
+        - name: claude-opus-4-6-20260205
+          releasedAt: "2026-02-05"
+    pointer: claude-opus-4-6
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claude-opus-4-7
+    displayName: Claude Opus 4.7
+    owner:
+        kind: provider
+        name: anthropic
+    labels:
+        family: claude
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: anthropic
+          upstreamName: claude-opus-4-7
+          adapter: anthropic
+    family: claude
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        computerUse: true
+        fileInput: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1000000
+    snapshots:
+        - name: claude-opus-4-7
+        - name: claude-opus-4-7-20260416
+          releasedAt: "2026-04-16"
+    pointer: claude-opus-4-7

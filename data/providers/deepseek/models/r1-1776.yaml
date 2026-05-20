@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: r1-1776-70b
+    displayName: R1 1776 70B
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: r1-1776
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: r1-1776
+          adapter: openai
+    family: r1-1776
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: r1-1776-70b
+          originalName: r1-1776:70b
+    pointer: r1-1776-70b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: r1-1776-671b
+    displayName: R1 1776 671B
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: r1-1776
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: r1-1776
+          adapter: openai
+    family: r1-1776
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: r1-1776-671b
+          originalName: r1-1776:671b
+    pointer: r1-1776-671b

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: ollama-cloud
+    displayName: Ollama Cloud
+    description: "Ollama's managed cloud service. Requires an Ollama Cloud API key."
+spec:
+    # TODO: verify the exact API base URL for Ollama Cloud before production use.
+    baseURL: https://ollama.com
+    homepageURL: https://ollama.com
+    icon:
+        path: /provider/ollama.png

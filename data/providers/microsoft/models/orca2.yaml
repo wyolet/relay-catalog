@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: orca2-7b
+    displayName: Orca 2 7B
+    owner:
+        kind: provider
+        name: microsoft
+    labels:
+        family: orca2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: orca2
+          adapter: openai
+    family: orca2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: orca2-7b
+          originalName: orca2:7b
+    pointer: orca2-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: orca2-13b
+    displayName: Orca 2 13B
+    owner:
+        kind: provider
+        name: microsoft
+    labels:
+        family: orca2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: orca2
+          adapter: openai
+    family: orca2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: orca2-13b
+          originalName: orca2:13b
+    pointer: orca2-13b

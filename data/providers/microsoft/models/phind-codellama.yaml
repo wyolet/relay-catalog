@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: phind-codellama
+    displayName: Phind CodeLlama
+    owner:
+        kind: provider
+        name: microsoft
+    labels:
+        family: phind-codellama
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: phind-codellama
+          adapter: openai
+    family: phind-codellama
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: phind-codellama-latest
+          originalName: phind-codellama:latest
+        - name: phind-codellama-34b
+          originalName: phind-codellama:34b
+    pointer: phind-codellama-34b

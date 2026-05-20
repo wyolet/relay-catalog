@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: starling
+    displayName: Starling
+    description: Starling — model originator.
+spec: {}

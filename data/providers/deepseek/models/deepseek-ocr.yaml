@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-ocr
+    displayName: DeepSeek OCR
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-ocr
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepseek-ocr
+          adapter: openai
+          snapshots: [deepseek-ocr-latest]
+        - host: ollama-cloud
+          upstreamName: deepseek-ocr
+          adapter: openai
+          snapshots: [deepseek-ocr-cloud]
+    family: deepseek-ocr
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: deepseek-ocr-latest
+          originalName: deepseek-ocr:latest
+        - name: deepseek-ocr-cloud
+          originalName: deepseek-ocr:cloud
+    pointer: deepseek-ocr-latest

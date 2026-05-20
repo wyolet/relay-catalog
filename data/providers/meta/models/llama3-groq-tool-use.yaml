@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama3-groq-tool-use-8b
+    displayName: Llama 3 Groq Tool Use 8B
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: llama3-groq-tool-use
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: llama3-groq-tool-use
+          adapter: openai
+    family: llama3-groq-tool-use
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: llama3-groq-tool-use-8b
+          originalName: llama3-groq-tool-use:8b
+    pointer: llama3-groq-tool-use-8b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama3-groq-tool-use-70b
+    displayName: Llama 3 Groq Tool Use 70B
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: llama3-groq-tool-use
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: llama3-groq-tool-use
+          adapter: openai
+    family: llama3-groq-tool-use
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: llama3-groq-tool-use-70b
+          originalName: llama3-groq-tool-use:70b
+    pointer: llama3-groq-tool-use-70b

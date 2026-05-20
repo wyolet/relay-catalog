@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: embeddinggemma
+    displayName: Embedding Gemma
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: embeddinggemma
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: embeddinggemma
+          adapter: openai
+    family: embeddinggemma
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: embeddinggemma-latest
+          originalName: embeddinggemma:latest
+        - name: embeddinggemma-300m
+          originalName: embeddinggemma:300m
+    pointer: embeddinggemma-300m

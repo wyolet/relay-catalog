@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: medgemma1-5
+    displayName: MedGemma 1.5
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: medgemma1.5
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: medgemma1.5
+          adapter: openai
+    family: medgemma1.5
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: medgemma1-5-latest
+          originalName: medgemma1.5:latest
+        - name: medgemma1-5-4b
+          originalName: medgemma1.5:4b
+    pointer: medgemma1-5-4b

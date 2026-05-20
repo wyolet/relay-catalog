@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openthinker-7b
+    displayName: OpenThinker 7B
+    owner:
+        kind: provider
+        name: community
+    labels:
+        family: openthinker
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: openthinker
+          adapter: openai
+    family: openthinker
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: openthinker-7b
+          originalName: openthinker:7b
+    pointer: openthinker-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openthinker-32b
+    displayName: OpenThinker 32B
+    owner:
+        kind: provider
+        name: community
+    labels:
+        family: openthinker
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: openthinker
+          adapter: openai
+    family: openthinker
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: openthinker-32b
+          originalName: openthinker:32b
+    pointer: openthinker-32b

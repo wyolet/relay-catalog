@@ -1,0 +1,92 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-embedding-0-6b
+    displayName: Qwen 3 Embedding 0 6B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen3-embedding
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen3-embedding
+          adapter: openai
+    family: qwen3-embedding
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen3-embedding-0-6b
+          originalName: qwen3-embedding:0.6b
+    pointer: qwen3-embedding-0-6b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-embedding-4b
+    displayName: Qwen 3 Embedding 4B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen3-embedding
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen3-embedding
+          adapter: openai
+    family: qwen3-embedding
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen3-embedding-4b
+          originalName: qwen3-embedding:4b
+    pointer: qwen3-embedding-4b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-embedding-8b
+    displayName: Qwen 3 Embedding 8B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen3-embedding
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen3-embedding
+          adapter: openai
+    family: qwen3-embedding
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen3-embedding-8b
+          originalName: qwen3-embedding:8b
+    pointer: qwen3-embedding-8b

@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: notux
+    displayName: Notux
+    owner:
+        kind: provider
+        name: community
+    labels:
+        family: notux
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: notux
+          adapter: openai
+    family: notux
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: notux-latest
+          originalName: notux:latest
+        - name: notux-8x7b
+          originalName: notux:8x7b
+    pointer: notux-8x7b

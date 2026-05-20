@@ -1,0 +1,98 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: exaone-deep-2-4b
+    displayName: EXAONE Deep 2 4B
+    owner:
+        kind: provider
+        name: lgai
+    labels:
+        family: exaone-deep
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: exaone-deep
+          adapter: openai
+    family: exaone-deep
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: exaone-deep-2-4b
+          originalName: exaone-deep:2.4b
+    pointer: exaone-deep-2-4b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: exaone-deep-7-8b
+    displayName: EXAONE Deep 7 8B
+    owner:
+        kind: provider
+        name: lgai
+    labels:
+        family: exaone-deep
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: exaone-deep
+          adapter: openai
+    family: exaone-deep
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: exaone-deep-7-8b
+          originalName: exaone-deep:7.8b
+    pointer: exaone-deep-7-8b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: exaone-deep-32b
+    displayName: EXAONE Deep 32B
+    owner:
+        kind: provider
+        name: lgai
+    labels:
+        family: exaone-deep
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: exaone-deep
+          adapter: openai
+    family: exaone-deep
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: exaone-deep-32b
+          originalName: exaone-deep:32b
+    pointer: exaone-deep-32b

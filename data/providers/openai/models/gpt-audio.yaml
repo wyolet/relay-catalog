@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: gpt-audio
+    displayName: GPT Audio
     owner:
         kind: provider
         name: openai
@@ -39,3 +40,89 @@ spec:
         - name: gpt-audio-2025-08-28
           releasedAt: "2025-08-28"
     pointer: gpt-audio
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-audio-1-5
+    displayName: GPT Audio 1.5
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openai
+          upstreamName: gpt-audio-1.5
+          adapter: openai
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        audioInput: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - audio
+        output:
+            - text
+            - audio
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    snapshots:
+        - name: gpt-audio-1-5
+          originalName: gpt-audio-1.5
+    pointer: gpt-audio-1-5
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-audio-mini
+    displayName: GPT Audio Mini
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openai
+          upstreamName: gpt-audio-mini
+          adapter: openai
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        batch: true
+        audioInput: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - audio
+        output:
+            - text
+            - audio
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    snapshots:
+        - name: gpt-audio-mini
+        - name: gpt-audio-mini-2025-10-06
+          releasedAt: "2025-10-06"
+        - name: gpt-audio-mini-2025-12-15
+          releasedAt: "2025-12-15"
+    pointer: gpt-audio-mini

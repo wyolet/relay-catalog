@@ -1,0 +1,137 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-v3
+    displayName: DeepSeek V3
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-v3
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepseek-v3
+          adapter: openai
+    family: deepseek-v3
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-v3-latest
+          originalName: deepseek-v3:latest
+        - name: deepseek-v3-671b
+          originalName: deepseek-v3:671b
+    pointer: deepseek-v3-671b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-v3-1
+    displayName: DeepSeek V3.1
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-v3.1
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: deepseek-v3.1
+          adapter: openai
+    family: deepseek-v3.1
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-v3-1-latest
+          originalName: deepseek-v3.1:latest
+        - name: deepseek-v3-1-671b
+          originalName: deepseek-v3.1:671b
+    pointer: deepseek-v3-1-671b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-v3-1-671b
+    displayName: DeepSeek V3.1 671B
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: deepseek-v3.1:671b-cloud
+          adapter: openai
+    family: deepseek
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 163840
+    contextWindowOutput: 163840
+    contextWindowTotal: 163840
+    snapshots:
+        - name: deepseek-v3-1-671b
+          originalName: deepseek-v3.1:671b-cloud
+    pointer: deepseek-v3-1-671b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-v3-2
+    displayName: DeepSeek V3.2
+    owner:
+        kind: provider
+        name: deepseek
+    labels:
+        family: deepseek-v3.2
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: deepseek-v3.2
+          adapter: openai
+    family: deepseek-v3.2
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: deepseek-v3-2-cloud
+          originalName: deepseek-v3.2:cloud
+    pointer: deepseek-v3-2-cloud

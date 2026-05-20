@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: phi3-14b
+    displayName: Phi 3 14B
+    owner:
+        kind: provider
+        name: microsoft
+    labels:
+        family: phi3
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: phi3
+          adapter: openai
+    family: phi3
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: phi3-14b
+          originalName: phi3:14b
+    pointer: phi3-14b

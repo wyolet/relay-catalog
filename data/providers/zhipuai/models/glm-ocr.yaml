@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: glm-ocr
+    displayName: GLM OCR
+    owner:
+        kind: provider
+        name: zhipuai
+    labels:
+        family: glm-ocr
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: glm-ocr
+          adapter: openai
+          snapshots: [glm-ocr-latest]
+        - host: ollama-cloud
+          upstreamName: glm-ocr
+          adapter: openai
+          snapshots: [glm-ocr-cloud]
+    family: glm-ocr
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: glm-ocr-latest
+          originalName: glm-ocr:latest
+        - name: glm-ocr-cloud
+          originalName: glm-ocr:cloud
+    pointer: glm-ocr-latest

@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: alibaba
+    displayName: Alibaba
+    description: Alibaba — Qwen model family from Alibaba Cloud.
+spec: {}

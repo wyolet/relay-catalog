@@ -1,0 +1,11 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: ollama-self
+    displayName: Ollama (self-hosted)
+    description: "Operator-run Ollama instance. baseURL is per-deployment; the catalog ships an empty default that the operator must configure."
+spec:
+    baseURL: ""
+    homepageURL: https://ollama.com
+    icon:
+        path: /provider/ollama.png

@@ -1,0 +1,30 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nomic-embed-text
+    displayName: Nomic Embed Text
+    owner:
+        kind: provider
+        name: nomic
+    labels:
+        family: nomic-embed-text
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: nomic-embed-text
+          adapter: openai
+    family: nomic-embed-text
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: nomic-embed-text-latest
+          originalName: nomic-embed-text:latest
+    pointer: nomic-embed-text-latest

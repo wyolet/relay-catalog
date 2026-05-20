@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
     name: openai-gpt-realtime-1-5
+    displayName: GPT Realtime 1.5 pricing
     owner:
         kind: host
         id: openai

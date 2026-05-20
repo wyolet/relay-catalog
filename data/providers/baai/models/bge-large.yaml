@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: bge-large
+    displayName: BGE Large
+    owner:
+        kind: provider
+        name: baai
+    labels:
+        family: bge-large
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: bge-large
+          adapter: openai
+    family: bge-large
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: bge-large-latest
+          originalName: bge-large:latest
+        - name: bge-large-335m
+          originalName: bge-large:335m
+    pointer: bge-large-335m

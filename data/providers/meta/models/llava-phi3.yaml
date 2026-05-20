@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llava-phi3
+    displayName: LLaVA Phi 3
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: llava-phi3
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: llava-phi3
+          adapter: openai
+    family: llava-phi3
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: llava-phi3-latest
+          originalName: llava-phi3:latest
+        - name: llava-phi3-3-8b
+          originalName: llava-phi3:3.8b
+    pointer: llava-phi3-3-8b

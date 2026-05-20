@@ -1,0 +1,98 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: yi-6b
+    displayName: Yi 6B
+    owner:
+        kind: provider
+        name: 01ai
+    labels:
+        family: yi
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: yi
+          adapter: openai
+    family: yi
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: yi-6b
+          originalName: yi:6b
+    pointer: yi-6b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: yi-9b
+    displayName: Yi 9B
+    owner:
+        kind: provider
+        name: 01ai
+    labels:
+        family: yi
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: yi
+          adapter: openai
+    family: yi
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: yi-9b
+          originalName: yi:9b
+    pointer: yi-9b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: yi-34b
+    displayName: Yi 34B
+    owner:
+        kind: provider
+        name: 01ai
+    labels:
+        family: yi
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: yi
+          adapter: openai
+    family: yi
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: yi-34b
+          originalName: yi:34b
+    pointer: yi-34b

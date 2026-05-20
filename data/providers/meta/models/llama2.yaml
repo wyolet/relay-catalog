@@ -1,0 +1,135 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama2
+    displayName: Llama 2
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: meta
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: llama2
+          adapter: openai
+    family: meta
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 4096
+    contextWindowOutput: 4096
+    contextWindowTotal: 4096
+    snapshots:
+        - name: llama2
+          originalName: llama2
+    pointer: llama2
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama2-7b
+    displayName: Llama 2 7B
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: meta
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: llama2:7b
+          adapter: openai
+    family: meta
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 4096
+    contextWindowOutput: 4096
+    contextWindowTotal: 4096
+    snapshots:
+        - name: llama2-7b
+          originalName: llama2:7b
+    pointer: llama2-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama2-13b
+    displayName: Llama 2 13B
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: meta
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: llama2:13b
+          adapter: openai
+    family: meta
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 4096
+    contextWindowOutput: 4096
+    contextWindowTotal: 4096
+    snapshots:
+        - name: llama2-13b
+          originalName: llama2:13b
+    pointer: llama2-13b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama2-70b
+    displayName: Llama 2 70B
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: meta
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: llama2:70b
+          adapter: openai
+    family: meta
+    capabilities:
+        chat: true
+        streaming: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 4096
+    contextWindowOutput: 4096
+    contextWindowTotal: 4096
+    snapshots:
+        - name: llama2-70b
+          originalName: llama2:70b
+    pointer: llama2-70b

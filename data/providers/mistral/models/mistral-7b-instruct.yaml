@@ -1,0 +1,69 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-7b-instruct-v0-1
+    displayName: Mistral 7B Instruct v0.1
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: mistral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: mistral-7B-Instruct-v0.1
+          adapter: openai
+    family: mistral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    snapshots:
+        - name: mistral-7b-instruct-v0-1
+          originalName: mistral-7B-Instruct-v0.1
+    pointer: mistral-7b-instruct-v0-1
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-7b-instruct-v0-2
+    displayName: Mistral 7B Instruct v0.2
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: mistral
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: mistral-7B-Instruct-v0.2
+          adapter: openai
+    family: mistral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    snapshots:
+        - name: mistral-7b-instruct-v0-2
+          originalName: mistral-7B-Instruct-v0.2
+    pointer: mistral-7b-instruct-v0-2

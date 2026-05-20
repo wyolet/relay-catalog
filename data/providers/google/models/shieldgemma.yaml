@@ -1,0 +1,98 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: shieldgemma-2b
+    displayName: ShieldGemma 2B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: shieldgemma
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: shieldgemma
+          adapter: openai
+    family: shieldgemma
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: shieldgemma-2b
+          originalName: shieldgemma:2b
+    pointer: shieldgemma-2b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: shieldgemma-9b
+    displayName: ShieldGemma 9B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: shieldgemma
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: shieldgemma
+          adapter: openai
+    family: shieldgemma
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: shieldgemma-9b
+          originalName: shieldgemma:9b
+    pointer: shieldgemma-9b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: shieldgemma-27b
+    displayName: ShieldGemma 27B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: shieldgemma
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: shieldgemma
+          adapter: openai
+    family: shieldgemma
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: shieldgemma-27b
+          originalName: shieldgemma:27b
+    pointer: shieldgemma-27b

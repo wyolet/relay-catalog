@@ -1,0 +1,67 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama3-2-vision-11b
+    displayName: Llama 3.2 Vision 11B
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: llama3.2-vision
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: llama3.2-vision
+          adapter: openai
+    family: llama3.2-vision
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: llama3-2-vision-11b
+          originalName: llama3.2-vision:11b
+    pointer: llama3-2-vision-11b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama3-2-vision-90b
+    displayName: Llama 3.2 Vision 90B
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: llama3.2-vision
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: llama3.2-vision
+          adapter: openai
+    family: llama3.2-vision
+    capabilities:
+        chat: true
+        tools: false
+        vision: true
+        reasoning: false
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    snapshots:
+        - name: llama3-2-vision-90b
+          originalName: llama3.2-vision:90b
+    pointer: llama3-2-vision-90b

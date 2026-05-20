@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: aya-8b
+    displayName: Aya 8B
+    owner:
+        kind: provider
+        name: cohere
+    labels:
+        family: aya
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: aya
+          adapter: openai
+    family: aya
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: aya-8b
+          originalName: aya:8b
+    pointer: aya-8b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: aya-35b
+    displayName: Aya 35B
+    owner:
+        kind: provider
+        name: cohere
+    labels:
+        family: aya
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: aya
+          adapter: openai
+    family: aya
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: aya-35b
+          originalName: aya:35b
+    pointer: aya-35b

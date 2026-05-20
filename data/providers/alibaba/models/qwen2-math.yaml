@@ -1,0 +1,98 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-math-1-5b
+    displayName: Qwen 2 Math 1 5B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen2-math
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen2-math
+          adapter: openai
+    family: qwen2-math
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen2-math-1-5b
+          originalName: qwen2-math:1.5b
+    pointer: qwen2-math-1-5b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-math-7b
+    displayName: Qwen 2 Math 7B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen2-math
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen2-math
+          adapter: openai
+    family: qwen2-math
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen2-math-7b
+          originalName: qwen2-math:7b
+    pointer: qwen2-math-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-math-72b
+    displayName: Qwen 2 Math 72B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen2-math
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: qwen2-math
+          adapter: openai
+    family: qwen2-math
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: qwen2-math-72b
+          originalName: qwen2-math:72b
+    pointer: qwen2-math-72b

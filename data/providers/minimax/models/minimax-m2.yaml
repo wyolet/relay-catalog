@@ -1,0 +1,131 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: minimax-m2
+    displayName: MiniMax M2
+    owner:
+        kind: provider
+        name: minimax
+    labels:
+        family: minimax-m2
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: minimax-m2
+          adapter: openai
+    family: minimax-m2
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: minimax-m2-cloud
+          originalName: minimax-m2:cloud
+    pointer: minimax-m2-cloud
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: minimax-m2-1
+    displayName: MiniMax M2.1
+    owner:
+        kind: provider
+        name: minimax
+    labels:
+        family: minimax-m2.1
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: minimax-m2.1
+          adapter: openai
+    family: minimax-m2.1
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: minimax-m2-1-cloud
+          originalName: minimax-m2.1:cloud
+    pointer: minimax-m2-1-cloud
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: minimax-m2-5
+    displayName: MiniMax M2.5
+    owner:
+        kind: provider
+        name: minimax
+    labels:
+        family: minimax-m2.5
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: minimax-m2.5
+          adapter: openai
+    family: minimax-m2.5
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: minimax-m2-5-cloud
+          originalName: minimax-m2.5:cloud
+    pointer: minimax-m2-5-cloud
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: minimax-m2-7
+    displayName: MiniMax M2.7
+    owner:
+        kind: provider
+        name: minimax
+    labels:
+        family: minimax-m2.7
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-cloud
+          upstreamName: minimax-m2.7
+          adapter: openai
+    family: minimax-m2.7
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: minimax-m2-7-cloud
+          originalName: minimax-m2.7:cloud
+    pointer: minimax-m2-7-cloud

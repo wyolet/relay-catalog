@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
     name: openai-chatgpt-4o
+    displayName: ChatGPT-4o pricing
     owner:
         kind: host
         id: openai

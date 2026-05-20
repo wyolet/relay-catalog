@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: liquid
+    displayName: Liquid AI
+    description: Liquid AI — model originator.
+spec: {}

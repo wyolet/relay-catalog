@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: meditron-7b
+    displayName: Meditron 7B
+    owner:
+        kind: provider
+        name: community
+    labels:
+        family: meditron
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: meditron
+          adapter: openai
+    family: meditron
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: meditron-7b
+          originalName: meditron:7b
+    pointer: meditron-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: meditron-70b
+    displayName: Meditron 70B
+    owner:
+        kind: provider
+        name: community
+    labels:
+        family: meditron
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: meditron
+          adapter: openai
+    family: meditron
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: meditron-70b
+          originalName: meditron:70b
+    pointer: meditron-70b

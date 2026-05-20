@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: paraphrase-multilingual
+    displayName: Paraphrase Multilingual
+    owner:
+        kind: provider
+        name: baai
+    labels:
+        family: paraphrase-multilingual
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: paraphrase-multilingual
+          adapter: openai
+    family: paraphrase-multilingual
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: paraphrase-multilingual-latest
+          originalName: paraphrase-multilingual:latest
+        - name: paraphrase-multilingual-278m
+          originalName: paraphrase-multilingual:278m
+    pointer: paraphrase-multilingual-278m

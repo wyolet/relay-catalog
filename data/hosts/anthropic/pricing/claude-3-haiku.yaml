@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
     name: anthropic-claude-3-haiku
+    displayName: Claude 3 Haiku pricing
     owner:
         kind: host
         id: anthropic

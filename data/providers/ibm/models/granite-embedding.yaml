@@ -1,0 +1,61 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: granite-embedding-30m
+    displayName: Granite Embedding 30M
+    owner:
+        kind: provider
+        name: ibm
+    labels:
+        family: granite-embedding
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: granite-embedding
+          adapter: openai
+    family: granite-embedding
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: granite-embedding-30m
+          originalName: granite-embedding:30m
+    pointer: granite-embedding-30m
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: granite-embedding-278m
+    displayName: Granite Embedding 278M
+    owner:
+        kind: provider
+        name: ibm
+    labels:
+        family: granite-embedding
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: granite-embedding
+          adapter: openai
+    family: granite-embedding
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: granite-embedding-278m
+          originalName: granite-embedding:278m
+    pointer: granite-embedding-278m

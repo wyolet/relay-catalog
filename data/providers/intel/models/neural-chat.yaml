@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: neural-chat
+    displayName: Neural Chat
+    owner:
+        kind: provider
+        name: intel
+    labels:
+        family: neural-chat
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: neural-chat
+          adapter: openai
+    family: neural-chat
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: neural-chat-latest
+          originalName: neural-chat:latest
+        - name: neural-chat-7b
+          originalName: neural-chat:7b
+    pointer: neural-chat-7b

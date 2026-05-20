@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: o4-mini
+    displayName: O4 Mini
     owner:
         kind: provider
         name: openai

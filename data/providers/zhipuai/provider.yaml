@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: zhipuai
+    displayName: Zhipu AI
+    description: Zhipu AI — CodeGeeX and GLM model family from Zhipu AI (Tsinghua THUDM).
+spec: {}

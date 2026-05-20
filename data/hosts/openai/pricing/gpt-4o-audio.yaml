@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
     name: openai-gpt-4o-audio
+    displayName: GPT-4o Audio pricing
     owner:
         kind: host
         id: openai

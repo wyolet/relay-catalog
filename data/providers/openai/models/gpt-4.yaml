@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: gpt-4
+    displayName: GPT-4
     owner:
         kind: provider
         name: openai
@@ -32,3 +33,203 @@ spec:
     snapshots:
         - name: gpt-4
     pointer: gpt-4
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-4-0125
+    displayName: GPT-4 (2025-01-25)
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openai
+          upstreamName: gpt-4-0125-preview
+          adapter: openai
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    deprecation:
+        status: sunset
+        sunsetDate: "2026-03-26"
+    snapshots:
+        - name: gpt-4-0125-preview
+    pointer: gpt-4-0125-preview
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-4-0314
+    displayName: GPT-4 (2023-03-14)
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openai
+          upstreamName: gpt-4-0314
+          adapter: openai
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 4096
+    contextWindowTotal: 8192
+    deprecation:
+        status: sunset
+        sunsetDate: "2026-03-26"
+    snapshots:
+        - name: gpt-4-0314
+    pointer: gpt-4-0314
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-4-0613
+    displayName: GPT-4 (2023-06-13)
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openai
+          upstreamName: gpt-4-0613
+          adapter: openai
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 4096
+    contextWindowTotal: 8192
+    deprecation:
+        status: sunset
+        sunsetDate: "2025-06-06"
+    snapshots:
+        - name: gpt-4-0613
+    pointer: gpt-4-0613
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-4-1106
+    displayName: GPT-4 (2023-11-06)
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openai
+          upstreamName: gpt-4-1106-preview
+          adapter: openai
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    deprecation:
+        status: sunset
+        sunsetDate: "2026-03-26"
+    snapshots:
+        - name: gpt-4-1106-preview
+    pointer: gpt-4-1106-preview
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-4-turbo
+    displayName: GPT-4 Turbo
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: gpt
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openai
+          upstreamName: gpt-4-turbo
+          adapter: openai
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        vision: true
+        promptCache: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    snapshots:
+        - name: gpt-4-turbo
+        - name: gpt-4-turbo-2024-04-09
+          releasedAt: "2024-04-09"
+        - name: gpt-4-turbo-preview
+    pointer: gpt-4-turbo

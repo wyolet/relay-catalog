@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: 01ai
+    displayName: 01.AI
+    description: 01.AI — model originator.
+spec: {}

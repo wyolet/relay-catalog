@@ -1,0 +1,69 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: devstral
+    displayName: Devstral
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: devstral
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: devstral
+          adapter: openai
+    family: devstral
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: devstral-latest
+          originalName: devstral:latest
+        - name: devstral-24b
+          originalName: devstral:24b
+    pointer: devstral-24b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: devstral-2
+    displayName: Devstral 2
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: devstral-2
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: devstral-2
+          adapter: openai
+    family: devstral-2
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: devstral-2-latest
+          originalName: devstral-2:latest
+        - name: devstral-2-32b
+          originalName: devstral-2:32b
+    pointer: devstral-2-32b

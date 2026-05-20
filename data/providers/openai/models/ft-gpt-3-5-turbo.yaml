@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: ft-gpt-3-5-turbo
+    displayName: Fine-tuned GPT-3.5 Turbo
     owner:
         kind: provider
         name: openai
@@ -31,3 +32,108 @@ spec:
         - name: ft-gpt-3-5-turbo
           originalName: ft:gpt-3.5-turbo
     pointer: ft-gpt-3-5-turbo
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ft-gpt-3-5-turbo-0125
+    displayName: Fine-tuned GPT-3.5 Turbo (2025-01-25)
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: ft
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openai
+          upstreamName: ft:gpt-3.5-turbo-0125
+          adapter: openai
+    family: ft
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16385
+    contextWindowOutput: 4096
+    contextWindowTotal: 16385
+    snapshots:
+        - name: ft-gpt-3-5-turbo-0125
+          originalName: ft:gpt-3.5-turbo-0125
+    pointer: ft-gpt-3-5-turbo-0125
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ft-gpt-3-5-turbo-0613
+    displayName: Fine-tuned GPT-3.5 Turbo (2023-06-13)
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: ft
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openai
+          upstreamName: ft:gpt-3.5-turbo-0613
+          adapter: openai
+    family: ft
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 4096
+    contextWindowOutput: 4096
+    contextWindowTotal: 4096
+    snapshots:
+        - name: ft-gpt-3-5-turbo-0613
+          originalName: ft:gpt-3.5-turbo-0613
+    pointer: ft-gpt-3-5-turbo-0613
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ft-gpt-3-5-turbo-1106
+    displayName: Fine-tuned GPT-3.5 Turbo (2023-11-06)
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: ft
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: openai
+          upstreamName: ft:gpt-3.5-turbo-1106
+          adapter: openai
+    family: ft
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16385
+    contextWindowOutput: 4096
+    contextWindowTotal: 16385
+    snapshots:
+        - name: ft-gpt-3-5-turbo-1106
+          originalName: ft:gpt-3.5-turbo-1106
+    pointer: ft-gpt-3-5-turbo-1106

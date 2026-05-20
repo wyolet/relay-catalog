@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: reflection
+    displayName: Reflection
+    owner:
+        kind: provider
+        name: community
+    labels:
+        family: reflection
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: reflection
+          adapter: openai
+    family: reflection
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: reflection-latest
+          originalName: reflection:latest
+        - name: reflection-70b
+          originalName: reflection:70b
+    pointer: reflection-70b

@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nous-hermes2-10-7b
+    displayName: Nous Hermes 2 10 7B
+    owner:
+        kind: provider
+        name: nous
+    labels:
+        family: nous-hermes2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: nous-hermes2
+          adapter: openai
+    family: nous-hermes2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: nous-hermes2-10-7b
+          originalName: nous-hermes2:10.7b
+    pointer: nous-hermes2-10-7b

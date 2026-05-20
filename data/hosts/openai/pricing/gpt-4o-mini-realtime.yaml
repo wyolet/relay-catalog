@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
     name: openai-gpt-4o-mini-realtime
+    displayName: GPT-4o Mini Realtime pricing
     owner:
         kind: host
         id: openai

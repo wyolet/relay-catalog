@@ -1,0 +1,61 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: all-minilm-22m
+    displayName: All MiniLM 22M
+    owner:
+        kind: provider
+        name: baai
+    labels:
+        family: all-minilm
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: all-minilm
+          adapter: openai
+    family: all-minilm
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: all-minilm-22m
+          originalName: all-minilm:22m
+    pointer: all-minilm-22m
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: all-minilm-33m
+    displayName: All MiniLM 33M
+    owner:
+        kind: provider
+        name: baai
+    labels:
+        family: all-minilm
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: all-minilm
+          adapter: openai
+    family: all-minilm
+    capabilities:
+        chat: false
+        embeddings: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: all-minilm-33m
+          originalName: all-minilm:33m
+    pointer: all-minilm-33m

@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: claude-3-7-sonnet
+    displayName: Claude 3.7 Sonnet
     owner:
         kind: provider
         name: anthropic

@@ -1,0 +1,98 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: granite4-350m
+    displayName: Granite 4 350M
+    owner:
+        kind: provider
+        name: ibm
+    labels:
+        family: granite4
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: granite4
+          adapter: openai
+    family: granite4
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: granite4-350m
+          originalName: granite4:350m
+    pointer: granite4-350m
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: granite4-1b
+    displayName: Granite 4 1B
+    owner:
+        kind: provider
+        name: ibm
+    labels:
+        family: granite4
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: granite4
+          adapter: openai
+    family: granite4
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: granite4-1b
+          originalName: granite4:1b
+    pointer: granite4-1b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: granite4-3b
+    displayName: Granite 4 3B
+    owner:
+        kind: provider
+        name: ibm
+    labels:
+        family: granite4
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: granite4
+          adapter: openai
+    family: granite4
+    capabilities:
+        chat: true
+        tools: true
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: granite4-3b
+          originalName: granite4:3b
+    pointer: granite4-3b

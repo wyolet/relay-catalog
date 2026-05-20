@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: google
+    displayName: Google
+    description: Google — model originator.
+spec: {}

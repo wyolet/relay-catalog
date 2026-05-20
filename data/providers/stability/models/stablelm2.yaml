@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: stablelm2-1-6b
+    displayName: StableLM 2 1 6B
+    owner:
+        kind: provider
+        name: stability
+    labels:
+        family: stablelm2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: stablelm2
+          adapter: openai
+    family: stablelm2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: stablelm2-1-6b
+          originalName: stablelm2:1.6b
+    pointer: stablelm2-1-6b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: stablelm2-12b
+    displayName: StableLM 2 12B
+    owner:
+        kind: provider
+        name: stability
+    labels:
+        family: stablelm2
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: stablelm2
+          adapter: openai
+    family: stablelm2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: stablelm2-12b
+          originalName: stablelm2:12b
+    pointer: stablelm2-12b

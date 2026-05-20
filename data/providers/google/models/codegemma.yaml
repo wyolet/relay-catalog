@@ -1,0 +1,65 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: codegemma-2b
+    displayName: CodeGemma 2B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: codegemma
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: codegemma
+          adapter: openai
+    family: codegemma
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: codegemma-2b
+          originalName: codegemma:2b
+    pointer: codegemma-2b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: codegemma-7b
+    displayName: CodeGemma 7B
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: codegemma
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: codegemma
+          adapter: openai
+    family: codegemma
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: codegemma-7b
+          originalName: codegemma:7b
+    pointer: codegemma-7b

@@ -1,0 +1,131 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: codellama-7b
+    displayName: Code Llama 7B
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: codellama
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: codellama
+          adapter: openai
+    family: codellama
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: codellama-7b
+          originalName: codellama:7b
+    pointer: codellama-7b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: codellama-13b
+    displayName: Code Llama 13B
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: codellama
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: codellama
+          adapter: openai
+    family: codellama
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: codellama-13b
+          originalName: codellama:13b
+    pointer: codellama-13b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: codellama-34b
+    displayName: Code Llama 34B
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: codellama
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: codellama
+          adapter: openai
+    family: codellama
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: codellama-34b
+          originalName: codellama:34b
+    pointer: codellama-34b
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: codellama-70b
+    displayName: Code Llama 70B
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: codellama
+        source: ollama-library
+        source_version: '2026-05-20'
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: codellama
+          adapter: openai
+    family: codellama
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: codellama-70b
+          originalName: codellama:70b
+    pointer: codellama-70b

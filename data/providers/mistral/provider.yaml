@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: mistral
+    displayName: Mistral AI
+    description: Mistral AI — open-weight and proprietary language models from Mistral.
+spec: {}

@@ -1,0 +1,7 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: meta
+    displayName: Meta
+    description: Meta — Llama open-weight model family from Meta AI.
+spec: {}

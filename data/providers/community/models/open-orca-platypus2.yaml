@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: open-orca-platypus2
+    displayName: Open Orca Platypus 2
+    owner:
+        kind: provider
+        name: community
+    labels:
+        family: open-orca-platypus2
+        source: ollama-library
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: open-orca-platypus2
+          adapter: openai
+    family: open-orca-platypus2
+    capabilities:
+        chat: true
+        tools: false
+        vision: false
+        reasoning: false
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    snapshots:
+        - name: open-orca-platypus2-latest
+          originalName: open-orca-platypus2:latest
+        - name: open-orca-platypus2-13b
+          originalName: open-orca-platypus2:13b
+    pointer: open-orca-platypus2-13b

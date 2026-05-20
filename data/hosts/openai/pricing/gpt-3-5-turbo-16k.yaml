@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
     name: openai-gpt-3-5-turbo-16k
+    displayName: GPT-3.5 Turbo 16K pricing
     owner:
         kind: host
         id: openai

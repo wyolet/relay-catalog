@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: internlm2-5-20b-chat
+    displayName: InternLM2.5 20B Chat
+    owner:
+        kind: provider
+        name: internlm
+    labels:
+        family: internlm
+        source: litellm
+        source_version: "2026-05-20"
+spec:
+    hosts:
+        - host: ollama-self
+          upstreamName: internlm2_5-20b-chat
+          adapter: openai
+    family: internlm
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 8192
+    contextWindowTotal: 32768
+    snapshots:
+        - name: internlm2-5-20b-chat
+          originalName: internlm2_5-20b-chat
+    pointer: internlm2-5-20b-chat

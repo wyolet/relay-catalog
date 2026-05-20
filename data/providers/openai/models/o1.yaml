@@ -2,6 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: o1
+    displayName: O1
     owner:
         kind: provider
         name: openai
