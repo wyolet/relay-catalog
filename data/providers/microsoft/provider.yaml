@@ -4,4 +4,6 @@ metadata:
     name: microsoft
     displayName: Microsoft
     description: Microsoft — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/microsoft.webp

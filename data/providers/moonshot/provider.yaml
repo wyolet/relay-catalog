@@ -4,4 +4,6 @@ metadata:
     name: moonshot
     displayName: Moonshot
     description: Moonshot — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/moonshotai.png

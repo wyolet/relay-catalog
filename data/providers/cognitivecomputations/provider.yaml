@@ -4,4 +4,6 @@ metadata:
     name: cognitivecomputations
     displayName: Cognitive Computations
     description: Cognitive Computations — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/cognitivecomputations.png

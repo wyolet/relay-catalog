@@ -4,4 +4,6 @@ metadata:
     name: baai
     displayName: BAAI
     description: BAAI — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/baai.png

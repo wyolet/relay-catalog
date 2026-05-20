@@ -4,4 +4,6 @@ metadata:
     name: allenai
     displayName: Allen AI
     description: Allen AI — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/allenai.png

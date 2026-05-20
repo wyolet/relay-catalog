@@ -4,4 +4,6 @@ metadata:
     name: 01ai
     displayName: 01.AI
     description: 01.AI — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/01ai.png

@@ -4,4 +4,6 @@ metadata:
     name: nous
     displayName: Nous Research
     description: Nous Research — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/nous.png

@@ -4,4 +4,6 @@ metadata:
     name: cohere
     displayName: Cohere
     description: Cohere — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/cohere.png

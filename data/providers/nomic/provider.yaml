@@ -4,4 +4,6 @@ metadata:
     name: nomic
     displayName: Nomic
     description: Nomic — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/nomic.png

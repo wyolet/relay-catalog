@@ -4,4 +4,6 @@ metadata:
     name: liquid
     displayName: Liquid AI
     description: Liquid AI — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/liquid.png

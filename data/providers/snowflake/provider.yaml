@@ -4,4 +4,6 @@ metadata:
     name: snowflake
     displayName: Snowflake
     description: Snowflake — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/snowflake.png

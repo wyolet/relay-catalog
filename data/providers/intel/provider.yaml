@@ -4,4 +4,6 @@ metadata:
     name: intel
     displayName: Intel
     description: Intel — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/intel.png

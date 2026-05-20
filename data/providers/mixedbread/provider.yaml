@@ -4,4 +4,6 @@ metadata:
     name: mixedbread
     displayName: Mixedbread AI
     description: Mixedbread AI — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/mixedbread.png

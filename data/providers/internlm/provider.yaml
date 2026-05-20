@@ -4,4 +4,6 @@ metadata:
     name: internlm
     displayName: InternLM
     description: InternLM — language models from Shanghai AI Laboratory.
-spec: {}
+spec:
+    icon:
+        path: /provider/internlm.png

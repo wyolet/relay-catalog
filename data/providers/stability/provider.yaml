@@ -4,4 +4,6 @@ metadata:
     name: stability
     displayName: Stability AI
     description: Stability AI — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/stability.png

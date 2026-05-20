@@ -4,4 +4,6 @@ metadata:
     name: tinyllama
     displayName: TinyLlama
     description: TinyLlama — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/tinyllama.png
