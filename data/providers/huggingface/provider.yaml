@@ -4,4 +4,6 @@ metadata:
     name: huggingface
     displayName: HuggingFace
     description: HuggingFace — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/huggingface.png

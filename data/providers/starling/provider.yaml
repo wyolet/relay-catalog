@@ -4,4 +4,6 @@ metadata:
     name: starling
     displayName: Starling
     description: Starling — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/starling.png

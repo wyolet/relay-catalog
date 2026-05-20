@@ -4,4 +4,6 @@ metadata:
     name: databricks
     displayName: Databricks
     description: Databricks — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/databricks.png

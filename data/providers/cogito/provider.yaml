@@ -4,4 +4,6 @@ metadata:
     name: cogito
     displayName: Cogito
     description: Cogito — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/cogito.png

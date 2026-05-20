@@ -4,4 +4,6 @@ metadata:
     name: meta
     displayName: Meta
     description: Meta — Llama open-weight model family from Meta AI.
-spec: {}
+spec:
+    icon:
+        path: /provider/meta.png

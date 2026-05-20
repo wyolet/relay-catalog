@@ -4,4 +4,6 @@ metadata:
     name: lgai
     displayName: LG AI Research
     description: LG AI Research — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/lgai.png

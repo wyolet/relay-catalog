@@ -4,4 +4,6 @@ metadata:
     name: ibm
     displayName: IBM
     description: IBM — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/ibm.png

@@ -4,4 +4,6 @@ metadata:
     name: mistral
     displayName: Mistral AI
     description: Mistral AI — open-weight and proprietary language models from Mistral.
-spec: {}
+spec:
+    icon:
+        path: /provider/mistral.png

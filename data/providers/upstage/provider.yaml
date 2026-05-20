@@ -4,4 +4,6 @@ metadata:
     name: upstage
     displayName: Upstage
     description: Upstage — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/upstage.png

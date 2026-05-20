@@ -4,4 +4,6 @@ metadata:
     name: bigcode
     displayName: BigCode
     description: BigCode — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/bigcode.png

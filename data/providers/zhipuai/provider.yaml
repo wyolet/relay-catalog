@@ -4,4 +4,6 @@ metadata:
     name: zhipuai
     displayName: Zhipu AI
     description: Zhipu AI — CodeGeeX and GLM model family from Zhipu AI (Tsinghua THUDM).
-spec: {}
+spec:
+    icon:
+        path: /provider/zhipuai.png

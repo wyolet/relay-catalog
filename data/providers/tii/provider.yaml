@@ -4,4 +4,6 @@ metadata:
     name: tii
     displayName: Technology Innovation Institute
     description: Technology Innovation Institute — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/tii.jpeg

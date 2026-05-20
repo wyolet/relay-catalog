@@ -4,4 +4,6 @@ metadata:
     name: alibaba
     displayName: Alibaba
     description: Alibaba — Qwen model family from Alibaba Cloud.
-spec: {}
+spec:
+    icon:
+        path: /provider/alibaba.png

@@ -4,4 +4,6 @@ metadata:
     name: openbmb
     displayName: OpenBMB
     description: OpenBMB — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/openbmb.png

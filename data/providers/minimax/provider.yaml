@@ -4,4 +4,6 @@ metadata:
     name: minimax
     displayName: MiniMax
     description: MiniMax — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/minimax.png

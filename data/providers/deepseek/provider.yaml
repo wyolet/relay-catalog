@@ -4,4 +4,6 @@ metadata:
     name: deepseek
     displayName: DeepSeek
     description: DeepSeek — code and general-purpose language models from DeepSeek AI.
-spec: {}
+spec:
+    icon:
+        path: /provider/deepseek.png

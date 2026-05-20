@@ -4,4 +4,6 @@ metadata:
     name: nvidia
     displayName: NVIDIA
     description: NVIDIA — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/nvidia.png

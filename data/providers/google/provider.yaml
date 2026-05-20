@@ -4,4 +4,6 @@ metadata:
     name: google
     displayName: Google
     description: Google — model originator.
-spec: {}
+spec:
+    icon:
+        path: /provider/google-ai-studio.svg
