@@ -2,30 +2,23 @@
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
-    name: gemini-3-flash-preview
-    displayName: Gemini 3 Flash (Preview)
-    description: Earlier-generation flash model in preview. Available via Google AI Studio (full capabilities) and Ollama (vision only).
+    name: gemini-3-5-flash
+    displayName: Gemini 3.5 Flash
+    description: Google's most intelligent flash-tier model for sustained frontier performance on agentic and coding tasks.
     owner:
         kind: provider
         name: google
     labels:
-        family: gemini-3-flash-preview
+        family: gemini-3-5-flash
         source: google-ai-studio
         source_version: "2026-05-21"
 spec:
     hosts:
-        - host: ollama-self
-          upstreamName: gemini-3-flash-preview
-          adapter: openai
-          snapshots: [gemini-3-flash-preview-latest]
-        - host: ollama-cloud
-          upstreamName: gemini-3-flash-preview
-          adapter: openai
-          snapshots: [gemini-3-flash-preview-cloud]
         - host: google-ai-studio
           adapter: openai
-          snapshots: [gemini-3-flash-preview]
-    family: gemini-3-flash-preview
+          snapshots:
+              - gemini-3-5-flash
+    family: gemini-3-5-flash
     capabilities:
         chat: true
         streaming: true
@@ -50,16 +43,14 @@ spec:
             - text
     contextWindowInput: 1048576
     contextWindowOutput: 65536
+    knowledgeCutoff: "2025-01-01"
     snapshots:
-        - name: gemini-3-flash-preview-latest
-          originalName: gemini-3-flash-preview:latest
-        - name: gemini-3-flash-preview-cloud
-          originalName: gemini-3-flash-preview:cloud
-        - name: gemini-3-flash-preview
-          originalName: gemini-3-flash-preview
-    pointer: gemini-3-flash-preview-latest
+        - name: gemini-3-5-flash
+          originalName: gemini-3.5-flash
+    pointer: gemini-3-5-flash
     tags:
-        - preview
+        - newest
         - multimodal
         - thinking
         - structured-outputs
+        - agentic
