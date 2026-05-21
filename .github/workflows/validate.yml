@@ -1,0 +1,40 @@
+name: Validate catalog
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      # The validator depends on github.com/wyolet/relay/app/catalogvalidate.
+      # relay is currently private — the catalog repo's go.mod points at
+      # ../relay via a `replace` directive, so CI clones both repos
+      # side-by-side. Once relay goes public we drop the replace and
+      # depend on a tagged version directly; the workflow simplifies to a
+      # single checkout.
+      - name: Check out relay-catalog
+        uses: actions/checkout@v4
+        with:
+          path: relay-catalog
+
+      - name: Check out relay (private)
+        uses: actions/checkout@v4
+        with:
+          repository: wyolet/relay
+          path: relay
+          token: ${{ secrets.RELAY_RO_TOKEN }}
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: relay-catalog/go.mod
+
+      - name: Unit tests (rules)
+        working-directory: relay-catalog
+        run: go test ./...
+
+      - name: Validate catalog data
+        working-directory: relay-catalog
+        run: go run ./cmd/validate ./data

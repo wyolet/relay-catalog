@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Pricing.schema.json
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
