@@ -1,8 +1,0 @@
-# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Host.schema.json
-apiVersion: relay.wyolet.dev/v1alpha2
-kind: Host
-metadata:
-    name: gemini
-    displayName: Gemini
-spec:
-    baseURL: ""

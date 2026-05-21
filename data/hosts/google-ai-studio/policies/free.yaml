@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+    name: google-ai-studio-free-rl
+    displayName: Google AI Studio Free tier rate limits
+    description: "Google AI Studio Free tier (no billing account required). Representative relay-side caps — actual upstream limits vary per model (e.g. gemini-2.5-flash-lite is 30 RPM free, 2.5-pro is 5 RPM free). Numbers are conservative floor across models per ai.google.dev/gemini-api/docs/rate-limits."
+    owner:
+        kind: host
+        name: google-ai-studio
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 15
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens
+          amount: 1000000
+          window: 1m
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+    name: google-ai-studio-free
+    displayName: Google AI Studio Free
+    owner:
+        kind: host
+        name: google-ai-studio
+spec:
+    rateLimit: google-ai-studio-free-rl

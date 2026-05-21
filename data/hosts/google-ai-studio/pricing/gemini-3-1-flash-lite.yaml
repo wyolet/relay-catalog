@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: google-ai-studio-gemini-3-1-flash-lite
+    displayName: Gemini 3.1 Flash-Lite pricing
+    owner:
+        kind: host
+        id: google-ai-studio
+spec:
+    currency: USD
+    targetModels:
+        - gemini-3-1-flash-lite
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.25
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.50
+          aboveTokens: 200000
+        - meter: tokens.audio_input
+          unit: per_million
+          amount: 0.50
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.50
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.00
+          aboveTokens: 200000
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.025

@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+    name: google-ai-studio-tier-3-rl
+    displayName: Google AI Studio Tier 3 rate limits
+    description: "Google AI Studio Tier 3 ($1000+ cumulative spend). Representative relay-side caps per ai.google.dev/gemini-api/docs/rate-limits. Tier 3 provides the highest available limits for production deployments."
+    owner:
+        kind: host
+        name: google-ai-studio
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 5000
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens
+          amount: 16000000
+          window: 1m
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+    name: google-ai-studio-tier-3
+    displayName: Google AI Studio Tier 3
+    owner:
+        kind: host
+        name: google-ai-studio
+spec:
+    rateLimit: google-ai-studio-tier-3-rl

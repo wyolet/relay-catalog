@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-2-5-flash
+    displayName: Gemini 2.5 Flash
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemini-2-5-flash
+        source: google-ai-studio
+        source_version: "2026-05-21"
+spec:
+    hosts:
+        - host: google-ai-studio
+          adapter: openai
+          snapshots:
+              - gemini-2-5-flash
+              - gemini-2-5-flash-001
+    family: gemini-2-5-flash
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        vision: true
+        reasoning: true
+        structuredOutputs: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+            - video
+            - file
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 65536
+    snapshots:
+        - name: gemini-2-5-flash
+          originalName: gemini-2.5-flash
+        - name: gemini-2-5-flash-001
+          originalName: gemini-2.5-flash-001
+          releasedAt: "2025-04-17"
+    pointer: gemini-2-5-flash
+    tags:
+        - multimodal
+        - thinking
+        - structured-outputs
+        - cost-effective

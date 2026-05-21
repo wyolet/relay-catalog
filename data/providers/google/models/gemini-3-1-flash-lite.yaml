@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-3-1-flash-lite
+    displayName: Gemini 3.1 Flash-Lite
+    description: Newest cost-optimized lite model. Faster and cheaper than the 2.5 generation.
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemini-3-1-flash-lite
+        source: google-ai-studio
+        source_version: "2026-05-21"
+spec:
+    hosts:
+        - host: google-ai-studio
+          adapter: openai
+          snapshots:
+              - gemini-3-1-flash-lite
+    family: gemini-3-1-flash-lite
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        structuredOutputs: true
+        promptCache: true
+        batch: true
+        webSearch: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+            - video
+            - file
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 65536
+    knowledgeCutoff: "2025-01-01"
+    snapshots:
+        - name: gemini-3-1-flash-lite
+          originalName: gemini-3.1-flash-lite
+    pointer: gemini-3-1-flash-lite
+    tags:
+        - cost-optimized
+        - multimodal
+        - thinking
+        - structured-outputs

@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-2-5-flash-lite
+    displayName: Gemini 2.5 Flash-Lite
+    description: Mainstream cost-optimized model. Thinking is off by default but configurable up to 24K budget.
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemini-2-5-flash-lite
+        source: google-ai-studio
+        source_version: "2026-05-21"
+spec:
+    hosts:
+        - host: google-ai-studio
+          adapter: openai
+          snapshots:
+              - gemini-2-5-flash-lite
+    family: gemini-2-5-flash-lite
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        structuredOutputs: true
+        promptCache: true
+        batch: true
+        webSearch: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+            - video
+            - file
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 65536
+    knowledgeCutoff: "2025-01-01"
+    snapshots:
+        - name: gemini-2-5-flash-lite
+          originalName: gemini-2.5-flash-lite
+    pointer: gemini-2-5-flash-lite
+    tags:
+        - cost-optimized
+        - multimodal
+        - structured-outputs

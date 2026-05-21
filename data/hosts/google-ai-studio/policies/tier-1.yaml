@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+    name: google-ai-studio-tier-1-rl
+    displayName: Google AI Studio Tier 1 rate limits
+    description: "Google AI Studio Tier 1 (pay-as-you-go, any billing spend). Representative relay-side caps — actual upstream limits vary per model per ai.google.dev/gemini-api/docs/rate-limits. Tier 1 generally grants 1000–2000 RPM for flash models."
+    owner:
+        kind: host
+        name: google-ai-studio
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 1000
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens
+          amount: 4000000
+          window: 1m
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+    name: google-ai-studio-tier-1
+    displayName: Google AI Studio Tier 1
+    owner:
+        kind: host
+        name: google-ai-studio
+spec:
+    rateLimit: google-ai-studio-tier-1-rl
