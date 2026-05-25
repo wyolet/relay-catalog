@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: volcengine
-          upstreamName: kimi-k2-thinking-251104
           adapter: openai
     family: kimi
     capabilities:

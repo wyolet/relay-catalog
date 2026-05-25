@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: gpt-oss-safeguard
           adapter: openai
     family: gpt-oss-safeguard
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: gpt-oss-safeguard
           adapter: openai
     family: gpt-oss-safeguard
     capabilities:

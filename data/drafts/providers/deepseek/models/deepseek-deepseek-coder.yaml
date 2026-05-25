@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: deepseek
-          upstreamName: deepseek/deepseek-coder
           adapter: openai
     family: deepseek
     capabilities:

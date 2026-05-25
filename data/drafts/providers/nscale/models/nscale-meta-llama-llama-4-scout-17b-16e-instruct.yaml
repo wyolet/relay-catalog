@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: nscale
-          upstreamName: nscale/meta-llama/Llama-4-Scout-17B-16E-Instruct
           adapter: openai
     family: nscale
     capabilities:

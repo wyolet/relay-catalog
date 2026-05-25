@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: fireworks_ai
-          upstreamName: fireworks_ai/accounts/fireworks/models/deepseek-r1-distill-qwen-1p5b
           adapter: openai
     family: fireworks
     capabilities:

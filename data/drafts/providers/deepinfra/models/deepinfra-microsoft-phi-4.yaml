@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: deepinfra
-          upstreamName: deepinfra/microsoft/phi-4
           adapter: openai
     family: deepinfra
     capabilities:

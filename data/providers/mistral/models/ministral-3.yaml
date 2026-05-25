@@ -14,11 +14,9 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: ministral-3
           adapter: openai
           snapshots: [ministral-3-3b]
         - host: ollama-cloud
-          upstreamName: ministral-3
           adapter: openai
           snapshots: [ministral-3-3b-cloud]
     family: ministral-3
@@ -55,11 +53,9 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: ministral-3
           adapter: openai
           snapshots: [ministral-3-8b]
         - host: ollama-cloud
-          upstreamName: ministral-3
           adapter: openai
           snapshots: [ministral-3-8b-cloud]
     family: ministral-3
@@ -96,11 +92,9 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: ministral-3
           adapter: openai
           snapshots: [ministral-3-14b]
         - host: ollama-cloud
-          upstreamName: ministral-3
           adapter: openai
           snapshots: [ministral-3-14b-cloud]
     family: ministral-3

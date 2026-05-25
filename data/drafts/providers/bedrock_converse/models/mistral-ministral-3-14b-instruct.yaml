@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock_converse
-          upstreamName: mistral.ministral-3-14b-instruct
           adapter: openai
     family: mistral
     capabilities:

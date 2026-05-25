@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: azure_ai
-          upstreamName: azure_ai/model_router
           adapter: openai
     family: azure
     capabilities:

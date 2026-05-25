@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: hyperbolic
-          upstreamName: hyperbolic/meta-llama/Llama-3.2-3B-Instruct
           adapter: openai
     family: hyperbolic
     capabilities:

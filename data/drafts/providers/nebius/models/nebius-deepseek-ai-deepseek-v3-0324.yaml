@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: nebius
-          upstreamName: nebius/deepseek-ai/DeepSeek-V3-0324
           adapter: openai
     family: nebius
     capabilities:

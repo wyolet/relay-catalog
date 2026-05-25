@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock_converse
-          upstreamName: nvidia.nemotron-nano-12b-v2
           adapter: openai
     family: nvidia
     capabilities:

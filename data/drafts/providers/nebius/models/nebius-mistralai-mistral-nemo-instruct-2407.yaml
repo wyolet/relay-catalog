@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: nebius
-          upstreamName: nebius/mistralai/Mistral-Nemo-Instruct-2407
           adapter: openai
     family: nebius
     capabilities:

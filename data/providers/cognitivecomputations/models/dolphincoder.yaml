@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: dolphincoder
           adapter: openai
     family: dolphincoder
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: dolphincoder
           adapter: openai
     family: dolphincoder
     capabilities:

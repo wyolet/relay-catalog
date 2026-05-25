@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: azure
-          upstreamName: azure/o4-mini
           adapter: openai
     family: azure
     capabilities:

@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: neural-chat
           adapter: openai
     family: neural-chat
     capabilities:

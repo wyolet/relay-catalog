@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: oci
-          upstreamName: oci/meta.llama-3.3-70b-instruct
           adapter: openai
     family: oci
     capabilities:

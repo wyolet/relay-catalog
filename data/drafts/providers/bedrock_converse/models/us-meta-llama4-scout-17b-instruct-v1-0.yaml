@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock_converse
-          upstreamName: us.meta.llama4-scout-17b-instruct-v1:0
           adapter: openai
     family: us
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: together_ai
-          upstreamName: together_ai/mistralai/Mistral-Small-24B-Instruct-2501
           adapter: openai
     family: together
     capabilities:

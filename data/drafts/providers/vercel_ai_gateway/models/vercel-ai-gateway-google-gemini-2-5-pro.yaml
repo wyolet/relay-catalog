@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: vercel_ai_gateway
-          upstreamName: vercel_ai_gateway/google/gemini-2.5-pro
           adapter: openai
     family: vercel
     capabilities:

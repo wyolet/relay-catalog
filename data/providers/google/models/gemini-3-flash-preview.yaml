@@ -15,11 +15,9 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: gemini-3-flash-preview
           adapter: openai
           snapshots: [gemini-3-flash-preview-latest]
         - host: ollama-cloud
-          upstreamName: gemini-3-flash-preview
           adapter: openai
           snapshots: [gemini-3-flash-preview-cloud]
         - host: google-ai-studio

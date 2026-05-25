@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: cohere_chat
-          upstreamName: command-r7b-12-2024
           adapter: openai
     family: command
     capabilities:

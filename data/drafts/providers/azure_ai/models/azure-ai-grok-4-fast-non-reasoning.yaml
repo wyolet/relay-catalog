@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: azure_ai
-          upstreamName: azure_ai/grok-4-fast-non-reasoning
           adapter: openai
     family: azure
     capabilities:

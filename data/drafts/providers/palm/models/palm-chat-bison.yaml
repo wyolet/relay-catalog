@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: palm
-          upstreamName: palm/chat-bison
           adapter: openai
     family: palm
     capabilities:

@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: mistral-medium-3.5
           adapter: openai
     family: mistral-medium-3.5
     capabilities:

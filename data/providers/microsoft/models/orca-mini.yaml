@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: orca-mini
           adapter: openai
     family: orca-mini
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: orca-mini
           adapter: openai
     family: orca-mini
     capabilities:
@@ -80,7 +78,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: orca-mini
           adapter: openai
     family: orca-mini
     capabilities:
@@ -113,7 +110,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: orca-mini
           adapter: openai
     family: orca-mini
     capabilities:

@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: starcoder2
           adapter: openai
     family: starcoder2
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: starcoder2
           adapter: openai
     family: starcoder2
     capabilities:
@@ -80,7 +78,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: starcoder2
           adapter: openai
     family: starcoder2
     capabilities:

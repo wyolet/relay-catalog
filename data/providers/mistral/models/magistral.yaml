@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: magistral
           adapter: openai
     family: magistral
     capabilities:

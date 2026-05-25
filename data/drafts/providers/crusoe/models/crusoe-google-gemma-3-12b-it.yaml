@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: crusoe
-          upstreamName: crusoe/google/gemma-3-12b-it
           adapter: openai
     family: crusoe
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: nscale
-          upstreamName: nscale/mistralai/mixtral-8x22b-instruct-v0.1
           adapter: openai
     family: nscale
     capabilities:

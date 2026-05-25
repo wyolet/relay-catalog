@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: azure
-          upstreamName: azure/gpt-35-turbo-16k-0613
           adapter: openai
     family: azure
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock_converse
-          upstreamName: qwen.qwen3-coder-480b-a35b-v1:0
           adapter: openai
     family: qwen
     capabilities:

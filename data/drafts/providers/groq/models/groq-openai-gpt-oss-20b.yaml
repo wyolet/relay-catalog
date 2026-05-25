@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: groq
-          upstreamName: groq/openai/gpt-oss-20b
           adapter: openai
     family: groq
     capabilities:

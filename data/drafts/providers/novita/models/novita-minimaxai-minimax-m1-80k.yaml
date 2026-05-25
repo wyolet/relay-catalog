@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: novita
-          upstreamName: novita/minimaxai/minimax-m1-80k
           adapter: openai
     family: novita
     capabilities:

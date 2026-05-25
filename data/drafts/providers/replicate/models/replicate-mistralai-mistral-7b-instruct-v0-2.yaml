@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: replicate
-          upstreamName: replicate/mistralai/mistral-7b-instruct-v0.2
           adapter: openai
     family: replicate
     capabilities:

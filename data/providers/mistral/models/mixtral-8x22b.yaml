@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: mixtral
           adapter: openai
     family: mixtral
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: mixtral-8x22B-Instruct-v0.1
           adapter: openai
     family: mistral
     capabilities:

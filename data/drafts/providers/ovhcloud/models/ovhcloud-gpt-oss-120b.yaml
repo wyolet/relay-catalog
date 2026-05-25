@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: ovhcloud
-          upstreamName: ovhcloud/gpt-oss-120b
           adapter: openai
     family: ovhcloud
     capabilities:

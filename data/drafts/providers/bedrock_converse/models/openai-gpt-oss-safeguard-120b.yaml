@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock_converse
-          upstreamName: openai.gpt-oss-safeguard-120b
           adapter: openai
     family: openai
     capabilities:

@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-4
           adapter: openai
     family: gpt
     capabilities:
@@ -50,7 +49,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-4-0125-preview
           adapter: openai
     family: gpt
     capabilities:
@@ -90,7 +88,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-4-0314
           adapter: openai
     family: gpt
     capabilities:
@@ -127,7 +124,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-4-0613
           adapter: openai
     family: gpt
     capabilities:
@@ -166,7 +162,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-4-1106-preview
           adapter: openai
     family: gpt
     capabilities:
@@ -206,7 +201,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-4-turbo
           adapter: openai
     family: gpt
     capabilities:

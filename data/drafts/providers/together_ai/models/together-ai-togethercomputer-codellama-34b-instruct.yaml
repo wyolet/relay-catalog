@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: together_ai
-          upstreamName: together_ai/togethercomputer/CodeLlama-34b-Instruct
           adapter: openai
     family: together
     capabilities:

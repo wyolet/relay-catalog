@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: deepinfra
-          upstreamName: deepinfra/nvidia/Llama-3.3-Nemotron-Super-49B-v1.5
           adapter: openai
     family: deepinfra
     capabilities:

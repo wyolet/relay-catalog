@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: openrouter
-          upstreamName: openrouter/qwen/qwen3.5-27b
           adapter: openai
     family: openrouter
     capabilities:

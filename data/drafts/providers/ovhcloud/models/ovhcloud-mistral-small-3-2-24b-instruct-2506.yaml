@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: ovhcloud
-          upstreamName: ovhcloud/Mistral-Small-3.2-24B-Instruct-2506
           adapter: openai
     family: ovhcloud
     capabilities:

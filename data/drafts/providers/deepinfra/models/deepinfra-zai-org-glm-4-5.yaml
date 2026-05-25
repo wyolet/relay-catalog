@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: deepinfra
-          upstreamName: deepinfra/zai-org/GLM-4.5
           adapter: openai
     family: deepinfra
     capabilities:

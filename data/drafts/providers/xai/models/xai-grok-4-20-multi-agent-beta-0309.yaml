@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: xai
-          upstreamName: xai/grok-4.20-multi-agent-beta-0309
           adapter: openai
     family: xai
     capabilities:

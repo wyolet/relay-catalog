@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: gmi
-          upstreamName: gmi/moonshotai/Kimi-K2-Thinking
           adapter: openai
     family: gmi
     capabilities:

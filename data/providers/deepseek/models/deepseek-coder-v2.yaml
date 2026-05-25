@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: deepseek-coder-v2
           adapter: openai
     family: deepseek-coder-v2
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: deepseek-coder-v2
           adapter: openai
     family: deepseek-coder-v2
     capabilities:
@@ -80,7 +78,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: deepseek-coder-v2-instruct
           adapter: openai
     family: deepseek
     capabilities:
@@ -115,7 +112,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: deepseek-coder-v2-lite-instruct
           adapter: openai
     family: deepseek
     capabilities:

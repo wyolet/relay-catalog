@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: watsonx
-          upstreamName: watsonx/core42/jais-13b-chat
           adapter: openai
     family: watsonx
     capabilities:

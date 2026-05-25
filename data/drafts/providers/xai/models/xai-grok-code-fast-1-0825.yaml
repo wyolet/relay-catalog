@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: xai
-          upstreamName: xai/grok-code-fast-1-0825
           adapter: openai
     family: xai
     capabilities:

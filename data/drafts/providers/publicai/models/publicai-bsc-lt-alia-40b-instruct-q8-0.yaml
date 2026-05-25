@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: publicai
-          upstreamName: publicai/BSC-LT/ALIA-40b-instruct_Q8_0
           adapter: openai
     family: publicai
     capabilities:

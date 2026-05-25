@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: deepinfra
-          upstreamName: deepinfra/Qwen/Qwen3-Coder-480B-A35B-Instruct
           adapter: openai
     family: deepinfra
     capabilities:

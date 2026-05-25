@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock
-          upstreamName: mistral.mistral-large-2402-v1:0
           adapter: openai
     family: mistral
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: deepinfra
-          upstreamName: deepinfra/microsoft/WizardLM-2-8x22B
           adapter: openai
     family: deepinfra
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: volcengine
-          upstreamName: volcengine/doubao-seed-2-0-lite-260215
           adapter: openai
     family: volcengine
     capabilities:

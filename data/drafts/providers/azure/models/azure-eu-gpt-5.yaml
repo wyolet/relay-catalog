@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: azure
-          upstreamName: azure/eu/gpt-5-2025-08-07
           adapter: openai
     family: azure
     capabilities:

@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: olmo-3.1
           adapter: openai
     family: olmo-3.1
     capabilities:
@@ -49,7 +48,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: olmo-3
           adapter: openai
     family: olmo-3
     capabilities:
@@ -82,7 +80,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: olmo-3
           adapter: openai
     family: olmo-3
     capabilities:

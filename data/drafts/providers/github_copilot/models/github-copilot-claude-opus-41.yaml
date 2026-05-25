@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: github_copilot
-          upstreamName: github_copilot/claude-opus-41
           adapter: openai
     family: github
     capabilities:

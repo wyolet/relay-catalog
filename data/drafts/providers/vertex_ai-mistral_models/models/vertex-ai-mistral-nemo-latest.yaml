@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: vertex_ai-mistral_models
-          upstreamName: vertex_ai/mistral-nemo@latest
           adapter: openai
     family: vertex
     capabilities:

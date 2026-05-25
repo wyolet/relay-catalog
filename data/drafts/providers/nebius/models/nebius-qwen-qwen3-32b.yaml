@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: nebius
-          upstreamName: nebius/Qwen/Qwen3-32B
           adapter: openai
     family: nebius
     capabilities:

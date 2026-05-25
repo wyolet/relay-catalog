@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: mxbai-embed-large
           adapter: openai
     family: mxbai-embed-large
     capabilities:

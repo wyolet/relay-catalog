@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: baseten
-          upstreamName: baseten/MiniMaxAI/MiniMax-M2.5
           adapter: openai
     family: baseten
     capabilities:

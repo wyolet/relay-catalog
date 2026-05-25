@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: deepinfra
-          upstreamName: deepinfra/Qwen/Qwen3-235B-A22B-Thinking-2507
           adapter: openai
     family: deepinfra
     capabilities:

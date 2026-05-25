@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: sambanova
-          upstreamName: sambanova/Meta-Llama-3.1-405B-Instruct
           adapter: openai
     family: sambanova
     capabilities:

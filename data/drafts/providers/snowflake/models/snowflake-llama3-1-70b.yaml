@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: snowflake
-          upstreamName: snowflake/llama3.1-70b
           adapter: openai
     family: snowflake
     capabilities:

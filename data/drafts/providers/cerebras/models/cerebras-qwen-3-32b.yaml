@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: cerebras
-          upstreamName: cerebras/qwen-3-32b
           adapter: openai
     family: cerebras
     capabilities:

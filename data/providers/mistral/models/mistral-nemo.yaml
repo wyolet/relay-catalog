@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: mistral-nemo
           adapter: openai
     family: mistral-nemo
     capabilities:

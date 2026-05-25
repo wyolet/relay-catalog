@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Policy.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+  name: opencode-zen-default
+  displayName: OpenCode Zen (default tier)
+  description: "Default host-owned tier policy for OpenCode Zen. No relay-side cap; OpenCode Zen enforces its own quotas server-side."
+  owner:
+    kind: host
+    name: opencode-zen
+spec: {}

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: vertex_ai-anthropic_models
-          upstreamName: vertex_ai/claude-opus-4-6
           adapter: openai
     family: vertex
     capabilities:

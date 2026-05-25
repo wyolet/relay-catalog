@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: sambanova
-          upstreamName: sambanova/gpt-oss-120b
           adapter: openai
     family: sambanova
     capabilities:

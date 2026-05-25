@@ -14,10 +14,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: gemma4
           adapter: openai
         - host: ollama-self
-          upstreamName: gemma4
           adapter: openai
     family: gemma4
     capabilities:
@@ -52,10 +50,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: gemma4
           adapter: openai
         - host: ollama-self
-          upstreamName: gemma4
           adapter: openai
     family: gemma4
     capabilities:
@@ -90,10 +86,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: gemma4
           adapter: openai
         - host: ollama-self
-          upstreamName: gemma4
           adapter: openai
     family: gemma4
     capabilities:
@@ -128,11 +122,9 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: gemma4
           adapter: openai
           snapshots: [gemma4-31b]
         - host: ollama-cloud
-          upstreamName: gemma4
           adapter: openai
           snapshots: [gemma4-31b-cloud]
     family: gemma4

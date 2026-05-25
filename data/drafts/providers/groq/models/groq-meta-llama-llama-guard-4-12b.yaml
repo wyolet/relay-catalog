@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: groq
-          upstreamName: groq/meta-llama/llama-guard-4-12b
           adapter: openai
     family: groq
     capabilities:

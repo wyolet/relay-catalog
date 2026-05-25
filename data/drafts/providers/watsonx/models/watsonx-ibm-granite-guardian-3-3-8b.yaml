@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: watsonx
-          upstreamName: watsonx/ibm/granite-guardian-3-3-8b
           adapter: openai
     family: watsonx
     capabilities:

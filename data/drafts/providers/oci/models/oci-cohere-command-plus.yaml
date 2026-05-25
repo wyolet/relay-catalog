@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: oci
-          upstreamName: oci/cohere.command-plus-latest
           adapter: openai
     family: oci
     capabilities:

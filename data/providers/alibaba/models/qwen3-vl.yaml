@@ -14,10 +14,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: qwen3-vl
           adapter: openai
         - host: ollama-self
-          upstreamName: qwen3-vl
           adapter: openai
     family: qwen3-vl
     capabilities:
@@ -51,10 +49,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: qwen3-vl
           adapter: openai
         - host: ollama-self
-          upstreamName: qwen3-vl
           adapter: openai
     family: qwen3-vl
     capabilities:
@@ -88,10 +84,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: qwen3-vl
           adapter: openai
         - host: ollama-self
-          upstreamName: qwen3-vl
           adapter: openai
     family: qwen3-vl
     capabilities:
@@ -125,10 +119,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: qwen3-vl
           adapter: openai
         - host: ollama-self
-          upstreamName: qwen3-vl
           adapter: openai
     family: qwen3-vl
     capabilities:
@@ -162,10 +154,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: qwen3-vl
           adapter: openai
         - host: ollama-self
-          upstreamName: qwen3-vl
           adapter: openai
     family: qwen3-vl
     capabilities:
@@ -199,11 +189,9 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: qwen3-vl
           adapter: openai
           snapshots: [qwen3-vl-235b]
         - host: ollama-cloud
-          upstreamName: qwen3-vl
           adapter: openai
           snapshots: [qwen3-vl-235b-cloud, qwen3-vl-235b-instruct-cloud]
     family: qwen3-vl

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: perplexity
-          upstreamName: perplexity/llama-2-70b-chat
           adapter: openai
     family: perplexity
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: vercel_ai_gateway
-          upstreamName: vercel_ai_gateway/amazon/titan-embed-text-v2
           adapter: openai
     family: vercel
     capabilities:

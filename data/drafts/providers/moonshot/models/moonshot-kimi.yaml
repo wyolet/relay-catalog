@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: moonshot
-          upstreamName: moonshot/kimi-latest
           adapter: openai
     family: moonshot
     capabilities:

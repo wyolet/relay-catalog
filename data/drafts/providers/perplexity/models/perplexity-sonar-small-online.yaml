@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: perplexity
-          upstreamName: perplexity/sonar-small-online
           adapter: openai
     family: perplexity
     capabilities:

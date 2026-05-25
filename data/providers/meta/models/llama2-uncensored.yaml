@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: llama2-uncensored
           adapter: openai
     family: llama2-uncensored
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: llama2-uncensored
           adapter: openai
     family: llama2-uncensored
     capabilities:

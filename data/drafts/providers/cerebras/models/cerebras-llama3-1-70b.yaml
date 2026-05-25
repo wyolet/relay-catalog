@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: cerebras
-          upstreamName: cerebras/llama3.1-70b
           adapter: openai
     family: cerebras
     capabilities:

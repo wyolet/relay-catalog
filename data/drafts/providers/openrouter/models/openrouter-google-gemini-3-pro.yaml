@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: openrouter
-          upstreamName: openrouter/google/gemini-3-pro-preview
           adapter: openai
     family: openrouter
     capabilities:

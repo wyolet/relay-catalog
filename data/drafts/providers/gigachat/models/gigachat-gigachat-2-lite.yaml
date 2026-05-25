@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: gigachat
-          upstreamName: gigachat/GigaChat-2-Lite
           adapter: openai
     family: gigachat
     capabilities:

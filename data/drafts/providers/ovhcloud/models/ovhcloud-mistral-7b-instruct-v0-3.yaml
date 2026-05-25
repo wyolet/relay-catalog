@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: ovhcloud
-          upstreamName: ovhcloud/Mistral-7B-Instruct-v0.3
           adapter: openai
     family: ovhcloud
     capabilities:

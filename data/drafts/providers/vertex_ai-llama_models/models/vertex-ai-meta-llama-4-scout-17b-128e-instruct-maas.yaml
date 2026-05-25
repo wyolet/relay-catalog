@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: vertex_ai-llama_models
-          upstreamName: vertex_ai/meta/llama-4-scout-17b-128e-instruct-maas
           adapter: openai
     family: vertex
     capabilities:

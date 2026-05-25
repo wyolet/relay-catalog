@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: crusoe
-          upstreamName: crusoe/moonshotai/Kimi-K2-Thinking
           adapter: openai
     family: crusoe
     capabilities:

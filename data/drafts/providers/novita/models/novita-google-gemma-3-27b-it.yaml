@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: novita
-          upstreamName: novita/google/gemma-3-27b-it
           adapter: openai
     family: novita
     capabilities:

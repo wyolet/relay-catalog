@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: azure
-          upstreamName: azure/gpt-audio-1.5-2026-02-23
           adapter: openai
     family: azure
     capabilities:

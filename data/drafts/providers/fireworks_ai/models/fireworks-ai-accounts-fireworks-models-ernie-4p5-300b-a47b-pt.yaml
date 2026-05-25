@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: fireworks_ai
-          upstreamName: fireworks_ai/accounts/fireworks/models/ernie-4p5-300b-a47b-pt
           adapter: openai
     family: fireworks
     capabilities:

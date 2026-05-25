@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: publicai
-          upstreamName: publicai/swiss-ai/apertus-70b-instruct
           adapter: openai
     family: publicai
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: fireworks_ai
-          upstreamName: fireworks_ai/accounts/fireworks/models/qwen2-vl-7b-instruct
           adapter: openai
     family: fireworks
     capabilities:

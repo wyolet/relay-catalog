@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: r1-1776
           adapter: openai
     family: r1-1776
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: r1-1776
           adapter: openai
     family: r1-1776
     capabilities:

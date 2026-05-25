@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: vertex_ai-qwen_models
-          upstreamName: vertex_ai/qwen/qwen3-coder-480b-a35b-instruct-maas
           adapter: openai
     family: vertex
     capabilities:

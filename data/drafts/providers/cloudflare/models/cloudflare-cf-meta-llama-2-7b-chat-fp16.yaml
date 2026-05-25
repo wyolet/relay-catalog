@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: cloudflare
-          upstreamName: cloudflare/@cf/meta/llama-2-7b-chat-fp16
           adapter: openai
     family: cloudflare
     capabilities:

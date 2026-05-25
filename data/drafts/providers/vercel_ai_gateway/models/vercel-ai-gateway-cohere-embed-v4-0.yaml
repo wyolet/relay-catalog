@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: vercel_ai_gateway
-          upstreamName: vercel_ai_gateway/cohere/embed-v4.0
           adapter: openai
     family: vercel
     capabilities:

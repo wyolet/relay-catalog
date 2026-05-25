@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: volcengine
-          upstreamName: glm-4-7-251222
           adapter: openai
     family: glm
     capabilities:

@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: granite3.3
           adapter: openai
     family: granite3.3
     capabilities:

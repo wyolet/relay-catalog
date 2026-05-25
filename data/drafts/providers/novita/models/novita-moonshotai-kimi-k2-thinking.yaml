@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: novita
-          upstreamName: novita/moonshotai/kimi-k2-thinking
           adapter: openai
     family: novita
     capabilities:

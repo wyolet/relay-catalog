@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: sambanova
-          upstreamName: sambanova/Qwen2-Audio-7B-Instruct
           adapter: openai
     family: sambanova
     capabilities:

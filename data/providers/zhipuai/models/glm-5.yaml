@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: glm-5
           adapter: openai
     family: glm-5
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: glm-5.1
           adapter: openai
     family: glm-5.1
     capabilities:

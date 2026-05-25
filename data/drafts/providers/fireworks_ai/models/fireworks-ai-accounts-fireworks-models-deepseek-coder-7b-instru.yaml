@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: fireworks_ai
-          upstreamName: fireworks_ai/accounts/fireworks/models/deepseek-coder-7b-instruct-v1p5
           adapter: openai
     family: fireworks
     capabilities:

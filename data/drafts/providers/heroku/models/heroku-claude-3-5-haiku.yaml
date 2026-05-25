@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: heroku
-          upstreamName: heroku/claude-3-5-haiku
           adapter: openai
     family: heroku
     capabilities:

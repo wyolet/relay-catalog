@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-4-sonnet-20250514
           adapter: anthropic
     family: claude
     capabilities:
@@ -59,7 +58,6 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-sonnet-4-20250514
           adapter: anthropic
     family: claude
     capabilities:
@@ -106,7 +104,6 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-sonnet-4-5
           adapter: anthropic
     family: claude
     capabilities:
@@ -152,7 +149,6 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-sonnet-4-6
           adapter: anthropic
     family: claude
     capabilities:

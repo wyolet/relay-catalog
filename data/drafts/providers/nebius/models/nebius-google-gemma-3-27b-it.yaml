@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: nebius
-          upstreamName: nebius/google/gemma-3-27b-it
           adapter: openai
     family: nebius
     capabilities:

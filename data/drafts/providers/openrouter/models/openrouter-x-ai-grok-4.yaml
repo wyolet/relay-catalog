@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: openrouter
-          upstreamName: openrouter/x-ai/grok-4
           adapter: openai
     family: openrouter
     capabilities:

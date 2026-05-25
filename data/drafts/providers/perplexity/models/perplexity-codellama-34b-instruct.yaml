@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: perplexity
-          upstreamName: perplexity/codellama-34b-instruct
           adapter: openai
     family: perplexity
     capabilities:

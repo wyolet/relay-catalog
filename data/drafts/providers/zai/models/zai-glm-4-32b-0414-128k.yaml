@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: zai
-          upstreamName: zai/glm-4-32b-0414-128k
           adapter: openai
     family: zai
     capabilities:

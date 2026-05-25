@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-5
           adapter: openai
     family: gpt
     capabilities:
@@ -61,7 +60,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-5-chat
           adapter: openai
     family: gpt
     capabilities:
@@ -104,7 +102,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-5-mini
           adapter: openai
     family: gpt
     capabilities:
@@ -151,7 +148,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-5-nano
           adapter: openai
     family: gpt
     capabilities:
@@ -198,7 +194,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-5-search-api
           adapter: openai
     family: gpt
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: deepinfra
-          upstreamName: deepinfra/allenai/olmOCR-7B-0725-FP8
           adapter: openai
     family: deepinfra
     capabilities:

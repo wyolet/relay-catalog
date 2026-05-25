@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: vertex_ai-ai21_models
-          upstreamName: vertex_ai/jamba-1.5-mini
           adapter: openai
     family: vertex
     capabilities:

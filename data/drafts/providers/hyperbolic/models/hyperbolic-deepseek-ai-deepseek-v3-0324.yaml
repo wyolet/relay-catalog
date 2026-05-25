@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: hyperbolic
-          upstreamName: hyperbolic/deepseek-ai/DeepSeek-V3-0324
           adapter: openai
     family: hyperbolic
     capabilities:

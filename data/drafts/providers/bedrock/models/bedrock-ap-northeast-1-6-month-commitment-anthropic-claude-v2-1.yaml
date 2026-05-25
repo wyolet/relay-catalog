@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock
-          upstreamName: bedrock/ap-northeast-1/6-month-commitment/anthropic.claude-v2:1
           adapter: openai
     family: bedrock
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: baseten
-          upstreamName: baseten/deepseek-ai/DeepSeek-V3.1
           adapter: openai
     family: baseten
     capabilities:

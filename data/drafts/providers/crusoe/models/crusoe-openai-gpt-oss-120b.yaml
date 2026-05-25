@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: crusoe
-          upstreamName: crusoe/openai/gpt-oss-120b
           adapter: openai
     family: crusoe
     capabilities:

@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: ft:gpt-4o-2024-11-20
           adapter: openai
     family: ft
     capabilities:
@@ -59,7 +58,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: ft:gpt-4o-mini-2024-07-18
           adapter: openai
     family: ft
     capabilities:

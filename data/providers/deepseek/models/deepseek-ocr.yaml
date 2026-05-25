@@ -14,11 +14,9 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: deepseek-ocr
           adapter: openai
           snapshots: [deepseek-ocr-latest]
         - host: ollama-cloud
-          upstreamName: deepseek-ocr
           adapter: openai
           snapshots: [deepseek-ocr-cloud]
     family: deepseek-ocr

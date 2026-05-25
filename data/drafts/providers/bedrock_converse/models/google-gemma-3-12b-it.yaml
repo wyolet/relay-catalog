@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock_converse
-          upstreamName: google.gemma-3-12b-it
           adapter: openai
     family: google
     capabilities:

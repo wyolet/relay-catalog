@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: llamagate
-          upstreamName: llamagate/dolphin3-8b
           adapter: openai
     family: llamagate
     capabilities:

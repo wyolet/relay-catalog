@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock
-          upstreamName: eu.meta.llama3-2-3b-instruct-v1:0
           adapter: openai
     family: eu
     capabilities:

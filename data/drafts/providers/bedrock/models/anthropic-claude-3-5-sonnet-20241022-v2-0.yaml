@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock
-          upstreamName: anthropic.claude-3-5-sonnet-20241022-v2:0
           adapter: openai
     family: anthropic
     capabilities:

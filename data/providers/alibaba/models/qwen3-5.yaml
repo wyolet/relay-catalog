@@ -14,10 +14,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: qwen3.5
           adapter: openai
         - host: ollama-self
-          upstreamName: qwen3.5
           adapter: openai
     family: qwen3.5
     capabilities:
@@ -51,10 +49,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: qwen3.5
           adapter: openai
         - host: ollama-self
-          upstreamName: qwen3.5
           adapter: openai
     family: qwen3.5
     capabilities:
@@ -88,10 +84,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: qwen3.5
           adapter: openai
         - host: ollama-self
-          upstreamName: qwen3.5
           adapter: openai
     family: qwen3.5
     capabilities:
@@ -125,10 +119,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: qwen3.5
           adapter: openai
         - host: ollama-self
-          upstreamName: qwen3.5
           adapter: openai
     family: qwen3.5
     capabilities:
@@ -162,10 +154,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: qwen3.5
           adapter: openai
         - host: ollama-self
-          upstreamName: qwen3.5
           adapter: openai
     family: qwen3.5
     capabilities:
@@ -199,10 +189,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: qwen3.5
           adapter: openai
         - host: ollama-self
-          upstreamName: qwen3.5
           adapter: openai
     family: qwen3.5
     capabilities:
@@ -236,10 +224,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: qwen3.5
           adapter: openai
         - host: ollama-self
-          upstreamName: qwen3.5
           adapter: openai
     family: qwen3.5
     capabilities:
@@ -273,11 +259,9 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: qwen3.5
           adapter: openai
           snapshots: [qwen3-5-397b]
         - host: ollama-cloud
-          upstreamName: qwen3.5
           adapter: openai
           snapshots: [qwen3-5-397b-cloud]
     family: qwen3.5

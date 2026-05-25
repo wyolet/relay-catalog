@@ -14,10 +14,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: gemma3
           adapter: openai
         - host: ollama-self
-          upstreamName: gemma3
           adapter: openai
     family: gemma3
     capabilities:
@@ -51,10 +49,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: gemma3
           adapter: openai
         - host: ollama-self
-          upstreamName: gemma3
           adapter: openai
     family: gemma3
     capabilities:
@@ -88,11 +84,9 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: gemma3
           adapter: openai
           snapshots: [gemma3-4b]
         - host: ollama-cloud
-          upstreamName: gemma3
           adapter: openai
           snapshots: [gemma3-4b-cloud]
     family: gemma3
@@ -129,11 +123,9 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: gemma3
           adapter: openai
           snapshots: [gemma3-12b]
         - host: ollama-cloud
-          upstreamName: gemma3
           adapter: openai
           snapshots: [gemma3-12b-cloud]
     family: gemma3
@@ -170,11 +162,9 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: gemma3
           adapter: openai
           snapshots: [gemma3-27b]
         - host: ollama-cloud
-          upstreamName: gemma3
           adapter: openai
           snapshots: [gemma3-27b-cloud]
     family: gemma3

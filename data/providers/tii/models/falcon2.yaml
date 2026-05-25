@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: falcon2
           adapter: openai
     family: falcon2
     capabilities:

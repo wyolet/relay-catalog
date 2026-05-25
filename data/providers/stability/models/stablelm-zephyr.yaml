@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: stablelm-zephyr
           adapter: openai
     family: stablelm-zephyr
     capabilities:

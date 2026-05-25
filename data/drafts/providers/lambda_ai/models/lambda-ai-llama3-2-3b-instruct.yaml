@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: lambda_ai
-          upstreamName: lambda_ai/llama3.2-3b-instruct
           adapter: openai
     family: lambda
     capabilities:

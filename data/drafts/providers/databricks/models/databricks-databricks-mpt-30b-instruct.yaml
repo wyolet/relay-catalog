@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: databricks
-          upstreamName: databricks/databricks-mpt-30b-instruct
           adapter: openai
     family: databricks
     capabilities:

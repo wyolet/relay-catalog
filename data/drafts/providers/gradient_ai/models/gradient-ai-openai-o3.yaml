@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: gradient_ai
-          upstreamName: gradient_ai/openai-o3
           adapter: openai
     family: gradient
     capabilities:

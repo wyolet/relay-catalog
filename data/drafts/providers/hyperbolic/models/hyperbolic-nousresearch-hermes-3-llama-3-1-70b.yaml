@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: hyperbolic
-          upstreamName: hyperbolic/NousResearch/Hermes-3-Llama-3.1-70B
           adapter: openai
     family: hyperbolic
     capabilities:

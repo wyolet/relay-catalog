@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: solar-pro
           adapter: openai
     family: solar-pro
     capabilities:

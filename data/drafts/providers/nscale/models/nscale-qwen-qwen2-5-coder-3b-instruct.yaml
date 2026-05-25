@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: nscale
-          upstreamName: nscale/Qwen/Qwen2.5-Coder-3B-Instruct
           adapter: openai
     family: nscale
     capabilities:

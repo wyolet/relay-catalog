@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: deepinfra
-          upstreamName: deepinfra/Sao10K/L3-8B-Lunaris-v1-Turbo
           adapter: openai
     family: deepinfra
     capabilities:

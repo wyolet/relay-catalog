@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: sagemaker
-          upstreamName: sagemaker/meta-textgeneration-llama-2-70b-b-f
           adapter: openai
     family: sagemaker
     capabilities:

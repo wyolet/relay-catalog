@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: devstral-small-2
           adapter: openai
     family: devstral-small-2
     capabilities:

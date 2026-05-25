@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: llamagate
-          upstreamName: llamagate/llava-7b
           adapter: openai
     family: llamagate
     capabilities:

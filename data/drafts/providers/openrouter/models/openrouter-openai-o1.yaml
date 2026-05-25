@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: openrouter
-          upstreamName: openrouter/openai/o1
           adapter: openai
     family: openrouter
     capabilities:

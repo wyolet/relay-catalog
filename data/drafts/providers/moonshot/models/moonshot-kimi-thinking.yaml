@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: moonshot
-          upstreamName: moonshot/kimi-thinking-preview
           adapter: openai
     family: moonshot
     capabilities:

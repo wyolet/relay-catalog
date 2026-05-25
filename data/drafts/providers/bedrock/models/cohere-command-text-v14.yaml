@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock
-          upstreamName: cohere.command-text-v14
           adapter: openai
     family: cohere
     capabilities:

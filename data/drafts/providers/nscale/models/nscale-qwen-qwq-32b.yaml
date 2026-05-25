@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: nscale
-          upstreamName: nscale/Qwen/QwQ-32B
           adapter: openai
     family: nscale
     capabilities:

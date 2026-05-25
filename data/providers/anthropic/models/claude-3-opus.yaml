@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-3-opus-20240229
           adapter: anthropic
     family: claude
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock
-          upstreamName: bedrock/sa-east-1/deepseek.v3.2
           adapter: openai
     family: bedrock
     capabilities:

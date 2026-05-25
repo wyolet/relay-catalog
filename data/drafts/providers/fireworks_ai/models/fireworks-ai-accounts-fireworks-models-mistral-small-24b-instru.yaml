@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: fireworks_ai
-          upstreamName: fireworks_ai/accounts/fireworks/models/mistral-small-24b-instruct-2501
           adapter: openai
     family: fireworks
     capabilities:

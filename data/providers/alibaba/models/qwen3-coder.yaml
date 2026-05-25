@@ -14,10 +14,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: qwen3-coder
           adapter: openai
         - host: ollama-self
-          upstreamName: qwen3-coder
           adapter: openai
     family: qwen3-coder
     capabilities:

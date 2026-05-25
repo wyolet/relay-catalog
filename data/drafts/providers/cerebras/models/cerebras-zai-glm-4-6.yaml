@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: cerebras
-          upstreamName: cerebras/zai-glm-4.6
           adapter: openai
     family: cerebras
     capabilities:

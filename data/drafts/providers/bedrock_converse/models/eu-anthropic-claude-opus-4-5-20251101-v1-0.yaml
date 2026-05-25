@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock_converse
-          upstreamName: eu.anthropic.claude-opus-4-5-20251101-v1:0
           adapter: openai
     family: eu
     capabilities:

@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-5.1
           adapter: openai
     family: gpt
     capabilities:
@@ -62,7 +61,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-5.1-chat-latest
           adapter: openai
     family: gpt
     capabilities:

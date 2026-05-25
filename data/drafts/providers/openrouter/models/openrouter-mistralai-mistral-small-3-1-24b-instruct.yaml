@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: openrouter
-          upstreamName: openrouter/mistralai/mistral-small-3.1-24b-instruct
           adapter: openai
     family: openrouter
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: fireworks_ai
-          upstreamName: fireworks_ai/accounts/fireworks/models/ministral-3-3b-instruct-2512
           adapter: openai
     family: fireworks
     capabilities:

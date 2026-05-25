@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: publicai
-          upstreamName: publicai/allenai/Olmo-3-32B-Think
           adapter: openai
     family: publicai
     capabilities:

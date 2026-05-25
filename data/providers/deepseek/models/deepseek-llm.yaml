@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: deepseek-llm
           adapter: openai
     family: deepseek-llm
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: deepseek-llm
           adapter: openai
     family: deepseek-llm
     capabilities:

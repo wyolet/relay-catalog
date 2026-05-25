@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: llama3-groq-tool-use
           adapter: openai
     family: llama3-groq-tool-use
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: llama3-groq-tool-use
           adapter: openai
     family: llama3-groq-tool-use
     capabilities:

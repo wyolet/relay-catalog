@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: vertex_ai-zai_models
-          upstreamName: vertex_ai/zai-org/glm-4.7-maas
           adapter: openai
     family: vertex
     capabilities:
