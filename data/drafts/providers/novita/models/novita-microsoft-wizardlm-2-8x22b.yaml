@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: novita
-          upstreamName: novita/microsoft/wizardlm-2-8x22b
           adapter: openai
     family: novita
     capabilities:

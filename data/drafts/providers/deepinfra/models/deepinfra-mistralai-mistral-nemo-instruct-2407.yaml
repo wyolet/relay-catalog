@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: deepinfra
-          upstreamName: deepinfra/mistralai/Mistral-Nemo-Instruct-2407
           adapter: openai
     family: deepinfra
     capabilities:

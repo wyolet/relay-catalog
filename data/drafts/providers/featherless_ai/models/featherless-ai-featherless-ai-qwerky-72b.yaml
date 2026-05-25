@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: featherless_ai
-          upstreamName: featherless_ai/featherless-ai/Qwerky-72B
           adapter: openai
     family: featherless
     capabilities:

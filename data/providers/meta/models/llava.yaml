@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: llava
           adapter: openai
     family: llava
     capabilities:
@@ -48,7 +47,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: llava
           adapter: openai
     family: llava
     capabilities:
@@ -82,7 +80,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: llava
           adapter: openai
     family: llava
     capabilities:

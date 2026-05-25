@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock_converse
-          upstreamName: us.amazon.nova-premier-v1:0
           adapter: openai
     family: us
     capabilities:

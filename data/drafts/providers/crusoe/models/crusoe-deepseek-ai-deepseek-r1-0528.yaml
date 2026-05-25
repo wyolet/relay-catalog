@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: crusoe
-          upstreamName: crusoe/deepseek-ai/DeepSeek-R1-0528
           adapter: openai
     family: crusoe
     capabilities:

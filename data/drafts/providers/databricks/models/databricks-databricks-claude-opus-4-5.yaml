@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: databricks
-          upstreamName: databricks/databricks-claude-opus-4-5
           adapter: openai
     family: databricks
     capabilities:

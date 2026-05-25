@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: openrouter
-          upstreamName: openrouter/z-ai/glm-4.7
           adapter: openai
     family: openrouter
     capabilities:

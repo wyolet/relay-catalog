@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock
-          upstreamName: twelvelabs.pegasus-1-2-v1:0
           adapter: openai
     family: twelvelabs
     capabilities:

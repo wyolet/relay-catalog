@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: deepinfra
-          upstreamName: deepinfra/mistralai/Mistral-Small-24B-Instruct-2501
           adapter: openai
     family: deepinfra
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: deepinfra
-          upstreamName: deepinfra/moonshotai/Kimi-K2-Instruct-0905
           adapter: openai
     family: deepinfra
     capabilities:

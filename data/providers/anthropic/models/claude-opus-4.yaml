@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-4-opus-20250514
           adapter: anthropic
     family: claude
     capabilities:
@@ -58,7 +57,6 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-opus-4-20250514
           adapter: anthropic
     family: claude
     capabilities:
@@ -105,7 +103,6 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-opus-4-1
           adapter: anthropic
     family: claude
     capabilities:
@@ -153,7 +150,6 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-opus-4-5
           adapter: anthropic
     family: claude
     capabilities:
@@ -198,7 +194,6 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-opus-4-6
           adapter: anthropic
     family: claude
     capabilities:
@@ -242,7 +237,6 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-opus-4-7
           adapter: anthropic
     family: claude
     capabilities:

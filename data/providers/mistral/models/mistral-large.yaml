@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: mistral-large
           adapter: openai
     family: mistral-large
     capabilities:
@@ -49,7 +48,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: mistral-large-instruct-2407
           adapter: openai
     family: mistral
     capabilities:
@@ -84,7 +82,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: mistral-large-3
           adapter: openai
     family: mistral-large-3
     capabilities:

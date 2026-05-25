@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: groq
-          upstreamName: groq/moonshotai/kimi-k2-instruct-0905
           adapter: openai
     family: groq
     capabilities:

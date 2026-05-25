@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: groq
-          upstreamName: groq/meta-llama/llama-4-maverick-17b-128e-instruct
           adapter: openai
     family: groq
     capabilities:

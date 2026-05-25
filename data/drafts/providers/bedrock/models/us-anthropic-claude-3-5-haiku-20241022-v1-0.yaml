@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock
-          upstreamName: us.anthropic.claude-3-5-haiku-20241022-v1:0
           adapter: openai
     family: us
     capabilities:

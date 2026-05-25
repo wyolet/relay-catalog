@@ -55,7 +55,7 @@ spec:
     hosts:
         - host: ollama-self
           adapter: openai
-          snapshots: [gpt-oss-120b]
+          snapshots: [gpt-oss-120b, gpt-oss-120b-cloud]
         - host: ollama-cloud
           adapter: openai
           snapshots: [gpt-oss-120b-cloud]

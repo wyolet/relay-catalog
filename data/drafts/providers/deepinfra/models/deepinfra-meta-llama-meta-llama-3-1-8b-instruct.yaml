@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: deepinfra
-          upstreamName: deepinfra/meta-llama/Meta-Llama-3.1-8B-Instruct
           adapter: openai
     family: deepinfra
     capabilities:

@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: cogito
           adapter: openai
     family: cogito
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: cogito
           adapter: openai
     family: cogito
     capabilities:
@@ -80,7 +78,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: cogito
           adapter: openai
     family: cogito
     capabilities:
@@ -113,7 +110,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: cogito
           adapter: openai
     family: cogito
     capabilities:
@@ -146,7 +142,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: cogito
           adapter: openai
     family: cogito
     capabilities:

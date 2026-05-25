@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: github_copilot
-          upstreamName: github_copilot/gpt-3.5-turbo-0613
           adapter: openai
     family: github
     capabilities:

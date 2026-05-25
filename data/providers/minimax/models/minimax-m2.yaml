@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: minimax-m2
           adapter: openai
     family: minimax-m2
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: minimax-m2.1
           adapter: openai
     family: minimax-m2.1
     capabilities:
@@ -80,7 +78,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: minimax-m2.5
           adapter: openai
     family: minimax-m2.5
     capabilities:
@@ -113,7 +110,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: minimax-m2.7
           adapter: openai
     family: minimax-m2.7
     capabilities:

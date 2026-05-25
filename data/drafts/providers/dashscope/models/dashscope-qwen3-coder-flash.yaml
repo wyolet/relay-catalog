@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: dashscope
-          upstreamName: dashscope/qwen3-coder-flash
           adapter: openai
     family: dashscope
     capabilities:

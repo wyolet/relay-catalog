@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: perplexity
-          upstreamName: perplexity/mistral-7b-instruct
           adapter: openai
     family: perplexity
     capabilities:

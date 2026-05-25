@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: fireworks_ai
-          upstreamName: fireworks_ai/accounts/fireworks/models/nvidia-nemotron-nano-9b-v2
           adapter: openai
     family: fireworks
     capabilities:

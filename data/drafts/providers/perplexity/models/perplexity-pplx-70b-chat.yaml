@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: perplexity
-          upstreamName: perplexity/pplx-70b-chat
           adapter: openai
     family: perplexity
     capabilities:

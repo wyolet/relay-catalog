@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: together_ai
-          upstreamName: together_ai/Qwen/Qwen3-235B-A22B-fp8-tput
           adapter: openai
     family: together
     capabilities:

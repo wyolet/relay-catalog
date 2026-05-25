@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: novita
-          upstreamName: novita/deepseek/deepseek-r1-0528
           adapter: openai
     family: novita
     capabilities:

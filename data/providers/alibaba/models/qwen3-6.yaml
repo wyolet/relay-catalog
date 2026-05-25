@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: qwen3.6
           adapter: openai
     family: qwen3.6
     capabilities:
@@ -48,7 +47,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: qwen3.6
           adapter: openai
     family: qwen3.6
     capabilities:

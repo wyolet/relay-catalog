@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: cloudflare
-          upstreamName: cloudflare/@cf/mistral/mistral-7b-instruct-v0.1
           adapter: openai
     family: cloudflare
     capabilities:

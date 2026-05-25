@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: replicate
-          upstreamName: replicate/openai/gpt-4o
           adapter: openai
     family: replicate
     capabilities:

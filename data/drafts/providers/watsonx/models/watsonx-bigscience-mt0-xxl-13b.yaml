@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: watsonx
-          upstreamName: watsonx/bigscience/mt0-xxl-13b
           adapter: openai
     family: watsonx
     capabilities:

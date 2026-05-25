@@ -14,11 +14,9 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: qwen3-next
           adapter: openai
           snapshots: [qwen3-next-latest, qwen3-next-80b]
         - host: ollama-cloud
-          upstreamName: qwen3-next
           adapter: openai
           snapshots: [qwen3-next-80b-cloud]
     family: qwen3-next

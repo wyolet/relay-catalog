@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock_converse
-          upstreamName: eu.deepseek.v3.2
           adapter: openai
     family: eu
     capabilities:

@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: exaone-deep
           adapter: openai
     family: exaone-deep
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: exaone-deep
           adapter: openai
     family: exaone-deep
     capabilities:
@@ -80,7 +78,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: exaone-deep
           adapter: openai
     family: exaone-deep
     capabilities:

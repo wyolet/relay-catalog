@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: snowflake-arctic-embed
           adapter: openai
     family: snowflake-arctic-embed
     capabilities:
@@ -45,7 +44,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: snowflake-arctic-embed
           adapter: openai
     family: snowflake-arctic-embed
     capabilities:
@@ -76,7 +74,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: snowflake-arctic-embed
           adapter: openai
     family: snowflake-arctic-embed
     capabilities:
@@ -107,7 +104,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: snowflake-arctic-embed
           adapter: openai
     family: snowflake-arctic-embed
     capabilities:

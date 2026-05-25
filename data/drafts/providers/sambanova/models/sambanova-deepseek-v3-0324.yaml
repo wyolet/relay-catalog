@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: sambanova
-          upstreamName: sambanova/DeepSeek-V3-0324
           adapter: openai
     family: sambanova
     capabilities:

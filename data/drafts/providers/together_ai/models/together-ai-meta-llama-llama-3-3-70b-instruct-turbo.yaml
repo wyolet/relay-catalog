@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: together_ai
-          upstreamName: together_ai/meta-llama/Llama-3.3-70B-Instruct-Turbo
           adapter: openai
     family: together
     capabilities:

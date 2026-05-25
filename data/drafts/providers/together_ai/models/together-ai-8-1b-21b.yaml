@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: together_ai
-          upstreamName: together-ai-8.1b-21b
           adapter: openai
     family: together
     capabilities:

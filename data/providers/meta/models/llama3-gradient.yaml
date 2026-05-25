@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: llama3-gradient
           adapter: openai
     family: llama3-gradient
     capabilities:

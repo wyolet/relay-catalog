@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: command-r7b
           adapter: openai
     family: command-r7b
     capabilities:
@@ -49,7 +48,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: command-r7b-arabic
           adapter: openai
     family: command-r7b-arabic
     capabilities:

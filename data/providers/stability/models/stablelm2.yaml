@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: stablelm2
           adapter: openai
     family: stablelm2
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: stablelm2
           adapter: openai
     family: stablelm2
     capabilities:

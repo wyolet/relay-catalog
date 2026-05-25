@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: watsonx
-          upstreamName: watsonx/meta-llama/llama-3-2-3b-instruct
           adapter: openai
     family: watsonx
     capabilities:

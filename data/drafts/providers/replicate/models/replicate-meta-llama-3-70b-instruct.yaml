@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: replicate
-          upstreamName: replicate/meta/llama-3-70b-instruct
           adapter: openai
     family: replicate
     capabilities:

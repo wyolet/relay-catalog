@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: groq
-          upstreamName: groq/qwen/qwen3-32b
           adapter: openai
     family: groq
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: novita
-          upstreamName: novita/baichuan/baichuan-m2-32b
           adapter: openai
     family: novita
     capabilities:

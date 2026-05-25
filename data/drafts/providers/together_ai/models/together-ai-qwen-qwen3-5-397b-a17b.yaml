@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: together_ai
-          upstreamName: together_ai/Qwen/Qwen3.5-397B-A17B
           adapter: openai
     family: together
     capabilities:

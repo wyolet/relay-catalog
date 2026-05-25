@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: lfm2
           adapter: openai
     family: lfm2
     capabilities:

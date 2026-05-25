@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-realtime
           adapter: openai
     family: gpt
     capabilities:
@@ -56,7 +55,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-realtime-mini
           adapter: openai
     family: gpt
     capabilities:
@@ -100,7 +98,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-realtime-1.5
           adapter: openai
     family: gpt
     capabilities:
@@ -141,7 +138,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-realtime-2
           adapter: openai
     family: gpt
     capabilities:

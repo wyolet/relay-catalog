@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: replicate
-          upstreamName: replicate/anthropic/claude-3.7-sonnet
           adapter: openai
     family: replicate
     capabilities:

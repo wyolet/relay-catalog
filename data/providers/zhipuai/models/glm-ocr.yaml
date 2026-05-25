@@ -14,11 +14,9 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: glm-ocr
           adapter: openai
           snapshots: [glm-ocr-latest]
         - host: ollama-cloud
-          upstreamName: glm-ocr
           adapter: openai
           snapshots: [glm-ocr-cloud]
     family: glm-ocr

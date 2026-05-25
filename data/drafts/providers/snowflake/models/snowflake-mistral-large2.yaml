@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: snowflake
-          upstreamName: snowflake/mistral-large2
           adapter: openai
     family: snowflake
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: wandb
-          upstreamName: wandb/microsoft/Phi-4-mini-instruct
           adapter: openai
     family: wandb
     capabilities:

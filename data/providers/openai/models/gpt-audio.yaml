@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-audio
           adapter: openai
     family: gpt
     capabilities:
@@ -57,7 +56,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-audio-1.5
           adapter: openai
     family: gpt
     capabilities:
@@ -98,7 +96,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-audio-mini
           adapter: openai
     family: gpt
     capabilities:

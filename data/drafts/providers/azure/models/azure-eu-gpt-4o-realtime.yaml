@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: azure
-          upstreamName: azure/eu/gpt-4o-realtime-preview-2024-12-17
           adapter: openai
     family: azure
     capabilities:

@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-3-7-sonnet-20250219
           adapter: anthropic
     family: claude
     capabilities:

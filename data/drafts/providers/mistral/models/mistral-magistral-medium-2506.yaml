@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: mistral
-          upstreamName: mistral/magistral-medium-2506
           adapter: openai
     family: mistral
     capabilities:

@@ -14,11 +14,9 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: nemotron-3-super
           adapter: openai
           snapshots: [nemotron-3-super-latest, nemotron-3-super-120b]
         - host: ollama-cloud
-          upstreamName: nemotron-3-super
           adapter: openai
           snapshots: [nemotron-3-super-cloud]
     family: nemotron-3-super

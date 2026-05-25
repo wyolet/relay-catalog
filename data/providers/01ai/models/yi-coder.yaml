@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: yi-coder
           adapter: openai
     family: yi-coder
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: yi-coder
           adapter: openai
     family: yi-coder
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: openrouter
-          upstreamName: openrouter/mistralai/mixtral-8x22b-instruct
           adapter: openai
     family: openrouter
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: baseten
-          upstreamName: baseten/zai-org/GLM-4.6
           adapter: openai
     family: baseten
     capabilities:

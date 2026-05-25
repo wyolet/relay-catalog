@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: publicai
-          upstreamName: publicai/aisingapore/Qwen-SEA-LION-v4-32B-IT
           adapter: openai
     family: publicai
     capabilities:

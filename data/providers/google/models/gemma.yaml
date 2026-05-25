@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: gemma
           adapter: openai
     family: gemma
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: gemma
           adapter: openai
     family: gemma
     capabilities:

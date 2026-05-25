@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: wandb
-          upstreamName: wandb/zai-org/GLM-4.5
           adapter: openai
     family: wandb
     capabilities:

@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-5.3-chat-latest
           adapter: openai
     family: gpt
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: ovhcloud
-          upstreamName: ovhcloud/Qwen3-32B
           adapter: openai
     family: ovhcloud
     capabilities:

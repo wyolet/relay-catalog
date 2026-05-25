@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: github_copilot
-          upstreamName: github_copilot/gemini-2.5-pro
           adapter: openai
     family: github
     capabilities:

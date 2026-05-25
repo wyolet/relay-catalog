@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: novita
-          upstreamName: novita/xiaomimimo/mimo-v2-flash
           adapter: openai
     family: novita
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: fireworks_ai
-          upstreamName: fireworks_ai/kimi-k2p5
           adapter: openai
     family: fireworks
     capabilities:

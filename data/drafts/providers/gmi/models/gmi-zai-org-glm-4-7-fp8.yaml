@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: gmi
-          upstreamName: gmi/zai-org/GLM-4.7-FP8
           adapter: openai
     family: gmi
     capabilities:

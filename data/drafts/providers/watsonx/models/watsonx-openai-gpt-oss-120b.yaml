@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: watsonx
-          upstreamName: watsonx/openai/gpt-oss-120b
           adapter: openai
     family: watsonx
     capabilities:

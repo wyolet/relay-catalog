@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: aya-expanse
           adapter: openai
     family: aya-expanse
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: aya-expanse
           adapter: openai
     family: aya-expanse
     capabilities:

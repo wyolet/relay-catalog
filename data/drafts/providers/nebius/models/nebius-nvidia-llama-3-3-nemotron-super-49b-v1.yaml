@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: nebius
-          upstreamName: nebius/nvidia/Llama-3.3-Nemotron-Super-49B-v1
           adapter: openai
     family: nebius
     capabilities:

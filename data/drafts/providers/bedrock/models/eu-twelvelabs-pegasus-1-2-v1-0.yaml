@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock
-          upstreamName: eu.twelvelabs.pegasus-1-2-v1:0
           adapter: openai
     family: eu
     capabilities:

@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: qwen2.5
           adapter: openai
     family: qwen2.5
     capabilities:
@@ -47,7 +46,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: qwen2.5
           adapter: openai
     family: qwen2.5
     capabilities:
@@ -80,7 +78,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: qwen2.5
           adapter: openai
     family: qwen2.5
     capabilities:
@@ -113,7 +110,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: qwen2.5
           adapter: openai
     family: qwen2.5
     capabilities:
@@ -146,7 +142,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: qwen2.5
           adapter: openai
     family: qwen2.5
     capabilities:
@@ -179,7 +174,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: qwen2.5
           adapter: openai
     family: qwen2.5
     capabilities:
@@ -212,7 +206,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: qwen2.5
           adapter: openai
     family: qwen2.5
     capabilities:

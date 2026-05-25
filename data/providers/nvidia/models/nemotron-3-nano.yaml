@@ -14,10 +14,8 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: nemotron-3-nano
           adapter: openai
         - host: ollama-self
-          upstreamName: nemotron-3-nano
           adapter: openai
     family: nemotron-3-nano
     capabilities:
@@ -50,11 +48,9 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: nemotron-3-nano
           adapter: openai
           snapshots: [nemotron-3-nano-30b]
         - host: ollama-cloud
-          upstreamName: nemotron-3-nano
           adapter: openai
           snapshots: [nemotron-3-nano-30b-cloud]
     family: nemotron-3-nano

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: anyscale
-          upstreamName: anyscale/meta-llama/Meta-Llama-3-8B-Instruct
           adapter: openai
     family: anyscale
     capabilities:

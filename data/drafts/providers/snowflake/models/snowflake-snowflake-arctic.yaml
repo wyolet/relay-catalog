@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: snowflake
-          upstreamName: snowflake/snowflake-arctic
           adapter: openai
     family: snowflake
     capabilities:

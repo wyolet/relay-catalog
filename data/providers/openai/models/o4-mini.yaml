@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: o4-mini
           adapter: openai
     family: o-series
     capabilities:

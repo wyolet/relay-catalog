@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: together_ai
-          upstreamName: together_ai/zai-org/GLM-4.6
           adapter: openai
     family: together
     capabilities:

@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: phi3
           adapter: openai
     family: phi3
     capabilities:

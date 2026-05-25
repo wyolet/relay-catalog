@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: command-r
           adapter: openai
     family: command-r
     capabilities:
@@ -49,7 +48,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: command-r-plus
           adapter: openai
     family: command-r-plus
     capabilities:

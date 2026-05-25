@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: deepinfra
-          upstreamName: deepinfra/Qwen/Qwen3-14B
           adapter: openai
     family: deepinfra
     capabilities:

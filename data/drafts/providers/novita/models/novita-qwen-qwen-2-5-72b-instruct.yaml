@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: novita
-          upstreamName: novita/qwen/qwen-2.5-72b-instruct
           adapter: openai
     family: novita
     capabilities:

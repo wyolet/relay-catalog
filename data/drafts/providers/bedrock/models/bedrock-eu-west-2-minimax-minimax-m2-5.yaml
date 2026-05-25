@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock
-          upstreamName: bedrock/eu-west-2/minimax.minimax-m2.5
           adapter: openai
     family: bedrock
     capabilities:

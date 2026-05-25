@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: ai21
-          upstreamName: jamba-mini-1.7
           adapter: openai
     family: jamba
     capabilities:

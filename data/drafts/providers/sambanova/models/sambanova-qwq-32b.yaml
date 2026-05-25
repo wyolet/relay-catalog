@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: sambanova
-          upstreamName: sambanova/QwQ-32B
           adapter: openai
     family: sambanova
     capabilities:

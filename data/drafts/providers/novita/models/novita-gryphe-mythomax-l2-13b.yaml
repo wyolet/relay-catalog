@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: novita
-          upstreamName: novita/gryphe/mythomax-l2-13b
           adapter: openai
     family: novita
     capabilities:

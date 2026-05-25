@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-4o-mini
           adapter: openai
     family: gpt
     capabilities:
@@ -58,7 +57,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-4o-mini-audio-preview-2024-12-17
           adapter: openai
     family: gpt
     capabilities:
@@ -100,7 +98,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-4o-mini-realtime-preview-2024-12-17
           adapter: openai
     family: gpt
     capabilities:
@@ -142,7 +139,6 @@ metadata:
 spec:
     hosts:
         - host: openai
-          upstreamName: gpt-4o-mini-search-preview-2025-03-11
           adapter: openai
     family: gpt
     capabilities:

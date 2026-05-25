@@ -14,11 +14,9 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: cogito-2.1
           adapter: openai
           snapshots: [cogito-2-1-latest, cogito-2-1-671b]
         - host: ollama-cloud
-          upstreamName: cogito-2.1
           adapter: openai
           snapshots: [cogito-2-1-671b-cloud]
     family: cogito-2.1

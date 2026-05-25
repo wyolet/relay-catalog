@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: devstral
           adapter: openai
     family: devstral
     capabilities:
@@ -49,7 +48,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: devstral-2
           adapter: openai
     family: devstral-2
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: fireworks_ai
-          upstreamName: fireworks_ai/accounts/fireworks/models/code-llama-34b
           adapter: openai
     family: fireworks
     capabilities:

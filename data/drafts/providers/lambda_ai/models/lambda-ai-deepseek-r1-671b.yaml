@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: lambda_ai
-          upstreamName: lambda_ai/deepseek-r1-671b
           adapter: openai
     family: lambda
     capabilities:

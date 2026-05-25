@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: azure
-          upstreamName: azure/gpt-4-0125-preview
           adapter: openai
     family: azure
     capabilities:

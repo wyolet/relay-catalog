@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: all-minilm
           adapter: openai
     family: all-minilm
     capabilities:
@@ -45,7 +44,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: all-minilm
           adapter: openai
     family: all-minilm
     capabilities:

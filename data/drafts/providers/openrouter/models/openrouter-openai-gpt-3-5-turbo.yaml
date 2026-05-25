@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: openrouter
-          upstreamName: openrouter/openai/gpt-3.5-turbo
           adapter: openai
     family: openrouter
     capabilities:

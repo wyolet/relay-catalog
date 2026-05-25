@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: novita
-          upstreamName: novita/sao10k/l3-70b-euryale-v2.1
           adapter: openai
     family: novita
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: novita
-          upstreamName: novita/baidu/ernie-4.5-vl-28b-a3b-thinking
           adapter: openai
     family: novita
     capabilities:

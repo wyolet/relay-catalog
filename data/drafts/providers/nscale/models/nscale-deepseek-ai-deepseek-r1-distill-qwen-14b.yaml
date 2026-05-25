@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: nscale
-          upstreamName: nscale/deepseek-ai/DeepSeek-R1-Distill-Qwen-14B
           adapter: openai
     family: nscale
     capabilities:

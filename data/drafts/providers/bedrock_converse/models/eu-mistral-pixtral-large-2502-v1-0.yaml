@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock_converse
-          upstreamName: eu.mistral.pixtral-large-2502-v1:0
           adapter: openai
     family: eu
     capabilities:

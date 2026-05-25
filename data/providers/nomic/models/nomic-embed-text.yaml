@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: nomic-embed-text
           adapter: openai
     family: nomic-embed-text
     capabilities:

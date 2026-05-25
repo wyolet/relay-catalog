@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: ovhcloud
-          upstreamName: ovhcloud/llava-v1.6-mistral-7b-hf
           adapter: openai
     family: ovhcloud
     capabilities:

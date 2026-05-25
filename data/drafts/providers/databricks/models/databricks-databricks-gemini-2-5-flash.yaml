@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: databricks
-          upstreamName: databricks/databricks-gemini-2-5-flash
           adapter: openai
     family: databricks
     capabilities:

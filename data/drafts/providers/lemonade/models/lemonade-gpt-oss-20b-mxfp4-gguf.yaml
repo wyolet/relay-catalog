@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: lemonade
-          upstreamName: lemonade/gpt-oss-20b-mxfp4-GGUF
           adapter: openai
     family: lemonade
     capabilities:

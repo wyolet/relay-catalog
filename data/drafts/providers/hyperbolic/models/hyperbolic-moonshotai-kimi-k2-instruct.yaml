@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: hyperbolic
-          upstreamName: hyperbolic/moonshotai/Kimi-K2-Instruct
           adapter: openai
     family: hyperbolic
     capabilities:

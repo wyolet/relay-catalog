@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock
-          upstreamName: bedrock/us-west-2/moonshotai.kimi-k2-thinking
           adapter: openai
     family: bedrock
     capabilities:

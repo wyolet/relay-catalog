@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: dolphin3
           adapter: openai
     family: dolphin3
     capabilities:

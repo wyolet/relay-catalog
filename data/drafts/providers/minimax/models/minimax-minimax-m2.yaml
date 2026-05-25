@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: minimax
-          upstreamName: minimax/MiniMax-M2
           adapter: openai
     family: minimax
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: deepinfra
-          upstreamName: deepinfra/Qwen/Qwen3-Next-80B-A3B-Thinking
           adapter: openai
     family: deepinfra
     capabilities:

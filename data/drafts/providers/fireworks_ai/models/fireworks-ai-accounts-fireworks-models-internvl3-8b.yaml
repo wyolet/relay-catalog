@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: fireworks_ai
-          upstreamName: fireworks_ai/accounts/fireworks/models/internvl3-8b
           adapter: openai
     family: fireworks
     capabilities:

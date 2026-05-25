@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: databricks
-          upstreamName: databricks/databricks-meta-llama-3-70b-instruct
           adapter: openai
     family: databricks
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: replicate
-          upstreamName: replicateopenai/gpt-oss-20b
           adapter: openai
     family: replicateopenai
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: watsonx
-          upstreamName: watsonx/ibm/granite-ttm-1536-96-r2
           adapter: openai
     family: watsonx
     capabilities:

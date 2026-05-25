@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: azure
-          upstreamName: azure/global-standard/gpt-4o-mini
           adapter: openai
     family: azure
     capabilities:

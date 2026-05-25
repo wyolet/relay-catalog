@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: deepinfra
-          upstreamName: deepinfra/google/gemma-3-27b-it
           adapter: openai
     family: deepinfra
     capabilities:

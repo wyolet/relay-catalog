@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: vercel_ai_gateway
-          upstreamName: vercel_ai_gateway/inception/mercury-coder-small
           adapter: openai
     family: vercel
     capabilities:

@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Host.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: opencode-zen
+    displayName: OpenCode Zen
+    description: "OpenCode's curated model gateway. OpenAI-compatible endpoint at /v1/chat/completions; some models also expose /v1/messages (Anthropic shape) and /v1/responses. Authentication: Bearer $OPENCODE_API_KEY."
+spec:
+    baseURL: https://opencode.ai/zen/v1
+    homepageURL: https://opencode.ai

@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: llava-llama3
           adapter: openai
     family: llava-llama3
     capabilities:

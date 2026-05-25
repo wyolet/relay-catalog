@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: medgemma
           adapter: openai
     family: medgemma
     capabilities:
@@ -48,7 +47,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: medgemma
           adapter: openai
     family: medgemma
     capabilities:

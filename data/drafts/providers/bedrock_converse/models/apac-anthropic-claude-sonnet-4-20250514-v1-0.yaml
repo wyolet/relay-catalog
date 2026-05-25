@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock_converse
-          upstreamName: apac.anthropic.claude-sonnet-4-20250514-v1:0
           adapter: openai
     family: apac
     capabilities:

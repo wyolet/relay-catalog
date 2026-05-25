@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: vercel_ai_gateway
-          upstreamName: vercel_ai_gateway/meta/llama-3.2-1b
           adapter: openai
     family: vercel
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: lambda_ai
-          upstreamName: lambda_ai/llama-4-scout-17b-16e-instruct
           adapter: openai
     family: lambda
     capabilities:

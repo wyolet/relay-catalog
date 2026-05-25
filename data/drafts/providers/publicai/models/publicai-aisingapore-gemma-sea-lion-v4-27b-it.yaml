@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: publicai
-          upstreamName: publicai/aisingapore/Gemma-SEA-LION-v4-27B-IT
           adapter: openai
     family: publicai
     capabilities:

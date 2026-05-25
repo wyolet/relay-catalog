@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: anthropic
-          upstreamName: claude-haiku-4-5
           adapter: anthropic
     family: claude
     capabilities:

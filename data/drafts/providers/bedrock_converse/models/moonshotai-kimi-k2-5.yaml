@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock_converse
-          upstreamName: moonshotai.kimi-k2.5
           adapter: openai
     family: moonshotai
     capabilities:

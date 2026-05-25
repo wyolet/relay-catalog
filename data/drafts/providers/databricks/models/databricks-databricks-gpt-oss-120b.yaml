@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: databricks
-          upstreamName: databricks/databricks-gpt-oss-120b
           adapter: openai
     family: databricks
     capabilities:

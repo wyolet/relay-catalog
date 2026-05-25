@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: vertex_ai-anthropic_models
-          upstreamName: vertex_ai/claude-3-5-sonnet
           adapter: openai
     family: vertex
     capabilities:

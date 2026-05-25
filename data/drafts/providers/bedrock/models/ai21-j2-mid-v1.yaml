@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock
-          upstreamName: ai21.j2-mid-v1
           adapter: openai
     family: ai21
     capabilities:

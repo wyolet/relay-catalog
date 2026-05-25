@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: novita
-          upstreamName: novita/zai-org/autoglm-phone-9b-multilingual
           adapter: openai
     family: novita
     capabilities:

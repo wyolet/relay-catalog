@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: minicpm-v
           adapter: openai
     family: minicpm-v
     capabilities:

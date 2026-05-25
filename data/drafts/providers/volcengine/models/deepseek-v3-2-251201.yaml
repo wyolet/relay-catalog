@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: volcengine
-          upstreamName: deepseek-v3-2-251201
           adapter: openai
     family: deepseek
     capabilities:

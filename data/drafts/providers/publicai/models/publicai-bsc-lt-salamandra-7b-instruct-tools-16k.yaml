@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: publicai
-          upstreamName: publicai/BSC-LT/salamandra-7b-instruct-tools-16k
           adapter: openai
     family: publicai
     capabilities:

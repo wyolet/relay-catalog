@@ -14,7 +14,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-self
-          upstreamName: nemotron3
           adapter: openai
     family: nemotron3
     capabilities:

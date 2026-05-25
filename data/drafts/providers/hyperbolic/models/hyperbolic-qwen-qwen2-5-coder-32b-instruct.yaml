@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: hyperbolic
-          upstreamName: hyperbolic/Qwen/Qwen2.5-Coder-32B-Instruct
           adapter: openai
     family: hyperbolic
     capabilities:

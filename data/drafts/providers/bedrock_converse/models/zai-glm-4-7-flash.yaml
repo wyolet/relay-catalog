@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: bedrock_converse
-          upstreamName: zai.glm-4.7-flash
           adapter: openai
     family: zai
     capabilities:

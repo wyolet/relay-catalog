@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: dashscope
-          upstreamName: dashscope/qwen3-vl-32b-thinking
           adapter: openai
     family: dashscope
     capabilities:

@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: vertex_ai-language-models
-          upstreamName: gemini-robotics-er-1.5-preview
           adapter: openai
     family: gemini
     capabilities:

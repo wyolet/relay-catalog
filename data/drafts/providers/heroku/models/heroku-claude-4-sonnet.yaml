@@ -13,7 +13,6 @@ metadata:
 spec:
     hosts:
         - host: heroku
-          upstreamName: heroku/claude-4-sonnet
           adapter: openai
     family: heroku
     capabilities:

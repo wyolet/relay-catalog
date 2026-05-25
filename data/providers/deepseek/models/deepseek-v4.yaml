@@ -14,8 +14,11 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: deepseek-v4-flash
           adapter: openai
+          snapshots: [deepseek-v4-flash-cloud]
+        - host: opencode-zen
+          adapter: openai
+          snapshots: [deepseek-v4-flash-free]
     family: deepseek-v4-flash
     capabilities:
         chat: true
@@ -30,6 +33,8 @@ spec:
     snapshots:
         - name: deepseek-v4-flash-cloud
           originalName: deepseek-v4-flash:cloud
+        - name: deepseek-v4-flash-free
+          originalName: deepseek-v4-flash-free
     pointer: deepseek-v4-flash-cloud
 ---
 apiVersion: relay.wyolet.dev/v1alpha2
@@ -47,7 +52,6 @@ metadata:
 spec:
     hosts:
         - host: ollama-cloud
-          upstreamName: deepseek-v4-pro
           adapter: openai
     family: deepseek-v4-pro
     capabilities:
