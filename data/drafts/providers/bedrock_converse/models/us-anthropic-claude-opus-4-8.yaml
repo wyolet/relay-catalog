@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: us-anthropic-claude-opus-4-8
+    owner:
+        kind: provider
+        name: bedrock_converse
+    labels:
+        family: us
+        source: litellm
+        source_version: "2026-05-31"
+spec:
+    hosts:
+        - host: bedrock_converse
+          adapter: openai
+    family: us
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        computerUse: true
+        fileInput: true
+    modalities:
+        input:
+            - text
+            - image
+            - file
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1000000
+    snapshots:
+        - name: us-anthropic-claude-opus-4-8
+          originalName: us.anthropic.claude-opus-4-8
+    pointer: us-anthropic-claude-opus-4-8
