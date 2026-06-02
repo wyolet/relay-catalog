@@ -12,9 +12,6 @@ metadata:
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
     family: deepseek-coder-v2
     capabilities:
         chat: true
@@ -44,9 +41,6 @@ metadata:
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
     family: deepseek-coder-v2
     capabilities:
         chat: true
@@ -76,9 +70,6 @@ metadata:
         source: litellm
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
     family: deepseek
     capabilities:
         chat: true
@@ -110,9 +101,6 @@ metadata:
         source: litellm
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
     family: deepseek
     capabilities:
         chat: true

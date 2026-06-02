@@ -12,9 +12,6 @@ metadata:
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
     family: mistral-small
     capabilities:
         chat: true
@@ -46,9 +43,6 @@ metadata:
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
     family: mistral-small3.1
     capabilities:
         chat: true
@@ -81,9 +75,6 @@ metadata:
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
     family: mistral-small3.2
     capabilities:
         chat: true

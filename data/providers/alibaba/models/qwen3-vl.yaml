@@ -12,11 +12,6 @@ metadata:
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    hosts:
-        - host: ollama-cloud
-          adapter: openai
-        - host: ollama-self
-          adapter: openai
     family: qwen3-vl
     capabilities:
         chat: true
@@ -47,11 +42,6 @@ metadata:
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    hosts:
-        - host: ollama-cloud
-          adapter: openai
-        - host: ollama-self
-          adapter: openai
     family: qwen3-vl
     capabilities:
         chat: true
@@ -82,11 +72,6 @@ metadata:
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    hosts:
-        - host: ollama-cloud
-          adapter: openai
-        - host: ollama-self
-          adapter: openai
     family: qwen3-vl
     capabilities:
         chat: true
@@ -117,11 +102,6 @@ metadata:
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    hosts:
-        - host: ollama-cloud
-          adapter: openai
-        - host: ollama-self
-          adapter: openai
     family: qwen3-vl
     capabilities:
         chat: true
@@ -152,11 +132,6 @@ metadata:
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    hosts:
-        - host: ollama-cloud
-          adapter: openai
-        - host: ollama-self
-          adapter: openai
     family: qwen3-vl
     capabilities:
         chat: true
@@ -187,13 +162,6 @@ metadata:
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
-          snapshots: [qwen3-vl-235b]
-        - host: ollama-cloud
-          adapter: openai
-          snapshots: [qwen3-vl-235b-cloud, qwen3-vl-235b-instruct-cloud]
     family: qwen3-vl
     capabilities:
         chat: true
