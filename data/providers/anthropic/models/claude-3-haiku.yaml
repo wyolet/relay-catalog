@@ -12,9 +12,6 @@ metadata:
         source: litellm
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: anthropic
-          adapter: anthropic
     family: claude
     capabilities:
         chat: true

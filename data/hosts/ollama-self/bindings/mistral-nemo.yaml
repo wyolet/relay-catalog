@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-nemo-on-ollama-self
+    displayName: "Mistral Nemo via ollama-self"
+spec:
+    model: mistral-nemo
+    host: ollama-self
+    adapter: openai

@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gpt-3-5-turbo-16k-on-openai
+    displayName: "GPT-3.5 Turbo 16K via openai"
+spec:
+    model: gpt-3-5-turbo-16k
+    host: openai
+    adapter: openai
+    pricing: openai-gpt-3-5-turbo-16k

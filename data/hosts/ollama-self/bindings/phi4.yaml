@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: phi4-on-ollama-self
+    displayName: "Phi 4 via ollama-self"
+spec:
+    model: phi4
+    host: ollama-self
+    adapter: openai

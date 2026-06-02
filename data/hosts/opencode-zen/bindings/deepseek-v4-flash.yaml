@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-v4-flash-on-opencode-zen
+    displayName: "DeepSeek V4 Flash via opencode-zen"
+spec:
+    model: deepseek-v4-flash
+    host: opencode-zen
+    adapter: openai
+    snapshots: [deepseek-v4-flash-free]

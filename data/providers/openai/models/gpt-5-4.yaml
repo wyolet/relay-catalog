@@ -12,9 +12,6 @@ metadata:
         source: litellm
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: openai
-          adapter: openai
     family: gpt
     capabilities:
         chat: true
@@ -59,9 +56,6 @@ metadata:
         source: litellm
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: openai
-          adapter: openai
     family: gpt
     capabilities:
         chat: true
@@ -107,9 +101,6 @@ metadata:
         source: litellm
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: openai
-          adapter: openai
     family: gpt
     capabilities:
         chat: true

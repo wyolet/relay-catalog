@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-large-3-on-ollama-cloud
+    displayName: "Mistral Large 3 via ollama-cloud"
+spec:
+    model: mistral-large-3
+    host: ollama-cloud
+    adapter: openai

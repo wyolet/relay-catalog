@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-110b-on-ollama-self
+    displayName: "Qwen 110B via ollama-self"
+spec:
+    model: qwen-110b
+    host: ollama-self
+    adapter: openai

@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: chatgpt-4o-on-openai
+    displayName: "ChatGPT-4o via openai"
+spec:
+    model: chatgpt-4o
+    host: openai
+    adapter: openai
+    pricing: openai-chatgpt-4o

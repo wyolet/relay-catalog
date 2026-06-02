@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: yi-coder-1-5b-on-ollama-self
+    displayName: "Yi Coder 1 5B via ollama-self"
+spec:
+    model: yi-coder-1-5b
+    host: ollama-self
+    adapter: openai

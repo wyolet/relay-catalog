@@ -12,12 +12,6 @@ metadata:
         source: google-ai-studio
         source_version: "2026-05-21"
 spec:
-    hosts:
-        - host: google-ai-studio
-          adapter: openai
-          snapshots:
-              - gemini-2-5-flash
-              - gemini-2-5-flash-001
     family: gemini-2-5-flash
     capabilities:
         chat: true

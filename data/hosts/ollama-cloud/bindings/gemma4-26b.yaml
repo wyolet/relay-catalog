@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemma4-26b-on-ollama-cloud
+    displayName: "Gemma 4 26B via ollama-cloud"
+spec:
+    model: gemma4-26b
+    host: ollama-cloud
+    adapter: openai

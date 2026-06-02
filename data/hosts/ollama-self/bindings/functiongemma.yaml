@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: functiongemma-on-ollama-self
+    displayName: "Function Gemma via ollama-self"
+spec:
+    model: functiongemma
+    host: ollama-self
+    adapter: openai

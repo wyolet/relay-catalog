@@ -12,13 +12,6 @@ metadata:
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: ollama-cloud
-          adapter: openai
-          snapshots: [deepseek-v4-flash-cloud]
-        - host: opencode-zen
-          adapter: openai
-          snapshots: [deepseek-v4-flash-free]
     family: deepseek-v4-flash
     capabilities:
         chat: true
@@ -50,9 +43,6 @@ metadata:
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: ollama-cloud
-          adapter: openai
     family: deepseek-v4-pro
     capabilities:
         chat: true

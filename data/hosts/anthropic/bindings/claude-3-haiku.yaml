@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: claude-3-haiku-on-anthropic
+    displayName: "Claude 3 Haiku via anthropic"
+spec:
+    model: claude-3-haiku
+    host: anthropic
+    adapter: anthropic
+    pricing: anthropic-claude-3-haiku

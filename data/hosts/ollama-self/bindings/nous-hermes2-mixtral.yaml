@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nous-hermes2-mixtral-on-ollama-self
+    displayName: "Nous Hermes 2 Mixtral via ollama-self"
+spec:
+    model: nous-hermes2-mixtral
+    host: ollama-self
+    adapter: openai

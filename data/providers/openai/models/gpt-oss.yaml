@@ -12,13 +12,6 @@ metadata:
         source: litellm
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
-          snapshots: [gpt-oss-20b]
-        - host: ollama-cloud
-          adapter: openai
-          snapshots: [gpt-oss-20b-cloud]
     family: openai
     capabilities:
         chat: true
@@ -52,13 +45,6 @@ metadata:
         source: litellm
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
-          snapshots: [gpt-oss-120b, gpt-oss-120b-cloud]
-        - host: ollama-cloud
-          adapter: openai
-          snapshots: [gpt-oss-120b-cloud]
     family: openai
     capabilities:
         chat: true

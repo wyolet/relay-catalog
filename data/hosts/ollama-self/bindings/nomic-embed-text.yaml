@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nomic-embed-text-on-ollama-self
+    displayName: "Nomic Embed Text via ollama-self"
+spec:
+    model: nomic-embed-text
+    host: ollama-self
+    adapter: openai

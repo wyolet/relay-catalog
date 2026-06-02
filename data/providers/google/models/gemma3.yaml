@@ -12,11 +12,6 @@ metadata:
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    hosts:
-        - host: ollama-cloud
-          adapter: openai
-        - host: ollama-self
-          adapter: openai
     family: gemma3
     capabilities:
         chat: true
@@ -47,11 +42,6 @@ metadata:
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    hosts:
-        - host: ollama-cloud
-          adapter: openai
-        - host: ollama-self
-          adapter: openai
     family: gemma3
     capabilities:
         chat: true
@@ -82,13 +72,6 @@ metadata:
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
-          snapshots: [gemma3-4b]
-        - host: ollama-cloud
-          adapter: openai
-          snapshots: [gemma3-4b-cloud]
     family: gemma3
     capabilities:
         chat: true
@@ -121,13 +104,6 @@ metadata:
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
-          snapshots: [gemma3-12b]
-        - host: ollama-cloud
-          adapter: openai
-          snapshots: [gemma3-12b-cloud]
     family: gemma3
     capabilities:
         chat: true
@@ -160,13 +136,6 @@ metadata:
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
-          snapshots: [gemma3-27b]
-        - host: ollama-cloud
-          adapter: openai
-          snapshots: [gemma3-27b-cloud]
     family: gemma3
     capabilities:
         chat: true

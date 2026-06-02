@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: smollm-135m-on-ollama-self
+    displayName: "SmolLM 135M via ollama-self"
+spec:
+    model: smollm-135m
+    host: ollama-self
+    adapter: openai

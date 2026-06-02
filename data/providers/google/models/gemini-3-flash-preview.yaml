@@ -13,16 +13,6 @@ metadata:
         source: google-ai-studio
         source_version: "2026-05-21"
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
-          snapshots: [gemini-3-flash-preview-latest]
-        - host: ollama-cloud
-          adapter: openai
-          snapshots: [gemini-3-flash-preview-cloud]
-        - host: google-ai-studio
-          adapter: openai
-          snapshots: [gemini-3-flash-preview]
     family: gemini-3-flash-preview
     capabilities:
         chat: true

@@ -12,9 +12,6 @@ metadata:
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: ollama-cloud
-          adapter: openai
     family: kimi-k2-thinking
     capabilities:
         chat: true

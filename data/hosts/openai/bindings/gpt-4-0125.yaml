@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gpt-4-0125-on-openai
+    displayName: "GPT-4 (2025-01-25) via openai"
+spec:
+    model: gpt-4-0125
+    host: openai
+    adapter: openai
+    pricing: openai-gpt-4-0125

@@ -12,13 +12,6 @@ metadata:
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
-          snapshots: [glm-ocr-latest]
-        - host: ollama-cloud
-          adapter: openai
-          snapshots: [glm-ocr-cloud]
     family: glm-ocr
     capabilities:
         chat: true

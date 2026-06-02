@@ -12,13 +12,6 @@ metadata:
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
-          snapshots: [qwen3-coder-next-latest, qwen3-coder-next-q4-k-m, qwen3-coder-next-q8-0]
-        - host: ollama-cloud
-          adapter: openai
-          snapshots: [qwen3-coder-next-cloud]
     family: qwen3-coder-next
     capabilities:
         chat: true

@@ -12,9 +12,6 @@ metadata:
         source: litellm
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
     family: mistral
     capabilities:
         chat: true
@@ -46,9 +43,6 @@ metadata:
         source: litellm
         source_version: "2026-05-20"
 spec:
-    hosts:
-        - host: ollama-self
-          adapter: openai
     family: mistral
     capabilities:
         chat: true

@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: granite3-guardian-8b-on-ollama-self
+    displayName: "Granite 3 Guardian 8B via ollama-self"
+spec:
+    model: granite3-guardian-8b
+    host: ollama-self
+    adapter: openai

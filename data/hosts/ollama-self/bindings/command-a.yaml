@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: command-a-on-ollama-self
+    displayName: "Command A via ollama-self"
+spec:
+    model: command-a
+    host: ollama-self
+    adapter: openai
