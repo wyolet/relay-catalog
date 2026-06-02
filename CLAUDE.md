@@ -29,6 +29,12 @@ Ownership rules behind the layout:
 
 A name can appear in **both** trees (`openai`, `anthropic` are both a Provider and a Host). That's expected; they're separate concepts that happen to share a slug.
 
+## `drafts/` = unverified; the live tree = verified-routable only
+
+`data/drafts/` mirrors the layout (`drafts/hosts/`, `drafts/providers/`) and is **skipped by `manifest.LoadDir`** — nothing there reaches a running relay. It's the staging area for entries we authored but **can't confirm route**, almost always because the host has no free tier (Bedrock, Vertex, Azure, and the bulk of the imported list).
+
+The rule: an entry only lives in the live `data/` tree once a real key has confirmed a binding routes end-to-end. If you can't verify it, it goes in `drafts/`, not live — never ship a host that routes nothing. To promote, `git mv` the dir out of `drafts/`, run the validator clean, and PR. To demote, the reverse.
+
 ## Docs
 
 [`docs/`](docs/) describes every kind: Host, Provider, Model, Pricing, Policy, RateLimit. **Read the relevant doc before editing or adding fields** — they document every field, allowed values, and cross-entity relationships. Source of truth for wire schema is `app/manifest/dto.go` in the relay repo.
