@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: claude-3-opus-on-anthropic
+    displayName: "Claude 3 Opus via anthropic"
+spec:
+    model: claude-3-opus
+    host: anthropic
+    adapter: anthropic
+    pricing: anthropic-claude-3-opus

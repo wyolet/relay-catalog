@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gpt-audio-1-5-on-openai
+    displayName: "GPT Audio 1.5 via openai"
+spec:
+    model: gpt-audio-1-5
+    host: openai
+    adapter: openai
+    pricing: openai-gpt-audio-1-5

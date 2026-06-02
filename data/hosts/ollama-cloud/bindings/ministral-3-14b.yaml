@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: ministral-3-14b-on-ollama-cloud
+    displayName: "Ministral 3 14B via ollama-cloud"
+spec:
+    model: ministral-3-14b
+    host: ollama-cloud
+    adapter: openai
+    snapshots: [ministral-3-14b-cloud]

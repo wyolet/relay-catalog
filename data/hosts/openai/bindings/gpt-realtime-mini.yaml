@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gpt-realtime-mini-on-openai
+    displayName: "GPT Realtime Mini via openai"
+spec:
+    model: gpt-realtime-mini
+    host: openai
+    adapter: openai
+    pricing: openai-gpt-realtime-mini

@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: starling-lm-on-ollama-self
+    displayName: "Starling LM via ollama-self"
+spec:
+    model: starling-lm
+    host: ollama-self
+    adapter: openai

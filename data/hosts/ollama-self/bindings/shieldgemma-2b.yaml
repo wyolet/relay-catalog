@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: shieldgemma-2b-on-ollama-self
+    displayName: "ShieldGemma 2B via ollama-self"
+spec:
+    model: shieldgemma-2b
+    host: ollama-self
+    adapter: openai

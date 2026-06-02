@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nemotron-3-super-on-ollama-self
+    displayName: "Nemotron 3 Super via ollama-self"
+spec:
+    model: nemotron-3-super
+    host: ollama-self
+    adapter: openai
+    snapshots: [nemotron-3-super-latest, nemotron-3-super-120b]

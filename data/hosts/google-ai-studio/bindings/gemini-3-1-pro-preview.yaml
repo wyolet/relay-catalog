@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemini-3-1-pro-preview-on-google-ai-studio
+    displayName: "Gemini 3.1 Pro (Preview) via google-ai-studio"
+spec:
+    model: gemini-3-1-pro-preview
+    host: google-ai-studio
+    adapter: openai
+    pricing: google-ai-studio-gemini-3-1-pro-preview
+    snapshots: [gemini-3-1-pro-preview]

@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-coder-480b-on-ollama-cloud
+    displayName: "Qwen3 Coder 480B via ollama-cloud"
+spec:
+    model: qwen3-coder-480b
+    host: ollama-cloud
+    adapter: openai
+    snapshots: [qwen3-coder-480b-cloud]

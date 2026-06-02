@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: bakllava-on-ollama-self
+    displayName: "BakLLaVA via ollama-self"
+spec:
+    model: bakllava
+    host: ollama-self
+    adapter: openai

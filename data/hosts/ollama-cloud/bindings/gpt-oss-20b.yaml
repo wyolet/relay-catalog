@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gpt-oss-20b-on-ollama-cloud
+    displayName: "GPT OSS 20B via ollama-cloud"
+spec:
+    model: gpt-oss-20b
+    host: ollama-cloud
+    adapter: openai
+    snapshots: [gpt-oss-20b-cloud]

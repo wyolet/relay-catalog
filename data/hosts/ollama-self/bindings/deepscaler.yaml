@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepscaler-on-ollama-self
+    displayName: "DeepScaler via ollama-self"
+spec:
+    model: deepscaler
+    host: ollama-self
+    adapter: openai

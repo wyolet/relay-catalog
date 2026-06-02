@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gpt-5-nano-on-openai
+    displayName: "GPT-5 Nano via openai"
+spec:
+    model: gpt-5-nano
+    host: openai
+    adapter: openai
+    pricing: openai-gpt-5-nano

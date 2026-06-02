@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: claude-sonnet-4-6-on-anthropic
+    displayName: "Claude Sonnet 4.6 via anthropic"
+spec:
+    model: claude-sonnet-4-6
+    host: anthropic
+    adapter: anthropic
+    pricing: anthropic-claude-sonnet-4-6

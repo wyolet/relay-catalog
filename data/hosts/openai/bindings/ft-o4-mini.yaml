@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: ft-o4-mini-on-openai
+    displayName: "Fine-tuned O4 Mini via openai"
+spec:
+    model: ft-o4-mini
+    host: openai
+    adapter: openai
+    pricing: openai-ft-o4-mini

@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: devstral-small-2-on-ollama-self
+    displayName: "Devstral Small 2 via ollama-self"
+spec:
+    model: devstral-small-2
+    host: ollama-self
+    adapter: openai

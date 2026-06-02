@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemini-3-flash-preview-on-ollama-self
+    displayName: "Gemini 3 Flash (Preview) via ollama-self"
+spec:
+    model: gemini-3-flash-preview
+    host: ollama-self
+    adapter: openai
+    snapshots: [gemini-3-flash-preview-latest]

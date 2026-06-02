@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-v2-16b-on-ollama-self
+    displayName: "DeepSeek V2 16B via ollama-self"
+spec:
+    model: deepseek-v2-16b
+    host: ollama-self
+    adapter: openai

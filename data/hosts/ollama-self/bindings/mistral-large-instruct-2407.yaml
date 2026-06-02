@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-large-instruct-2407-on-ollama-self
+    displayName: "Mistral Large Instruct (2024-07) via ollama-self"
+spec:
+    model: mistral-large-instruct-2407
+    host: ollama-self
+    adapter: openai

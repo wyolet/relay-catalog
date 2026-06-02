@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: llama3-gradient-on-ollama-self
+    displayName: "Llama 3 Gradient via ollama-self"
+spec:
+    model: llama3-gradient
+    host: ollama-self
+    adapter: openai

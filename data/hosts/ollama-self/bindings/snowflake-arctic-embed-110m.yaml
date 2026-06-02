@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: snowflake-arctic-embed-110m-on-ollama-self
+    displayName: "Snowflake Arctic Embed 110M via ollama-self"
+spec:
+    model: snowflake-arctic-embed-110m
+    host: ollama-self
+    adapter: openai

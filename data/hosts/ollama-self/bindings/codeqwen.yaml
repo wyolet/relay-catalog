@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: codeqwen-on-ollama-self
+    displayName: "CodeQwen via ollama-self"
+spec:
+    model: codeqwen
+    host: ollama-self
+    adapter: openai

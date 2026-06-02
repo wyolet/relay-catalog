@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openchat-on-ollama-self
+    displayName: "OpenChat via ollama-self"
+spec:
+    model: openchat
+    host: ollama-self
+    adapter: openai
