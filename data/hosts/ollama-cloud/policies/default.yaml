@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Policy.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+  name: ollama-cloud-default
+  displayName: Ollama Cloud (default)
+  description: "Default serving tier for Ollama Cloud. No relay-side rate cap is shipped — Ollama Cloud's published per-account limits aren't pinned in the catalog yet; operators add a RateLimit here once known. Without a host-tier policy a HostKey cannot be created, so this also makes the host usable."
+  owner:
+    kind: host
+    name: ollama-cloud
+spec: {}
