@@ -8,6 +8,7 @@ metadata:
         kind: provider
         name: nvidia
     labels:
+        featured: "true"
         family: nemotron-3-super
         source: ollama-library
         source_version: "2026-05-20"

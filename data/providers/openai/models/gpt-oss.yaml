@@ -41,6 +41,7 @@ metadata:
         kind: provider
         name: openai
     labels:
+        featured: "true"
         family: openai
         source: litellm
         source_version: "2026-05-20"

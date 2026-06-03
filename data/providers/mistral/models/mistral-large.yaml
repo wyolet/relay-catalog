@@ -70,6 +70,7 @@ metadata:
         kind: provider
         name: mistral
     labels:
+        featured: "true"
         family: mistral-large-3
         source: ollama-library
         source_version: "2026-05-20"

@@ -8,6 +8,7 @@ metadata:
         kind: provider
         name: deepseek
     labels:
+        featured: "true"
         family: deepseek-v4-flash
         source: ollama-library
         source_version: "2026-05-20"
@@ -39,6 +40,7 @@ metadata:
         kind: provider
         name: deepseek
     labels:
+        featured: "true"
         family: deepseek-v4-pro
         source: ollama-library
         source_version: "2026-05-20"
