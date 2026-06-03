@@ -8,6 +8,7 @@ metadata:
         kind: provider
         name: zhipuai
     labels:
+        featured: "true"
         family: glm-5
         source: ollama-library
         source_version: "2026-05-20"
@@ -37,6 +38,7 @@ metadata:
         kind: provider
         name: zhipuai
     labels:
+        featured: "true"
         family: glm-5.1
         source: ollama-library
         source_version: "2026-05-20"

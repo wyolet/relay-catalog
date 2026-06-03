@@ -9,6 +9,7 @@ metadata:
         kind: provider
         name: google
     labels:
+        featured: "true"
         family: gemini-3-1-pro-preview
         source: google-ai-studio
         source_version: "2026-05-21"

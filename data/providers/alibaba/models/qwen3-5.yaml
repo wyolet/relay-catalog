@@ -218,6 +218,7 @@ metadata:
         kind: provider
         name: alibaba
     labels:
+        featured: "true"
         family: qwen3.5
         source: ollama-library
         source_version: '2026-05-20'
