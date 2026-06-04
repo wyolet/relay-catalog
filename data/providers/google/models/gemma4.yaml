@@ -59,6 +59,12 @@ spec:
     snapshots:
         - name: gemma4-e4b
           originalName: gemma4:e4b
+        - name: gemma4-e4b-it-q4
+          originalName: gemma4:e4b-it-q4_K_M
+        - name: gemma4
+          originalName: gemma4
+        - name: gemma4-latest
+          originalName: gemma4:latest
     pointer: gemma4-e4b
 ---
 apiVersion: relay.wyolet.dev/v1alpha2
