@@ -13,6 +13,9 @@ metadata:
         kind: user
 spec:
     baseURL: ""
+    # Self-hosted Ollama needs no API key — routing injects a synthetic
+    # anonymous key so no HostKey is required. (Ollama Cloud still needs one.)
+    noAuth: true
     homepageURL: https://ollama.com
     icon:
         path: /provider/ollama.png
