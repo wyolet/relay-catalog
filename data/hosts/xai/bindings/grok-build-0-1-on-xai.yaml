@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: grok-build-0-1-on-xai
+    displayName: grok-build-0-1 via xai
+spec:
+    model: grok-build-0-1
+    host: xai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - grok-build-0-1

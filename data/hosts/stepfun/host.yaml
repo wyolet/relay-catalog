@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: stepfun
+    displayName: StepFun
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.stepfun.com/v1
+    pricingStrategies:
+        - api
+    docsURL: https://platform.stepfun.com/docs/zh/overview/concept

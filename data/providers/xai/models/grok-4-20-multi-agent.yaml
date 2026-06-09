@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: grok-4-20-multi-agent
+    displayName: Grok 4.20 Multi-Agent
+    owner:
+        kind: provider
+        name: xai
+    labels:
+        family: grok
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: grok
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 2000000
+    contextWindowOutput: 30000
+    contextWindowTotal: 2000000
+    maxOutputTokens: 30000
+    releaseDate: "2026-03-09"
+    enabled: true
+    snapshots:
+        - name: grok-4-20-multi-agent-0309
+          releasedAt: "2026-03-09"
+          originalName: grok-4.20-multi-agent-0309
+    pointer: grok-4-20-multi-agent-0309

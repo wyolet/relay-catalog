@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: sonar-deep-research
+    displayName: Perplexity Sonar Deep Research
+    owner:
+        kind: provider
+        name: perplexity
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32768
+    contextWindowTotal: 128000
+    maxOutputTokens: 32768
+    knowledgeCutoff: 2025-01
+    releaseDate: "2025-02-01"
+    enabled: true
+    snapshots:
+        - name: sonar-deep-research
+          releasedAt: "2025-02-01"
+    pointer: sonar-deep-research
