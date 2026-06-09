@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kimi-k2-5-fast-on-neuralwatt
+    displayName: kimi-k2-5-fast via neuralwatt
+spec:
+    model: kimi-k2-5-fast
+    host: neuralwatt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kimi-k2-5-fast

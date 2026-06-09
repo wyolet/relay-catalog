@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-gpt-3-5-turbo-raw
+    displayName: GPT-3.5-Turbo-Raw
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: gpt
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 4524
+    contextWindowOutput: 2048
+    contextWindowTotal: 4524
+    maxOutputTokens: 2048
+    releaseDate: "2023-09-27"
+    enabled: true
+    snapshots:
+        - name: openai-gpt-3-5-turbo-raw
+          releasedAt: "2023-09-27"
+          originalName: openai/gpt-3.5-turbo-raw
+    pointer: openai-gpt-3-5-turbo-raw

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-learnlm-1-5-pro-experimental
+    displayName: learnlm-1-5-pro-experimental pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - learnlm-1-5-pro-experimental
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 3.502
+        - meter: tokens.output
+          unit: per_million
+          amount: 10.506
+    enabled: true

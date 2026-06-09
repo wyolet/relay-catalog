@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-2-5-flash-image
+    displayName: gemini-2.5-flash-image
+    owner:
+        kind: provider
+        name: 302ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    maxOutputTokens: 32768
+    knowledgeCutoff: 2025-01
+    releaseDate: "2025-10-08"
+    enabled: true
+    snapshots:
+        - name: gemini-2-5-flash-image
+          releasedAt: "2025-10-08"
+          originalName: gemini-2.5-flash-image
+    pointer: gemini-2-5-flash-image

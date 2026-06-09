@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: neuralmagic-mistral-nemo-instruct-2407-fp8
+    displayName: Mistral Nemo
+    owner:
+        kind: provider
+        name: stackit
+    labels:
+        family: mistral
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    releaseDate: "2024-07-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: neuralmagic-mistral-nemo-instruct-2407-fp8
+          releasedAt: "2024-07-01"
+          originalName: neuralmagic/Mistral-Nemo-Instruct-2407-FP8
+    pointer: neuralmagic-mistral-nemo-instruct-2407-fp8

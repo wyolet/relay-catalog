@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepcogito-cogito-v2-1-671b-on-openrouter
+    displayName: deepcogito-cogito-v2-1-671b via openrouter
+spec:
+    model: deepcogito-cogito-v2-1-671b
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepcogito-cogito-v2-1-671b

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: arcee-ai-virtuoso-large-on-kilo
+    displayName: arcee-ai-virtuoso-large via kilo
+spec:
+    model: arcee-ai-virtuoso-large
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - arcee-ai-virtuoso-large

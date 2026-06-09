@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: canopylabs-orpheus-v1-english-on-groq
+    displayName: canopylabs-orpheus-v1-english via groq
+spec:
+    model: canopylabs-orpheus-v1-english
+    host: groq
+    adapter: openai
+    enabled: true
+    snapshots:
+        - canopylabs-orpheus-v1-english

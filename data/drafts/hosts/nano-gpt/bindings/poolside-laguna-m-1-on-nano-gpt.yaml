@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: poolside-laguna-m-1-on-nano-gpt
+    displayName: poolside-laguna-m-1 via nano-gpt
+spec:
+    model: poolside-laguna-m-1
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - poolside-laguna-m-1

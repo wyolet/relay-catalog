@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: xpersona-gpt-5-5-on-xpersona
+    displayName: xpersona-gpt-5-5 via xpersona
+spec:
+    model: xpersona-gpt-5-5
+    host: xpersona
+    adapter: openai
+    enabled: true
+    snapshots:
+        - xpersona-gpt-5-5

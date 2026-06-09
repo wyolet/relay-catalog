@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-deepseek-reasoner-on-orcarouter
+    displayName: deepseek-deepseek-reasoner via orcarouter
+spec:
+    model: deepseek-deepseek-reasoner
+    host: orcarouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-deepseek-reasoner

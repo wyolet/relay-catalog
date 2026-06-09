@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: x-ai-grok-4-1-fast-reasoning
+    displayName: X-Ai/Grok 4.1 Fast Reasoning
+    owner:
+        kind: provider
+        name: qiniu-ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        audio: true
+        reasoning: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+            - video
+        output:
+            - text
+    contextWindowInput: 20000000
+    contextWindowOutput: 2000000
+    contextWindowTotal: 20000000
+    maxOutputTokens: 2000000
+    releaseDate: "2025-12-19"
+    enabled: true
+    snapshots:
+        - name: x-ai-grok-4-1-fast-reasoning
+          releasedAt: "2025-12-19"
+          originalName: x-ai/grok-4.1-fast-reasoning
+    pointer: x-ai-grok-4-1-fast-reasoning

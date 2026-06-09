@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemini-3-flash-on-opencode
+    displayName: gemini-3-flash via opencode
+spec:
+    model: gemini-3-flash
+    host: opencode
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gemini-3-flash

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: google-gemini-embedding
+    displayName: gemini-embedding pricing
+    owner:
+        kind: host
+        id: google
+spec:
+    currency: USD
+    targetModels:
+        - gemini-embedding
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.15
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

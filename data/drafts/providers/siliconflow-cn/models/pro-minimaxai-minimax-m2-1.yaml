@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: pro-minimaxai-minimax-m2-1
+    displayName: Pro/MiniMaxAI/MiniMax-M2.1
+    owner:
+        kind: provider
+        name: siliconflow-cn
+    labels:
+        family: minimax
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: minimax
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 197000
+    contextWindowOutput: 131000
+    contextWindowTotal: 197000
+    maxOutputTokens: 131000
+    releaseDate: "2025-12-23"
+    enabled: true
+    snapshots:
+        - name: pro-minimaxai-minimax-m2-1
+          releasedAt: "2025-12-23"
+          originalName: Pro/MiniMaxAI/MiniMax-M2.1
+    pointer: pro-minimaxai-minimax-m2-1

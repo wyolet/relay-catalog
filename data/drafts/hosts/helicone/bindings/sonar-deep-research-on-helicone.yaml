@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: sonar-deep-research-on-helicone
+    displayName: sonar-deep-research via helicone
+spec:
+    model: sonar-deep-research
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - sonar-deep-research

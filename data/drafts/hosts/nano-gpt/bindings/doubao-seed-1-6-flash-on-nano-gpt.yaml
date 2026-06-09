@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: doubao-seed-1-6-flash-on-nano-gpt
+    displayName: doubao-seed-1-6-flash via nano-gpt
+spec:
+    model: doubao-seed-1-6-flash
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - doubao-seed-1-6-flash-250615

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: meganova-deepseek-ai-deepseek-v3-2
+    displayName: deepseek-ai-deepseek-v3-2 pricing
+    owner:
+        kind: host
+        id: meganova
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-ai-deepseek-v3-2
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.26
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.38
+    enabled: true

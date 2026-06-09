@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mimo-v2-tts
+    displayName: MiMo-V2-TTS
+    owner:
+        kind: provider
+        name: xiaomi-token-plan-ams
+    labels:
+        family: mimo
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mimo
+    capabilities:
+        chat: true
+        streaming: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - audio
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    maxOutputTokens: 8192
+    releaseDate: "2026-03-18"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mimo-v2-tts
+          releasedAt: "2026-03-18"
+    pointer: mimo-v2-tts

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hf-qwen-qwen3-5-397b-a17b-on-synthetic
+    displayName: hf-qwen-qwen3-5-397b-a17b via synthetic
+spec:
+    model: hf-qwen-qwen3-5-397b-a17b
+    host: synthetic
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hf-qwen-qwen3-5-397b-a17b

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: neuralwatt-qwen3-5-397b-fast
+    displayName: qwen3-5-397b-fast pricing
+    owner:
+        kind: host
+        id: neuralwatt
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-5-397b-fast
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.69
+        - meter: tokens.output
+          unit: per_million
+          amount: 4.14
+    enabled: true

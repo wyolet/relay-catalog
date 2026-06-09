@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: zai-glm-4-7-on-cerebras
+    displayName: zai-glm-4-7 via cerebras
+spec:
+    model: zai-glm-4-7
+    host: cerebras
+    adapter: openai
+    enabled: true
+    snapshots:
+        - zai-glm-4-7

@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: minimaxai-minimax-m2-5-fast
+    displayName: MiniMax-M2.5-fast
+    owner:
+        kind: provider
+        name: nebius
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 7000
+    contextWindowOutput: 8192
+    contextWindowTotal: 8000
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2025-01
+    releaseDate: "2025-01-20"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: minimaxai-minimax-m2-5-fast
+          releasedAt: "2025-01-20"
+          originalName: MiniMaxAI/MiniMax-M2.5-fast
+    pointer: minimaxai-minimax-m2-5-fast

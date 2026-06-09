@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: hf-openai-gpt-oss-120b
+    displayName: GPT OSS 120B
+    owner:
+        kind: provider
+        name: synthetic
+    labels:
+        family: gpt-oss
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt-oss
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32768
+    contextWindowTotal: 128000
+    maxOutputTokens: 32768
+    releaseDate: "2025-08-05"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: hf-openai-gpt-oss-120b
+          releasedAt: "2025-08-05"
+          originalName: hf:openai/gpt-oss-120b
+    pointer: hf-openai-gpt-oss-120b

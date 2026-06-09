@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: grok-code
+    displayName: Grok Code Fast 1
+    owner:
+        kind: provider
+        name: opencode
+    labels:
+        family: grok
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: grok
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 256000
+    contextWindowTotal: 256000
+    maxOutputTokens: 256000
+    releaseDate: "2025-08-20"
+    enabled: true
+    snapshots:
+        - name: grok-code
+          releasedAt: "2025-08-20"
+    pointer: grok-code

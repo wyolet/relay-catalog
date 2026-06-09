@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-nousresearch-hermes-3-llama-3-1-70b
+    displayName: nousresearch-hermes-3-llama-3-1-70b pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - nousresearch-hermes-3-llama-3-1-70b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.408
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.408
+    enabled: true

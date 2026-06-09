@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: upstage-solar-pro-3-on-nano-gpt
+    displayName: upstage-solar-pro-3 via nano-gpt
+spec:
+    model: upstage-solar-pro-3
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - upstage-solar-pro-3

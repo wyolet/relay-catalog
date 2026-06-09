@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-gpt-3-5-turbo-16k
+    displayName: 'OpenAI: GPT-3.5 Turbo 16k'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16385
+    contextWindowOutput: 4096
+    contextWindowTotal: 16385
+    maxOutputTokens: 4096
+    releaseDate: "2023-08-28"
+    enabled: true
+    snapshots:
+        - name: openai-gpt-3-5-turbo-16k
+          releasedAt: "2023-08-28"
+          originalName: openai/gpt-3.5-turbo-16k
+    pointer: openai-gpt-3-5-turbo-16k

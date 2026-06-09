@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3guard-gen-8b-on-ovhcloud
+    displayName: qwen3guard-gen-8b via ovhcloud
+spec:
+    model: qwen3guard-gen-8b
+    host: ovhcloud
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3guard-gen-8b

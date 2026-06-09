@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openrouter-owl-alpha-on-openrouter
+    displayName: openrouter-owl-alpha via openrouter
+spec:
+    model: openrouter-owl-alpha
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openrouter-owl-alpha

@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-5-flash
+    displayName: Qwen3.5 Flash
+    owner:
+        kind: provider
+        name: zenmux
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1020000
+    contextWindowOutput: 1020000
+    contextWindowTotal: 1020000
+    maxOutputTokens: 1020000
+    knowledgeCutoff: "2025-01-01"
+    releaseDate: "2026-03-20"
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-5-flash
+          releasedAt: "2026-03-20"
+          originalName: qwen/qwen3.5-flash
+    pointer: qwen-qwen3-5-flash

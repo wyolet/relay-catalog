@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-r1-sambanova
+    displayName: DeepSeek R1 Fast
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    maxOutputTokens: 4096
+    releaseDate: "2025-02-20"
+    enabled: true
+    snapshots:
+        - name: deepseek-r1-sambanova
+          releasedAt: "2025-02-20"
+    pointer: deepseek-r1-sambanova

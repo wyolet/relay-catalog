@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: perplexity-sonar-pro-on-kilo
+    displayName: perplexity-sonar-pro via kilo
+spec:
+    model: perplexity-sonar-pro
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - perplexity-sonar-pro

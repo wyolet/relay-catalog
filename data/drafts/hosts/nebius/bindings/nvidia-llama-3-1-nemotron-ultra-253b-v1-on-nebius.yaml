@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-llama-3-1-nemotron-ultra-253b-v1-on-nebius
+    displayName: nvidia-llama-3-1-nemotron-ultra-253b-v1 via nebius
+spec:
+    model: nvidia-llama-3-1-nemotron-ultra-253b-v1
+    host: nebius
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-llama-3-1-nemotron-ultra-253b-v1

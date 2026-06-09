@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ministral-3b
+    displayName: Ministral 3B
+    owner:
+        kind: provider
+        name: llmgateway
+    labels:
+        family: mistral
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 8192
+    contextWindowTotal: 131072
+    maxOutputTokens: 8192
+    releaseDate: "2025-12-02"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: ministral-3b-2512
+          releasedAt: "2025-12-02"
+        - name: ministral-3b-latest
+          releasedAt: "2024-10-01"
+    pointer: ministral-3b-2512

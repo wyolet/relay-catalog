@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mancer-weaver
+    displayName: 'Mancer: Weaver (alpha)'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8000
+    contextWindowOutput: 2000
+    contextWindowTotal: 8000
+    maxOutputTokens: 2000
+    releaseDate: "2023-08-02"
+    enabled: true
+    snapshots:
+        - name: mancer-weaver
+          releasedAt: "2023-08-02"
+          originalName: mancer/weaver
+    pointer: mancer-weaver

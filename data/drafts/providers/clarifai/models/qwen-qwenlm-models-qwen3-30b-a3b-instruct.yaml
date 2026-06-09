@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwenlm-models-qwen3-30b-a3b-instruct
+    displayName: Qwen3 30B A3B Instruct 2507
+    owner:
+        kind: provider
+        name: clarifai
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    maxOutputTokens: 262144
+    releaseDate: "2025-07-30"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwenlm-models-qwen3-30b-a3b-instruct-2507
+          releasedAt: "2025-07-30"
+          originalName: qwen/qwenLM/models/Qwen3-30B-A3B-Instruct-2507
+    pointer: qwen-qwenlm-models-qwen3-30b-a3b-instruct-2507

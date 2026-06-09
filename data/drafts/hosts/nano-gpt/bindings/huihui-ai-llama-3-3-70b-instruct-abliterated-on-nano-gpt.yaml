@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: huihui-ai-llama-3-3-70b-instruct-abliterated-on-nano-gpt
+    displayName: huihui-ai-llama-3-3-70b-instruct-abliterated via nano-gpt
+spec:
+    model: huihui-ai-llama-3-3-70b-instruct-abliterated
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - huihui-ai-llama-3-3-70b-instruct-abliterated

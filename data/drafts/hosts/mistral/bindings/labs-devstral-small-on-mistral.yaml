@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: labs-devstral-small-on-mistral
+    displayName: labs-devstral-small via mistral
+spec:
+    model: labs-devstral-small
+    host: mistral
+    adapter: openai
+    enabled: true
+    snapshots:
+        - labs-devstral-small-2512

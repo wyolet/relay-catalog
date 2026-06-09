@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: anthropic-claude-sonnet-4-5
+    displayName: Claude Sonnet 4.5 (latest)
+    owner:
+        kind: provider
+        name: anyapi
+    labels:
+        family: claude-sonnet
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: claude-sonnet
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 64000
+    contextWindowTotal: 200000
+    maxOutputTokens: 64000
+    knowledgeCutoff: "2025-07-31"
+    releaseDate: "2025-09-29"
+    enabled: true
+    snapshots:
+        - name: anthropic-claude-sonnet-4-5
+          releasedAt: "2025-09-29"
+          originalName: anthropic/claude-sonnet-4-5
+    pointer: anthropic-claude-sonnet-4-5

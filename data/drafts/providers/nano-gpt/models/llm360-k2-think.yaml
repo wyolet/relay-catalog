@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llm360-k2-think
+    displayName: K2-Think
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: kimi-thinking
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: kimi-thinking
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32768
+    contextWindowTotal: 128000
+    maxOutputTokens: 32768
+    releaseDate: "2025-07-26"
+    enabled: true
+    snapshots:
+        - name: llm360-k2-think
+          releasedAt: "2025-07-26"
+          originalName: LLM360/K2-Think
+    pointer: llm360-k2-think

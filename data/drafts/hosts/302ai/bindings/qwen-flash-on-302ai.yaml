@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-flash-on-302ai
+    displayName: qwen-flash via 302ai
+spec:
+    model: qwen-flash
+    host: 302ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-flash

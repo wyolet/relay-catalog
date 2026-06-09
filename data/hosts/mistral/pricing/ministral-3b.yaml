@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: mistral-ministral-3b
+    displayName: ministral-3b pricing
+    owner:
+        kind: host
+        id: mistral
+spec:
+    currency: USD
+    targetModels:
+        - ministral-3b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.04
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.04
+    enabled: true

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-max-on-alibaba
+    displayName: qwen-max via alibaba
+spec:
+    model: qwen-max
+    host: alibaba
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-max

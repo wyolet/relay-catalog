@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: evroc-mistralai-voxtral-small-24b
+    displayName: mistralai-voxtral-small-24b pricing
+    owner:
+        kind: host
+        id: evroc
+spec:
+    currency: USD
+    targetModels:
+        - mistralai-voxtral-small-24b
+    rates:
+        - meter: tokens.audio_output
+          unit: per_million
+          amount: 2.36
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.00236
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.00236
+    enabled: true

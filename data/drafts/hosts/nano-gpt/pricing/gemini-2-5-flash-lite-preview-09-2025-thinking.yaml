@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-gemini-2-5-flash-lite-preview-09-2025-thinking
+    displayName: gemini-2-5-flash-lite-preview-09-2025-thinking pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - gemini-2-5-flash-lite-preview-09-2025-thinking
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.4
+    enabled: true

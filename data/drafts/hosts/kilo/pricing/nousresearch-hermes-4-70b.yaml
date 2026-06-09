@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-nousresearch-hermes-4-70b
+    displayName: nousresearch-hermes-4-70b pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - nousresearch-hermes-4-70b
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.055
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.13
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.4
+    enabled: true

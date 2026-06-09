@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: baseten-nvidia-nemotron-120b-a12b
+    displayName: nvidia-nemotron-120b-a12b pricing
+    owner:
+        kind: host
+        id: baseten
+spec:
+    currency: USD
+    targetModels:
+        - nvidia-nemotron-120b-a12b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.75
+    enabled: true

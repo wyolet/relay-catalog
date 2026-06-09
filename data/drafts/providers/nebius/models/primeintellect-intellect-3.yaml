@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: primeintellect-intellect-3
+    displayName: INTELLECT-3
+    owner:
+        kind: provider
+        name: nebius
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 120000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2025-10
+    releaseDate: "2026-01-25"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: primeintellect-intellect-3
+          releasedAt: "2026-01-25"
+          originalName: PrimeIntellect/INTELLECT-3
+    pointer: primeintellect-intellect-3

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: relace-relace-apply-3-on-kilo
+    displayName: relace-relace-apply-3 via kilo
+spec:
+    model: relace-relace-apply-3
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - relace-relace-apply-3

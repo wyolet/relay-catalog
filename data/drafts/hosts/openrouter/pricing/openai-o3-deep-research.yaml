@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: openrouter-openai-o3-deep-research
+    displayName: openai-o3-deep-research pricing
+    owner:
+        kind: host
+        id: openrouter
+spec:
+    currency: USD
+    targetModels:
+        - openai-o3-deep-research
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 2.5
+        - meter: tokens.input
+          unit: per_million
+          amount: 10
+        - meter: tokens.output
+          unit: per_million
+          amount: 40
+    enabled: true

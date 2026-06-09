@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: llmgateway-ministral-8b
+    displayName: ministral-8b pricing
+    owner:
+        kind: host
+        id: llmgateway
+spec:
+    currency: USD
+    targetModels:
+        - ministral-8b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.15
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.15
+    enabled: true

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: v0-1-5-lg-on-nano-gpt
+    displayName: v0-1-5-lg via nano-gpt
+spec:
+    model: v0-1-5-lg
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - v0-1-5-lg

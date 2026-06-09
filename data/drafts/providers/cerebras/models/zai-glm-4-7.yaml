@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: zai-glm-4-7
+    displayName: Z.AI GLM-4.7
+    owner:
+        kind: provider
+        name: cerebras
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 40000
+    contextWindowTotal: 131072
+    maxOutputTokens: 40000
+    releaseDate: "2026-01-10"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: zai-glm-4-7
+          releasedAt: "2026-01-10"
+          originalName: zai-glm-4.7
+    pointer: zai-glm-4-7

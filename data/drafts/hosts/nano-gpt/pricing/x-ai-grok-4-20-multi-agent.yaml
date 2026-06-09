@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-x-ai-grok-4-20-multi-agent
+    displayName: x-ai-grok-4-20-multi-agent pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - x-ai-grok-4-20-multi-agent
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.output
+          unit: per_million
+          amount: 6
+    enabled: true

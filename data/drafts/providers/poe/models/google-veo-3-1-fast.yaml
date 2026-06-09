@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: google-veo-3-1-fast
+    displayName: Veo-3.1-Fast
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: veo
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: veo
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - video
+    contextWindowInput: 480
+    contextWindowTotal: 480
+    releaseDate: "2025-10-15"
+    enabled: true
+    snapshots:
+        - name: google-veo-3-1-fast
+          releasedAt: "2025-10-15"
+          originalName: google/veo-3.1-fast
+    pointer: google-veo-3-1-fast

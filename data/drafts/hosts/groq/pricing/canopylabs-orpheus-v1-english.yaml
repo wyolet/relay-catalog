@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: groq-canopylabs-orpheus-v1-english
+    displayName: canopylabs-orpheus-v1-english pricing
+    owner:
+        kind: host
+        id: groq
+spec:
+    currency: USD
+    targetModels:
+        - canopylabs-orpheus-v1-english
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

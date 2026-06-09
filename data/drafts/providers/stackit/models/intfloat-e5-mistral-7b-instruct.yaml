@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: intfloat-e5-mistral-7b-instruct
+    displayName: E5 Mistral 7B
+    owner:
+        kind: provider
+        name: stackit
+    labels:
+        family: mistral
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 4096
+    contextWindowOutput: 4096
+    contextWindowTotal: 4096
+    maxOutputTokens: 4096
+    releaseDate: "2023-12-11"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: intfloat-e5-mistral-7b-instruct
+          releasedAt: "2023-12-11"
+          originalName: intfloat/e5-mistral-7b-instruct
+    pointer: intfloat-e5-mistral-7b-instruct

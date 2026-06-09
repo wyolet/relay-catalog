@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-deepseek-prover-v2-671b-on-novita-ai
+    displayName: deepseek-deepseek-prover-v2-671b via novita-ai
+spec:
+    model: deepseek-deepseek-prover-v2-671b
+    host: novita-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-deepseek-prover-v2-671b

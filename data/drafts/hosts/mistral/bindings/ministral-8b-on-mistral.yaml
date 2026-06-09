@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: ministral-8b-on-mistral
+    displayName: ministral-8b via mistral
+spec:
+    model: ministral-8b
+    host: mistral
+    adapter: openai
+    enabled: true
+    snapshots:
+        - ministral-8b-latest

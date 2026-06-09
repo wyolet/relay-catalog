@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: baidu-ernie-4-5-vl-28b-a3b-on-nano-gpt
+    displayName: baidu-ernie-4-5-vl-28b-a3b via nano-gpt
+spec:
+    model: baidu-ernie-4-5-vl-28b-a3b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - baidu-ernie-4-5-vl-28b-a3b

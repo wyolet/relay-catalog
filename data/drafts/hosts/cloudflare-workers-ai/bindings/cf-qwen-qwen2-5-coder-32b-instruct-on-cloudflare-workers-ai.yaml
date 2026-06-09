@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cf-qwen-qwen2-5-coder-32b-instruct-on-cloudflare-workers-ai
+    displayName: cf-qwen-qwen2-5-coder-32b-instruct via cloudflare-workers-ai
+spec:
+    model: cf-qwen-qwen2-5-coder-32b-instruct
+    host: cloudflare-workers-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cf-qwen-qwen2-5-coder-32b-instruct

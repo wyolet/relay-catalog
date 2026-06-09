@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-coding-plan-qwen3-6-plus
+    displayName: qwen3-6-plus pricing
+    owner:
+        kind: host
+        id: alibaba-coding-plan
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-6-plus
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

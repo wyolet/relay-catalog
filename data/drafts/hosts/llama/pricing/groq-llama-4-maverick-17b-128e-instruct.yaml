@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: llama-groq-llama-4-maverick-17b-128e-instruct
+    displayName: groq-llama-4-maverick-17b-128e-instruct pricing
+    owner:
+        kind: host
+        id: llama
+spec:
+    currency: USD
+    targetModels:
+        - groq-llama-4-maverick-17b-128e-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

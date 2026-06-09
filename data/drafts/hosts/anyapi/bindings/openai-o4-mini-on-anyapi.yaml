@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-o4-mini-on-anyapi
+    displayName: openai-o4-mini via anyapi
+spec:
+    model: openai-o4-mini
+    host: anyapi
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-o4-mini

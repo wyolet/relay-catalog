@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: siliconflow-deepseek-r1-on-alibaba-cn
+    displayName: siliconflow-deepseek-r1 via alibaba-cn
+spec:
+    model: siliconflow-deepseek-r1
+    host: alibaba-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - siliconflow-deepseek-r1-0528

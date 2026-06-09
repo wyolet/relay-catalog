@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: meta-llama-4-maverick-17b-128e-instruct-fp8
+    displayName: Llama 4 Maverick 17B 128E Instruct FP8
+    owner:
+        kind: provider
+        name: github-models
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2024-12
+    releaseDate: "2025-01-31"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: meta-llama-4-maverick-17b-128e-instruct-fp8
+          releasedAt: "2025-01-31"
+          originalName: meta/llama-4-maverick-17b-128e-instruct-fp8
+    pointer: meta-llama-4-maverick-17b-128e-instruct-fp8

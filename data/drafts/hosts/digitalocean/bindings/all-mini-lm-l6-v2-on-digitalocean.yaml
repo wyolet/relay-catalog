@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: all-mini-lm-l6-v2-on-digitalocean
+    displayName: all-mini-lm-l6-v2 via digitalocean
+spec:
+    model: all-mini-lm-l6-v2
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - all-mini-lm-l6-v2

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-imagen-4-fast-on-poe
+    displayName: google-imagen-4-fast via poe
+spec:
+    model: google-imagen-4-fast
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-imagen-4-fast

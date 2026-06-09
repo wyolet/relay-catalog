@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kilo-auto-free
+    displayName: Kilo Auto Free
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 204800
+    contextWindowOutput: 131072
+    contextWindowTotal: 204800
+    maxOutputTokens: 131072
+    releaseDate: "2026-03-15"
+    enabled: true
+    snapshots:
+        - name: kilo-auto-free
+          releasedAt: "2026-03-15"
+          originalName: kilo-auto/free
+    pointer: kilo-auto-free

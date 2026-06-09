@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: elevenlabs-elevenlabs-music
+    displayName: ElevenLabs-Music
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: elevenlabs
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: elevenlabs
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - audio
+    contextWindowInput: 2000
+    contextWindowTotal: 2000
+    releaseDate: "2025-08-29"
+    enabled: true
+    snapshots:
+        - name: elevenlabs-elevenlabs-music
+          releasedAt: "2025-08-29"
+          originalName: elevenlabs/elevenlabs-music
+    pointer: elevenlabs-elevenlabs-music

@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: azure-gpt-4o
+    displayName: Azure gpt-4o
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    maxOutputTokens: 16384
+    releaseDate: "2024-05-13"
+    enabled: true
+    snapshots:
+        - name: azure-gpt-4o
+          releasedAt: "2024-05-13"
+    pointer: azure-gpt-4o

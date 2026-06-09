@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-coder-480b-a35b-instruct-on-novita-ai
+    displayName: qwen-qwen3-coder-480b-a35b-instruct via novita-ai
+spec:
+    model: qwen-qwen3-coder-480b-a35b-instruct
+    host: novita-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-coder-480b-a35b-instruct

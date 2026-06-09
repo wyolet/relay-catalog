@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cohere-command-r7b-12-on-kilo
+    displayName: cohere-command-r7b-12 via kilo
+spec:
+    model: cohere-command-r7b-12
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cohere-command-r7b-12-2024

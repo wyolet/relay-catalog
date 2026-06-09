@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-sora-2-on-poe
+    displayName: openai-sora-2 via poe
+spec:
+    model: openai-sora-2
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-sora-2

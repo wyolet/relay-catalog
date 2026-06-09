@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: microsoft-mai-ds-r1-on-github-models
+    displayName: microsoft-mai-ds-r1 via github-models
+spec:
+    model: microsoft-mai-ds-r1
+    host: github-models
+    adapter: openai
+    enabled: true
+    snapshots:
+        - microsoft-mai-ds-r1

@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kat-coder-air-v1
+    displayName: KAT Coder Air V1
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32768
+    contextWindowTotal: 128000
+    maxOutputTokens: 32768
+    releaseDate: "2025-10-28"
+    enabled: true
+    snapshots:
+        - name: kat-coder-air-v1
+          releasedAt: "2025-10-28"
+          originalName: KAT-Coder-Air-V1
+    pointer: kat-coder-air-v1

@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-exp
+    displayName: Gemini 2.0 Pro 1206
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 2097152
+    contextWindowOutput: 8192
+    contextWindowTotal: 2097152
+    maxOutputTokens: 8192
+    releaseDate: "2024-12-06"
+    enabled: true
+    snapshots:
+        - name: gemini-exp-1206
+          releasedAt: "2024-12-06"
+    pointer: gemini-exp-1206

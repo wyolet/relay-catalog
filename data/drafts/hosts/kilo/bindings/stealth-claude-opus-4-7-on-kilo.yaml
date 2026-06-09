@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: stealth-claude-opus-4-7-on-kilo
+    displayName: stealth-claude-opus-4-7 via kilo
+spec:
+    model: stealth-claude-opus-4-7
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - stealth-claude-opus-4-7

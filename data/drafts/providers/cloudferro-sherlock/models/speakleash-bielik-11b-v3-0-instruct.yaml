@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: speakleash-bielik-11b-v3-0-instruct
+    displayName: Bielik 11B v3.0 Instruct
+    owner:
+        kind: provider
+        name: cloudferro-sherlock
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 32000
+    contextWindowTotal: 32000
+    maxOutputTokens: 32000
+    knowledgeCutoff: 2025-03
+    releaseDate: "2025-03-13"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: speakleash-bielik-11b-v3-0-instruct
+          releasedAt: "2025-03-13"
+          originalName: speakleash/Bielik-11B-v3.0-Instruct
+    pointer: speakleash-bielik-11b-v3-0-instruct

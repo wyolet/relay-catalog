@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cogito-2-1-671b-on-ollama-cloud
+    displayName: cogito-2-1-671b via ollama-cloud
+spec:
+    model: cogito-2-1-671b
+    host: ollama-cloud
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cogito-2-1-671b

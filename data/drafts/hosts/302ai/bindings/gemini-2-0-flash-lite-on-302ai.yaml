@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemini-2-0-flash-lite-on-302ai
+    displayName: gemini-2-0-flash-lite via 302ai
+spec:
+    model: gemini-2-0-flash-lite
+    host: 302ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gemini-2-0-flash-lite

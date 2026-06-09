@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: rednote-hilab-dots-ocr
+    displayName: dots.ocr
+    owner:
+        kind: provider
+        name: chutes
+    labels:
+        family: rednote
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: rednote
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    maxOutputTokens: 131072
+    releaseDate: "2025-12-29"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: rednote-hilab-dots-ocr
+          releasedAt: "2025-12-29"
+          originalName: rednote-hilab/dots.ocr
+    pointer: rednote-hilab-dots-ocr

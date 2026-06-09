@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: meta-llama-llama-3-2-1b-instruct
+    displayName: 'Meta: Llama 3.2 1B Instruct'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 60000
+    contextWindowOutput: 12000
+    contextWindowTotal: 60000
+    maxOutputTokens: 12000
+    releaseDate: "2024-09-18"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: meta-llama-llama-3-2-1b-instruct
+          releasedAt: "2024-09-18"
+          originalName: meta-llama/llama-3.2-1b-instruct
+    pointer: meta-llama-llama-3-2-1b-instruct

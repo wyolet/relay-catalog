@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimax-m2-7-highspeed-on-llmgateway
+    displayName: minimax-m2-7-highspeed via llmgateway
+spec:
+    model: minimax-m2-7-highspeed
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - minimax-m2-7-highspeed

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: route-glm-5-1-on-routing-run
+    displayName: route-glm-5-1 via routing-run
+spec:
+    model: route-glm-5-1
+    host: routing-run
+    adapter: openai
+    enabled: true
+    snapshots:
+        - route-glm-5-1

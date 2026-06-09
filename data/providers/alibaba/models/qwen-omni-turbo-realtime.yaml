@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+  name: qwen-omni-turbo-realtime
+  displayName: Qwen-Omni Turbo Realtime
+  owner:
+    kind: provider
+    name: alibaba
+  labels:
+    family: qwen
+    source: models.dev
+    source_version: '2026-06-09'
+spec:
+  family: qwen
+  capabilities:
+    chat: true
+    streaming: true
+    tools: true
+    vision: true
+    audio: true
+    audioInput: true
+    audioOutput: true
+    systemMessages: true
+  modalities:
+    input:
+    - text
+    - image
+    - audio
+    output:
+    - text
+    - audio
+  contextWindowInput: 32768
+  contextWindowOutput: 2048
+  contextWindowTotal: 32768
+  maxOutputTokens: 2048
+  knowledgeCutoff: 2024-04
+  releaseDate: '2025-05-08'
+  enabled: true
+  snapshots:
+  - name: qwen-omni-turbo-realtime
+    releasedAt: '2025-05-08'
+  pointer: qwen-omni-turbo-realtime

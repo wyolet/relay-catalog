@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: voxtral-small-24b-on-scaleway
+    displayName: voxtral-small-24b via scaleway
+spec:
+    model: voxtral-small-24b
+    host: scaleway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - voxtral-small-24b-2507

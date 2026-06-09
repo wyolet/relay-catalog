@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: baidu-ernie-4-5-300b-a47b-on-siliconflow-cn
+    displayName: baidu-ernie-4-5-300b-a47b via siliconflow-cn
+spec:
+    model: baidu-ernie-4-5-300b-a47b
+    host: siliconflow-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - baidu-ernie-4-5-300b-a47b

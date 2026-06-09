@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: thedrummer-skyfall-31b-v4-2
+    displayName: TheDrummer Skyfall 31B v4.2
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - pdf
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 16384
+    contextWindowTotal: 131072
+    maxOutputTokens: 16384
+    releaseDate: "2026-03-26"
+    enabled: true
+    snapshots:
+        - name: thedrummer-skyfall-31b-v4-2
+          releasedAt: "2026-03-26"
+          originalName: TheDrummer/Skyfall-31B-v4.2
+    pointer: thedrummer-skyfall-31b-v4-2

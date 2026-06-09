@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: openrouter-nvidia-nemotron-nano-9b-v2
+    displayName: nvidia-nemotron-nano-9b-v2 pricing
+    owner:
+        kind: host
+        id: openrouter
+spec:
+    currency: USD
+    targetModels:
+        - nvidia-nemotron-nano-9b-v2
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.04
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.16
+    enabled: true

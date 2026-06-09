@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-oss-20b-on-digitalocean
+    displayName: openai-gpt-oss-20b via digitalocean
+spec:
+    model: openai-gpt-oss-20b
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-oss-20b

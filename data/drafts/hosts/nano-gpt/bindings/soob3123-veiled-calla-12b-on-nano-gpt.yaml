@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: soob3123-veiled-calla-12b-on-nano-gpt
+    displayName: soob3123-veiled-calla-12b via nano-gpt
+spec:
+    model: soob3123-veiled-calla-12b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - soob3123-veiled-calla-12b

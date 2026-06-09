@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: minimax-m3-free
+    displayName: MiniMax M3 Free
+    owner:
+        kind: provider
+        name: opencode
+    labels:
+        family: minimax-m3-free
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: minimax-m3-free
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 32000
+    contextWindowTotal: 200000
+    maxOutputTokens: 32000
+    knowledgeCutoff: 2025-01
+    releaseDate: "2026-05-31"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: minimax-m3-free
+          releasedAt: "2026-05-31"
+    pointer: minimax-m3-free

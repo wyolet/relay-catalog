@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-thedrummer-cydonia-24b-v4-3
+    displayName: thedrummer-cydonia-24b-v4-3 pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - thedrummer-cydonia-24b-v4-3
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.1003
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.1207
+    enabled: true

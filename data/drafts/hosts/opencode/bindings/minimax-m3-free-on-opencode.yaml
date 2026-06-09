@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimax-m3-free-on-opencode
+    displayName: minimax-m3-free via opencode
+spec:
+    model: minimax-m3-free
+    host: opencode
+    adapter: openai
+    enabled: true
+    snapshots:
+        - minimax-m3-free

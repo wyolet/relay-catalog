@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: poe-openai-gpt-5-1-codex-mini
+    displayName: openai-gpt-5-1-codex-mini pricing
+    owner:
+        kind: host
+        id: poe
+spec:
+    currency: USD
+    targetModels:
+        - openai-gpt-5-1-codex-mini
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.022
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.22
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.8
+    enabled: true

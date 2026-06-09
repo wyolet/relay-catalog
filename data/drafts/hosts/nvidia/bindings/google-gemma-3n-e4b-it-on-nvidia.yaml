@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-gemma-3n-e4b-it-on-nvidia
+    displayName: google-gemma-3n-e4b-it via nvidia
+spec:
+    model: google-gemma-3n-e4b-it
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-gemma-3n-e4b-it

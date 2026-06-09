@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: llama-3-1-8b-instant-on-groq
+    displayName: llama-3-1-8b-instant via groq
+spec:
+    model: llama-3-1-8b-instant
+    host: groq
+    adapter: openai
+    enabled: true
+    snapshots:
+        - llama-3-1-8b-instant

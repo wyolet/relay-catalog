@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: glm-5-turbo
+    displayName: glm-5-turbo
+    owner:
+        kind: provider
+        name: 302ai
+    labels:
+        family: glm
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glm
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 131072
+    contextWindowTotal: 200000
+    maxOutputTokens: 131072
+    releaseDate: "2026-03-16"
+    enabled: true
+    snapshots:
+        - name: glm-5-turbo
+          releasedAt: "2026-03-16"
+    pointer: glm-5-turbo

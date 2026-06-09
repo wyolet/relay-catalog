@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: lucidquery
+    displayName: LucidQuery AI
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://lucidquery.com/api/v1
+    pricingStrategies:
+        - api
+    docsURL: https://lucidquery.com/api/docs

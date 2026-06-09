@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: groq-llama-4-maverick-17b-128e-instruct-on-llama
+    displayName: groq-llama-4-maverick-17b-128e-instruct via llama
+spec:
+    model: groq-llama-4-maverick-17b-128e-instruct
+    host: llama
+    adapter: openai
+    enabled: true
+    snapshots:
+        - groq-llama-4-maverick-17b-128e-instruct

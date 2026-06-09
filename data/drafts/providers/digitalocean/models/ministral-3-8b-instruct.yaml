@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ministral-3-8b-instruct
+    displayName: Ministral 3 8B
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: ministral
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: ministral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    maxOutputTokens: 262144
+    releaseDate: "2025-12-15"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: ministral-3-8b-instruct-2512
+          releasedAt: "2025-12-15"
+    pointer: ministral-3-8b-instruct-2512

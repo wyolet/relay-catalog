@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cohere-command-r-08-on-openrouter
+    displayName: cohere-command-r-08 via openrouter
+spec:
+    model: cohere-command-r-08
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cohere-command-r-08-2024

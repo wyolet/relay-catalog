@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: stable-diffusion-3-5-large
+    displayName: Stable Diffusion 3.5 Large
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: stable-diffusion
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: stable-diffusion
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - image
+    contextWindowInput: 256
+    contextWindowOutput: 1
+    contextWindowTotal: 256
+    maxOutputTokens: 1
+    releaseDate: "2024-10-22"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: stable-diffusion-3-5-large
+          releasedAt: "2024-10-22"
+          originalName: stable-diffusion-3.5-large
+    pointer: stable-diffusion-3-5-large

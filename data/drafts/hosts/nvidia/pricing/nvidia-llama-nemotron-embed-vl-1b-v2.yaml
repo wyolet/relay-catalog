@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nvidia-nvidia-llama-nemotron-embed-vl-1b-v2
+    displayName: nvidia-llama-nemotron-embed-vl-1b-v2 pricing
+    owner:
+        kind: host
+        id: nvidia
+spec:
+    currency: USD
+    targetModels:
+        - nvidia-llama-nemotron-embed-vl-1b-v2
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

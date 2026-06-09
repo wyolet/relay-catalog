@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-oss-safeguard-20b-on-nano-gpt
+    displayName: openai-gpt-oss-safeguard-20b via nano-gpt
+spec:
+    model: openai-gpt-oss-safeguard-20b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-oss-safeguard-20b

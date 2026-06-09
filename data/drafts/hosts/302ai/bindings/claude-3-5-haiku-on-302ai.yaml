@@ -1,0 +1,13 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: claude-3-5-haiku-on-302ai
+    displayName: claude-3-5-haiku via 302ai
+spec:
+    model: claude-3-5-haiku
+    host: 302ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - claude-3-5-haiku-20241022
+        - claude-3-5-haiku-latest

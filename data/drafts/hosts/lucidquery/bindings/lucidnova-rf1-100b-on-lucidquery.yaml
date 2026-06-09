@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: lucidnova-rf1-100b-on-lucidquery
+    displayName: lucidnova-rf1-100b via lucidquery
+spec:
+    model: lucidnova-rf1-100b
+    host: lucidquery
+    adapter: openai
+    enabled: true
+    snapshots:
+        - lucidnova-rf1-100b

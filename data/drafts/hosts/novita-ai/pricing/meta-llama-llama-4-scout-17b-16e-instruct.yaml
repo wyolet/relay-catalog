@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: novita-ai-meta-llama-llama-4-scout-17b-16e-instruct
+    displayName: meta-llama-llama-4-scout-17b-16e-instruct pricing
+    owner:
+        kind: host
+        id: novita-ai
+spec:
+    currency: USD
+    targetModels:
+        - meta-llama-llama-4-scout-17b-16e-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.18
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.59
+    enabled: true

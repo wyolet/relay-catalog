@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claude-4-6-sonnet
+    displayName: Claude Sonnet 4.6
+    owner:
+        kind: provider
+        name: cortecs
+    labels:
+        family: claude-sonnet
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: claude-sonnet
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 1000000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 1000000
+    knowledgeCutoff: "2025-08-31"
+    releaseDate: "2026-02-17"
+    enabled: true
+    snapshots:
+        - name: claude-4-6-sonnet
+          releasedAt: "2026-02-17"
+    pointer: claude-4-6-sonnet

@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: siliconflow-deepseek-v3-2
+    displayName: siliconflow/deepseek-v3.2
+    owner:
+        kind: provider
+        name: alibaba-cn
+    labels:
+        family: deepseek
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 163840
+    contextWindowOutput: 65536
+    contextWindowTotal: 163840
+    maxOutputTokens: 65536
+    releaseDate: "2025-12-03"
+    enabled: true
+    snapshots:
+        - name: siliconflow-deepseek-v3-2
+          releasedAt: "2025-12-03"
+          originalName: siliconflow/deepseek-v3.2
+    pointer: siliconflow-deepseek-v3-2

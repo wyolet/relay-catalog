@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cerebras-llama-3-1-8b-cs
+    displayName: Llama-3.1-8B-CS
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowTotal: 128000
+    releaseDate: "2025-05-13"
+    enabled: true
+    snapshots:
+        - name: cerebras-llama-3-1-8b-cs
+          releasedAt: "2025-05-13"
+          originalName: cerebras/llama-3.1-8b-cs
+    pointer: cerebras-llama-3-1-8b-cs

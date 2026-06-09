@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: pixtral-12b-on-mistral
+    displayName: pixtral-12b via mistral
+spec:
+    model: pixtral-12b
+    host: mistral
+    adapter: openai
+    enabled: true
+    snapshots:
+        - pixtral-12b

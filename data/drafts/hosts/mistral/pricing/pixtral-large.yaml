@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: mistral-pixtral-large
+    displayName: pixtral-large pricing
+    owner:
+        kind: host
+        id: mistral
+spec:
+    currency: USD
+    targetModels:
+        - pixtral-large
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.output
+          unit: per_million
+          amount: 6
+    enabled: true

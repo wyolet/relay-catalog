@@ -1,0 +1,43 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: google-gemini-3-1-flash-lite
+    displayName: 'Google: Gemini 3.1 Flash Lite'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        audio: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - audio
+            - image
+            - pdf
+            - text
+            - video
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 65536
+    contextWindowTotal: 1048576
+    maxOutputTokens: 65536
+    releaseDate: "2026-05-07"
+    enabled: true
+    snapshots:
+        - name: google-gemini-3-1-flash-lite
+          releasedAt: "2026-05-07"
+          originalName: google/gemini-3.1-flash-lite
+    pointer: google-gemini-3-1-flash-lite

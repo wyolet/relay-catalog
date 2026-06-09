@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-gpt-oss-120b-free
+    displayName: gpt-oss-120b (free)
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: gpt-oss
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt-oss
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    maxOutputTokens: 131072
+    knowledgeCutoff: "2024-06-30"
+    releaseDate: "2025-08-05"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: openai-gpt-oss-120b-free
+          releasedAt: "2025-08-05"
+          originalName: openai/gpt-oss-120b:free
+    pointer: openai-gpt-oss-120b-free

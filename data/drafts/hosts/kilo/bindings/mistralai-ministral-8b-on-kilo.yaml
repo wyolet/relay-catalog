@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-ministral-8b-on-kilo
+    displayName: mistralai-ministral-8b via kilo
+spec:
+    model: mistralai-ministral-8b
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-ministral-8b-2512

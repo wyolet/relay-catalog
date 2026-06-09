@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-image-1-5-on-poe
+    displayName: openai-gpt-image-1-5 via poe
+spec:
+    model: openai-gpt-image-1-5
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-image-1-5

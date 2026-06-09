@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: grok-code-on-opencode
+    displayName: grok-code via opencode
+spec:
+    model: grok-code
+    host: opencode
+    adapter: openai
+    enabled: true
+    snapshots:
+        - grok-code

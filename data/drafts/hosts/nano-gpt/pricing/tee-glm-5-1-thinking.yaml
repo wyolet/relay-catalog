@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-tee-glm-5-1-thinking
+    displayName: tee-glm-5-1-thinking pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - tee-glm-5-1-thinking
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 5.25
+    enabled: true

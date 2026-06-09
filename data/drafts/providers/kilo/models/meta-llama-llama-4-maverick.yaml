@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: meta-llama-llama-4-maverick
+    displayName: 'Meta: Llama 4 Maverick'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 16384
+    contextWindowTotal: 1048576
+    maxOutputTokens: 16384
+    releaseDate: "2025-04-05"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: meta-llama-llama-4-maverick
+          releasedAt: "2025-04-05"
+          originalName: meta-llama/llama-4-maverick
+    pointer: meta-llama-llama-4-maverick

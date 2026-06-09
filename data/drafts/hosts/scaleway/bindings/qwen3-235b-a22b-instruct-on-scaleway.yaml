@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-235b-a22b-instruct-on-scaleway
+    displayName: qwen3-235b-a22b-instruct via scaleway
+spec:
+    model: qwen3-235b-a22b-instruct
+    host: scaleway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-235b-a22b-instruct-2507

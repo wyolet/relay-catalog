@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen2-5-omni-7b-on-alibaba-cn
+    displayName: qwen2-5-omni-7b via alibaba-cn
+spec:
+    model: qwen2-5-omni-7b
+    host: alibaba-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen2-5-omni-7b

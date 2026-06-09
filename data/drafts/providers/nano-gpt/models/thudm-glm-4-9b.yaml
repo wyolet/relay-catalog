@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: thudm-glm-4-9b
+    displayName: GLM 4 9B 0414
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: glm
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glm
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 8000
+    contextWindowTotal: 32000
+    maxOutputTokens: 8000
+    releaseDate: "2025-04-14"
+    enabled: true
+    snapshots:
+        - name: thudm-glm-4-9b-0414
+          releasedAt: "2025-04-14"
+          originalName: THUDM/GLM-4-9B-0414
+    pointer: thudm-glm-4-9b-0414

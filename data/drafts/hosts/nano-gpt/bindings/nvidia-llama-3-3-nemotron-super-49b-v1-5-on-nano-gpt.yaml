@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-llama-3-3-nemotron-super-49b-v1-5-on-nano-gpt
+    displayName: nvidia-llama-3-3-nemotron-super-49b-v1-5 via nano-gpt
+spec:
+    model: nvidia-llama-3-3-nemotron-super-49b-v1-5
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-llama-3-3-nemotron-super-49b-v1-5

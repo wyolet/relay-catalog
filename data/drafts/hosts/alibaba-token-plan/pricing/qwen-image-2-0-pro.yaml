@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-token-plan-qwen-image-2-0-pro
+    displayName: qwen-image-2-0-pro pricing
+    owner:
+        kind: host
+        id: alibaba-token-plan
+spec:
+    currency: USD
+    targetModels:
+        - qwen-image-2-0-pro
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

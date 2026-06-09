@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: fastrouter-google-gemini-2-5-flash
+    displayName: google-gemini-2-5-flash pricing
+    owner:
+        kind: host
+        id: fastrouter
+spec:
+    currency: USD
+    targetModels:
+        - google-gemini-2-5-flash
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.0375
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.5
+    enabled: true

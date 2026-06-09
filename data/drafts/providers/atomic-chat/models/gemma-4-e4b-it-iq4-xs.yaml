@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma-4-e4b-it-iq4-xs
+    displayName: Gemma 4 E4B Instruct (IQ4_XS)
+    owner:
+        kind: provider
+        name: atomic-chat
+    labels:
+        family: gemma
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gemma
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 8192
+    contextWindowTotal: 32768
+    maxOutputTokens: 8192
+    releaseDate: "2026-04-02"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: gemma-4-e4b-it-iq4-xs
+          releasedAt: "2026-04-02"
+          originalName: gemma-4-E4B-it-IQ4_XS
+    pointer: gemma-4-e4b-it-iq4-xs

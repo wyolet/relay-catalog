@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cf-aisingapore-gemma-sea-lion-v4-27b-it-on-cloudflare-workers-ai
+    displayName: cf-aisingapore-gemma-sea-lion-v4-27b-it via cloudflare-workers-ai
+spec:
+    model: cf-aisingapore-gemma-sea-lion-v4-27b-it
+    host: cloudflare-workers-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cf-aisingapore-gemma-sea-lion-v4-27b-it

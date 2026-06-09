@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-llama-nemotron-rerank-vl-1b-v2-on-nvidia
+    displayName: nvidia-llama-nemotron-rerank-vl-1b-v2 via nvidia
+spec:
+    model: nvidia-llama-nemotron-rerank-vl-1b-v2
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-llama-nemotron-rerank-vl-1b-v2

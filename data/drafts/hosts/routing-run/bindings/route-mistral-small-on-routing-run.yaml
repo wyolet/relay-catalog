@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: route-mistral-small-on-routing-run
+    displayName: route-mistral-small via routing-run
+spec:
+    model: route-mistral-small
+    host: routing-run
+    adapter: openai
+    enabled: true
+    snapshots:
+        - route-mistral-small-2503

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-minimax-minimax-01
+    displayName: minimax-minimax-01 pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - minimax-minimax-01
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.1
+    enabled: true

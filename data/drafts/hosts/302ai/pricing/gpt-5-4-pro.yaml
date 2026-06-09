@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: 302ai-gpt-5-4-pro
+    displayName: gpt-5-4-pro pricing
+    owner:
+        kind: host
+        id: 302ai
+spec:
+    currency: USD
+    targetModels:
+        - gpt-5-4-pro
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0
+        - meter: tokens.input
+          unit: per_million
+          amount: 30
+        - meter: tokens.input
+          unit: per_million
+          amount: 60
+          aboveTokens: 272000
+        - meter: tokens.output
+          unit: per_million
+          amount: 180
+        - meter: tokens.output
+          unit: per_million
+          amount: 270
+          aboveTokens: 272000
+    enabled: true

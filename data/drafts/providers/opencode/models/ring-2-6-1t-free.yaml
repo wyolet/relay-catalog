@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ring-2-6-1t-free
+    displayName: Ring 2.6 1T Free
+    owner:
+        kind: provider
+        name: opencode
+    labels:
+        family: ring-1t-free
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: ring-1t-free
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262000
+    contextWindowOutput: 66000
+    contextWindowTotal: 262000
+    maxOutputTokens: 66000
+    knowledgeCutoff: 2025-06
+    releaseDate: "2026-05-08"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: ring-2-6-1t-free
+          releasedAt: "2026-05-08"
+          originalName: ring-2.6-1t-free
+    pointer: ring-2-6-1t-free

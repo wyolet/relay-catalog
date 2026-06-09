@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kimi-k2-instruct-fast
+    displayName: Kimi K2 0711 Fast
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - pdf
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 16384
+    contextWindowTotal: 131072
+    maxOutputTokens: 16384
+    releaseDate: "2025-07-15"
+    enabled: true
+    snapshots:
+        - name: kimi-k2-instruct-fast
+          releasedAt: "2025-07-15"
+    pointer: kimi-k2-instruct-fast

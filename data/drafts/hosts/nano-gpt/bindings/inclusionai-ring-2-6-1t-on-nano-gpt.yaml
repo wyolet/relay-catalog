@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: inclusionai-ring-2-6-1t-on-nano-gpt
+    displayName: inclusionai-ring-2-6-1t via nano-gpt
+spec:
+    model: inclusionai-ring-2-6-1t
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - inclusionai-ring-2-6-1t

@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: zenmux-google-gemini-2-5-flash-lite
+    displayName: google-gemini-2-5-flash-lite pricing
+    owner:
+        kind: host
+        id: zenmux
+spec:
+    currency: USD
+    targetModels:
+        - google-gemini-2-5-flash-lite
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 1
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.03
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.4
+    enabled: true

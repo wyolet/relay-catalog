@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hf-qwen-qwen3-235b-a22b-thinking-on-synthetic
+    displayName: hf-qwen-qwen3-235b-a22b-thinking via synthetic
+spec:
+    model: hf-qwen-qwen3-235b-a22b-thinking
+    host: synthetic
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hf-qwen-qwen3-235b-a22b-thinking-2507

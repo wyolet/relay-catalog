@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-cognitivecomputations-dolphin-2-9-2-qwen2-72b
+    displayName: cognitivecomputations-dolphin-2-9-2-qwen2-72b pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - cognitivecomputations-dolphin-2-9-2-qwen2-72b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.306
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.306
+    enabled: true

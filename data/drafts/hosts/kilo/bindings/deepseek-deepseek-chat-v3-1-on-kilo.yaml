@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-deepseek-chat-v3-1-on-kilo
+    displayName: deepseek-deepseek-chat-v3-1 via kilo
+spec:
+    model: deepseek-deepseek-chat-v3-1
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-deepseek-chat-v3-1

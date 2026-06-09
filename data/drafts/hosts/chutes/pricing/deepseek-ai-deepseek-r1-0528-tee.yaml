@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: chutes-deepseek-ai-deepseek-r1-0528-tee
+    displayName: deepseek-ai-deepseek-r1-0528-tee pricing
+    owner:
+        kind: host
+        id: chutes
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-ai-deepseek-r1-0528-tee
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.225
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.45
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.15
+    enabled: true

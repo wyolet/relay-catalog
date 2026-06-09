@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma-4-31b-claude-4-6-opus-reasoning-distilled
+    displayName: Gemma 4 31B Claude 4.6 Opus Reasoning Distilled
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 16384
+    contextWindowTotal: 262144
+    maxOutputTokens: 16384
+    releaseDate: "2026-05-01"
+    enabled: true
+    snapshots:
+        - name: gemma-4-31b-claude-4-6-opus-reasoning-distilled
+          releasedAt: "2026-05-01"
+          originalName: Gemma-4-31B-Claude-4.6-Opus-Reasoning-Distilled
+    pointer: gemma-4-31b-claude-4-6-opus-reasoning-distilled

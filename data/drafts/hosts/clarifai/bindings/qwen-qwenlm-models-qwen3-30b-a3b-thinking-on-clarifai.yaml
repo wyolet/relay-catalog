@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwenlm-models-qwen3-30b-a3b-thinking-on-clarifai
+    displayName: qwen-qwenlm-models-qwen3-30b-a3b-thinking via clarifai
+spec:
+    model: qwen-qwenlm-models-qwen3-30b-a3b-thinking
+    host: clarifai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwenlm-models-qwen3-30b-a3b-thinking-2507

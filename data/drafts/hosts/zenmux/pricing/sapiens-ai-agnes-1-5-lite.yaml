@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: zenmux-sapiens-ai-agnes-1-5-lite
+    displayName: sapiens-ai-agnes-1-5-lite pricing
+    owner:
+        kind: host
+        id: zenmux
+spec:
+    currency: USD
+    targetModels:
+        - sapiens-ai-agnes-1-5-lite
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.12
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.6
+    enabled: true

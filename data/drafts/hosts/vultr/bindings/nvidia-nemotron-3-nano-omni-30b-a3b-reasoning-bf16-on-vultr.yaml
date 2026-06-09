@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-bf16-on-vultr
+    displayName: nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-bf16 via vultr
+spec:
+    model: nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-bf16
+    host: vultr
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-bf16

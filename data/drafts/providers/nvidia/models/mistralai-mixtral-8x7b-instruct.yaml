@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistralai-mixtral-8x7b-instruct
+    displayName: 'Mistral: Mixtral 8x7B Instruct'
+    owner:
+        kind: provider
+        name: nvidia
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 16384
+    contextWindowTotal: 32768
+    maxOutputTokens: 16384
+    releaseDate: "2023-12-10"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistralai-mixtral-8x7b-instruct
+          releasedAt: "2023-12-10"
+          originalName: mistralai/mixtral-8x7b-instruct
+    pointer: mistralai-mixtral-8x7b-instruct

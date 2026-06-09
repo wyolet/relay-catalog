@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-ai-deepseek-v4-flash-on-gmicloud
+    displayName: deepseek-ai-deepseek-v4-flash via gmicloud
+spec:
+    model: deepseek-ai-deepseek-v4-flash
+    host: gmicloud
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-ai-deepseek-v4-flash

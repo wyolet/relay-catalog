@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: yi-lightning-on-nano-gpt
+    displayName: yi-lightning via nano-gpt
+spec:
+    model: yi-lightning
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - yi-lightning

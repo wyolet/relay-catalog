@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-medium-3-5-128b
+    displayName: Mistral Medium 3.5 128B
+    owner:
+        kind: provider
+        name: scaleway
+    labels:
+        family: mistral-medium
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral-medium
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 16384
+    contextWindowTotal: 256000
+    maxOutputTokens: 16384
+    releaseDate: "2026-04-29"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistral-medium-3-5-128b
+          releasedAt: "2026-04-29"
+          originalName: mistral-medium-3.5-128b
+    pointer: mistral-medium-3-5-128b

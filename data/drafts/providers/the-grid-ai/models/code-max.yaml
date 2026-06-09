@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: code-max
+    displayName: Code Max
+    owner:
+        kind: provider
+        name: the-grid-ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 128000
+    releaseDate: "2026-05-04"
+    enabled: true
+    snapshots:
+        - name: code-max
+          releasedAt: "2026-05-04"
+    pointer: code-max

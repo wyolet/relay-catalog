@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: orcarouter-google-gemma-4-31b-it
+    displayName: google-gemma-4-31b-it pricing
+    owner:
+        kind: host
+        id: orcarouter
+spec:
+    currency: USD
+    targetModels:
+        - google-gemma-4-31b-it
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.13
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.38
+    enabled: true

@@ -1,0 +1,37 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+  name: ministral-8b
+  displayName: Ministral 8B (latest)
+  owner:
+    kind: provider
+    name: mistral
+  labels:
+    family: ministral
+    source: models.dev
+    source_version: '2026-06-09'
+spec:
+  family: ministral
+  capabilities:
+    chat: true
+    streaming: true
+    tools: true
+    systemMessages: true
+  modalities:
+    input:
+    - text
+    output:
+    - text
+  contextWindowInput: 128000
+  contextWindowOutput: 128000
+  contextWindowTotal: 128000
+  maxOutputTokens: 128000
+  knowledgeCutoff: 2024-10
+  releaseDate: '2024-10-01'
+  tags:
+  - open-weights
+  enabled: true
+  snapshots:
+  - name: ministral-8b-latest
+  pointer: ministral-8b-latest

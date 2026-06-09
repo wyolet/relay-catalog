@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: tee-deepseek-v3-2
+    displayName: DeepSeek V3.2 TEE
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: deepseek
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 164000
+    contextWindowOutput: 65536
+    contextWindowTotal: 164000
+    maxOutputTokens: 65536
+    releaseDate: "2025-12-01"
+    enabled: true
+    snapshots:
+        - name: tee-deepseek-v3-2
+          releasedAt: "2025-12-01"
+          originalName: TEE/deepseek-v3.2
+    pointer: tee-deepseek-v3-2

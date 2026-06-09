@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: arcee-ai-coder-large-on-kilo
+    displayName: arcee-ai-coder-large via kilo
+spec:
+    model: arcee-ai-coder-large
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - arcee-ai-coder-large

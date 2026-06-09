@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-6-35b-fast
+    displayName: Qwen3.6 35B Fast
+    owner:
+        kind: provider
+        name: neuralwatt
+    labels:
+        family: qwen3.6
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen3.6
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 131056
+    contextWindowOutput: 131056
+    contextWindowTotal: 131056
+    maxOutputTokens: 131056
+    releaseDate: "2026-04-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen3-6-35b-fast
+          releasedAt: "2026-04-01"
+          originalName: qwen3.6-35b-fast
+    pointer: qwen3-6-35b-fast

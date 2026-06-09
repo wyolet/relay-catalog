@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: hf-qwen-qwen3-235b-a22b-thinking
+    displayName: Qwen3 235B A22B Thinking 2507
+    owner:
+        kind: provider
+        name: synthetic
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 32000
+    contextWindowTotal: 256000
+    maxOutputTokens: 32000
+    knowledgeCutoff: 2025-04
+    releaseDate: "2025-07-25"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: hf-qwen-qwen3-235b-a22b-thinking-2507
+          releasedAt: "2025-07-25"
+          originalName: hf:Qwen/Qwen3-235B-A22B-Thinking-2507
+    pointer: hf-qwen-qwen3-235b-a22b-thinking-2507

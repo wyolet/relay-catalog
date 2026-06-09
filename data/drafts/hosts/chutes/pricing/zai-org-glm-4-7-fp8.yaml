@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: chutes-zai-org-glm-4-7-fp8
+    displayName: zai-org-glm-4-7-fp8 pricing
+    owner:
+        kind: host
+        id: chutes
+spec:
+    currency: USD
+    targetModels:
+        - zai-org-glm-4-7-fp8
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.14945
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.2989
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.1957
+    enabled: true

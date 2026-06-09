@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cf-openai-gpt-oss-120b
+    displayName: GPT OSS 120B
+    owner:
+        kind: provider
+        name: cloudflare-workers-ai
+    labels:
+        family: gpt-oss
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt-oss
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    maxOutputTokens: 16384
+    releaseDate: "2025-08-05"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: cf-openai-gpt-oss-120b
+          releasedAt: "2025-08-05"
+          originalName: '@cf/openai/gpt-oss-120b'
+    pointer: cf-openai-gpt-oss-120b

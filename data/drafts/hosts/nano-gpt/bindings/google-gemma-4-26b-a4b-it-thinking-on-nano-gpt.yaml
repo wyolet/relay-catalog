@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-gemma-4-26b-a4b-it-thinking-on-nano-gpt
+    displayName: google-gemma-4-26b-a4b-it-thinking via nano-gpt
+spec:
+    model: google-gemma-4-26b-a4b-it-thinking
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-gemma-4-26b-a4b-it-thinking

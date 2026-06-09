@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistralai-devstral-medium
+    displayName: 'Mistral: Devstral Medium'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 26215
+    contextWindowTotal: 131072
+    maxOutputTokens: 26215
+    releaseDate: "2025-07-10"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistralai-devstral-medium
+          releasedAt: "2025-07-10"
+          originalName: mistralai/devstral-medium
+    pointer: mistralai-devstral-medium

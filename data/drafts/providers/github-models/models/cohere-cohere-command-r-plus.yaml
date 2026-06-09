@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cohere-cohere-command-r-plus
+    displayName: Cohere Command R+
+    owner:
+        kind: provider
+        name: github-models
+    labels:
+        family: command-r
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: command-r
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    maxOutputTokens: 4096
+    knowledgeCutoff: 2024-03
+    releaseDate: "2024-04-04"
+    enabled: true
+    snapshots:
+        - name: cohere-cohere-command-r-plus
+          releasedAt: "2024-04-04"
+          originalName: cohere/cohere-command-r-plus
+    pointer: cohere-cohere-command-r-plus

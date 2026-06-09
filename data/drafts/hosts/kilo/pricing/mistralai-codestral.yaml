@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-mistralai-codestral
+    displayName: mistralai-codestral pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - mistralai-codestral
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.9
+    enabled: true

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: pamanseau-openreasoning-nemotron-32b-on-nano-gpt
+    displayName: pamanseau-openreasoning-nemotron-32b via nano-gpt
+spec:
+    model: pamanseau-openreasoning-nemotron-32b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - pamanseau-openreasoning-nemotron-32b

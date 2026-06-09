@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-2-5-flash-preview-05-20
+    displayName: gemini-2.5-flash-preview-05-20
+    owner:
+        kind: provider
+        name: jiekou
+    labels:
+        family: gemini-flash
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gemini-flash
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        audio: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+            - audio
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 200000
+    contextWindowTotal: 1048576
+    maxOutputTokens: 200000
+    releaseDate: 2026-01
+    enabled: true
+    snapshots:
+        - name: gemini-2-5-flash-preview-05-20
+          releasedAt: 2026-01
+          originalName: gemini-2.5-flash-preview-05-20
+    pointer: gemini-2-5-flash-preview-05-20

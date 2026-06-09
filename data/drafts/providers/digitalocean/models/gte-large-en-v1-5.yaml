@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gte-large-en-v1-5
+    displayName: GTE Large (v1.5)
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: text-embedding
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: text-embedding
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 1024
+    contextWindowTotal: 8192
+    maxOutputTokens: 1024
+    releaseDate: "2024-03-27"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: gte-large-en-v1-5
+          releasedAt: "2024-03-27"
+          originalName: gte-large-en-v1.5
+    pointer: gte-large-en-v1-5

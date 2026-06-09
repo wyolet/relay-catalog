@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: github-models-core42-jais-30b-chat
+    displayName: core42-jais-30b-chat pricing
+    owner:
+        kind: host
+        id: github-models
+spec:
+    currency: USD
+    targetModels:
+        - core42-jais-30b-chat
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

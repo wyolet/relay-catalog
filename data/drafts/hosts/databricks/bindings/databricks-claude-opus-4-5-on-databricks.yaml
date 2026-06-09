@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: databricks-claude-opus-4-5-on-databricks
+    displayName: databricks-claude-opus-4-5 via databricks
+spec:
+    model: databricks-claude-opus-4-5
+    host: databricks
+    adapter: openai
+    enabled: true
+    snapshots:
+        - databricks-claude-opus-4-5

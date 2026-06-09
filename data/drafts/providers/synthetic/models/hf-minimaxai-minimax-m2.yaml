@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: hf-minimaxai-minimax-m2
+    displayName: MiniMax-M2
+    owner:
+        kind: provider
+        name: synthetic
+    labels:
+        family: minimax
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: minimax
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 196608
+    contextWindowOutput: 131000
+    contextWindowTotal: 196608
+    maxOutputTokens: 131000
+    releaseDate: "2025-10-27"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: hf-minimaxai-minimax-m2
+          releasedAt: "2025-10-27"
+          originalName: hf:MiniMaxAI/MiniMax-M2
+    pointer: hf-minimaxai-minimax-m2

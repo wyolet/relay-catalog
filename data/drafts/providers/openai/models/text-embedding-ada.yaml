@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: text-embedding-ada
+    displayName: text-embedding-ada-002
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: text-embedding
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: text-embedding
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 1536
+    contextWindowTotal: 8192
+    maxOutputTokens: 1536
+    knowledgeCutoff: 2022-12
+    releaseDate: "2022-12-15"
+    enabled: true
+    snapshots:
+        - name: text-embedding-ada-002
+          releasedAt: "2022-12-15"
+    pointer: text-embedding-ada-002

@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3guard-gen-0-6b
+    displayName: Qwen3Guard-Gen-0.6B
+    owner:
+        kind: provider
+        name: ovhcloud
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 16384
+    contextWindowTotal: 32768
+    maxOutputTokens: 16384
+    releaseDate: "2026-01-22"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen3guard-gen-0-6b
+          releasedAt: "2026-01-22"
+          originalName: qwen3guard-gen-0.6b
+    pointer: qwen3guard-gen-0-6b

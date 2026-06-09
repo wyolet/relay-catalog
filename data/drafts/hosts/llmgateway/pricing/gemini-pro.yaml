@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: llmgateway-gemini-pro
+    displayName: gemini-pro pricing
+    owner:
+        kind: host
+        id: llmgateway
+spec:
+    currency: USD
+    targetModels:
+        - gemini-pro
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.output
+          unit: per_million
+          amount: 12
+    enabled: true

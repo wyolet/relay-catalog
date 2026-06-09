@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: morph-morph-v3-large-on-kilo
+    displayName: morph-morph-v3-large via kilo
+spec:
+    model: morph-morph-v3-large
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - morph-morph-v3-large

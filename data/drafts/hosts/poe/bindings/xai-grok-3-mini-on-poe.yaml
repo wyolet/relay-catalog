@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: xai-grok-3-mini-on-poe
+    displayName: xai-grok-3-mini via poe
+spec:
+    model: xai-grok-3-mini
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - xai-grok-3-mini

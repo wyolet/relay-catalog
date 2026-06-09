@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemini-3-pro-preview-on-helicone
+    displayName: gemini-3-pro-preview via helicone
+spec:
+    model: gemini-3-pro-preview
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gemini-3-pro-preview

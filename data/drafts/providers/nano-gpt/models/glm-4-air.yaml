@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: glm-4-air
+    displayName: GLM-4 Air
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    maxOutputTokens: 4096
+    releaseDate: "2024-06-05"
+    enabled: true
+    snapshots:
+        - name: glm-4-air
+          releasedAt: "2024-06-05"
+        - name: glm-4-air-0111
+          releasedAt: "2025-01-11"
+    pointer: glm-4-air

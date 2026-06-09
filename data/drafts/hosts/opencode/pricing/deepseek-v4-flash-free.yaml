@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: opencode-deepseek-v4-flash-free
+    displayName: deepseek-v4-flash-free pricing
+    owner:
+        kind: host
+        id: opencode
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-v4-flash-free
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

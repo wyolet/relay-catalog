@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: helicone-llama-3-3-70b-versatile
+    displayName: llama-3-3-70b-versatile pricing
+    owner:
+        kind: host
+        id: helicone
+spec:
+    currency: USD
+    targetModels:
+        - llama-3-3-70b-versatile
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.59
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.7899999999999999
+    enabled: true

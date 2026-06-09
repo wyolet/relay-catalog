@@ -1,0 +1,45 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-flash
+    displayName: Gemini Flash Latest
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemini-flash
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gemini-flash
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        audio: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+            - video
+            - pdf
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 65536
+    contextWindowTotal: 1048576
+    maxOutputTokens: 65536
+    knowledgeCutoff: 2025-01
+    releaseDate: "2025-09-25"
+    enabled: true
+    snapshots:
+        - name: gemini-flash-latest
+          releasedAt: "2025-09-25"
+    pointer: gemini-flash-latest

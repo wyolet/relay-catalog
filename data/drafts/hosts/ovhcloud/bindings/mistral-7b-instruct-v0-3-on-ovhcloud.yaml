@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-7b-instruct-v0-3-on-ovhcloud
+    displayName: mistral-7b-instruct-v0-3 via ovhcloud
+spec:
+    model: mistral-7b-instruct-v0-3
+    host: ovhcloud
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistral-7b-instruct-v0-3

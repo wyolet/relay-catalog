@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-oss-120b-on-fastrouter
+    displayName: openai-gpt-oss-120b via fastrouter
+spec:
+    model: openai-gpt-oss-120b
+    host: fastrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-oss-120b

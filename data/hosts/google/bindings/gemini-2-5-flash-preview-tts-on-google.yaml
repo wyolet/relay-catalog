@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+  name: gemini-2-5-flash-preview-tts-on-google
+  displayName: gemini-2-5-flash-preview-tts via google
+spec:
+  model: gemini-2-5-flash-preview-tts
+  host: google
+  adapter: gemini
+  enabled: true
+  snapshots:
+  - gemini-2-5-flash-preview-tts

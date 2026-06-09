@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: 302ai-doubao-seed-code-preview
+    displayName: doubao-seed-code-preview pricing
+    owner:
+        kind: host
+        id: 302ai
+spec:
+    currency: USD
+    targetModels:
+        - doubao-seed-code-preview
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.17
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.14
+    enabled: true

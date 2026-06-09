@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nvidia-llama-3-3-70b-instruct-fp8
+    displayName: Llama 3.3 70B
+    owner:
+        kind: provider
+        name: evroc
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 32768
+    contextWindowTotal: 131072
+    maxOutputTokens: 32768
+    releaseDate: "2024-12-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nvidia-llama-3-3-70b-instruct-fp8
+          releasedAt: "2024-12-01"
+          originalName: nvidia/Llama-3.3-70B-Instruct-FP8
+    pointer: nvidia-llama-3-3-70b-instruct-fp8

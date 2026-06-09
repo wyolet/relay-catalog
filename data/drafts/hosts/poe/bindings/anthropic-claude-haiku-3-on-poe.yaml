@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: anthropic-claude-haiku-3-on-poe
+    displayName: anthropic-claude-haiku-3 via poe
+spec:
+    model: anthropic-claude-haiku-3
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - anthropic-claude-haiku-3

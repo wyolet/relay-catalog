@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claudinio
+    displayName: Claudinio
+    owner:
+        kind: provider
+        name: claudinio
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        audio: true
+        promptCache: true
+        reasoning: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+            - video
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 64000
+    contextWindowTotal: 256000
+    maxOutputTokens: 64000
+    knowledgeCutoff: 2026-05
+    releaseDate: "2026-05-12"
+    enabled: true
+    snapshots:
+        - name: claudinio
+          releasedAt: "2026-05-12"
+    pointer: claudinio

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: bytedance-seed-seed-2-0-lite-on-openrouter
+    displayName: bytedance-seed-seed-2-0-lite via openrouter
+spec:
+    model: bytedance-seed-seed-2-0-lite
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - bytedance-seed-seed-2-0-lite

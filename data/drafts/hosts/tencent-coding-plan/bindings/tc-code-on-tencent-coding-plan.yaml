@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: tc-code-on-tencent-coding-plan
+    displayName: tc-code via tencent-coding-plan
+spec:
+    model: tc-code
+    host: tencent-coding-plan
+    adapter: openai
+    enabled: true
+    snapshots:
+        - tc-code-latest

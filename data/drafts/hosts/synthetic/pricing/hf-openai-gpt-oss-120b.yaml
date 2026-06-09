@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: synthetic-hf-openai-gpt-oss-120b
+    displayName: hf-openai-gpt-oss-120b pricing
+    owner:
+        kind: host
+        id: synthetic
+spec:
+    currency: USD
+    targetModels:
+        - hf-openai-gpt-oss-120b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.1
+    enabled: true

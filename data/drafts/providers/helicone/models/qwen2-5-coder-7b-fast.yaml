@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-5-coder-7b-fast
+    displayName: Qwen2.5 Coder 7B fast
+    owner:
+        kind: provider
+        name: helicone
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 8192
+    contextWindowTotal: 32000
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2024-09
+    releaseDate: "2024-09-15"
+    enabled: true
+    snapshots:
+        - name: qwen2-5-coder-7b-fast
+          releasedAt: "2024-09-15"
+          originalName: qwen2.5-coder-7b-fast
+    pointer: qwen2-5-coder-7b-fast

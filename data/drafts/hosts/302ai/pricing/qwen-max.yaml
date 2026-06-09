@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: 302ai-qwen-max
+    displayName: qwen-max pricing
+    owner:
+        kind: host
+        id: 302ai
+spec:
+    currency: USD
+    targetModels:
+        - qwen-max
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.343
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.372
+    enabled: true

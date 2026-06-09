@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+  name: qwq-plus-on-alibaba
+  displayName: qwq-plus via alibaba
+spec:
+  model: qwq-plus
+  host: alibaba
+  adapter: openai
+  enabled: true
+  snapshots:
+  - qwq-plus

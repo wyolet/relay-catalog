@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-ai-mistral-large
+    displayName: Mistral Large 24.11
+    owner:
+        kind: provider
+        name: github-models
+    labels:
+        family: mistral-large
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral-large
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32768
+    contextWindowTotal: 128000
+    maxOutputTokens: 32768
+    knowledgeCutoff: 2024-09
+    releaseDate: "2024-11-01"
+    enabled: true
+    snapshots:
+        - name: mistral-ai-mistral-large-2411
+          releasedAt: "2024-11-01"
+          originalName: mistral-ai/mistral-large-2411
+    pointer: mistral-ai-mistral-large-2411

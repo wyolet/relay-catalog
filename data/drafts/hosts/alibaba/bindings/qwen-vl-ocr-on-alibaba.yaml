@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-vl-ocr-on-alibaba
+    displayName: qwen-vl-ocr via alibaba
+spec:
+    model: qwen-vl-ocr
+    host: alibaba
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-vl-ocr

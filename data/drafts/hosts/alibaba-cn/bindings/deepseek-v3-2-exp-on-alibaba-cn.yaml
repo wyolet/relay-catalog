@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-v3-2-exp-on-alibaba-cn
+    displayName: deepseek-v3-2-exp via alibaba-cn
+spec:
+    model: deepseek-v3-2-exp
+    host: alibaba-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-v3-2-exp

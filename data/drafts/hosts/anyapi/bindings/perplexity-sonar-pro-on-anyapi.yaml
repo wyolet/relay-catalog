@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: perplexity-sonar-pro-on-anyapi
+    displayName: perplexity-sonar-pro via anyapi
+spec:
+    model: perplexity-sonar-pro
+    host: anyapi
+    adapter: openai
+    enabled: true
+    snapshots:
+        - perplexity-sonar-pro

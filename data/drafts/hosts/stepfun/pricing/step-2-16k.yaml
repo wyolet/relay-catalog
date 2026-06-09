@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: stepfun-step-2-16k
+    displayName: step-2-16k pricing
+    owner:
+        kind: host
+        id: stepfun
+spec:
+    currency: USD
+    targetModels:
+        - step-2-16k
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 1.04
+        - meter: tokens.input
+          unit: per_million
+          amount: 5.21
+        - meter: tokens.output
+          unit: per_million
+          amount: 16.44
+    enabled: true

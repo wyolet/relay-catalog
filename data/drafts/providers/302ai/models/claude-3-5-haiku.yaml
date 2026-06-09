@@ -1,0 +1,44 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claude-3-5-haiku
+    displayName: claude-3-5-haiku-latest
+    owner:
+        kind: provider
+        name: 302ai
+    labels:
+        family: claude-haiku
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: claude-haiku
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 8192
+    contextWindowTotal: 200000
+    maxOutputTokens: 8192
+    knowledgeCutoff: "2024-07-31"
+    releaseDate: "2024-10-22"
+    enabled: true
+    snapshots:
+        - name: claude-3-5-haiku-20241022
+          releasedAt: "2024-10-22"
+        - name: claude-3-5-haiku-latest
+          releasedAt: "2024-10-22"
+        - name: claude-3-5-haiku
+          releasedAt: "2024-10-22"
+          originalName: claude-3.5-haiku
+    pointer: claude-3-5-haiku-latest

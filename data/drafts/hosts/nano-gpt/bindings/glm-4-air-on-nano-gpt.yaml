@@ -1,0 +1,13 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: glm-4-air-on-nano-gpt
+    displayName: glm-4-air via nano-gpt
+spec:
+    model: glm-4-air
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - glm-4-air
+        - glm-4-air-0111

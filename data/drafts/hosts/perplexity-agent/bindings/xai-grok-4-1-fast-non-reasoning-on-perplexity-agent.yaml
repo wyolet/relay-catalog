@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: xai-grok-4-1-fast-non-reasoning-on-perplexity-agent
+    displayName: xai-grok-4-1-fast-non-reasoning via perplexity-agent
+spec:
+    model: xai-grok-4-1-fast-non-reasoning
+    host: perplexity-agent
+    adapter: openai
+    enabled: true
+    snapshots:
+        - xai-grok-4-1-fast-non-reasoning

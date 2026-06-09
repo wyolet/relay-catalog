@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-o3-on-github-models
+    displayName: openai-o3 via github-models
+spec:
+    model: openai-o3
+    host: github-models
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-o3

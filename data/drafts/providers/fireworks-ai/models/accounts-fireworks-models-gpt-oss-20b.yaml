@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: accounts-fireworks-models-gpt-oss-20b
+    displayName: GPT OSS 20B
+    owner:
+        kind: provider
+        name: fireworks-ai
+    labels:
+        family: gpt-oss
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt-oss
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 32768
+    contextWindowTotal: 131072
+    maxOutputTokens: 32768
+    releaseDate: "2025-08-05"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: accounts-fireworks-models-gpt-oss-20b
+          releasedAt: "2025-08-05"
+          originalName: accounts/fireworks/models/gpt-oss-20b
+    pointer: accounts-fireworks-models-gpt-oss-20b

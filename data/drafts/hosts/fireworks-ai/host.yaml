@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: fireworks-ai
+    displayName: Fireworks AI
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.fireworks.ai/inference/v1
+    pricingStrategies:
+        - api
+    docsURL: https://fireworks.ai/docs/

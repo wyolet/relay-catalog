@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: zai-glm-5-1-on-frogbot
+    displayName: zai-glm-5-1 via frogbot
+spec:
+    model: zai-glm-5-1
+    host: frogbot
+    adapter: openai
+    enabled: true
+    snapshots:
+        - zai-glm-5-1

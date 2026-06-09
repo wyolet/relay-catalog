@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: microsoft-phi-3-mini-4k-instruct-on-github-models
+    displayName: microsoft-phi-3-mini-4k-instruct via github-models
+spec:
+    model: microsoft-phi-3-mini-4k-instruct
+    host: github-models
+    adapter: openai
+    enabled: true
+    snapshots:
+        - microsoft-phi-3-mini-4k-instruct

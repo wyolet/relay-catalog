@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: doubao-seed-1-6
+    displayName: Doubao Seed 1.6
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 16384
+    contextWindowTotal: 256000
+    maxOutputTokens: 16384
+    releaseDate: "2025-06-15"
+    enabled: true
+    snapshots:
+        - name: doubao-seed-1-6-250615
+          releasedAt: "2025-06-15"
+        - name: doubao-seed-1-6
+          releasedAt: "2025-08-15"
+          originalName: doubao-seed-1.6
+    pointer: doubao-seed-1-6-250615

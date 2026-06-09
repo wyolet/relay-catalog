@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: inclusionai-ling-2-6-1t-on-kilo
+    displayName: inclusionai-ling-2-6-1t via kilo
+spec:
+    model: inclusionai-ling-2-6-1t
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - inclusionai-ling-2-6-1t

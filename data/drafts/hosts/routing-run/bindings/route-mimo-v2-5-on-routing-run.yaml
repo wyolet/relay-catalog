@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: route-mimo-v2-5-on-routing-run
+    displayName: route-mimo-v2-5 via routing-run
+spec:
+    model: route-mimo-v2-5
+    host: routing-run
+    adapter: openai
+    enabled: true
+    snapshots:
+        - route-mimo-v2-5

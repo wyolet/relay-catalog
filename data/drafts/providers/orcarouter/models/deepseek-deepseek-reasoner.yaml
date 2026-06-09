@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-deepseek-reasoner
+    displayName: DeepSeek Reasoner
+    owner:
+        kind: provider
+        name: orcarouter
+    labels:
+        family: deepseek-thinking
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek-thinking
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 384000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 384000
+    knowledgeCutoff: 2025-09
+    releaseDate: "2025-12-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: deepseek-deepseek-reasoner
+          releasedAt: "2025-12-01"
+          originalName: deepseek/deepseek-reasoner
+    pointer: deepseek-deepseek-reasoner

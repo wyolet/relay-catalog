@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cerebras-qwen3-235b-2507-cs-on-poe
+    displayName: cerebras-qwen3-235b-2507-cs via poe
+spec:
+    model: cerebras-qwen3-235b-2507-cs
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cerebras-qwen3-235b-2507-cs

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimaxai-chat-completion-models-minimax-m2-5-high-throughput-on-clarifai
+    displayName: minimaxai-chat-completion-models-minimax-m2-5-high-throughput via clarifai
+spec:
+    model: minimaxai-chat-completion-models-minimax-m2-5-high-throughput
+    host: clarifai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - minimaxai-chat-completion-models-minimax-m2-5-high-throughput

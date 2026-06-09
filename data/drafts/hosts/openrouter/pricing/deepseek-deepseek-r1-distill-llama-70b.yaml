@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: openrouter-deepseek-deepseek-r1-distill-llama-70b
+    displayName: deepseek-deepseek-r1-distill-llama-70b pricing
+    owner:
+        kind: host
+        id: openrouter
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-deepseek-r1-distill-llama-70b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.7
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.8
+    enabled: true

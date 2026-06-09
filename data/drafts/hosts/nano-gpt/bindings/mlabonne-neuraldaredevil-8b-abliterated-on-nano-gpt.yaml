@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mlabonne-neuraldaredevil-8b-abliterated-on-nano-gpt
+    displayName: mlabonne-neuraldaredevil-8b-abliterated via nano-gpt
+spec:
+    model: mlabonne-neuraldaredevil-8b-abliterated
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mlabonne-neuraldaredevil-8b-abliterated

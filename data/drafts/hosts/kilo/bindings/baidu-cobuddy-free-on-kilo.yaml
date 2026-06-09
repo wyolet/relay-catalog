@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: baidu-cobuddy-free-on-kilo
+    displayName: baidu-cobuddy-free via kilo
+spec:
+    model: baidu-cobuddy-free
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - baidu-cobuddy-free

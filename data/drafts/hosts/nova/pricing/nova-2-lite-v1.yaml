@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nova-nova-2-lite-v1
+    displayName: nova-2-lite-v1 pricing
+    owner:
+        kind: host
+        id: nova
+spec:
+    currency: USD
+    targetModels:
+        - nova-2-lite-v1
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+        - meter: tokens.reasoning
+          unit: per_million
+          amount: 0
+    enabled: true

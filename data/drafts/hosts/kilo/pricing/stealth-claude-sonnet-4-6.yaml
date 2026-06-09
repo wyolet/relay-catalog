@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-stealth-claude-sonnet-4-6
+    displayName: stealth-claude-sonnet-4-6 pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - stealth-claude-sonnet-4-6
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 3
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.24
+        - meter: tokens.input
+          unit: per_million
+          amount: 2.4
+        - meter: tokens.output
+          unit: per_million
+          amount: 12
+    enabled: true

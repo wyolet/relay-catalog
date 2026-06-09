@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: synthetic-hf-moonshotai-kimi-k2-instruct
+    displayName: hf-moonshotai-kimi-k2-instruct pricing
+    owner:
+        kind: host
+        id: synthetic
+spec:
+    currency: USD
+    targetModels:
+        - hf-moonshotai-kimi-k2-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.2
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.2
+    enabled: true

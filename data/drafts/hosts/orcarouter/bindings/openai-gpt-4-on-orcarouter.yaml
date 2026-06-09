@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-4-on-orcarouter
+    displayName: openai-gpt-4 via orcarouter
+spec:
+    model: openai-gpt-4
+    host: orcarouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-4

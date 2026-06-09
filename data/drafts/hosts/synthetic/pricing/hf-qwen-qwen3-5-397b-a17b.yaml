@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: synthetic-hf-qwen-qwen3-5-397b-a17b
+    displayName: hf-qwen-qwen3-5-397b-a17b pricing
+    owner:
+        kind: host
+        id: synthetic
+spec:
+    currency: USD
+    targetModels:
+        - hf-qwen-qwen3-5-397b-a17b
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.6
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.6
+        - meter: tokens.output
+          unit: per_million
+          amount: 3
+    enabled: true

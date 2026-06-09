@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: greg-rp
+    displayName: Greg (Roleplay)
+    owner:
+        kind: provider
+        name: crof
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 229376
+    contextWindowOutput: 229376
+    contextWindowTotal: 229376
+    maxOutputTokens: 229376
+    releaseDate: "2026-01-27"
+    enabled: true
+    snapshots:
+        - name: greg-rp
+          releasedAt: "2026-01-27"
+    pointer: greg-rp

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: anthropic-claude-3-7-sonnet-on-zenmux
+    displayName: anthropic-claude-3-7-sonnet via zenmux
+spec:
+    model: anthropic-claude-3-7-sonnet
+    host: zenmux
+    adapter: openai
+    enabled: true
+    snapshots:
+        - anthropic-claude-3-7-sonnet

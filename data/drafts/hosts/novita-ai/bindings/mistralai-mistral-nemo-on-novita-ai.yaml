@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-mistral-nemo-on-novita-ai
+    displayName: mistralai-mistral-nemo via novita-ai
+spec:
+    model: mistralai-mistral-nemo
+    host: novita-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-mistral-nemo

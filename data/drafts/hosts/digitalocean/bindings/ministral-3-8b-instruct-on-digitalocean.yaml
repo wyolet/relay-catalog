@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: ministral-3-8b-instruct-on-digitalocean
+    displayName: ministral-3-8b-instruct via digitalocean
+spec:
+    model: ministral-3-8b-instruct
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - ministral-3-8b-instruct-2512

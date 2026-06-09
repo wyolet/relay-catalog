@@ -1,0 +1,44 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: moonshotai-kimi-k2-instruct
+    displayName: Kimi K2 Instruct 0905
+    owner:
+        kind: provider
+        name: baseten
+    labels:
+        family: kimi
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: kimi
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    maxOutputTokens: 262144
+    knowledgeCutoff: 2025-08
+    releaseDate: "2025-09-05"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: moonshotai-kimi-k2-instruct-0905
+          releasedAt: "2025-09-05"
+          originalName: moonshotai/Kimi-K2-Instruct-0905
+        - name: moonshotai-kimi-k2-instruct
+          releasedAt: "2025-07-14"
+          originalName: moonshotai/kimi-k2-instruct
+        - name: moonshotai-kimi-k2-instruct-0711
+          releasedAt: "2025-07-11"
+          originalName: moonshotai/kimi-k2-instruct-0711
+    pointer: moonshotai-kimi-k2-instruct-0905

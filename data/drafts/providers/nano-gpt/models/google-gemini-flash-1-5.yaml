@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: google-gemini-flash-1-5
+    displayName: Gemini 1.5 Flash
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: gemini-flash
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gemini-flash
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 2000000
+    contextWindowOutput: 8192
+    contextWindowTotal: 2000000
+    maxOutputTokens: 8192
+    releaseDate: "2024-05-14"
+    enabled: true
+    snapshots:
+        - name: google-gemini-flash-1-5
+          releasedAt: "2024-05-14"
+          originalName: google/gemini-flash-1.5
+    pointer: google-gemini-flash-1-5

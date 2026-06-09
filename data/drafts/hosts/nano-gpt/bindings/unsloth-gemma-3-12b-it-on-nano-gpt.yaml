@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: unsloth-gemma-3-12b-it-on-nano-gpt
+    displayName: unsloth-gemma-3-12b-it via nano-gpt
+spec:
+    model: unsloth-gemma-3-12b-it
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - unsloth-gemma-3-12b-it

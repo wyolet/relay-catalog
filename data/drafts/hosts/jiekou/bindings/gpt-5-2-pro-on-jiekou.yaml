@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gpt-5-2-pro-on-jiekou
+    displayName: gpt-5-2-pro via jiekou
+spec:
+    model: gpt-5-2-pro
+    host: jiekou
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gpt-5-2-pro

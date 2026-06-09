@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: inclusionai-ling-2-6-flash
+    displayName: 'inclusionAI: Ling-2.6 Flash'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 32768
+    contextWindowTotal: 262144
+    maxOutputTokens: 32768
+    releaseDate: "2026-04-21"
+    enabled: true
+    snapshots:
+        - name: inclusionai-ling-2-6-flash
+          releasedAt: "2026-04-21"
+          originalName: inclusionai/ling-2.6-flash
+    pointer: inclusionai-ling-2-6-flash

@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: failspy-meta-llama-3-70b-instruct-abliterated-v3-5
+    displayName: Llama 3 70B abliterated
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    maxOutputTokens: 8192
+    releaseDate: "2025-07-26"
+    enabled: true
+    snapshots:
+        - name: failspy-meta-llama-3-70b-instruct-abliterated-v3-5
+          releasedAt: "2025-07-26"
+          originalName: failspy/Meta-Llama-3-70B-Instruct-abliterated-v3.5
+    pointer: failspy-meta-llama-3-70b-instruct-abliterated-v3-5

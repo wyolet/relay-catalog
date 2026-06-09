@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: tee-gemma4-31b-thinking
+    displayName: Gemma 4 31B Thinking TEE
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 131072
+    contextWindowTotal: 262144
+    maxOutputTokens: 131072
+    releaseDate: "2026-05-02"
+    enabled: true
+    snapshots:
+        - name: tee-gemma4-31b-thinking
+          releasedAt: "2026-05-02"
+          originalName: TEE/gemma4-31b:thinking
+    pointer: tee-gemma4-31b-thinking

@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nousresearch-hermes-4-14b
+    displayName: Hermes 4 14B
+    owner:
+        kind: provider
+        name: chutes
+    labels:
+        family: nousresearch
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: nousresearch
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 40960
+    contextWindowOutput: 40960
+    contextWindowTotal: 40960
+    maxOutputTokens: 40960
+    releaseDate: "2025-12-29"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nousresearch-hermes-4-14b
+          releasedAt: "2025-12-29"
+          originalName: NousResearch/Hermes-4-14B
+    pointer: nousresearch-hermes-4-14b

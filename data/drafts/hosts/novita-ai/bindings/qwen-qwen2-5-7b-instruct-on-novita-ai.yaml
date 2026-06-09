@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen2-5-7b-instruct-on-novita-ai
+    displayName: qwen-qwen2-5-7b-instruct via novita-ai
+spec:
+    model: qwen-qwen2-5-7b-instruct
+    host: novita-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen2-5-7b-instruct

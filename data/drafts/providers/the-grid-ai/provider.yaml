@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: the-grid-ai
+    displayName: The Grid AI
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://thegrid.ai/docs

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: openrouter-openai-gpt-3-5-turbo-instruct
+    displayName: openai-gpt-3-5-turbo-instruct pricing
+    owner:
+        kind: host
+        id: openrouter
+spec:
+    currency: USD
+    targetModels:
+        - openai-gpt-3-5-turbo-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 2
+    enabled: true

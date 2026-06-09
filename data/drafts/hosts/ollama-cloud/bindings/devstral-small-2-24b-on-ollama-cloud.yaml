@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: devstral-small-2-24b-on-ollama-cloud
+    displayName: devstral-small-2-24b via ollama-cloud
+spec:
+    model: devstral-small-2-24b
+    host: ollama-cloud
+    adapter: openai
+    enabled: true
+    snapshots:
+        - devstral-small-2-24b

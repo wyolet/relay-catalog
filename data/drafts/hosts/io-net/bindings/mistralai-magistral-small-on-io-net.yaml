@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-magistral-small-on-io-net
+    displayName: mistralai-magistral-small via io-net
+spec:
+    model: mistralai-magistral-small
+    host: io-net
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-magistral-small-2506

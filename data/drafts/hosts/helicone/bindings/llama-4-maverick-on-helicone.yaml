@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: llama-4-maverick-on-helicone
+    displayName: llama-4-maverick via helicone
+spec:
+    model: llama-4-maverick
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - llama-4-maverick

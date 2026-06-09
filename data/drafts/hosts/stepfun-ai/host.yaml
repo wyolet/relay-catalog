@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: stepfun-ai
+    displayName: StepFun AI
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.stepfun.ai/step_plan/v1
+    pricingStrategies:
+        - api
+    docsURL: https://platform.stepfun.ai/docs/en/step-plan/integrations/open-code

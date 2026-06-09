@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: chutesai-mistral-small-3-2-24b-instruct
+    displayName: Mistral Small 3.2 24b Instruct
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: chutesai
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: chutesai
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 131072
+    contextWindowTotal: 128000
+    maxOutputTokens: 131072
+    releaseDate: "2025-04-15"
+    enabled: true
+    snapshots:
+        - name: chutesai-mistral-small-3-2-24b-instruct-2506
+          releasedAt: "2025-04-15"
+          originalName: chutesai/Mistral-Small-3.2-24B-Instruct-2506
+    pointer: chutesai-mistral-small-3-2-24b-instruct-2506

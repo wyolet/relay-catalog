@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: neuralwatt
+    displayName: Neuralwatt
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.neuralwatt.com/v1
+    pricingStrategies:
+        - api
+    docsURL: https://portal.neuralwatt.com/docs

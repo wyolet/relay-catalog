@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: hunyuan-turbos
+    displayName: Hunyuan Turbo S
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 24000
+    contextWindowOutput: 8192
+    contextWindowTotal: 24000
+    maxOutputTokens: 8192
+    releaseDate: "2025-02-27"
+    enabled: true
+    snapshots:
+        - name: hunyuan-turbos-20250226
+          releasedAt: "2025-02-27"
+        - name: hunyuan-turbos
+          releasedAt: "2026-03-08"
+    pointer: hunyuan-turbos-20250226

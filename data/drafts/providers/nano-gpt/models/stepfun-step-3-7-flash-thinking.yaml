@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: stepfun-step-3-7-flash-thinking
+    displayName: Step 3.7 Flash Thinking
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 256000
+    contextWindowTotal: 256000
+    maxOutputTokens: 256000
+    releaseDate: "2026-05-29"
+    enabled: true
+    snapshots:
+        - name: stepfun-step-3-7-flash-thinking
+          releasedAt: "2026-05-29"
+          originalName: stepfun/step-3.7-flash:thinking
+    pointer: stepfun-step-3-7-flash-thinking

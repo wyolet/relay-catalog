@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: orcarouter
+    displayName: OrcaRouter
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://docs.orcarouter.ai

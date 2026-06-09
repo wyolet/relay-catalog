@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: thedrummer-anubis-70b-v1
+    displayName: Anubis 70B v1
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 65536
+    contextWindowOutput: 16384
+    contextWindowTotal: 65536
+    maxOutputTokens: 16384
+    releaseDate: "2024-01-01"
+    enabled: true
+    snapshots:
+        - name: thedrummer-anubis-70b-v1
+          releasedAt: "2024-01-01"
+          originalName: TheDrummer/Anubis-70B-v1
+    pointer: thedrummer-anubis-70b-v1

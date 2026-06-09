@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-xiaomi-mimo-v2-flash
+    displayName: xiaomi-mimo-v2-flash pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - xiaomi-mimo-v2-flash
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.045
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.09
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.29
+    enabled: true

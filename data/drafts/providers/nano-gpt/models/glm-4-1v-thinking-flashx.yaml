@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: glm-4-1v-thinking-flashx
+    displayName: GLM 4.1V Thinking FlashX
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 64000
+    contextWindowOutput: 8192
+    contextWindowTotal: 64000
+    maxOutputTokens: 8192
+    releaseDate: "2025-07-09"
+    enabled: true
+    snapshots:
+        - name: glm-4-1v-thinking-flashx
+          releasedAt: "2025-07-09"
+          originalName: glm-4.1v-thinking-flashx
+    pointer: glm-4-1v-thinking-flashx

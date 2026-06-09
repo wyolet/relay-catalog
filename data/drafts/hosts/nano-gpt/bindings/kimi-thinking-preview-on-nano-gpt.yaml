@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kimi-thinking-preview-on-nano-gpt
+    displayName: kimi-thinking-preview via nano-gpt
+spec:
+    model: kimi-thinking-preview
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kimi-thinking-preview

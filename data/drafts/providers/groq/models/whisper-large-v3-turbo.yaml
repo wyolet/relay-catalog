@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: whisper-large-v3-turbo
+    displayName: Whisper Large v3 Turbo
+    owner:
+        kind: provider
+        name: groq
+    labels:
+        family: whisper
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: whisper
+    capabilities:
+        chat: true
+        streaming: true
+        audio: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - audio
+        output:
+            - text
+    contextWindowInput: 448
+    contextWindowOutput: 448
+    contextWindowTotal: 448
+    maxOutputTokens: 448
+    knowledgeCutoff: 2024-10
+    releaseDate: "2024-10-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: whisper-large-v3-turbo
+          releasedAt: "2024-10-01"
+    pointer: whisper-large-v3-turbo

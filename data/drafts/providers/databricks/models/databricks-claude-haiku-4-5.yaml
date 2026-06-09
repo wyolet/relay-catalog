@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: databricks-claude-haiku-4-5
+    displayName: Claude Haiku 4.5 (latest)
+    owner:
+        kind: provider
+        name: databricks
+    labels:
+        family: claude-haiku
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: claude-haiku
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 64000
+    contextWindowTotal: 200000
+    maxOutputTokens: 64000
+    knowledgeCutoff: "2025-02-28"
+    releaseDate: "2025-10-15"
+    enabled: true
+    snapshots:
+        - name: databricks-claude-haiku-4-5
+          releasedAt: "2025-10-15"
+    pointer: databricks-claude-haiku-4-5

@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-gpt-5-2-instant
+    displayName: GPT-5.2-Instant
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    maxOutputTokens: 16384
+    releaseDate: "2025-12-11"
+    enabled: true
+    snapshots:
+        - name: openai-gpt-5-2-instant
+          releasedAt: "2025-12-11"
+          originalName: openai/gpt-5.2-instant
+    pointer: openai-gpt-5-2-instant

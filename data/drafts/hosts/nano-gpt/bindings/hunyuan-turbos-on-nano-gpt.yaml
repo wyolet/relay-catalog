@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hunyuan-turbos-on-nano-gpt
+    displayName: hunyuan-turbos via nano-gpt
+spec:
+    model: hunyuan-turbos
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hunyuan-turbos-20250226

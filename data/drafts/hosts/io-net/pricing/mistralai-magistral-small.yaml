@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: io-net-mistralai-magistral-small
+    displayName: mistralai-magistral-small pricing
+    owner:
+        kind: host
+        id: io-net
+spec:
+    currency: USD
+    targetModels:
+        - mistralai-magistral-small
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 1
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.25
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.5
+    enabled: true

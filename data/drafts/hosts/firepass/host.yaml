@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: firepass
+    displayName: Fireworks (Firepass)
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.fireworks.ai/inference/v1
+    pricingStrategies:
+        - api
+    docsURL: https://docs.fireworks.ai/firepass

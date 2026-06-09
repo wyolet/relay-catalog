@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimax-text-01-on-llmgateway
+    displayName: minimax-text-01 via llmgateway
+spec:
+    model: minimax-text-01
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - minimax-text-01

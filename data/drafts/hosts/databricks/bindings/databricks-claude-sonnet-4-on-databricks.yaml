@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: databricks-claude-sonnet-4-on-databricks
+    displayName: databricks-claude-sonnet-4 via databricks
+spec:
+    model: databricks-claude-sonnet-4
+    host: databricks
+    adapter: openai
+    enabled: true
+    snapshots:
+        - databricks-claude-sonnet-4

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-livetranslate-flash-realtime-on-alibaba
+    displayName: qwen3-livetranslate-flash-realtime via alibaba
+spec:
+    model: qwen3-livetranslate-flash-realtime
+    host: alibaba
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-livetranslate-flash-realtime

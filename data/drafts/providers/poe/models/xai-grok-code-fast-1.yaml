@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: xai-grok-code-fast-1
+    displayName: Grok Code Fast 1
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: grok
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: grok
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 128000
+    contextWindowTotal: 256000
+    maxOutputTokens: 128000
+    releaseDate: "2025-08-22"
+    enabled: true
+    snapshots:
+        - name: xai-grok-code-fast-1
+          releasedAt: "2025-08-22"
+          originalName: xai/grok-code-fast-1
+    pointer: xai-grok-code-fast-1

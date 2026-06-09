@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen2-5-7b-instruct
+    displayName: Qwen2.5 7B Instruct
+    owner:
+        kind: provider
+        name: novita-ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 32000
+    contextWindowTotal: 32000
+    maxOutputTokens: 32000
+    releaseDate: "2025-04-16"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen2-5-7b-instruct
+          releasedAt: "2025-04-16"
+          originalName: qwen/qwen2.5-7b-instruct
+    pointer: qwen-qwen2-5-7b-instruct

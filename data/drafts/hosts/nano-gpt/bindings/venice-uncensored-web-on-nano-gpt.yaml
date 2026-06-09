@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: venice-uncensored-web-on-nano-gpt
+    displayName: venice-uncensored-web via nano-gpt
+spec:
+    model: venice-uncensored-web
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - venice-uncensored-web

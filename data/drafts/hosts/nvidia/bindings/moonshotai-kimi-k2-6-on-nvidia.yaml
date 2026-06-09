@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: moonshotai-kimi-k2-6-on-nvidia
+    displayName: moonshotai-kimi-k2-6 via nvidia
+spec:
+    model: moonshotai-kimi-k2-6
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - moonshotai-kimi-k2-6

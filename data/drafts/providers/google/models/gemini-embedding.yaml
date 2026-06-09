@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-embedding
+    displayName: Gemini Embedding 001
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemini
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gemini
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 2048
+    contextWindowOutput: 1
+    contextWindowTotal: 2048
+    maxOutputTokens: 1
+    knowledgeCutoff: 2025-05
+    releaseDate: "2025-05-20"
+    enabled: true
+    snapshots:
+        - name: gemini-embedding-001
+          releasedAt: "2025-05-20"
+    pointer: gemini-embedding-001

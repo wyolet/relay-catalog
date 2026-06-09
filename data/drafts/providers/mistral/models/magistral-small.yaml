@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: magistral-small
+    displayName: Magistral Small
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: magistral-small
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: magistral-small
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    maxOutputTokens: 128000
+    knowledgeCutoff: 2025-06
+    releaseDate: "2025-03-17"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: magistral-small
+          releasedAt: "2025-03-17"
+        - name: magistral-small-2506
+          releasedAt: "2025-09-25"
+          originalName: Magistral-Small-2506
+    pointer: magistral-small

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-6-max-preview-on-llmgateway
+    displayName: qwen3-6-max-preview via llmgateway
+spec:
+    model: qwen3-6-max-preview
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-6-max-preview

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: anthropic-claude-sonnet-4-6-on-gmicloud
+    displayName: anthropic-claude-sonnet-4-6 via gmicloud
+spec:
+    model: anthropic-claude-sonnet-4-6
+    host: gmicloud
+    adapter: openai
+    enabled: true
+    snapshots:
+        - anthropic-claude-sonnet-4-6

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: public-minimax-m25-on-drun
+    displayName: public-minimax-m25 via drun
+spec:
+    model: public-minimax-m25
+    host: drun
+    adapter: openai
+    enabled: true
+    snapshots:
+        - public-minimax-m25

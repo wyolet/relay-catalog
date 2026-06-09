@@ -1,0 +1,13 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: moonshotai-kimi-k2-instruct-on-huggingface
+    displayName: moonshotai-kimi-k2-instruct via huggingface
+spec:
+    model: moonshotai-kimi-k2-instruct
+    host: huggingface
+    adapter: openai
+    enabled: true
+    snapshots:
+        - moonshotai-kimi-k2-instruct
+        - moonshotai-kimi-k2-instruct-0905

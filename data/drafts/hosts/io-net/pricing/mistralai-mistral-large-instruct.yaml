@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: io-net-mistralai-mistral-large-instruct
+    displayName: mistralai-mistral-large-instruct pricing
+    owner:
+        kind: host
+        id: io-net
+spec:
+    currency: USD
+    targetModels:
+        - mistralai-mistral-large-instruct
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 4
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 1
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.output
+          unit: per_million
+          amount: 6
+    enabled: true

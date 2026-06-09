@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-eva-unit-01-eva-llama-3-33-70b-v0-1
+    displayName: eva-unit-01-eva-llama-3-33-70b-v0-1 pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - eva-unit-01-eva-llama-3-33-70b-v0-1
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2.006
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.006
+    enabled: true

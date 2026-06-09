@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: umans-coder-on-umans-ai-coding-plan
+    displayName: umans-coder via umans-ai-coding-plan
+spec:
+    model: umans-coder
+    host: umans-ai-coding-plan
+    adapter: openai
+    enabled: true
+    snapshots:
+        - umans-coder

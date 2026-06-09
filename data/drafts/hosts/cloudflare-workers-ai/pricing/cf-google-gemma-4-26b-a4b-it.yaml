@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: cloudflare-workers-ai-cf-google-gemma-4-26b-a4b-it
+    displayName: cf-google-gemma-4-26b-a4b-it pricing
+    owner:
+        kind: host
+        id: cloudflare-workers-ai
+spec:
+    currency: USD
+    targetModels:
+        - cf-google-gemma-4-26b-a4b-it
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.3
+    enabled: true

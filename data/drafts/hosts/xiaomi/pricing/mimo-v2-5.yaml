@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: xiaomi-mimo-v2-5
+    displayName: mimo-v2-5 pricing
+    owner:
+        kind: host
+        id: xiaomi
+spec:
+    currency: USD
+    targetModels:
+        - mimo-v2-5
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.08
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.16
+          aboveTokens: 256000
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.4
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.8
+          aboveTokens: 256000
+        - meter: tokens.output
+          unit: per_million
+          amount: 2
+        - meter: tokens.output
+          unit: per_million
+          amount: 4
+          aboveTokens: 256000
+    enabled: true

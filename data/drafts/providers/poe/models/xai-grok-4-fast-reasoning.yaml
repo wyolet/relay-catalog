@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: xai-grok-4-fast-reasoning
+    displayName: Grok-4-Fast-Reasoning
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: grok
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: grok
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 2000000
+    contextWindowOutput: 128000
+    contextWindowTotal: 2000000
+    maxOutputTokens: 128000
+    releaseDate: "2025-09-16"
+    enabled: true
+    snapshots:
+        - name: xai-grok-4-fast-reasoning
+          releasedAt: "2025-09-16"
+          originalName: xai/grok-4-fast-reasoning
+    pointer: xai-grok-4-fast-reasoning

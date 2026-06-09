@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: moonshotai-kimi-k2-turbo-preview
+    displayName: kimi-k2-turbo-preview pricing
+    owner:
+        kind: host
+        id: moonshotai
+spec:
+    currency: USD
+    targetModels:
+        - kimi-k2-turbo-preview
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.6
+        - meter: tokens.input
+          unit: per_million
+          amount: 2.4
+        - meter: tokens.output
+          unit: per_million
+          amount: 10
+    enabled: true

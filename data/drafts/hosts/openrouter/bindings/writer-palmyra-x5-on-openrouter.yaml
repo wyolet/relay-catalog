@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: writer-palmyra-x5-on-openrouter
+    displayName: writer-palmyra-x5 via openrouter
+spec:
+    model: writer-palmyra-x5
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - writer-palmyra-x5

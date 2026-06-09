@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kwaipilot-kat-dev
+    displayName: Kwaipilot/KAT-Dev
+    owner:
+        kind: provider
+        name: siliconflow-cn
+    labels:
+        family: kat-coder
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: kat-coder
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    maxOutputTokens: 128000
+    releaseDate: "2025-09-27"
+    enabled: true
+    snapshots:
+        - name: kwaipilot-kat-dev
+          releasedAt: "2025-09-27"
+          originalName: Kwaipilot/KAT-Dev
+    pointer: kwaipilot-kat-dev

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: cloudflare-workers-ai-cf-aisingapore-gemma-sea-lion-v4-27b-it
+    displayName: cf-aisingapore-gemma-sea-lion-v4-27b-it pricing
+    owner:
+        kind: host
+        id: cloudflare-workers-ai
+spec:
+    currency: USD
+    targetModels:
+        - cf-aisingapore-gemma-sea-lion-v4-27b-it
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.351
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.555
+    enabled: true

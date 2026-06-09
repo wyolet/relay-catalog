@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: zenmux-anthropic-claude-opus-4
+    displayName: anthropic-claude-opus-4 pricing
+    owner:
+        kind: host
+        id: zenmux
+spec:
+    currency: USD
+    targetModels:
+        - anthropic-claude-opus-4
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 18.75
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 1.5
+        - meter: tokens.input
+          unit: per_million
+          amount: 15
+        - meter: tokens.output
+          unit: per_million
+          amount: 75
+    enabled: true

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-devstral-small-2-24b-instruct-on-neuralwatt
+    displayName: mistralai-devstral-small-2-24b-instruct via neuralwatt
+spec:
+    model: mistralai-devstral-small-2-24b-instruct
+    host: neuralwatt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-devstral-small-2-24b-instruct-2512

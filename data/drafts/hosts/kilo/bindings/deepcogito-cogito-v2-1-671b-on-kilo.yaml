@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepcogito-cogito-v2-1-671b-on-kilo
+    displayName: deepcogito-cogito-v2-1-671b via kilo
+spec:
+    model: deepcogito-cogito-v2-1-671b
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepcogito-cogito-v2-1-671b

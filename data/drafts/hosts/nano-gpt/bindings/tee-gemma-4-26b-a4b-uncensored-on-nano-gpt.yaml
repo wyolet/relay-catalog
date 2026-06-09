@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: tee-gemma-4-26b-a4b-uncensored-on-nano-gpt
+    displayName: tee-gemma-4-26b-a4b-uncensored via nano-gpt
+spec:
+    model: tee-gemma-4-26b-a4b-uncensored
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - tee-gemma-4-26b-a4b-uncensored

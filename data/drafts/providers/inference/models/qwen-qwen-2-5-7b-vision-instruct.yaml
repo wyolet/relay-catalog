@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen-2-5-7b-vision-instruct
+    displayName: Qwen 2.5 7B Vision Instruct
+    owner:
+        kind: provider
+        name: inference
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 125000
+    contextWindowOutput: 4096
+    contextWindowTotal: 125000
+    maxOutputTokens: 4096
+    knowledgeCutoff: 2024-12
+    releaseDate: "2025-01-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen-2-5-7b-vision-instruct
+          releasedAt: "2025-01-01"
+          originalName: qwen/qwen-2.5-7b-vision-instruct
+    pointer: qwen-qwen-2-5-7b-vision-instruct

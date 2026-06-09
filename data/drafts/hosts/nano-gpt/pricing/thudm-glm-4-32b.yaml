@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-thudm-glm-4-32b
+    displayName: thudm-glm-4-32b pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - thudm-glm-4-32b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.2
+    enabled: true

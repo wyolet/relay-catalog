@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimaxai-minimax-m1-80k-on-nano-gpt
+    displayName: minimaxai-minimax-m1-80k via nano-gpt
+spec:
+    model: minimaxai-minimax-m1-80k
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - minimaxai-minimax-m1-80k

@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: crof-greg-1-super
+    displayName: greg-1-super pricing
+    owner:
+        kind: host
+        id: crof
+spec:
+    currency: USD
+    targetModels:
+        - greg-1-super
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.input
+          unit: per_million
+          amount: 1
+        - meter: tokens.output
+          unit: per_million
+          amount: 5
+    enabled: true

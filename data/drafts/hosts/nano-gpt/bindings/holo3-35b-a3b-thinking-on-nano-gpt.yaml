@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: holo3-35b-a3b-thinking-on-nano-gpt
+    displayName: holo3-35b-a3b-thinking via nano-gpt
+spec:
+    model: holo3-35b-a3b-thinking
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - holo3-35b-a3b-thinking

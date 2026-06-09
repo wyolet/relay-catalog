@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-vl-235b-a22b-instruct
+    displayName: 'Qwen: Qwen3 VL 235B A22B Instruct'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 52429
+    contextWindowTotal: 262144
+    maxOutputTokens: 52429
+    releaseDate: "2025-09-23"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-vl-235b-a22b-instruct
+          releasedAt: "2025-09-23"
+          originalName: qwen/qwen3-vl-235b-a22b-instruct
+    pointer: qwen-qwen3-vl-235b-a22b-instruct

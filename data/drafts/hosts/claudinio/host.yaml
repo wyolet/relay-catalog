@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: claudinio
+    displayName: Claudinio
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.claudin.io/v1
+    pricingStrategies:
+        - api
+    docsURL: https://claudin.io

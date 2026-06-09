@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+  name: magistral-medium-on-mistral
+  displayName: magistral-medium via mistral
+spec:
+  model: magistral-medium
+  host: mistral
+  adapter: openai
+  enabled: true
+  snapshots:
+  - magistral-medium-latest

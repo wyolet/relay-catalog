@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: inceptron-nvidia-llama-3-3-70b-instruct-fp8
+    displayName: nvidia-llama-3-3-70b-instruct-fp8 pricing
+    owner:
+        kind: host
+        id: inceptron
+spec:
+    currency: USD
+    targetModels:
+        - nvidia-llama-3-3-70b-instruct-fp8
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.12
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.38
+    enabled: true

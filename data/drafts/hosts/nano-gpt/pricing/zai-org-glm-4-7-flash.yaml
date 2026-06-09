@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-zai-org-glm-4-7-flash
+    displayName: zai-org-glm-4-7-flash pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - zai-org-glm-4-7-flash
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.07
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.4
+    enabled: true

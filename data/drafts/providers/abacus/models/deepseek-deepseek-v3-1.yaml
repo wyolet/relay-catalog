@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-deepseek-v3-1
+    displayName: DeepSeek V3.1
+    owner:
+        kind: provider
+        name: abacus
+    labels:
+        family: deepseek
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    releaseDate: "2025-01-20"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: deepseek-deepseek-v3-1
+          releasedAt: "2025-01-20"
+          originalName: deepseek/deepseek-v3.1
+    pointer: deepseek-deepseek-v3-1

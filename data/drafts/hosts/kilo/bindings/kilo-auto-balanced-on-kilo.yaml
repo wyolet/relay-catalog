@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kilo-auto-balanced-on-kilo
+    displayName: kilo-auto-balanced via kilo
+spec:
+    model: kilo-auto-balanced
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kilo-auto-balanced

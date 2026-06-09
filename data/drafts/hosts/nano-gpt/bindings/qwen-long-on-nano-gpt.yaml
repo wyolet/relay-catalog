@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-long-on-nano-gpt
+    displayName: qwen-long via nano-gpt
+spec:
+    model: qwen-long
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-long

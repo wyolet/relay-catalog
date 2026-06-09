@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: sarvamai-sarvam-m-on-nvidia
+    displayName: sarvamai-sarvam-m via nvidia
+spec:
+    model: sarvamai-sarvam-m
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - sarvamai-sarvam-m

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-deepseek-chat-on-anyapi
+    displayName: deepseek-deepseek-chat via anyapi
+spec:
+    model: deepseek-deepseek-chat
+    host: anyapi
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-deepseek-chat

@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: hermes-2-pro-llama-3-8b
+    displayName: Hermes 2 Pro Llama 3 8B
+    owner:
+        kind: provider
+        name: helicone
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    maxOutputTokens: 131072
+    knowledgeCutoff: 2024-05
+    releaseDate: "2024-05-27"
+    enabled: true
+    snapshots:
+        - name: hermes-2-pro-llama-3-8b
+          releasedAt: "2024-05-27"
+    pointer: hermes-2-pro-llama-3-8b

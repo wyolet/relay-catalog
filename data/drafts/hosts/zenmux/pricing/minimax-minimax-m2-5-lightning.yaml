@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: zenmux-minimax-minimax-m2-5-lightning
+    displayName: minimax-minimax-m2-5-lightning pricing
+    owner:
+        kind: host
+        id: zenmux
+spec:
+    currency: USD
+    targetModels:
+        - minimax-minimax-m2-5-lightning
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.75
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.06
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.6
+        - meter: tokens.output
+          unit: per_million
+          amount: 4.8
+    enabled: true

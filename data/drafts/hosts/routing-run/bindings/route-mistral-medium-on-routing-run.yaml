@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: route-mistral-medium-on-routing-run
+    displayName: route-mistral-medium via routing-run
+spec:
+    model: route-mistral-medium
+    host: routing-run
+    adapter: openai
+    enabled: true
+    snapshots:
+        - route-mistral-medium-2505

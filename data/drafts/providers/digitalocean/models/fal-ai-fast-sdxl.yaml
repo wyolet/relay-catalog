@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: fal-ai-fast-sdxl
+    displayName: Fast SDXL
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: stable-diffusion
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: stable-diffusion
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - image
+    releaseDate: "2023-07-26"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: fal-ai-fast-sdxl
+          releasedAt: "2023-07-26"
+          originalName: fal-ai/fast-sdxl
+    pointer: fal-ai-fast-sdxl

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-lyria-on-poe
+    displayName: google-lyria via poe
+spec:
+    model: google-lyria
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-lyria

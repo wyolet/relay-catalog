@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama-3-3-70b-versatile
+    displayName: Llama 3.3 70B Versatile
+    owner:
+        kind: provider
+        name: abacus
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32768
+    contextWindowTotal: 128000
+    maxOutputTokens: 32768
+    releaseDate: "2024-12-06"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: llama-3-3-70b-versatile
+          releasedAt: "2024-12-06"
+          originalName: llama-3.3-70b-versatile
+    pointer: llama-3-3-70b-versatile

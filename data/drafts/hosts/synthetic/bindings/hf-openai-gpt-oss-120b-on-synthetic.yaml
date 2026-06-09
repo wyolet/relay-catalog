@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hf-openai-gpt-oss-120b-on-synthetic
+    displayName: hf-openai-gpt-oss-120b via synthetic
+spec:
+    model: hf-openai-gpt-oss-120b
+    host: synthetic
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hf-openai-gpt-oss-120b

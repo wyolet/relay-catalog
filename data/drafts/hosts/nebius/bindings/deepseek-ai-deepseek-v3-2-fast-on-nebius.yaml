@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-ai-deepseek-v3-2-fast-on-nebius
+    displayName: deepseek-ai-deepseek-v3-2-fast via nebius
+spec:
+    model: deepseek-ai-deepseek-v3-2-fast
+    host: nebius
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-ai-deepseek-v3-2-fast

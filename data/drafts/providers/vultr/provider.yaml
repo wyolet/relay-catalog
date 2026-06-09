@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: vultr
+    displayName: Vultr
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://api.vultrinference.com/

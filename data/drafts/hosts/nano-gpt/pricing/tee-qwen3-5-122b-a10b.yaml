@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-tee-qwen3-5-122b-a10b
+    displayName: tee-qwen3-5-122b-a10b pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - tee-qwen3-5-122b-a10b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.46
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.68
+    enabled: true

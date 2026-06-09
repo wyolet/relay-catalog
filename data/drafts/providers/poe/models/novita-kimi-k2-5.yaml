@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: novita-kimi-k2-5
+    displayName: Kimi-K2.5
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 262144
+    contextWindowTotal: 128000
+    maxOutputTokens: 262144
+    releaseDate: "2026-01-27"
+    enabled: true
+    snapshots:
+        - name: novita-kimi-k2-5
+          releasedAt: "2026-01-27"
+          originalName: novita/kimi-k2.5
+    pointer: novita-kimi-k2-5

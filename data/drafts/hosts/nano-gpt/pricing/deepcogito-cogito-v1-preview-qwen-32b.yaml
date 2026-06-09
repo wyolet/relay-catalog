@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-deepcogito-cogito-v1-preview-qwen-32b
+    displayName: deepcogito-cogito-v1-preview-qwen-32b pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - deepcogito-cogito-v1-preview-qwen-32b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.7999999999999998
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.7999999999999998
+    enabled: true

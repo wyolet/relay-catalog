@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: thedrummer-unslopnemo-12b-on-kilo
+    displayName: thedrummer-unslopnemo-12b via kilo
+spec:
+    model: thedrummer-unslopnemo-12b
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - thedrummer-unslopnemo-12b

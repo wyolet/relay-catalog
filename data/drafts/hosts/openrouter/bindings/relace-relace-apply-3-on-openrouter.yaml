@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: relace-relace-apply-3-on-openrouter
+    displayName: relace-relace-apply-3 via openrouter
+spec:
+    model: relace-relace-apply-3
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - relace-relace-apply-3

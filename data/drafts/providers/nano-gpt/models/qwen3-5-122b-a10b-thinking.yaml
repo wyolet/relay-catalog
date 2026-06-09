@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-5-122b-a10b-thinking
+    displayName: Qwen3.5 122B A10B Thinking
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 260096
+    contextWindowOutput: 65536
+    contextWindowTotal: 260096
+    maxOutputTokens: 65536
+    releaseDate: "2026-02-24"
+    enabled: true
+    snapshots:
+        - name: qwen3-5-122b-a10b-thinking
+          releasedAt: "2026-02-24"
+          originalName: qwen3.5-122b-a10b:thinking
+    pointer: qwen3-5-122b-a10b-thinking

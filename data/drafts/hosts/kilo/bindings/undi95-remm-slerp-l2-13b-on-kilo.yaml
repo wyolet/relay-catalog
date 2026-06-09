@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: undi95-remm-slerp-l2-13b-on-kilo
+    displayName: undi95-remm-slerp-l2-13b via kilo
+spec:
+    model: undi95-remm-slerp-l2-13b
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - undi95-remm-slerp-l2-13b

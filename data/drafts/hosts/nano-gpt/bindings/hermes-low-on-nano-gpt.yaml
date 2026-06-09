@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hermes-low-on-nano-gpt
+    displayName: hermes-low via nano-gpt
+spec:
+    model: hermes-low
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hermes-low

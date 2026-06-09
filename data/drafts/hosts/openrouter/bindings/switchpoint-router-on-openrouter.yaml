@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: switchpoint-router-on-openrouter
+    displayName: switchpoint-router via openrouter
+spec:
+    model: switchpoint-router
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - switchpoint-router

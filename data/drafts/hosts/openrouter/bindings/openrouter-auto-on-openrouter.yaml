@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openrouter-auto-on-openrouter
+    displayName: openrouter-auto via openrouter
+spec:
+    model: openrouter-auto
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openrouter-auto

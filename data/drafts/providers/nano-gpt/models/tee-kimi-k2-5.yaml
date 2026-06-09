@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: tee-kimi-k2-5
+    displayName: Kimi K2.5 TEE
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: kimi
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: kimi
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 65535
+    contextWindowTotal: 128000
+    maxOutputTokens: 65535
+    releaseDate: "2026-01-29"
+    enabled: true
+    snapshots:
+        - name: tee-kimi-k2-5
+          releasedAt: "2026-01-29"
+          originalName: TEE/kimi-k2.5
+    pointer: tee-kimi-k2-5

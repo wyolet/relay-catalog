@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: accounts-fireworks-models-kimi-k2p6-on-fireworks-ai
+    displayName: accounts-fireworks-models-kimi-k2p6 via fireworks-ai
+spec:
+    model: accounts-fireworks-models-kimi-k2p6
+    host: fireworks-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - accounts-fireworks-models-kimi-k2p6

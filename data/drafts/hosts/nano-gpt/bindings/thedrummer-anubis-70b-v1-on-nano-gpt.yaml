@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: thedrummer-anubis-70b-v1-on-nano-gpt
+    displayName: thedrummer-anubis-70b-v1 via nano-gpt
+spec:
+    model: thedrummer-anubis-70b-v1
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - thedrummer-anubis-70b-v1

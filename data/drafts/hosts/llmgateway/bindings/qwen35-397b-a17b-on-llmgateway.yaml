@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen35-397b-a17b-on-llmgateway
+    displayName: qwen35-397b-a17b via llmgateway
+spec:
+    model: qwen35-397b-a17b
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen35-397b-a17b

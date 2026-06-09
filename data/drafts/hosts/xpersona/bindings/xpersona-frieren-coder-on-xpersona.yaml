@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: xpersona-frieren-coder-on-xpersona
+    displayName: xpersona-frieren-coder via xpersona
+spec:
+    model: xpersona-frieren-coder
+    host: xpersona
+    adapter: openai
+    enabled: true
+    snapshots:
+        - xpersona-frieren-coder

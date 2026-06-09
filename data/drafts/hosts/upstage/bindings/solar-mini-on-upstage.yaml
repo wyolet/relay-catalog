@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: solar-mini-on-upstage
+    displayName: solar-mini via upstage
+spec:
+    model: solar-mini
+    host: upstage
+    adapter: openai
+    enabled: true
+    snapshots:
+        - solar-mini

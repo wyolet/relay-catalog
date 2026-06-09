@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: stepfun-ai-step-3-5-flash-on-siliconflow
+    displayName: stepfun-ai-step-3-5-flash via siliconflow
+spec:
+    model: stepfun-ai-step-3-5-flash
+    host: siliconflow
+    adapter: openai
+    enabled: true
+    snapshots:
+        - stepfun-ai-step-3-5-flash

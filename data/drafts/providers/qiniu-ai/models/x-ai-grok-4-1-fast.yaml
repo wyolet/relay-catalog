@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: x-ai-grok-4-1-fast
+    displayName: x-AI/Grok-4.1-Fast
+    owner:
+        kind: provider
+        name: qiniu-ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 2000000
+    contextWindowOutput: 2000000
+    contextWindowTotal: 2000000
+    maxOutputTokens: 2000000
+    releaseDate: "2025-11-20"
+    enabled: true
+    snapshots:
+        - name: x-ai-grok-4-1-fast
+          releasedAt: "2025-11-20"
+          originalName: x-ai/grok-4.1-fast
+    pointer: x-ai-grok-4-1-fast

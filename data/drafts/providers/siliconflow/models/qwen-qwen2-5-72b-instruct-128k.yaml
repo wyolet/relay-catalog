@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen2-5-72b-instruct-128k
+    displayName: Qwen/Qwen2.5-72B-Instruct-128K
+    owner:
+        kind: provider
+        name: siliconflow
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131000
+    contextWindowOutput: 4000
+    contextWindowTotal: 131000
+    maxOutputTokens: 4000
+    releaseDate: "2024-09-18"
+    enabled: true
+    snapshots:
+        - name: qwen-qwen2-5-72b-instruct-128k
+          releasedAt: "2024-09-18"
+          originalName: Qwen/Qwen2.5-72B-Instruct-128K
+    pointer: qwen-qwen2-5-72b-instruct-128k

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-writer-palmyra-x5
+    displayName: writer-palmyra-x5 pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - writer-palmyra-x5
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.6
+        - meter: tokens.output
+          unit: per_million
+          amount: 6
+    enabled: true

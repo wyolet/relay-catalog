@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-chat-cheaper
+    displayName: DeepSeek V3/Chat Cheaper
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - pdf
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    releaseDate: "2025-04-15"
+    enabled: true
+    snapshots:
+        - name: deepseek-chat-cheaper
+          releasedAt: "2025-04-15"
+    pointer: deepseek-chat-cheaper

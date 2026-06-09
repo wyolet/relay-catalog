@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: tee-gpt-oss-120b
+    displayName: GPT-OSS 120B TEE
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: gpt-oss
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt-oss
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 16384
+    contextWindowTotal: 131072
+    maxOutputTokens: 16384
+    releaseDate: "2025-08-05"
+    enabled: true
+    snapshots:
+        - name: tee-gpt-oss-120b
+          releasedAt: "2025-08-05"
+          originalName: TEE/gpt-oss-120b
+    pointer: tee-gpt-oss-120b

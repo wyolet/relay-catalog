@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: allam-2-7b-on-groq
+    displayName: allam-2-7b via groq
+spec:
+    model: allam-2-7b
+    host: groq
+    adapter: openai
+    enabled: true
+    snapshots:
+        - allam-2-7b

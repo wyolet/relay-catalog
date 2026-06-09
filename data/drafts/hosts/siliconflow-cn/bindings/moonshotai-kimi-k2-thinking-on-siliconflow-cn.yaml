@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: moonshotai-kimi-k2-thinking-on-siliconflow-cn
+    displayName: moonshotai-kimi-k2-thinking via siliconflow-cn
+spec:
+    model: moonshotai-kimi-k2-thinking
+    host: siliconflow-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - moonshotai-kimi-k2-thinking

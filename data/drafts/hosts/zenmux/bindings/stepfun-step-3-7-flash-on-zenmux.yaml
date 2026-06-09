@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: stepfun-step-3-7-flash-on-zenmux
+    displayName: stepfun-step-3-7-flash via zenmux
+spec:
+    model: stepfun-step-3-7-flash
+    host: zenmux
+    adapter: openai
+    enabled: true
+    snapshots:
+        - stepfun-step-3-7-flash

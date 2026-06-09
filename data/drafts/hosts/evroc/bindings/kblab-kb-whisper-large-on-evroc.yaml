@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kblab-kb-whisper-large-on-evroc
+    displayName: kblab-kb-whisper-large via evroc
+spec:
+    model: kblab-kb-whisper-large
+    host: evroc
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kblab-kb-whisper-large

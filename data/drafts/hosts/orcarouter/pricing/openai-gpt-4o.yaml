@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: orcarouter-openai-gpt-4o
+    displayName: openai-gpt-4o pricing
+    owner:
+        kind: host
+        id: orcarouter
+spec:
+    currency: USD
+    targetModels:
+        - openai-gpt-4o
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 1.25
+        - meter: tokens.input
+          unit: per_million
+          amount: 2.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 10
+    enabled: true

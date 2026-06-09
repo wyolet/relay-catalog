@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: meta-llama-llama-4-maverick-17b-128e-instruct-fp8
+    displayName: Llama 4 Maverick 17B 128E Instruct FP8
+    owner:
+        kind: provider
+        name: abacus
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 32768
+    contextWindowTotal: 1000000
+    maxOutputTokens: 32768
+    knowledgeCutoff: 2024-08
+    releaseDate: "2025-04-05"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: meta-llama-llama-4-maverick-17b-128e-instruct-fp8
+          releasedAt: "2025-04-05"
+          originalName: meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8
+    pointer: meta-llama-llama-4-maverick-17b-128e-instruct-fp8

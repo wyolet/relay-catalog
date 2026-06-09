@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: solar-pro3-on-upstage
+    displayName: solar-pro3 via upstage
+spec:
+    model: solar-pro3
+    host: upstage
+    adapter: openai
+    enabled: true
+    snapshots:
+        - solar-pro3

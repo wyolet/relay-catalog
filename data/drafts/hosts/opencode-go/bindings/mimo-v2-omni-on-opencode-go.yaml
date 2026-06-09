@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mimo-v2-omni-on-opencode-go
+    displayName: mimo-v2-omni via opencode-go
+spec:
+    model: mimo-v2-omni
+    host: opencode-go
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mimo-v2-omni

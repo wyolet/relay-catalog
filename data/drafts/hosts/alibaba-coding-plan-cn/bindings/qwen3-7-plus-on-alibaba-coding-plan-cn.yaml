@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-7-plus-on-alibaba-coding-plan-cn
+    displayName: qwen3-7-plus via alibaba-coding-plan-cn
+spec:
+    model: qwen3-7-plus
+    host: alibaba-coding-plan-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-7-plus

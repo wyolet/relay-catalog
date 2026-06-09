@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hermes-2-pro-llama-3-8b-on-llmgateway
+    displayName: hermes-2-pro-llama-3-8b via llmgateway
+spec:
+    model: hermes-2-pro-llama-3-8b
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hermes-2-pro-llama-3-8b

@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-coder-480b-a35b-instruct
+    displayName: Qwen3 Coder 480B A35B Instruct
+    owner:
+        kind: provider
+        name: abacus
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 65536
+    contextWindowTotal: 262144
+    maxOutputTokens: 65536
+    releaseDate: "2025-07-22"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-coder-480b-a35b-instruct
+          releasedAt: "2025-07-22"
+          originalName: Qwen/qwen3-coder-480b-a35b-instruct
+    pointer: qwen-qwen3-coder-480b-a35b-instruct

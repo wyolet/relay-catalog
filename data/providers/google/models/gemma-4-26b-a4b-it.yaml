@@ -1,0 +1,40 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+  name: gemma-4-26b-a4b-it
+  displayName: Gemma 4 26B A4B IT
+  owner:
+    kind: provider
+    name: google
+  labels:
+    family: gemma
+    source: models.dev
+    source_version: '2026-06-09'
+spec:
+  family: gemma
+  capabilities:
+    chat: true
+    streaming: true
+    tools: true
+    vision: true
+    reasoning: true
+    systemMessages: true
+  modalities:
+    input:
+    - text
+    - image
+    output:
+    - text
+  contextWindowInput: 262144
+  contextWindowOutput: 32768
+  contextWindowTotal: 262144
+  maxOutputTokens: 32768
+  releaseDate: '2026-04-02'
+  tags:
+  - open-weights
+  enabled: true
+  snapshots:
+  - name: gemma-4-26b-a4b-it
+    releasedAt: '2026-04-02'
+  pointer: gemma-4-26b-a4b-it

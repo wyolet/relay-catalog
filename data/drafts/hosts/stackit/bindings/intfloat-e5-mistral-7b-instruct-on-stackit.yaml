@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: intfloat-e5-mistral-7b-instruct-on-stackit
+    displayName: intfloat-e5-mistral-7b-instruct via stackit
+spec:
+    model: intfloat-e5-mistral-7b-instruct
+    host: stackit
+    adapter: openai
+    enabled: true
+    snapshots:
+        - intfloat-e5-mistral-7b-instruct

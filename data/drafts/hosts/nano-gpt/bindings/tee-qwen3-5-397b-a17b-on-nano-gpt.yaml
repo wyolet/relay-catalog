@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: tee-qwen3-5-397b-a17b-on-nano-gpt
+    displayName: tee-qwen3-5-397b-a17b via nano-gpt
+spec:
+    model: tee-qwen3-5-397b-a17b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - tee-qwen3-5-397b-a17b

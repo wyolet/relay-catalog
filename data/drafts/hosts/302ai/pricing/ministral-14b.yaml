@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: 302ai-ministral-14b
+    displayName: ministral-14b pricing
+    owner:
+        kind: host
+        id: 302ai
+spec:
+    currency: USD
+    targetModels:
+        - ministral-14b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.33
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.33
+    enabled: true

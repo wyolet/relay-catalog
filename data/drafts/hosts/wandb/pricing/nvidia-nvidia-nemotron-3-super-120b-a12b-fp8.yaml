@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: wandb-nvidia-nvidia-nemotron-3-super-120b-a12b-fp8
+    displayName: nvidia-nvidia-nemotron-3-super-120b-a12b-fp8 pricing
+    owner:
+        kind: host
+        id: wandb
+spec:
+    currency: USD
+    targetModels:
+        - nvidia-nvidia-nemotron-3-super-120b-a12b-fp8
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.8
+    enabled: true

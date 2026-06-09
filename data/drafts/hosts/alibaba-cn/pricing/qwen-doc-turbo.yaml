@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-cn-qwen-doc-turbo
+    displayName: qwen-doc-turbo pricing
+    owner:
+        kind: host
+        id: alibaba-cn
+spec:
+    currency: USD
+    targetModels:
+        - qwen-doc-turbo
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.087
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.144
+    enabled: true

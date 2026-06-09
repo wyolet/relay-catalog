@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-ai-deepseek-r1-distill-llama-70b
+    displayName: DeepSeek R1 Distill Llama 70B
+    owner:
+        kind: provider
+        name: chutes
+    labels:
+        family: deepseek-thinking
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek-thinking
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    maxOutputTokens: 131072
+    releaseDate: "2025-12-29"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: deepseek-ai-deepseek-r1-distill-llama-70b
+          releasedAt: "2025-12-29"
+          originalName: deepseek-ai/DeepSeek-R1-Distill-Llama-70B
+    pointer: deepseek-ai-deepseek-r1-distill-llama-70b

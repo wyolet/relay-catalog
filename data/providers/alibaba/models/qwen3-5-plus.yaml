@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+  name: qwen3-5-plus
+  displayName: Qwen3.5 Plus
+  owner:
+    kind: provider
+    name: alibaba
+  labels:
+    family: qwen
+    source: models.dev
+    source_version: '2026-06-09'
+spec:
+  family: qwen
+  capabilities:
+    chat: true
+    streaming: true
+    tools: true
+    vision: true
+    reasoning: true
+    systemMessages: true
+  modalities:
+    input:
+    - text
+    - image
+    - video
+    output:
+    - text
+  contextWindowInput: 1000000
+  contextWindowOutput: 65536
+  contextWindowTotal: 1000000
+  maxOutputTokens: 65536
+  knowledgeCutoff: 2025-04
+  releaseDate: '2026-02-16'
+  enabled: true
+  snapshots:
+  - name: qwen3-5-plus
+    originalName: qwen3.5-plus
+    releasedAt: '2026-02-16'
+  pointer: qwen3-5-plus

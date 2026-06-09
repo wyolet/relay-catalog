@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: minimax-m1
+    displayName: MiniMax-M1
+    owner:
+        kind: provider
+        name: 302ai
+    labels:
+        family: minimax
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: minimax
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 128000
+    releaseDate: "2025-06-16"
+    enabled: true
+    snapshots:
+        - name: minimax-m1
+          releasedAt: "2025-06-16"
+          originalName: MiniMax-M1
+    pointer: minimax-m1

@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: meituan-longcat-flash-lite
+    displayName: Meituan/Longcat-Flash-Lite
+    owner:
+        kind: provider
+        name: qiniu-ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 320000
+    contextWindowTotal: 256000
+    maxOutputTokens: 320000
+    releaseDate: "2026-02-06"
+    enabled: true
+    snapshots:
+        - name: meituan-longcat-flash-lite
+          releasedAt: "2026-02-06"
+          originalName: meituan/longcat-flash-lite
+    pointer: meituan-longcat-flash-lite

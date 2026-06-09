@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: black-forest-labs-flux-1-schnell
+    displayName: FLUX.1-schnell
+    owner:
+        kind: provider
+        name: nvidia
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - image
+    contextWindowInput: 77
+    contextWindowTotal: 77
+    knowledgeCutoff: 2024-07
+    releaseDate: "2024-08-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: black-forest-labs-flux-1-schnell
+          releasedAt: "2024-08-01"
+          originalName: black-forest-labs/flux_1-schnell
+    pointer: black-forest-labs-flux-1-schnell

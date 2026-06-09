@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-qwen2-5-omni-7b
+    displayName: qwen2-5-omni-7b pricing
+    owner:
+        kind: host
+        id: alibaba
+spec:
+    currency: USD
+    targetModels:
+        - qwen2-5-omni-7b
+    rates:
+        - meter: tokens.audio_input
+          unit: per_million
+          amount: 6.76
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.4
+    enabled: true

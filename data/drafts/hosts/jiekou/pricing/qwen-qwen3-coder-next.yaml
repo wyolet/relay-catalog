@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: jiekou-qwen-qwen3-coder-next
+    displayName: qwen-qwen3-coder-next pricing
+    owner:
+        kind: host
+        id: jiekou
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen3-coder-next
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.5
+    enabled: true

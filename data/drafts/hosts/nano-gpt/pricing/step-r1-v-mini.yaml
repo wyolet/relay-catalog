@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-step-r1-v-mini
+    displayName: step-r1-v-mini pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - step-r1-v-mini
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 11
+    enabled: true

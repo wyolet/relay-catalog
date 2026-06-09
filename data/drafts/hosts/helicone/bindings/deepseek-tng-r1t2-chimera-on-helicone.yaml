@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-tng-r1t2-chimera-on-helicone
+    displayName: deepseek-tng-r1t2-chimera via helicone
+spec:
+    model: deepseek-tng-r1t2-chimera
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-tng-r1t2-chimera

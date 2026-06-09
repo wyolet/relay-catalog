@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: featherless-ai-qwerky-72b
+    displayName: Qwerky 72B
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: qwerky
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwerky
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 8192
+    contextWindowTotal: 32000
+    maxOutputTokens: 8192
+    releaseDate: "2025-03-20"
+    enabled: true
+    snapshots:
+        - name: featherless-ai-qwerky-72b
+          releasedAt: "2025-03-20"
+          originalName: featherless-ai/Qwerky-72B
+    pointer: featherless-ai-qwerky-72b

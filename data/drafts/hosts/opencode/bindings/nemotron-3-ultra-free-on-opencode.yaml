@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nemotron-3-ultra-free-on-opencode
+    displayName: nemotron-3-ultra-free via opencode
+spec:
+    model: nemotron-3-ultra-free
+    host: opencode
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nemotron-3-ultra-free

@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mirothinker-1-7-deepresearch
+    displayName: MiroThinker 1.7 Deep Research
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 16384
+    contextWindowTotal: 262144
+    maxOutputTokens: 16384
+    releaseDate: "2026-05-11"
+    enabled: true
+    snapshots:
+        - name: mirothinker-1-7-deepresearch
+          releasedAt: "2026-05-11"
+    pointer: mirothinker-1-7-deepresearch

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: inclusionai-ling-1t-on-zenmux
+    displayName: inclusionai-ling-1t via zenmux
+spec:
+    model: inclusionai-ling-1t
+    host: zenmux
+    adapter: openai
+    enabled: true
+    snapshots:
+        - inclusionai-ling-1t

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: sarvam-30b-on-sarvam
+    displayName: sarvam-30b via sarvam
+spec:
+    model: sarvam-30b
+    host: sarvam
+    adapter: openai
+    enabled: true
+    snapshots:
+        - sarvam-30b

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: azure-o1-on-nano-gpt
+    displayName: azure-o1 via nano-gpt
+spec:
+    model: azure-o1
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - azure-o1

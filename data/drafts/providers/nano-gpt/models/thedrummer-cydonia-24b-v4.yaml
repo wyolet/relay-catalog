@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: thedrummer-cydonia-24b-v4
+    displayName: The Drummer Cydonia 24B v4
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 32768
+    contextWindowTotal: 16384
+    maxOutputTokens: 32768
+    releaseDate: "2025-07-22"
+    enabled: true
+    snapshots:
+        - name: thedrummer-cydonia-24b-v4
+          releasedAt: "2025-07-22"
+          originalName: TheDrummer/Cydonia-24B-v4
+    pointer: thedrummer-cydonia-24b-v4

@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-5-omni-plus
+    displayName: Qwen3.5 Omni Plus
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        audio: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+            - audio
+        output:
+            - text
+    contextWindowInput: 983616
+    contextWindowOutput: 65536
+    contextWindowTotal: 983616
+    maxOutputTokens: 65536
+    releaseDate: "2026-03-30"
+    enabled: true
+    snapshots:
+        - name: qwen3-5-omni-plus
+          releasedAt: "2026-03-30"
+          originalName: qwen3.5-omni-plus
+    pointer: qwen3-5-omni-plus

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: inclusionai-ling-2-6-flash-on-nano-gpt
+    displayName: inclusionai-ling-2-6-flash via nano-gpt
+spec:
+    model: inclusionai-ling-2-6-flash
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - inclusionai-ling-2-6-flash

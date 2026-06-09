@@ -1,0 +1,15 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-medium-on-mistral
+    displayName: mistral-medium via mistral
+spec:
+    model: mistral-medium
+    host: mistral
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistral-medium-2505
+        - mistral-medium-2508
+        - mistral-medium-2604
+        - mistral-medium-latest

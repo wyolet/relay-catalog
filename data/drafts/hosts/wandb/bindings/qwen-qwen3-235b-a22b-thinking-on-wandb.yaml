@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-235b-a22b-thinking-on-wandb
+    displayName: qwen-qwen3-235b-a22b-thinking via wandb
+spec:
+    model: qwen-qwen3-235b-a22b-thinking
+    host: wandb
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-235b-a22b-thinking-2507

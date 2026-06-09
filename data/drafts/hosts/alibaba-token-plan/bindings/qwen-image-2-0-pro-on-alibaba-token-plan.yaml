@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-image-2-0-pro-on-alibaba-token-plan
+    displayName: qwen-image-2-0-pro via alibaba-token-plan
+spec:
+    model: qwen-image-2-0-pro
+    host: alibaba-token-plan
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-image-2-0-pro

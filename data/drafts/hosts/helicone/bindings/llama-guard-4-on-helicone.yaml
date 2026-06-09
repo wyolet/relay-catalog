@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: llama-guard-4-on-helicone
+    displayName: llama-guard-4 via helicone
+spec:
+    model: llama-guard-4
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - llama-guard-4

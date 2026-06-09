@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-oss-safeguard-20b-on-groq
+    displayName: openai-gpt-oss-safeguard-20b via groq
+spec:
+    model: openai-gpt-oss-safeguard-20b
+    host: groq
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-oss-safeguard-20b

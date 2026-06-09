@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: novita-ai-kwaipilot-kat-coder-pro
+    displayName: kwaipilot-kat-coder-pro pricing
+    owner:
+        kind: host
+        id: novita-ai
+spec:
+    currency: USD
+    targetModels:
+        - kwaipilot-kat-coder-pro
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.06
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.2
+    enabled: true

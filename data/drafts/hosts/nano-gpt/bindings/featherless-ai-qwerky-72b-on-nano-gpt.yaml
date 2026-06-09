@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: featherless-ai-qwerky-72b-on-nano-gpt
+    displayName: featherless-ai-qwerky-72b via nano-gpt
+spec:
+    model: featherless-ai-qwerky-72b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - featherless-ai-qwerky-72b

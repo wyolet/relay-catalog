@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: allenai-olmo-3-32b-think
+    displayName: 'AllenAI: Olmo 3 32B Think'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 65536
+    contextWindowOutput: 65536
+    contextWindowTotal: 65536
+    maxOutputTokens: 65536
+    releaseDate: "2025-11-22"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: allenai-olmo-3-32b-think
+          releasedAt: "2025-11-22"
+          originalName: allenai/olmo-3-32b-think
+    pointer: allenai-olmo-3-32b-think

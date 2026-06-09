@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: poetools-claude-code-on-poe
+    displayName: poetools-claude-code via poe
+spec:
+    model: poetools-claude-code
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - poetools-claude-code

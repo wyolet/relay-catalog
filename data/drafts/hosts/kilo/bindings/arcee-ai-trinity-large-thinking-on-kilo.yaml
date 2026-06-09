@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: arcee-ai-trinity-large-thinking-on-kilo
+    displayName: arcee-ai-trinity-large-thinking via kilo
+spec:
+    model: arcee-ai-trinity-large-thinking
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - arcee-ai-trinity-large-thinking

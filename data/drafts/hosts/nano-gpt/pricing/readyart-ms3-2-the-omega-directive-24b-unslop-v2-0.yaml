@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-readyart-ms3-2-the-omega-directive-24b-unslop-v2-0
+    displayName: readyart-ms3-2-the-omega-directive-24b-unslop-v2-0 pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - readyart-ms3-2-the-omega-directive-24b-unslop-v2-0
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.5
+    enabled: true

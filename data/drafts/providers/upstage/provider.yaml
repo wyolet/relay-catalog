@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: upstage
+    displayName: Upstage
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://developers.upstage.ai/docs/apis/chat

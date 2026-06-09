@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-anthropic-claude-sonnet
+    displayName: anthropic-claude-sonnet pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - anthropic-claude-sonnet
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.2992
+        - meter: tokens.input
+          unit: per_million
+          amount: 2.992
+        - meter: tokens.output
+          unit: per_million
+          amount: 14.994
+    enabled: true

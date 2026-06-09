@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemma-3-27b-on-privatemode-ai
+    displayName: gemma-3-27b via privatemode-ai
+spec:
+    model: gemma-3-27b
+    host: privatemode-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gemma-3-27b

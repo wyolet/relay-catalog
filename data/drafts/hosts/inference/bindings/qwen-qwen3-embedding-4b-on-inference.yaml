@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-embedding-4b-on-inference
+    displayName: qwen-qwen3-embedding-4b via inference
+spec:
+    model: qwen-qwen3-embedding-4b
+    host: inference
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-embedding-4b

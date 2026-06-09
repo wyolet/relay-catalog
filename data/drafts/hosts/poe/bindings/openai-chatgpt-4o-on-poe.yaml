@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-chatgpt-4o-on-poe
+    displayName: openai-chatgpt-4o via poe
+spec:
+    model: openai-chatgpt-4o
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-chatgpt-4o-latest

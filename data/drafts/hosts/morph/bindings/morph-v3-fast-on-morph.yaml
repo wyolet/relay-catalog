@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: morph-v3-fast-on-morph
+    displayName: morph-v3-fast via morph
+spec:
+    model: morph-v3-fast
+    host: morph
+    adapter: openai
+    enabled: true
+    snapshots:
+        - morph-v3-fast

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-deepseek-r1-sambanova
+    displayName: deepseek-r1-sambanova pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-r1-sambanova
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 4.998
+        - meter: tokens.output
+          unit: per_million
+          amount: 6.987
+    enabled: true

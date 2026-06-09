@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: zai-org-glm-4-5v
+    displayName: GLM 4.5V
+    owner:
+        kind: provider
+        name: jiekou
+    labels:
+        family: glmv
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glmv
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 65536
+    contextWindowOutput: 16384
+    contextWindowTotal: 65536
+    maxOutputTokens: 16384
+    releaseDate: 2026-01
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: zai-org-glm-4-5v
+          releasedAt: 2026-01
+          originalName: zai-org/glm-4.5v
+    pointer: zai-org-glm-4-5v

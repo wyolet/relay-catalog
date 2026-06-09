@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen2-5-coder-7b-fast-on-helicone
+    displayName: qwen2-5-coder-7b-fast via helicone
+spec:
+    model: qwen2-5-coder-7b-fast
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen2-5-coder-7b-fast

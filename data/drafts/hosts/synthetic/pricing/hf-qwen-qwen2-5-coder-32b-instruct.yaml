@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: synthetic-hf-qwen-qwen2-5-coder-32b-instruct
+    displayName: hf-qwen-qwen2-5-coder-32b-instruct pricing
+    owner:
+        kind: host
+        id: synthetic
+spec:
+    currency: USD
+    targetModels:
+        - hf-qwen-qwen2-5-coder-32b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.8
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.8
+    enabled: true

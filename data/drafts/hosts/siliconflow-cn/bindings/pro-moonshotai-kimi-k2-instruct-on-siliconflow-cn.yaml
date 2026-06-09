@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: pro-moonshotai-kimi-k2-instruct-on-siliconflow-cn
+    displayName: pro-moonshotai-kimi-k2-instruct via siliconflow-cn
+spec:
+    model: pro-moonshotai-kimi-k2-instruct
+    host: siliconflow-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - pro-moonshotai-kimi-k2-instruct-0905

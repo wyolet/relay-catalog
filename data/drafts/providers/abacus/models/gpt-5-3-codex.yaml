@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-5-3-codex
+    displayName: GPT-5.3 Codex
+    owner:
+        kind: provider
+        name: abacus
+    labels:
+        family: gpt
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 272000
+    contextWindowOutput: 128000
+    contextWindowTotal: 400000
+    maxOutputTokens: 128000
+    knowledgeCutoff: "2025-08-31"
+    releaseDate: "2026-02-05"
+    enabled: true
+    snapshots:
+        - name: gpt-5-3-codex
+          releasedAt: "2026-02-05"
+          originalName: gpt-5.3-codex
+    pointer: gpt-5-3-codex

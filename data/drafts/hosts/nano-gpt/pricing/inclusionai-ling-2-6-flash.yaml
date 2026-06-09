@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-inclusionai-ling-2-6-flash
+    displayName: inclusionai-ling-2-6-flash pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - inclusionai-ling-2-6-flash
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.08
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.24
+    enabled: true

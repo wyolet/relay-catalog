@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: digitalocean-all-mini-lm-l6-v2
+    displayName: all-mini-lm-l6-v2 pricing
+    owner:
+        kind: host
+        id: digitalocean
+spec:
+    currency: USD
+    targetModels:
+        - all-mini-lm-l6-v2
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.009
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

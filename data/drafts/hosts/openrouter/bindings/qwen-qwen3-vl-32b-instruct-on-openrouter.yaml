@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-vl-32b-instruct-on-openrouter
+    displayName: qwen-qwen3-vl-32b-instruct via openrouter
+spec:
+    model: qwen-qwen3-vl-32b-instruct
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-vl-32b-instruct

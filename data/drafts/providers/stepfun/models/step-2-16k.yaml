@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: step-2-16k
+    displayName: Step 2 (16K)
+    owner:
+        kind: provider
+        name: stepfun
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 8192
+    contextWindowTotal: 16384
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2024-06
+    releaseDate: "2025-01-01"
+    enabled: true
+    snapshots:
+        - name: step-2-16k
+          releasedAt: "2025-01-01"
+    pointer: step-2-16k

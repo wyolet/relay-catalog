@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: glm-4-6v-flashx
+    displayName: GLM-4.6V FlashX
+    owner:
+        kind: provider
+        name: llmgateway
+    labels:
+        family: glm
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glm
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16000
+    contextWindowTotal: 128000
+    maxOutputTokens: 16000
+    releaseDate: "2025-12-08"
+    enabled: true
+    snapshots:
+        - name: glm-4-6v-flashx
+          releasedAt: "2025-12-08"
+          originalName: glm-4.6v-flashx
+    pointer: glm-4-6v-flashx

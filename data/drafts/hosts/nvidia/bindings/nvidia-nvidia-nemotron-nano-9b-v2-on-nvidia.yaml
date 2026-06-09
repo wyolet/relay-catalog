@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-nvidia-nemotron-nano-9b-v2-on-nvidia
+    displayName: nvidia-nvidia-nemotron-nano-9b-v2 via nvidia
+spec:
+    model: nvidia-nvidia-nemotron-nano-9b-v2
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-nvidia-nemotron-nano-9b-v2

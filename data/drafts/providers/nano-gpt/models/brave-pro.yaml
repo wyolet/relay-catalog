@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: brave-pro
+    displayName: Brave (Pro)
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    maxOutputTokens: 8192
+    releaseDate: "2023-03-02"
+    enabled: true
+    snapshots:
+        - name: brave-pro
+          releasedAt: "2023-03-02"
+    pointer: brave-pro

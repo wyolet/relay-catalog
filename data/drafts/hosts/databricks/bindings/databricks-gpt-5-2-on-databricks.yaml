@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: databricks-gpt-5-2-on-databricks
+    displayName: databricks-gpt-5-2 via databricks
+spec:
+    model: databricks-gpt-5-2
+    host: databricks
+    adapter: openai
+    enabled: true
+    snapshots:
+        - databricks-gpt-5-2

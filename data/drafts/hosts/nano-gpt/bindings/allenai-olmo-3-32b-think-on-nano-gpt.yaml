@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: allenai-olmo-3-32b-think-on-nano-gpt
+    displayName: allenai-olmo-3-32b-think via nano-gpt
+spec:
+    model: allenai-olmo-3-32b-think
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - allenai-olmo-3-32b-think

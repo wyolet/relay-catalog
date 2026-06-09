@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: steelskull-l3-3-electra-r1-70b-on-nano-gpt
+    displayName: steelskull-l3-3-electra-r1-70b via nano-gpt
+spec:
+    model: steelskull-l3-3-electra-r1-70b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - steelskull-l3-3-electra-r1-70b

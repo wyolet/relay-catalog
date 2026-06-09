@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: helicone-qwen2-5-coder-7b-fast
+    displayName: qwen2-5-coder-7b-fast pricing
+    owner:
+        kind: host
+        id: helicone
+spec:
+    currency: USD
+    targetModels:
+        - qwen2-5-coder-7b-fast
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.03
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.09
+    enabled: true

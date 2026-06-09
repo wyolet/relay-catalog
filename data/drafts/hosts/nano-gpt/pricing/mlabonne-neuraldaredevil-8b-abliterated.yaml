@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-mlabonne-neuraldaredevil-8b-abliterated
+    displayName: mlabonne-neuraldaredevil-8b-abliterated pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - mlabonne-neuraldaredevil-8b-abliterated
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.44
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.44
+    enabled: true

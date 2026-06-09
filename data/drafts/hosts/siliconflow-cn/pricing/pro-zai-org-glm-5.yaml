@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: siliconflow-cn-pro-zai-org-glm-5
+    displayName: pro-zai-org-glm-5 pricing
+    owner:
+        kind: host
+        id: siliconflow-cn
+spec:
+    currency: USD
+    targetModels:
+        - pro-zai-org-glm-5
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.2
+    enabled: true

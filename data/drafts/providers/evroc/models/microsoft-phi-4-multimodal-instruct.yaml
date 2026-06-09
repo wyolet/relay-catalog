@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: microsoft-phi-4-multimodal-instruct
+    displayName: Phi-4 15B
+    owner:
+        kind: provider
+        name: evroc
+    labels:
+        family: phi
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: phi
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 32000
+    contextWindowTotal: 32000
+    maxOutputTokens: 32000
+    releaseDate: "2025-01-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: microsoft-phi-4-multimodal-instruct
+          releasedAt: "2025-01-01"
+          originalName: microsoft/Phi-4-multimodal-instruct
+    pointer: microsoft-phi-4-multimodal-instruct

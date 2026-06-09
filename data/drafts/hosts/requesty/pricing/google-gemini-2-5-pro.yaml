@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: requesty-google-gemini-2-5-pro
+    displayName: google-gemini-2-5-pro pricing
+    owner:
+        kind: host
+        id: requesty
+spec:
+    currency: USD
+    targetModels:
+        - google-gemini-2-5-pro
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 2.375
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.31
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.25
+          aboveTokens: 200000
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.25
+        - meter: tokens.input
+          unit: per_million
+          amount: 2.5
+          aboveTokens: 200000
+        - meter: tokens.output
+          unit: per_million
+          amount: 10
+        - meter: tokens.output
+          unit: per_million
+          amount: 15
+          aboveTokens: 200000
+    enabled: true

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: clarifai-deepseek-ai-deepseek-ocr-models-deepseek-ocr
+    displayName: deepseek-ai-deepseek-ocr-models-deepseek-ocr pricing
+    owner:
+        kind: host
+        id: clarifai
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-ai-deepseek-ocr-models-deepseek-ocr
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.7
+    enabled: true

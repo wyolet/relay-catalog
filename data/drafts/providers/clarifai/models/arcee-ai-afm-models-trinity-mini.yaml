@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: arcee-ai-afm-models-trinity-mini
+    displayName: Trinity Mini
+    owner:
+        kind: provider
+        name: clarifai
+    labels:
+        family: trinity-mini
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: trinity-mini
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    maxOutputTokens: 131072
+    knowledgeCutoff: 2024-10
+    releaseDate: 2025-12
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: arcee-ai-afm-models-trinity-mini
+          releasedAt: 2025-12
+          originalName: arcee_ai/AFM/models/trinity-mini
+    pointer: arcee-ai-afm-models-trinity-mini

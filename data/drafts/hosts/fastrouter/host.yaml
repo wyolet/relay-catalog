@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: fastrouter
+    displayName: FastRouter
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://go.fastrouter.ai/api/v1
+    pricingStrategies:
+        - api
+    docsURL: https://fastrouter.ai/models

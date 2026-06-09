@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-5-397b-a17b-on-crof
+    displayName: qwen3-5-397b-a17b via crof
+spec:
+    model: qwen3-5-397b-a17b
+    host: crof
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-5-397b-a17b

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: meta-llama-llama-guard-3-8b-on-kilo
+    displayName: meta-llama-llama-guard-3-8b via kilo
+spec:
+    model: meta-llama-llama-guard-3-8b
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - meta-llama-llama-guard-3-8b

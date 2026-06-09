@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-next-80b-a3b-instruct-on-novita-ai
+    displayName: qwen-qwen3-next-80b-a3b-instruct via novita-ai
+spec:
+    model: qwen-qwen3-next-80b-a3b-instruct
+    host: novita-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-next-80b-a3b-instruct

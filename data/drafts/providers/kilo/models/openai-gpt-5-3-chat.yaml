@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-gpt-5-3-chat
+    displayName: 'OpenAI: GPT-5.3 Chat'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - pdf
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    maxOutputTokens: 16384
+    releaseDate: "2026-03-04"
+    enabled: true
+    snapshots:
+        - name: openai-gpt-5-3-chat
+          releasedAt: "2026-03-04"
+          originalName: openai/gpt-5.3-chat
+        - name: openai-gpt-5-3-chat-latest
+          releasedAt: "2026-03-03"
+          originalName: openai/gpt-5.3-chat-latest
+    pointer: openai-gpt-5-3-chat

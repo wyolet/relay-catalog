@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-qwen3-7-max-thinking
+    displayName: qwen3-7-max-thinking pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-7-max-thinking
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.25
+        - meter: tokens.input
+          unit: per_million
+          amount: 2.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 7.5
+    enabled: true

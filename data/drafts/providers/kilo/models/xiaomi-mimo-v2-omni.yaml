@@ -1,0 +1,46 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: xiaomi-mimo-v2-omni
+    displayName: 'Xiaomi: MiMo-V2-Omni'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        family: mimo
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mimo
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        audio: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+            - video
+            - pdf
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 65536
+    contextWindowTotal: 262144
+    maxOutputTokens: 65536
+    knowledgeCutoff: 2024-12
+    releaseDate: "2026-03-18"
+    enabled: true
+    snapshots:
+        - name: xiaomi-mimo-v2-omni
+          releasedAt: "2026-03-18"
+          originalName: xiaomi/mimo-v2-omni
+    pointer: xiaomi-mimo-v2-omni

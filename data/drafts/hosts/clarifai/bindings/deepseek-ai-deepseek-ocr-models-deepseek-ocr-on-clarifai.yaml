@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-ai-deepseek-ocr-models-deepseek-ocr-on-clarifai
+    displayName: deepseek-ai-deepseek-ocr-models-deepseek-ocr via clarifai
+spec:
+    model: deepseek-ai-deepseek-ocr-models-deepseek-ocr
+    host: clarifai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-ai-deepseek-ocr-models-deepseek-ocr

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: baidu-qianfan-ocr-fast-on-kilo
+    displayName: baidu-qianfan-ocr-fast via kilo
+spec:
+    model: baidu-qianfan-ocr-fast
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - baidu-qianfan-ocr-fast

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: route-qwen3-6-27b-on-routing-run
+    displayName: route-qwen3-6-27b via routing-run
+spec:
+    model: route-qwen3-6-27b
+    host: routing-run
+    adapter: openai
+    enabled: true
+    snapshots:
+        - route-qwen3-6-27b

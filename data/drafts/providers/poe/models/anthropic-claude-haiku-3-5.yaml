@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: anthropic-claude-haiku-3-5
+    displayName: Claude-Haiku-3.5
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: claude-haiku
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: claude-haiku
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 189096
+    contextWindowOutput: 8192
+    contextWindowTotal: 189096
+    maxOutputTokens: 8192
+    releaseDate: "2024-10-01"
+    enabled: true
+    snapshots:
+        - name: anthropic-claude-haiku-3-5
+          releasedAt: "2024-10-01"
+          originalName: anthropic/claude-haiku-3.5
+    pointer: anthropic-claude-haiku-3-5

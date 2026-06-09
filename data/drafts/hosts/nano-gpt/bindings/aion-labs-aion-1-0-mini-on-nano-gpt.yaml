@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: aion-labs-aion-1-0-mini-on-nano-gpt
+    displayName: aion-labs-aion-1-0-mini via nano-gpt
+spec:
+    model: aion-labs-aion-1-0-mini
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - aion-labs-aion-1-0-mini

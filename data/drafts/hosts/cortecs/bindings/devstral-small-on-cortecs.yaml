@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: devstral-small-on-cortecs
+    displayName: devstral-small via cortecs
+spec:
+    model: devstral-small
+    host: cortecs
+    adapter: openai
+    enabled: true
+    snapshots:
+        - devstral-small-2512

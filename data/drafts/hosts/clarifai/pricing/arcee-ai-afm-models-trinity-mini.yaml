@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: clarifai-arcee-ai-afm-models-trinity-mini
+    displayName: arcee-ai-afm-models-trinity-mini pricing
+    owner:
+        kind: host
+        id: clarifai
+spec:
+    currency: USD
+    targetModels:
+        - arcee-ai-afm-models-trinity-mini
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.045
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.15
+    enabled: true

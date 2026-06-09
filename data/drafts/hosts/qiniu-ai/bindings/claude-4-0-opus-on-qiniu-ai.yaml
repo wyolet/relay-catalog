@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: claude-4-0-opus-on-qiniu-ai
+    displayName: claude-4-0-opus via qiniu-ai
+spec:
+    model: claude-4-0-opus
+    host: qiniu-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - claude-4-0-opus

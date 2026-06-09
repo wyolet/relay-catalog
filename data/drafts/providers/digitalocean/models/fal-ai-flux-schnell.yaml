@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: fal-ai-flux-schnell
+    displayName: FLUX.1 [schnell]
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: flux
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: flux
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - image
+    releaseDate: "2024-08-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: fal-ai-flux-schnell
+          releasedAt: "2024-08-01"
+          originalName: fal-ai/flux/schnell
+    pointer: fal-ai-flux-schnell

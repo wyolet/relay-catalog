@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: novita-ai-deepseek-deepseek-v4-pro
+    displayName: deepseek-deepseek-v4-pro pricing
+    owner:
+        kind: host
+        id: novita-ai
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-deepseek-v4-pro
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.13
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.69
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.38
+    enabled: true

@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistralai-mistral-medium-3-5-128b
+    displayName: Mistral Medium 3.5 128B
+    owner:
+        kind: provider
+        name: berget
+    labels:
+        family: mistral-medium
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral-medium
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 131072
+    contextWindowTotal: 262144
+    maxOutputTokens: 131072
+    knowledgeCutoff: 2026-04
+    releaseDate: "2026-04-29"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistralai-mistral-medium-3-5-128b
+          releasedAt: "2026-04-29"
+          originalName: mistralai/Mistral-Medium-3.5-128B
+    pointer: mistralai-mistral-medium-3-5-128b

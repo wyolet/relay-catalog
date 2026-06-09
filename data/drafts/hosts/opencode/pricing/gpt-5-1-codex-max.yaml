@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: opencode-gpt-5-1-codex-max
+    displayName: gpt-5-1-codex-max pricing
+    owner:
+        kind: host
+        id: opencode
+spec:
+    currency: USD
+    targetModels:
+        - gpt-5-1-codex-max
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.125
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.25
+        - meter: tokens.output
+          unit: per_million
+          amount: 10
+    enabled: true

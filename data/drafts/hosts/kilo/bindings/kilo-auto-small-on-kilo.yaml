@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kilo-auto-small-on-kilo
+    displayName: kilo-auto-small via kilo
+spec:
+    model: kilo-auto-small
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kilo-auto-small

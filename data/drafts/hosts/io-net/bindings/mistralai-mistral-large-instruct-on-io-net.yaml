@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-mistral-large-instruct-on-io-net
+    displayName: mistralai-mistral-large-instruct via io-net
+spec:
+    model: mistralai-mistral-large-instruct
+    host: io-net
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-mistral-large-instruct-2411

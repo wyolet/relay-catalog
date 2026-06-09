@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: zenmux-baidu-ernie-5-0-thinking-preview
+    displayName: baidu-ernie-5-0-thinking-preview pricing
+    owner:
+        kind: host
+        id: zenmux
+spec:
+    currency: USD
+    targetModels:
+        - baidu-ernie-5-0-thinking-preview
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.84
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.37
+    enabled: true

@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: fastrouter-x-ai-grok-4
+    displayName: x-ai-grok-4 pricing
+    owner:
+        kind: host
+        id: fastrouter
+spec:
+    currency: USD
+    targetModels:
+        - x-ai-grok-4
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 15
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.75
+        - meter: tokens.input
+          unit: per_million
+          amount: 3
+        - meter: tokens.output
+          unit: per_million
+          amount: 15
+    enabled: true

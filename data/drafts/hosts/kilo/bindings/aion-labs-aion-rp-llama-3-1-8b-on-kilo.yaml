@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: aion-labs-aion-rp-llama-3-1-8b-on-kilo
+    displayName: aion-labs-aion-rp-llama-3-1-8b via kilo
+spec:
+    model: aion-labs-aion-rp-llama-3-1-8b
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - aion-labs-aion-rp-llama-3-1-8b

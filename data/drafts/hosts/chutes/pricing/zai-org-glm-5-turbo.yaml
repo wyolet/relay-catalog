@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: chutes-zai-org-glm-5-turbo
+    displayName: zai-org-glm-5-turbo pricing
+    owner:
+        kind: host
+        id: chutes
+spec:
+    currency: USD
+    targetModels:
+        - zai-org-glm-5-turbo
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.24455
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.4891
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.9565
+    enabled: true

@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: tongyi-intent-detect-v3
+    displayName: Tongyi Intent Detect V3
+    owner:
+        kind: provider
+        name: alibaba-cn
+    labels:
+        family: yi
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: yi
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 1024
+    contextWindowTotal: 8192
+    maxOutputTokens: 1024
+    knowledgeCutoff: 2024-04
+    releaseDate: 2024-01
+    enabled: true
+    snapshots:
+        - name: tongyi-intent-detect-v3
+          releasedAt: 2024-01
+    pointer: tongyi-intent-detect-v3

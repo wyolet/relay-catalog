@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: chutes-openai-gpt-oss-120b-tee
+    displayName: openai-gpt-oss-120b-tee pricing
+    owner:
+        kind: host
+        id: chutes
+spec:
+    currency: USD
+    targetModels:
+        - openai-gpt-oss-120b-tee
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.045
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.09
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.36
+    enabled: true

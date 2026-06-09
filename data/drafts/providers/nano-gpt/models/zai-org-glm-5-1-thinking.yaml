@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: zai-org-glm-5-1-thinking
+    displayName: GLM 5.1 Thinking
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: glm
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glm
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 131072
+    contextWindowTotal: 200000
+    maxOutputTokens: 131072
+    releaseDate: "2026-03-27"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: zai-org-glm-5-1-thinking
+          releasedAt: "2026-03-27"
+          originalName: zai-org/glm-5.1:thinking
+    pointer: zai-org-glm-5-1-thinking

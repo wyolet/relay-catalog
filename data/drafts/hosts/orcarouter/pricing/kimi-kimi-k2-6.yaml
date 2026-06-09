@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: orcarouter-kimi-kimi-k2-6
+    displayName: kimi-kimi-k2-6 pricing
+    owner:
+        kind: host
+        id: orcarouter
+spec:
+    currency: USD
+    targetModels:
+        - kimi-kimi-k2-6
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.16
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.95
+        - meter: tokens.output
+          unit: per_million
+          amount: 4
+    enabled: true

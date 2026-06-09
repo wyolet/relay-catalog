@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimax-m2-5-highspeed-on-minimax-cn
+    displayName: minimax-m2-5-highspeed via minimax-cn
+spec:
+    model: minimax-m2-5-highspeed
+    host: minimax-cn
+    adapter: anthropic
+    enabled: true
+    snapshots:
+        - minimax-m2-5-highspeed

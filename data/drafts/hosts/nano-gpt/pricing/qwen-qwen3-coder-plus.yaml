@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-qwen-qwen3-coder-plus
+    displayName: qwen-qwen3-coder-plus pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen3-coder-plus
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1
+        - meter: tokens.output
+          unit: per_million
+          amount: 5
+    enabled: true

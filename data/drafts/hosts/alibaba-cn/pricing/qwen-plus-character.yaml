@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-cn-qwen-plus-character
+    displayName: qwen-plus-character pricing
+    owner:
+        kind: host
+        id: alibaba-cn
+spec:
+    currency: USD
+    targetModels:
+        - qwen-plus-character
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.115
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.287
+    enabled: true

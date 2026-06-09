@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: lucidquery-lucidnova-rf1-100b
+    displayName: lucidnova-rf1-100b pricing
+    owner:
+        kind: host
+        id: lucidquery
+spec:
+    currency: USD
+    targetModels:
+        - lucidnova-rf1-100b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.output
+          unit: per_million
+          amount: 5
+    enabled: true

@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: liquid-lfm-2-5-1-2b-instruct-free
+    displayName: LFM2.5-1.2B-Instruct (free)
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: liquid
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: liquid
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    maxOutputTokens: 32768
+    knowledgeCutoff: 2025-06
+    releaseDate: "2026-01-20"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: liquid-lfm-2-5-1-2b-instruct-free
+          releasedAt: "2026-01-20"
+          originalName: liquid/lfm-2.5-1.2b-instruct:free
+    pointer: liquid-lfm-2-5-1-2b-instruct-free

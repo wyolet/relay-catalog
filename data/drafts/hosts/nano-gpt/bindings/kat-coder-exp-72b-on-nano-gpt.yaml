@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kat-coder-exp-72b-on-nano-gpt
+    displayName: kat-coder-exp-72b via nano-gpt
+spec:
+    model: kat-coder-exp-72b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kat-coder-exp-72b-1010

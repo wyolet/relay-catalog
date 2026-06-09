@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: step-3
+    displayName: Step-3
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 65536
+    contextWindowOutput: 8192
+    contextWindowTotal: 65536
+    maxOutputTokens: 8192
+    releaseDate: "2025-07-31"
+    enabled: true
+    snapshots:
+        - name: step-3
+          releasedAt: "2025-07-31"
+    pointer: step-3

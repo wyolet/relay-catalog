@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-coder-480b-a35b-instruct
+    displayName: qwen3-coder-480b-a35b-instruct
+    owner:
+        kind: provider
+        name: 302ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 65536
+    contextWindowTotal: 262144
+    maxOutputTokens: 65536
+    knowledgeCutoff: 2025-04
+    releaseDate: "2025-07-23"
+    enabled: true
+    snapshots:
+        - name: qwen3-coder-480b-a35b-instruct
+          releasedAt: "2025-07-23"
+    pointer: qwen3-coder-480b-a35b-instruct

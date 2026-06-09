@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-coder-plus-on-llmgateway
+    displayName: qwen-coder-plus via llmgateway
+spec:
+    model: qwen-coder-plus
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-coder-plus

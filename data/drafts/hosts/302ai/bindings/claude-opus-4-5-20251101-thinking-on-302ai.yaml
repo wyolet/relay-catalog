@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: claude-opus-4-5-20251101-thinking-on-302ai
+    displayName: claude-opus-4-5-20251101-thinking via 302ai
+spec:
+    model: claude-opus-4-5-20251101-thinking
+    host: 302ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - claude-opus-4-5-20251101-thinking

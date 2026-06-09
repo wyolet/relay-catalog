@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-tts-voicedesign-on-digitalocean
+    displayName: qwen3-tts-voicedesign via digitalocean
+spec:
+    model: qwen3-tts-voicedesign
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-tts-voicedesign

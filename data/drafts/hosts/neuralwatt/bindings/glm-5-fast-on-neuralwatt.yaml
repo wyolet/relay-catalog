@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: glm-5-fast-on-neuralwatt
+    displayName: glm-5-fast via neuralwatt
+spec:
+    model: glm-5-fast
+    host: neuralwatt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - glm-5-fast

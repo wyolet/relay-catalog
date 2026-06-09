@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: route-deepseek-v4-pro-6bit-on-routing-run
+    displayName: route-deepseek-v4-pro-6bit via routing-run
+spec:
+    model: route-deepseek-v4-pro-6bit
+    host: routing-run
+    adapter: openai
+    enabled: true
+    snapshots:
+        - route-deepseek-v4-pro-6bit

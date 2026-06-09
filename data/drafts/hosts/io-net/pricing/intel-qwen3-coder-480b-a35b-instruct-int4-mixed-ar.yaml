@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: io-net-intel-qwen3-coder-480b-a35b-instruct-int4-mixed-ar
+    displayName: intel-qwen3-coder-480b-a35b-instruct-int4-mixed-ar pricing
+    owner:
+        kind: host
+        id: io-net
+spec:
+    currency: USD
+    targetModels:
+        - intel-qwen3-coder-480b-a35b-instruct-int4-mixed-ar
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.44
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.11
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.22
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.95
+    enabled: true

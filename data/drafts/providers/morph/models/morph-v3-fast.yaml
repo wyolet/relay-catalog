@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: morph-v3-fast
+    displayName: Morph v3 Fast
+    owner:
+        kind: provider
+        name: morph
+    labels:
+        family: morph
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: morph
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16000
+    contextWindowOutput: 16000
+    contextWindowTotal: 16000
+    maxOutputTokens: 16000
+    releaseDate: "2024-08-15"
+    enabled: true
+    snapshots:
+        - name: morph-v3-fast
+          releasedAt: "2024-08-15"
+    pointer: morph-v3-fast

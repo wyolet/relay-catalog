@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: alibaba-qwen3-6-flash
+    displayName: Qwen3.6 Flash
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: qwen3.6
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen3.6
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 991800
+    contextWindowOutput: 65536
+    contextWindowTotal: 991800
+    maxOutputTokens: 65536
+    releaseDate: "2026-04-17"
+    enabled: true
+    snapshots:
+        - name: alibaba-qwen3-6-flash
+          releasedAt: "2026-04-17"
+          originalName: alibaba/qwen3.6-flash
+    pointer: alibaba-qwen3-6-flash

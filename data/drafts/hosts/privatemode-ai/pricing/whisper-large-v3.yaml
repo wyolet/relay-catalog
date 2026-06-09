@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: privatemode-ai-whisper-large-v3
+    displayName: whisper-large-v3 pricing
+    owner:
+        kind: host
+        id: privatemode-ai
+spec:
+    currency: USD
+    targetModels:
+        - whisper-large-v3
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

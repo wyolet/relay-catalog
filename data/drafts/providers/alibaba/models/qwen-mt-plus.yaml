@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-mt-plus
+    displayName: Qwen-MT Plus
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 8192
+    contextWindowTotal: 16384
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2024-04
+    releaseDate: 2025-01
+    enabled: true
+    snapshots:
+        - name: qwen-mt-plus
+          releasedAt: 2025-01
+    pointer: qwen-mt-plus

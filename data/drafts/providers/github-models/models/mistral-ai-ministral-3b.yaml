@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-ai-ministral-3b
+    displayName: Ministral 3B
+    owner:
+        kind: provider
+        name: github-models
+    labels:
+        family: ministral
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: ministral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2024-03
+    releaseDate: "2024-10-22"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistral-ai-ministral-3b
+          releasedAt: "2024-10-22"
+          originalName: mistral-ai/ministral-3b
+    pointer: mistral-ai-ministral-3b

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen-image-on-nvidia
+    displayName: qwen-qwen-image via nvidia
+spec:
+    model: qwen-qwen-image
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen-image

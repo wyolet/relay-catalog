@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: baichuan-baichuan-m2-32b
+    displayName: baichuan-m2-32b
+    owner:
+        kind: provider
+        name: novita-ai
+    labels:
+        family: baichuan
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: baichuan
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    maxOutputTokens: 131072
+    knowledgeCutoff: 2024-12
+    releaseDate: "2025-08-13"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: baichuan-baichuan-m2-32b
+          releasedAt: "2025-08-13"
+          originalName: baichuan/baichuan-m2-32b
+    pointer: baichuan-baichuan-m2-32b

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: atomic-chat-qwen3-5-9b-mlx-4bit
+    displayName: qwen3-5-9b-mlx-4bit pricing
+    owner:
+        kind: host
+        id: atomic-chat
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-5-9b-mlx-4bit
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

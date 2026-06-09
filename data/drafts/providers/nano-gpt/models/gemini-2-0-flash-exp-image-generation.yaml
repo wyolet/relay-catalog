@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-2-0-flash-exp-image-generation
+    displayName: Gemini Text + Image
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32767
+    contextWindowOutput: 8192
+    contextWindowTotal: 32767
+    maxOutputTokens: 8192
+    releaseDate: "2025-02-19"
+    enabled: true
+    snapshots:
+        - name: gemini-2-0-flash-exp-image-generation
+          releasedAt: "2025-02-19"
+          originalName: gemini-2.0-flash-exp-image-generation
+    pointer: gemini-2-0-flash-exp-image-generation

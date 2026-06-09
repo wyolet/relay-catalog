@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nvidia-nemotron-3-ultra-550b-a55b-free
+    displayName: Nemotron 3 Ultra (free)
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: nemotron
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: nemotron
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 65536
+    contextWindowTotal: 1000000
+    maxOutputTokens: 65536
+    releaseDate: "2026-06-04"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nvidia-nemotron-3-ultra-550b-a55b-free
+          releasedAt: "2026-06-04"
+          originalName: nvidia/nemotron-3-ultra-550b-a55b:free
+    pointer: nvidia-nemotron-3-ultra-550b-a55b-free

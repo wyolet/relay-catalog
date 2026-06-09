@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-saba-24b-on-groq
+    displayName: mistral-saba-24b via groq
+spec:
+    model: mistral-saba-24b
+    host: groq
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistral-saba-24b

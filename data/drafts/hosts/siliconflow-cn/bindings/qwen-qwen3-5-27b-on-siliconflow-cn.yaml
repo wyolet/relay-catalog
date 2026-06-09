@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-5-27b-on-siliconflow-cn
+    displayName: qwen-qwen3-5-27b via siliconflow-cn
+spec:
+    model: qwen-qwen3-5-27b
+    host: siliconflow-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-5-27b

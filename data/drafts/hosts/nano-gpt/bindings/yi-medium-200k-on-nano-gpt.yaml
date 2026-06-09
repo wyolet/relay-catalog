@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: yi-medium-200k-on-nano-gpt
+    displayName: yi-medium-200k via nano-gpt
+spec:
+    model: yi-medium-200k
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - yi-medium-200k

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: tee-deepseek-v3-1-on-nano-gpt
+    displayName: tee-deepseek-v3-1 via nano-gpt
+spec:
+    model: tee-deepseek-v3-1
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - tee-deepseek-v3-1

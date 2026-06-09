@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: xai-grok-4-3-on-anyapi
+    displayName: xai-grok-4-3 via anyapi
+spec:
+    model: xai-grok-4-3
+    host: anyapi
+    adapter: openai
+    enabled: true
+    snapshots:
+        - xai-grok-4-3

@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-2-5-pro-preview-tts
+    displayName: Gemini 2.5 Pro Preview TTS
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemini-flash
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gemini-flash
+    capabilities:
+        chat: true
+        streaming: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - audio
+    contextWindowInput: 8192
+    contextWindowOutput: 16384
+    contextWindowTotal: 8192
+    maxOutputTokens: 16384
+    knowledgeCutoff: 2025-01
+    releaseDate: "2025-05-01"
+    enabled: true
+    snapshots:
+        - name: gemini-2-5-pro-preview-tts
+          releasedAt: "2025-05-01"
+          originalName: gemini-2.5-pro-preview-tts
+    pointer: gemini-2-5-pro-preview-tts

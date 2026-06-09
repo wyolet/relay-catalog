@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-4o-mini-on-github-models
+    displayName: openai-gpt-4o-mini via github-models
+spec:
+    model: openai-gpt-4o-mini
+    host: github-models
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-4o-mini

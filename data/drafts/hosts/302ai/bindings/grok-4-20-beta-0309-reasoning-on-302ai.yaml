@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: grok-4-20-beta-0309-reasoning-on-302ai
+    displayName: grok-4-20-beta-0309-reasoning via 302ai
+spec:
+    model: grok-4-20-beta-0309-reasoning
+    host: 302ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - grok-4-20-beta-0309-reasoning

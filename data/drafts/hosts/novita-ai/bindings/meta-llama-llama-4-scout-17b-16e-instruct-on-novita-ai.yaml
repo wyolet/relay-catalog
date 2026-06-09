@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: meta-llama-llama-4-scout-17b-16e-instruct-on-novita-ai
+    displayName: meta-llama-llama-4-scout-17b-16e-instruct via novita-ai
+spec:
+    model: meta-llama-llama-4-scout-17b-16e-instruct
+    host: novita-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - meta-llama-llama-4-scout-17b-16e-instruct

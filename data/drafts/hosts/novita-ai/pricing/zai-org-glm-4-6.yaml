@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: novita-ai-zai-org-glm-4-6
+    displayName: zai-org-glm-4-6 pricing
+    owner:
+        kind: host
+        id: novita-ai
+spec:
+    currency: USD
+    targetModels:
+        - zai-org-glm-4-6
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.11
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.55
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.2
+    enabled: true

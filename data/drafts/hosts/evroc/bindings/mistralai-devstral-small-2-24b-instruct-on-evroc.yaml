@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-devstral-small-2-24b-instruct-on-evroc
+    displayName: mistralai-devstral-small-2-24b-instruct via evroc
+spec:
+    model: mistralai-devstral-small-2-24b-instruct
+    host: evroc
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-devstral-small-2-24b-instruct-2512

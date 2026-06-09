@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: raptor-mini-on-github-copilot
+    displayName: raptor-mini via github-copilot
+spec:
+    model: raptor-mini
+    host: github-copilot
+    adapter: openai
+    enabled: true
+    snapshots:
+        - raptor-mini

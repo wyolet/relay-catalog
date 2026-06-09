@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-devstral-on-kilo
+    displayName: mistralai-devstral via kilo
+spec:
+    model: mistralai-devstral
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-devstral-2512

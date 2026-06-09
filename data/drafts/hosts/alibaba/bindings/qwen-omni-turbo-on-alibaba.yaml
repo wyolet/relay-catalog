@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-omni-turbo-on-alibaba
+    displayName: qwen-omni-turbo via alibaba
+spec:
+    model: qwen-omni-turbo
+    host: alibaba
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-omni-turbo

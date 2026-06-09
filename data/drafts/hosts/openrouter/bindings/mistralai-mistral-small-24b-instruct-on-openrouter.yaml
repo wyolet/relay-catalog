@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-mistral-small-24b-instruct-on-openrouter
+    displayName: mistralai-mistral-small-24b-instruct via openrouter
+spec:
+    model: mistralai-mistral-small-24b-instruct
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-mistral-small-24b-instruct-2501

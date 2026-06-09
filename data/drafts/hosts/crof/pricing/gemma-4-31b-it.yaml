@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: crof-gemma-4-31b-it
+    displayName: gemma-4-31b-it pricing
+    owner:
+        kind: host
+        id: crof
+spec:
+    currency: USD
+    targetModels:
+        - gemma-4-31b-it
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.02
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.3
+    enabled: true

@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: opencode-gpt-5-4-pro
+    displayName: gpt-5-4-pro pricing
+    owner:
+        kind: host
+        id: opencode
+spec:
+    currency: USD
+    targetModels:
+        - gpt-5-4-pro
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 30
+        - meter: tokens.input
+          unit: per_million
+          amount: 30
+        - meter: tokens.output
+          unit: per_million
+          amount: 180
+    enabled: true

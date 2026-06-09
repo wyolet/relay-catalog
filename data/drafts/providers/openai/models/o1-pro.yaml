@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: o1-pro
+    displayName: o1-pro
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: o-pro
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: o-pro
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 100000
+    contextWindowTotal: 200000
+    maxOutputTokens: 100000
+    knowledgeCutoff: 2023-09
+    releaseDate: "2025-03-19"
+    enabled: true
+    snapshots:
+        - name: o1-pro
+          releasedAt: "2025-03-19"
+    pointer: o1-pro

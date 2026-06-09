@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-ernie-4-5-8k-preview
+    displayName: ernie-4-5-8k-preview pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - ernie-4-5-8k-preview
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.66
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.6
+    enabled: true

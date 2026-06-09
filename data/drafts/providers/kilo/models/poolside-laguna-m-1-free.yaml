@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: poolside-laguna-m-1-free
+    displayName: 'Poolside: Laguna M.1 (free)'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 8192
+    contextWindowTotal: 131072
+    maxOutputTokens: 8192
+    releaseDate: "2026-04-28"
+    enabled: true
+    snapshots:
+        - name: poolside-laguna-m-1-free
+          releasedAt: "2026-04-28"
+          originalName: poolside/laguna-m.1:free
+    pointer: poolside-laguna-m-1-free

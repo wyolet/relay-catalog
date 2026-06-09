@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: groq-canopylabs-orpheus-arabic-saudi
+    displayName: canopylabs-orpheus-arabic-saudi pricing
+    owner:
+        kind: host
+        id: groq
+spec:
+    currency: USD
+    targetModels:
+        - canopylabs-orpheus-arabic-saudi
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 40
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

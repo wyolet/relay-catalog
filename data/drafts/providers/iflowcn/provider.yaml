@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: iflowcn
+    displayName: iFlow
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://platform.iflow.cn/en/docs

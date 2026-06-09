@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimax-minimax-m2-7-turbo-on-nano-gpt
+    displayName: minimax-minimax-m2-7-turbo via nano-gpt
+spec:
+    model: minimax-minimax-m2-7-turbo
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - minimax-minimax-m2-7-turbo

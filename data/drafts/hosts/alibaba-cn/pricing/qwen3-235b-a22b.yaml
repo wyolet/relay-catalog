@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-cn-qwen3-235b-a22b
+    displayName: qwen3-235b-a22b pricing
+    owner:
+        kind: host
+        id: alibaba-cn
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-235b-a22b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.287
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.147
+        - meter: tokens.reasoning
+          unit: per_million
+          amount: 2.868
+    enabled: true

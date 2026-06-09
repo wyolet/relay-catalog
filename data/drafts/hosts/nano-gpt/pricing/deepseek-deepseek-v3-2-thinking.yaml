@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-deepseek-deepseek-v3-2-thinking
+    displayName: deepseek-deepseek-v3-2-thinking pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-deepseek-v3-2-thinking
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.27999999999999997
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.42000000000000004
+    enabled: true

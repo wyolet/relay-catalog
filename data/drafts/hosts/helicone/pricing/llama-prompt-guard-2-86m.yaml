@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: helicone-llama-prompt-guard-2-86m
+    displayName: llama-prompt-guard-2-86m pricing
+    owner:
+        kind: host
+        id: helicone
+spec:
+    currency: USD
+    targetModels:
+        - llama-prompt-guard-2-86m
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.01
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.01
+    enabled: true

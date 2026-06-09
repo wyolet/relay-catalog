@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cohere-command-r-plus-08-on-nano-gpt
+    displayName: cohere-command-r-plus-08 via nano-gpt
+spec:
+    model: cohere-command-r-plus-08
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cohere-command-r-plus-08-2024

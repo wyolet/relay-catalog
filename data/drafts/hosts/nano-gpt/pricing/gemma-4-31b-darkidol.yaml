@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-gemma-4-31b-darkidol
+    displayName: gemma-4-31b-darkidol pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - gemma-4-31b-darkidol
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.306
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.306
+    enabled: true

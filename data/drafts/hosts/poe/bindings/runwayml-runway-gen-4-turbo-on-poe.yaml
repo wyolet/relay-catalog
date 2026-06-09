@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: runwayml-runway-gen-4-turbo-on-poe
+    displayName: runwayml-runway-gen-4-turbo via poe
+spec:
+    model: runwayml-runway-gen-4-turbo
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - runwayml-runway-gen-4-turbo

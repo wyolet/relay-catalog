@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: command-a-reasoning-08
+    displayName: Cohere Command A (08/2025)
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 8192
+    contextWindowTotal: 256000
+    maxOutputTokens: 8192
+    releaseDate: "2025-08-22"
+    enabled: true
+    snapshots:
+        - name: command-a-reasoning-08-2025
+          releasedAt: "2025-08-22"
+    pointer: command-a-reasoning-08-2025

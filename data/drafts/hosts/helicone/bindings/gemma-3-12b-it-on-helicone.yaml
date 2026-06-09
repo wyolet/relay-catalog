@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemma-3-12b-it-on-helicone
+    displayName: gemma-3-12b-it via helicone
+spec:
+    model: gemma-3-12b-it
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gemma-3-12b-it

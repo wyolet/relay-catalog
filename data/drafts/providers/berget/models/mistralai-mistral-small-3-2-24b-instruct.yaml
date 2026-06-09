@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistralai-mistral-small-3-2-24b-instruct
+    displayName: Mistral Small 3.2 24B Instruct 2506
+    owner:
+        kind: provider
+        name: berget
+    labels:
+        family: mistral-small
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral-small
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 8192
+    contextWindowTotal: 32000
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2025-09
+    releaseDate: "2025-10-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistralai-mistral-small-3-2-24b-instruct-2506
+          releasedAt: "2025-10-01"
+          originalName: mistralai/Mistral-Small-3.2-24B-Instruct-2506
+        - name: mistralai-mistral-small-3-2-24b-instruct
+          releasedAt: "2025-06-20"
+          originalName: mistralai/mistral-small-3.2-24b-instruct
+    pointer: mistralai-mistral-small-3-2-24b-instruct-2506

@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: hf-nvidia-kimi-k2-5-nvfp4
+    displayName: Kimi K2.5 (NVFP4)
+    owner:
+        kind: provider
+        name: synthetic
+    labels:
+        family: kimi
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: kimi
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 65536
+    contextWindowTotal: 262144
+    maxOutputTokens: 65536
+    knowledgeCutoff: 2025-01
+    releaseDate: 2026-01
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: hf-nvidia-kimi-k2-5-nvfp4
+          releasedAt: 2026-01
+          originalName: hf:nvidia/Kimi-K2.5-NVFP4
+    pointer: hf-nvidia-kimi-k2-5-nvfp4

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mercury-2-on-inception
+    displayName: mercury-2 via inception
+spec:
+    model: mercury-2
+    host: inception
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mercury-2

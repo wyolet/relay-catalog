@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claude-opus4-5
+    displayName: Claude Opus 4.5
+    owner:
+        kind: provider
+        name: cortecs
+    labels:
+        family: claude-opus
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: claude-opus
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 200000
+    contextWindowTotal: 200000
+    maxOutputTokens: 200000
+    knowledgeCutoff: "2025-03-31"
+    releaseDate: "2025-11-24"
+    enabled: true
+    snapshots:
+        - name: claude-opus4-5
+          releasedAt: "2025-11-24"
+    pointer: claude-opus4-5

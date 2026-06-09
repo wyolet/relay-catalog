@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: stackit-qwen-qwen3-vl-235b-a22b-instruct-fp8
+    displayName: qwen-qwen3-vl-235b-a22b-instruct-fp8 pricing
+    owner:
+        kind: host
+        id: stackit
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen3-vl-235b-a22b-instruct-fp8
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.64
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.91
+    enabled: true

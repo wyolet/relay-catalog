@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemma-4-31b-it-on-google
+    displayName: gemma-4-31b-it via google
+spec:
+    model: gemma-4-31b-it
+    host: google
+    adapter: gemini
+    enabled: true
+    snapshots:
+        - gemma-4-31b-it

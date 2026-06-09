@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: grok-4-on-abacus
+    displayName: grok-4 via abacus
+spec:
+    model: grok-4
+    host: abacus
+    adapter: openai
+    enabled: true
+    snapshots:
+        - grok-4-0709

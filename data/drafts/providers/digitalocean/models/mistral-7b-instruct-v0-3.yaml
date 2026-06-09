@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-7b-instruct-v0-3
+    displayName: Mistral 7B Instruct v0.3
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: mistral
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    maxOutputTokens: 32768
+    releaseDate: "2024-05-22"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistral-7b-instruct-v0-3
+          releasedAt: "2024-05-22"
+          originalName: mistral-7b-instruct-v0.3
+    pointer: mistral-7b-instruct-v0-3

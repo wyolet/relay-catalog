@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: inflection-inflection-3-productivity-on-nano-gpt
+    displayName: inflection-inflection-3-productivity via nano-gpt
+spec:
+    model: inflection-inflection-3-productivity
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - inflection-inflection-3-productivity

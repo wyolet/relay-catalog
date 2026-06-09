@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-llama-3-2-nemoretriever-300m-embed-v1-on-nvidia
+    displayName: nvidia-llama-3-2-nemoretriever-300m-embed-v1 via nvidia
+spec:
+    model: nvidia-llama-3-2-nemoretriever-300m-embed-v1
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-llama-3-2-nemoretriever-300m-embed-v1

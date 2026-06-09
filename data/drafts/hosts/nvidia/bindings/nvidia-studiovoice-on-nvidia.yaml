@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-studiovoice-on-nvidia
+    displayName: nvidia-studiovoice via nvidia
+spec:
+    model: nvidia-studiovoice
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-studiovoice

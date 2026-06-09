@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nousresearch-hermes-3-llama-3-1-405b-free-on-openrouter
+    displayName: nousresearch-hermes-3-llama-3-1-405b-free via openrouter
+spec:
+    model: nousresearch-hermes-3-llama-3-1-405b-free
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nousresearch-hermes-3-llama-3-1-405b-free

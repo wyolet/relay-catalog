@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-coder-flash
+    displayName: Qwen3 Coder Flash
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 65536
+    contextWindowTotal: 1000000
+    maxOutputTokens: 65536
+    knowledgeCutoff: 2025-04
+    releaseDate: "2025-07-28"
+    enabled: true
+    snapshots:
+        - name: qwen3-coder-flash
+          releasedAt: "2025-07-28"
+    pointer: qwen3-coder-flash

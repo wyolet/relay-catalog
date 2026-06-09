@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-mistral-nemo-12b-instruct-on-inference
+    displayName: mistral-mistral-nemo-12b-instruct via inference
+spec:
+    model: mistral-mistral-nemo-12b-instruct
+    host: inference
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistral-mistral-nemo-12b-instruct

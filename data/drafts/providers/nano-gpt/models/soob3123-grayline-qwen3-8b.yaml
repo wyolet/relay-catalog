@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: soob3123-grayline-qwen3-8b
+    displayName: Grayline Qwen3 8B
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 32768
+    contextWindowTotal: 16384
+    maxOutputTokens: 32768
+    releaseDate: "2025-09-25"
+    enabled: true
+    snapshots:
+        - name: soob3123-grayline-qwen3-8b
+          releasedAt: "2025-09-25"
+          originalName: soob3123/GrayLine-Qwen3-8B
+    pointer: soob3123-grayline-qwen3-8b

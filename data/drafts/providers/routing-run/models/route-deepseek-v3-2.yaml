@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: route-deepseek-v3-2
+    displayName: DeepSeek V3.2
+    owner:
+        kind: provider
+        name: routing-run
+    labels:
+        family: deepseek
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 163840
+    contextWindowOutput: 163840
+    contextWindowTotal: 163840
+    maxOutputTokens: 163840
+    knowledgeCutoff: 2024-07
+    releaseDate: "2025-12-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: route-deepseek-v3-2
+          releasedAt: "2025-12-01"
+          originalName: route/deepseek-v3.2
+    pointer: route-deepseek-v3-2

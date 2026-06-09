@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-vl-30b-a3b-instruct-on-evroc
+    displayName: qwen-qwen3-vl-30b-a3b-instruct via evroc
+spec:
+    model: qwen-qwen3-vl-30b-a3b-instruct
+    host: evroc
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-vl-30b-a3b-instruct

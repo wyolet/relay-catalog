@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-gemini-pro-on-nano-gpt
+    displayName: google-gemini-pro via nano-gpt
+spec:
+    model: google-gemini-pro
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-gemini-pro-latest

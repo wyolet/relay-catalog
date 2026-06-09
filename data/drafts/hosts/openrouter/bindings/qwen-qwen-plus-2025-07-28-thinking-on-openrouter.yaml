@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen-plus-2025-07-28-thinking-on-openrouter
+    displayName: qwen-qwen-plus-2025-07-28-thinking via openrouter
+spec:
+    model: qwen-qwen-plus-2025-07-28-thinking
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen-plus-2025-07-28-thinking

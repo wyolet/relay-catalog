@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-o4-mini-high-on-openrouter
+    displayName: openai-o4-mini-high via openrouter
+spec:
+    model: openai-o4-mini-high
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-o4-mini-high

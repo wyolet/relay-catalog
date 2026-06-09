@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: zhipuai
+    displayName: Zhipu AI
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://open.bigmodel.cn/api/paas/v4
+    pricingStrategies:
+        - api
+    docsURL: https://docs.z.ai/guides/overview/pricing

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: groq-compound-mini-on-groq
+    displayName: groq-compound-mini via groq
+spec:
+    model: groq-compound-mini
+    host: groq
+    adapter: openai
+    enabled: true
+    snapshots:
+        - groq-compound-mini

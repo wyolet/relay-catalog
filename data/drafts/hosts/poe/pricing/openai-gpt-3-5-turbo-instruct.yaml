@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: poe-openai-gpt-3-5-turbo-instruct
+    displayName: openai-gpt-3-5-turbo-instruct pricing
+    owner:
+        kind: host
+        id: poe
+spec:
+    currency: USD
+    targetModels:
+        - openai-gpt-3-5-turbo-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.4
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.8
+    enabled: true

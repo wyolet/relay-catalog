@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: openrouter-qwen-qwen3-max
+    displayName: qwen-qwen3-max pricing
+    owner:
+        kind: host
+        id: openrouter
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen3-max
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.975
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.156
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.78
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.9
+    enabled: true

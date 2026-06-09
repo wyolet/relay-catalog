@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: fastgpt
+    displayName: Web Answer
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    maxOutputTokens: 32768
+    releaseDate: "2023-08-01"
+    enabled: true
+    snapshots:
+        - name: fastgpt
+          releasedAt: "2023-08-01"
+    pointer: fastgpt

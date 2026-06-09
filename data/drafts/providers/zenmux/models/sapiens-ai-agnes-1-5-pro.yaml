@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: sapiens-ai-agnes-1-5-pro
+    displayName: Agnes 1.5 Pro
+    owner:
+        kind: provider
+        name: zenmux
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 256000
+    contextWindowTotal: 256000
+    maxOutputTokens: 256000
+    releaseDate: "2026-03-21"
+    enabled: true
+    snapshots:
+        - name: sapiens-ai-agnes-1-5-pro
+          releasedAt: "2026-03-21"
+          originalName: sapiens-ai/agnes-1.5-pro
+    pointer: sapiens-ai-agnes-1-5-pro

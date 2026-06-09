@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kimi-k2-0905-preview-on-moonshotai-cn
+    displayName: kimi-k2-0905-preview via moonshotai-cn
+spec:
+    model: kimi-k2-0905-preview
+    host: moonshotai-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kimi-k2-0905-preview

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: anthropic-claude-opus-4-6-thinking-low-on-nano-gpt
+    displayName: anthropic-claude-opus-4-6-thinking-low via nano-gpt
+spec:
+    model: anthropic-claude-opus-4-6-thinking-low
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - anthropic-claude-opus-4-6-thinking-low

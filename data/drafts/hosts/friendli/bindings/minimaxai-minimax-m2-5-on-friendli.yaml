@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimaxai-minimax-m2-5-on-friendli
+    displayName: minimaxai-minimax-m2-5 via friendli
+spec:
+    model: minimaxai-minimax-m2-5
+    host: friendli
+    adapter: openai
+    enabled: true
+    snapshots:
+        - minimaxai-minimax-m2-5

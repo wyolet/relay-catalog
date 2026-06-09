@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: sonar-deep-research-on-nano-gpt
+    displayName: sonar-deep-research via nano-gpt
+spec:
+    model: sonar-deep-research
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - sonar-deep-research

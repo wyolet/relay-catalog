@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: baidu-ernie-4-5-vl-28b-a3b
+    displayName: 'Baidu: ERNIE 4.5 VL 28B A3B'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 30000
+    contextWindowOutput: 8000
+    contextWindowTotal: 30000
+    maxOutputTokens: 8000
+    releaseDate: "2025-06-30"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: baidu-ernie-4-5-vl-28b-a3b
+          releasedAt: "2025-06-30"
+          originalName: baidu/ernie-4.5-vl-28b-a3b
+    pointer: baidu-ernie-4-5-vl-28b-a3b

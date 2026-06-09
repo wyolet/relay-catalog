@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-gemini-deep-research-on-poe
+    displayName: google-gemini-deep-research via poe
+spec:
+    model: google-gemini-deep-research
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-gemini-deep-research

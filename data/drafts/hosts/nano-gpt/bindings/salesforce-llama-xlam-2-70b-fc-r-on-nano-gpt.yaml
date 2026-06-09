@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: salesforce-llama-xlam-2-70b-fc-r-on-nano-gpt
+    displayName: salesforce-llama-xlam-2-70b-fc-r via nano-gpt
+spec:
+    model: salesforce-llama-xlam-2-70b-fc-r
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - salesforce-llama-xlam-2-70b-fc-r

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: agent-prime-on-the-grid-ai
+    displayName: agent-prime via the-grid-ai
+spec:
+    model: agent-prime
+    host: the-grid-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - agent-prime

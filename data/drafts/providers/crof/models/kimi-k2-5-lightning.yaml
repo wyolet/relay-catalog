@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kimi-k2-5-lightning
+    displayName: Kimi K2.5 (Lightning)
+    owner:
+        kind: provider
+        name: crof
+    labels:
+        family: kimi-k2.5
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: kimi-k2.5
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 32768
+    contextWindowTotal: 131072
+    maxOutputTokens: 32768
+    releaseDate: "2026-02-06"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: kimi-k2-5-lightning
+          releasedAt: "2026-02-06"
+          originalName: kimi-k2.5-lightning
+    pointer: kimi-k2-5-lightning

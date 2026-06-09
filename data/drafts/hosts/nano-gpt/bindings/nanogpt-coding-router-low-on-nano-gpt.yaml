@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nanogpt-coding-router-low-on-nano-gpt
+    displayName: nanogpt-coding-router-low via nano-gpt
+spec:
+    model: nanogpt-coding-router-low
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nanogpt-coding-router-low

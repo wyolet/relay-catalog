@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: xiaomi-mimo-v2-pro
+    displayName: 'Xiaomi: MiMo-V2-Pro'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        family: mimo
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mimo
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 131072
+    contextWindowTotal: 1048576
+    maxOutputTokens: 131072
+    knowledgeCutoff: 2024-12
+    releaseDate: "2026-03-18"
+    enabled: true
+    snapshots:
+        - name: xiaomi-mimo-v2-pro
+          releasedAt: "2026-03-18"
+          originalName: xiaomi/mimo-v2-pro
+    pointer: xiaomi-mimo-v2-pro

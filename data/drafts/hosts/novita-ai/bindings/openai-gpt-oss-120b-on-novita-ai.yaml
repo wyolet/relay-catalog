@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-oss-120b-on-novita-ai
+    displayName: openai-gpt-oss-120b via novita-ai
+spec:
+    model: openai-gpt-oss-120b
+    host: novita-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-oss-120b

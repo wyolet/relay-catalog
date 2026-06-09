@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-ai-mistral-nemo
+    displayName: Mistral Nemo
+    owner:
+        kind: provider
+        name: github-models
+    labels:
+        family: mistral-nemo
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral-nemo
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2024-03
+    releaseDate: "2024-07-18"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistral-ai-mistral-nemo
+          releasedAt: "2024-07-18"
+          originalName: mistral-ai/mistral-nemo
+    pointer: mistral-ai-mistral-nemo

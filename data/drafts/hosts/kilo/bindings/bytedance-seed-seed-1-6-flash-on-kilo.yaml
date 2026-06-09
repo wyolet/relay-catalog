@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: bytedance-seed-seed-1-6-flash-on-kilo
+    displayName: bytedance-seed-seed-1-6-flash via kilo
+spec:
+    model: bytedance-seed-seed-1-6-flash
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - bytedance-seed-seed-1-6-flash

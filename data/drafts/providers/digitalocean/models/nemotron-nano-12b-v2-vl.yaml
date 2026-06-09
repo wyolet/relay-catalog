@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nemotron-nano-12b-v2-vl
+    displayName: Nemotron Nano 12B v2 VL
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: nemotron
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: nemotron
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    maxOutputTokens: 16384
+    knowledgeCutoff: 2024-10
+    releaseDate: "2025-12-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nemotron-nano-12b-v2-vl
+          releasedAt: "2025-12-01"
+    pointer: nemotron-nano-12b-v2-vl

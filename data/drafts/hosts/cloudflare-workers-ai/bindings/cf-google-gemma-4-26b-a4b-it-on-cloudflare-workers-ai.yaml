@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cf-google-gemma-4-26b-a4b-it-on-cloudflare-workers-ai
+    displayName: cf-google-gemma-4-26b-a4b-it via cloudflare-workers-ai
+spec:
+    model: cf-google-gemma-4-26b-a4b-it
+    host: cloudflare-workers-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cf-google-gemma-4-26b-a4b-it

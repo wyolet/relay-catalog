@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-reranker-4b
+    displayName: Qwen3-Reranker-4B
+    owner:
+        kind: provider
+        name: regolo-ai
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 8192
+    contextWindowTotal: 32768
+    maxOutputTokens: 8192
+    releaseDate: "2026-02-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen3-reranker-4b
+          releasedAt: "2026-02-01"
+    pointer: qwen3-reranker-4b

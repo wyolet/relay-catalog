@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: doctor-shotgun-ms3-2-24b-magnum-diamond-on-nano-gpt
+    displayName: doctor-shotgun-ms3-2-24b-magnum-diamond via nano-gpt
+spec:
+    model: doctor-shotgun-ms3-2-24b-magnum-diamond
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - doctor-shotgun-ms3-2-24b-magnum-diamond

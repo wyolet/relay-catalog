@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: abliterated-model
+    displayName: Abliterated Model
+    owner:
+        kind: provider
+        name: abliteration-ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 150000
+    contextWindowOutput: 8192
+    contextWindowTotal: 150000
+    maxOutputTokens: 8192
+    releaseDate: "2026-01-06"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: abliterated-model
+          releasedAt: "2026-01-06"
+    pointer: abliterated-model

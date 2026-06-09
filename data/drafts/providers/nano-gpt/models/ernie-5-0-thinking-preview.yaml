@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ernie-5-0-thinking-preview
+    displayName: Ernie 5.0 Thinking Preview
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    maxOutputTokens: 16384
+    releaseDate: "2025-11-18"
+    enabled: true
+    snapshots:
+        - name: ernie-5-0-thinking-preview
+          releasedAt: "2025-11-18"
+          originalName: ernie-5.0-thinking-preview
+    pointer: ernie-5-0-thinking-preview

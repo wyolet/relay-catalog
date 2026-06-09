@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen2-5-vl-72b-instruct
+    displayName: 'Qwen: Qwen2.5 VL 72B Instruct'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    maxOutputTokens: 32768
+    releaseDate: "2025-02-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen2-5-vl-72b-instruct
+          releasedAt: "2025-02-01"
+          originalName: qwen/qwen2.5-vl-72b-instruct
+    pointer: qwen-qwen2-5-vl-72b-instruct

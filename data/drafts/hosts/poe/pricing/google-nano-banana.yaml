@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: poe-google-nano-banana
+    displayName: google-nano-banana pricing
+    owner:
+        kind: host
+        id: poe
+spec:
+    currency: USD
+    targetModels:
+        - google-nano-banana
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.021
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.21
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.8
+    enabled: true

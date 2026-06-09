@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: llama-3-3-70b-instruct-on-scaleway
+    displayName: llama-3-3-70b-instruct via scaleway
+spec:
+    model: llama-3-3-70b-instruct
+    host: scaleway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - llama-3-3-70b-instruct

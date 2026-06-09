@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: trinity-large-preview-free-on-opencode
+    displayName: trinity-large-preview-free via opencode
+spec:
+    model: trinity-large-preview-free
+    host: opencode
+    adapter: openai
+    enabled: true
+    snapshots:
+        - trinity-large-preview-free

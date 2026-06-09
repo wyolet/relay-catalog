@@ -1,0 +1,13 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: claude-3-5-sonnet-on-anthropic
+    displayName: claude-3-5-sonnet via anthropic
+spec:
+    model: claude-3-5-sonnet
+    host: anthropic
+    adapter: anthropic
+    enabled: true
+    snapshots:
+        - claude-3-5-sonnet-20240620
+        - claude-3-5-sonnet-20241022

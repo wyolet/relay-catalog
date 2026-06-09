@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemini-pro-on-llmgateway
+    displayName: gemini-pro via llmgateway
+spec:
+    model: gemini-pro
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gemini-pro-latest

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: 302ai-deepseek-v3-2-thinking
+    displayName: deepseek-v3-2-thinking pricing
+    owner:
+        kind: host
+        id: 302ai
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-v3-2-thinking
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.29
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.43
+    enabled: true

@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: x-ai-grok-4-2-fast-non-reasoning
+    displayName: Grok 4.2 Fast Non Reasoning
+    owner:
+        kind: provider
+        name: zenmux
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 2000000
+    contextWindowOutput: 30000
+    contextWindowTotal: 2000000
+    maxOutputTokens: 30000
+    knowledgeCutoff: "2025-08-31"
+    releaseDate: "2026-03-20"
+    enabled: true
+    snapshots:
+        - name: x-ai-grok-4-2-fast-non-reasoning
+          releasedAt: "2026-03-20"
+          originalName: x-ai/grok-4.2-fast-non-reasoning
+    pointer: x-ai-grok-4-2-fast-non-reasoning

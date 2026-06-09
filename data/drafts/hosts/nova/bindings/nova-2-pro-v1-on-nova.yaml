@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nova-2-pro-v1-on-nova
+    displayName: nova-2-pro-v1 via nova
+spec:
+    model: nova-2-pro-v1
+    host: nova
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nova-2-pro-v1

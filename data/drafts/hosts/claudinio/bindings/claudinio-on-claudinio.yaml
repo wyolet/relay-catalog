@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: claudinio-on-claudinio
+    displayName: claudinio via claudinio
+spec:
+    model: claudinio
+    host: claudinio
+    adapter: openai
+    enabled: true
+    snapshots:
+        - claudinio

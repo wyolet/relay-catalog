@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hermes-4-70b-on-cortecs
+    displayName: hermes-4-70b via cortecs
+spec:
+    model: hermes-4-70b
+    host: cortecs
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hermes-4-70b

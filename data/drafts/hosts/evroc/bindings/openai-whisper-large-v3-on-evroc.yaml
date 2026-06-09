@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-whisper-large-v3-on-evroc
+    displayName: openai-whisper-large-v3 via evroc
+spec:
+    model: openai-whisper-large-v3
+    host: evroc
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-whisper-large-v3

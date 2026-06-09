@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: moonshotai-cn
+    displayName: Moonshot AI (China)
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.moonshot.cn/v1
+    pricingStrategies:
+        - api
+    docsURL: https://platform.moonshot.cn/docs/api/chat

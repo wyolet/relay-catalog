@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nvidia-nemotron-3-nano-omni
+    displayName: Nemotron-3-Nano-Omni
+    owner:
+        kind: provider
+        name: nebius
+    labels:
+        family: nemotron
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: nemotron
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 60000
+    contextWindowOutput: 8192
+    contextWindowTotal: 65536
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2025-01
+    releaseDate: "2025-01-20"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nvidia-nemotron-3-nano-omni
+          releasedAt: "2025-01-20"
+          originalName: nvidia/Nemotron-3-Nano-Omni
+    pointer: nvidia-nemotron-3-nano-omni

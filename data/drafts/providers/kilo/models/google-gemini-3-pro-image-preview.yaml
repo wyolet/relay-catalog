@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: google-gemini-3-pro-image-preview
+    displayName: 'Google: Nano Banana Pro (Gemini 3 Pro Image Preview)'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - text
+        output:
+            - image
+            - text
+    contextWindowInput: 65536
+    contextWindowOutput: 32768
+    contextWindowTotal: 65536
+    maxOutputTokens: 32768
+    releaseDate: "2025-11-20"
+    enabled: true
+    snapshots:
+        - name: google-gemini-3-pro-image-preview
+          releasedAt: "2025-11-20"
+          originalName: google/gemini-3-pro-image-preview
+    pointer: google-gemini-3-pro-image-preview

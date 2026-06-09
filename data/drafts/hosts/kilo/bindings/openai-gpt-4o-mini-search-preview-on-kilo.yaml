@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-4o-mini-search-preview-on-kilo
+    displayName: openai-gpt-4o-mini-search-preview via kilo
+spec:
+    model: openai-gpt-4o-mini-search-preview
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-4o-mini-search-preview

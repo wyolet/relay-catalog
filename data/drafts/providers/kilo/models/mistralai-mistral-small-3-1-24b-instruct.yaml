@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistralai-mistral-small-3-1-24b-instruct
+    displayName: 'Mistral: Mistral Small 3.1 24B'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 131072
+    contextWindowTotal: 128000
+    maxOutputTokens: 131072
+    releaseDate: "2025-03-17"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistralai-mistral-small-3-1-24b-instruct
+          releasedAt: "2025-03-17"
+          originalName: mistralai/mistral-small-3.1-24b-instruct
+    pointer: mistralai-mistral-small-3-1-24b-instruct

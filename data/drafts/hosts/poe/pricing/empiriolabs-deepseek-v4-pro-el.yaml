@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: poe-empiriolabs-deepseek-v4-pro-el
+    displayName: empiriolabs-deepseek-v4-pro-el pricing
+    owner:
+        kind: host
+        id: poe
+spec:
+    currency: USD
+    targetModels:
+        - empiriolabs-deepseek-v4-pro-el
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.67
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.33
+    enabled: true

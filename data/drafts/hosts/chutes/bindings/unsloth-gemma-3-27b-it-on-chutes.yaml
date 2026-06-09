@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: unsloth-gemma-3-27b-it-on-chutes
+    displayName: unsloth-gemma-3-27b-it via chutes
+spec:
+    model: unsloth-gemma-3-27b-it
+    host: chutes
+    adapter: openai
+    enabled: true
+    snapshots:
+        - unsloth-gemma-3-27b-it

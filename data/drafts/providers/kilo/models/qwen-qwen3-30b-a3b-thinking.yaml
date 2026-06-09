@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-30b-a3b-thinking
+    displayName: 'Qwen: Qwen3 30B A3B Thinking 2507'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 6554
+    contextWindowTotal: 32768
+    maxOutputTokens: 6554
+    releaseDate: "2025-07-29"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-30b-a3b-thinking-2507
+          releasedAt: "2025-07-29"
+          originalName: qwen/qwen3-30b-a3b-thinking-2507
+    pointer: qwen-qwen3-30b-a3b-thinking-2507

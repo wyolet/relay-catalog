@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: amazon-nova-premier-v1-on-kilo
+    displayName: amazon-nova-premier-v1 via kilo
+spec:
+    model: amazon-nova-premier-v1
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - amazon-nova-premier-v1

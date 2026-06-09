@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: x-ai-grok-4-1-fast-on-qiniu-ai
+    displayName: x-ai-grok-4-1-fast via qiniu-ai
+spec:
+    model: x-ai-grok-4-1-fast
+    host: qiniu-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - x-ai-grok-4-1-fast

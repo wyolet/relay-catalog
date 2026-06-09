@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-2-5-72b-instruct
+    displayName: Qwen2.5 72B Instruct
+    owner:
+        kind: provider
+        name: cortecs
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 33000
+    contextWindowOutput: 33000
+    contextWindowTotal: 33000
+    maxOutputTokens: 33000
+    knowledgeCutoff: 2024-06
+    releaseDate: "2024-09-19"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-2-5-72b-instruct
+          releasedAt: "2024-09-19"
+          originalName: qwen-2.5-72b-instruct
+    pointer: qwen-2-5-72b-instruct

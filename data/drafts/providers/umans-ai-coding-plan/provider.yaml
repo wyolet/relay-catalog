@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: umans-ai-coding-plan
+    displayName: Umans AI Coding Plan
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://app.umans.ai/offers/code/docs

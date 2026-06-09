@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-qwen-qwen3-7-max
+    displayName: qwen-qwen3-7-max pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen3-7-max
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 2.03125
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.1625
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.625
+        - meter: tokens.output
+          unit: per_million
+          amount: 4.875
+    enabled: true

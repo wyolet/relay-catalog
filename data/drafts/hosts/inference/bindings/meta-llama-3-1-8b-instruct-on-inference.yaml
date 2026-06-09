@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: meta-llama-3-1-8b-instruct-on-inference
+    displayName: meta-llama-3-1-8b-instruct via inference
+spec:
+    model: meta-llama-3-1-8b-instruct
+    host: inference
+    adapter: openai
+    enabled: true
+    snapshots:
+        - meta-llama-3-1-8b-instruct

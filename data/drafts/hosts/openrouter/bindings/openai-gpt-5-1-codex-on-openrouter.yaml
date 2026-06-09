@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-5-1-codex-on-openrouter
+    displayName: openai-gpt-5-1-codex via openrouter
+spec:
+    model: openai-gpt-5-1-codex
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-5-1-codex

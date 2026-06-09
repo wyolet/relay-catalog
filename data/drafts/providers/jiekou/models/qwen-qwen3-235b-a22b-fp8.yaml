@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-235b-a22b-fp8
+    displayName: Qwen3 235B A22B
+    owner:
+        kind: provider
+        name: jiekou
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 40960
+    contextWindowOutput: 20000
+    contextWindowTotal: 40960
+    maxOutputTokens: 20000
+    releaseDate: 2026-01
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-235b-a22b-fp8
+          releasedAt: 2026-01
+          originalName: qwen/qwen3-235b-a22b-fp8
+    pointer: qwen-qwen3-235b-a22b-fp8

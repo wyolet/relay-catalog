@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistralai-mistral-nemo-instruct
+    displayName: Mistral Nemo Instruct 2407
+    owner:
+        kind: provider
+        name: io-net
+    labels:
+        family: mistral-nemo
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral-nemo
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    maxOutputTokens: 4096
+    knowledgeCutoff: 2024-05
+    releaseDate: "2024-07-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistralai-mistral-nemo-instruct-2407
+          releasedAt: "2024-07-01"
+          originalName: mistralai/Mistral-Nemo-Instruct-2407
+    pointer: mistralai-mistral-nemo-instruct-2407

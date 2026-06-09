@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-next-80b-on-ollama-cloud
+    displayName: qwen3-next-80b via ollama-cloud
+spec:
+    model: qwen3-next-80b
+    host: ollama-cloud
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-next-80b

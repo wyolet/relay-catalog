@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: o3-deep-research-on-openai
+    displayName: o3-deep-research via openai
+spec:
+    model: o3-deep-research
+    host: openai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - o3-deep-research

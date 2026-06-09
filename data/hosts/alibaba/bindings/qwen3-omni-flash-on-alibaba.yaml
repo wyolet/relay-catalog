@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+  name: qwen3-omni-flash-on-alibaba
+  displayName: qwen3-omni-flash via alibaba
+spec:
+  model: qwen3-omni-flash
+  host: alibaba
+  adapter: openai
+  enabled: true
+  snapshots:
+  - qwen3-omni-flash

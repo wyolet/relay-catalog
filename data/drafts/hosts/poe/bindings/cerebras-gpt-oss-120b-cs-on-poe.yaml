@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cerebras-gpt-oss-120b-cs-on-poe
+    displayName: cerebras-gpt-oss-120b-cs via poe
+spec:
+    model: cerebras-gpt-oss-120b-cs
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cerebras-gpt-oss-120b-cs

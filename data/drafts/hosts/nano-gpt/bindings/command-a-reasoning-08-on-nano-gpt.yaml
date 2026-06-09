@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: command-a-reasoning-08-on-nano-gpt
+    displayName: command-a-reasoning-08 via nano-gpt
+spec:
+    model: command-a-reasoning-08
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - command-a-reasoning-08-2025

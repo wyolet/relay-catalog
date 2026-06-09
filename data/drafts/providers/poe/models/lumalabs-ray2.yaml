@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: lumalabs-ray2
+    displayName: Ray2
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: ray
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: ray
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - video
+    contextWindowInput: 5000
+    contextWindowTotal: 5000
+    releaseDate: "2025-02-20"
+    enabled: true
+    snapshots:
+        - name: lumalabs-ray2
+          releasedAt: "2025-02-20"
+          originalName: lumalabs/ray2
+    pointer: lumalabs-ray2

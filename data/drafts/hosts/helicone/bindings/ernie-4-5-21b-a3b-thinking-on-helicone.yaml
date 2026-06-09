@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: ernie-4-5-21b-a3b-thinking-on-helicone
+    displayName: ernie-4-5-21b-a3b-thinking via helicone
+spec:
+    model: ernie-4-5-21b-a3b-thinking
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - ernie-4-5-21b-a3b-thinking

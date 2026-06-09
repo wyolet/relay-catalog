@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-5-math-7b-instruct
+    displayName: Qwen2.5-Math 7B Instruct
+    owner:
+        kind: provider
+        name: alibaba-cn
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 4096
+    contextWindowOutput: 3072
+    contextWindowTotal: 4096
+    maxOutputTokens: 3072
+    knowledgeCutoff: 2024-04
+    releaseDate: 2024-09
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen2-5-math-7b-instruct
+          releasedAt: 2024-09
+    pointer: qwen2-5-math-7b-instruct

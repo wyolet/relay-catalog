@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-vl-8b-instruct
+    displayName: Qwen3 VL 8B Instruct
+    owner:
+        kind: provider
+        name: llmgateway
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 8192
+    contextWindowTotal: 131072
+    maxOutputTokens: 8192
+    releaseDate: "2025-08-19"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen3-vl-8b-instruct
+          releasedAt: "2025-08-19"
+    pointer: qwen3-vl-8b-instruct

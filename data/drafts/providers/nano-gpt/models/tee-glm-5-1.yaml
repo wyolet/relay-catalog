@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: tee-glm-5-1
+    displayName: GLM 5.1 TEE
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 202752
+    contextWindowOutput: 65535
+    contextWindowTotal: 202752
+    maxOutputTokens: 65535
+    releaseDate: "2026-04-20"
+    enabled: true
+    snapshots:
+        - name: tee-glm-5-1
+          releasedAt: "2026-04-20"
+          originalName: TEE/glm-5.1
+    pointer: tee-glm-5-1

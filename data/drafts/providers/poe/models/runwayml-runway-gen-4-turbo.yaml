@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: runwayml-runway-gen-4-turbo
+    displayName: Runway-Gen-4-Turbo
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: runway
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: runway
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - video
+    contextWindowInput: 256
+    contextWindowTotal: 256
+    releaseDate: "2025-05-09"
+    enabled: true
+    snapshots:
+        - name: runwayml-runway-gen-4-turbo
+          releasedAt: "2025-05-09"
+          originalName: runwayml/runway-gen-4-turbo
+    pointer: runwayml-runway-gen-4-turbo

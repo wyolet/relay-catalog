@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: moonshotai-kimi-k2-instruct-on-io-net
+    displayName: moonshotai-kimi-k2-instruct via io-net
+spec:
+    model: moonshotai-kimi-k2-instruct
+    host: io-net
+    adapter: openai
+    enabled: true
+    snapshots:
+        - moonshotai-kimi-k2-instruct-0905

@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: accounts-fireworks-routers-kimi-k2p6-turbo
+    displayName: Kimi K2.6 Turbo
+    owner:
+        kind: provider
+        name: firepass
+    labels:
+        family: kimi-thinking
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: kimi-thinking
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262000
+    contextWindowOutput: 262000
+    contextWindowTotal: 262000
+    maxOutputTokens: 262000
+    releaseDate: "2026-04-17"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: accounts-fireworks-routers-kimi-k2p6-turbo
+          releasedAt: "2026-04-17"
+          originalName: accounts/fireworks/routers/kimi-k2p6-turbo
+    pointer: accounts-fireworks-routers-kimi-k2p6-turbo

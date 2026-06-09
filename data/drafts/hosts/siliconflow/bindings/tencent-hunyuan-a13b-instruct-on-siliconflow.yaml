@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: tencent-hunyuan-a13b-instruct-on-siliconflow
+    displayName: tencent-hunyuan-a13b-instruct via siliconflow
+spec:
+    model: tencent-hunyuan-a13b-instruct
+    host: siliconflow
+    adapter: openai
+    enabled: true
+    snapshots:
+        - tencent-hunyuan-a13b-instruct

@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: chutes-xiaomimimo-mimo-v2-flash-tee
+    displayName: xiaomimimo-mimo-v2-flash-tee pricing
+    owner:
+        kind: host
+        id: chutes
+spec:
+    currency: USD
+    targetModels:
+        - xiaomimimo-mimo-v2-flash-tee
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.045
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.09
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.29
+    enabled: true

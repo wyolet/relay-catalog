@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: glm-5v-turbo-on-zhipuai
+    displayName: glm-5v-turbo via zhipuai
+spec:
+    model: glm-5v-turbo
+    host: zhipuai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - glm-5v-turbo

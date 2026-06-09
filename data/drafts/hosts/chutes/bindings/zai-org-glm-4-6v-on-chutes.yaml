@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: zai-org-glm-4-6v-on-chutes
+    displayName: zai-org-glm-4-6v via chutes
+spec:
+    model: zai-org-glm-4-6v
+    host: chutes
+    adapter: openai
+    enabled: true
+    snapshots:
+        - zai-org-glm-4-6v

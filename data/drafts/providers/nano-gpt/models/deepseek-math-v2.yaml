@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-math-v2
+    displayName: DeepSeek Math V2
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 65536
+    contextWindowTotal: 128000
+    maxOutputTokens: 65536
+    releaseDate: "2025-12-03"
+    enabled: true
+    snapshots:
+        - name: deepseek-math-v2
+          releasedAt: "2025-12-03"
+    pointer: deepseek-math-v2

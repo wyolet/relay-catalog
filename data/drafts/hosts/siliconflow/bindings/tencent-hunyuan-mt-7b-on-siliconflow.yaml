@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: tencent-hunyuan-mt-7b-on-siliconflow
+    displayName: tencent-hunyuan-mt-7b via siliconflow
+spec:
+    model: tencent-hunyuan-mt-7b
+    host: siliconflow
+    adapter: openai
+    enabled: true
+    snapshots:
+        - tencent-hunyuan-mt-7b

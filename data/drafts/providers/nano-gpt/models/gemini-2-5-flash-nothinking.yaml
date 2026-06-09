@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-2-5-flash-nothinking
+    displayName: Gemini 2.5 Flash (No Thinking)
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 1048756
+    contextWindowOutput: 65536
+    contextWindowTotal: 1048756
+    maxOutputTokens: 65536
+    releaseDate: "2025-06-05"
+    enabled: true
+    snapshots:
+        - name: gemini-2-5-flash-nothinking
+          releasedAt: "2025-06-05"
+          originalName: gemini-2.5-flash-nothinking
+    pointer: gemini-2-5-flash-nothinking

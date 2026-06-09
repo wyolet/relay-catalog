@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-tts-voicedesign
+    displayName: Qwen3 TTS VoiceDesign
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - audio
+    contextWindowInput: 32768
+    contextWindowOutput: 1
+    contextWindowTotal: 32768
+    maxOutputTokens: 1
+    releaseDate: "2026-04-21"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen3-tts-voicedesign
+          releasedAt: "2026-04-21"
+    pointer: qwen3-tts-voicedesign

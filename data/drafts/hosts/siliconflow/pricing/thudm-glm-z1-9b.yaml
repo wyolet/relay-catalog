@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: siliconflow-thudm-glm-z1-9b
+    displayName: thudm-glm-z1-9b pricing
+    owner:
+        kind: host
+        id: siliconflow
+spec:
+    currency: USD
+    targetModels:
+        - thudm-glm-z1-9b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.086
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.086
+    enabled: true

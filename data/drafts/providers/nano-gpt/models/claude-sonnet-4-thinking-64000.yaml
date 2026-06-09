@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claude-sonnet-4-thinking-64000
+    displayName: Claude 4 Sonnet Thinking (64K)
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 64000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 64000
+    releaseDate: "2025-05-22"
+    enabled: true
+    snapshots:
+        - name: claude-sonnet-4-thinking-64000
+          releasedAt: "2025-05-22"
+          originalName: claude-sonnet-4-thinking:64000
+    pointer: claude-sonnet-4-thinking-64000

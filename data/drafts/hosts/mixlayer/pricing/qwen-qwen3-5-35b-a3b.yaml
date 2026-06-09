@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: mixlayer-qwen-qwen3-5-35b-a3b
+    displayName: qwen-qwen3-5-35b-a3b pricing
+    owner:
+        kind: host
+        id: mixlayer
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen3-5-35b-a3b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.25
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.3
+    enabled: true

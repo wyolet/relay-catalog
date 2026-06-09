@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: grok-4-3
+    displayName: Grok 4.3
+    owner:
+        kind: provider
+        name: auriko
+    labels:
+        family: grok
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: grok
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 30000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 30000
+    releaseDate: "2026-04-17"
+    enabled: true
+    snapshots:
+        - name: grok-4-3
+          releasedAt: "2026-04-17"
+          originalName: grok-4.3
+    pointer: grok-4-3

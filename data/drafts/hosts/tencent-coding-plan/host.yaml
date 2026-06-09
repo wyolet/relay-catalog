@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: tencent-coding-plan
+    displayName: Tencent Coding Plan (China)
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.lkeap.cloud.tencent.com/coding/v3
+    pricingStrategies:
+        - api
+    docsURL: https://cloud.tencent.com/document/product/1772/128947

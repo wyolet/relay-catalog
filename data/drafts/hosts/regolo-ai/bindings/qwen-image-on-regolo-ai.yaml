@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-image-on-regolo-ai
+    displayName: qwen-image via regolo-ai
+spec:
+    model: qwen-image
+    host: regolo-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-image

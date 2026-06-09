@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: arcee-ai-afm-models-trinity-mini-on-clarifai
+    displayName: arcee-ai-afm-models-trinity-mini via clarifai
+spec:
+    model: arcee-ai-afm-models-trinity-mini
+    host: clarifai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - arcee-ai-afm-models-trinity-mini

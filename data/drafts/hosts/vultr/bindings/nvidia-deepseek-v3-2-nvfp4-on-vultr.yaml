@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-deepseek-v3-2-nvfp4-on-vultr
+    displayName: nvidia-deepseek-v3-2-nvfp4 via vultr
+spec:
+    model: nvidia-deepseek-v3-2-nvfp4
+    host: vultr
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-deepseek-v3-2-nvfp4

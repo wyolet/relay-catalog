@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-5-397b-a17b-on-ovhcloud
+    displayName: qwen3-5-397b-a17b via ovhcloud
+spec:
+    model: qwen3-5-397b-a17b
+    host: ovhcloud
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-5-397b-a17b

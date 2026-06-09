@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-nemotron-3-nano-30b-a3b-free-on-openrouter
+    displayName: nvidia-nemotron-3-nano-30b-a3b-free via openrouter
+spec:
+    model: nvidia-nemotron-3-nano-30b-a3b-free
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-nemotron-3-nano-30b-a3b-free

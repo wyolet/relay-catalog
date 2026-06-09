@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: novita-ai
+    displayName: NovitaAI
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.novita.ai/openai
+    pricingStrategies:
+        - api
+    docsURL: https://novita.ai/docs/guides/introduction

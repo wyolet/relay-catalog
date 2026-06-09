@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: fireworks-ai-accounts-fireworks-models-deepseek-v4-pro
+    displayName: accounts-fireworks-models-deepseek-v4-pro pricing
+    owner:
+        kind: host
+        id: fireworks-ai
+spec:
+    currency: USD
+    targetModels:
+        - accounts-fireworks-models-deepseek-v4-pro
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.145
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.74
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.48
+    enabled: true

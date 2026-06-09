@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: berget
+    displayName: Berget.AI
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.berget.ai/v1
+    pricingStrategies:
+        - api
+    docsURL: https://api.berget.ai

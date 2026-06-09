@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mirothinker-1-7-deepresearch-mini-on-nano-gpt
+    displayName: mirothinker-1-7-deepresearch-mini via nano-gpt
+spec:
+    model: mirothinker-1-7-deepresearch-mini
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mirothinker-1-7-deepresearch-mini

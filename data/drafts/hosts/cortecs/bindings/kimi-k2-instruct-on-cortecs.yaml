@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kimi-k2-instruct-on-cortecs
+    displayName: kimi-k2-instruct via cortecs
+spec:
+    model: kimi-k2-instruct
+    host: cortecs
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kimi-k2-instruct

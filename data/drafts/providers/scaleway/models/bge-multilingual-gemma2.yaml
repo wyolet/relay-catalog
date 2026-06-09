@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: bge-multilingual-gemma2
+    displayName: BGE Multilingual Gemma2
+    owner:
+        kind: provider
+        name: scaleway
+    labels:
+        family: gemma
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gemma
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8191
+    contextWindowOutput: 3072
+    contextWindowTotal: 8191
+    maxOutputTokens: 3072
+    releaseDate: "2024-07-26"
+    enabled: true
+    snapshots:
+        - name: bge-multilingual-gemma2
+          releasedAt: "2024-07-26"
+    pointer: bge-multilingual-gemma2

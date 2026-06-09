@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: lumalabs-ray2-on-poe
+    displayName: lumalabs-ray2 via poe
+spec:
+    model: lumalabs-ray2
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - lumalabs-ray2

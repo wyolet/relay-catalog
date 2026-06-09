@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: agent-max-on-the-grid-ai
+    displayName: agent-max via the-grid-ai
+spec:
+    model: agent-max
+    host: the-grid-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - agent-max

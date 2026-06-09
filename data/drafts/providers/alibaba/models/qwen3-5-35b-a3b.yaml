@@ -1,0 +1,44 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-5-35b-a3b
+    displayName: Qwen3.5 35B-A3B
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        audio: true
+        reasoning: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+            - audio
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 65536
+    contextWindowTotal: 262144
+    maxOutputTokens: 65536
+    releaseDate: "2026-02-23"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen3-5-35b-a3b
+          releasedAt: "2026-02-23"
+          originalName: qwen3.5-35b-a3b
+    pointer: qwen3-5-35b-a3b

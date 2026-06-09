@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-oss-20b-on-openrouter
+    displayName: openai-gpt-oss-20b via openrouter
+spec:
+    model: openai-gpt-oss-20b
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-oss-20b

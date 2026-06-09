@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimax-minimax-01-on-openrouter
+    displayName: minimax-minimax-01 via openrouter
+spec:
+    model: minimax-minimax-01
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - minimax-minimax-01

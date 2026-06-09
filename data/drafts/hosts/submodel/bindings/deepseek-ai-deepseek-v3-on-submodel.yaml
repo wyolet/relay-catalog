@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-ai-deepseek-v3-on-submodel
+    displayName: deepseek-ai-deepseek-v3 via submodel
+spec:
+    model: deepseek-ai-deepseek-v3
+    host: submodel
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-ai-deepseek-v3-0324

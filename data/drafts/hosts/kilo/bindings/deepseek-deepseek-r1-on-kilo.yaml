@@ -1,0 +1,13 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-deepseek-r1-on-kilo
+    displayName: deepseek-deepseek-r1 via kilo
+spec:
+    model: deepseek-deepseek-r1
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-deepseek-r1
+        - deepseek-deepseek-r1-0528

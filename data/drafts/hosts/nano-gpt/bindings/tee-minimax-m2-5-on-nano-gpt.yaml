@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: tee-minimax-m2-5-on-nano-gpt
+    displayName: tee-minimax-m2-5 via nano-gpt
+spec:
+    model: tee-minimax-m2-5
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - tee-minimax-m2-5

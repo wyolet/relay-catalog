@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: chutesai-mistral-small-3-2-24b-instruct-on-nano-gpt
+    displayName: chutesai-mistral-small-3-2-24b-instruct via nano-gpt
+spec:
+    model: chutesai-mistral-small-3-2-24b-instruct
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - chutesai-mistral-small-3-2-24b-instruct-2506

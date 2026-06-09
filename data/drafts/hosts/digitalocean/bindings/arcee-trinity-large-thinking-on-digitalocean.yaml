@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: arcee-trinity-large-thinking-on-digitalocean
+    displayName: arcee-trinity-large-thinking via digitalocean
+spec:
+    model: arcee-trinity-large-thinking
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - arcee-trinity-large-thinking

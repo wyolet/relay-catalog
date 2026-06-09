@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: anthropic-claude-sonnet-4-5-on-poe
+    displayName: anthropic-claude-sonnet-4-5 via poe
+spec:
+    model: anthropic-claude-sonnet-4-5
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - anthropic-claude-sonnet-4-5

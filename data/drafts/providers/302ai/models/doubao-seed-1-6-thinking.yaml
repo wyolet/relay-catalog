@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: doubao-seed-1-6-thinking
+    displayName: doubao-seed-1-6-thinking-250715
+    owner:
+        kind: provider
+        name: 302ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 16000
+    contextWindowTotal: 256000
+    maxOutputTokens: 16000
+    releaseDate: "2025-07-15"
+    enabled: true
+    snapshots:
+        - name: doubao-seed-1-6-thinking-250715
+          releasedAt: "2025-07-15"
+        - name: doubao-seed-1-6-thinking-250615
+          releasedAt: "2025-06-15"
+        - name: doubao-seed-1-6-thinking
+          releasedAt: "2025-08-15"
+          originalName: doubao-seed-1.6-thinking
+    pointer: doubao-seed-1-6-thinking-250715

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-baidu-ernie-4-5-vl-424b-a47b
+    displayName: baidu-ernie-4-5-vl-424b-a47b pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - baidu-ernie-4-5-vl-424b-a47b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.42
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.25
+    enabled: true

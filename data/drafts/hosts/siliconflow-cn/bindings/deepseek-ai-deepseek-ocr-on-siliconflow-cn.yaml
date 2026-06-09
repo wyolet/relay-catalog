@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-ai-deepseek-ocr-on-siliconflow-cn
+    displayName: deepseek-ai-deepseek-ocr via siliconflow-cn
+spec:
+    model: deepseek-ai-deepseek-ocr
+    host: siliconflow-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-ai-deepseek-ocr

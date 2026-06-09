@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistralai-codestral
+    displayName: 'Mistral: Codestral 2508'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 51200
+    contextWindowTotal: 256000
+    maxOutputTokens: 51200
+    releaseDate: "2025-08-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistralai-codestral-2508
+          releasedAt: "2025-08-01"
+          originalName: mistralai/codestral-2508
+    pointer: mistralai-codestral-2508

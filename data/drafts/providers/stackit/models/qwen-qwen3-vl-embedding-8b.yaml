@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-vl-embedding-8b
+    displayName: Qwen3-VL Embedding 8B
+    owner:
+        kind: provider
+        name: stackit
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 4096
+    contextWindowTotal: 32000
+    maxOutputTokens: 4096
+    releaseDate: "2026-02-05"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-vl-embedding-8b
+          releasedAt: "2026-02-05"
+          originalName: Qwen/Qwen3-VL-Embedding-8B
+    pointer: qwen-qwen3-vl-embedding-8b

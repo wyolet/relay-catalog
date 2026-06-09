@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: abacus-kimi-k2-turbo-preview
+    displayName: kimi-k2-turbo-preview pricing
+    owner:
+        kind: host
+        id: abacus
+spec:
+    currency: USD
+    targetModels:
+        - kimi-k2-turbo-preview
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.15
+        - meter: tokens.output
+          unit: per_million
+          amount: 8
+    enabled: true

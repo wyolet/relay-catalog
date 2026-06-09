@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: baseten-kimi-k2-instruct-fp4-on-nano-gpt
+    displayName: baseten-kimi-k2-instruct-fp4 via nano-gpt
+spec:
+    model: baseten-kimi-k2-instruct-fp4
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - baseten-kimi-k2-instruct-fp4

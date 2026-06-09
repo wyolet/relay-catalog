@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: perplexity-sonar-reasoning-pro
+    displayName: Sonar Reasoning Pro
+    owner:
+        kind: provider
+        name: anyapi
+    labels:
+        family: sonar-reasoning
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: sonar-reasoning
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    maxOutputTokens: 4096
+    knowledgeCutoff: "2025-09-01"
+    releaseDate: "2024-01-01"
+    enabled: true
+    snapshots:
+        - name: perplexity-sonar-reasoning-pro
+          releasedAt: "2024-01-01"
+          originalName: perplexity/sonar-reasoning-pro
+    pointer: perplexity-sonar-reasoning-pro

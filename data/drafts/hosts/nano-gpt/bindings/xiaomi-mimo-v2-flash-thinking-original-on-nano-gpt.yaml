@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: xiaomi-mimo-v2-flash-thinking-original-on-nano-gpt
+    displayName: xiaomi-mimo-v2-flash-thinking-original via nano-gpt
+spec:
+    model: xiaomi-mimo-v2-flash-thinking-original
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - xiaomi-mimo-v2-flash-thinking-original

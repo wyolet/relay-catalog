@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-mistral-nemotron-on-nvidia
+    displayName: mistralai-mistral-nemotron via nvidia
+spec:
+    model: mistralai-mistral-nemotron
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-mistral-nemotron

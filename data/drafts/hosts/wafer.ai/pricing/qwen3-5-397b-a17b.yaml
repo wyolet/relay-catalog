@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: wafer.ai-qwen3-5-397b-a17b
+    displayName: qwen3-5-397b-a17b pricing
+    owner:
+        kind: host
+        id: wafer.ai
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-5-397b-a17b
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.04
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.43
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.6
+    enabled: true

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: anthropic-claude-sonnet-4-on-requesty
+    displayName: anthropic-claude-sonnet-4 via requesty
+spec:
+    model: anthropic-claude-sonnet-4
+    host: requesty
+    adapter: openai
+    enabled: true
+    snapshots:
+        - anthropic-claude-sonnet-4

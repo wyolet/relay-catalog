@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: canopylabs-orpheus-arabic-saudi-on-groq
+    displayName: canopylabs-orpheus-arabic-saudi via groq
+spec:
+    model: canopylabs-orpheus-arabic-saudi
+    host: groq
+    adapter: openai
+    enabled: true
+    snapshots:
+        - canopylabs-orpheus-arabic-saudi

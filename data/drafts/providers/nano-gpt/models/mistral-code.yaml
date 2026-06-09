@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-code
+    displayName: Mistral Code Latest
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 32768
+    contextWindowTotal: 256000
+    maxOutputTokens: 32768
+    releaseDate: "2026-06-02"
+    enabled: true
+    snapshots:
+        - name: mistral-code-latest
+          releasedAt: "2026-06-02"
+    pointer: mistral-code-latest

@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: salesforce-llama-xlam-2-70b-fc-r
+    displayName: Llama-xLAM-2 70B fc-r
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    maxOutputTokens: 16384
+    releaseDate: "2025-04-13"
+    enabled: true
+    snapshots:
+        - name: salesforce-llama-xlam-2-70b-fc-r
+          releasedAt: "2025-04-13"
+          originalName: Salesforce/Llama-xLAM-2-70b-fc-r
+    pointer: salesforce-llama-xlam-2-70b-fc-r

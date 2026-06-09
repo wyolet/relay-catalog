@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-gliner-pii-on-nvidia
+    displayName: nvidia-gliner-pii via nvidia
+spec:
+    model: nvidia-gliner-pii
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-gliner-pii

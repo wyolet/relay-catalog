@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: meta-llama-4-maverick-17b-128e-instruct-fp8-on-github-models
+    displayName: meta-llama-4-maverick-17b-128e-instruct-fp8 via github-models
+spec:
+    model: meta-llama-4-maverick-17b-128e-instruct-fp8
+    host: github-models
+    adapter: openai
+    enabled: true
+    snapshots:
+        - meta-llama-4-maverick-17b-128e-instruct-fp8

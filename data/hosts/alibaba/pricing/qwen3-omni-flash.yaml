@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-qwen3-omni-flash
+    displayName: qwen3-omni-flash pricing
+    owner:
+        kind: host
+        id: alibaba
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-omni-flash
+    rates:
+        - meter: tokens.audio_input
+          unit: per_million
+          amount: 3.81
+        - meter: tokens.audio_output
+          unit: per_million
+          amount: 15.11
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.43
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.66
+    enabled: true

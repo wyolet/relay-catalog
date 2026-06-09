@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-deepseek-v4-flash-on-anyapi
+    displayName: deepseek-deepseek-v4-flash via anyapi
+spec:
+    model: deepseek-deepseek-v4-flash
+    host: anyapi
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-deepseek-v4-flash

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemini-2-5-flash-preview-05-20-on-jiekou
+    displayName: gemini-2-5-flash-preview-05-20 via jiekou
+spec:
+    model: gemini-2-5-flash-preview-05-20
+    host: jiekou
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gemini-2-5-flash-preview-05-20

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemini-flash-lite-on-google
+    displayName: gemini-flash-lite via google
+spec:
+    model: gemini-flash-lite
+    host: google
+    adapter: gemini
+    enabled: true
+    snapshots:
+        - gemini-flash-lite-latest

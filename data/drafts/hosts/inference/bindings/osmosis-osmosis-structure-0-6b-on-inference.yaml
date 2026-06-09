@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: osmosis-osmosis-structure-0-6b-on-inference
+    displayName: osmosis-osmosis-structure-0-6b via inference
+spec:
+    model: osmosis-osmosis-structure-0-6b
+    host: inference
+    adapter: openai
+    enabled: true
+    snapshots:
+        - osmosis-osmosis-structure-0-6b

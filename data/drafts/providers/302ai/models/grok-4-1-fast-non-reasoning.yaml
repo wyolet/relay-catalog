@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: grok-4-1-fast-non-reasoning
+    displayName: grok-4-1-fast-non-reasoning
+    owner:
+        kind: provider
+        name: 302ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 2000000
+    contextWindowOutput: 30000
+    contextWindowTotal: 2000000
+    maxOutputTokens: 30000
+    knowledgeCutoff: 2025-06
+    releaseDate: "2025-11-20"
+    enabled: true
+    snapshots:
+        - name: grok-4-1-fast-non-reasoning
+          releasedAt: "2025-11-20"
+    pointer: grok-4-1-fast-non-reasoning

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-streampetr-on-nvidia
+    displayName: nvidia-streampetr via nvidia
+spec:
+    model: nvidia-streampetr
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-streampetr

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: sonar-on-nano-gpt
+    displayName: sonar via nano-gpt
+spec:
+    model: sonar
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - sonar

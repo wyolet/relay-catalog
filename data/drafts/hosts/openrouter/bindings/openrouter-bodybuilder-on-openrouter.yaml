@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openrouter-bodybuilder-on-openrouter
+    displayName: openrouter-bodybuilder via openrouter
+spec:
+    model: openrouter-bodybuilder
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openrouter-bodybuilder

@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: route-qwen3-6-27b-202k
+    displayName: Qwen3.6 27B 202K
+    owner:
+        kind: provider
+        name: routing-run
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 202000
+    contextWindowOutput: 32768
+    contextWindowTotal: 202000
+    maxOutputTokens: 32768
+    releaseDate: "2026-04-22"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: route-qwen3-6-27b-202k
+          releasedAt: "2026-04-22"
+          originalName: route/qwen3.6-27b-202k
+    pointer: route-qwen3-6-27b-202k

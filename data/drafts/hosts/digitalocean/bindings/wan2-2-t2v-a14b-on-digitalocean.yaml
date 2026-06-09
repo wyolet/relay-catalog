@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: wan2-2-t2v-a14b-on-digitalocean
+    displayName: wan2-2-t2v-a14b via digitalocean
+spec:
+    model: wan2-2-t2v-a14b
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - wan2-2-t2v-a14b

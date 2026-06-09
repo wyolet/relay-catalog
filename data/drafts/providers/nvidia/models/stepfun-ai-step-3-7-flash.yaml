@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: stepfun-ai-step-3-7-flash
+    displayName: Step 3.7 Flash
+    owner:
+        kind: provider
+        name: nvidia
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 16384
+    contextWindowTotal: 256000
+    maxOutputTokens: 16384
+    releaseDate: "2026-05-28"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: stepfun-ai-step-3-7-flash
+          releasedAt: "2026-05-28"
+          originalName: stepfun-ai/step-3.7-flash
+    pointer: stepfun-ai-step-3-7-flash

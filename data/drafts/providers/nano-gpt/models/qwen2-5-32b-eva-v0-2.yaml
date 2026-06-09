@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-5-32b-eva-v0-2
+    displayName: Qwen 2.5 32b EVA
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 24576
+    contextWindowOutput: 8192
+    contextWindowTotal: 24576
+    maxOutputTokens: 8192
+    releaseDate: "2024-09-01"
+    enabled: true
+    snapshots:
+        - name: qwen2-5-32b-eva-v0-2
+          releasedAt: "2024-09-01"
+          originalName: Qwen2.5-32B-EVA-v0.2
+    pointer: qwen2-5-32b-eva-v0-2

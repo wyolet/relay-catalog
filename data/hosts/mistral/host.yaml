@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: mistral
+    displayName: Mistral
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.mistral.ai/v1
+    pricingStrategies:
+        - api
+    docsURL: https://docs.mistral.ai/getting-started/models/

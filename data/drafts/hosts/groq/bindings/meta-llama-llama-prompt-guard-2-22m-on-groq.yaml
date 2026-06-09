@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: meta-llama-llama-prompt-guard-2-22m-on-groq
+    displayName: meta-llama-llama-prompt-guard-2-22m via groq
+spec:
+    model: meta-llama-llama-prompt-guard-2-22m
+    host: groq
+    adapter: openai
+    enabled: true
+    snapshots:
+        - meta-llama-llama-prompt-guard-2-22m

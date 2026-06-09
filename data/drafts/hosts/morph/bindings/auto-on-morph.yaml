@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: auto-on-morph
+    displayName: auto via morph
+spec:
+    model: auto
+    host: morph
+    adapter: openai
+    enabled: true
+    snapshots:
+        - auto

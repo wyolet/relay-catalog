@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen2-5-vl-32b-instruct-on-siliconflow
+    displayName: qwen-qwen2-5-vl-32b-instruct via siliconflow
+spec:
+    model: qwen-qwen2-5-vl-32b-instruct
+    host: siliconflow
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen2-5-vl-32b-instruct

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-coder-480b-a35b-instruct-on-nvidia
+    displayName: qwen-qwen3-coder-480b-a35b-instruct via nvidia
+spec:
+    model: qwen-qwen3-coder-480b-a35b-instruct
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-coder-480b-a35b-instruct

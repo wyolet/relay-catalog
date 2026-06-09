@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: huihui-ai-llama-3-3-70b-instruct-abliterated
+    displayName: Llama 3.3 70B Instruct abliterated
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 16384
+    contextWindowTotal: 16384
+    maxOutputTokens: 16384
+    releaseDate: "2025-08-08"
+    enabled: true
+    snapshots:
+        - name: huihui-ai-llama-3-3-70b-instruct-abliterated
+          releasedAt: "2025-08-08"
+          originalName: huihui-ai/Llama-3.3-70B-Instruct-abliterated
+    pointer: huihui-ai-llama-3-3-70b-instruct-abliterated

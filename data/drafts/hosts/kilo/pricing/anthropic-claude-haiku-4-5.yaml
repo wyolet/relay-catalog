@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-anthropic-claude-haiku-4-5
+    displayName: anthropic-claude-haiku-4-5 pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - anthropic-claude-haiku-4-5
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 1.25
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.input
+          unit: per_million
+          amount: 1
+        - meter: tokens.output
+          unit: per_million
+          amount: 5
+    enabled: true

@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: fireworks-ai-kimi-k2-5-fw
+    displayName: Kimi-K2.5-FW
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 245760
+    contextWindowOutput: 16384
+    contextWindowTotal: 262144
+    maxOutputTokens: 16384
+    releaseDate: "2026-01-27"
+    enabled: true
+    snapshots:
+        - name: fireworks-ai-kimi-k2-5-fw
+          releasedAt: "2026-01-27"
+          originalName: fireworks-ai/kimi-k2.5-fw
+    pointer: fireworks-ai-kimi-k2-5-fw

@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-nanogpt-coding-router-max
+    displayName: nanogpt-coding-router-max pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - nanogpt-coding-router-max
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.input
+          unit: per_million
+          amount: 5
+        - meter: tokens.output
+          unit: per_million
+          amount: 30
+    enabled: true

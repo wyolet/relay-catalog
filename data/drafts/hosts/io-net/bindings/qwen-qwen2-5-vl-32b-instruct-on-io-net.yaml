@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen2-5-vl-32b-instruct-on-io-net
+    displayName: qwen-qwen2-5-vl-32b-instruct via io-net
+spec:
+    model: qwen-qwen2-5-vl-32b-instruct
+    host: io-net
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen2-5-vl-32b-instruct

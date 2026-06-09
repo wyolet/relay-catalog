@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: llama3-1-8b-on-cerebras
+    displayName: llama3-1-8b via cerebras
+spec:
+    model: llama3-1-8b
+    host: cerebras
+    adapter: openai
+    enabled: true
+    snapshots:
+        - llama3-1-8b

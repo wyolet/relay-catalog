@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: atomic-chat-gemma-4-e4b-it-iq4-xs
+    displayName: gemma-4-e4b-it-iq4-xs pricing
+    owner:
+        kind: host
+        id: atomic-chat
+spec:
+    currency: USD
+    targetModels:
+        - gemma-4-e4b-it-iq4-xs
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

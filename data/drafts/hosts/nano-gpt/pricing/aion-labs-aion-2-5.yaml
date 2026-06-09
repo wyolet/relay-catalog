@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-aion-labs-aion-2-5
+    displayName: aion-labs-aion-2-5 pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - aion-labs-aion-2-5
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.35
+        - meter: tokens.input
+          unit: per_million
+          amount: 1
+        - meter: tokens.output
+          unit: per_million
+          amount: 3
+    enabled: true

@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: siliconflow-cn
+    displayName: SiliconFlow (China)
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://cloud.siliconflow.com/models

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: grok-3-on-helicone
+    displayName: grok-3 via helicone
+spec:
+    model: grok-3
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - grok-3

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gpt-image-1-on-openai
+    displayName: gpt-image-1 via openai
+spec:
+    model: gpt-image-1
+    host: openai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gpt-image-1

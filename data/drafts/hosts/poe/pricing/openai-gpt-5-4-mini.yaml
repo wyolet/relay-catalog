@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: poe-openai-gpt-5-4-mini
+    displayName: openai-gpt-5-4-mini pricing
+    owner:
+        kind: host
+        id: poe
+spec:
+    currency: USD
+    targetModels:
+        - openai-gpt-5-4-mini
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.068
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.68
+        - meter: tokens.output
+          unit: per_million
+          amount: 4
+    enabled: true

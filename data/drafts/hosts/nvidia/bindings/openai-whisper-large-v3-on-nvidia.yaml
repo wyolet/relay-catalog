@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-whisper-large-v3-on-nvidia
+    displayName: openai-whisper-large-v3 via nvidia
+spec:
+    model: openai-whisper-large-v3
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-whisper-large-v3

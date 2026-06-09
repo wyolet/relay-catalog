@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-bevformer-on-nvidia
+    displayName: nvidia-bevformer via nvidia
+spec:
+    model: nvidia-bevformer
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-bevformer

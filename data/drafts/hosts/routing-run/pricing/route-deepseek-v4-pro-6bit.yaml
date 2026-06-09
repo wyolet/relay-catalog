@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: routing-run-route-deepseek-v4-pro-6bit
+    displayName: route-deepseek-v4-pro-6bit pricing
+    owner:
+        kind: host
+        id: routing-run
+spec:
+    currency: USD
+    targetModels:
+        - route-deepseek-v4-pro-6bit
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.003625
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.4928
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.7392
+    enabled: true

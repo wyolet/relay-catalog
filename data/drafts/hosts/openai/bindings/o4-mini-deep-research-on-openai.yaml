@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: o4-mini-deep-research-on-openai
+    displayName: o4-mini-deep-research via openai
+spec:
+    model: o4-mini-deep-research
+    host: openai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - o4-mini-deep-research

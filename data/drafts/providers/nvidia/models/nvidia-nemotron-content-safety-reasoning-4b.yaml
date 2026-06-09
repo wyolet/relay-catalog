@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nvidia-nemotron-content-safety-reasoning-4b
+    displayName: nemotron-content-safety-reasoning-4b
+    owner:
+        kind: provider
+        name: nvidia
+    labels:
+        family: nemotron
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: nemotron
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    maxOutputTokens: 4096
+    releaseDate: "2026-01-22"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nvidia-nemotron-content-safety-reasoning-4b
+          releasedAt: "2026-01-22"
+          originalName: nvidia/nemotron-content-safety-reasoning-4b
+    pointer: nvidia-nemotron-content-safety-reasoning-4b

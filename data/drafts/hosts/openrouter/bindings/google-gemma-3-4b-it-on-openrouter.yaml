@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-gemma-3-4b-it-on-openrouter
+    displayName: google-gemma-3-4b-it via openrouter
+spec:
+    model: google-gemma-3-4b-it
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-gemma-3-4b-it

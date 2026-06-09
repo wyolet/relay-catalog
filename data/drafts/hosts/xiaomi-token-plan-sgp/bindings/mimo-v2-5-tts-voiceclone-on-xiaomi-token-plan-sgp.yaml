@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mimo-v2-5-tts-voiceclone-on-xiaomi-token-plan-sgp
+    displayName: mimo-v2-5-tts-voiceclone via xiaomi-token-plan-sgp
+spec:
+    model: mimo-v2-5-tts-voiceclone
+    host: xiaomi-token-plan-sgp
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mimo-v2-5-tts-voiceclone

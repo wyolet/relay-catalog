@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: thedrummer-magidonia-24b-v4-3-on-nano-gpt
+    displayName: thedrummer-magidonia-24b-v4-3 via nano-gpt
+spec:
+    model: thedrummer-magidonia-24b-v4-3
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - thedrummer-magidonia-24b-v4-3

@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-coder-flash
+    displayName: 'Qwen: Qwen3 Coder Flash'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 65536
+    contextWindowTotal: 1000000
+    maxOutputTokens: 65536
+    releaseDate: "2025-07-23"
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-coder-flash
+          releasedAt: "2025-07-23"
+          originalName: qwen/qwen3-coder-flash
+    pointer: qwen-qwen3-coder-flash

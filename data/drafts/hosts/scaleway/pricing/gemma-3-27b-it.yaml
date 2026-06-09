@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: scaleway-gemma-3-27b-it
+    displayName: gemma-3-27b-it pricing
+    owner:
+        kind: host
+        id: scaleway
+spec:
+    currency: USD
+    targetModels:
+        - gemma-3-27b-it
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.25
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.5
+    enabled: true

@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: all-mini-lm-l6-v2
+    displayName: All-MiniLM-L6-v2
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: text-embedding
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: text-embedding
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256
+    contextWindowOutput: 384
+    contextWindowTotal: 256
+    maxOutputTokens: 384
+    releaseDate: "2021-08-30"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: all-mini-lm-l6-v2
+          releasedAt: "2021-08-30"
+    pointer: all-mini-lm-l6-v2

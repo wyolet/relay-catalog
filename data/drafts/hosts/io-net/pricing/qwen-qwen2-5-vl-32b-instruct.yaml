@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: io-net-qwen-qwen2-5-vl-32b-instruct
+    displayName: qwen-qwen2-5-vl-32b-instruct pricing
+    owner:
+        kind: host
+        id: io-net
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen2-5-vl-32b-instruct
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.025
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.05
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.22
+    enabled: true

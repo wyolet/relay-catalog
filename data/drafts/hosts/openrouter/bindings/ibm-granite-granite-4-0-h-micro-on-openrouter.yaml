@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: ibm-granite-granite-4-0-h-micro-on-openrouter
+    displayName: ibm-granite-granite-4-0-h-micro via openrouter
+spec:
+    model: ibm-granite-granite-4-0-h-micro
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - ibm-granite-granite-4-0-h-micro

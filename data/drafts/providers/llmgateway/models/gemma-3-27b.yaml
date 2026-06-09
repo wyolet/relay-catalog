@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma-3-27b
+    displayName: Gemma 3 27B
+    owner:
+        kind: provider
+        name: llmgateway
+    labels:
+        family: gemma
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gemma
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    maxOutputTokens: 16384
+    releaseDate: "2025-03-12"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: gemma-3-27b
+          releasedAt: "2025-03-12"
+    pointer: gemma-3-27b

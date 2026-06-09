@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-large-3-675b-on-ollama-cloud
+    displayName: mistral-large-3-675b via ollama-cloud
+spec:
+    model: mistral-large-3-675b
+    host: ollama-cloud
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistral-large-3-675b

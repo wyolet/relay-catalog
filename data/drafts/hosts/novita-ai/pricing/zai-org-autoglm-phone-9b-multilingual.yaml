@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: novita-ai-zai-org-autoglm-phone-9b-multilingual
+    displayName: zai-org-autoglm-phone-9b-multilingual pricing
+    owner:
+        kind: host
+        id: novita-ai
+spec:
+    currency: USD
+    targetModels:
+        - zai-org-autoglm-phone-9b-multilingual
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.035
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.138
+    enabled: true

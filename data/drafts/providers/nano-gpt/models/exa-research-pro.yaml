@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: exa-research-pro
+    displayName: Exa (Research Pro)
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 16384
+    contextWindowTotal: 16384
+    maxOutputTokens: 16384
+    releaseDate: "2025-06-04"
+    enabled: true
+    snapshots:
+        - name: exa-research-pro
+          releasedAt: "2025-06-04"
+    pointer: exa-research-pro

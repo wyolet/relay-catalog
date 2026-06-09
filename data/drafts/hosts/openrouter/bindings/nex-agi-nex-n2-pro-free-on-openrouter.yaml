@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nex-agi-nex-n2-pro-free-on-openrouter
+    displayName: nex-agi-nex-n2-pro-free via openrouter
+spec:
+    model: nex-agi-nex-n2-pro-free
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nex-agi-nex-n2-pro-free

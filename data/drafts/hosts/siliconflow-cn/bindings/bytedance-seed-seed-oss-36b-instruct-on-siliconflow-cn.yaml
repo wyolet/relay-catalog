@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: bytedance-seed-seed-oss-36b-instruct-on-siliconflow-cn
+    displayName: bytedance-seed-seed-oss-36b-instruct via siliconflow-cn
+spec:
+    model: bytedance-seed-seed-oss-36b-instruct
+    host: siliconflow-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - bytedance-seed-seed-oss-36b-instruct

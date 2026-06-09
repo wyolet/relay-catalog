@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: inclusionai-ling-flash-2-0-on-siliconflow
+    displayName: inclusionai-ling-flash-2-0 via siliconflow
+spec:
+    model: inclusionai-ling-flash-2-0
+    host: siliconflow
+    adapter: openai
+    enabled: true
+    snapshots:
+        - inclusionai-ling-flash-2-0

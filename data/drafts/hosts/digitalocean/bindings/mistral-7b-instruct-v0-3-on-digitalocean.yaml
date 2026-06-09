@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-7b-instruct-v0-3-on-digitalocean
+    displayName: mistral-7b-instruct-v0-3 via digitalocean
+spec:
+    model: mistral-7b-instruct-v0-3
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistral-7b-instruct-v0-3

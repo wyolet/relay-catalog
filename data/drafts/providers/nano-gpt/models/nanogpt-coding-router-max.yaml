@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nanogpt-coding-router-max
+    displayName: Coding Router Max
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 128000
+    releaseDate: "2026-05-12"
+    enabled: true
+    snapshots:
+        - name: nanogpt-coding-router-max
+          releasedAt: "2026-05-12"
+          originalName: nanogpt/coding-router:max
+    pointer: nanogpt-coding-router-max

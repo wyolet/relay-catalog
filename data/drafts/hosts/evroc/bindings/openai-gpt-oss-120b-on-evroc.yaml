@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-oss-120b-on-evroc
+    displayName: openai-gpt-oss-120b via evroc
+spec:
+    model: openai-gpt-oss-120b
+    host: evroc
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-oss-120b

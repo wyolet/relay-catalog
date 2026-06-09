@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: doubao-seed-1-6-vision-on-302ai
+    displayName: doubao-seed-1-6-vision via 302ai
+spec:
+    model: doubao-seed-1-6-vision
+    host: 302ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - doubao-seed-1-6-vision-250815

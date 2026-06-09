@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: inception-mercury-2
+    displayName: 'Inception: Mercury 2'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 50000
+    contextWindowTotal: 128000
+    maxOutputTokens: 50000
+    releaseDate: "2026-02-24"
+    enabled: true
+    snapshots:
+        - name: inception-mercury-2
+          releasedAt: "2026-02-24"
+          originalName: inception/mercury-2
+    pointer: inception-mercury-2

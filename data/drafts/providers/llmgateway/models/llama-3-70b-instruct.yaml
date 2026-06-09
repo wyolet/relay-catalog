@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama-3-70b-instruct
+    displayName: Llama 3 70B Instruct
+    owner:
+        kind: provider
+        name: llmgateway
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8000
+    contextWindowTotal: 8192
+    maxOutputTokens: 8000
+    releaseDate: "2024-04-18"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: llama-3-70b-instruct
+          releasedAt: "2024-04-18"
+    pointer: llama-3-70b-instruct

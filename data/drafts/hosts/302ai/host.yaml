@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: 302ai
+    displayName: 302.AI
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.302.ai/v1
+    pricingStrategies:
+        - api
+    docsURL: https://doc.302.ai

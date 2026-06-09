@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: xai-grok-4-20-multi-agent-on-poe
+    displayName: xai-grok-4-20-multi-agent via poe
+spec:
+    model: xai-grok-4-20-multi-agent
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - xai-grok-4-20-multi-agent

@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: chutes-qwen-qwen2-5-vl-32b-instruct
+    displayName: qwen-qwen2-5-vl-32b-instruct pricing
+    owner:
+        kind: host
+        id: chutes
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen2-5-vl-32b-instruct
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.02715
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.0543
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.2174
+    enabled: true

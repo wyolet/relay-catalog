@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-vl-flash
+    displayName: Qwen3 VL Flash
+    owner:
+        kind: provider
+        name: llmgateway
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 32000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 32000
+    releaseDate: "2025-10-09"
+    enabled: true
+    snapshots:
+        - name: qwen3-vl-flash
+          releasedAt: "2025-10-09"
+    pointer: qwen3-vl-flash

@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-dall-e-3
+    displayName: DALL-E-3
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: dall-e
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: dall-e
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - image
+    contextWindowInput: 800
+    contextWindowTotal: 800
+    releaseDate: "2023-11-06"
+    enabled: true
+    snapshots:
+        - name: openai-dall-e-3
+          releasedAt: "2023-11-06"
+          originalName: openai/dall-e-3
+    pointer: openai-dall-e-3

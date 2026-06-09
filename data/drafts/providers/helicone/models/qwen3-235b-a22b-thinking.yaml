@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-235b-a22b-thinking
+    displayName: Qwen3 235B A22B Thinking
+    owner:
+        kind: provider
+        name: helicone
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 81920
+    contextWindowTotal: 262144
+    maxOutputTokens: 81920
+    knowledgeCutoff: 2025-07
+    releaseDate: "2025-07-25"
+    enabled: true
+    snapshots:
+        - name: qwen3-235b-a22b-thinking
+          releasedAt: "2025-07-25"
+        - name: qwen3-235b-a22b-thinking-2507
+          releasedAt: "2025-07-01"
+    pointer: qwen3-235b-a22b-thinking

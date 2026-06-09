@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: bytedance-seed-seed-1-6-flash
+    displayName: 'ByteDance Seed: Seed 1.6 Flash'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - text
+            - video
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 32768
+    contextWindowTotal: 262144
+    maxOutputTokens: 32768
+    releaseDate: "2025-12-23"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: bytedance-seed-seed-1-6-flash
+          releasedAt: "2025-12-23"
+          originalName: bytedance-seed/seed-1.6-flash
+    pointer: bytedance-seed-seed-1-6-flash

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: sarvam-30b-on-nano-gpt
+    displayName: sarvam-30b via nano-gpt
+spec:
+    model: sarvam-30b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - sarvam-30b

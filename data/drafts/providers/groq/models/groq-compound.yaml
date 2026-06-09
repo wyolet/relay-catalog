@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: groq-compound
+    displayName: Compound
+    owner:
+        kind: provider
+        name: groq
+    labels:
+        family: groq
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: groq
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 8192
+    contextWindowTotal: 131072
+    maxOutputTokens: 8192
+    knowledgeCutoff: "2025-09-04"
+    releaseDate: "2025-09-04"
+    enabled: true
+    snapshots:
+        - name: groq-compound
+          releasedAt: "2025-09-04"
+          originalName: groq/compound
+    pointer: groq-compound

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: unsloth-mistral-nemo-instruct-on-chutes
+    displayName: unsloth-mistral-nemo-instruct via chutes
+spec:
+    model: unsloth-mistral-nemo-instruct
+    host: chutes
+    adapter: openai
+    enabled: true
+    snapshots:
+        - unsloth-mistral-nemo-instruct-2407

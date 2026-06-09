@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: abacusai-dracarys-72b-instruct-on-nano-gpt
+    displayName: abacusai-dracarys-72b-instruct via nano-gpt
+spec:
+    model: abacusai-dracarys-72b-instruct
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - abacusai-dracarys-72b-instruct

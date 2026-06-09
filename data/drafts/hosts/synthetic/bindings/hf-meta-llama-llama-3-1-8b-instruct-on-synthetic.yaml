@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hf-meta-llama-llama-3-1-8b-instruct-on-synthetic
+    displayName: hf-meta-llama-llama-3-1-8b-instruct via synthetic
+spec:
+    model: hf-meta-llama-llama-3-1-8b-instruct
+    host: synthetic
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hf-meta-llama-llama-3-1-8b-instruct

@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-vl-235b-a22b-thinking
+    displayName: Qwen3 VL 235B A22B Thinking
+    owner:
+        kind: provider
+        name: llmgateway
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 8192
+    contextWindowTotal: 131072
+    maxOutputTokens: 8192
+    releaseDate: "2025-09-15"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen3-vl-235b-a22b-thinking
+          releasedAt: "2025-09-15"
+    pointer: qwen3-vl-235b-a22b-thinking

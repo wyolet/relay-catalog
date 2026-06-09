@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: helicone-deepseek-reasoner
+    displayName: deepseek-reasoner pricing
+    owner:
+        kind: host
+        id: helicone
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-reasoner
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.07
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.56
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.68
+    enabled: true

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: llama-4-maverick-17b-instruct-on-llmgateway
+    displayName: llama-4-maverick-17b-instruct via llmgateway
+spec:
+    model: llama-4-maverick-17b-instruct
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - llama-4-maverick-17b-instruct

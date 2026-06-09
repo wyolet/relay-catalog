@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: meta-llama-guard-4-12b-on-nvidia
+    displayName: meta-llama-guard-4-12b via nvidia
+spec:
+    model: meta-llama-guard-4-12b
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - meta-llama-guard-4-12b

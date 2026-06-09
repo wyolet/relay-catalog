@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: doubao-seed-2-0-code
+    displayName: Doubao Seed 2.0 Code
+    owner:
+        kind: provider
+        name: qiniu-ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 128000
+    contextWindowTotal: 256000
+    maxOutputTokens: 128000
+    releaseDate: "2026-02-14"
+    enabled: true
+    snapshots:
+        - name: doubao-seed-2-0-code
+          releasedAt: "2026-02-14"
+          originalName: doubao-seed-2.0-code
+    pointer: doubao-seed-2-0-code

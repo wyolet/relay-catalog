@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-plus-character-ja
+    displayName: Qwen Plus Character (Japanese)
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 512
+    contextWindowTotal: 8192
+    maxOutputTokens: 512
+    knowledgeCutoff: 2024-04
+    releaseDate: 2024-01
+    enabled: true
+    snapshots:
+        - name: qwen-plus-character-ja
+          releasedAt: 2024-01
+    pointer: qwen-plus-character-ja

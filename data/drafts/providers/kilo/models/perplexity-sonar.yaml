@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: perplexity-sonar
+    displayName: 'Perplexity: Sonar'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 127072
+    contextWindowOutput: 25415
+    contextWindowTotal: 127072
+    maxOutputTokens: 25415
+    releaseDate: "2024-01-01"
+    enabled: true
+    snapshots:
+        - name: perplexity-sonar
+          releasedAt: "2024-01-01"
+          originalName: perplexity/sonar
+    pointer: perplexity-sonar

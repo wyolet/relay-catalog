@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-5-plus-on-opencode
+    displayName: qwen3-5-plus via opencode
+spec:
+    model: qwen3-5-plus
+    host: opencode
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-5-plus

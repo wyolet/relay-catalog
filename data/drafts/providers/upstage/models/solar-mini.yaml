@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: solar-mini
+    displayName: solar-mini
+    owner:
+        kind: provider
+        name: upstage
+    labels:
+        family: solar-mini
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: solar-mini
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 4096
+    contextWindowTotal: 32768
+    maxOutputTokens: 4096
+    knowledgeCutoff: 2024-09
+    releaseDate: "2024-06-12"
+    enabled: true
+    snapshots:
+        - name: solar-mini
+          releasedAt: "2024-06-12"
+    pointer: solar-mini

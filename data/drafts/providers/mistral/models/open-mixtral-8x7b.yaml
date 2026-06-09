@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: open-mixtral-8x7b
+    displayName: Mixtral 8x7B
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: mixtral
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mixtral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 32000
+    contextWindowTotal: 32000
+    maxOutputTokens: 32000
+    knowledgeCutoff: 2024-01
+    releaseDate: "2023-12-11"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: open-mixtral-8x7b
+          releasedAt: "2023-12-11"
+    pointer: open-mixtral-8x7b

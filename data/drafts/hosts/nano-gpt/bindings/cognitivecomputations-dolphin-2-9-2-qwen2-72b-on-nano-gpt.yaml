@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cognitivecomputations-dolphin-2-9-2-qwen2-72b-on-nano-gpt
+    displayName: cognitivecomputations-dolphin-2-9-2-qwen2-72b via nano-gpt
+spec:
+    model: cognitivecomputations-dolphin-2-9-2-qwen2-72b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cognitivecomputations-dolphin-2-9-2-qwen2-72b

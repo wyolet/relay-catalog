@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: ollama-cloud
+    displayName: Ollama Cloud
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://ollama.com/v1
+    pricingStrategies:
+        - sub
+    docsURL: https://docs.ollama.com/cloud

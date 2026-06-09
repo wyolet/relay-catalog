@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: clarifai-openai-chat-completion-models-gpt-oss-120b-high-throughput
+    displayName: openai-chat-completion-models-gpt-oss-120b-high-throughput pricing
+    owner:
+        kind: host
+        id: clarifai
+spec:
+    currency: USD
+    targetModels:
+        - openai-chat-completion-models-gpt-oss-120b-high-throughput
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.09
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.36
+    enabled: true

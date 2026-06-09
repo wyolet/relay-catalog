@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwq-plus-on-llmgateway
+    displayName: qwq-plus via llmgateway
+spec:
+    model: qwq-plus
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwq-plus

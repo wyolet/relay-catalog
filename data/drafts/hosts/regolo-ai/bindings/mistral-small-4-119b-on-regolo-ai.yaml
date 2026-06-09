@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-small-4-119b-on-regolo-ai
+    displayName: mistral-small-4-119b via regolo-ai
+spec:
+    model: mistral-small-4-119b
+    host: regolo-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistral-small-4-119b

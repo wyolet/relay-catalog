@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-gpt-4o-search-preview
+    displayName: 'OpenAI: GPT-4o Search Preview'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    maxOutputTokens: 16384
+    releaseDate: "2025-03-13"
+    enabled: true
+    snapshots:
+        - name: openai-gpt-4o-search-preview
+          releasedAt: "2025-03-13"
+          originalName: openai/gpt-4o-search-preview
+    pointer: openai-gpt-4o-search-preview

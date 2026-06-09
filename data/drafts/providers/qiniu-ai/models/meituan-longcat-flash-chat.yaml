@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: meituan-longcat-flash-chat
+    displayName: Meituan/Longcat-Flash-Chat
+    owner:
+        kind: provider
+        name: qiniu-ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    maxOutputTokens: 131072
+    releaseDate: "2025-11-05"
+    enabled: true
+    snapshots:
+        - name: meituan-longcat-flash-chat
+          releasedAt: "2025-11-05"
+          originalName: meituan/longcat-flash-chat
+    pointer: meituan-longcat-flash-chat

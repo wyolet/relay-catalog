@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: routing-run-route-mimo-v2-5
+    displayName: route-mimo-v2-5 pricing
+    owner:
+        kind: host
+        id: routing-run
+spec:
+    currency: USD
+    targetModels:
+        - route-mimo-v2-5
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.4
+          aboveTokens: 256000
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.45
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+          aboveTokens: 256000
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.35
+        - meter: tokens.output
+          unit: per_million
+          amount: 6
+          aboveTokens: 256000
+    enabled: true

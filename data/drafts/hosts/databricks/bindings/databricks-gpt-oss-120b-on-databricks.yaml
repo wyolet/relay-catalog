@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: databricks-gpt-oss-120b-on-databricks
+    displayName: databricks-gpt-oss-120b via databricks
+spec:
+    model: databricks-gpt-oss-120b
+    host: databricks
+    adapter: openai
+    enabled: true
+    snapshots:
+        - databricks-gpt-oss-120b

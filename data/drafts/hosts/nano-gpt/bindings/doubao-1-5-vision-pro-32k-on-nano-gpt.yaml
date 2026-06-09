@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: doubao-1-5-vision-pro-32k-on-nano-gpt
+    displayName: doubao-1-5-vision-pro-32k via nano-gpt
+spec:
+    model: doubao-1-5-vision-pro-32k
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - doubao-1-5-vision-pro-32k

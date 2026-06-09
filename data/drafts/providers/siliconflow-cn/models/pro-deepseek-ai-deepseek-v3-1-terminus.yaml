@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: pro-deepseek-ai-deepseek-v3-1-terminus
+    displayName: Pro/deepseek-ai/DeepSeek-V3.1-Terminus
+    owner:
+        kind: provider
+        name: siliconflow-cn
+    labels:
+        family: deepseek
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 164000
+    contextWindowOutput: 164000
+    contextWindowTotal: 164000
+    maxOutputTokens: 164000
+    releaseDate: "2025-09-29"
+    enabled: true
+    snapshots:
+        - name: pro-deepseek-ai-deepseek-v3-1-terminus
+          releasedAt: "2025-09-29"
+          originalName: Pro/deepseek-ai/DeepSeek-V3.1-Terminus
+    pointer: pro-deepseek-ai-deepseek-v3-1-terminus

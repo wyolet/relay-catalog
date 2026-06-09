@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hf-nvidia-kimi-k2-5-nvfp4-on-synthetic
+    displayName: hf-nvidia-kimi-k2-5-nvfp4 via synthetic
+spec:
+    model: hf-nvidia-kimi-k2-5-nvfp4
+    host: synthetic
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hf-nvidia-kimi-k2-5-nvfp4

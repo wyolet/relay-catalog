@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: intellect-3
+    displayName: INTELLECT 3
+    owner:
+        kind: provider
+        name: cortecs
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    maxOutputTokens: 128000
+    knowledgeCutoff: 2025-11
+    releaseDate: "2025-11-26"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: intellect-3
+          releasedAt: "2025-11-26"
+    pointer: intellect-3

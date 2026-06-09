@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-coder-480b-a35b-instruct-on-cortecs
+    displayName: qwen3-coder-480b-a35b-instruct via cortecs
+spec:
+    model: qwen3-coder-480b-a35b-instruct
+    host: cortecs
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-coder-480b-a35b-instruct

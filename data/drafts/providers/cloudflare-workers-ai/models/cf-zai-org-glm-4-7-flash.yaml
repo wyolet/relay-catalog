@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cf-zai-org-glm-4-7-flash
+    displayName: GLM-4.7-Flash
+    owner:
+        kind: provider
+        name: cloudflare-workers-ai
+    labels:
+        family: glm-flash
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glm-flash
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    maxOutputTokens: 131072
+    knowledgeCutoff: 2025-04
+    releaseDate: "2026-01-19"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: cf-zai-org-glm-4-7-flash
+          releasedAt: "2026-01-19"
+          originalName: '@cf/zai-org/glm-4.7-flash'
+    pointer: cf-zai-org-glm-4-7-flash

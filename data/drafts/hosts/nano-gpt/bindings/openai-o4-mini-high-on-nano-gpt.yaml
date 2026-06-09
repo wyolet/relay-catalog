@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-o4-mini-high-on-nano-gpt
+    displayName: openai-o4-mini-high via nano-gpt
+spec:
+    model: openai-o4-mini-high
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-o4-mini-high

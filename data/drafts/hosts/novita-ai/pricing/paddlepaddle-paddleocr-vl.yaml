@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: novita-ai-paddlepaddle-paddleocr-vl
+    displayName: paddlepaddle-paddleocr-vl pricing
+    owner:
+        kind: host
+        id: novita-ai
+spec:
+    currency: USD
+    targetModels:
+        - paddlepaddle-paddleocr-vl
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.02
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.02
+    enabled: true

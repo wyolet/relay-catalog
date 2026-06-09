@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-glm-4-plus
+    displayName: glm-4-plus pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - glm-4-plus
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 7.497
+        - meter: tokens.output
+          unit: per_million
+          amount: 7.497
+    enabled: true

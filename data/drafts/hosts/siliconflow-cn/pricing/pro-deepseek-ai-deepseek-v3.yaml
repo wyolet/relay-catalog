@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: siliconflow-cn-pro-deepseek-ai-deepseek-v3
+    displayName: pro-deepseek-ai-deepseek-v3 pricing
+    owner:
+        kind: host
+        id: siliconflow-cn
+spec:
+    currency: USD
+    targetModels:
+        - pro-deepseek-ai-deepseek-v3
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.25
+        - meter: tokens.output
+          unit: per_million
+          amount: 1
+    enabled: true

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-nemo-instruct-on-digitalocean
+    displayName: mistral-nemo-instruct via digitalocean
+spec:
+    model: mistral-nemo-instruct
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistral-nemo-instruct-2407

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kimi-k2-1t-on-ollama-cloud
+    displayName: kimi-k2-1t via ollama-cloud
+spec:
+    model: kimi-k2-1t
+    host: ollama-cloud
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kimi-k2-1t

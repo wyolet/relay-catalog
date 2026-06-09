@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: poe
+    displayName: Poe
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.poe.com/v1
+    pricingStrategies:
+        - api
+    docsURL: https://creator.poe.com/docs/external-applications/openai-compatible-api

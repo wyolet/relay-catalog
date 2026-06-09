@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: moonshotai-kimi-k2-6-on-vultr
+    displayName: moonshotai-kimi-k2-6 via vultr
+spec:
+    model: moonshotai-kimi-k2-6
+    host: vultr
+    adapter: openai
+    enabled: true
+    snapshots:
+        - moonshotai-kimi-k2-6

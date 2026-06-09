@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: routing-run-route-kimi-k2-5
+    displayName: route-kimi-k2-5 pricing
+    owner:
+        kind: host
+        id: routing-run
+spec:
+    currency: USD
+    targetModels:
+        - route-kimi-k2-5
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.462
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.42
+    enabled: true

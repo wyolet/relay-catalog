@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: stepfun-step-3-5-flash-on-qiniu-ai
+    displayName: stepfun-step-3-5-flash via qiniu-ai
+spec:
+    model: stepfun-step-3-5-flash
+    host: qiniu-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - stepfun-step-3-5-flash

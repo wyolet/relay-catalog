@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: step-2-mini-on-nano-gpt
+    displayName: step-2-mini via nano-gpt
+spec:
+    model: step-2-mini
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - step-2-mini

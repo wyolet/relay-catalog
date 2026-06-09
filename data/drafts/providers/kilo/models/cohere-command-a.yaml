@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cohere-command-a
+    displayName: 'Cohere: Command A'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 8192
+    contextWindowTotal: 256000
+    maxOutputTokens: 8192
+    releaseDate: "2025-03-13"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: cohere-command-a
+          releasedAt: "2025-03-13"
+          originalName: cohere/command-a
+    pointer: cohere-command-a

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: synthetic-hf-qwen-qwen3-235b-a22b-thinking
+    displayName: hf-qwen-qwen3-235b-a22b-thinking pricing
+    owner:
+        kind: host
+        id: synthetic
+spec:
+    currency: USD
+    targetModels:
+        - hf-qwen-qwen3-235b-a22b-thinking
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.65
+        - meter: tokens.output
+          unit: per_million
+          amount: 3
+    enabled: true

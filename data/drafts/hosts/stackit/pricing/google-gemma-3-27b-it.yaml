@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: stackit-google-gemma-3-27b-it
+    displayName: google-gemma-3-27b-it pricing
+    owner:
+        kind: host
+        id: stackit
+spec:
+    currency: USD
+    targetModels:
+        - google-gemma-3-27b-it
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.49
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.71
+    enabled: true

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-devstral-small-on-io-net
+    displayName: mistralai-devstral-small via io-net
+spec:
+    model: mistralai-devstral-small
+    host: io-net
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-devstral-small-2505

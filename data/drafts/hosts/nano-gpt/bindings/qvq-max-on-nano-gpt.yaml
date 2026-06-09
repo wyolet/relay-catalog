@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qvq-max-on-nano-gpt
+    displayName: qvq-max via nano-gpt
+spec:
+    model: qvq-max
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qvq-max

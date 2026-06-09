@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: z-ai-glm-4-5v-thinking
+    displayName: GLM 4.5V Thinking
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: glmv
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glmv
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 64000
+    contextWindowOutput: 96000
+    contextWindowTotal: 64000
+    maxOutputTokens: 96000
+    releaseDate: "2025-11-22"
+    enabled: true
+    snapshots:
+        - name: z-ai-glm-4-5v-thinking
+          releasedAt: "2025-11-22"
+          originalName: z-ai/glm-4.5v:thinking
+    pointer: z-ai-glm-4-5v-thinking

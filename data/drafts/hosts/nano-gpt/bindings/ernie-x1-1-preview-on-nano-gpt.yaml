@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: ernie-x1-1-preview-on-nano-gpt
+    displayName: ernie-x1-1-preview via nano-gpt
+spec:
+    model: ernie-x1-1-preview
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - ernie-x1-1-preview

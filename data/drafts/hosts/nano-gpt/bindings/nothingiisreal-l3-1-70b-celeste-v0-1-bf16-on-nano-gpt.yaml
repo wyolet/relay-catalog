@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nothingiisreal-l3-1-70b-celeste-v0-1-bf16-on-nano-gpt
+    displayName: nothingiisreal-l3-1-70b-celeste-v0-1-bf16 via nano-gpt
+spec:
+    model: nothingiisreal-l3-1-70b-celeste-v0-1-bf16
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nothingiisreal-l3-1-70b-celeste-v0-1-bf16

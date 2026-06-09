@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: accounts-fireworks-models-glm-5p1
+    displayName: GLM 5.1
+    owner:
+        kind: provider
+        name: fireworks-ai
+    labels:
+        family: glm
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glm
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 202800
+    contextWindowOutput: 131072
+    contextWindowTotal: 202800
+    maxOutputTokens: 131072
+    releaseDate: "2026-04-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: accounts-fireworks-models-glm-5p1
+          releasedAt: "2026-04-01"
+          originalName: accounts/fireworks/models/glm-5p1
+    pointer: accounts-fireworks-models-glm-5p1

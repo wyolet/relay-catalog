@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: inception-mercury-2-on-openrouter
+    displayName: inception-mercury-2 via openrouter
+spec:
+    model: inception-mercury-2
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - inception-mercury-2

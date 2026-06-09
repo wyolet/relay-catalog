@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: sao10k-l3-3-70b-euryale-v2-3
+    displayName: Llama 3.3 70B Euryale
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 20480
+    contextWindowOutput: 16384
+    contextWindowTotal: 20480
+    maxOutputTokens: 16384
+    releaseDate: "2024-12-06"
+    enabled: true
+    snapshots:
+        - name: sao10k-l3-3-70b-euryale-v2-3
+          releasedAt: "2024-12-06"
+          originalName: Sao10K/L3.3-70B-Euryale-v2.3
+    pointer: sao10k-l3-3-70b-euryale-v2-3

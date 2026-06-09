@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: ministral-8b-on-llmgateway
+    displayName: ministral-8b via llmgateway
+spec:
+    model: ministral-8b
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - ministral-8b-2512

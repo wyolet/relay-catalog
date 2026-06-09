@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: essentialai-rnj-1-instruct-on-kilo
+    displayName: essentialai-rnj-1-instruct via kilo
+spec:
+    model: essentialai-rnj-1-instruct
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - essentialai-rnj-1-instruct

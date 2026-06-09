@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemma-4-e4b-it-iq4-xs-on-atomic-chat
+    displayName: gemma-4-e4b-it-iq4-xs via atomic-chat
+spec:
+    model: gemma-4-e4b-it-iq4-xs
+    host: atomic-chat
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gemma-4-e4b-it-iq4-xs

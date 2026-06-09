@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-ai-deepseek-v4-flash
+    displayName: DeepSeek V4 Flash
+    owner:
+        kind: provider
+        name: gmicloud
+    labels:
+        family: deepseek-flash
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek-flash
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1048575
+    contextWindowOutput: 384000
+    contextWindowTotal: 1048575
+    maxOutputTokens: 384000
+    knowledgeCutoff: 2025-05
+    releaseDate: "2026-04-24"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: deepseek-ai-deepseek-v4-flash
+          releasedAt: "2026-04-24"
+          originalName: deepseek-ai/DeepSeek-V4-Flash
+    pointer: deepseek-ai-deepseek-v4-flash

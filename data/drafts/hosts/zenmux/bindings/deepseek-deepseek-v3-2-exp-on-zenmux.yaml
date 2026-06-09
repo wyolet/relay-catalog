@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-deepseek-v3-2-exp-on-zenmux
+    displayName: deepseek-deepseek-v3-2-exp via zenmux
+spec:
+    model: deepseek-deepseek-v3-2-exp
+    host: zenmux
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-deepseek-v3-2-exp

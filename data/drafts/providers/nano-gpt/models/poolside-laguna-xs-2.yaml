@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: poolside-laguna-xs-2
+    displayName: Laguna XS.2
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32768
+    contextWindowTotal: 128000
+    maxOutputTokens: 32768
+    releaseDate: "2026-04-29"
+    enabled: true
+    snapshots:
+        - name: poolside-laguna-xs-2
+          releasedAt: "2026-04-29"
+          originalName: poolside/laguna-xs.2
+    pointer: poolside-laguna-xs-2

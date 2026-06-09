@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: google
+    displayName: Google
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://ai.google.dev/gemini-api/docs/models

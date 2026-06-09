@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-tencent-hy3-preview
+    displayName: tencent-hy3-preview pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - tencent-hy3-preview
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.029
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.066
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.26
+    enabled: true

@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-gpt-4o-audio-preview
+    displayName: 'OpenAI: GPT-4o Audio'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        audio: true
+        audioInput: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - audio
+            - text
+        output:
+            - audio
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    maxOutputTokens: 16384
+    releaseDate: "2025-08-15"
+    enabled: true
+    snapshots:
+        - name: openai-gpt-4o-audio-preview
+          releasedAt: "2025-08-15"
+          originalName: openai/gpt-4o-audio-preview
+    pointer: openai-gpt-4o-audio-preview

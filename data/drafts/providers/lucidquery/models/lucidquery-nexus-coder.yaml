@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: lucidquery-nexus-coder
+    displayName: LucidQuery Nexus Coder
+    owner:
+        kind: provider
+        name: lucidquery
+    labels:
+        family: lucid
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: lucid
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 250000
+    contextWindowOutput: 60000
+    contextWindowTotal: 250000
+    maxOutputTokens: 60000
+    knowledgeCutoff: "2025-08-01"
+    releaseDate: "2025-09-01"
+    enabled: true
+    snapshots:
+        - name: lucidquery-nexus-coder
+          releasedAt: "2025-09-01"
+    pointer: lucidquery-nexus-coder

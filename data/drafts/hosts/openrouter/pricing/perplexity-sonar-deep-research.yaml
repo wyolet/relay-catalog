@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: openrouter-perplexity-sonar-deep-research
+    displayName: perplexity-sonar-deep-research pricing
+    owner:
+        kind: host
+        id: openrouter
+spec:
+    currency: USD
+    targetModels:
+        - perplexity-sonar-deep-research
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.output
+          unit: per_million
+          amount: 8
+        - meter: tokens.reasoning
+          unit: per_million
+          amount: 3
+    enabled: true

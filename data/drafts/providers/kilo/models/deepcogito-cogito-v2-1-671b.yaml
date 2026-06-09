@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepcogito-cogito-v2-1-671b
+    displayName: 'Deep Cogito: Cogito v2.1 671B'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32768
+    contextWindowTotal: 128000
+    maxOutputTokens: 32768
+    releaseDate: "2025-11-14"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: deepcogito-cogito-v2-1-671b
+          releasedAt: "2025-11-14"
+          originalName: deepcogito/cogito-v2.1-671b
+    pointer: deepcogito-cogito-v2-1-671b

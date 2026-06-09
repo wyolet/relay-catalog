@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: claw-high-on-nano-gpt
+    displayName: claw-high via nano-gpt
+spec:
+    model: claw-high
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - claw-high

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-glm-4-1v-thinking-flash
+    displayName: glm-4-1v-thinking-flash pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - glm-4-1v-thinking-flash
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.3
+    enabled: true

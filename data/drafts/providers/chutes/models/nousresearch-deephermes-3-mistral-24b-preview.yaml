@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nousresearch-deephermes-3-mistral-24b-preview
+    displayName: DeepHermes 3 Mistral 24B Preview
+    owner:
+        kind: provider
+        name: chutes
+    labels:
+        family: nousresearch
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: nousresearch
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    maxOutputTokens: 32768
+    releaseDate: "2025-12-29"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nousresearch-deephermes-3-mistral-24b-preview
+          releasedAt: "2025-12-29"
+          originalName: NousResearch/DeepHermes-3-Mistral-24B-Preview
+    pointer: nousresearch-deephermes-3-mistral-24b-preview

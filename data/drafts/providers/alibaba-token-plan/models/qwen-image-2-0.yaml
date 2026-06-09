@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-image-2-0
+    displayName: Qwen Image 2.0
+    owner:
+        kind: provider
+        name: alibaba-token-plan
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - image
+    contextWindowInput: 8192
+    contextWindowTotal: 8192
+    releaseDate: "2026-03-03"
+    enabled: true
+    snapshots:
+        - name: qwen-image-2-0
+          releasedAt: "2026-03-03"
+          originalName: qwen-image-2.0
+    pointer: qwen-image-2-0

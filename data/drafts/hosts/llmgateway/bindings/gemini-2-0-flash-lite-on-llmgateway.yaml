@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemini-2-0-flash-lite-on-llmgateway
+    displayName: gemini-2-0-flash-lite via llmgateway
+spec:
+    model: gemini-2-0-flash-lite
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gemini-2-0-flash-lite

@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: opencode-go-qwen3-7-plus
+    displayName: qwen3-7-plus pricing
+    owner:
+        kind: host
+        id: opencode-go
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-7-plus
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 1.5
+          aboveTokens: 256000
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.04
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.12
+          aboveTokens: 256000
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.4
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.2
+          aboveTokens: 256000
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.6
+        - meter: tokens.output
+          unit: per_million
+          amount: 4.8
+          aboveTokens: 256000
+    enabled: true

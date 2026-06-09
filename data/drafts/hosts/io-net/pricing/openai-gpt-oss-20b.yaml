@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: io-net-openai-gpt-oss-20b
+    displayName: openai-gpt-oss-20b pricing
+    owner:
+        kind: host
+        id: io-net
+spec:
+    currency: USD
+    targetModels:
+        - openai-gpt-oss-20b
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.06
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.015
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.03
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.14
+    enabled: true

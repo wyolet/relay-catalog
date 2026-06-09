@@ -1,0 +1,13 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: anthropic
+    displayName: Anthropic
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.anthropic.com
+    pricingStrategies:
+        - api
+        - sub
+    docsURL: https://docs.anthropic.com/en/docs/about-claude/models

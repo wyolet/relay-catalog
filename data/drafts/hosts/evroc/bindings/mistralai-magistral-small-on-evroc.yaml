@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-magistral-small-on-evroc
+    displayName: mistralai-magistral-small via evroc
+spec:
+    model: mistralai-magistral-small
+    host: evroc
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-magistral-small-2509

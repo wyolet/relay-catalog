@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: minimax-minimax-m3-thinking
+    displayName: MiniMax M3 Thinking
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 512000
+    contextWindowOutput: 80000
+    contextWindowTotal: 512000
+    maxOutputTokens: 80000
+    releaseDate: "2026-06-01"
+    enabled: true
+    snapshots:
+        - name: minimax-minimax-m3-thinking
+          releasedAt: "2026-06-01"
+          originalName: minimax/minimax-m3:thinking
+    pointer: minimax-minimax-m3-thinking

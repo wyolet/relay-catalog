@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-coder
+    displayName: Qwen3 Coder 480B A35B Instruct Turbo
+    owner:
+        kind: provider
+        name: helicone
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        audio: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+            - video
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 16384
+    contextWindowTotal: 262144
+    maxOutputTokens: 16384
+    knowledgeCutoff: 2025-07
+    releaseDate: "2025-07-23"
+    enabled: true
+    snapshots:
+        - name: qwen3-coder
+          releasedAt: "2025-07-23"
+    pointer: qwen3-coder

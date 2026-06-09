@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter-free
+    displayName: Free Models Router
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - text
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 32768
+    contextWindowTotal: 200000
+    maxOutputTokens: 32768
+    releaseDate: "2026-02-01"
+    enabled: true
+    snapshots:
+        - name: openrouter-free
+          releasedAt: "2026-02-01"
+          originalName: openrouter/free
+    pointer: openrouter-free

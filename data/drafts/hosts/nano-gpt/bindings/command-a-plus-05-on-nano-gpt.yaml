@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: command-a-plus-05-on-nano-gpt
+    displayName: command-a-plus-05 via nano-gpt
+spec:
+    model: command-a-plus-05
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - command-a-plus-05-2026

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: black-forest-labs-flux-1-schnell-on-nvidia
+    displayName: black-forest-labs-flux-1-schnell via nvidia
+spec:
+    model: black-forest-labs-flux-1-schnell
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - black-forest-labs-flux-1-schnell

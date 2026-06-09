@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: github-models-openai-gpt-4-1
+    displayName: openai-gpt-4-1 pricing
+    owner:
+        kind: host
+        id: github-models
+spec:
+    currency: USD
+    targetModels:
+        - openai-gpt-4-1
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

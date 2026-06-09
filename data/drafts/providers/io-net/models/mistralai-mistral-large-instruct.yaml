@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistralai-mistral-large-instruct
+    displayName: Mistral Large Instruct 2411
+    owner:
+        kind: provider
+        name: io-net
+    labels:
+        family: mistral-large
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral-large
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    maxOutputTokens: 4096
+    knowledgeCutoff: 2024-10
+    releaseDate: "2024-11-01"
+    enabled: true
+    snapshots:
+        - name: mistralai-mistral-large-instruct-2411
+          releasedAt: "2024-11-01"
+          originalName: mistralai/Mistral-Large-Instruct-2411
+    pointer: mistralai-mistral-large-instruct-2411

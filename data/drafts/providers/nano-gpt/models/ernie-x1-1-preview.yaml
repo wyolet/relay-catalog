@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ernie-x1-1-preview
+    displayName: ERNIE X1.1
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - pdf
+        output:
+            - text
+    contextWindowInput: 64000
+    contextWindowOutput: 8192
+    contextWindowTotal: 64000
+    maxOutputTokens: 8192
+    releaseDate: "2025-09-10"
+    enabled: true
+    snapshots:
+        - name: ernie-x1-1-preview
+          releasedAt: "2025-09-10"
+          originalName: ernie-x1.1-preview
+    pointer: ernie-x1-1-preview

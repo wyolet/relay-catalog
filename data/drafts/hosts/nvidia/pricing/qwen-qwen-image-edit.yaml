@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nvidia-qwen-qwen-image-edit
+    displayName: qwen-qwen-image-edit pricing
+    owner:
+        kind: host
+        id: nvidia
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen-image-edit
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

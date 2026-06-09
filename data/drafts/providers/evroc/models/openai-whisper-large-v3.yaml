@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-whisper-large-v3
+    displayName: Whisper 3 Large
+    owner:
+        kind: provider
+        name: evroc
+    labels:
+        family: whisper
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: whisper
+    capabilities:
+        chat: true
+        streaming: true
+        audio: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - audio
+        output:
+            - text
+    contextWindowInput: 448
+    contextWindowOutput: 4096
+    contextWindowTotal: 448
+    maxOutputTokens: 4096
+    releaseDate: "2024-10-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: openai-whisper-large-v3
+          releasedAt: "2024-10-01"
+          originalName: openai/whisper-large-v3
+    pointer: openai-whisper-large-v3

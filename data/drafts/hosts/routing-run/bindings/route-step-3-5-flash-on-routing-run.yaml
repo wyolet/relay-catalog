@@ -1,0 +1,13 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: route-step-3-5-flash-on-routing-run
+    displayName: route-step-3-5-flash via routing-run
+spec:
+    model: route-step-3-5-flash
+    host: routing-run
+    adapter: openai
+    enabled: true
+    snapshots:
+        - route-step-3-5-flash
+        - route-step-3-5-flash-2603

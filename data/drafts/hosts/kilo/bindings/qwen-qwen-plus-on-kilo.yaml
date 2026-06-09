@@ -1,0 +1,13 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen-plus-on-kilo
+    displayName: qwen-qwen-plus via kilo
+spec:
+    model: qwen-qwen-plus
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen-plus
+        - qwen-qwen-plus-2025-07-28

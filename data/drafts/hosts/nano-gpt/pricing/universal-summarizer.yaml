@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-universal-summarizer
+    displayName: universal-summarizer pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - universal-summarizer
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 30
+        - meter: tokens.output
+          unit: per_million
+          amount: 30
+    enabled: true

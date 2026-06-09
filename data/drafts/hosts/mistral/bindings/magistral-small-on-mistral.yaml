@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: magistral-small-on-mistral
+    displayName: magistral-small via mistral
+spec:
+    model: magistral-small
+    host: mistral
+    adapter: openai
+    enabled: true
+    snapshots:
+        - magistral-small

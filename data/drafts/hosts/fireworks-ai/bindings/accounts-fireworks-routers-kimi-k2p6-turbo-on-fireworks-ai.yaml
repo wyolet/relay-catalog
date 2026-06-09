@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: accounts-fireworks-routers-kimi-k2p6-turbo-on-fireworks-ai
+    displayName: accounts-fireworks-routers-kimi-k2p6-turbo via fireworks-ai
+spec:
+    model: accounts-fireworks-routers-kimi-k2p6-turbo
+    host: fireworks-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - accounts-fireworks-routers-kimi-k2p6-turbo

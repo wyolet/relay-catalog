@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-gpt-image-1-mini
+    displayName: GPT-Image-1-Mini
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: gpt
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - image
+    releaseDate: "2025-08-26"
+    enabled: true
+    snapshots:
+        - name: openai-gpt-image-1-mini
+          releasedAt: "2025-08-26"
+          originalName: openai/gpt-image-1-mini
+    pointer: openai-gpt-image-1-mini

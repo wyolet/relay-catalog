@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: morph-morph-v3-large
+    displayName: 'Morph: Morph V3 Large'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 131072
+    contextWindowTotal: 262144
+    maxOutputTokens: 131072
+    releaseDate: "2024-08-15"
+    enabled: true
+    snapshots:
+        - name: morph-morph-v3-large
+          releasedAt: "2024-08-15"
+          originalName: morph/morph-v3-large
+    pointer: morph-morph-v3-large

@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: xiaomimimo-mimo-v2-flash
+    displayName: MiMo-V2-Flash
+    owner:
+        kind: provider
+        name: huggingface
+    labels:
+        family: mimo
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mimo
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 4096
+    contextWindowTotal: 262144
+    maxOutputTokens: 4096
+    knowledgeCutoff: 2024-12
+    releaseDate: "2025-12-16"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: xiaomimimo-mimo-v2-flash
+          releasedAt: "2025-12-16"
+          originalName: XiaomiMiMo/MiMo-V2-Flash
+    pointer: xiaomimimo-mimo-v2-flash

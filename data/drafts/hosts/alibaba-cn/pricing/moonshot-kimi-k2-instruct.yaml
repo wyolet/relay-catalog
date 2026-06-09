@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-cn-moonshot-kimi-k2-instruct
+    displayName: moonshot-kimi-k2-instruct pricing
+    owner:
+        kind: host
+        id: alibaba-cn
+spec:
+    currency: USD
+    targetModels:
+        - moonshot-kimi-k2-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.574
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.294
+    enabled: true

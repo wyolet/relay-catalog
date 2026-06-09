@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-coder-30b-a3b-instruct-on-modelscope
+    displayName: qwen-qwen3-coder-30b-a3b-instruct via modelscope
+spec:
+    model: qwen-qwen3-coder-30b-a3b-instruct
+    host: modelscope
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-coder-30b-a3b-instruct

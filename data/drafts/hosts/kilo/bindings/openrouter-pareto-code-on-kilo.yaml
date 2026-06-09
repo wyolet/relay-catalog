@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openrouter-pareto-code-on-kilo
+    displayName: openrouter-pareto-code via kilo
+spec:
+    model: openrouter-pareto-code
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openrouter-pareto-code

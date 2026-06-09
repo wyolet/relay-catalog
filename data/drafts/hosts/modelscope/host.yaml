@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: modelscope
+    displayName: ModelScope
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api-inference.modelscope.cn/v1
+    pricingStrategies:
+        - api
+    docsURL: https://modelscope.cn/docs/model-service/API-Inference/intro

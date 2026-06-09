@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: e5-large-v2-on-digitalocean
+    displayName: e5-large-v2 via digitalocean
+spec:
+    model: e5-large-v2
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - e5-large-v2

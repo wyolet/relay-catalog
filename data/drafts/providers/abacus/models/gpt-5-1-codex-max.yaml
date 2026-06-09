@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-5-1-codex-max
+    displayName: GPT-5.1 Codex Max
+    owner:
+        kind: provider
+        name: abacus
+    labels:
+        family: gpt
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 272000
+    contextWindowOutput: 128000
+    contextWindowTotal: 400000
+    maxOutputTokens: 128000
+    knowledgeCutoff: "2024-09-30"
+    releaseDate: "2025-11-13"
+    enabled: true
+    snapshots:
+        - name: gpt-5-1-codex-max
+          releasedAt: "2025-11-13"
+          originalName: gpt-5.1-codex-max
+    pointer: gpt-5-1-codex-max

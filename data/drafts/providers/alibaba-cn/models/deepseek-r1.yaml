@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-r1
+    displayName: DeepSeek R1
+    owner:
+        kind: provider
+        name: alibaba-cn
+    labels:
+        family: deepseek-thinking
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek-thinking
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 16384
+    contextWindowTotal: 131072
+    maxOutputTokens: 16384
+    releaseDate: "2025-01-01"
+    enabled: true
+    snapshots:
+        - name: deepseek-r1
+          releasedAt: "2025-01-01"
+        - name: deepseek-r1-0528
+          releasedAt: "2025-05-28"
+    pointer: deepseek-r1

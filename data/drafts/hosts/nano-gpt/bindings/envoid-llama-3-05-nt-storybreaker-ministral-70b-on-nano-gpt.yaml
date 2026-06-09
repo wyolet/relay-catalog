@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: envoid-llama-3-05-nt-storybreaker-ministral-70b-on-nano-gpt
+    displayName: envoid-llama-3-05-nt-storybreaker-ministral-70b via nano-gpt
+spec:
+    model: envoid-llama-3-05-nt-storybreaker-ministral-70b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - envoid-llama-3-05-nt-storybreaker-ministral-70b

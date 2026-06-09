@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma-3-27b-it
+    displayName: Gemma-3-27B-IT
+    owner:
+        kind: provider
+        name: scaleway
+    labels:
+        family: gemma
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gemma
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 40000
+    contextWindowOutput: 8192
+    contextWindowTotal: 40000
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2024-12
+    releaseDate: "2024-12-01"
+    enabled: true
+    snapshots:
+        - name: gemma-3-27b-it
+          releasedAt: "2024-12-01"
+    pointer: gemma-3-27b-it

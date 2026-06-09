@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nvidia-nvidia-rerank-qa-mistral-4b
+    displayName: nvidia-rerank-qa-mistral-4b pricing
+    owner:
+        kind: host
+        id: nvidia
+spec:
+    currency: USD
+    targetModels:
+        - nvidia-rerank-qa-mistral-4b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-ministral-14b-instruct-on-nano-gpt
+    displayName: mistralai-ministral-14b-instruct via nano-gpt
+spec:
+    model: mistralai-ministral-14b-instruct
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-ministral-14b-instruct-2512

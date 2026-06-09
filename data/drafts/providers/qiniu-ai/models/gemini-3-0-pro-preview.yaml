@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-3-0-pro-preview
+    displayName: Gemini 3.0 Pro Preview
+    owner:
+        kind: provider
+        name: qiniu-ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        audio: true
+        reasoning: true
+        fileInput: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+            - pdf
+            - audio
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 64000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 64000
+    releaseDate: "2025-11-19"
+    enabled: true
+    snapshots:
+        - name: gemini-3-0-pro-preview
+          releasedAt: "2025-11-19"
+          originalName: gemini-3.0-pro-preview
+    pointer: gemini-3-0-pro-preview

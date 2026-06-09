@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter-owl-alpha
+    displayName: Owl Alpha
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1048756
+    contextWindowOutput: 262144
+    contextWindowTotal: 1048756
+    maxOutputTokens: 262144
+    releaseDate: "2026-04-28"
+    enabled: true
+    snapshots:
+        - name: openrouter-owl-alpha
+          releasedAt: "2026-04-28"
+          originalName: openrouter/owl-alpha
+    pointer: openrouter-owl-alpha

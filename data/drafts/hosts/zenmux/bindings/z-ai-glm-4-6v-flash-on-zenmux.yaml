@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: z-ai-glm-4-6v-flash-on-zenmux
+    displayName: z-ai-glm-4-6v-flash via zenmux
+spec:
+    model: z-ai-glm-4-6v-flash
+    host: zenmux
+    adapter: openai
+    enabled: true
+    snapshots:
+        - z-ai-glm-4-6v-flash

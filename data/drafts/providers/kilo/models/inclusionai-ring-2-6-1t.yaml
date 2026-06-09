@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: inclusionai-ring-2-6-1t
+    displayName: 'inclusionAI: Ring-2.6-1T'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 65536
+    contextWindowTotal: 262144
+    maxOutputTokens: 65536
+    releaseDate: "2026-05-08"
+    enabled: true
+    snapshots:
+        - name: inclusionai-ring-2-6-1t
+          releasedAt: "2026-05-08"
+          originalName: inclusionai/ring-2.6-1t
+    pointer: inclusionai-ring-2-6-1t

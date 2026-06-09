@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwenlm-models-qwen3-30b-a3b-instruct-on-clarifai
+    displayName: qwen-qwenlm-models-qwen3-30b-a3b-instruct via clarifai
+spec:
+    model: qwen-qwenlm-models-qwen3-30b-a3b-instruct
+    host: clarifai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwenlm-models-qwen3-30b-a3b-instruct-2507

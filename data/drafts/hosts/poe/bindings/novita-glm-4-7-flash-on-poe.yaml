@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: novita-glm-4-7-flash-on-poe
+    displayName: novita-glm-4-7-flash via poe
+spec:
+    model: novita-glm-4-7-flash
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - novita-glm-4-7-flash

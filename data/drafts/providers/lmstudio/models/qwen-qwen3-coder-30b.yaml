@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-coder-30b
+    displayName: Qwen3 Coder 30B
+    owner:
+        kind: provider
+        name: lmstudio
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 65536
+    contextWindowTotal: 262144
+    maxOutputTokens: 65536
+    knowledgeCutoff: 2025-04
+    releaseDate: "2025-07-23"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-coder-30b
+          releasedAt: "2025-07-23"
+          originalName: qwen/qwen3-coder-30b
+    pointer: qwen-qwen3-coder-30b

@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: moonshotai-kimi-k2-5-fast
+    displayName: Kimi-K2.5-fast
+    owner:
+        kind: provider
+        name: nebius
+    labels:
+        family: kimi
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: kimi
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 8192
+    contextWindowTotal: 256000
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2025-06
+    releaseDate: "2025-12-15"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: moonshotai-kimi-k2-5-fast
+          releasedAt: "2025-12-15"
+          originalName: moonshotai/Kimi-K2.5-fast
+    pointer: moonshotai-kimi-k2-5-fast

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: arcee-ai-trinity-mini-on-kilo
+    displayName: arcee-ai-trinity-mini via kilo
+spec:
+    model: arcee-ai-trinity-mini
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - arcee-ai-trinity-mini

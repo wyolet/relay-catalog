@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mimo-v2-5-tts-voicedesign-on-xiaomi-token-plan-ams
+    displayName: mimo-v2-5-tts-voicedesign via xiaomi-token-plan-ams
+spec:
+    model: mimo-v2-5-tts-voicedesign
+    host: xiaomi-token-plan-ams
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mimo-v2-5-tts-voicedesign

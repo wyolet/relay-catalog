@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama-3-1-8b-instruct
+    displayName: Meta Llama 3.1 8B Instruct
+    owner:
+        kind: provider
+        name: helicone
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 16384
+    contextWindowTotal: 16384
+    maxOutputTokens: 16384
+    knowledgeCutoff: 2024-07
+    releaseDate: "2024-07-23"
+    enabled: true
+    snapshots:
+        - name: llama-3-1-8b-instruct
+          releasedAt: "2024-07-23"
+          originalName: llama-3.1-8b-instruct
+    pointer: llama-3-1-8b-instruct

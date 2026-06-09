@@ -1,0 +1,14 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: moonshotai-kimi-k2-instruct-on-nano-gpt
+    displayName: moonshotai-kimi-k2-instruct via nano-gpt
+spec:
+    model: moonshotai-kimi-k2-instruct
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - moonshotai-kimi-k2-instruct-0905
+        - moonshotai-kimi-k2-instruct
+        - moonshotai-kimi-k2-instruct-0711

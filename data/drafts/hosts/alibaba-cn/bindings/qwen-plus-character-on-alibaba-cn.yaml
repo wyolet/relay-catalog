@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-plus-character-on-alibaba-cn
+    displayName: qwen-plus-character via alibaba-cn
+spec:
+    model: qwen-plus-character
+    host: alibaba-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-plus-character

@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: io-net-meta-llama-llama-3-3-70b-instruct
+    displayName: meta-llama-llama-3-3-70b-instruct pricing
+    owner:
+        kind: host
+        id: io-net
+spec:
+    currency: USD
+    targetModels:
+        - meta-llama-llama-3-3-70b-instruct
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.26
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.065
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.13
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.38
+    enabled: true

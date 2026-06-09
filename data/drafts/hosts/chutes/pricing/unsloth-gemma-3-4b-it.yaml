@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: chutes-unsloth-gemma-3-4b-it
+    displayName: unsloth-gemma-3-4b-it pricing
+    owner:
+        kind: host
+        id: chutes
+spec:
+    currency: USD
+    targetModels:
+        - unsloth-gemma-3-4b-it
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.005
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.01
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.0272
+    enabled: true

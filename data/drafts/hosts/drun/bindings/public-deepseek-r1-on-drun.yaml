@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: public-deepseek-r1-on-drun
+    displayName: public-deepseek-r1 via drun
+spec:
+    model: public-deepseek-r1
+    host: drun
+    adapter: openai
+    enabled: true
+    snapshots:
+        - public-deepseek-r1

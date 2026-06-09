@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: scaleway
+    displayName: Scaleway
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.scaleway.ai/v1
+    pricingStrategies:
+        - api
+    docsURL: https://www.scaleway.com/en/docs/generative-apis/

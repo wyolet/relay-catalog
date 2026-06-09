@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-ai-deepseek-vl2-on-siliconflow
+    displayName: deepseek-ai-deepseek-vl2 via siliconflow
+spec:
+    model: deepseek-ai-deepseek-vl2
+    host: siliconflow
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-ai-deepseek-vl2

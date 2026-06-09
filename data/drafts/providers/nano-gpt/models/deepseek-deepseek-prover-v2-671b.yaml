@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-deepseek-prover-v2-671b
+    displayName: DeepSeek Prover v2 671B
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: deepseek
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 160000
+    contextWindowOutput: 16384
+    contextWindowTotal: 160000
+    maxOutputTokens: 16384
+    releaseDate: "2025-04-30"
+    enabled: true
+    snapshots:
+        - name: deepseek-deepseek-prover-v2-671b
+          releasedAt: "2025-04-30"
+          originalName: deepseek/deepseek-prover-v2-671b
+    pointer: deepseek-deepseek-prover-v2-671b

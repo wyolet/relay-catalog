@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: abacus
+    displayName: Abacus
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://routellm.abacus.ai/v1
+    pricingStrategies:
+        - api
+    docsURL: https://abacus.ai/help/api

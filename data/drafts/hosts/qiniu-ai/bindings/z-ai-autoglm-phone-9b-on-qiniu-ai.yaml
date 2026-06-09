@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: z-ai-autoglm-phone-9b-on-qiniu-ai
+    displayName: z-ai-autoglm-phone-9b via qiniu-ai
+spec:
+    model: z-ai-autoglm-phone-9b
+    host: qiniu-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - z-ai-autoglm-phone-9b

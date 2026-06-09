@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: meta-llama-llama-3-3-70b-instruct-on-wandb
+    displayName: meta-llama-llama-3-3-70b-instruct via wandb
+spec:
+    model: meta-llama-llama-3-3-70b-instruct
+    host: wandb
+    adapter: openai
+    enabled: true
+    snapshots:
+        - meta-llama-llama-3-3-70b-instruct

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: thudm-glm-4-32b-on-siliconflow
+    displayName: thudm-glm-4-32b via siliconflow
+spec:
+    model: thudm-glm-4-32b
+    host: siliconflow
+    adapter: openai
+    enabled: true
+    snapshots:
+        - thudm-glm-4-32b-0414

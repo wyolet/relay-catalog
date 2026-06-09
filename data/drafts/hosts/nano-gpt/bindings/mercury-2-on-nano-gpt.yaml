@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mercury-2-on-nano-gpt
+    displayName: mercury-2 via nano-gpt
+spec:
+    model: mercury-2
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mercury-2

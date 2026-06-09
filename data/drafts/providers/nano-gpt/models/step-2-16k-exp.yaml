@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: step-2-16k-exp
+    displayName: Step-2 16k Exp
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16000
+    contextWindowOutput: 8192
+    contextWindowTotal: 16000
+    maxOutputTokens: 8192
+    releaseDate: "2024-07-05"
+    enabled: true
+    snapshots:
+        - name: step-2-16k-exp
+          releasedAt: "2024-07-05"
+    pointer: step-2-16k-exp

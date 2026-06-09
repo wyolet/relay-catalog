@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: route-mistral-large-3
+    displayName: Mistral Large 3
+    owner:
+        kind: provider
+        name: routing-run
+    labels:
+        family: mistral-large
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral-large
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32768
+    contextWindowTotal: 128000
+    maxOutputTokens: 32768
+    knowledgeCutoff: 2024-11
+    releaseDate: "2024-11-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: route-mistral-large-3
+          releasedAt: "2024-11-01"
+          originalName: route/mistral-large-3
+    pointer: route-mistral-large-3

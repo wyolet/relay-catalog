@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: siliconflow-zai-org-glm-5v-turbo
+    displayName: zai-org-glm-5v-turbo pricing
+    owner:
+        kind: host
+        id: siliconflow
+spec:
+    currency: USD
+    targetModels:
+        - zai-org-glm-5v-turbo
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.2
+        - meter: tokens.output
+          unit: per_million
+          amount: 4
+    enabled: true

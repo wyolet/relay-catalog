@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-vl-235b-a22b-instruct
+    displayName: Qwen3 VL 235B A22B Instruct
+    owner:
+        kind: provider
+        name: helicone
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 16384
+    contextWindowTotal: 256000
+    maxOutputTokens: 16384
+    knowledgeCutoff: 2025-09
+    releaseDate: "2025-09-23"
+    enabled: true
+    snapshots:
+        - name: qwen3-vl-235b-a22b-instruct
+          releasedAt: "2025-09-23"
+    pointer: qwen3-vl-235b-a22b-instruct

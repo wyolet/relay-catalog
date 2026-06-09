@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: digitalocean-gte-large-en-v1-5
+    displayName: gte-large-en-v1-5 pricing
+    owner:
+        kind: host
+        id: digitalocean
+spec:
+    currency: USD
+    targetModels:
+        - gte-large-en-v1-5
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.09
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

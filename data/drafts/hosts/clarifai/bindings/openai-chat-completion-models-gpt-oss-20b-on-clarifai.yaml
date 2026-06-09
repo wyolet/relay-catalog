@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-chat-completion-models-gpt-oss-20b-on-clarifai
+    displayName: openai-chat-completion-models-gpt-oss-20b via clarifai
+spec:
+    model: openai-chat-completion-models-gpt-oss-20b
+    host: clarifai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-chat-completion-models-gpt-oss-20b

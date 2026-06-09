@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: synthetic-hf-minimaxai-minimax-m2
+    displayName: hf-minimaxai-minimax-m2 pricing
+    owner:
+        kind: host
+        id: synthetic
+spec:
+    currency: USD
+    targetModels:
+        - hf-minimaxai-minimax-m2
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.55
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.19
+    enabled: true

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-6-35b-a3b-on-wafer.ai
+    displayName: qwen3-6-35b-a3b via wafer.ai
+spec:
+    model: qwen3-6-35b-a3b
+    host: wafer.ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-6-35b-a3b

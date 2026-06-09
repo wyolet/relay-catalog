@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nemotron-3-super-120b-a12b
+    displayName: Nemotron 3 Super 120B A12B
+    owner:
+        kind: provider
+        name: cortecs
+    labels:
+        family: nemotron
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: nemotron
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    maxOutputTokens: 262144
+    knowledgeCutoff: 2025-12
+    releaseDate: "2026-03-11"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nemotron-3-super-120b-a12b
+          releasedAt: "2026-03-11"
+    pointer: nemotron-3-super-120b-a12b

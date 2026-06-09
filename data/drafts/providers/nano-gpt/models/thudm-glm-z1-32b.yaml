@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: thudm-glm-z1-32b
+    displayName: GLM Z1 32B 0414
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: glm-z
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glm-z
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 65536
+    contextWindowTotal: 128000
+    maxOutputTokens: 65536
+    releaseDate: "2025-04-15"
+    enabled: true
+    snapshots:
+        - name: thudm-glm-z1-32b-0414
+          releasedAt: "2025-04-15"
+          originalName: THUDM/GLM-Z1-32B-0414
+    pointer: thudm-glm-z1-32b-0414

@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-coder-next-tee
+    displayName: Qwen3 Coder Next TEE
+    owner:
+        kind: provider
+        name: chutes
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 65536
+    contextWindowTotal: 262144
+    maxOutputTokens: 65536
+    releaseDate: "2026-04-25"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-coder-next-tee
+          releasedAt: "2026-04-25"
+          originalName: Qwen/Qwen3-Coder-Next-TEE
+    pointer: qwen-qwen3-coder-next-tee

@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-ai-mistral-small
+    displayName: Mistral Small 3.1
+    owner:
+        kind: provider
+        name: github-models
+    labels:
+        family: mistral-small
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral-small
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32768
+    contextWindowTotal: 128000
+    maxOutputTokens: 32768
+    knowledgeCutoff: 2024-09
+    releaseDate: "2025-03-01"
+    enabled: true
+    snapshots:
+        - name: mistral-ai-mistral-small-2503
+          releasedAt: "2025-03-01"
+          originalName: mistral-ai/mistral-small-2503
+    pointer: mistral-ai-mistral-small-2503

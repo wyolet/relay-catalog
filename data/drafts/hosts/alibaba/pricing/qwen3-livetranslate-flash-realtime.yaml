@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-qwen3-livetranslate-flash-realtime
+    displayName: qwen3-livetranslate-flash-realtime pricing
+    owner:
+        kind: host
+        id: alibaba
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-livetranslate-flash-realtime
+    rates:
+        - meter: tokens.audio_input
+          unit: per_million
+          amount: 10
+        - meter: tokens.audio_output
+          unit: per_million
+          amount: 38
+        - meter: tokens.input
+          unit: per_million
+          amount: 10
+        - meter: tokens.output
+          unit: per_million
+          amount: 10
+    enabled: true

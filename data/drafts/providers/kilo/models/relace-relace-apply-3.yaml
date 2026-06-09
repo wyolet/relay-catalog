@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: relace-relace-apply-3
+    displayName: 'Relace: Relace Apply 3'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 128000
+    contextWindowTotal: 256000
+    maxOutputTokens: 128000
+    releaseDate: "2025-09-26"
+    enabled: true
+    snapshots:
+        - name: relace-relace-apply-3
+          releasedAt: "2025-09-26"
+          originalName: relace/relace-apply-3
+    pointer: relace-relace-apply-3

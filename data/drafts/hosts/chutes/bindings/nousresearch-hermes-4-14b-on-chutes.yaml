@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nousresearch-hermes-4-14b-on-chutes
+    displayName: nousresearch-hermes-4-14b via chutes
+spec:
+    model: nousresearch-hermes-4-14b
+    host: chutes
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nousresearch-hermes-4-14b

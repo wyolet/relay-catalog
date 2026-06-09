@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-turbo-on-qiniu-ai
+    displayName: qwen-turbo via qiniu-ai
+spec:
+    model: qwen-turbo
+    host: qiniu-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-turbo
