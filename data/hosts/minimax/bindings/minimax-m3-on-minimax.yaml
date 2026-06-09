@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimax-m3-on-minimax
+    displayName: minimax-m3 via minimax
+spec:
+    model: minimax-m3
+    host: minimax
+    adapter: anthropic
+    enabled: true
+    snapshots:
+        - minimax-m3

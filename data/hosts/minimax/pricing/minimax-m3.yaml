@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: minimax-minimax-m3
+    displayName: minimax-m3 pricing
+    owner:
+        kind: host
+        id: minimax
+spec:
+    currency: USD
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.12
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.24
+          aboveTokens: 512000
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.6
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.2
+          aboveTokens: 512000
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.4
+        - meter: tokens.output
+          unit: per_million
+          amount: 4.8
+          aboveTokens: 512000
+    targetModels:
+        - minimax-m3
+    enabled: true

@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mimo-v2-flash
+    displayName: MiMo-V2-Flash
+    owner:
+        kind: provider
+        name: xiaomi
+    labels:
+        family: mimo
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mimo
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 65536
+    contextWindowTotal: 262144
+    maxOutputTokens: 65536
+    knowledgeCutoff: "2024-12-01"
+    releaseDate: "2025-12-16"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mimo-v2-flash
+          releasedAt: "2025-12-16"
+    pointer: mimo-v2-flash
