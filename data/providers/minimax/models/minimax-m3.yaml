@@ -27,9 +27,9 @@ spec:
             - video
         output:
             - text
-    contextWindowInput: 1000000
+    contextWindowInput: 512000
     contextWindowOutput: 128000
-    contextWindowTotal: 1000000
+    contextWindowTotal: 512000
     maxOutputTokens: 128000
     releaseDate: "2026-06-01"
     tags:
