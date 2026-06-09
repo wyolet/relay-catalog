@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+  name: gemini-3-1-pro-preview-customtools
+  displayName: Gemini 3.1 Pro Preview Custom Tools
+  owner:
+    kind: provider
+    name: google
+  labels:
+    family: gemini-pro
+    source: models.dev
+    source_version: '2026-06-09'
+spec:
+  family: gemini-pro
+  capabilities:
+    chat: true
+    streaming: true
+    tools: true
+    vision: true
+    audio: true
+    promptCache: true
+    reasoning: true
+    fileInput: true
+    audioInput: true
+    systemMessages: true
+  modalities:
+    input:
+    - text
+    - image
+    - video
+    - audio
+    - pdf
+    output:
+    - text
+  contextWindowInput: 1048576
+  contextWindowOutput: 65536
+  contextWindowTotal: 1048576
+  maxOutputTokens: 65536
+  knowledgeCutoff: 2025-01
+  releaseDate: '2026-02-19'
+  enabled: true
+  snapshots:
+  - name: gemini-3-1-pro-preview-customtools
+    originalName: gemini-3.1-pro-preview-customtools
+  pointer: gemini-3-1-pro-preview-customtools

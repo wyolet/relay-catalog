@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-qvq-max
+    displayName: qvq-max pricing
+    owner:
+        kind: host
+        id: alibaba
+spec:
+    currency: USD
+    targetModels:
+        - qvq-max
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.2
+        - meter: tokens.output
+          unit: per_million
+          amount: 4.8
+    enabled: true

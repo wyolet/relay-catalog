@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+  name: qwen3-asr-flash
+  displayName: Qwen3-ASR Flash
+  owner:
+    kind: provider
+    name: alibaba
+  labels:
+    family: qwen
+    source: models.dev
+    source_version: '2026-06-09'
+spec:
+  family: qwen
+  capabilities:
+    chat: true
+    streaming: true
+    audio: true
+    audioInput: true
+    systemMessages: true
+  modalities:
+    input:
+    - audio
+    output:
+    - text
+  contextWindowInput: 53248
+  contextWindowOutput: 4096
+  contextWindowTotal: 53248
+  maxOutputTokens: 4096
+  knowledgeCutoff: 2024-04
+  releaseDate: '2025-09-08'
+  enabled: true
+  snapshots:
+  - name: qwen3-asr-flash
+  pointer: qwen3-asr-flash

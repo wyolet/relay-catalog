@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: mistral-open-mistral-nemo
+    displayName: open-mistral-nemo pricing
+    owner:
+        kind: host
+        id: mistral
+spec:
+    currency: USD
+    targetModels:
+        - open-mistral-nemo
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.15
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.15
+    enabled: true

@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+  name: qwen3-6-flash
+  displayName: Qwen3.6 Flash
+  owner:
+    kind: provider
+    name: alibaba
+  labels:
+    family: qwen3.6
+    source: models.dev
+    source_version: '2026-06-09'
+spec:
+  family: qwen3.6
+  capabilities:
+    chat: true
+    streaming: true
+    tools: true
+    vision: true
+    promptCache: true
+    reasoning: true
+    systemMessages: true
+  modalities:
+    input:
+    - text
+    - image
+    - video
+    output:
+    - text
+  contextWindowInput: 1000000
+  contextWindowOutput: 65536
+  contextWindowTotal: 1000000
+  maxOutputTokens: 65536
+  releaseDate: '2026-04-27'
+  enabled: true
+  snapshots:
+  - name: qwen3-6-flash
+    originalName: qwen3.6-flash
+    releasedAt: '2026-04-16'
+  pointer: qwen3-6-flash

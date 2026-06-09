@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-qwen3-6-max-preview
+    displayName: qwen3-6-max-preview pricing
+    owner:
+        kind: host
+        id: alibaba
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-6-max-preview
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 1.625
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.13
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 7.8
+    enabled: true
