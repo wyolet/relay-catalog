@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: orcarouter-qwen-qwen3-6-35b-a3b
+    displayName: qwen-qwen3-6-35b-a3b pricing
+    owner:
+        kind: host
+        id: orcarouter
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen3-6-35b-a3b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.248
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.485
+    enabled: true

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-lyria-3-clip-preview-on-openrouter
+    displayName: google-lyria-3-clip-preview via openrouter
+spec:
+    model: google-lyria-3-clip-preview
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-lyria-3-clip-preview

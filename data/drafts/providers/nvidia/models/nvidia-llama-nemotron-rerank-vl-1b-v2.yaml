@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nvidia-llama-nemotron-rerank-vl-1b-v2
+    displayName: llama-nemotron-rerank-vl-1b-v2
+    owner:
+        kind: provider
+        name: nvidia
+    labels:
+        family: nemotron
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: nemotron
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    maxOutputTokens: 4096
+    releaseDate: "2026-03-31"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nvidia-llama-nemotron-rerank-vl-1b-v2
+          releasedAt: "2026-03-31"
+          originalName: nvidia/llama-nemotron-rerank-vl-1b-v2
+    pointer: nvidia-llama-nemotron-rerank-vl-1b-v2

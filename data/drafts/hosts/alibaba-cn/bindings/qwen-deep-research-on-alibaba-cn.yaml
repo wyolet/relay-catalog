@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-deep-research-on-alibaba-cn
+    displayName: qwen-deep-research via alibaba-cn
+spec:
+    model: qwen-deep-research
+    host: alibaba-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-deep-research

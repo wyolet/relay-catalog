@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: glm-4-6-derestricted-v5
+    displayName: GLM 4.6 Derestricted v5
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 8192
+    contextWindowTotal: 131072
+    maxOutputTokens: 8192
+    releaseDate: "2025-12-23"
+    enabled: true
+    snapshots:
+        - name: glm-4-6-derestricted-v5
+          releasedAt: "2025-12-23"
+          originalName: GLM-4.6-Derestricted-v5
+    pointer: glm-4-6-derestricted-v5

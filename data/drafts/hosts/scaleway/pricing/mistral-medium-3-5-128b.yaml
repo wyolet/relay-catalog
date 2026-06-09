@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: scaleway-mistral-medium-3-5-128b
+    displayName: mistral-medium-3-5-128b pricing
+    owner:
+        kind: host
+        id: scaleway
+spec:
+    currency: USD
+    targetModels:
+        - mistral-medium-3-5-128b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 7.5
+    enabled: true

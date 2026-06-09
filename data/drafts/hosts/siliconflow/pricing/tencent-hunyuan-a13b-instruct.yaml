@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: siliconflow-tencent-hunyuan-a13b-instruct
+    displayName: tencent-hunyuan-a13b-instruct pricing
+    owner:
+        kind: host
+        id: siliconflow
+spec:
+    currency: USD
+    targetModels:
+        - tencent-hunyuan-a13b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.14
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.57
+    enabled: true

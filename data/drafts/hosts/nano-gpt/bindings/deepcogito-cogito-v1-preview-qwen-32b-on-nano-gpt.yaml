@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepcogito-cogito-v1-preview-qwen-32b-on-nano-gpt
+    displayName: deepcogito-cogito-v1-preview-qwen-32b via nano-gpt
+spec:
+    model: deepcogito-cogito-v1-preview-qwen-32b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepcogito-cogito-v1-preview-qwen-32b

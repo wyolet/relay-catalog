@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: chatgpt-image-on-openai
+    displayName: chatgpt-image via openai
+spec:
+    model: chatgpt-image
+    host: openai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - chatgpt-image-latest

@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ai21-jamba-large-1-7
+    displayName: 'AI21: Jamba Large 1.7'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 4096
+    contextWindowTotal: 256000
+    maxOutputTokens: 4096
+    releaseDate: "2025-08-09"
+    enabled: true
+    snapshots:
+        - name: ai21-jamba-large-1-7
+          releasedAt: "2025-08-09"
+          originalName: ai21/jamba-large-1.7
+    pointer: ai21-jamba-large-1-7

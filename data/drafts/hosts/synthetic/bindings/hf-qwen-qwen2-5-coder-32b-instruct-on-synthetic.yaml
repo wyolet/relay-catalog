@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hf-qwen-qwen2-5-coder-32b-instruct-on-synthetic
+    displayName: hf-qwen-qwen2-5-coder-32b-instruct via synthetic
+spec:
+    model: hf-qwen-qwen2-5-coder-32b-instruct
+    host: synthetic
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hf-qwen-qwen2-5-coder-32b-instruct

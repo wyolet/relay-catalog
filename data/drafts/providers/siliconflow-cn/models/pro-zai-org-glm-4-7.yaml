@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: pro-zai-org-glm-4-7
+    displayName: Pro/zai-org/GLM-4.7
+    owner:
+        kind: provider
+        name: siliconflow-cn
+    labels:
+        family: glm
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glm
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 205000
+    contextWindowOutput: 205000
+    contextWindowTotal: 205000
+    maxOutputTokens: 205000
+    releaseDate: "2025-12-22"
+    enabled: true
+    snapshots:
+        - name: pro-zai-org-glm-4-7
+          releasedAt: "2025-12-22"
+          originalName: Pro/zai-org/GLM-4.7
+    pointer: pro-zai-org-glm-4-7

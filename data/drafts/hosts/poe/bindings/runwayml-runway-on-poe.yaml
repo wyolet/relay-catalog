@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: runwayml-runway-on-poe
+    displayName: runwayml-runway via poe
+spec:
+    model: runwayml-runway
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - runwayml-runway

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: morph-morph-v3-large
+    displayName: morph-v3-large pricing
+    owner:
+        kind: host
+        id: morph
+spec:
+    currency: USD
+    targetModels:
+        - morph-v3-large
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.9
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.9
+    enabled: true

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-tee-gemma4-31b
+    displayName: tee-gemma4-31b pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - tee-gemma4-31b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.45
+        - meter: tokens.output
+          unit: per_million
+          amount: 1
+    enabled: true

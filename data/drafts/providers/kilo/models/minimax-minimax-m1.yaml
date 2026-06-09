@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: minimax-minimax-m1
+    displayName: 'MiniMax: MiniMax M1'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 40000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 40000
+    releaseDate: "2025-06-17"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: minimax-minimax-m1
+          releasedAt: "2025-06-17"
+          originalName: minimax/minimax-m1
+    pointer: minimax-minimax-m1

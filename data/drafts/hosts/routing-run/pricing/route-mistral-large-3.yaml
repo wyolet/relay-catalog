@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: routing-run-route-mistral-large-3
+    displayName: route-mistral-large-3 pricing
+    owner:
+        kind: host
+        id: routing-run
+spec:
+    currency: USD
+    targetModels:
+        - route-mistral-large-3
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.5
+    enabled: true

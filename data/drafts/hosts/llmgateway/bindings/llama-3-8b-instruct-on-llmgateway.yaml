@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: llama-3-8b-instruct-on-llmgateway
+    displayName: llama-3-8b-instruct via llmgateway
+spec:
+    model: llama-3-8b-instruct
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - llama-3-8b-instruct

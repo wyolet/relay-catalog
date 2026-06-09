@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-usdcode-on-nvidia
+    displayName: nvidia-usdcode via nvidia
+spec:
+    model: nvidia-usdcode
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-usdcode

@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-coder-plus
+    displayName: Qwen Coder Plus
+    owner:
+        kind: provider
+        name: llmgateway
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 8192
+    contextWindowTotal: 131072
+    maxOutputTokens: 8192
+    releaseDate: "2024-09-18"
+    enabled: true
+    snapshots:
+        - name: qwen-coder-plus
+          releasedAt: "2024-09-18"
+    pointer: qwen-coder-plus

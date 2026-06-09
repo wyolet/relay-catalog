@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-5-397b-a17b-tee-on-chutes
+    displayName: qwen-qwen3-5-397b-a17b-tee via chutes
+spec:
+    model: qwen-qwen3-5-397b-a17b-tee
+    host: chutes
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-5-397b-a17b-tee

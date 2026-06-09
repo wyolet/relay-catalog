@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: databricks-databricks-gpt-oss-120b
+    displayName: databricks-gpt-oss-120b pricing
+    owner:
+        kind: host
+        id: databricks
+spec:
+    currency: USD
+    targetModels:
+        - databricks-gpt-oss-120b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.072
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.28
+    enabled: true

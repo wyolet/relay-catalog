@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-5-1-instant-on-poe
+    displayName: openai-gpt-5-1-instant via poe
+spec:
+    model: openai-gpt-5-1-instant
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-5-1-instant

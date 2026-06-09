@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: llm360-k2-think-on-nano-gpt
+    displayName: llm360-k2-think via nano-gpt
+spec:
+    model: llm360-k2-think
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - llm360-k2-think

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: cortecs-hermes-4-70b
+    displayName: hermes-4-70b pricing
+    owner:
+        kind: host
+        id: cortecs
+spec:
+    currency: USD
+    targetModels:
+        - hermes-4-70b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.116
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.358
+    enabled: true

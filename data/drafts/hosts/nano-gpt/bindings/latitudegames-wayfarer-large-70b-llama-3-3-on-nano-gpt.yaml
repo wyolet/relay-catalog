@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: latitudegames-wayfarer-large-70b-llama-3-3-on-nano-gpt
+    displayName: latitudegames-wayfarer-large-70b-llama-3-3 via nano-gpt
+spec:
+    model: latitudegames-wayfarer-large-70b-llama-3-3
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - latitudegames-wayfarer-large-70b-llama-3-3

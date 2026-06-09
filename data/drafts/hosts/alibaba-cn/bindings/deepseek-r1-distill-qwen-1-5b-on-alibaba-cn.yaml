@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-r1-distill-qwen-1-5b-on-alibaba-cn
+    displayName: deepseek-r1-distill-qwen-1-5b via alibaba-cn
+spec:
+    model: deepseek-r1-distill-qwen-1-5b
+    host: alibaba-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-r1-distill-qwen-1-5b

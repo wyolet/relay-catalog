@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: ideogramai-ideogram-v2a-on-poe
+    displayName: ideogramai-ideogram-v2a via poe
+spec:
+    model: ideogramai-ideogram-v2a
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - ideogramai-ideogram-v2a

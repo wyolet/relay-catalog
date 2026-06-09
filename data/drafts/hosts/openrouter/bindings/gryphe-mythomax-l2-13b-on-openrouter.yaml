@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gryphe-mythomax-l2-13b-on-openrouter
+    displayName: gryphe-mythomax-l2-13b via openrouter
+spec:
+    model: gryphe-mythomax-l2-13b
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gryphe-mythomax-l2-13b

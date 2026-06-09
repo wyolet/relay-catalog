@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: grok-4-20-multi-agent-beta
+    displayName: grok-4.20-multi-agent-beta-0309
+    owner:
+        kind: provider
+        name: 302ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 2000000
+    contextWindowOutput: 30000
+    contextWindowTotal: 2000000
+    maxOutputTokens: 30000
+    releaseDate: "2026-03-16"
+    enabled: true
+    snapshots:
+        - name: grok-4-20-multi-agent-beta-0309
+          releasedAt: "2026-03-16"
+          originalName: grok-4.20-multi-agent-beta-0309
+    pointer: grok-4-20-multi-agent-beta-0309

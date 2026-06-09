@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nousresearch-hermes-2-pro-llama-3-8b
+    displayName: 'NousResearch: Hermes 2 Pro - Llama-3 8B'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    maxOutputTokens: 8192
+    releaseDate: "2024-05-27"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nousresearch-hermes-2-pro-llama-3-8b
+          releasedAt: "2024-05-27"
+          originalName: nousresearch/hermes-2-pro-llama-3-8b
+    pointer: nousresearch-hermes-2-pro-llama-3-8b

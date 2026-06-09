@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: glm-4-7-free
+    displayName: GLM-4.7 Free
+    owner:
+        kind: provider
+        name: opencode
+    labels:
+        family: glm-free
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glm-free
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 204800
+    contextWindowOutput: 131072
+    contextWindowTotal: 204800
+    maxOutputTokens: 131072
+    knowledgeCutoff: 2025-04
+    releaseDate: "2025-12-22"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: glm-4-7-free
+          releasedAt: "2025-12-22"
+          originalName: glm-4.7-free
+    pointer: glm-4-7-free

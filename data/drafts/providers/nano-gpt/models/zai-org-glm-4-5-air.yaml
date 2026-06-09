@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: zai-org-glm-4-5-air
+    displayName: GLM 4.5 Air
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 98304
+    contextWindowTotal: 128000
+    maxOutputTokens: 98304
+    releaseDate: "2025-04-15"
+    enabled: true
+    snapshots:
+        - name: zai-org-glm-4-5-air
+          releasedAt: "2025-04-15"
+          originalName: zai-org/GLM-4.5-Air
+    pointer: zai-org-glm-4-5-air

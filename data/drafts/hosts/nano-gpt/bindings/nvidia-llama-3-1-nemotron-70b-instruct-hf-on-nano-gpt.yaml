@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-llama-3-1-nemotron-70b-instruct-hf-on-nano-gpt
+    displayName: nvidia-llama-3-1-nemotron-70b-instruct-hf via nano-gpt
+spec:
+    model: nvidia-llama-3-1-nemotron-70b-instruct-hf
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-llama-3-1-nemotron-70b-instruct-hf

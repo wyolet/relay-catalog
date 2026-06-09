@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: auto-model-standard-on-nano-gpt
+    displayName: auto-model-standard via nano-gpt
+spec:
+    model: auto-model-standard
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - auto-model-standard

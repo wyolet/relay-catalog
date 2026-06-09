@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: poolside-laguna-xs-2-free-on-openrouter
+    displayName: poolside-laguna-xs-2-free via openrouter
+spec:
+    model: poolside-laguna-xs-2-free
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - poolside-laguna-xs-2-free

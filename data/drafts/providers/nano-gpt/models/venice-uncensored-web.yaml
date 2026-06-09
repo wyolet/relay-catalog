@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: venice-uncensored-web
+    displayName: Venice Uncensored Web
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 80000
+    contextWindowOutput: 16384
+    contextWindowTotal: 80000
+    maxOutputTokens: 16384
+    releaseDate: "2024-05-01"
+    enabled: true
+    snapshots:
+        - name: venice-uncensored-web
+          releasedAt: "2024-05-01"
+          originalName: venice-uncensored:web
+    pointer: venice-uncensored-web

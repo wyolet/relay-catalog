@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: xpersona-gpt-5-5
+    displayName: GPT-5.5
+    owner:
+        kind: provider
+        name: xpersona
+    labels:
+        family: gpt
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 128000
+    knowledgeCutoff: "2025-12-30"
+    releaseDate: "2026-05-29"
+    enabled: true
+    snapshots:
+        - name: xpersona-gpt-5-5
+          releasedAt: "2026-05-29"
+          originalName: xpersona-gpt-5.5
+    pointer: xpersona-gpt-5-5

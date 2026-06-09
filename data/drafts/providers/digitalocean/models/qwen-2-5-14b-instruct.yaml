@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-2-5-14b-instruct
+    displayName: Qwen 2.5 14B Instruct
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    maxOutputTokens: 131072
+    knowledgeCutoff: 2024-09
+    releaseDate: "2024-09-19"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-2-5-14b-instruct
+          releasedAt: "2024-09-19"
+          originalName: qwen-2.5-14b-instruct
+    pointer: qwen-2-5-14b-instruct

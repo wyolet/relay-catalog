@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: jamba-large-1-7-on-nano-gpt
+    displayName: jamba-large-1-7 via nano-gpt
+spec:
+    model: jamba-large-1-7
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - jamba-large-1-7

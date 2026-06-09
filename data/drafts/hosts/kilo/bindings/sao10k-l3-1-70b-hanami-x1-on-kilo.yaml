@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: sao10k-l3-1-70b-hanami-x1-on-kilo
+    displayName: sao10k-l3-1-70b-hanami-x1 via kilo
+spec:
+    model: sao10k-l3-1-70b-hanami-x1
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - sao10k-l3-1-70b-hanami-x1

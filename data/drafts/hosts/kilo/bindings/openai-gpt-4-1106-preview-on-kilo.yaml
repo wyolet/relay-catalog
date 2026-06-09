@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-4-1106-preview-on-kilo
+    displayName: openai-gpt-4-1106-preview via kilo
+spec:
+    model: openai-gpt-4-1106-preview
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-4-1106-preview

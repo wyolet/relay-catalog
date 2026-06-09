@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: o3-pro-on-abacus
+    displayName: o3-pro via abacus
+spec:
+    model: o3-pro
+    host: abacus
+    adapter: openai
+    enabled: true
+    snapshots:
+        - o3-pro

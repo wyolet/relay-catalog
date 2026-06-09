@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: unsloth-gemma-3-4b-it
+    displayName: gemma 3 4b it
+    owner:
+        kind: provider
+        name: chutes
+    labels:
+        family: unsloth
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: unsloth
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 96000
+    contextWindowOutput: 96000
+    contextWindowTotal: 96000
+    maxOutputTokens: 96000
+    releaseDate: "2025-12-29"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: unsloth-gemma-3-4b-it
+          releasedAt: "2025-12-29"
+          originalName: unsloth/gemma-3-4b-it
+    pointer: unsloth-gemma-3-4b-it

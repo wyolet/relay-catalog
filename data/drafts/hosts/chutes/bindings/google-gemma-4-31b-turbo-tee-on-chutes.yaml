@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-gemma-4-31b-turbo-tee-on-chutes
+    displayName: google-gemma-4-31b-turbo-tee via chutes
+spec:
+    model: google-gemma-4-31b-turbo-tee
+    host: chutes
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-gemma-4-31b-turbo-tee

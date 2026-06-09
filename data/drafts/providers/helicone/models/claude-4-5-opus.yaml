@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claude-4-5-opus
+    displayName: 'Anthropic: Claude Opus 4.5'
+    owner:
+        kind: provider
+        name: helicone
+    labels:
+        family: claude-opus
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: claude-opus
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 64000
+    contextWindowTotal: 200000
+    maxOutputTokens: 64000
+    knowledgeCutoff: 2025-11
+    releaseDate: "2025-11-24"
+    enabled: true
+    snapshots:
+        - name: claude-4-5-opus
+          releasedAt: "2025-11-24"
+          originalName: claude-4.5-opus
+    pointer: claude-4-5-opus

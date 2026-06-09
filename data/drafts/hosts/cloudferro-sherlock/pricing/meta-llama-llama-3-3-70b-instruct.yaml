@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: cloudferro-sherlock-meta-llama-llama-3-3-70b-instruct
+    displayName: meta-llama-llama-3-3-70b-instruct pricing
+    owner:
+        kind: host
+        id: cloudferro-sherlock
+spec:
+    currency: USD
+    targetModels:
+        - meta-llama-llama-3-3-70b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2.92
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.92
+    enabled: true

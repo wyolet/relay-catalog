@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: orcarouter-google-gemini-flash-lite
+    displayName: google-gemini-flash-lite pricing
+    owner:
+        kind: host
+        id: orcarouter
+spec:
+    currency: USD
+    targetModels:
+        - google-gemini-flash-lite
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.025
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.25
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.5
+    enabled: true

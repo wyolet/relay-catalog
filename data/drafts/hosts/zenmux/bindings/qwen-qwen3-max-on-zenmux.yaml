@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-max-on-zenmux
+    displayName: qwen-qwen3-max via zenmux
+spec:
+    model: qwen-qwen3-max
+    host: zenmux
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-max

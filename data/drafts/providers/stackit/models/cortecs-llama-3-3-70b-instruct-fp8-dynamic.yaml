@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cortecs-llama-3-3-70b-instruct-fp8-dynamic
+    displayName: Llama 3.3 70B
+    owner:
+        kind: provider
+        name: stackit
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    releaseDate: "2024-12-05"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: cortecs-llama-3-3-70b-instruct-fp8-dynamic
+          releasedAt: "2024-12-05"
+          originalName: cortecs/Llama-3.3-70B-Instruct-FP8-Dynamic
+    pointer: cortecs-llama-3-3-70b-instruct-fp8-dynamic

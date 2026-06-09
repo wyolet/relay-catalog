@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-2-5-flash-preview-05-20-thinking
+    displayName: Gemini 2.5 Flash 0520 Thinking
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1048000
+    contextWindowOutput: 65536
+    contextWindowTotal: 1048000
+    maxOutputTokens: 65536
+    releaseDate: "2025-05-20"
+    enabled: true
+    snapshots:
+        - name: gemini-2-5-flash-preview-05-20-thinking
+          releasedAt: "2025-05-20"
+          originalName: gemini-2.5-flash-preview-05-20:thinking
+    pointer: gemini-2-5-flash-preview-05-20-thinking

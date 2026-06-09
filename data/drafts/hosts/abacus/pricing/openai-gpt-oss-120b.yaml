@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: abacus-openai-gpt-oss-120b
+    displayName: openai-gpt-oss-120b pricing
+    owner:
+        kind: host
+        id: abacus
+spec:
+    currency: USD
+    targetModels:
+        - openai-gpt-oss-120b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.08
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.44
+    enabled: true

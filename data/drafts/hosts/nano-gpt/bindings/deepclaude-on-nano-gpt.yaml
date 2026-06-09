@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepclaude-on-nano-gpt
+    displayName: deepclaude via nano-gpt
+spec:
+    model: deepclaude
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepclaude

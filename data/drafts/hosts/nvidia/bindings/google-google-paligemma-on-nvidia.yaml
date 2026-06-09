@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-google-paligemma-on-nvidia
+    displayName: google-google-paligemma via nvidia
+spec:
+    model: google-google-paligemma
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-google-paligemma

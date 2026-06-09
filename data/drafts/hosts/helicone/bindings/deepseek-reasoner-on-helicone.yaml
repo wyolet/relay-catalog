@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-reasoner-on-helicone
+    displayName: deepseek-reasoner via helicone
+spec:
+    model: deepseek-reasoner
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-reasoner

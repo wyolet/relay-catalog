@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: frogbot
+    displayName: FrogBot
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://docs.frogbot.ai

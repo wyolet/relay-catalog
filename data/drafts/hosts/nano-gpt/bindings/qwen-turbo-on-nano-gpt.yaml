@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-turbo-on-nano-gpt
+    displayName: qwen-turbo via nano-gpt
+spec:
+    model: qwen-turbo
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-turbo

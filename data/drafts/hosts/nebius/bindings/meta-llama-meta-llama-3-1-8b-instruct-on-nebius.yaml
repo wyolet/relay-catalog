@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: meta-llama-meta-llama-3-1-8b-instruct-on-nebius
+    displayName: meta-llama-meta-llama-3-1-8b-instruct via nebius
+spec:
+    model: meta-llama-meta-llama-3-1-8b-instruct
+    host: nebius
+    adapter: openai
+    enabled: true
+    snapshots:
+        - meta-llama-meta-llama-3-1-8b-instruct

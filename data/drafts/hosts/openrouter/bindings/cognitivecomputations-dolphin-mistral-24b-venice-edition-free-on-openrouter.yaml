@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cognitivecomputations-dolphin-mistral-24b-venice-edition-free-on-openrouter
+    displayName: cognitivecomputations-dolphin-mistral-24b-venice-edition-free via openrouter
+spec:
+    model: cognitivecomputations-dolphin-mistral-24b-venice-edition-free
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cognitivecomputations-dolphin-mistral-24b-venice-edition-free

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: anthropic-claude-4-5-haiku-on-digitalocean
+    displayName: anthropic-claude-4-5-haiku via digitalocean
+spec:
+    model: anthropic-claude-4-5-haiku
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - anthropic-claude-4-5-haiku

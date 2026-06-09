@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: jiekou
+    displayName: Jiekou.AI
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.jiekou.ai/openai
+    pricingStrategies:
+        - api
+    docsURL: https://docs.jiekou.ai/docs/support/quickstart?utm_source=github_models.dev

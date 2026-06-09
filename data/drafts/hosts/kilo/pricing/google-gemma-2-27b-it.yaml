@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-google-gemma-2-27b-it
+    displayName: google-gemma-2-27b-it pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - google-gemma-2-27b-it
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.65
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.65
+    enabled: true

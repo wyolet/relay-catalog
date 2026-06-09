@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nousresearch-deephermes-3-mistral-24b-preview-on-chutes
+    displayName: nousresearch-deephermes-3-mistral-24b-preview via chutes
+spec:
+    model: nousresearch-deephermes-3-mistral-24b-preview
+    host: chutes
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nousresearch-deephermes-3-mistral-24b-preview

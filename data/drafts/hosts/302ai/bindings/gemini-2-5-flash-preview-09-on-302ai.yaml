@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemini-2-5-flash-preview-09-on-302ai
+    displayName: gemini-2-5-flash-preview-09 via 302ai
+spec:
+    model: gemini-2-5-flash-preview-09
+    host: 302ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gemini-2-5-flash-preview-09-2025

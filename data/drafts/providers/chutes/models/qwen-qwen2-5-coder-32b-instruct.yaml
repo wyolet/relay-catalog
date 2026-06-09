@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen2-5-coder-32b-instruct
+    displayName: Qwen2.5 Coder 32B Instruct
+    owner:
+        kind: provider
+        name: chutes
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    maxOutputTokens: 32768
+    releaseDate: "2025-12-29"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen2-5-coder-32b-instruct
+          releasedAt: "2025-12-29"
+          originalName: Qwen/Qwen2.5-Coder-32B-Instruct
+    pointer: qwen-qwen2-5-coder-32b-instruct

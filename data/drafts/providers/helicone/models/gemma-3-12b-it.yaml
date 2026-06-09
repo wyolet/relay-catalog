@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma-3-12b-it
+    displayName: Google Gemma 3 12B
+    owner:
+        kind: provider
+        name: helicone
+    labels:
+        family: gemma
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gemma
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 8192
+    contextWindowTotal: 131072
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2024-12
+    releaseDate: "2024-12-01"
+    enabled: true
+    snapshots:
+        - name: gemma-3-12b-it
+          releasedAt: "2024-12-01"
+    pointer: gemma-3-12b-it

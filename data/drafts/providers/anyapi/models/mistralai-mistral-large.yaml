@@ -1,0 +1,49 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistralai-mistral-large
+    displayName: Mistral Large 3
+    owner:
+        kind: provider
+        name: anyapi
+    labels:
+        family: mistral-large
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral-large
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    maxOutputTokens: 262144
+    knowledgeCutoff: 2024-11
+    releaseDate: "2024-11-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistralai-mistral-large-2512
+          releasedAt: "2024-11-01"
+          originalName: mistralai/mistral-large-2512
+        - name: mistralai-mistral-large
+          releasedAt: "2024-07-24"
+          originalName: mistralai/mistral-large
+        - name: mistralai-mistral-large-2407
+          releasedAt: "2024-11-19"
+          originalName: mistralai/mistral-large-2407
+        - name: mistralai-mistral-large-2411
+          releasedAt: "2024-07-24"
+          originalName: mistralai/mistral-large-2411
+    pointer: mistralai-mistral-large-2512

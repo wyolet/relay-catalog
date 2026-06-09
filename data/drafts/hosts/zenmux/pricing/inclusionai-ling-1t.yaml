@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: zenmux-inclusionai-ling-1t
+    displayName: inclusionai-ling-1t pricing
+    owner:
+        kind: host
+        id: zenmux
+spec:
+    currency: USD
+    targetModels:
+        - inclusionai-ling-1t
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.11
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.56
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.24
+    enabled: true

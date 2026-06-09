@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: route-kimi-k2-6-6bit-on-routing-run
+    displayName: route-kimi-k2-6-6bit via routing-run
+spec:
+    model: route-kimi-k2-6-6bit
+    host: routing-run
+    adapter: openai
+    enabled: true
+    snapshots:
+        - route-kimi-k2-6-6bit

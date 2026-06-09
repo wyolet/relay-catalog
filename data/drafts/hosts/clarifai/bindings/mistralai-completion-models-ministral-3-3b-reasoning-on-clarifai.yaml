@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-completion-models-ministral-3-3b-reasoning-on-clarifai
+    displayName: mistralai-completion-models-ministral-3-3b-reasoning via clarifai
+spec:
+    model: mistralai-completion-models-ministral-3-3b-reasoning
+    host: clarifai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-completion-models-ministral-3-3b-reasoning-2512

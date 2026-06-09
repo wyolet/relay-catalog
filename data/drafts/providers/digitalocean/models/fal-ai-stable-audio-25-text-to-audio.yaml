@@ -1,0 +1,29 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: fal-ai-stable-audio-25-text-to-audio
+    displayName: Stable Audio 2.5 (Text-to-Audio)
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - audio
+    releaseDate: "2025-10-08"
+    enabled: true
+    snapshots:
+        - name: fal-ai-stable-audio-25-text-to-audio
+          releasedAt: "2025-10-08"
+          originalName: fal-ai/stable-audio-25/text-to-audio
+    pointer: fal-ai-stable-audio-25-text-to-audio

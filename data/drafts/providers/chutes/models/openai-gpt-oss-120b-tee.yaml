@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-gpt-oss-120b-tee
+    displayName: gpt oss 120b TEE
+    owner:
+        kind: provider
+        name: chutes
+    labels:
+        family: gpt-oss
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt-oss
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 65536
+    contextWindowTotal: 131072
+    maxOutputTokens: 65536
+    releaseDate: "2025-12-29"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: openai-gpt-oss-120b-tee
+          releasedAt: "2025-12-29"
+          originalName: openai/gpt-oss-120b-TEE
+    pointer: openai-gpt-oss-120b-tee

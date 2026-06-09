@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-32b-fp8-on-jiekou
+    displayName: qwen-qwen3-32b-fp8 via jiekou
+spec:
+    model: qwen-qwen3-32b-fp8
+    host: jiekou
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-32b-fp8

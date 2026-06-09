@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: asi1-mini-on-nano-gpt
+    displayName: asi1-mini via nano-gpt
+spec:
+    model: asi1-mini
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - asi1-mini

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: cortecs-nemotron-3-super-120b-a12b
+    displayName: nemotron-3-super-120b-a12b pricing
+    owner:
+        kind: host
+        id: cortecs
+spec:
+    currency: USD
+    targetModels:
+        - nemotron-3-super-120b-a12b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.266
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.799
+    enabled: true

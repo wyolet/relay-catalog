@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: google-imagen-4-ultra
+    displayName: Imagen-4-Ultra
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: imagen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: imagen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - image
+    contextWindowInput: 480
+    contextWindowTotal: 480
+    releaseDate: "2025-05-24"
+    enabled: true
+    snapshots:
+        - name: google-imagen-4-ultra
+          releasedAt: "2025-05-24"
+          originalName: google/imagen-4-ultra
+    pointer: google-imagen-4-ultra

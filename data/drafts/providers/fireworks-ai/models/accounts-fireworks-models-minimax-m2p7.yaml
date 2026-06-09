@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: accounts-fireworks-models-minimax-m2p7
+    displayName: MiniMax-M2.7
+    owner:
+        kind: provider
+        name: fireworks-ai
+    labels:
+        family: minimax
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: minimax
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 196608
+    contextWindowOutput: 196608
+    contextWindowTotal: 196608
+    maxOutputTokens: 196608
+    releaseDate: "2026-04-12"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: accounts-fireworks-models-minimax-m2p7
+          releasedAt: "2026-04-12"
+          originalName: accounts/fireworks/models/minimax-m2p7
+    pointer: accounts-fireworks-models-minimax-m2p7

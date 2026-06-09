@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: meta-esmfold
+    displayName: esmfold
+    owner:
+        kind: provider
+        name: nvidia
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    releaseDate: "2024-03-15"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: meta-esmfold
+          releasedAt: "2024-03-15"
+          originalName: meta/esmfold
+    pointer: meta-esmfold

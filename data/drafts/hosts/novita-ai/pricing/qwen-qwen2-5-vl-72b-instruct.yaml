@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: novita-ai-qwen-qwen2-5-vl-72b-instruct
+    displayName: qwen-qwen2-5-vl-72b-instruct pricing
+    owner:
+        kind: host
+        id: novita-ai
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen2-5-vl-72b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.8
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.8
+    enabled: true

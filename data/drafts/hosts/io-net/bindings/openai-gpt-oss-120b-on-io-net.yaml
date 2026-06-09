@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-oss-120b-on-io-net
+    displayName: openai-gpt-oss-120b via io-net
+spec:
+    model: openai-gpt-oss-120b
+    host: io-net
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-oss-120b

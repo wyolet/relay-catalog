@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-qwen-qwen3-coder-next
+    displayName: qwen-qwen3-coder-next pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen3-coder-next
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.035
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.12
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.75
+    enabled: true

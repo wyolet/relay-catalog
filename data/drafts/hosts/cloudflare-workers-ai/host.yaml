@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: cloudflare-workers-ai
+    displayName: Cloudflare Workers AI
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/ai/v1
+    pricingStrategies:
+        - api
+    docsURL: https://developers.cloudflare.com/workers-ai/models/

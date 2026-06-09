@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: solar-pro2
+    displayName: solar-pro2
+    owner:
+        kind: provider
+        name: upstage
+    labels:
+        family: solar-pro
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: solar-pro
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 65536
+    contextWindowOutput: 8192
+    contextWindowTotal: 65536
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2025-03
+    releaseDate: "2025-05-20"
+    enabled: true
+    snapshots:
+        - name: solar-pro2
+          releasedAt: "2025-05-20"
+    pointer: solar-pro2

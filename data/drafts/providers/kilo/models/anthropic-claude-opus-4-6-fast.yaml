@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: anthropic-claude-opus-4-6-fast
+    displayName: 'Anthropic: Claude Opus 4.6 (Fast)'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 128000
+    knowledgeCutoff: "2025-05-31"
+    releaseDate: "2026-04-07"
+    enabled: true
+    snapshots:
+        - name: anthropic-claude-opus-4-6-fast
+          releasedAt: "2026-04-07"
+          originalName: anthropic/claude-opus-4.6-fast
+    pointer: anthropic-claude-opus-4-6-fast

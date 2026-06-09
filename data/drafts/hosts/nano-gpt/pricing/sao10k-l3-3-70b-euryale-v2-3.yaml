@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-sao10k-l3-3-70b-euryale-v2-3
+    displayName: sao10k-l3-3-70b-euryale-v2-3 pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - sao10k-l3-3-70b-euryale-v2-3
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.49299999999999994
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.49299999999999994
+    enabled: true

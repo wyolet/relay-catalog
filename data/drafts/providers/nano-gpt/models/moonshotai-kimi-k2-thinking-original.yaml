@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: moonshotai-kimi-k2-thinking-original
+    displayName: Kimi K2 Thinking Original
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: kimi-thinking
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: kimi-thinking
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 16384
+    contextWindowTotal: 256000
+    maxOutputTokens: 16384
+    releaseDate: "2025-11-06"
+    enabled: true
+    snapshots:
+        - name: moonshotai-kimi-k2-thinking-original
+          releasedAt: "2025-11-06"
+          originalName: moonshotai/kimi-k2-thinking-original
+    pointer: moonshotai-kimi-k2-thinking-original

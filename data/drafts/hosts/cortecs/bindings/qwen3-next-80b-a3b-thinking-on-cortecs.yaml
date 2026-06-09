@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-next-80b-a3b-thinking-on-cortecs
+    displayName: qwen3-next-80b-a3b-thinking via cortecs
+spec:
+    model: qwen3-next-80b-a3b-thinking
+    host: cortecs
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-next-80b-a3b-thinking

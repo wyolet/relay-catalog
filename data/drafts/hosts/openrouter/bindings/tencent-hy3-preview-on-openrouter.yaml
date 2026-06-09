@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: tencent-hy3-preview-on-openrouter
+    displayName: tencent-hy3-preview via openrouter
+spec:
+    model: tencent-hy3-preview
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - tencent-hy3-preview

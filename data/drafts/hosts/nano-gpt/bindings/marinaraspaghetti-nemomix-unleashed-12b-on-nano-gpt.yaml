@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: marinaraspaghetti-nemomix-unleashed-12b-on-nano-gpt
+    displayName: marinaraspaghetti-nemomix-unleashed-12b via nano-gpt
+spec:
+    model: marinaraspaghetti-nemomix-unleashed-12b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - marinaraspaghetti-nemomix-unleashed-12b

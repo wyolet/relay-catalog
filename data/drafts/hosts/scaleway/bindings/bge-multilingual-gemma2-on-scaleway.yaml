@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: bge-multilingual-gemma2-on-scaleway
+    displayName: bge-multilingual-gemma2 via scaleway
+spec:
+    model: bge-multilingual-gemma2
+    host: scaleway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - bge-multilingual-gemma2

@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-o1
+    displayName: o1
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: o
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: o
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 100000
+    contextWindowTotal: 200000
+    maxOutputTokens: 100000
+    knowledgeCutoff: 2023-09
+    releaseDate: "2024-12-05"
+    enabled: true
+    snapshots:
+        - name: openai-o1
+          releasedAt: "2024-12-05"
+    pointer: openai-o1

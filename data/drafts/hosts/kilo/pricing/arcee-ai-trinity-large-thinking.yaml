@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-arcee-ai-trinity-large-thinking
+    displayName: arcee-ai-trinity-large-thinking pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - arcee-ai-trinity-large-thinking
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.22
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.85
+    enabled: true

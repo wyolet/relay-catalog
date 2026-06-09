@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: kuae-cloud-coding-plan
+    displayName: KUAE Cloud Coding Plan
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://coding-plan-endpoint.kuaecloud.net/v1
+    pricingStrategies:
+        - api
+    docsURL: https://docs.mthreads.com/kuaecloud/kuaecloud-doc-online/coding_plan/

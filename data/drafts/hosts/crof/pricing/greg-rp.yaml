@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: crof-greg-rp
+    displayName: greg-rp pricing
+    owner:
+        kind: host
+        id: crof
+spec:
+    currency: USD
+    targetModels:
+        - greg-rp
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.02
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.3
+    enabled: true

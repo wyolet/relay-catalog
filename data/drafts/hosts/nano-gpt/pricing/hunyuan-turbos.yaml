@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-hunyuan-turbos
+    displayName: hunyuan-turbos pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - hunyuan-turbos
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.187
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.374
+    enabled: true

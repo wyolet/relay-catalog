@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: cloudflare-workers-ai-cf-qwen-qwq-32b
+    displayName: cf-qwen-qwq-32b pricing
+    owner:
+        kind: host
+        id: cloudflare-workers-ai
+spec:
+    currency: USD
+    targetModels:
+        - cf-qwen-qwq-32b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.66
+        - meter: tokens.output
+          unit: per_million
+          amount: 1
+    enabled: true

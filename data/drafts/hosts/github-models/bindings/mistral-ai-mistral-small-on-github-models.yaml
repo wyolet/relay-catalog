@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-ai-mistral-small-on-github-models
+    displayName: mistral-ai-mistral-small via github-models
+spec:
+    model: mistral-ai-mistral-small
+    host: github-models
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistral-ai-mistral-small-2503

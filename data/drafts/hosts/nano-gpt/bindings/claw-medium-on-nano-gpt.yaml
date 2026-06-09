@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: claw-medium-on-nano-gpt
+    displayName: claw-medium via nano-gpt
+spec:
+    model: claw-medium
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - claw-medium

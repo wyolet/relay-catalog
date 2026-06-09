@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: empiriolabs-deepseek-v4-flash-el
+    displayName: DeepSeek-V4-Flash-EL
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 384000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 384000
+    releaseDate: "2026-04-24"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: empiriolabs-deepseek-v4-flash-el
+          releasedAt: "2026-04-24"
+          originalName: empiriolabs/deepseek-v4-flash-el
+    pointer: empiriolabs-deepseek-v4-flash-el

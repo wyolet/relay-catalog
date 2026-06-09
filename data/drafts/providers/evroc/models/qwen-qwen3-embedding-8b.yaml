@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-embedding-8b
+    displayName: Qwen3 Embedding 8B
+    owner:
+        kind: provider
+        name: evroc
+    labels:
+        family: text-embedding
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: text-embedding
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 40960
+    contextWindowOutput: 4096
+    contextWindowTotal: 40960
+    maxOutputTokens: 4096
+    releaseDate: "2025-07-30"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-embedding-8b
+          releasedAt: "2025-07-30"
+          originalName: Qwen/Qwen3-Embedding-8B
+    pointer: qwen-qwen3-embedding-8b

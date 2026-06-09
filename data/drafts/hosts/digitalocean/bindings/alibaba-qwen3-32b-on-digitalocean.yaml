@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: alibaba-qwen3-32b-on-digitalocean
+    displayName: alibaba-qwen3-32b via digitalocean
+spec:
+    model: alibaba-qwen3-32b
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - alibaba-qwen3-32b

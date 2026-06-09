@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: ambient-zai-org-glm-5-1-fp8
+    displayName: zai-org-glm-5-1-fp8 pricing
+    owner:
+        kind: host
+        id: ambient
+spec:
+    currency: USD
+    targetModels:
+        - zai-org-glm-5-1-fp8
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.4
+        - meter: tokens.output
+          unit: per_million
+          amount: 4.4
+    enabled: true

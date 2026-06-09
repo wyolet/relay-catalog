@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-235b-a22b-instruct-on-friendli
+    displayName: qwen-qwen3-235b-a22b-instruct via friendli
+spec:
+    model: qwen-qwen3-235b-a22b-instruct
+    host: friendli
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-235b-a22b-instruct-2507

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: xai-grok-4-fast-on-requesty
+    displayName: xai-grok-4-fast via requesty
+spec:
+    model: xai-grok-4-fast
+    host: requesty
+    adapter: openai
+    enabled: true
+    snapshots:
+        - xai-grok-4-fast

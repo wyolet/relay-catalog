@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-mt-turbo-on-alibaba
+    displayName: qwen-mt-turbo via alibaba
+spec:
+    model: qwen-mt-turbo
+    host: alibaba
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-mt-turbo

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: claude-3-5-haiku-on-opencode
+    displayName: claude-3-5-haiku via opencode
+spec:
+    model: claude-3-5-haiku
+    host: opencode
+    adapter: openai
+    enabled: true
+    snapshots:
+        - claude-3-5-haiku

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-cn-qwen-mt-plus
+    displayName: qwen-mt-plus pricing
+    owner:
+        kind: host
+        id: alibaba-cn
+spec:
+    currency: USD
+    targetModels:
+        - qwen-mt-plus
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.259
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.775
+    enabled: true

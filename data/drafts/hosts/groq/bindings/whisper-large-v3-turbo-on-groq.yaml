@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: whisper-large-v3-turbo-on-groq
+    displayName: whisper-large-v3-turbo via groq
+spec:
+    model: whisper-large-v3-turbo
+    host: groq
+    adapter: openai
+    enabled: true
+    snapshots:
+        - whisper-large-v3-turbo

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: open-mixtral-8x22b-on-mistral
+    displayName: open-mixtral-8x22b via mistral
+spec:
+    model: open-mixtral-8x22b
+    host: mistral
+    adapter: openai
+    enabled: true
+    snapshots:
+        - open-mixtral-8x22b

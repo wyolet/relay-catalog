@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-usdvalidate-on-nvidia
+    displayName: nvidia-usdvalidate via nvidia
+spec:
+    model: nvidia-usdvalidate
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-usdvalidate

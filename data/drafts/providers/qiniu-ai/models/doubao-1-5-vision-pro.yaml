@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: doubao-1-5-vision-pro
+    displayName: Doubao 1.5 Vision Pro
+    owner:
+        kind: provider
+        name: qiniu-ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16000
+    contextWindowTotal: 128000
+    maxOutputTokens: 16000
+    releaseDate: "2025-08-05"
+    enabled: true
+    snapshots:
+        - name: doubao-1-5-vision-pro
+          releasedAt: "2025-08-05"
+          originalName: doubao-1.5-vision-pro
+    pointer: doubao-1-5-vision-pro

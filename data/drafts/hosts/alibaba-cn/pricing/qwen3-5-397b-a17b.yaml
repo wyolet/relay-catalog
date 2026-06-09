@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-cn-qwen3-5-397b-a17b
+    displayName: qwen3-5-397b-a17b pricing
+    owner:
+        kind: host
+        id: alibaba-cn
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-5-397b-a17b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.43
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.58
+        - meter: tokens.reasoning
+          unit: per_million
+          amount: 2.58
+    enabled: true

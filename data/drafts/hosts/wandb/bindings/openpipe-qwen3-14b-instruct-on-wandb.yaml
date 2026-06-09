@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openpipe-qwen3-14b-instruct-on-wandb
+    displayName: openpipe-qwen3-14b-instruct via wandb
+spec:
+    model: openpipe-qwen3-14b-instruct
+    host: wandb
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openpipe-qwen3-14b-instruct

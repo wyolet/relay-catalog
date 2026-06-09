@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: qihang-ai
+    displayName: QiHang
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.qhaigc.net/v1
+    pricingStrategies:
+        - api
+    docsURL: https://www.qhaigc.net/docs

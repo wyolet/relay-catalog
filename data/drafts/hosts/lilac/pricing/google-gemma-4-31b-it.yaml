@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: lilac-google-gemma-4-31b-it
+    displayName: google-gemma-4-31b-it pricing
+    owner:
+        kind: host
+        id: lilac
+spec:
+    currency: USD
+    targetModels:
+        - google-gemma-4-31b-it
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.11
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.35
+    enabled: true

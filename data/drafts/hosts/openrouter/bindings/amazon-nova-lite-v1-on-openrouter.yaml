@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: amazon-nova-lite-v1-on-openrouter
+    displayName: amazon-nova-lite-v1 via openrouter
+spec:
+    model: amazon-nova-lite-v1
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - amazon-nova-lite-v1

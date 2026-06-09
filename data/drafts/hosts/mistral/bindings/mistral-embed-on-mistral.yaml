@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-embed-on-mistral
+    displayName: mistral-embed via mistral
+spec:
+    model: mistral-embed
+    host: mistral
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistral-embed

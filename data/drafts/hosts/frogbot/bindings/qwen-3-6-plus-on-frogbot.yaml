@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-3-6-plus-on-frogbot
+    displayName: qwen-3-6-plus via frogbot
+spec:
+    model: qwen-3-6-plus
+    host: frogbot
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-3-6-plus

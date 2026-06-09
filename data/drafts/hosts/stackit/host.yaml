@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: stackit
+    displayName: STACKIT
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.openai-compat.model-serving.eu01.onstackit.cloud/v1
+    pricingStrategies:
+        - api
+    docsURL: https://docs.stackit.cloud/products/data-and-ai/ai-model-serving/basics/available-shared-models

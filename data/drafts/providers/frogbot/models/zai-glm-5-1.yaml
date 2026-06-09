@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: zai-glm-5-1
+    displayName: Z.AI GLM-5.1
+    owner:
+        kind: provider
+        name: frogbot
+    labels:
+        family: glm
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glm
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 198000
+    contextWindowOutput: 8192
+    contextWindowTotal: 198000
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2024-10
+    releaseDate: "2025-01-20"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: zai-glm-5-1
+          releasedAt: "2025-01-20"
+    pointer: zai-glm-5-1

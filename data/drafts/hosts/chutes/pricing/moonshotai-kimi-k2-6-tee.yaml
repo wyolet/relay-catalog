@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: chutes-moonshotai-kimi-k2-6-tee
+    displayName: moonshotai-kimi-k2-6-tee pricing
+    owner:
+        kind: host
+        id: chutes
+spec:
+    currency: USD
+    targetModels:
+        - moonshotai-kimi-k2-6-tee
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.475
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.95
+        - meter: tokens.output
+          unit: per_million
+          amount: 4
+    enabled: true

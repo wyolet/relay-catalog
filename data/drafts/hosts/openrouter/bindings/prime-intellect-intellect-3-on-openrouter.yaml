@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: prime-intellect-intellect-3-on-openrouter
+    displayName: prime-intellect-intellect-3 via openrouter
+spec:
+    model: prime-intellect-intellect-3
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - prime-intellect-intellect-3

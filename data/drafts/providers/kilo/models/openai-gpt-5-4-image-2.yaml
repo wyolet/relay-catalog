@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-gpt-5-4-image-2
+    displayName: 'OpenAI: GPT-5.4 Image 2'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - text
+            - pdf
+        output:
+            - image
+            - text
+    contextWindowInput: 272000
+    contextWindowOutput: 128000
+    contextWindowTotal: 272000
+    maxOutputTokens: 128000
+    releaseDate: "2026-04-21"
+    enabled: true
+    snapshots:
+        - name: openai-gpt-5-4-image-2
+          releasedAt: "2026-04-21"
+          originalName: openai/gpt-5.4-image-2
+    pointer: openai-gpt-5-4-image-2

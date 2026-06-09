@@ -1,0 +1,29 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-google-gemini-2-5-flash-lite-preview-09
+    displayName: google-gemini-2-5-flash-lite-preview-09 pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - google-gemini-2-5-flash-lite-preview-09
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.083333
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.01
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.4
+        - meter: tokens.reasoning
+          unit: per_million
+          amount: 0.4
+    enabled: true

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: openrouter-amazon-nova-pro-v1
+    displayName: amazon-nova-pro-v1 pricing
+    owner:
+        kind: host
+        id: openrouter
+spec:
+    currency: USD
+    targetModels:
+        - amazon-nova-pro-v1
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.8
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.2
+    enabled: true

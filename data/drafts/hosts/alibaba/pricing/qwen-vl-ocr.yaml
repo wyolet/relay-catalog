@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-qwen-vl-ocr
+    displayName: qwen-vl-ocr pricing
+    owner:
+        kind: host
+        id: alibaba
+spec:
+    currency: USD
+    targetModels:
+        - qwen-vl-ocr
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.72
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.72
+    enabled: true

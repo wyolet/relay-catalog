@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: canopylabs-orpheus-arabic-saudi
+    displayName: Orpheus Arabic Saudi
+    owner:
+        kind: provider
+        name: groq
+    labels:
+        family: canopylabs
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: canopylabs
+    capabilities:
+        chat: true
+        streaming: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - audio
+    contextWindowInput: 4000
+    contextWindowOutput: 50000
+    contextWindowTotal: 4000
+    maxOutputTokens: 50000
+    knowledgeCutoff: "2025-12-16"
+    releaseDate: "2025-12-16"
+    enabled: true
+    snapshots:
+        - name: canopylabs-orpheus-arabic-saudi
+          releasedAt: "2025-12-16"
+          originalName: canopylabs/orpheus-arabic-saudi
+    pointer: canopylabs-orpheus-arabic-saudi

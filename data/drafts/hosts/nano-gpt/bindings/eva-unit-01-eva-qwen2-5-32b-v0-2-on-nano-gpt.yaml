@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: eva-unit-01-eva-qwen2-5-32b-v0-2-on-nano-gpt
+    displayName: eva-unit-01-eva-qwen2-5-32b-v0-2 via nano-gpt
+spec:
+    model: eva-unit-01-eva-qwen2-5-32b-v0-2
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - eva-unit-01-eva-qwen2-5-32b-v0-2

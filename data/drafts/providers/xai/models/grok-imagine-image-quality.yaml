@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: grok-imagine-image-quality
+    displayName: Grok Imagine Image Quality
+    owner:
+        kind: provider
+        name: xai
+    labels:
+        family: grok
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: grok
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - image
+            - pdf
+    contextWindowInput: 8000
+    contextWindowTotal: 8000
+    releaseDate: "2026-04-03"
+    enabled: true
+    snapshots:
+        - name: grok-imagine-image-quality
+          releasedAt: "2026-04-03"
+    pointer: grok-imagine-image-quality

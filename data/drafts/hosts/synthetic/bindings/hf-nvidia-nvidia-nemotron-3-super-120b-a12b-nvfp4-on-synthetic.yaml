@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hf-nvidia-nvidia-nemotron-3-super-120b-a12b-nvfp4-on-synthetic
+    displayName: hf-nvidia-nvidia-nemotron-3-super-120b-a12b-nvfp4 via synthetic
+spec:
+    model: hf-nvidia-nvidia-nemotron-3-super-120b-a12b-nvfp4
+    host: synthetic
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hf-nvidia-nvidia-nemotron-3-super-120b-a12b-nvfp4

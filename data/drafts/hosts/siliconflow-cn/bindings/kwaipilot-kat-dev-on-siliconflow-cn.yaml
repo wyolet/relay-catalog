@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kwaipilot-kat-dev-on-siliconflow-cn
+    displayName: kwaipilot-kat-dev via siliconflow-cn
+spec:
+    model: kwaipilot-kat-dev
+    host: siliconflow-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kwaipilot-kat-dev

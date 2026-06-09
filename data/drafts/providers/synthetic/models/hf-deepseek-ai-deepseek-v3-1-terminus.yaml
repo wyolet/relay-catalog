@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: hf-deepseek-ai-deepseek-v3-1-terminus
+    displayName: DeepSeek V3.1 Terminus
+    owner:
+        kind: provider
+        name: synthetic
+    labels:
+        family: deepseek
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    maxOutputTokens: 128000
+    releaseDate: "2025-09-22"
+    enabled: true
+    snapshots:
+        - name: hf-deepseek-ai-deepseek-v3-1-terminus
+          releasedAt: "2025-09-22"
+          originalName: hf:deepseek-ai/DeepSeek-V3.1-Terminus
+    pointer: hf-deepseek-ai-deepseek-v3-1-terminus

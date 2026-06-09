@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-nvidia-nemotron-3-nano-30b-a3b
+    displayName: nvidia-nemotron-3-nano-30b-a3b pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - nvidia-nemotron-3-nano-30b-a3b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.17
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.68
+    enabled: true

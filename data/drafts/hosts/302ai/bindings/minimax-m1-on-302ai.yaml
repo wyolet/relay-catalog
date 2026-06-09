@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimax-m1-on-302ai
+    displayName: minimax-m1 via 302ai
+spec:
+    model: minimax-m1
+    host: 302ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - minimax-m1

@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: lilac-minimaxai-minimax-m2-7
+    displayName: minimaxai-minimax-m2-7 pricing
+    owner:
+        kind: host
+        id: lilac
+spec:
+    currency: USD
+    targetModels:
+        - minimaxai-minimax-m2-7
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.055
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.2
+    enabled: true

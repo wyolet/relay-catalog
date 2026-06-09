@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-gemma-2-2b-it-on-nebius
+    displayName: google-gemma-2-2b-it via nebius
+spec:
+    model: google-gemma-2-2b-it
+    host: nebius
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-gemma-2-2b-it

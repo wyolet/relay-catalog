@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: cortecs-qwen3-next-80b-a3b-thinking
+    displayName: qwen3-next-80b-a3b-thinking pricing
+    owner:
+        kind: host
+        id: cortecs
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-next-80b-a3b-thinking
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.164
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.311
+    enabled: true

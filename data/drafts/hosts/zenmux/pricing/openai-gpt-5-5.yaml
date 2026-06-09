@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: zenmux-openai-gpt-5-5
+    displayName: openai-gpt-5-5 pricing
+    owner:
+        kind: host
+        id: zenmux
+spec:
+    currency: USD
+    targetModels:
+        - openai-gpt-5-5
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 1
+          aboveTokens: 272000
+        - meter: tokens.input
+          unit: per_million
+          amount: 5
+        - meter: tokens.input
+          unit: per_million
+          amount: 10
+          aboveTokens: 272000
+        - meter: tokens.output
+          unit: per_million
+          amount: 30
+        - meter: tokens.output
+          unit: per_million
+          amount: 45
+          aboveTokens: 272000
+    enabled: true

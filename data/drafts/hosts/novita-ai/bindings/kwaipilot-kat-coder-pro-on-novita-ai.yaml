@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kwaipilot-kat-coder-pro-on-novita-ai
+    displayName: kwaipilot-kat-coder-pro via novita-ai
+spec:
+    model: kwaipilot-kat-coder-pro
+    host: novita-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kwaipilot-kat-coder-pro

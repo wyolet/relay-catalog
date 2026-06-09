@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama3-8b-instruct
+    displayName: Llama 3.1 Instruct (8B)
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    maxOutputTokens: 131072
+    knowledgeCutoff: 2023-12
+    releaseDate: "2024-07-23"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: llama3-8b-instruct
+          releasedAt: "2024-07-23"
+    pointer: llama3-8b-instruct

@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemma-4-31b-it
+    displayName: Gemma 4 31B IT
+    owner:
+        kind: provider
+        name: crof
+    labels:
+        family: gemma
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gemma
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    maxOutputTokens: 262144
+    releaseDate: "2026-04-02"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: gemma-4-31b-it
+          releasedAt: "2026-04-02"
+    pointer: gemma-4-31b-it

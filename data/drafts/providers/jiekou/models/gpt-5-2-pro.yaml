@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-5-2-pro
+    displayName: gpt-5.2-pro
+    owner:
+        kind: provider
+        name: jiekou
+    labels:
+        family: gpt-pro
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt-pro
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 400000
+    contextWindowOutput: 128000
+    contextWindowTotal: 400000
+    maxOutputTokens: 128000
+    releaseDate: 2026-01
+    enabled: true
+    snapshots:
+        - name: gpt-5-2-pro
+          releasedAt: 2026-01
+          originalName: gpt-5.2-pro
+    pointer: gpt-5-2-pro

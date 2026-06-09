@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-plus
+    displayName: Qwen-Plus
+    owner:
+        kind: provider
+        name: 302ai
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 32768
+    contextWindowTotal: 1000000
+    maxOutputTokens: 32768
+    knowledgeCutoff: 2024-10
+    releaseDate: "2024-07-23"
+    enabled: true
+    snapshots:
+        - name: qwen-plus
+          releasedAt: "2024-07-23"
+        - name: qwen-plus-latest
+          releasedAt: "2025-01-25"
+    pointer: qwen-plus

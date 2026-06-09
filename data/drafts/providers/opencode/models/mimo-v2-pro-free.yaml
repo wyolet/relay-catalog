@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mimo-v2-pro-free
+    displayName: MiMo V2 Pro Free
+    owner:
+        kind: provider
+        name: opencode
+    labels:
+        family: mimo-pro-free
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mimo-pro-free
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 64000
+    contextWindowTotal: 1048576
+    maxOutputTokens: 64000
+    knowledgeCutoff: 2024-12
+    releaseDate: "2026-03-18"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mimo-v2-pro-free
+          releasedAt: "2026-03-18"
+    pointer: mimo-v2-pro-free

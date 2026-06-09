@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: zhipuai-glm-4-6
+    displayName: GLM-4.6
+    owner:
+        kind: provider
+        name: modelscope
+    labels:
+        family: glm
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glm
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 202752
+    contextWindowOutput: 98304
+    contextWindowTotal: 202752
+    maxOutputTokens: 98304
+    knowledgeCutoff: 2025-07
+    releaseDate: "2025-09-30"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: zhipuai-glm-4-6
+          releasedAt: "2025-09-30"
+          originalName: ZhipuAI/GLM-4.6
+    pointer: zhipuai-glm-4-6

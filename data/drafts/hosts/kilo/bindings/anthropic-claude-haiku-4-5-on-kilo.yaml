@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: anthropic-claude-haiku-4-5-on-kilo
+    displayName: anthropic-claude-haiku-4-5 via kilo
+spec:
+    model: anthropic-claude-haiku-4-5
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - anthropic-claude-haiku-4-5

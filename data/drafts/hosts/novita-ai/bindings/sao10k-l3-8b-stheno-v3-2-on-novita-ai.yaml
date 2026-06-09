@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: sao10k-l3-8b-stheno-v3-2-on-novita-ai
+    displayName: sao10k-l3-8b-stheno-v3-2 via novita-ai
+spec:
+    model: sao10k-l3-8b-stheno-v3-2
+    host: novita-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - sao10k-l3-8b-stheno-v3-2

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: neuralmagic-mistral-nemo-instruct-2407-fp8-on-stackit
+    displayName: neuralmagic-mistral-nemo-instruct-2407-fp8 via stackit
+spec:
+    model: neuralmagic-mistral-nemo-instruct-2407-fp8
+    host: stackit
+    adapter: openai
+    enabled: true
+    snapshots:
+        - neuralmagic-mistral-nemo-instruct-2407-fp8

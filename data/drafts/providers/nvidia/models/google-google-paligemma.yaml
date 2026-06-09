@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: google-google-paligemma
+    displayName: paligemma
+    owner:
+        kind: provider
+        name: nvidia
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    releaseDate: "2024-05-14"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: google-google-paligemma
+          releasedAt: "2024-05-14"
+          originalName: google/google-paligemma
+    pointer: google-google-paligemma

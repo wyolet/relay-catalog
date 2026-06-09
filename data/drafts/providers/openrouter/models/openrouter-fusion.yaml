@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter-fusion
+    displayName: Fusion
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    maxOutputTokens: 128000
+    releaseDate: "2026-05-12"
+    enabled: true
+    snapshots:
+        - name: openrouter-fusion
+          releasedAt: "2026-05-12"
+          originalName: openrouter/fusion
+    pointer: openrouter-fusion

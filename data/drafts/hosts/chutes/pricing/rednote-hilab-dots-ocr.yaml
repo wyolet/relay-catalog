@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: chutes-rednote-hilab-dots-ocr
+    displayName: rednote-hilab-dots-ocr pricing
+    owner:
+        kind: host
+        id: chutes
+spec:
+    currency: USD
+    targetModels:
+        - rednote-hilab-dots-ocr
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.005
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.01
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.0109
+    enabled: true

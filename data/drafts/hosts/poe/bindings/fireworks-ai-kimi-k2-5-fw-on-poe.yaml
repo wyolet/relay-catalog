@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: fireworks-ai-kimi-k2-5-fw-on-poe
+    displayName: fireworks-ai-kimi-k2-5-fw via poe
+spec:
+    model: fireworks-ai-kimi-k2-5-fw
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - fireworks-ai-kimi-k2-5-fw

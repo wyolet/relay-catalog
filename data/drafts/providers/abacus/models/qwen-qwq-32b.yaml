@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwq-32b
+    displayName: QwQ 32B
+    owner:
+        kind: provider
+        name: abacus
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    maxOutputTokens: 32768
+    releaseDate: "2024-11-28"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwq-32b
+          releasedAt: "2024-11-28"
+          originalName: Qwen/QwQ-32B
+    pointer: qwen-qwq-32b

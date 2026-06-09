@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: clarifai
+    displayName: Clarifai
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://docs.clarifai.com/compute/inference/

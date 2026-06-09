@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwq-32b-preview-on-nano-gpt
+    displayName: qwen-qwq-32b-preview via nano-gpt
+spec:
+    model: qwen-qwq-32b-preview
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwq-32b-preview

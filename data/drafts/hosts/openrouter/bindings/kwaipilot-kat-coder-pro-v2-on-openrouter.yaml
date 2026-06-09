@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kwaipilot-kat-coder-pro-v2-on-openrouter
+    displayName: kwaipilot-kat-coder-pro-v2 via openrouter
+spec:
+    model: kwaipilot-kat-coder-pro-v2
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kwaipilot-kat-coder-pro-v2

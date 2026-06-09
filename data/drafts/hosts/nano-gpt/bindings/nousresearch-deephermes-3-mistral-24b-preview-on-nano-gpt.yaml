@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nousresearch-deephermes-3-mistral-24b-preview-on-nano-gpt
+    displayName: nousresearch-deephermes-3-mistral-24b-preview via nano-gpt
+spec:
+    model: nousresearch-deephermes-3-mistral-24b-preview
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nousresearch-deephermes-3-mistral-24b-preview

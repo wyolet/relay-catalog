@@ -1,0 +1,13 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: devstral-medium-on-mistral
+    displayName: devstral-medium via mistral
+spec:
+    model: devstral-medium
+    host: mistral
+    adapter: openai
+    enabled: true
+    snapshots:
+        - devstral-medium-2507
+        - devstral-medium-latest

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kimi-kimi-k2-5-on-alibaba-cn
+    displayName: kimi-kimi-k2-5 via alibaba-cn
+spec:
+    model: kimi-kimi-k2-5
+    host: alibaba-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kimi-kimi-k2-5

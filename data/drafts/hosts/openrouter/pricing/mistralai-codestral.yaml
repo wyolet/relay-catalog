@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: openrouter-mistralai-codestral
+    displayName: mistralai-codestral pricing
+    owner:
+        kind: host
+        id: openrouter
+spec:
+    currency: USD
+    targetModels:
+        - mistralai-codestral
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.03
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.9
+    enabled: true

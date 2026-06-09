@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: siliconflow-meta-llama-meta-llama-3-1-8b-instruct
+    displayName: meta-llama-meta-llama-3-1-8b-instruct pricing
+    owner:
+        kind: host
+        id: siliconflow
+spec:
+    currency: USD
+    targetModels:
+        - meta-llama-meta-llama-3-1-8b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.06
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.06
+    enabled: true

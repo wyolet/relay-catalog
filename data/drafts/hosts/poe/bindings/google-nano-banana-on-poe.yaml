@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-nano-banana-on-poe
+    displayName: google-nano-banana via poe
+spec:
+    model: google-nano-banana
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-nano-banana

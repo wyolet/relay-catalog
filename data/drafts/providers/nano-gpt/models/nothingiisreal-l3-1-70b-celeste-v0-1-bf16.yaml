@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nothingiisreal-l3-1-70b-celeste-v0-1-bf16
+    displayName: Llama 3.1 70B Celeste v0.1
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 16384
+    contextWindowTotal: 16384
+    maxOutputTokens: 16384
+    releaseDate: "2024-07-23"
+    enabled: true
+    snapshots:
+        - name: nothingiisreal-l3-1-70b-celeste-v0-1-bf16
+          releasedAt: "2024-07-23"
+          originalName: nothingiisreal/L3.1-70B-Celeste-V0.1-BF16
+    pointer: nothingiisreal-l3-1-70b-celeste-v0-1-bf16

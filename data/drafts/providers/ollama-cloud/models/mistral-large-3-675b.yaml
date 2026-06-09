@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-large-3-675b
+    displayName: mistral-large-3:675b
+    owner:
+        kind: provider
+        name: ollama-cloud
+    labels:
+        family: mistral-large
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral-large
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    maxOutputTokens: 262144
+    releaseDate: "2025-12-02"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistral-large-3-675b
+          releasedAt: "2025-12-02"
+          originalName: mistral-large-3:675b
+    pointer: mistral-large-3-675b

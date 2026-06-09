@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: aion-labs-aion-1-0
+    displayName: 'AionLabs: Aion-1.0'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 32768
+    contextWindowTotal: 131072
+    maxOutputTokens: 32768
+    releaseDate: "2025-02-05"
+    enabled: true
+    snapshots:
+        - name: aion-labs-aion-1-0
+          releasedAt: "2025-02-05"
+          originalName: aion-labs/aion-1.0
+    pointer: aion-labs-aion-1-0

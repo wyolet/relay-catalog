@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-deepseek-v4-flash
+    displayName: DeepSeek V4 Flash
+    owner:
+        kind: provider
+        name: anyapi
+    labels:
+        family: deepseek-flash
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek-flash
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 384000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 384000
+    knowledgeCutoff: 2025-05
+    releaseDate: "2026-04-24"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: deepseek-deepseek-v4-flash
+          releasedAt: "2026-04-24"
+          originalName: deepseek/deepseek-v4-flash
+    pointer: deepseek-deepseek-v4-flash

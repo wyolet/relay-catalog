@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: helicone-o3-pro
+    displayName: o3-pro pricing
+    owner:
+        kind: host
+        id: helicone
+spec:
+    currency: USD
+    targetModels:
+        - o3-pro
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 20
+        - meter: tokens.output
+          unit: per_million
+          amount: 80
+    enabled: true

@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: tee-gemma-4-26b-a4b-uncensored
+    displayName: Gemma 4 26B A4B Uncensored TEE
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 65536
+    contextWindowOutput: 65536
+    contextWindowTotal: 65536
+    maxOutputTokens: 65536
+    releaseDate: "2026-05-23"
+    enabled: true
+    snapshots:
+        - name: tee-gemma-4-26b-a4b-uncensored
+          releasedAt: "2026-05-23"
+          originalName: TEE/gemma-4-26b-a4b-uncensored
+    pointer: tee-gemma-4-26b-a4b-uncensored

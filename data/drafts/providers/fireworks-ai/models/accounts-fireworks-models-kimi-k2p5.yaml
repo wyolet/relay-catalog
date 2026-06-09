@@ -1,0 +1,43 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: accounts-fireworks-models-kimi-k2p5
+    displayName: Kimi K2.5
+    owner:
+        kind: provider
+        name: fireworks-ai
+    labels:
+        family: kimi-thinking
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: kimi-thinking
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 256000
+    contextWindowTotal: 256000
+    maxOutputTokens: 256000
+    knowledgeCutoff: 2025-01
+    releaseDate: "2026-01-27"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: accounts-fireworks-models-kimi-k2p5
+          releasedAt: "2026-01-27"
+          originalName: accounts/fireworks/models/kimi-k2p5
+    pointer: accounts-fireworks-models-kimi-k2p5

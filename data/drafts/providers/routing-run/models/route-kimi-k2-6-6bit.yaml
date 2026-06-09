@@ -1,0 +1,43 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: route-kimi-k2-6-6bit
+    displayName: Kimi K2.6 6bit
+    owner:
+        kind: provider
+        name: routing-run
+    labels:
+        family: kimi-k2.6
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: kimi-k2.6
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    maxOutputTokens: 262144
+    knowledgeCutoff: 2025-01
+    releaseDate: "2026-04-21"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: route-kimi-k2-6-6bit
+          releasedAt: "2026-04-21"
+          originalName: route/kimi-k2.6-6bit
+    pointer: route-kimi-k2-6-6bit

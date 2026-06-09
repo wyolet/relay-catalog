@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama-prompt-guard-2-86m
+    displayName: Meta Llama Prompt Guard 2 86M
+    owner:
+        kind: provider
+        name: helicone
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 512
+    contextWindowOutput: 2
+    contextWindowTotal: 512
+    maxOutputTokens: 2
+    knowledgeCutoff: 2024-10
+    releaseDate: "2024-10-01"
+    enabled: true
+    snapshots:
+        - name: llama-prompt-guard-2-86m
+          releasedAt: "2024-10-01"
+    pointer: llama-prompt-guard-2-86m

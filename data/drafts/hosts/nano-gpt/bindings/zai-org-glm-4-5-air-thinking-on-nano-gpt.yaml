@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: zai-org-glm-4-5-air-thinking-on-nano-gpt
+    displayName: zai-org-glm-4-5-air-thinking via nano-gpt
+spec:
+    model: zai-org-glm-4-5-air-thinking
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - zai-org-glm-4-5-air-thinking

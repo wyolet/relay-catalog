@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-5-9b-q4-k-m
+    displayName: Qwen 3.5 9B (Q4_K_M)
+    owner:
+        kind: provider
+        name: atomic-chat
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 8192
+    contextWindowTotal: 32768
+    maxOutputTokens: 8192
+    releaseDate: "2026-03-05"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen3-5-9b-q4-k-m
+          releasedAt: "2026-03-05"
+          originalName: Qwen3_5-9B-Q4_K_M
+    pointer: qwen3-5-9b-q4-k-m

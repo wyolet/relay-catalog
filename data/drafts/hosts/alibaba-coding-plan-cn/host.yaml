@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: alibaba-coding-plan-cn
+    displayName: Alibaba Coding Plan (China)
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://coding.dashscope.aliyuncs.com/v1
+    pricingStrategies:
+        - api
+    docsURL: https://help.aliyun.com/zh/model-studio/coding-plan

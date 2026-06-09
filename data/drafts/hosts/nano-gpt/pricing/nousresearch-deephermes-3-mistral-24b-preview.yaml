@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-nousresearch-deephermes-3-mistral-24b-preview
+    displayName: nousresearch-deephermes-3-mistral-24b-preview pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - nousresearch-deephermes-3-mistral-24b-preview
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.3
+    enabled: true

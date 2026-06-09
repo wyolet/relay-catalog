@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: tee-deepseek-v4-pro
+    displayName: DeepSeek V4 Pro TEE
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 800000
+    contextWindowOutput: 65536
+    contextWindowTotal: 800000
+    maxOutputTokens: 65536
+    releaseDate: "2026-04-25"
+    enabled: true
+    snapshots:
+        - name: tee-deepseek-v4-pro
+          releasedAt: "2026-04-25"
+          originalName: TEE/deepseek-v4-pro
+    pointer: tee-deepseek-v4-pro

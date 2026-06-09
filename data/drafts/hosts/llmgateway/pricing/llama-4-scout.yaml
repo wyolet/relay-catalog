@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: llmgateway-llama-4-scout
+    displayName: llama-4-scout pricing
+    owner:
+        kind: host
+        id: llmgateway
+spec:
+    currency: USD
+    targetModels:
+        - llama-4-scout
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.18
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.59
+    enabled: true

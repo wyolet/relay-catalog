@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-gpt-image-1-5
+    displayName: GPT Image 1.5
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: gpt-image
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt-image
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - image
+    releaseDate: "2025-11-25"
+    enabled: true
+    snapshots:
+        - name: openai-gpt-image-1-5
+          releasedAt: "2025-11-25"
+          originalName: openai-gpt-image-1.5
+    pointer: openai-gpt-image-1-5

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-nemotron-cascade-2-30b-a3b-on-vultr
+    displayName: nvidia-nemotron-cascade-2-30b-a3b via vultr
+spec:
+    model: nvidia-nemotron-cascade-2-30b-a3b
+    host: vultr
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-nemotron-cascade-2-30b-a3b

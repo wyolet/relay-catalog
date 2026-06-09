@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-32b-on-groq
+    displayName: qwen-qwen3-32b via groq
+spec:
+    model: qwen-qwen3-32b
+    host: groq
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-32b

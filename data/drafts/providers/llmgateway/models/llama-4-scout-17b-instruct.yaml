@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama-4-scout-17b-instruct
+    displayName: Llama 4 Scout 17B Instruct
+    owner:
+        kind: provider
+        name: llmgateway
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 2048
+    contextWindowTotal: 8192
+    maxOutputTokens: 2048
+    releaseDate: "2025-04-05"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: llama-4-scout-17b-instruct
+          releasedAt: "2025-04-05"
+    pointer: llama-4-scout-17b-instruct

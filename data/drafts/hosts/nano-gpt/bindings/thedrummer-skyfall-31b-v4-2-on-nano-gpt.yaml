@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: thedrummer-skyfall-31b-v4-2-on-nano-gpt
+    displayName: thedrummer-skyfall-31b-v4-2 via nano-gpt
+spec:
+    model: thedrummer-skyfall-31b-v4-2
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - thedrummer-skyfall-31b-v4-2

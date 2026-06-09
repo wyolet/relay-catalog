@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-code-agent-on-nano-gpt
+    displayName: mistral-code-agent via nano-gpt
+spec:
+    model: mistral-code-agent
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistral-code-agent-latest

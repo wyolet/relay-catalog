@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: stepfun-ai-step-3-7-flash-on-nvidia
+    displayName: stepfun-ai-step-3-7-flash via nvidia
+spec:
+    model: stepfun-ai-step-3-7-flash
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - stepfun-ai-step-3-7-flash

@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: chutes-qwen-qwen3-next-80b-a3b-instruct
+    displayName: qwen-qwen3-next-80b-a3b-instruct pricing
+    owner:
+        kind: host
+        id: chutes
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen3-next-80b-a3b-instruct
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.05
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.8
+    enabled: true

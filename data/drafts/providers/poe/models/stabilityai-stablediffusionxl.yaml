@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: stabilityai-stablediffusionxl
+    displayName: StableDiffusionXL
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: stable-diffusion
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: stable-diffusion
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - image
+    contextWindowInput: 200
+    contextWindowTotal: 200
+    releaseDate: "2023-07-09"
+    enabled: true
+    snapshots:
+        - name: stabilityai-stablediffusionxl
+          releasedAt: "2023-07-09"
+          originalName: stabilityai/stablediffusionxl
+    pointer: stabilityai-stablediffusionxl

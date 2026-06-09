@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: arcee-ai-maestro-reasoning-on-kilo
+    displayName: arcee-ai-maestro-reasoning via kilo
+spec:
+    model: arcee-ai-maestro-reasoning
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - arcee-ai-maestro-reasoning

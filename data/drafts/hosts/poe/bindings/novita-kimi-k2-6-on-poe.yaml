@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: novita-kimi-k2-6-on-poe
+    displayName: novita-kimi-k2-6 via poe
+spec:
+    model: novita-kimi-k2-6
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - novita-kimi-k2-6

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: z-ai-glm-4-7-on-kilo
+    displayName: z-ai-glm-4-7 via kilo
+spec:
+    model: z-ai-glm-4-7
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - z-ai-glm-4-7

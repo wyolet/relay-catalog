@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-vl-235b-instruct
+    displayName: qwen3-vl:235b-instruct
+    owner:
+        kind: provider
+        name: ollama-cloud
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 131072
+    contextWindowTotal: 262144
+    maxOutputTokens: 131072
+    releaseDate: "2025-09-22"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen3-vl-235b-instruct
+          releasedAt: "2025-09-22"
+          originalName: qwen3-vl:235b-instruct
+    pointer: qwen3-vl-235b-instruct

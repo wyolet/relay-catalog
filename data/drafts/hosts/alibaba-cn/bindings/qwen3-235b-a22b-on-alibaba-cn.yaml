@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-235b-a22b-on-alibaba-cn
+    displayName: qwen3-235b-a22b via alibaba-cn
+spec:
+    model: qwen3-235b-a22b
+    host: alibaba-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-235b-a22b

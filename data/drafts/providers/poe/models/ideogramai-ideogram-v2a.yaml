@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ideogramai-ideogram-v2a
+    displayName: Ideogram-v2a
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: ideogram
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: ideogram
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - image
+    contextWindowInput: 150
+    contextWindowTotal: 150
+    releaseDate: "2025-02-27"
+    enabled: true
+    snapshots:
+        - name: ideogramai-ideogram-v2a
+          releasedAt: "2025-02-27"
+          originalName: ideogramai/ideogram-v2a
+    pointer: ideogramai-ideogram-v2a

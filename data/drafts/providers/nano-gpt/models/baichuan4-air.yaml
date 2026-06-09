@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: baichuan4-air
+    displayName: Baichuan 4 Air
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    maxOutputTokens: 32768
+    releaseDate: "2025-08-19"
+    enabled: true
+    snapshots:
+        - name: baichuan4-air
+          releasedAt: "2025-08-19"
+          originalName: Baichuan4-Air
+    pointer: baichuan4-air

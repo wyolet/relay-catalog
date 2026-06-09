@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-6-flash-on-openrouter
+    displayName: qwen-qwen3-6-flash via openrouter
+spec:
+    model: qwen-qwen3-6-flash
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-6-flash

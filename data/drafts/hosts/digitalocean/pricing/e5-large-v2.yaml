@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: digitalocean-e5-large-v2
+    displayName: e5-large-v2 pricing
+    owner:
+        kind: host
+        id: digitalocean
+spec:
+    currency: USD
+    targetModels:
+        - e5-large-v2
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.02
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

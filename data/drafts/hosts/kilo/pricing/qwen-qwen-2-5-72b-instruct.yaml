@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-qwen-qwen-2-5-72b-instruct
+    displayName: qwen-qwen-2-5-72b-instruct pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen-2-5-72b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.12
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.39
+    enabled: true

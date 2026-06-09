@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: zai-org-glm-5-1
+    displayName: GLM-5.1
+    owner:
+        kind: provider
+        name: friendli
+    labels:
+        family: glm
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glm
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 202752
+    contextWindowOutput: 202752
+    contextWindowTotal: 202752
+    maxOutputTokens: 202752
+    releaseDate: "2026-04-07"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: zai-org-glm-5-1
+          releasedAt: "2026-04-07"
+          originalName: zai-org/GLM-5.1
+    pointer: zai-org-glm-5-1

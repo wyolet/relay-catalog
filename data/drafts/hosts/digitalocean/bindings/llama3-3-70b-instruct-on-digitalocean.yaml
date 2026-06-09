@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: llama3-3-70b-instruct-on-digitalocean
+    displayName: llama3-3-70b-instruct via digitalocean
+spec:
+    model: llama3-3-70b-instruct
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - llama3-3-70b-instruct

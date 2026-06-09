@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: privatemode-ai-qwen3-coder-30b-a3b
+    displayName: qwen3-coder-30b-a3b pricing
+    owner:
+        kind: host
+        id: privatemode-ai
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-coder-30b-a3b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

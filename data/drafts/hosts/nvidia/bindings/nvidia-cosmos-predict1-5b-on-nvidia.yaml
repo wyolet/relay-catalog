@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-cosmos-predict1-5b-on-nvidia
+    displayName: nvidia-cosmos-predict1-5b via nvidia
+spec:
+    model: nvidia-cosmos-predict1-5b
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-cosmos-predict1-5b

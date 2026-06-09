@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nvidia-bytedance-seed-oss-36b-instruct
+    displayName: bytedance-seed-oss-36b-instruct pricing
+    owner:
+        kind: host
+        id: nvidia
+spec:
+    currency: USD
+    targetModels:
+        - bytedance-seed-oss-36b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

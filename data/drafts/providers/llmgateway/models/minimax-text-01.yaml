@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: minimax-text-01
+    displayName: MiniMax Text 01
+    owner:
+        kind: provider
+        name: llmgateway
+    labels:
+        family: minimax
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: minimax
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 131072
+    contextWindowTotal: 1000000
+    maxOutputTokens: 131072
+    releaseDate: "2025-01-15"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: minimax-text-01
+          releasedAt: "2025-01-15"
+    pointer: minimax-text-01

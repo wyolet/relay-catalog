@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-32b-fp8-on-llmgateway
+    displayName: qwen3-32b-fp8 via llmgateway
+spec:
+    model: qwen3-32b-fp8
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-32b-fp8

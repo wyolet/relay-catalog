@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: 302ai-glm-4-5-x
+    displayName: glm-4-5-x pricing
+    owner:
+        kind: host
+        id: 302ai
+spec:
+    currency: USD
+    targetModels:
+        - glm-4-5-x
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.143
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.29
+    enabled: true

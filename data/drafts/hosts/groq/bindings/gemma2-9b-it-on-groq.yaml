@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemma2-9b-it-on-groq
+    displayName: gemma2-9b-it via groq
+spec:
+    model: gemma2-9b-it
+    host: groq
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gemma2-9b-it

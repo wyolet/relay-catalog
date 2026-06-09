@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: stepfun-ai-gelab-zero-4b-preview
+    displayName: Stepfun-Ai/Gelab Zero 4b Preview
+    owner:
+        kind: provider
+        name: qiniu-ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 4096
+    contextWindowTotal: 8192
+    maxOutputTokens: 4096
+    releaseDate: "2025-12-23"
+    enabled: true
+    snapshots:
+        - name: stepfun-ai-gelab-zero-4b-preview
+          releasedAt: "2025-12-23"
+          originalName: stepfun-ai/gelab-zero-4b-preview
+    pointer: stepfun-ai-gelab-zero-4b-preview

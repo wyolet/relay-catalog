@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: microsoft-wizardlm-2-8x22b-on-kilo
+    displayName: microsoft-wizardlm-2-8x22b via kilo
+spec:
+    model: microsoft-wizardlm-2-8x22b
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - microsoft-wizardlm-2-8x22b

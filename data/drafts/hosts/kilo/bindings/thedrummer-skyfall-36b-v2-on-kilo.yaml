@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: thedrummer-skyfall-36b-v2-on-kilo
+    displayName: thedrummer-skyfall-36b-v2 via kilo
+spec:
+    model: thedrummer-skyfall-36b-v2
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - thedrummer-skyfall-36b-v2

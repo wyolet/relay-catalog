@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: stepfun-ai-step-3-5-flash
+    displayName: step-3-5-flash pricing
+    owner:
+        kind: host
+        id: stepfun-ai
+spec:
+    currency: USD
+    targetModels:
+        - step-3-5-flash
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.019
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.096
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.288
+    enabled: true

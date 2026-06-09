@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: azure-o3-mini-on-nano-gpt
+    displayName: azure-o3-mini via nano-gpt
+spec:
+    model: azure-o3-mini
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - azure-o3-mini

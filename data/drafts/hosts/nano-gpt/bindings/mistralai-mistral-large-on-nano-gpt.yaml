@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-mistral-large-on-nano-gpt
+    displayName: mistralai-mistral-large via nano-gpt
+spec:
+    model: mistralai-mistral-large
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-mistral-large

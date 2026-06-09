@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: novita-ai-deepseek-deepseek-v3-1-terminus
+    displayName: deepseek-deepseek-v3-1-terminus pricing
+    owner:
+        kind: host
+        id: novita-ai
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-deepseek-v3-1-terminus
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.135
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.27
+        - meter: tokens.output
+          unit: per_million
+          amount: 1
+    enabled: true

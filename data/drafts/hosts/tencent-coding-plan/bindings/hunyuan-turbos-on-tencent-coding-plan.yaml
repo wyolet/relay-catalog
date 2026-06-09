@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hunyuan-turbos-on-tencent-coding-plan
+    displayName: hunyuan-turbos via tencent-coding-plan
+spec:
+    model: hunyuan-turbos
+    host: tencent-coding-plan
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hunyuan-turbos

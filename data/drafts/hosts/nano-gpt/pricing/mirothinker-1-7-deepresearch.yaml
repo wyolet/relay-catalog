@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-mirothinker-1-7-deepresearch
+    displayName: mirothinker-1-7-deepresearch pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - mirothinker-1-7-deepresearch
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 4
+        - meter: tokens.output
+          unit: per_million
+          amount: 25
+    enabled: true

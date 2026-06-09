@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nousresearch-hermes-4-405b
+    displayName: 'Nous: Hermes 4 405B'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 26215
+    contextWindowTotal: 131072
+    maxOutputTokens: 26215
+    releaseDate: "2025-08-25"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nousresearch-hermes-4-405b
+          releasedAt: "2025-08-25"
+          originalName: nousresearch/hermes-4-405b
+    pointer: nousresearch-hermes-4-405b

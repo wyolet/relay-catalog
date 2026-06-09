@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: ovhcloud-mistral-nemo-instruct
+    displayName: mistral-nemo-instruct pricing
+    owner:
+        kind: host
+        id: ovhcloud
+spec:
+    currency: USD
+    targetModels:
+        - mistral-nemo-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.14
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.14
+    enabled: true

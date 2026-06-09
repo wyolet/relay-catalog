@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nvidia-nemotron-voicechat
+    displayName: nemotron-voicechat
+    owner:
+        kind: provider
+        name: nvidia
+    labels:
+        family: nemotron
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: nemotron
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        audio: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - audio
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    releaseDate: "2026-03-16"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nvidia-nemotron-voicechat
+          releasedAt: "2026-03-16"
+          originalName: nvidia/nemotron-voicechat
+    pointer: nvidia-nemotron-voicechat

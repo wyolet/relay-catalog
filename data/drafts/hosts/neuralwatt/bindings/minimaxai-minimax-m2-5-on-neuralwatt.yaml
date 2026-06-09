@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimaxai-minimax-m2-5-on-neuralwatt
+    displayName: minimaxai-minimax-m2-5 via neuralwatt
+spec:
+    model: minimaxai-minimax-m2-5
+    host: neuralwatt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - minimaxai-minimax-m2-5

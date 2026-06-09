@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: llmgateway-llama-3-1-8b-instruct
+    displayName: llama-3-1-8b-instruct pricing
+    owner:
+        kind: host
+        id: llmgateway
+spec:
+    currency: USD
+    targetModels:
+        - llama-3-1-8b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.22
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.22
+    enabled: true

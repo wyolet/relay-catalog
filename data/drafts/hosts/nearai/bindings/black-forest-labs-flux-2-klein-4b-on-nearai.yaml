@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: black-forest-labs-flux-2-klein-4b-on-nearai
+    displayName: black-forest-labs-flux-2-klein-4b via nearai
+spec:
+    model: black-forest-labs-flux-2-klein-4b
+    host: nearai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - black-forest-labs-flux-2-klein-4b

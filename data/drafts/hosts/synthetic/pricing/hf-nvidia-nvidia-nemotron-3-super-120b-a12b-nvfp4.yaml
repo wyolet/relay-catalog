@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: synthetic-hf-nvidia-nvidia-nemotron-3-super-120b-a12b-nvfp4
+    displayName: hf-nvidia-nvidia-nemotron-3-super-120b-a12b-nvfp4 pricing
+    owner:
+        kind: host
+        id: synthetic
+spec:
+    currency: USD
+    targetModels:
+        - hf-nvidia-nvidia-nemotron-3-super-120b-a12b-nvfp4
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 1
+    enabled: true

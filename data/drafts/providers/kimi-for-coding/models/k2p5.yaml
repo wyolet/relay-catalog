@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: k2p5
+    displayName: Kimi K2.5
+    owner:
+        kind: provider
+        name: kimi-for-coding
+    labels:
+        family: kimi-thinking
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: kimi-thinking
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 32768
+    contextWindowTotal: 262144
+    maxOutputTokens: 32768
+    knowledgeCutoff: 2025-01
+    releaseDate: 2026-01
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: k2p5
+          releasedAt: 2026-01
+    pointer: k2p5

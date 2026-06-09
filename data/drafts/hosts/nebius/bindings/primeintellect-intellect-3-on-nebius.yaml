@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: primeintellect-intellect-3-on-nebius
+    displayName: primeintellect-intellect-3 via nebius
+spec:
+    model: primeintellect-intellect-3
+    host: nebius
+    adapter: openai
+    enabled: true
+    snapshots:
+        - primeintellect-intellect-3

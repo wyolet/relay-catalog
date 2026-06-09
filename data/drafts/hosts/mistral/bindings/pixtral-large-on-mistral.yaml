@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: pixtral-large-on-mistral
+    displayName: pixtral-large via mistral
+spec:
+    model: pixtral-large
+    host: mistral
+    adapter: openai
+    enabled: true
+    snapshots:
+        - pixtral-large-latest

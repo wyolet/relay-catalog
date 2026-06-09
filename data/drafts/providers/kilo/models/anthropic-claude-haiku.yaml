@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: anthropic-claude-haiku
+    displayName: 'Anthropic: Claude Haiku Latest'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 64000
+    contextWindowTotal: 200000
+    maxOutputTokens: 64000
+    releaseDate: "2026-04-27"
+    enabled: true
+    snapshots:
+        - name: anthropic-claude-haiku-latest
+          releasedAt: "2026-04-27"
+          originalName: ~anthropic/claude-haiku-latest
+    pointer: anthropic-claude-haiku-latest

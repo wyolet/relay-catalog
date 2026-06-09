@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: baichuan-baichuan-m2-32b-on-novita-ai
+    displayName: baichuan-baichuan-m2-32b via novita-ai
+spec:
+    model: baichuan-baichuan-m2-32b
+    host: novita-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - baichuan-baichuan-m2-32b

@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-coder-free
+    displayName: Qwen3 Coder 480B A35B (free)
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262000
+    contextWindowOutput: 262000
+    contextWindowTotal: 262000
+    maxOutputTokens: 262000
+    knowledgeCutoff: "2025-06-30"
+    releaseDate: "2025-07-23"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-coder-free
+          releasedAt: "2025-07-23"
+          originalName: qwen/qwen3-coder:free
+    pointer: qwen-qwen3-coder-free

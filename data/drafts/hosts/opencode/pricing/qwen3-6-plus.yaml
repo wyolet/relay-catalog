@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: opencode-qwen3-6-plus
+    displayName: qwen3-6-plus pricing
+    owner:
+        kind: host
+        id: opencode
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-6-plus
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.625
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.05
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 3
+    enabled: true

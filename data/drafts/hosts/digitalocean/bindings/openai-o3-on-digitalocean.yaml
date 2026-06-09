@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-o3-on-digitalocean
+    displayName: openai-o3 via digitalocean
+spec:
+    model: openai-o3
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-o3

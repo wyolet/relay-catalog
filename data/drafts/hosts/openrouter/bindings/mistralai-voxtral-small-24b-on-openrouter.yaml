@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-voxtral-small-24b-on-openrouter
+    displayName: mistralai-voxtral-small-24b via openrouter
+spec:
+    model: mistralai-voxtral-small-24b
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-voxtral-small-24b-2507

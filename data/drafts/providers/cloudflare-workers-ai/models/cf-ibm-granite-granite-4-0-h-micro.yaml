@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cf-ibm-granite-granite-4-0-h-micro
+    displayName: Granite 4.0 H Micro
+    owner:
+        kind: provider
+        name: cloudflare-workers-ai
+    labels:
+        family: granite
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: granite
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131000
+    contextWindowOutput: 131000
+    contextWindowTotal: 131000
+    maxOutputTokens: 131000
+    releaseDate: "2025-10-07"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: cf-ibm-granite-granite-4-0-h-micro
+          releasedAt: "2025-10-07"
+          originalName: '@cf/ibm-granite/granite-4.0-h-micro'
+    pointer: cf-ibm-granite-granite-4-0-h-micro

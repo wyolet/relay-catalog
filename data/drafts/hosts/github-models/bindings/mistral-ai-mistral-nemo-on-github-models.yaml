@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-ai-mistral-nemo-on-github-models
+    displayName: mistral-ai-mistral-nemo via github-models
+spec:
+    model: mistral-ai-mistral-nemo
+    host: github-models
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistral-ai-mistral-nemo

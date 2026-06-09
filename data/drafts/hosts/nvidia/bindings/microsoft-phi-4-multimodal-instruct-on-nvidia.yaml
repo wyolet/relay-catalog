@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: microsoft-phi-4-multimodal-instruct-on-nvidia
+    displayName: microsoft-phi-4-multimodal-instruct via nvidia
+spec:
+    model: microsoft-phi-4-multimodal-instruct
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - microsoft-phi-4-multimodal-instruct

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: seed-1-6-flash-on-llmgateway
+    displayName: seed-1-6-flash via llmgateway
+spec:
+    model: seed-1-6-flash
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - seed-1-6-flash-250715

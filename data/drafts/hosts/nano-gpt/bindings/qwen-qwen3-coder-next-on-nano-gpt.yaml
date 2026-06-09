@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-coder-next-on-nano-gpt
+    displayName: qwen-qwen3-coder-next via nano-gpt
+spec:
+    model: qwen-qwen3-coder-next
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-coder-next

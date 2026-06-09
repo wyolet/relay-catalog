@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-gemini-3-1-pro-preview-customtools-on-openrouter
+    displayName: google-gemini-3-1-pro-preview-customtools via openrouter
+spec:
+    model: google-gemini-3-1-pro-preview-customtools
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-gemini-3-1-pro-preview-customtools

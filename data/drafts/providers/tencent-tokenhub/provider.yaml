@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: tencent-tokenhub
+    displayName: Tencent TokenHub
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://cloud.tencent.com/document/product/1823/130050

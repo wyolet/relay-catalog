@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-openai-gpt-5-1-codex-mini
+    displayName: openai-gpt-5-1-codex-mini pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - openai-gpt-5-1-codex-mini
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.025
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.25
+        - meter: tokens.output
+          unit: per_million
+          amount: 2
+    enabled: true

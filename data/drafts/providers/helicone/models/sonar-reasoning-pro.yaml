@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: sonar-reasoning-pro
+    displayName: Perplexity Sonar Reasoning Pro
+    owner:
+        kind: provider
+        name: helicone
+    labels:
+        family: sonar-reasoning
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: sonar-reasoning
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 127000
+    contextWindowOutput: 4096
+    contextWindowTotal: 127000
+    maxOutputTokens: 4096
+    knowledgeCutoff: 2025-01
+    releaseDate: "2025-01-27"
+    enabled: true
+    snapshots:
+        - name: sonar-reasoning-pro
+          releasedAt: "2025-01-27"
+    pointer: sonar-reasoning-pro

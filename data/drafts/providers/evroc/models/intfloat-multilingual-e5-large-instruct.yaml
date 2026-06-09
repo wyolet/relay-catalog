@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: intfloat-multilingual-e5-large-instruct
+    displayName: E5 Multi-Lingual Large Embeddings 0.6B
+    owner:
+        kind: provider
+        name: evroc
+    labels:
+        family: text-embedding
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: text-embedding
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 512
+    contextWindowOutput: 512
+    contextWindowTotal: 512
+    maxOutputTokens: 512
+    releaseDate: "2024-06-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: intfloat-multilingual-e5-large-instruct
+          releasedAt: "2024-06-01"
+          originalName: intfloat/multilingual-e5-large-instruct
+    pointer: intfloat-multilingual-e5-large-instruct

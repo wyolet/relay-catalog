@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: sao10k-l3-1-70b-euryale-v2-2-on-nano-gpt
+    displayName: sao10k-l3-1-70b-euryale-v2-2 via nano-gpt
+spec:
+    model: sao10k-l3-1-70b-euryale-v2-2
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - sao10k-l3-1-70b-euryale-v2-2

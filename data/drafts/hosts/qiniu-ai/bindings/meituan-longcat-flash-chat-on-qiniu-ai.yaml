@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: meituan-longcat-flash-chat-on-qiniu-ai
+    displayName: meituan-longcat-flash-chat via qiniu-ai
+spec:
+    model: meituan-longcat-flash-chat
+    host: qiniu-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - meituan-longcat-flash-chat

@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kat-coder-exp-72b
+    displayName: KAT Coder Exp 72B 1010
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32768
+    contextWindowTotal: 128000
+    maxOutputTokens: 32768
+    releaseDate: "2025-10-28"
+    enabled: true
+    snapshots:
+        - name: kat-coder-exp-72b-1010
+          releasedAt: "2025-10-28"
+          originalName: KAT-Coder-Exp-72B-1010
+    pointer: kat-coder-exp-72b-1010

@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-reasoner-cheaper
+    displayName: Deepseek R1 Cheaper
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 65536
+    contextWindowTotal: 128000
+    maxOutputTokens: 65536
+    releaseDate: "2025-01-20"
+    enabled: true
+    snapshots:
+        - name: deepseek-reasoner-cheaper
+          releasedAt: "2025-01-20"
+    pointer: deepseek-reasoner-cheaper

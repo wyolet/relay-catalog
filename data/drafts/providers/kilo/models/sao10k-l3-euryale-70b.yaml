@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: sao10k-l3-euryale-70b
+    displayName: 'Sao10k: Llama 3 Euryale 70B v2.1'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    maxOutputTokens: 8192
+    releaseDate: "2024-06-18"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: sao10k-l3-euryale-70b
+          releasedAt: "2024-06-18"
+          originalName: sao10k/l3-euryale-70b
+    pointer: sao10k-l3-euryale-70b

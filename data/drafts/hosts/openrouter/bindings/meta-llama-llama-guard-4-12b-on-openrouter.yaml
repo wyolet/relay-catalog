@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: meta-llama-llama-guard-4-12b-on-openrouter
+    displayName: meta-llama-llama-guard-4-12b via openrouter
+spec:
+    model: meta-llama-llama-guard-4-12b
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - meta-llama-llama-guard-4-12b

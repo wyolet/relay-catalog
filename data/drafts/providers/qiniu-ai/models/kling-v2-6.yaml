@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kling-v2-6
+    displayName: Kling-V2 6
+    owner:
+        kind: provider
+        name: qiniu-ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - video
+    contextWindowInput: 99999999
+    contextWindowOutput: 99999999
+    contextWindowTotal: 99999999
+    maxOutputTokens: 99999999
+    releaseDate: "2026-01-13"
+    enabled: true
+    snapshots:
+        - name: kling-v2-6
+          releasedAt: "2026-01-13"
+    pointer: kling-v2-6

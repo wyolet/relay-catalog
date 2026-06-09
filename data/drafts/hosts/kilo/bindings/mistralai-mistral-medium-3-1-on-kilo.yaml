@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-mistral-medium-3-1-on-kilo
+    displayName: mistralai-mistral-medium-3-1 via kilo
+spec:
+    model: mistralai-mistral-medium-3-1
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-mistral-medium-3-1

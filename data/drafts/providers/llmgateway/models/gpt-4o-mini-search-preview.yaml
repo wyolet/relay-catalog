@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-4o-mini-search-preview
+    displayName: GPT-4o Mini Search Preview
+    owner:
+        kind: provider
+        name: llmgateway
+    labels:
+        family: gpt
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    maxOutputTokens: 16384
+    releaseDate: "2024-10-01"
+    enabled: true
+    snapshots:
+        - name: gpt-4o-mini-search-preview
+          releasedAt: "2024-10-01"
+    pointer: gpt-4o-mini-search-preview

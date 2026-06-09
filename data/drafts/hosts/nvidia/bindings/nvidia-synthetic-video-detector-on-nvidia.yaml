@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-synthetic-video-detector-on-nvidia
+    displayName: nvidia-synthetic-video-detector via nvidia
+spec:
+    model: nvidia-synthetic-video-detector
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-synthetic-video-detector

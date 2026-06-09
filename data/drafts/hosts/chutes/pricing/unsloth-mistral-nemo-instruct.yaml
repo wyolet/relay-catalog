@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: chutes-unsloth-mistral-nemo-instruct
+    displayName: unsloth-mistral-nemo-instruct pricing
+    owner:
+        kind: host
+        id: chutes
+spec:
+    currency: USD
+    targetModels:
+        - unsloth-mistral-nemo-instruct
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.01
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.02
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.04
+    enabled: true

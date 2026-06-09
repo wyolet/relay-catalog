@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: sao10k-l3-70b-euryale-v2-1
+    displayName: "L3 70B Euryale V2.1\t"
+    owner:
+        kind: provider
+        name: novita-ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    maxOutputTokens: 8192
+    releaseDate: "2024-06-18"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: sao10k-l3-70b-euryale-v2-1
+          releasedAt: "2024-06-18"
+          originalName: sao10K/l3-70b-euryale-v2.1
+    pointer: sao10k-l3-70b-euryale-v2-1

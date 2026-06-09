@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: neversleep-lumimaid-v0-2-70b-on-nano-gpt
+    displayName: neversleep-lumimaid-v0-2-70b via nano-gpt
+spec:
+    model: neversleep-lumimaid-v0-2-70b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - neversleep-lumimaid-v0-2-70b

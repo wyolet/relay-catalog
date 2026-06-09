@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: zenmux-z-ai-glm-4-6v-flash
+    displayName: z-ai-glm-4-6v-flash pricing
+    owner:
+        kind: host
+        id: zenmux
+spec:
+    currency: USD
+    targetModels:
+        - z-ai-glm-4-6v-flash
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.0043
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.02
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.21
+    enabled: true

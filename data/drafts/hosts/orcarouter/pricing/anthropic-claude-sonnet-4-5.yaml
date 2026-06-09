@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: orcarouter-anthropic-claude-sonnet-4-5
+    displayName: anthropic-claude-sonnet-4-5 pricing
+    owner:
+        kind: host
+        id: orcarouter
+spec:
+    currency: USD
+    targetModels:
+        - anthropic-claude-sonnet-4-5
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 3.75
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.input
+          unit: per_million
+          amount: 3
+        - meter: tokens.output
+          unit: per_million
+          amount: 15
+    enabled: true

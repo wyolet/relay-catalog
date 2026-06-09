@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-chatgpt-4o
+    displayName: ChatGPT-4o-Latest
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: gpt
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    releaseDate: "2024-08-14"
+    enabled: true
+    snapshots:
+        - name: openai-chatgpt-4o-latest
+          releasedAt: "2024-08-14"
+          originalName: openai/chatgpt-4o-latest
+    pointer: openai-chatgpt-4o-latest

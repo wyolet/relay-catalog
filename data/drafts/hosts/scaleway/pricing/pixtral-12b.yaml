@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: scaleway-pixtral-12b
+    displayName: pixtral-12b pricing
+    owner:
+        kind: host
+        id: scaleway
+spec:
+    currency: USD
+    targetModels:
+        - pixtral-12b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.2
+    enabled: true

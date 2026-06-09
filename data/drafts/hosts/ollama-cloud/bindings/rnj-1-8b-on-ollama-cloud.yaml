@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: rnj-1-8b-on-ollama-cloud
+    displayName: rnj-1-8b via ollama-cloud
+spec:
+    model: rnj-1-8b
+    host: ollama-cloud
+    adapter: openai
+    enabled: true
+    snapshots:
+        - rnj-1-8b

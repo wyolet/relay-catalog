@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: xiaomi-mimo-v2-5-on-zenmux
+    displayName: xiaomi-mimo-v2-5 via zenmux
+spec:
+    model: xiaomi-mimo-v2-5
+    host: zenmux
+    adapter: openai
+    enabled: true
+    snapshots:
+        - xiaomi-mimo-v2-5

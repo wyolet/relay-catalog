@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-mistral-nemo-on-kilo
+    displayName: mistralai-mistral-nemo via kilo
+spec:
+    model: mistralai-mistral-nemo
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-mistral-nemo

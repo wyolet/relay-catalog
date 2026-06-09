@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: route-gemma-4-31b-it
+    displayName: Gemma 4 31B IT
+    owner:
+        kind: provider
+        name: routing-run
+    labels:
+        family: gemma
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gemma
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 65536
+    contextWindowTotal: 131072
+    maxOutputTokens: 65536
+    releaseDate: "2026-04-02"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: route-gemma-4-31b-it
+          releasedAt: "2026-04-02"
+          originalName: route/gemma-4-31b-it
+    pointer: route-gemma-4-31b-it

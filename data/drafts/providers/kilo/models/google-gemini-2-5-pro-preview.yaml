@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: google-gemini-2-5-pro-preview
+    displayName: 'Google: Gemini 2.5 Pro Preview 06-05'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        audio: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - audio
+            - image
+            - pdf
+            - text
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 65536
+    contextWindowTotal: 1048576
+    maxOutputTokens: 65536
+    releaseDate: "2025-06-05"
+    enabled: true
+    snapshots:
+        - name: google-gemini-2-5-pro-preview
+          releasedAt: "2025-06-05"
+          originalName: google/gemini-2.5-pro-preview
+    pointer: google-gemini-2-5-pro-preview

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: tee-gpt-oss-120b-on-nano-gpt
+    displayName: tee-gpt-oss-120b via nano-gpt
+spec:
+    model: tee-gpt-oss-120b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - tee-gpt-oss-120b

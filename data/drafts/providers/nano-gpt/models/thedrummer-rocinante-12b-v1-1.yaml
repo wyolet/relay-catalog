@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: thedrummer-rocinante-12b-v1-1
+    displayName: Rocinante 12b
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 8192
+    contextWindowTotal: 16384
+    maxOutputTokens: 8192
+    releaseDate: "2024-01-01"
+    enabled: true
+    snapshots:
+        - name: thedrummer-rocinante-12b-v1-1
+          releasedAt: "2024-01-01"
+          originalName: TheDrummer/Rocinante-12B-v1.1
+    pointer: thedrummer-rocinante-12b-v1-1

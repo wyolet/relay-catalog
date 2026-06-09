@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claw-medium
+    displayName: Claw Medium
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 204800
+    contextWindowOutput: 131072
+    contextWindowTotal: 204800
+    maxOutputTokens: 131072
+    releaseDate: "2026-05-11"
+    enabled: true
+    snapshots:
+        - name: claw-medium
+          releasedAt: "2026-05-11"
+    pointer: claw-medium

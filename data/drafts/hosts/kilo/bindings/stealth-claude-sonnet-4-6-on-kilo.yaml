@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: stealth-claude-sonnet-4-6-on-kilo
+    displayName: stealth-claude-sonnet-4-6 via kilo
+spec:
+    model: stealth-claude-sonnet-4-6
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - stealth-claude-sonnet-4-6

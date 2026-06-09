@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nousresearch-hermes-4-405b-on-nebius
+    displayName: nousresearch-hermes-4-405b via nebius
+spec:
+    model: nousresearch-hermes-4-405b
+    host: nebius
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nousresearch-hermes-4-405b

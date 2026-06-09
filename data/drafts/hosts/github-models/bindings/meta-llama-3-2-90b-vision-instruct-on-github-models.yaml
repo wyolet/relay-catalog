@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: meta-llama-3-2-90b-vision-instruct-on-github-models
+    displayName: meta-llama-3-2-90b-vision-instruct via github-models
+spec:
+    model: meta-llama-3-2-90b-vision-instruct
+    host: github-models
+    adapter: openai
+    enabled: true
+    snapshots:
+        - meta-llama-3-2-90b-vision-instruct

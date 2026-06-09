@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-mistral-nemo-instruct-on-nano-gpt
+    displayName: mistralai-mistral-nemo-instruct via nano-gpt
+spec:
+    model: mistralai-mistral-nemo-instruct
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-mistral-nemo-instruct-2407

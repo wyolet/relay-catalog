@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: databricks-gpt-5-2
+    displayName: GPT-5.2
+    owner:
+        kind: provider
+        name: databricks
+    labels:
+        family: gpt
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 272000
+    contextWindowOutput: 128000
+    contextWindowTotal: 400000
+    maxOutputTokens: 128000
+    knowledgeCutoff: "2025-08-31"
+    releaseDate: "2025-12-11"
+    enabled: true
+    snapshots:
+        - name: databricks-gpt-5-2
+          releasedAt: "2025-12-11"
+    pointer: databricks-gpt-5-2

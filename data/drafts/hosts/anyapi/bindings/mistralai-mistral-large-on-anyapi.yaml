@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-mistral-large-on-anyapi
+    displayName: mistralai-mistral-large via anyapi
+spec:
+    model: mistralai-mistral-large
+    host: anyapi
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-mistral-large-2512

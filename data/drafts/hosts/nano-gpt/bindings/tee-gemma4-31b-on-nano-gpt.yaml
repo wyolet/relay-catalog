@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: tee-gemma4-31b-on-nano-gpt
+    displayName: tee-gemma4-31b via nano-gpt
+spec:
+    model: tee-gemma4-31b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - tee-gemma4-31b

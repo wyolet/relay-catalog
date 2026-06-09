@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: anthropic-claude-opus-4-7-fast-on-kilo
+    displayName: anthropic-claude-opus-4-7-fast via kilo
+spec:
+    model: anthropic-claude-opus-4-7-fast
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - anthropic-claude-opus-4-7-fast

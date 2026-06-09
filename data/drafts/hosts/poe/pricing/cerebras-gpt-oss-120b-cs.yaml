@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: poe-cerebras-gpt-oss-120b-cs
+    displayName: cerebras-gpt-oss-120b-cs pricing
+    owner:
+        kind: host
+        id: poe
+spec:
+    currency: USD
+    targetModels:
+        - cerebras-gpt-oss-120b-cs
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.35
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.75
+    enabled: true

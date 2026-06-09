@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ministral-14b
+    displayName: ministral-14b-2512
+    owner:
+        kind: provider
+        name: 302ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    maxOutputTokens: 128000
+    knowledgeCutoff: 2024-12
+    releaseDate: "2025-12-16"
+    enabled: true
+    snapshots:
+        - name: ministral-14b-2512
+          releasedAt: "2025-12-16"
+    pointer: ministral-14b-2512

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: failspy-meta-llama-3-70b-instruct-abliterated-v3-5-on-nano-gpt
+    displayName: failspy-meta-llama-3-70b-instruct-abliterated-v3-5 via nano-gpt
+spec:
+    model: failspy-meta-llama-3-70b-instruct-abliterated-v3-5
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - failspy-meta-llama-3-70b-instruct-abliterated-v3-5

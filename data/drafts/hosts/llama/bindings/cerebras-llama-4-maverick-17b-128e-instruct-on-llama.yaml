@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cerebras-llama-4-maverick-17b-128e-instruct-on-llama
+    displayName: cerebras-llama-4-maverick-17b-128e-instruct via llama
+spec:
+    model: cerebras-llama-4-maverick-17b-128e-instruct
+    host: llama
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cerebras-llama-4-maverick-17b-128e-instruct

@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: thedrummer-rocinante-12b
+    displayName: 'TheDrummer: Rocinante 12B'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    maxOutputTokens: 32768
+    releaseDate: "2024-09-30"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: thedrummer-rocinante-12b
+          releasedAt: "2024-09-30"
+          originalName: thedrummer/rocinante-12b
+    pointer: thedrummer-rocinante-12b

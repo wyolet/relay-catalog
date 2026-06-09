@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: drun
+    displayName: D.Run (China)
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://chat.d.run/v1
+    pricingStrategies:
+        - api
+    docsURL: https://www.d.run

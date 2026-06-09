@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: meganova-mistralai-mistral-nemo-instruct
+    displayName: mistralai-mistral-nemo-instruct pricing
+    owner:
+        kind: host
+        id: meganova
+spec:
+    currency: USD
+    targetModels:
+        - mistralai-mistral-nemo-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.02
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.04
+    enabled: true

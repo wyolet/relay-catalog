@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: fastrouter-z-ai-glm-5
+    displayName: z-ai-glm-5 pricing
+    owner:
+        kind: host
+        id: fastrouter
+spec:
+    currency: USD
+    targetModels:
+        - z-ai-glm-5
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.95
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.15
+    enabled: true

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: zhipuai-coding-plan
+    displayName: Zhipu AI Coding Plan
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://open.bigmodel.cn/api/coding/paas/v4
+    pricingStrategies:
+        - api
+    docsURL: https://docs.bigmodel.cn/cn/coding-plan/overview

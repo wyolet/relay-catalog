@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: jiekou-grok-4
+    displayName: grok-4 pricing
+    owner:
+        kind: host
+        id: jiekou
+spec:
+    currency: USD
+    targetModels:
+        - grok-4
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2.7
+        - meter: tokens.output
+          unit: per_million
+          amount: 13.5
+    enabled: true

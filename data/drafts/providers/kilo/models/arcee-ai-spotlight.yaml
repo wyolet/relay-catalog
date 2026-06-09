@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: arcee-ai-spotlight
+    displayName: 'Arcee AI: Spotlight'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 65537
+    contextWindowTotal: 131072
+    maxOutputTokens: 65537
+    releaseDate: "2025-05-06"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: arcee-ai-spotlight
+          releasedAt: "2025-05-06"
+          originalName: arcee-ai/spotlight
+    pointer: arcee-ai-spotlight

@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: accounts-fireworks-models-qwen3p6-plus
+    displayName: Qwen 3.6 Plus
+    owner:
+        kind: provider
+        name: fireworks-ai
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 65536
+    contextWindowTotal: 262144
+    maxOutputTokens: 65536
+    releaseDate: "2026-04-04"
+    enabled: true
+    snapshots:
+        - name: accounts-fireworks-models-qwen3p6-plus
+          releasedAt: "2026-04-04"
+          originalName: accounts/fireworks/models/qwen3p6-plus
+    pointer: accounts-fireworks-models-qwen3p6-plus

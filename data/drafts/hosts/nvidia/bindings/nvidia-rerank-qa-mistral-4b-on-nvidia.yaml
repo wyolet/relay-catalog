@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-rerank-qa-mistral-4b-on-nvidia
+    displayName: nvidia-rerank-qa-mistral-4b via nvidia
+spec:
+    model: nvidia-rerank-qa-mistral-4b
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-rerank-qa-mistral-4b

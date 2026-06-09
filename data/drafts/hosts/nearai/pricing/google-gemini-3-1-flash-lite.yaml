@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nearai-google-gemini-3-1-flash-lite
+    displayName: google-gemini-3-1-flash-lite pricing
+    owner:
+        kind: host
+        id: nearai
+spec:
+    currency: USD
+    targetModels:
+        - google-gemini-3-1-flash-lite
+    rates:
+        - meter: tokens.audio_input
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.025
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.25
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.5
+    enabled: true

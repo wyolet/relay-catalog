@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: jiekou-gpt-5-1-codex-mini
+    displayName: gpt-5-1-codex-mini pricing
+    owner:
+        kind: host
+        id: jiekou
+spec:
+    currency: USD
+    targetModels:
+        - gpt-5-1-codex-mini
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.225
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.8
+    enabled: true

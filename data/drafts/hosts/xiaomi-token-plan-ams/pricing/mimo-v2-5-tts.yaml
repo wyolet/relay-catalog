@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: xiaomi-token-plan-ams-mimo-v2-5-tts
+    displayName: mimo-v2-5-tts pricing
+    owner:
+        kind: host
+        id: xiaomi-token-plan-ams
+spec:
+    currency: USD
+    targetModels:
+        - mimo-v2-5-tts
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

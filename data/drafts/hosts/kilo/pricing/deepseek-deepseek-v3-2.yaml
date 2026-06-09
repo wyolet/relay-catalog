@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-deepseek-deepseek-v3-2
+    displayName: deepseek-deepseek-v3-2 pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-deepseek-v3-2
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.125
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.26
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.38
+    enabled: true

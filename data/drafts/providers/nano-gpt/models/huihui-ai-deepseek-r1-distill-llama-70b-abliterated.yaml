@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: huihui-ai-deepseek-r1-distill-llama-70b-abliterated
+    displayName: DeepSeek R1 Llama 70B Abliterated
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: deepseek
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 8192
+    contextWindowTotal: 16384
+    maxOutputTokens: 8192
+    releaseDate: "2025-01-20"
+    enabled: true
+    snapshots:
+        - name: huihui-ai-deepseek-r1-distill-llama-70b-abliterated
+          releasedAt: "2025-01-20"
+          originalName: huihui-ai/DeepSeek-R1-Distill-Llama-70B-abliterated
+    pointer: huihui-ai-deepseek-r1-distill-llama-70b-abliterated

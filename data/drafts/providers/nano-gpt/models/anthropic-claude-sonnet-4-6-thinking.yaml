@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: anthropic-claude-sonnet-4-6-thinking
+    displayName: Claude Sonnet 4.6 Thinking
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: claude-sonnet
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: claude-sonnet
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 128000
+    knowledgeCutoff: "2025-08-31"
+    releaseDate: "2026-02-17"
+    enabled: true
+    snapshots:
+        - name: anthropic-claude-sonnet-4-6-thinking
+          releasedAt: "2026-02-17"
+          originalName: anthropic/claude-sonnet-4.6:thinking
+    pointer: anthropic-claude-sonnet-4-6-thinking

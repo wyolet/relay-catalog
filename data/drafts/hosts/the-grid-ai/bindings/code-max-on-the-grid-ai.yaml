@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: code-max-on-the-grid-ai
+    displayName: code-max via the-grid-ai
+spec:
+    model: code-max
+    host: the-grid-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - code-max

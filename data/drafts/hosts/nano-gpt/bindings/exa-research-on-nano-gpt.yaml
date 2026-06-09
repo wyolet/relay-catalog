@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: exa-research-on-nano-gpt
+    displayName: exa-research via nano-gpt
+spec:
+    model: exa-research
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - exa-research

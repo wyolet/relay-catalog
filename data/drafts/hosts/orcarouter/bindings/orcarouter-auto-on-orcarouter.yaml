@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: orcarouter-auto-on-orcarouter
+    displayName: orcarouter-auto via orcarouter
+spec:
+    model: orcarouter-auto
+    host: orcarouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - orcarouter-auto

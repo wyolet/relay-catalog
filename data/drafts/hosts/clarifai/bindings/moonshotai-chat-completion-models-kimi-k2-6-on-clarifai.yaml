@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: moonshotai-chat-completion-models-kimi-k2-6-on-clarifai
+    displayName: moonshotai-chat-completion-models-kimi-k2-6 via clarifai
+spec:
+    model: moonshotai-chat-completion-models-kimi-k2-6
+    host: clarifai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - moonshotai-chat-completion-models-kimi-k2-6

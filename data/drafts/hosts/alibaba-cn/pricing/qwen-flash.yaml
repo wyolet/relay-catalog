@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-cn-qwen-flash
+    displayName: qwen-flash pricing
+    owner:
+        kind: host
+        id: alibaba-cn
+spec:
+    currency: USD
+    targetModels:
+        - qwen-flash
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.022
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.216
+    enabled: true

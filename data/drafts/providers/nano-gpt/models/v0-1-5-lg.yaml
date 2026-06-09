@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: v0-1-5-lg
+    displayName: v0 1.5 LG
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 64000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 64000
+    releaseDate: "2025-07-04"
+    enabled: true
+    snapshots:
+        - name: v0-1-5-lg
+          releasedAt: "2025-07-04"
+          originalName: v0-1.5-lg
+    pointer: v0-1-5-lg

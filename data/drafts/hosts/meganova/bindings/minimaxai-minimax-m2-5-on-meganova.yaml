@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimaxai-minimax-m2-5-on-meganova
+    displayName: minimaxai-minimax-m2-5 via meganova
+spec:
+    model: minimaxai-minimax-m2-5
+    host: meganova
+    adapter: openai
+    enabled: true
+    snapshots:
+        - minimaxai-minimax-m2-5

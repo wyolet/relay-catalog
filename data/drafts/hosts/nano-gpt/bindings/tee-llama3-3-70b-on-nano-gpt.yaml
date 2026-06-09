@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: tee-llama3-3-70b-on-nano-gpt
+    displayName: tee-llama3-3-70b via nano-gpt
+spec:
+    model: tee-llama3-3-70b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - tee-llama3-3-70b

@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: stepfun-ai-step-3-5-flash
+    displayName: Step 3.5 Flash
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: step
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: step
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 256000
+    contextWindowTotal: 256000
+    maxOutputTokens: 256000
+    releaseDate: "2026-02-02"
+    enabled: true
+    snapshots:
+        - name: stepfun-ai-step-3-5-flash
+          releasedAt: "2026-02-02"
+          originalName: stepfun-ai/step-3.5-flash
+        - name: stepfun-ai-step-3-5-flash-2603
+          releasedAt: "2026-04-14"
+          originalName: stepfun-ai/step-3.5-flash-2603
+    pointer: stepfun-ai-step-3-5-flash

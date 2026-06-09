@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nvidia-cosmos-transfer1-7b
+    displayName: cosmos-transfer1-7b
+    owner:
+        kind: provider
+        name: nvidia
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - video
+    contextWindowOutput: 4096
+    maxOutputTokens: 4096
+    releaseDate: "2025-06-13"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nvidia-cosmos-transfer1-7b
+          releasedAt: "2025-06-13"
+          originalName: nvidia/cosmos-transfer1-7b
+    pointer: nvidia-cosmos-transfer1-7b

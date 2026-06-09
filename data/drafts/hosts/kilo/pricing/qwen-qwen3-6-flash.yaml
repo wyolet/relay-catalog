@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-qwen-qwen3-6-flash
+    displayName: qwen-qwen3-6-flash pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen3-6-flash
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.3125
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.25
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.5
+    enabled: true

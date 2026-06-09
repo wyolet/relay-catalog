@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: llmgateway-glm-4-32b-0414-128k
+    displayName: glm-4-32b-0414-128k pricing
+    owner:
+        kind: host
+        id: llmgateway
+spec:
+    currency: USD
+    targetModels:
+        - glm-4-32b-0414-128k
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.1
+    enabled: true

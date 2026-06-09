@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-vl-235b-instruct-on-ollama-cloud
+    displayName: qwen3-vl-235b-instruct via ollama-cloud
+spec:
+    model: qwen3-vl-235b-instruct
+    host: ollama-cloud
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-vl-235b-instruct

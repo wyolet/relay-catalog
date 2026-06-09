@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-o3-pro-on-kilo
+    displayName: openai-o3-pro via kilo
+spec:
+    model: openai-o3-pro
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-o3-pro

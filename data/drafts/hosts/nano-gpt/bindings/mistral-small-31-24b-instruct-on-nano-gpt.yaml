@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-small-31-24b-instruct-on-nano-gpt
+    displayName: mistral-small-31-24b-instruct via nano-gpt
+spec:
+    model: mistral-small-31-24b-instruct
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistral-small-31-24b-instruct

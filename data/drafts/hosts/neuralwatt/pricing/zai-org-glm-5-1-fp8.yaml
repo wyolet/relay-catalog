@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: neuralwatt-zai-org-glm-5-1-fp8
+    displayName: zai-org-glm-5-1-fp8 pricing
+    owner:
+        kind: host
+        id: neuralwatt
+spec:
+    currency: USD
+    targetModels:
+        - zai-org-glm-5-1-fp8
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.1
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.6
+    enabled: true

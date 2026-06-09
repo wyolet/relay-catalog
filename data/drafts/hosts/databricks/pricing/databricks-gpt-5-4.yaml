@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: databricks-databricks-gpt-5-4
+    displayName: databricks-gpt-5-4 pricing
+    owner:
+        kind: host
+        id: databricks
+spec:
+    currency: USD
+    targetModels:
+        - databricks-gpt-5-4
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.25
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.5
+          aboveTokens: 272000
+        - meter: tokens.input
+          unit: per_million
+          amount: 2.5
+        - meter: tokens.input
+          unit: per_million
+          amount: 5
+          aboveTokens: 272000
+        - meter: tokens.output
+          unit: per_million
+          amount: 15
+        - meter: tokens.output
+          unit: per_million
+          amount: 22.5
+          aboveTokens: 272000
+    enabled: true

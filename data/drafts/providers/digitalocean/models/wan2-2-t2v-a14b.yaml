@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: wan2-2-t2v-a14b
+    displayName: Wan2.2-T2V-A14B
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - video
+    contextWindowInput: 100
+    contextWindowOutput: 1
+    contextWindowTotal: 100
+    maxOutputTokens: 1
+    releaseDate: "2025-07-28"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: wan2-2-t2v-a14b
+          releasedAt: "2025-07-28"
+    pointer: wan2-2-t2v-a14b

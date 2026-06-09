@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-gemini-2-5-pro-on-openrouter
+    displayName: google-gemini-2-5-pro via openrouter
+spec:
+    model: google-gemini-2-5-pro
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-gemini-2-5-pro

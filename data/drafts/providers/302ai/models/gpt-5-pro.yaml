@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-5-pro
+    displayName: gpt-5-pro
+    owner:
+        kind: provider
+        name: 302ai
+    labels:
+        family: gpt-pro
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt-pro
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 272000
+    contextWindowOutput: 272000
+    contextWindowTotal: 400000
+    maxOutputTokens: 272000
+    knowledgeCutoff: "2024-09-30"
+    releaseDate: "2025-10-08"
+    enabled: true
+    snapshots:
+        - name: gpt-5-pro
+          releasedAt: "2025-10-08"
+    pointer: gpt-5-pro

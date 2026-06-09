@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cogito-2-1-671b
+    displayName: cogito-2.1:671b
+    owner:
+        kind: provider
+        name: ollama-cloud
+    labels:
+        family: cogito
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: cogito
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 163840
+    contextWindowOutput: 32000
+    contextWindowTotal: 163840
+    maxOutputTokens: 32000
+    releaseDate: "2025-11-19"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: cogito-2-1-671b
+          releasedAt: "2025-11-19"
+          originalName: cogito-2.1:671b
+    pointer: cogito-2-1-671b

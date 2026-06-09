@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemini-2-0-flash-on-nano-gpt
+    displayName: gemini-2-0-flash via nano-gpt
+spec:
+    model: gemini-2-0-flash
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gemini-2-0-flash-001

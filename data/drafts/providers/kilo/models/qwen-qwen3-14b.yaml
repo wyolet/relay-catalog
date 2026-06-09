@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-14b
+    displayName: 'Qwen: Qwen3 14B'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 40960
+    contextWindowOutput: 40960
+    contextWindowTotal: 40960
+    maxOutputTokens: 40960
+    releaseDate: 2025-04
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-14b
+          releasedAt: 2025-04
+          originalName: qwen/qwen3-14b
+    pointer: qwen-qwen3-14b

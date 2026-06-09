@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: fal-ai-elevenlabs-tts-multilingual-v2
+    displayName: ElevenLabs Multilingual TTS v2
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: elevenlabs
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: elevenlabs
+    capabilities:
+        chat: true
+        streaming: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - audio
+    releaseDate: "2023-08-22"
+    enabled: true
+    snapshots:
+        - name: fal-ai-elevenlabs-tts-multilingual-v2
+          releasedAt: "2023-08-22"
+          originalName: fal-ai/elevenlabs/tts/multilingual-v2
+    pointer: fal-ai-elevenlabs-tts-multilingual-v2

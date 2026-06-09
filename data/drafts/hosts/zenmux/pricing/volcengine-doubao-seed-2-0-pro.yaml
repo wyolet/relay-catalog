@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: zenmux-volcengine-doubao-seed-2-0-pro
+    displayName: volcengine-doubao-seed-2-0-pro pricing
+    owner:
+        kind: host
+        id: zenmux
+spec:
+    currency: USD
+    targetModels:
+        - volcengine-doubao-seed-2-0-pro
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.0024
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.09
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.45
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.24
+    enabled: true

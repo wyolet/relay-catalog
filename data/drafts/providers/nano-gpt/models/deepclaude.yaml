@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepclaude
+    displayName: DeepClaude
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - pdf
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    releaseDate: "2025-02-01"
+    enabled: true
+    snapshots:
+        - name: deepclaude
+          releasedAt: "2025-02-01"
+    pointer: deepclaude

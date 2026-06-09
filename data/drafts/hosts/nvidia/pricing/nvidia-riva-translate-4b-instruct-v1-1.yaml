@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nvidia-nvidia-riva-translate-4b-instruct-v1-1
+    displayName: nvidia-riva-translate-4b-instruct-v1-1 pricing
+    owner:
+        kind: host
+        id: nvidia
+spec:
+    currency: USD
+    targetModels:
+        - nvidia-riva-translate-4b-instruct-v1-1
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

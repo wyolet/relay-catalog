@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: inception
+    displayName: Inception
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://platform.inceptionlabs.ai/docs

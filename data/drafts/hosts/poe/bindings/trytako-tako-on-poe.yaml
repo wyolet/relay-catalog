@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: trytako-tako-on-poe
+    displayName: trytako-tako via poe
+spec:
+    model: trytako-tako
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - trytako-tako

@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: llmgateway
+    displayName: LLM Gateway
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://llmgateway.io/docs

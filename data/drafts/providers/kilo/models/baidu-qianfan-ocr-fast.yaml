@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: baidu-qianfan-ocr-fast
+    displayName: 'Baidu: Qianfan-OCR-Fast'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - text
+        output:
+            - text
+    contextWindowInput: 65536
+    contextWindowOutput: 28672
+    contextWindowTotal: 65536
+    maxOutputTokens: 28672
+    releaseDate: "2026-04-20"
+    enabled: true
+    snapshots:
+        - name: baidu-qianfan-ocr-fast
+          releasedAt: "2026-04-20"
+          originalName: baidu/qianfan-ocr-fast
+    pointer: baidu-qianfan-ocr-fast

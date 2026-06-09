@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-veo-3-on-poe
+    displayName: google-veo-3 via poe
+spec:
+    model: google-veo-3
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-veo-3

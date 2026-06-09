@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: cloudflare-workers-ai-cf-meta-llama-3-3-70b-instruct-fp8-fast
+    displayName: cf-meta-llama-3-3-70b-instruct-fp8-fast pricing
+    owner:
+        kind: host
+        id: cloudflare-workers-ai
+spec:
+    currency: USD
+    targetModels:
+        - cf-meta-llama-3-3-70b-instruct-fp8-fast
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.293
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.253
+    enabled: true

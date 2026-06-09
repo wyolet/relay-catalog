@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-v3-2-exp
+    displayName: DeepSeek V3.2 Exp
+    owner:
+        kind: provider
+        name: alibaba-cn
+    labels:
+        family: deepseek
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 65536
+    contextWindowTotal: 131072
+    maxOutputTokens: 65536
+    releaseDate: "2025-01-01"
+    enabled: true
+    snapshots:
+        - name: deepseek-v3-2-exp
+          releasedAt: "2025-01-01"
+    pointer: deepseek-v3-2-exp

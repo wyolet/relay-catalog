@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: jiekou-gpt-5-2-pro
+    displayName: gpt-5-2-pro pricing
+    owner:
+        kind: host
+        id: jiekou
+spec:
+    currency: USD
+    targetModels:
+        - gpt-5-2-pro
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 18.9
+        - meter: tokens.output
+          unit: per_million
+          amount: 151.2
+    enabled: true

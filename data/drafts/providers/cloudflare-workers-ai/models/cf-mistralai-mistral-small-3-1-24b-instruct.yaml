@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cf-mistralai-mistral-small-3-1-24b-instruct
+    displayName: Mistral Small 3.1 24B Instruct
+    owner:
+        kind: provider
+        name: cloudflare-workers-ai
+    labels:
+        family: mistral-small
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral-small
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    maxOutputTokens: 128000
+    releaseDate: "2025-03-18"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: cf-mistralai-mistral-small-3-1-24b-instruct
+          releasedAt: "2025-03-18"
+          originalName: '@cf/mistralai/mistral-small-3.1-24b-instruct'
+    pointer: cf-mistralai-mistral-small-3-1-24b-instruct

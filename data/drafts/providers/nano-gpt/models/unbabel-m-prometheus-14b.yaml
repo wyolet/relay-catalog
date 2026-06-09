@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: unbabel-m-prometheus-14b
+    displayName: M-Prometheus 14B
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 8192
+    contextWindowTotal: 32768
+    maxOutputTokens: 8192
+    releaseDate: "2026-05-29"
+    enabled: true
+    snapshots:
+        - name: unbabel-m-prometheus-14b
+          releasedAt: "2026-05-29"
+          originalName: Unbabel/M-Prometheus-14B
+    pointer: unbabel-m-prometheus-14b

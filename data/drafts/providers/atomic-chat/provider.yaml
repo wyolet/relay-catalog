@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: atomic-chat
+    displayName: Atomic Chat
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://atomic.chat

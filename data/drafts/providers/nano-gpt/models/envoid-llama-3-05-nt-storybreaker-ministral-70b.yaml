@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: envoid-llama-3-05-nt-storybreaker-ministral-70b
+    displayName: Llama 3.05 Storybreaker Ministral 70b
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 8192
+    contextWindowTotal: 16384
+    maxOutputTokens: 8192
+    releaseDate: "2024-12-01"
+    enabled: true
+    snapshots:
+        - name: envoid-llama-3-05-nt-storybreaker-ministral-70b
+          releasedAt: "2024-12-01"
+          originalName: Envoid/Llama-3.05-NT-Storybreaker-Ministral-70B
+    pointer: envoid-llama-3-05-nt-storybreaker-ministral-70b

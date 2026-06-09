@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: minimax-minimax-m2-5
+    displayName: MiniMax M2.5
+    owner:
+        kind: provider
+        name: hpc-ai
+    labels:
+        family: minimax-m2.5
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: minimax-m2.5
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 131072
+    contextWindowTotal: 1000000
+    maxOutputTokens: 131072
+    releaseDate: "2026-02-12"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: minimax-minimax-m2-5
+          releasedAt: "2026-02-12"
+          originalName: minimax/minimax-m2.5
+    pointer: minimax-minimax-m2-5

@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-gpt-5-4-pro
+    displayName: GPT-5.4 pro
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: gpt-pro
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt-pro
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 400000
+    contextWindowOutput: 128000
+    contextWindowTotal: 400000
+    maxOutputTokens: 128000
+    knowledgeCutoff: "2025-08-31"
+    releaseDate: "2026-03-05"
+    enabled: true
+    snapshots:
+        - name: openai-gpt-5-4-pro
+          releasedAt: "2026-03-05"
+          originalName: openai-gpt-5.4-pro
+    pointer: openai-gpt-5-4-pro

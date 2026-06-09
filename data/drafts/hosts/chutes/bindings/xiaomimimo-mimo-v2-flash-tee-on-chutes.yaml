@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: xiaomimimo-mimo-v2-flash-tee-on-chutes
+    displayName: xiaomimimo-mimo-v2-flash-tee via chutes
+spec:
+    model: xiaomimimo-mimo-v2-flash-tee
+    host: chutes
+    adapter: openai
+    enabled: true
+    snapshots:
+        - xiaomimimo-mimo-v2-flash-tee

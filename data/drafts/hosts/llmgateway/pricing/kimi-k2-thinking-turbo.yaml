@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: llmgateway-kimi-k2-thinking-turbo
+    displayName: kimi-k2-thinking-turbo pricing
+    owner:
+        kind: host
+        id: llmgateway
+spec:
+    currency: USD
+    targetModels:
+        - kimi-k2-thinking-turbo
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.15
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.15
+        - meter: tokens.output
+          unit: per_million
+          amount: 8
+    enabled: true

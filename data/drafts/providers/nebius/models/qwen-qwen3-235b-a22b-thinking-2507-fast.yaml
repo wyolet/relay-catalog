@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-235b-a22b-thinking-2507-fast
+    displayName: Qwen3-235B-A22B-Thinking-2507-fast
+    owner:
+        kind: provider
+        name: nebius
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 7000
+    contextWindowOutput: 8192
+    contextWindowTotal: 8000
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2025-07
+    releaseDate: "2025-07-25"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-235b-a22b-thinking-2507-fast
+          releasedAt: "2025-07-25"
+          originalName: Qwen/Qwen3-235B-A22B-Thinking-2507-fast
+    pointer: qwen-qwen3-235b-a22b-thinking-2507-fast

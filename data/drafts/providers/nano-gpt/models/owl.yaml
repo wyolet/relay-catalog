@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: owl
+    displayName: OWL
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1048756
+    contextWindowOutput: 262144
+    contextWindowTotal: 1048756
+    maxOutputTokens: 262144
+    releaseDate: "2026-05-01"
+    enabled: true
+    snapshots:
+        - name: owl
+          releasedAt: "2026-05-01"
+    pointer: owl

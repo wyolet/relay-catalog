@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-5-27b-omega-evolution-v2-0-derestricted-on-nano-gpt
+    displayName: qwen3-5-27b-omega-evolution-v2-0-derestricted via nano-gpt
+spec:
+    model: qwen3-5-27b-omega-evolution-v2-0-derestricted
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-5-27b-omega-evolution-v2-0-derestricted

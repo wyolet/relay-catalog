@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-deepseek-ocr-2
+    displayName: deepseek/deepseek-ocr-2
+    owner:
+        kind: provider
+        name: novita-ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    maxOutputTokens: 8192
+    releaseDate: "2026-01-27"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: deepseek-deepseek-ocr-2
+          releasedAt: "2026-01-27"
+          originalName: deepseek/deepseek-ocr-2
+    pointer: deepseek-deepseek-ocr-2

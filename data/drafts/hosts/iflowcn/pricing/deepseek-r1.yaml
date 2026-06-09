@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: iflowcn-deepseek-r1
+    displayName: deepseek-r1 pricing
+    owner:
+        kind: host
+        id: iflowcn
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-r1
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

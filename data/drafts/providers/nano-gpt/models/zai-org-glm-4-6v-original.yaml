@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: zai-org-glm-4-6v-original
+    displayName: GLM 4.6V Original
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 24000
+    contextWindowTotal: 128000
+    maxOutputTokens: 24000
+    releaseDate: "2025-12-08"
+    enabled: true
+    snapshots:
+        - name: zai-org-glm-4-6v-original
+          releasedAt: "2025-12-08"
+          originalName: zai-org/glm-4.6v-original
+    pointer: zai-org-glm-4-6v-original

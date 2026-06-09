@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kwaipilot-kat-coder-pro-v2-on-nano-gpt
+    displayName: kwaipilot-kat-coder-pro-v2 via nano-gpt
+spec:
+    model: kwaipilot-kat-coder-pro-v2
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kwaipilot-kat-coder-pro-v2

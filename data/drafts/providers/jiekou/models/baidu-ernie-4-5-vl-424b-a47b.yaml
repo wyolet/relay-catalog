@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: baidu-ernie-4-5-vl-424b-a47b
+    displayName: ERNIE 4.5 VL 424B A47B
+    owner:
+        kind: provider
+        name: jiekou
+    labels:
+        family: ernie
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: ernie
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 123000
+    contextWindowOutput: 16000
+    contextWindowTotal: 123000
+    maxOutputTokens: 16000
+    releaseDate: 2026-01
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: baidu-ernie-4-5-vl-424b-a47b
+          releasedAt: 2026-01
+          originalName: baidu/ernie-4.5-vl-424b-a47b
+    pointer: baidu-ernie-4-5-vl-424b-a47b

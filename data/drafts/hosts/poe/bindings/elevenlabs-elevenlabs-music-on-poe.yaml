@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: elevenlabs-elevenlabs-music-on-poe
+    displayName: elevenlabs-elevenlabs-music via poe
+spec:
+    model: elevenlabs-elevenlabs-music
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - elevenlabs-elevenlabs-music

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-oss-20b-on-lmstudio
+    displayName: openai-gpt-oss-20b via lmstudio
+spec:
+    model: openai-gpt-oss-20b
+    host: lmstudio
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-oss-20b

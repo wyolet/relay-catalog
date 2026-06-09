@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hf-minimaxai-minimax-m2-1-on-synthetic
+    displayName: hf-minimaxai-minimax-m2-1 via synthetic
+spec:
+    model: hf-minimaxai-minimax-m2-1
+    host: synthetic
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hf-minimaxai-minimax-m2-1

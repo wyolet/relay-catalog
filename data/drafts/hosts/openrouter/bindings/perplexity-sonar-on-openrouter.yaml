@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: perplexity-sonar-on-openrouter
+    displayName: perplexity-sonar via openrouter
+spec:
+    model: perplexity-sonar
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - perplexity-sonar

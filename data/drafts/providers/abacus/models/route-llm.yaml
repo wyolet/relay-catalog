@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: route-llm
+    displayName: Route LLM
+    owner:
+        kind: provider
+        name: abacus
+    labels:
+        family: gpt
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    maxOutputTokens: 16384
+    knowledgeCutoff: 2024-10
+    releaseDate: "2024-01-01"
+    enabled: true
+    snapshots:
+        - name: route-llm
+          releasedAt: "2024-01-01"
+    pointer: route-llm

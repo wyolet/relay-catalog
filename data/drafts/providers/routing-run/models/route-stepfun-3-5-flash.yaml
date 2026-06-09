@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: route-stepfun-3-5-flash
+    displayName: StepFun 3.5 Flash
+    owner:
+        kind: provider
+        name: routing-run
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 65536
+    contextWindowTotal: 262144
+    maxOutputTokens: 65536
+    knowledgeCutoff: 2025-01
+    releaseDate: "2026-01-29"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: route-stepfun-3-5-flash
+          releasedAt: "2026-01-29"
+          originalName: route/stepfun-3.5-flash
+    pointer: route-stepfun-3-5-flash

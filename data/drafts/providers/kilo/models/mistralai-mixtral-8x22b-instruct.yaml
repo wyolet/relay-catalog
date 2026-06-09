@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistralai-mixtral-8x22b-instruct
+    displayName: 'Mistral: Mixtral 8x22B Instruct'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 65536
+    contextWindowOutput: 13108
+    contextWindowTotal: 65536
+    maxOutputTokens: 13108
+    releaseDate: "2024-04-17"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistralai-mixtral-8x22b-instruct
+          releasedAt: "2024-04-17"
+          originalName: mistralai/mixtral-8x22b-instruct
+    pointer: mistralai-mixtral-8x22b-instruct

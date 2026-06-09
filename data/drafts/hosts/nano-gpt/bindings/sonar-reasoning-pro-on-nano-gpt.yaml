@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: sonar-reasoning-pro-on-nano-gpt
+    displayName: sonar-reasoning-pro via nano-gpt
+spec:
+    model: sonar-reasoning-pro
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - sonar-reasoning-pro

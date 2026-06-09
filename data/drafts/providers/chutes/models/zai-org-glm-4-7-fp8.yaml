@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: zai-org-glm-4-7-fp8
+    displayName: GLM 4.7 FP8
+    owner:
+        kind: provider
+        name: chutes
+    labels:
+        family: glm
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glm
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 202752
+    contextWindowOutput: 65535
+    contextWindowTotal: 202752
+    maxOutputTokens: 65535
+    releaseDate: "2026-01-27"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: zai-org-glm-4-7-fp8
+          releasedAt: "2026-01-27"
+          originalName: zai-org/GLM-4.7-FP8
+    pointer: zai-org-glm-4-7-fp8

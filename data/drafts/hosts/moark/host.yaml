@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: moark
+    displayName: Moark
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://moark.com/v1
+    pricingStrategies:
+        - api
+    docsURL: https://moark.com/docs/openapi/v1#tag/%E6%96%87%E6%9C%AC%E7%94%9F%E6%88%90

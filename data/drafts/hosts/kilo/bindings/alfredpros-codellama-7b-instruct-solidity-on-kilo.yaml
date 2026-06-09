@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: alfredpros-codellama-7b-instruct-solidity-on-kilo
+    displayName: alfredpros-codellama-7b-instruct-solidity via kilo
+spec:
+    model: alfredpros-codellama-7b-instruct-solidity
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - alfredpros-codellama-7b-instruct-solidity

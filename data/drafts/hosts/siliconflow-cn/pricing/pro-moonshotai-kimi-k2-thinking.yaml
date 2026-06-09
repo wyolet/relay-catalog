@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: siliconflow-cn-pro-moonshotai-kimi-k2-thinking
+    displayName: pro-moonshotai-kimi-k2-thinking pricing
+    owner:
+        kind: host
+        id: siliconflow-cn
+spec:
+    currency: USD
+    targetModels:
+        - pro-moonshotai-kimi-k2-thinking
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.55
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.5
+    enabled: true

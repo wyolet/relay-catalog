@@ -1,8 +1,8 @@
-# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Pricing.schema.json
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
     name: deepseek-deepseek-chat
+    displayName: deepseek-chat pricing
     owner:
         kind: host
         id: deepseek
@@ -11,12 +11,13 @@ spec:
     targetModels:
         - deepseek-chat
     rates:
-        - meter: tokens.input
-          unit: per_million
-          amount: 0.28
-        - meter: tokens.output
-          unit: per_million
-          amount: 0.42
         - meter: tokens.cache_read
           unit: per_million
-          amount: 0.028
+          amount: 0.0028
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.14
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.28
+    enabled: true

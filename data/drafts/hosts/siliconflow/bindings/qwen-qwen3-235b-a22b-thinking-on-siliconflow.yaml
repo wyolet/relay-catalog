@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-235b-a22b-thinking-on-siliconflow
+    displayName: qwen-qwen3-235b-a22b-thinking via siliconflow
+spec:
+    model: qwen-qwen3-235b-a22b-thinking
+    host: siliconflow
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-235b-a22b-thinking-2507

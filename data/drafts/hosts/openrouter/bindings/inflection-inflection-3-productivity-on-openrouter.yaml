@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: inflection-inflection-3-productivity-on-openrouter
+    displayName: inflection-inflection-3-productivity via openrouter
+spec:
+    model: inflection-inflection-3-productivity
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - inflection-inflection-3-productivity

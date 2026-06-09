@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: siliconflow-qwen-qwen3-vl-8b-thinking
+    displayName: qwen-qwen3-vl-8b-thinking pricing
+    owner:
+        kind: host
+        id: siliconflow
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen3-vl-8b-thinking
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.18
+        - meter: tokens.output
+          unit: per_million
+          amount: 2
+    enabled: true

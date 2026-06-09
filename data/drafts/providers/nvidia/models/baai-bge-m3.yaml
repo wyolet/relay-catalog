@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: baai-bge-m3
+    displayName: BGE M3
+    owner:
+        kind: provider
+        name: nvidia
+    labels:
+        family: bge
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: bge
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 1024
+    contextWindowTotal: 8192
+    maxOutputTokens: 1024
+    releaseDate: "2024-01-30"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: baai-bge-m3
+          releasedAt: "2024-01-30"
+          originalName: baai/bge-m3
+    pointer: baai-bge-m3

@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: baidu-ernie-5-0-thinking-preview
+    displayName: ERNIE 5.0
+    owner:
+        kind: provider
+        name: zenmux
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 64000
+    contextWindowTotal: 128000
+    maxOutputTokens: 64000
+    knowledgeCutoff: "2025-01-01"
+    releaseDate: "2026-01-22"
+    enabled: true
+    snapshots:
+        - name: baidu-ernie-5-0-thinking-preview
+          releasedAt: "2026-01-22"
+          originalName: baidu/ernie-5.0-thinking-preview
+    pointer: baidu-ernie-5-0-thinking-preview

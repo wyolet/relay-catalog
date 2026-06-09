@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: auto-model-premium
+    displayName: Auto model (Premium)
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 1000000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 1000000
+    releaseDate: "2024-06-01"
+    enabled: true
+    snapshots:
+        - name: auto-model-premium
+          releasedAt: "2024-06-01"
+    pointer: auto-model-premium

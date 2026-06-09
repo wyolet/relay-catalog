@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: x-ai-grok-4-20
+    displayName: 'xAI: Grok 4.20'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - pdf
+            - text
+        output:
+            - text
+    contextWindowInput: 2000000
+    contextWindowOutput: 2000000
+    contextWindowTotal: 2000000
+    maxOutputTokens: 2000000
+    releaseDate: "2026-03-31"
+    enabled: true
+    snapshots:
+        - name: x-ai-grok-4-20
+          releasedAt: "2026-03-31"
+          originalName: x-ai/grok-4.20
+    pointer: x-ai-grok-4-20

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: grok-4-1-fast-reasoning-on-jiekou
+    displayName: grok-4-1-fast-reasoning via jiekou
+spec:
+    model: grok-4-1-fast-reasoning
+    host: jiekou
+    adapter: openai
+    enabled: true
+    snapshots:
+        - grok-4-1-fast-reasoning

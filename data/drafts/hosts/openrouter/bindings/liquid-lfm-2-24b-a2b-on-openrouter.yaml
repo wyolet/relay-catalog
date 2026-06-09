@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: liquid-lfm-2-24b-a2b-on-openrouter
+    displayName: liquid-lfm-2-24b-a2b via openrouter
+spec:
+    model: liquid-lfm-2-24b-a2b
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - liquid-lfm-2-24b-a2b

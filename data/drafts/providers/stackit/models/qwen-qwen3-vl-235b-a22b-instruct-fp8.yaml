@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-vl-235b-a22b-instruct-fp8
+    displayName: Qwen3-VL 235B
+    owner:
+        kind: provider
+        name: stackit
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 218000
+    contextWindowOutput: 8192
+    contextWindowTotal: 218000
+    maxOutputTokens: 8192
+    releaseDate: "2024-11-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-vl-235b-a22b-instruct-fp8
+          releasedAt: "2024-11-01"
+          originalName: Qwen/Qwen3-VL-235B-A22B-Instruct-FP8
+    pointer: qwen-qwen3-vl-235b-a22b-instruct-fp8

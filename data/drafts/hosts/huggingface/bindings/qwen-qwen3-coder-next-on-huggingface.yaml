@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-coder-next-on-huggingface
+    displayName: qwen-qwen3-coder-next via huggingface
+spec:
+    model: qwen-qwen3-coder-next
+    host: huggingface
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-coder-next

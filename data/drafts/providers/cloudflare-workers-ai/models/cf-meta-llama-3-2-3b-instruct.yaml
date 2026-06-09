@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cf-meta-llama-3-2-3b-instruct
+    displayName: Llama 3.2 3B Instruct
+    owner:
+        kind: provider
+        name: cloudflare-workers-ai
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 80000
+    contextWindowOutput: 80000
+    contextWindowTotal: 80000
+    maxOutputTokens: 80000
+    releaseDate: "2024-09-25"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: cf-meta-llama-3-2-3b-instruct
+          releasedAt: "2024-09-25"
+          originalName: '@cf/meta/llama-3.2-3b-instruct'
+    pointer: cf-meta-llama-3-2-3b-instruct

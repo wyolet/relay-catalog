@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: google-lyria-3-clip-preview
+    displayName: 'Google: Lyria 3 Clip Preview'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - text
+        output:
+            - audio
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 65536
+    contextWindowTotal: 1048576
+    maxOutputTokens: 65536
+    releaseDate: "2026-03-30"
+    enabled: true
+    snapshots:
+        - name: google-lyria-3-clip-preview
+          releasedAt: "2026-03-30"
+          originalName: google/lyria-3-clip-preview
+    pointer: google-lyria-3-clip-preview

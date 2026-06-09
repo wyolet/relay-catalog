@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: fal-ai-flux-schnell-on-digitalocean
+    displayName: fal-ai-flux-schnell via digitalocean
+spec:
+    model: fal-ai-flux-schnell
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - fal-ai-flux-schnell

@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-turbo
+    displayName: Qwen Turbo
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 16384
+    contextWindowTotal: 1000000
+    maxOutputTokens: 16384
+    knowledgeCutoff: 2024-04
+    releaseDate: "2024-11-01"
+    enabled: true
+    snapshots:
+        - name: qwen-turbo
+          releasedAt: "2024-11-01"
+    pointer: qwen-turbo

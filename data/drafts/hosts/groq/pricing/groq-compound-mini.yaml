@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: groq-groq-compound-mini
+    displayName: groq-compound-mini pricing
+    owner:
+        kind: host
+        id: groq
+spec:
+    currency: USD
+    targetModels:
+        - groq-compound-mini
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

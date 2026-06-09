@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: rekaai-reka-edge-on-kilo
+    displayName: rekaai-reka-edge via kilo
+spec:
+    model: rekaai-reka-edge
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - rekaai-reka-edge

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-medium-3-5-128b-on-scaleway
+    displayName: mistral-medium-3-5-128b via scaleway
+spec:
+    model: mistral-medium-3-5-128b
+    host: scaleway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistral-medium-3-5-128b

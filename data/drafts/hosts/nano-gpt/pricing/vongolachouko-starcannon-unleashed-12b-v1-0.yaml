@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-vongolachouko-starcannon-unleashed-12b-v1-0
+    displayName: vongolachouko-starcannon-unleashed-12b-v1-0 pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - vongolachouko-starcannon-unleashed-12b-v1-0
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.49299999999999994
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.49299999999999994
+    enabled: true

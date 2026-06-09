@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen-image-edit-on-nvidia
+    displayName: qwen-qwen-image-edit via nvidia
+spec:
+    model: qwen-qwen-image-edit
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen-image-edit

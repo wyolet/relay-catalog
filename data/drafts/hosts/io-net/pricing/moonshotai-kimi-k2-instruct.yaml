@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: io-net-moonshotai-kimi-k2-instruct
+    displayName: moonshotai-kimi-k2-instruct pricing
+    owner:
+        kind: host
+        id: io-net
+spec:
+    currency: USD
+    targetModels:
+        - moonshotai-kimi-k2-instruct
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.78
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.195
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.39
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.9
+    enabled: true

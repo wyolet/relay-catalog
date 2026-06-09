@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-thedrummer-skyfall-31b-v4-2
+    displayName: thedrummer-skyfall-31b-v4-2 pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - thedrummer-skyfall-31b-v4-2
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.55
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.8
+    enabled: true

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: x-ai-grok-4-20-multi-agent-on-kilo
+    displayName: x-ai-grok-4-20-multi-agent via kilo
+spec:
+    model: x-ai-grok-4-20-multi-agent
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - x-ai-grok-4-20-multi-agent

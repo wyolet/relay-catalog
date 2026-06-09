@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: umans-kimi-k2-6-on-umans-ai-coding-plan
+    displayName: umans-kimi-k2-6 via umans-ai-coding-plan
+spec:
+    model: umans-kimi-k2-6
+    host: umans-ai-coding-plan
+    adapter: openai
+    enabled: true
+    snapshots:
+        - umans-kimi-k2-6

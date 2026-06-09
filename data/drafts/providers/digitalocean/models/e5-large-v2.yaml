@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: e5-large-v2
+    displayName: E5 Large v2
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: text-embedding
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: text-embedding
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 512
+    contextWindowOutput: 1024
+    contextWindowTotal: 512
+    maxOutputTokens: 1024
+    releaseDate: "2023-05-19"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: e5-large-v2
+          releasedAt: "2023-05-19"
+    pointer: e5-large-v2

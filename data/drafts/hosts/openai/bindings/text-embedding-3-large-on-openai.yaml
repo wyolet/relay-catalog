@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: text-embedding-3-large-on-openai
+    displayName: text-embedding-3-large via openai
+spec:
+    model: text-embedding-3-large
+    host: openai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - text-embedding-3-large

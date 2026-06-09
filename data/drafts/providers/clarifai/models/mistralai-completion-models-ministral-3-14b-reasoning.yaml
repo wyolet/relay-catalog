@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistralai-completion-models-ministral-3-14b-reasoning
+    displayName: Ministral 3 14B Reasoning 2512
+    owner:
+        kind: provider
+        name: clarifai
+    labels:
+        family: ministral
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: ministral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    maxOutputTokens: 262144
+    knowledgeCutoff: 2025-12
+    releaseDate: "2025-12-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistralai-completion-models-ministral-3-14b-reasoning-2512
+          releasedAt: "2025-12-01"
+          originalName: mistralai/completion/models/Ministral-3-14B-Reasoning-2512
+    pointer: mistralai-completion-models-ministral-3-14b-reasoning-2512

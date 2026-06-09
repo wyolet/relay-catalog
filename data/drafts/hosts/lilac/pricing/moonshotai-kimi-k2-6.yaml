@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: lilac-moonshotai-kimi-k2-6
+    displayName: moonshotai-kimi-k2-6 pricing
+    owner:
+        kind: host
+        id: lilac
+spec:
+    currency: USD
+    targetModels:
+        - moonshotai-kimi-k2-6
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.7
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.5
+    enabled: true

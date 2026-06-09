@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: zai-org-autoglm-phone-9b-multilingual
+    displayName: AutoGLM-Phone-9B-Multilingual
+    owner:
+        kind: provider
+        name: novita-ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 65536
+    contextWindowOutput: 65536
+    contextWindowTotal: 65536
+    maxOutputTokens: 65536
+    releaseDate: "2025-12-10"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: zai-org-autoglm-phone-9b-multilingual
+          releasedAt: "2025-12-10"
+          originalName: zai-org/autoglm-phone-9b-multilingual
+    pointer: zai-org-autoglm-phone-9b-multilingual

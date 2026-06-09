@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: glm-4-5-air
+    displayName: glm-4.5-air
+    owner:
+        kind: provider
+        name: 302ai
+    labels:
+        family: glm-air
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glm-air
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 98304
+    contextWindowTotal: 131072
+    maxOutputTokens: 98304
+    knowledgeCutoff: 2025-04
+    releaseDate: "2025-07-29"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: glm-4-5-air
+          releasedAt: "2025-07-29"
+          originalName: glm-4.5-air
+    pointer: glm-4-5-air

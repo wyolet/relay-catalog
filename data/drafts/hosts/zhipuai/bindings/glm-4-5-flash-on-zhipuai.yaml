@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: glm-4-5-flash-on-zhipuai
+    displayName: glm-4-5-flash via zhipuai
+spec:
+    model: glm-4-5-flash
+    host: zhipuai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - glm-4-5-flash

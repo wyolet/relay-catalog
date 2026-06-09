@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-2-0-pro-reasoner
+    displayName: Gemini 2.0 Pro Reasoner
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 65536
+    contextWindowTotal: 128000
+    maxOutputTokens: 65536
+    releaseDate: "2025-02-05"
+    enabled: true
+    snapshots:
+        - name: gemini-2-0-pro-reasoner
+          releasedAt: "2025-02-05"
+          originalName: gemini-2.0-pro-reasoner
+    pointer: gemini-2-0-pro-reasoner

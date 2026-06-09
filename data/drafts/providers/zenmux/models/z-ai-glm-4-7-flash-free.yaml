@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: z-ai-glm-4-7-flash-free
+    displayName: GLM 4.7 Flash (Free)
+    owner:
+        kind: provider
+        name: zenmux
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 64000
+    contextWindowTotal: 200000
+    maxOutputTokens: 64000
+    knowledgeCutoff: "2025-01-01"
+    releaseDate: "2026-01-19"
+    enabled: true
+    snapshots:
+        - name: z-ai-glm-4-7-flash-free
+          releasedAt: "2026-01-19"
+          originalName: z-ai/glm-4.7-flash-free
+    pointer: z-ai-glm-4-7-flash-free

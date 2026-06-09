@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: zenmux-x-ai-grok-4-1-fast
+    displayName: x-ai-grok-4-1-fast pricing
+    owner:
+        kind: host
+        id: zenmux
+spec:
+    currency: USD
+    targetModels:
+        - x-ai-grok-4-1-fast
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.05
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.5
+    enabled: true

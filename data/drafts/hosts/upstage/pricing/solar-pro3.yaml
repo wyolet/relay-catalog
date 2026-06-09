@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: upstage-solar-pro3
+    displayName: solar-pro3 pricing
+    owner:
+        kind: host
+        id: upstage
+spec:
+    currency: USD
+    targetModels:
+        - solar-pro3
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.25
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.25
+    enabled: true

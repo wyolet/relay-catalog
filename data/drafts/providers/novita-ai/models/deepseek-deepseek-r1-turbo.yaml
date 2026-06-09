@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-deepseek-r1-turbo
+    displayName: "DeepSeek R1 (Turbo)\t"
+    owner:
+        kind: provider
+        name: novita-ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 64000
+    contextWindowOutput: 16000
+    contextWindowTotal: 64000
+    maxOutputTokens: 16000
+    releaseDate: "2025-03-05"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: deepseek-deepseek-r1-turbo
+          releasedAt: "2025-03-05"
+          originalName: deepseek/deepseek-r1-turbo
+    pointer: deepseek-deepseek-r1-turbo

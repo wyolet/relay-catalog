@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: abliteration-ai-abliterated-model
+    displayName: abliterated-model pricing
+    owner:
+        kind: host
+        id: abliteration-ai
+spec:
+    currency: USD
+    targetModels:
+        - abliterated-model
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 3
+        - meter: tokens.output
+          unit: per_million
+          amount: 3
+    enabled: true

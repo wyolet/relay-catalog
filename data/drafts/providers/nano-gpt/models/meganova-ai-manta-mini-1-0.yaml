@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: meganova-ai-manta-mini-1-0
+    displayName: Manta Mini 1.0
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: nova
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: nova
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    maxOutputTokens: 8192
+    releaseDate: "2025-12-20"
+    enabled: true
+    snapshots:
+        - name: meganova-ai-manta-mini-1-0
+          releasedAt: "2025-12-20"
+          originalName: meganova-ai/manta-mini-1.0
+    pointer: meganova-ai-manta-mini-1-0

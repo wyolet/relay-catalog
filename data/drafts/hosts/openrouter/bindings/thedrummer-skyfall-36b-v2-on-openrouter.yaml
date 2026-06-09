@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: thedrummer-skyfall-36b-v2-on-openrouter
+    displayName: thedrummer-skyfall-36b-v2 via openrouter
+spec:
+    model: thedrummer-skyfall-36b-v2
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - thedrummer-skyfall-36b-v2

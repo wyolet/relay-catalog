@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: tencent-hunyuan-mt-7b-on-nano-gpt
+    displayName: tencent-hunyuan-mt-7b via nano-gpt
+spec:
+    model: tencent-hunyuan-mt-7b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - tencent-hunyuan-mt-7b

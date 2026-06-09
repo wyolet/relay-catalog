@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-google-gemini-flash-1-5
+    displayName: google-gemini-flash-1-5 pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - google-gemini-flash-1-5
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.0748
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.306
+    enabled: true

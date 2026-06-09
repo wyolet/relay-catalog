@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: google-gemma-4-31b-it-free
+    displayName: Gemma 4 31B (free)
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: gemma
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gemma
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - text
+            - video
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 32768
+    contextWindowTotal: 262144
+    maxOutputTokens: 32768
+    releaseDate: "2026-04-02"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: google-gemma-4-31b-it-free
+          releasedAt: "2026-04-02"
+          originalName: google/gemma-4-31b-it:free
+    pointer: google-gemma-4-31b-it-free

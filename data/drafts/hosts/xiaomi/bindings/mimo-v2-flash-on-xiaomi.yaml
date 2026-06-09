@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mimo-v2-flash-on-xiaomi
+    displayName: mimo-v2-flash via xiaomi
+spec:
+    model: mimo-v2-flash
+    host: xiaomi
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mimo-v2-flash

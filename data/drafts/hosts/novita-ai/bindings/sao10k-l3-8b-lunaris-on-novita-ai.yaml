@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: sao10k-l3-8b-lunaris-on-novita-ai
+    displayName: sao10k-l3-8b-lunaris via novita-ai
+spec:
+    model: sao10k-l3-8b-lunaris
+    host: novita-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - sao10k-l3-8b-lunaris

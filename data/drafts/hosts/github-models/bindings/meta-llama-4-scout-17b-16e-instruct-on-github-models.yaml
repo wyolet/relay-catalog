@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: meta-llama-4-scout-17b-16e-instruct-on-github-models
+    displayName: meta-llama-4-scout-17b-16e-instruct via github-models
+spec:
+    model: meta-llama-4-scout-17b-16e-instruct
+    host: github-models
+    adapter: openai
+    enabled: true
+    snapshots:
+        - meta-llama-4-scout-17b-16e-instruct

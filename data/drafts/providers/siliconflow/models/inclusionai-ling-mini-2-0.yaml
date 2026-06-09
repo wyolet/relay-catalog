@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: inclusionai-ling-mini-2-0
+    displayName: inclusionAI/Ling-mini-2.0
+    owner:
+        kind: provider
+        name: siliconflow
+    labels:
+        family: ling
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: ling
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131000
+    contextWindowOutput: 131000
+    contextWindowTotal: 131000
+    maxOutputTokens: 131000
+    releaseDate: "2025-09-10"
+    enabled: true
+    snapshots:
+        - name: inclusionai-ling-mini-2-0
+          releasedAt: "2025-09-10"
+          originalName: inclusionAI/Ling-mini-2.0
+    pointer: inclusionai-ling-mini-2-0

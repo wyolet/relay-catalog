@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kimi-k2-turbo-preview
+    displayName: Kimi K2 Turbo Preview
+    owner:
+        kind: provider
+        name: abacus
+    labels:
+        family: kimi
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: kimi
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 8192
+    contextWindowTotal: 256000
+    maxOutputTokens: 8192
+    releaseDate: "2025-07-08"
+    enabled: true
+    snapshots:
+        - name: kimi-k2-turbo-preview
+          releasedAt: "2025-07-08"
+    pointer: kimi-k2-turbo-preview

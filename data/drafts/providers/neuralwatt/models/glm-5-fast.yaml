@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: glm-5-fast
+    displayName: GLM 5 Fast
+    owner:
+        kind: provider
+        name: neuralwatt
+    labels:
+        family: glm
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: glm
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 202736
+    contextWindowOutput: 202736
+    contextWindowTotal: 202736
+    maxOutputTokens: 202736
+    releaseDate: "2026-04-07"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: glm-5-fast
+          releasedAt: "2026-04-07"
+    pointer: glm-5-fast

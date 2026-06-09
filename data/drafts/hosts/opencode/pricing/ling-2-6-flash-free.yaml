@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: opencode-ling-2-6-flash-free
+    displayName: ling-2-6-flash-free pricing
+    owner:
+        kind: host
+        id: opencode
+spec:
+    currency: USD
+    targetModels:
+        - ling-2-6-flash-free
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

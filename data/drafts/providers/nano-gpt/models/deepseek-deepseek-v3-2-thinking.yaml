@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-deepseek-v3-2-thinking
+    displayName: DeepSeek V3.2 Thinking
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: deepseek
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - pdf
+        output:
+            - text
+    contextWindowInput: 163000
+    contextWindowOutput: 65536
+    contextWindowTotal: 163000
+    maxOutputTokens: 65536
+    releaseDate: "2025-12-01"
+    enabled: true
+    snapshots:
+        - name: deepseek-deepseek-v3-2-thinking
+          releasedAt: "2025-12-01"
+          originalName: deepseek/deepseek-v3.2:thinking
+    pointer: deepseek-deepseek-v3-2-thinking

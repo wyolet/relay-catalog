@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-5-4-on-snowflake-cortex
+    displayName: openai-gpt-5-4 via snowflake-cortex
+spec:
+    model: openai-gpt-5-4
+    host: snowflake-cortex
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-5-4

@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama-3-2-11b-instruct
+    displayName: Llama 3.2 11B Instruct
+    owner:
+        kind: provider
+        name: llmgateway
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    releaseDate: "2024-09-25"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: llama-3-2-11b-instruct
+          releasedAt: "2024-09-25"
+          originalName: llama-3.2-11b-instruct
+    pointer: llama-3-2-11b-instruct

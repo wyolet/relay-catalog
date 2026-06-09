@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: claude-3-5-sonnet-v2-on-helicone
+    displayName: claude-3-5-sonnet-v2 via helicone
+spec:
+    model: claude-3-5-sonnet-v2
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - claude-3-5-sonnet-v2

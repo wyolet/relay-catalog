@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen2-5-vl-32b-instruct
+    displayName: Qwen2.5 VL 32B Instruct
+    owner:
+        kind: provider
+        name: chutes
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 16384
+    contextWindowTotal: 16384
+    maxOutputTokens: 16384
+    releaseDate: "2025-12-29"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen2-5-vl-32b-instruct
+          releasedAt: "2025-12-29"
+          originalName: Qwen/Qwen2.5-VL-32B-Instruct
+    pointer: qwen-qwen2-5-vl-32b-instruct

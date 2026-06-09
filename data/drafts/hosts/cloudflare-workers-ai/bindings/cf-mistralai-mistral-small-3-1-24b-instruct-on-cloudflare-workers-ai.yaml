@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cf-mistralai-mistral-small-3-1-24b-instruct-on-cloudflare-workers-ai
+    displayName: cf-mistralai-mistral-small-3-1-24b-instruct via cloudflare-workers-ai
+spec:
+    model: cf-mistralai-mistral-small-3-1-24b-instruct
+    host: cloudflare-workers-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cf-mistralai-mistral-small-3-1-24b-instruct

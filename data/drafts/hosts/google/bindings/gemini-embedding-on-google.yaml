@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemini-embedding-on-google
+    displayName: gemini-embedding via google
+spec:
+    model: gemini-embedding
+    host: google
+    adapter: gemini
+    enabled: true
+    snapshots:
+        - gemini-embedding-001

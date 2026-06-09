@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: fal-ai-stable-audio-25-text-to-audio-on-digitalocean
+    displayName: fal-ai-stable-audio-25-text-to-audio via digitalocean
+spec:
+    model: fal-ai-stable-audio-25-text-to-audio
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - fal-ai-stable-audio-25-text-to-audio

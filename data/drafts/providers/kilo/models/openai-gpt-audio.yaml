@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-gpt-audio
+    displayName: 'OpenAI: GPT Audio'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        audio: true
+        audioInput: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - audio
+            - text
+        output:
+            - audio
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    maxOutputTokens: 16384
+    releaseDate: "2026-01-20"
+    enabled: true
+    snapshots:
+        - name: openai-gpt-audio
+          releasedAt: "2026-01-20"
+          originalName: openai/gpt-audio
+    pointer: openai-gpt-audio

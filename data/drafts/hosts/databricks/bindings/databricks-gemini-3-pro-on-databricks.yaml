@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: databricks-gemini-3-pro-on-databricks
+    displayName: databricks-gemini-3-pro via databricks
+spec:
+    model: databricks-gemini-3-pro
+    host: databricks
+    adapter: openai
+    enabled: true
+    snapshots:
+        - databricks-gemini-3-pro

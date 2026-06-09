@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: inception-mercury-2-on-kilo
+    displayName: inception-mercury-2 via kilo
+spec:
+    model: inception-mercury-2
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - inception-mercury-2

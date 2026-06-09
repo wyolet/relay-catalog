@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: orcarouter-deepseek-deepseek-reasoner
+    displayName: deepseek-deepseek-reasoner pricing
+    owner:
+        kind: host
+        id: orcarouter
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-deepseek-reasoner
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.028
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.435
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.87
+    enabled: true

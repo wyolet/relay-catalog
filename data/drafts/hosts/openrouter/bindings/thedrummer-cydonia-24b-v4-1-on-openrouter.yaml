@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: thedrummer-cydonia-24b-v4-1-on-openrouter
+    displayName: thedrummer-cydonia-24b-v4-1 via openrouter
+spec:
+    model: thedrummer-cydonia-24b-v4-1
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - thedrummer-cydonia-24b-v4-1

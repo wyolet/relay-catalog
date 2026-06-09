@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: upstage-solar-10-7b-instruct
+    displayName: solar-10.7b-instruct
+    owner:
+        kind: provider
+        name: nvidia
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    releaseDate: "2024-06-05"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: upstage-solar-10-7b-instruct
+          releasedAt: "2024-06-05"
+          originalName: upstage/solar-10_7b-instruct
+    pointer: upstage-solar-10-7b-instruct

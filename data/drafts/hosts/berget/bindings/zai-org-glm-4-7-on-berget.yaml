@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: zai-org-glm-4-7-on-berget
+    displayName: zai-org-glm-4-7 via berget
+spec:
+    model: zai-org-glm-4-7
+    host: berget
+    adapter: openai
+    enabled: true
+    snapshots:
+        - zai-org-glm-4-7

@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: elevenlabs-elevenlabs-v2-5-turbo
+    displayName: ElevenLabs-v2.5-Turbo
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: elevenlabs
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: elevenlabs
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - audio
+    contextWindowInput: 128000
+    contextWindowTotal: 128000
+    releaseDate: "2024-10-28"
+    enabled: true
+    snapshots:
+        - name: elevenlabs-elevenlabs-v2-5-turbo
+          releasedAt: "2024-10-28"
+          originalName: elevenlabs/elevenlabs-v2.5-turbo
+    pointer: elevenlabs-elevenlabs-v2-5-turbo

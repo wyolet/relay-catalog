@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-30b-a3b-on-helicone
+    displayName: qwen3-30b-a3b via helicone
+spec:
+    model: qwen3-30b-a3b
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-30b-a3b

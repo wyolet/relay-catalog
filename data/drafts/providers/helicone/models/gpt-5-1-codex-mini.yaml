@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-5-1-codex-mini
+    displayName: 'OpenAI: GPT-5.1 Codex Mini'
+    owner:
+        kind: provider
+        name: helicone
+    labels:
+        family: gpt-codex
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt-codex
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+            - image
+    contextWindowInput: 400000
+    contextWindowOutput: 128000
+    contextWindowTotal: 400000
+    maxOutputTokens: 128000
+    knowledgeCutoff: 2025-01
+    releaseDate: "2025-01-01"
+    enabled: true
+    snapshots:
+        - name: gpt-5-1-codex-mini
+          releasedAt: "2025-01-01"
+          originalName: gpt-5.1-codex-mini
+    pointer: gpt-5-1-codex-mini

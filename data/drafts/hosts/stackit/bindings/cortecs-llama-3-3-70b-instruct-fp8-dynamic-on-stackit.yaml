@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cortecs-llama-3-3-70b-instruct-fp8-dynamic-on-stackit
+    displayName: cortecs-llama-3-3-70b-instruct-fp8-dynamic via stackit
+spec:
+    model: cortecs-llama-3-3-70b-instruct-fp8-dynamic
+    host: stackit
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cortecs-llama-3-3-70b-instruct-fp8-dynamic

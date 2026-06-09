@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-gemini-2-5-flash-on-fastrouter
+    displayName: google-gemini-2-5-flash via fastrouter
+spec:
+    model: google-gemini-2-5-flash
+    host: fastrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-gemini-2-5-flash

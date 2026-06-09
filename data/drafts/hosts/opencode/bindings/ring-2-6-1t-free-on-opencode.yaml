@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: ring-2-6-1t-free-on-opencode
+    displayName: ring-2-6-1t-free via opencode
+spec:
+    model: ring-2-6-1t-free
+    host: opencode
+    adapter: openai
+    enabled: true
+    snapshots:
+        - ring-2-6-1t-free

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: ascend-tribe-pangu-pro-moe-on-siliconflow-cn
+    displayName: ascend-tribe-pangu-pro-moe via siliconflow-cn
+spec:
+    model: ascend-tribe-pangu-pro-moe
+    host: siliconflow-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - ascend-tribe-pangu-pro-moe

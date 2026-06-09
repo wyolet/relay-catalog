@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cf-meta-llama-3-1-8b-instruct-fp8-on-cloudflare-workers-ai
+    displayName: cf-meta-llama-3-1-8b-instruct-fp8 via cloudflare-workers-ai
+spec:
+    model: cf-meta-llama-3-1-8b-instruct-fp8
+    host: cloudflare-workers-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cf-meta-llama-3-1-8b-instruct-fp8

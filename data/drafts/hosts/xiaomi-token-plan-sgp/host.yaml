@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: xiaomi-token-plan-sgp
+    displayName: Xiaomi Token Plan (Singapore)
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://token-plan-sgp.xiaomimimo.com/v1
+    pricingStrategies:
+        - api
+    docsURL: https://platform.xiaomimimo.com/#/docs

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemini-3-pro-preview-on-jiekou
+    displayName: gemini-3-pro-preview via jiekou
+spec:
+    model: gemini-3-pro-preview
+    host: jiekou
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gemini-3-pro-preview

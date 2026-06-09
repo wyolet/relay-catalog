@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: routing-run-route-qwen3-6-27b
+    displayName: route-qwen3-6-27b pricing
+    owner:
+        kind: host
+        id: routing-run
+spec:
+    currency: USD
+    targetModels:
+        - route-qwen3-6-27b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.1
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.3
+    enabled: true

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-vl-plus-on-iflowcn
+    displayName: qwen3-vl-plus via iflowcn
+spec:
+    model: qwen3-vl-plus
+    host: iflowcn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-vl-plus

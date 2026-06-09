@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-5-122b-a10b-on-nearai
+    displayName: qwen-qwen3-5-122b-a10b via nearai
+spec:
+    model: qwen-qwen3-5-122b-a10b
+    host: nearai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-5-122b-a10b

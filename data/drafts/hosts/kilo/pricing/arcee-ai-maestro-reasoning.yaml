@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-arcee-ai-maestro-reasoning
+    displayName: arcee-ai-maestro-reasoning pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - arcee-ai-maestro-reasoning
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.9
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.3
+    enabled: true

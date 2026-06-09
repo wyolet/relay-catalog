@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hf-zai-org-glm-4-7-flash-on-synthetic
+    displayName: hf-zai-org-glm-4-7-flash via synthetic
+spec:
+    model: hf-zai-org-glm-4-7-flash
+    host: synthetic
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hf-zai-org-glm-4-7-flash

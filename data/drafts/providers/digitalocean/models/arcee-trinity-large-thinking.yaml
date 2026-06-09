@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: arcee-trinity-large-thinking
+    displayName: Trinity Large Thinking
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: trinity
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: trinity
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 128000
+    contextWindowTotal: 256000
+    maxOutputTokens: 128000
+    releaseDate: "2026-04-02"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: arcee-trinity-large-thinking
+          releasedAt: "2026-04-02"
+    pointer: arcee-trinity-large-thinking

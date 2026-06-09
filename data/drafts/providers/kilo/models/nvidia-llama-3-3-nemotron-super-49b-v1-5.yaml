@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nvidia-llama-3-3-nemotron-super-49b-v1-5
+    displayName: 'NVIDIA: Llama 3.3 Nemotron Super 49B V1.5'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        family: nemotron
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: nemotron
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 26215
+    contextWindowTotal: 131072
+    maxOutputTokens: 26215
+    releaseDate: "2025-03-16"
+    enabled: true
+    snapshots:
+        - name: nvidia-llama-3-3-nemotron-super-49b-v1-5
+          releasedAt: "2025-03-16"
+          originalName: nvidia/llama-3.3-nemotron-super-49b-v1.5
+    pointer: nvidia-llama-3-3-nemotron-super-49b-v1-5

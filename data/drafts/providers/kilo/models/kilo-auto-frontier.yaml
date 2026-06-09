@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kilo-auto-frontier
+    displayName: Kilo Auto Frontier
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 128000
+    releaseDate: "2026-03-15"
+    enabled: true
+    snapshots:
+        - name: kilo-auto-frontier
+          releasedAt: "2026-03-15"
+          originalName: kilo-auto/frontier
+    pointer: kilo-auto-frontier

@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: xiaomimimo-mimo-v2-flash-tee
+    displayName: MiMo V2 Flash TEE
+    owner:
+        kind: provider
+        name: chutes
+    labels:
+        family: mimo
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mimo
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 65536
+    contextWindowTotal: 262144
+    maxOutputTokens: 65536
+    knowledgeCutoff: "2024-12-01"
+    releaseDate: "2025-12-16"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: xiaomimimo-mimo-v2-flash-tee
+          releasedAt: "2025-12-16"
+          originalName: XiaomiMiMo/MiMo-V2-Flash-TEE
+    pointer: xiaomimimo-mimo-v2-flash-tee

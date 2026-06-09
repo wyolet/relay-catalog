@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: clarifai-minimaxai-chat-completion-models-minimax-m2-5-high-throughput
+    displayName: minimaxai-chat-completion-models-minimax-m2-5-high-throughput pricing
+    owner:
+        kind: host
+        id: clarifai
+spec:
+    currency: USD
+    targetModels:
+        - minimaxai-chat-completion-models-minimax-m2-5-high-throughput
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.2
+    enabled: true

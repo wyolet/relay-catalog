@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-2-5-14b-instruct-on-digitalocean
+    displayName: qwen-2-5-14b-instruct via digitalocean
+spec:
+    model: qwen-2-5-14b-instruct
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-2-5-14b-instruct

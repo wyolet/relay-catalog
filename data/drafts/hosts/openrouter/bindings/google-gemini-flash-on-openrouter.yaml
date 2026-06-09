@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-gemini-flash-on-openrouter
+    displayName: google-gemini-flash via openrouter
+spec:
+    model: google-gemini-flash
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-gemini-flash-latest

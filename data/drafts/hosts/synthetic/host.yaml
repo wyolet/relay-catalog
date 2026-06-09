@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: synthetic
+    displayName: Synthetic
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.synthetic.new/openai/v1
+    pricingStrategies:
+        - api
+    docsURL: https://synthetic.new/pricing

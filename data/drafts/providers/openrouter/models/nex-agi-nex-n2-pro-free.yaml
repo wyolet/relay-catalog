@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nex-agi-nex-n2-pro-free
+    displayName: Nex-N2-Pro (free)
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    maxOutputTokens: 262144
+    releaseDate: "2026-06-08"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nex-agi-nex-n2-pro-free
+          releasedAt: "2026-06-08"
+          originalName: nex-agi/nex-n2-pro:free
+    pointer: nex-agi-nex-n2-pro-free

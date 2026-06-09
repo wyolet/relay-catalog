@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistralai-voxtral-small-24b
+    displayName: Voxtral Small 24B
+    owner:
+        kind: provider
+        name: evroc
+    labels:
+        family: voxtral
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: voxtral
+    capabilities:
+        chat: true
+        streaming: true
+        audio: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - audio
+            - text
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 32000
+    contextWindowTotal: 32000
+    maxOutputTokens: 32000
+    releaseDate: "2025-03-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistralai-voxtral-small-24b-2507
+          releasedAt: "2025-03-01"
+          originalName: mistralai/Voxtral-Small-24B-2507
+    pointer: mistralai-voxtral-small-24b-2507

@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nearai-openai-gpt-4-1
+    displayName: openai-gpt-4-1 pricing
+    owner:
+        kind: host
+        id: nearai
+spec:
+    currency: USD
+    targetModels:
+        - openai-gpt-4-1
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.output
+          unit: per_million
+          amount: 8
+    enabled: true

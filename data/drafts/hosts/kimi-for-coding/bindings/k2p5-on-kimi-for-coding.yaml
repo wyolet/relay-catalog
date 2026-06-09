@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: k2p5-on-kimi-for-coding
+    displayName: k2p5 via kimi-for-coding
+spec:
+    model: k2p5
+    host: kimi-for-coding
+    adapter: anthropic
+    enabled: true
+    snapshots:
+        - k2p5

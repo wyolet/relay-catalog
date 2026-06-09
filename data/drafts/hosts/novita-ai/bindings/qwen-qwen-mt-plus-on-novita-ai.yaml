@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen-mt-plus-on-novita-ai
+    displayName: qwen-qwen-mt-plus via novita-ai
+spec:
+    model: qwen-qwen-mt-plus
+    host: novita-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen-mt-plus

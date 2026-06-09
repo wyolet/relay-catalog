@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: doubao-seed-2-0-mini-on-qiniu-ai
+    displayName: doubao-seed-2-0-mini via qiniu-ai
+spec:
+    model: doubao-seed-2-0-mini
+    host: qiniu-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - doubao-seed-2-0-mini

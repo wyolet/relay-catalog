@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: anthropic-claude-3-opus-on-digitalocean
+    displayName: anthropic-claude-3-opus via digitalocean
+spec:
+    model: anthropic-claude-3-opus
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - anthropic-claude-3-opus

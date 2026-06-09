@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-gemini-flash-lite-on-orcarouter
+    displayName: google-gemini-flash-lite via orcarouter
+spec:
+    model: google-gemini-flash-lite
+    host: orcarouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-gemini-flash-lite-latest

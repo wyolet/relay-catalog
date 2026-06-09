@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: glm-4-1v-thinking-flashx-on-nano-gpt
+    displayName: glm-4-1v-thinking-flashx via nano-gpt
+spec:
+    model: glm-4-1v-thinking-flashx
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - glm-4-1v-thinking-flashx

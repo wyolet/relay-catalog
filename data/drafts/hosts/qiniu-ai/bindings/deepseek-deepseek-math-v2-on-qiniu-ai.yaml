@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-deepseek-math-v2-on-qiniu-ai
+    displayName: deepseek-deepseek-math-v2 via qiniu-ai
+spec:
+    model: deepseek-deepseek-math-v2
+    host: qiniu-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-deepseek-math-v2

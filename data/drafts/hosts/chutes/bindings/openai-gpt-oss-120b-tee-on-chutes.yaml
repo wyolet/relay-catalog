@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-oss-120b-tee-on-chutes
+    displayName: openai-gpt-oss-120b-tee via chutes
+spec:
+    model: openai-gpt-oss-120b-tee
+    host: chutes
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-oss-120b-tee

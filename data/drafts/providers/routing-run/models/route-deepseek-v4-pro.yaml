@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: route-deepseek-v4-pro
+    displayName: DeepSeek V4 Pro
+    owner:
+        kind: provider
+        name: routing-run
+    labels:
+        family: deepseek-thinking
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek-thinking
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 131072
+    contextWindowTotal: 1000000
+    maxOutputTokens: 131072
+    knowledgeCutoff: 2025-05
+    releaseDate: "2026-04-24"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: route-deepseek-v4-pro
+          releasedAt: "2026-04-24"
+          originalName: route/deepseek-v4-pro
+    pointer: route-deepseek-v4-pro

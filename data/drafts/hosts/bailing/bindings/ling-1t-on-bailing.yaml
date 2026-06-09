@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: ling-1t-on-bailing
+    displayName: ling-1t via bailing
+spec:
+    model: ling-1t
+    host: bailing
+    adapter: openai
+    enabled: true
+    snapshots:
+        - ling-1t

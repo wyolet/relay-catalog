@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-long
+    displayName: Qwen Long
+    owner:
+        kind: provider
+        name: alibaba-cn
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 10000000
+    contextWindowOutput: 8192
+    contextWindowTotal: 10000000
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2024-04
+    releaseDate: "2025-01-25"
+    enabled: true
+    snapshots:
+        - name: qwen-long
+          releasedAt: "2025-01-25"
+    pointer: qwen-long

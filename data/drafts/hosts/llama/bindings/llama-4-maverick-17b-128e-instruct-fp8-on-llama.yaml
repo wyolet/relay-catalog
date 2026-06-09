@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: llama-4-maverick-17b-128e-instruct-fp8-on-llama
+    displayName: llama-4-maverick-17b-128e-instruct-fp8 via llama
+spec:
+    model: llama-4-maverick-17b-128e-instruct-fp8
+    host: llama
+    adapter: openai
+    enabled: true
+    snapshots:
+        - llama-4-maverick-17b-128e-instruct-fp8

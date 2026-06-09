@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-codestral-on-openrouter
+    displayName: mistralai-codestral via openrouter
+spec:
+    model: mistralai-codestral
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-codestral-2508

@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: digitalocean-anthropic-claude-4-5-sonnet
+    displayName: anthropic-claude-4-5-sonnet pricing
+    owner:
+        kind: host
+        id: digitalocean
+spec:
+    currency: USD
+    targetModels:
+        - anthropic-claude-4-5-sonnet
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 3.75
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 3.75
+          aboveTokens: 200000
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.3
+          aboveTokens: 200000
+        - meter: tokens.input
+          unit: per_million
+          amount: 3
+        - meter: tokens.input
+          unit: per_million
+          amount: 6
+          aboveTokens: 200000
+        - meter: tokens.output
+          unit: per_million
+          amount: 15
+        - meter: tokens.output
+          unit: per_million
+          amount: 22.5
+          aboveTokens: 200000
+    enabled: true

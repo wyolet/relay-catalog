@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: clarifai-main-models-mm-poly-8b-on-clarifai
+    displayName: clarifai-main-models-mm-poly-8b via clarifai
+spec:
+    model: clarifai-main-models-mm-poly-8b
+    host: clarifai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - clarifai-main-models-mm-poly-8b

@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: sonar-pro
+    displayName: Perplexity Sonar Pro
+    owner:
+        kind: provider
+        name: helicone
+    labels:
+        family: sonar-pro
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: sonar-pro
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 4096
+    contextWindowTotal: 200000
+    maxOutputTokens: 4096
+    knowledgeCutoff: 2025-01
+    releaseDate: "2025-01-27"
+    enabled: true
+    snapshots:
+        - name: sonar-pro
+          releasedAt: "2025-01-27"
+    pointer: sonar-pro

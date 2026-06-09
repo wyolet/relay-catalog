@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: tngtech-deepseek-tng-r1t2-chimera-tee-on-chutes
+    displayName: tngtech-deepseek-tng-r1t2-chimera-tee via chutes
+spec:
+    model: tngtech-deepseek-tng-r1t2-chimera-tee
+    host: chutes
+    adapter: openai
+    enabled: true
+    snapshots:
+        - tngtech-deepseek-tng-r1t2-chimera-tee

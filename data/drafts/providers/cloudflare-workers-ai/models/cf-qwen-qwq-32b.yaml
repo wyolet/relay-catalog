@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cf-qwen-qwq-32b
+    displayName: Qwq 32B
+    owner:
+        kind: provider
+        name: cloudflare-workers-ai
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 24000
+    contextWindowOutput: 24000
+    contextWindowTotal: 24000
+    maxOutputTokens: 24000
+    releaseDate: "2025-03-05"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: cf-qwen-qwq-32b
+          releasedAt: "2025-03-05"
+          originalName: '@cf/qwen/qwq-32b'
+    pointer: cf-qwen-qwq-32b

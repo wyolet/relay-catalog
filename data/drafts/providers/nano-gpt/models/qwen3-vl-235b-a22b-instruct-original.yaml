@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-vl-235b-a22b-instruct-original
+    displayName: Qwen3 VL 235B A22B Instruct Original
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    maxOutputTokens: 32768
+    releaseDate: "2025-09-25"
+    enabled: true
+    snapshots:
+        - name: qwen3-vl-235b-a22b-instruct-original
+          releasedAt: "2025-09-25"
+    pointer: qwen3-vl-235b-a22b-instruct-original

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: perceptron-perceptron-mk1-on-nano-gpt
+    displayName: perceptron-perceptron-mk1 via nano-gpt
+spec:
+    model: perceptron-perceptron-mk1
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - perceptron-perceptron-mk1

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-vl-plus-on-alibaba-cn
+    displayName: qwen3-vl-plus via alibaba-cn
+spec:
+    model: qwen3-vl-plus
+    host: alibaba-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-vl-plus

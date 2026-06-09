@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama-3-1-nemotron-ultra-253b
+    displayName: Llama 3.1 Nemotron Ultra 253B
+    owner:
+        kind: provider
+        name: llmgateway
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    releaseDate: "2025-04-07"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: llama-3-1-nemotron-ultra-253b
+          releasedAt: "2025-04-07"
+          originalName: llama-3.1-nemotron-ultra-253b
+    pointer: llama-3-1-nemotron-ultra-253b

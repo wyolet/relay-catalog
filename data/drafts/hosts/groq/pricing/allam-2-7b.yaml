@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: groq-allam-2-7b
+    displayName: allam-2-7b pricing
+    owner:
+        kind: host
+        id: groq
+spec:
+    currency: USD
+    targetModels:
+        - allam-2-7b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

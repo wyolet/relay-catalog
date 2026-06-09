@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: moonshotai-kimi
+    displayName: 'MoonshotAI: Kimi Latest'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262142
+    contextWindowOutput: 262142
+    contextWindowTotal: 262142
+    maxOutputTokens: 262142
+    releaseDate: "2026-04-27"
+    enabled: true
+    snapshots:
+        - name: moonshotai-kimi-latest
+          releasedAt: "2026-04-27"
+          originalName: ~moonshotai/kimi-latest
+    pointer: moonshotai-kimi-latest

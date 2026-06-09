@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-magpie-tts-zeroshot-on-nvidia
+    displayName: nvidia-magpie-tts-zeroshot via nvidia
+spec:
+    model: nvidia-magpie-tts-zeroshot
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-magpie-tts-zeroshot

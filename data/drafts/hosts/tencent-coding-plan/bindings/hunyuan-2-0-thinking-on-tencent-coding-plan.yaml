@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hunyuan-2-0-thinking-on-tencent-coding-plan
+    displayName: hunyuan-2-0-thinking via tencent-coding-plan
+spec:
+    model: hunyuan-2-0-thinking
+    host: tencent-coding-plan
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hunyuan-2-0-thinking

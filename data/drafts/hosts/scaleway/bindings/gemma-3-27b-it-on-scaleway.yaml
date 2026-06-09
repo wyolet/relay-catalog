@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemma-3-27b-it-on-scaleway
+    displayName: gemma-3-27b-it via scaleway
+spec:
+    model: gemma-3-27b-it
+    host: scaleway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gemma-3-27b-it

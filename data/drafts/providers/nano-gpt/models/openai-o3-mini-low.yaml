@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-o3-mini-low
+    displayName: OpenAI o3-mini (Low)
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: o-mini
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: o-mini
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 100000
+    contextWindowTotal: 200000
+    maxOutputTokens: 100000
+    releaseDate: "2025-01-31"
+    enabled: true
+    snapshots:
+        - name: openai-o3-mini-low
+          releasedAt: "2025-01-31"
+          originalName: openai/o3-mini-low
+    pointer: openai-o3-mini-low

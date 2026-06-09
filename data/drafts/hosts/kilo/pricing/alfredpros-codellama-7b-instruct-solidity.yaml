@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-alfredpros-codellama-7b-instruct-solidity
+    displayName: alfredpros-codellama-7b-instruct-solidity pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - alfredpros-codellama-7b-instruct-solidity
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.8
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.2
+    enabled: true

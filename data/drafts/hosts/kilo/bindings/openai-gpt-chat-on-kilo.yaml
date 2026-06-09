@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-chat-on-kilo
+    displayName: openai-gpt-chat via kilo
+spec:
+    model: openai-gpt-chat
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-chat-latest

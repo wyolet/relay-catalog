@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimaxai-minimax-m1-80k-on-jiekou
+    displayName: minimaxai-minimax-m1-80k via jiekou
+spec:
+    model: minimaxai-minimax-m1-80k
+    host: jiekou
+    adapter: openai
+    enabled: true
+    snapshots:
+        - minimaxai-minimax-m1-80k

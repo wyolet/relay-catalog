@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: black-forest-labs-flux-1-kontext-dev
+    displayName: FLUX.1-Kontext-dev
+    owner:
+        kind: provider
+        name: nvidia
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - image
+    contextWindowInput: 40960
+    contextWindowOutput: 40960
+    contextWindowTotal: 40960
+    maxOutputTokens: 40960
+    releaseDate: "2025-08-12"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: black-forest-labs-flux-1-kontext-dev
+          releasedAt: "2025-08-12"
+          originalName: black-forest-labs/flux_1-kontext-dev
+    pointer: black-forest-labs-flux-1-kontext-dev

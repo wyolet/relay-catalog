@@ -1,0 +1,43 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter-auto
+    displayName: Auto Router
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        audio: true
+        reasoning: true
+        fileInput: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - audio
+            - image
+            - pdf
+            - text
+            - video
+        output:
+            - image
+            - text
+    contextWindowInput: 2000000
+    contextWindowOutput: 32768
+    contextWindowTotal: 2000000
+    maxOutputTokens: 32768
+    releaseDate: "2026-03-15"
+    enabled: true
+    snapshots:
+        - name: openrouter-auto
+          releasedAt: "2026-03-15"
+          originalName: openrouter/auto
+    pointer: openrouter-auto

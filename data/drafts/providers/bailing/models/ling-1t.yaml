@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ling-1t
+    displayName: Ling-1T
+    owner:
+        kind: provider
+        name: bailing
+    labels:
+        family: ling
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: ling
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32000
+    contextWindowTotal: 128000
+    maxOutputTokens: 32000
+    knowledgeCutoff: 2024-06
+    releaseDate: 2025-10
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: ling-1t
+          releasedAt: 2025-10
+          originalName: Ling-1T
+    pointer: ling-1t

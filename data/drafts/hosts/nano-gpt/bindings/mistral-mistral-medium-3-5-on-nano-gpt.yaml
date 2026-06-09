@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistral-mistral-medium-3-5-on-nano-gpt
+    displayName: mistral-mistral-medium-3-5 via nano-gpt
+spec:
+    model: mistral-mistral-medium-3-5
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistral-mistral-medium-3-5

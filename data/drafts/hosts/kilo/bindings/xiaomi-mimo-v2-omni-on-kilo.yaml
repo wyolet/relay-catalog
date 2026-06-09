@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: xiaomi-mimo-v2-omni-on-kilo
+    displayName: xiaomi-mimo-v2-omni via kilo
+spec:
+    model: xiaomi-mimo-v2-omni
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - xiaomi-mimo-v2-omni

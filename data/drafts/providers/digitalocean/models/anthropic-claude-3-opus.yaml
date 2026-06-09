@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: anthropic-claude-3-opus
+    displayName: Claude 3 Opus
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: claude-opus
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: claude-opus
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 4096
+    contextWindowTotal: 200000
+    maxOutputTokens: 4096
+    knowledgeCutoff: 2023-08
+    releaseDate: "2024-02-29"
+    enabled: true
+    snapshots:
+        - name: anthropic-claude-3-opus
+          releasedAt: "2024-02-29"
+    pointer: anthropic-claude-3-opus

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-sparsedrive-on-nvidia
+    displayName: nvidia-sparsedrive via nvidia
+spec:
+    model: nvidia-sparsedrive
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-sparsedrive

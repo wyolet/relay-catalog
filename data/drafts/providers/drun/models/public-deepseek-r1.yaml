@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: public-deepseek-r1
+    displayName: DeepSeek R1
+    owner:
+        kind: provider
+        name: drun
+    labels:
+        family: deepseek-thinking
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek-thinking
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 32000
+    contextWindowTotal: 131072
+    maxOutputTokens: 32000
+    knowledgeCutoff: 2024-12
+    releaseDate: "2025-01-20"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: public-deepseek-r1
+          releasedAt: "2025-01-20"
+          originalName: public/deepseek-r1
+    pointer: public-deepseek-r1

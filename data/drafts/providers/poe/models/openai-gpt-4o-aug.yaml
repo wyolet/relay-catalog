@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-gpt-4o-aug
+    displayName: GPT-4o-Aug
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: gpt
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    releaseDate: "2024-11-21"
+    enabled: true
+    snapshots:
+        - name: openai-gpt-4o-aug
+          releasedAt: "2024-11-21"
+          originalName: openai/gpt-4o-aug
+    pointer: openai-gpt-4o-aug

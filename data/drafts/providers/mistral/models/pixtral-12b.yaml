@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: pixtral-12b
+    displayName: Pixtral 12B
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: pixtral
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: pixtral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    maxOutputTokens: 128000
+    knowledgeCutoff: 2024-09
+    releaseDate: "2024-09-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: pixtral-12b
+          releasedAt: "2024-09-01"
+        - name: pixtral-12b-2409
+          releasedAt: "2024-09-25"
+    pointer: pixtral-12b

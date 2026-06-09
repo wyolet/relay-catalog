@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: writer-palmyra-x5
+    displayName: 'Writer: Palmyra X5'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1040000
+    contextWindowOutput: 8192
+    contextWindowTotal: 1040000
+    maxOutputTokens: 8192
+    releaseDate: "2025-04-28"
+    enabled: true
+    snapshots:
+        - name: writer-palmyra-x5
+          releasedAt: "2025-04-28"
+          originalName: writer/palmyra-x5
+    pointer: writer-palmyra-x5

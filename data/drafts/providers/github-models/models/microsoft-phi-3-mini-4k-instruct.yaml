@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: microsoft-phi-3-mini-4k-instruct
+    displayName: Phi-3-mini instruct (4k)
+    owner:
+        kind: provider
+        name: github-models
+    labels:
+        family: phi
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: phi
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 4096
+    contextWindowOutput: 1024
+    contextWindowTotal: 4096
+    maxOutputTokens: 1024
+    knowledgeCutoff: 2023-10
+    releaseDate: "2024-04-23"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: microsoft-phi-3-mini-4k-instruct
+          releasedAt: "2024-04-23"
+          originalName: microsoft/phi-3-mini-4k-instruct
+    pointer: microsoft-phi-3-mini-4k-instruct

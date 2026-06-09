@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: google-gemma-4-31b-it-on-berget
+    displayName: google-gemma-4-31b-it via berget
+spec:
+    model: google-gemma-4-31b-it
+    host: berget
+    adapter: openai
+    enabled: true
+    snapshots:
+        - google-gemma-4-31b-it

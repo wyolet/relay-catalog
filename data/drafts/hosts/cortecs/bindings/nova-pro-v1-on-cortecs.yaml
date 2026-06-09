@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nova-pro-v1-on-cortecs
+    displayName: nova-pro-v1 via cortecs
+spec:
+    model: nova-pro-v1
+    host: cortecs
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nova-pro-v1

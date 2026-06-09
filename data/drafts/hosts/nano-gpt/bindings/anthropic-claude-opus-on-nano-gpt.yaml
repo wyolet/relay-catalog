@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: anthropic-claude-opus-on-nano-gpt
+    displayName: anthropic-claude-opus via nano-gpt
+spec:
+    model: anthropic-claude-opus
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - anthropic-claude-opus-latest

@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: volcengine-doubao-seed-2-0-lite
+    displayName: Doubao-Seed-2.0-lite
+    owner:
+        kind: provider
+        name: zenmux
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 64000
+    contextWindowTotal: 256000
+    maxOutputTokens: 64000
+    knowledgeCutoff: "2026-02-14"
+    releaseDate: "2026-02-14"
+    enabled: true
+    snapshots:
+        - name: volcengine-doubao-seed-2-0-lite
+          releasedAt: "2026-02-14"
+          originalName: volcengine/doubao-seed-2.0-lite
+    pointer: volcengine-doubao-seed-2-0-lite

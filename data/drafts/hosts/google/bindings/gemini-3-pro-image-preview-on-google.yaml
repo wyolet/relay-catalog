@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gemini-3-pro-image-preview-on-google
+    displayName: gemini-3-pro-image-preview via google
+spec:
+    model: gemini-3-pro-image-preview
+    host: google
+    adapter: gemini
+    enabled: true
+    snapshots:
+        - gemini-3-pro-image-preview

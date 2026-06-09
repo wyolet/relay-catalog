@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: black-forest-labs-flux-2-klein-4b
+    displayName: FLUX.2 Klein 4B
+    owner:
+        kind: provider
+        name: nearai
+    labels:
+        family: flux
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: flux
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - image
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    maxOutputTokens: 128000
+    releaseDate: "2026-01-14"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: black-forest-labs-flux-2-klein-4b
+          releasedAt: "2026-01-14"
+          originalName: black-forest-labs/FLUX.2-klein-4B
+    pointer: black-forest-labs-flux-2-klein-4b

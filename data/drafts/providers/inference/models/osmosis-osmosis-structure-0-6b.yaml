@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: osmosis-osmosis-structure-0-6b
+    displayName: Osmosis Structure 0.6B
+    owner:
+        kind: provider
+        name: inference
+    labels:
+        family: osmosis
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: osmosis
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 4000
+    contextWindowOutput: 2048
+    contextWindowTotal: 4000
+    maxOutputTokens: 2048
+    knowledgeCutoff: 2024-12
+    releaseDate: "2025-01-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: osmosis-osmosis-structure-0-6b
+          releasedAt: "2025-01-01"
+          originalName: osmosis/osmosis-structure-0.6b
+    pointer: osmosis-osmosis-structure-0-6b

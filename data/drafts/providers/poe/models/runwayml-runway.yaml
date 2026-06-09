@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: runwayml-runway
+    displayName: Runway
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: runway
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: runway
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - video
+    contextWindowInput: 256
+    contextWindowTotal: 256
+    releaseDate: "2024-10-11"
+    enabled: true
+    snapshots:
+        - name: runwayml-runway
+          releasedAt: "2024-10-11"
+          originalName: runwayml/runway
+    pointer: runwayml-runway

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: readyart-ms3-2-the-omega-directive-24b-unslop-v2-0-on-nano-gpt
+    displayName: readyart-ms3-2-the-omega-directive-24b-unslop-v2-0 via nano-gpt
+spec:
+    model: readyart-ms3-2-the-omega-directive-24b-unslop-v2-0
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - readyart-ms3-2-the-omega-directive-24b-unslop-v2-0

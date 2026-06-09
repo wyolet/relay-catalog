@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: thedrummer-rocinante-12b-on-kilo
+    displayName: thedrummer-rocinante-12b via kilo
+spec:
+    model: thedrummer-rocinante-12b
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - thedrummer-rocinante-12b

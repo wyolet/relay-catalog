@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: ling-2-6-flash-free
+    displayName: Ling 2.6 Flash Free
+    owner:
+        kind: provider
+        name: opencode
+    labels:
+        family: ling-flash-free
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: ling-flash-free
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262100
+    contextWindowOutput: 32800
+    contextWindowTotal: 262100
+    maxOutputTokens: 32800
+    knowledgeCutoff: 2025-06
+    releaseDate: "2026-04-21"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: ling-2-6-flash-free
+          releasedAt: "2026-04-21"
+          originalName: ling-2.6-flash-free
+    pointer: ling-2-6-flash-free

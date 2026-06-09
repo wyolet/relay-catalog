@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-v4-pro-lightning-on-crof
+    displayName: deepseek-v4-pro-lightning via crof
+spec:
+    model: deepseek-v4-pro-lightning
+    host: crof
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-v4-pro-lightning

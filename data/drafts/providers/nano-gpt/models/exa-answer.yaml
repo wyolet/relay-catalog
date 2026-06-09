@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: exa-answer
+    displayName: Exa (Answer)
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 4096
+    contextWindowOutput: 4096
+    contextWindowTotal: 4096
+    maxOutputTokens: 4096
+    releaseDate: "2025-06-04"
+    enabled: true
+    snapshots:
+        - name: exa-answer
+          releasedAt: "2025-06-04"
+    pointer: exa-answer

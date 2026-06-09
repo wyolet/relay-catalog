@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-yi-lightning
+    displayName: yi-lightning pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - yi-lightning
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.2006
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.2006
+    enabled: true

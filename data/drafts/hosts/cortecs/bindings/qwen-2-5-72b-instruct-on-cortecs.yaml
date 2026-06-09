@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-2-5-72b-instruct-on-cortecs
+    displayName: qwen-2-5-72b-instruct via cortecs
+spec:
+    model: qwen-2-5-72b-instruct
+    host: cortecs
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-2-5-72b-instruct

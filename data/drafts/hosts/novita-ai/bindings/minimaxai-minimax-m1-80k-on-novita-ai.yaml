@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimaxai-minimax-m1-80k-on-novita-ai
+    displayName: minimaxai-minimax-m1-80k via novita-ai
+spec:
+    model: minimaxai-minimax-m1-80k
+    host: novita-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - minimaxai-minimax-m1-80k

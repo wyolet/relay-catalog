@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: ibm-granite-granite-4-1-8b-on-kilo
+    displayName: ibm-granite-granite-4-1-8b via kilo
+spec:
+    model: ibm-granite-granite-4-1-8b
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - ibm-granite-granite-4-1-8b

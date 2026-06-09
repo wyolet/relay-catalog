@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: io-net-zai-org-glm-4-6
+    displayName: zai-org-glm-4-6 pricing
+    owner:
+        kind: host
+        id: io-net
+spec:
+    currency: USD
+    targetModels:
+        - zai-org-glm-4-6
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.8
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.4
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.75
+    enabled: true

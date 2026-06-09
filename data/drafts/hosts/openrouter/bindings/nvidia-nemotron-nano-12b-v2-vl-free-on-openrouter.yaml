@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-nemotron-nano-12b-v2-vl-free-on-openrouter
+    displayName: nvidia-nemotron-nano-12b-v2-vl-free via openrouter
+spec:
+    model: nvidia-nemotron-nano-12b-v2-vl-free
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-nemotron-nano-12b-v2-vl-free

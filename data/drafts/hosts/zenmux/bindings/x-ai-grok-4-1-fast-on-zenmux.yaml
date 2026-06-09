@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: x-ai-grok-4-1-fast-on-zenmux
+    displayName: x-ai-grok-4-1-fast via zenmux
+spec:
+    model: x-ai-grok-4-1-fast
+    host: zenmux
+    adapter: openai
+    enabled: true
+    snapshots:
+        - x-ai-grok-4-1-fast

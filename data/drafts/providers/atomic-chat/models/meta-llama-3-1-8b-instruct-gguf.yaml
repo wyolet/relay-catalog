@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: meta-llama-3-1-8b-instruct-gguf
+    displayName: Meta Llama 3.1 8B Instruct (GGUF)
+    owner:
+        kind: provider
+        name: atomic-chat
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 4096
+    contextWindowTotal: 131072
+    maxOutputTokens: 4096
+    releaseDate: "2024-07-23"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: meta-llama-3-1-8b-instruct-gguf
+          releasedAt: "2024-07-23"
+          originalName: Meta-Llama-3_1-8B-Instruct-GGUF
+    pointer: meta-llama-3-1-8b-instruct-gguf

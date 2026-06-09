@@ -1,0 +1,13 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: moonshotai-kimi-k2-on-openrouter
+    displayName: moonshotai-kimi-k2 via openrouter
+spec:
+    model: moonshotai-kimi-k2
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - moonshotai-kimi-k2
+        - moonshotai-kimi-k2-0905

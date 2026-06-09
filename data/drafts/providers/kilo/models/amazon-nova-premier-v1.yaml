@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: amazon-nova-premier-v1
+    displayName: 'Amazon: Nova Premier 1.0'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 32000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 32000
+    releaseDate: "2025-11-01"
+    enabled: true
+    snapshots:
+        - name: amazon-nova-premier-v1
+          releasedAt: "2025-11-01"
+          originalName: amazon/nova-premier-v1
+    pointer: amazon-nova-premier-v1

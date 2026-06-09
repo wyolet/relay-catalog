@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: databricks-databricks-gemini-3-flash
+    displayName: databricks-gemini-3-flash pricing
+    owner:
+        kind: host
+        id: databricks
+spec:
+    currency: USD
+    targetModels:
+        - databricks-gemini-3-flash
+    rates:
+        - meter: tokens.audio_input
+          unit: per_million
+          amount: 1
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.05
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 3
+    enabled: true

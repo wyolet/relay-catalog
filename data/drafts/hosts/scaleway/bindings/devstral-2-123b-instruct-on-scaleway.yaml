@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: devstral-2-123b-instruct-on-scaleway
+    displayName: devstral-2-123b-instruct via scaleway
+spec:
+    model: devstral-2-123b-instruct
+    host: scaleway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - devstral-2-123b-instruct-2512

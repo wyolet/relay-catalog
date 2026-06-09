@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-nemo-instruct
+    displayName: Mistral Nemo Instruct
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: mistral
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    maxOutputTokens: 16384
+    releaseDate: "2024-07-18"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistral-nemo-instruct-2407
+          releasedAt: "2024-07-18"
+    pointer: mistral-nemo-instruct-2407

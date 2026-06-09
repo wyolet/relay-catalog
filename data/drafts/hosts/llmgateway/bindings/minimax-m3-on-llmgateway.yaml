@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimax-m3-on-llmgateway
+    displayName: minimax-m3 via llmgateway
+spec:
+    model: minimax-m3
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - minimax-m3

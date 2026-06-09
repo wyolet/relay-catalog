@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-mixtral-8x7b-instruct-v0-1-on-nano-gpt
+    displayName: mistralai-mixtral-8x7b-instruct-v0-1 via nano-gpt
+spec:
+    model: mistralai-mixtral-8x7b-instruct-v0-1
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-mixtral-8x7b-instruct-v0-1

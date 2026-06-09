@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: vongolachouko-starcannon-unleashed-12b-v1-0-on-nano-gpt
+    displayName: vongolachouko-starcannon-unleashed-12b-v1-0 via nano-gpt
+spec:
+    model: vongolachouko-starcannon-unleashed-12b-v1-0
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - vongolachouko-starcannon-unleashed-12b-v1-0

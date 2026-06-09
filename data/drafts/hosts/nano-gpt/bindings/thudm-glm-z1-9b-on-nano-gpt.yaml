@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: thudm-glm-z1-9b-on-nano-gpt
+    displayName: thudm-glm-z1-9b via nano-gpt
+spec:
+    model: thudm-glm-z1-9b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - thudm-glm-z1-9b-0414

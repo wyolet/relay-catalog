@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: snowflake-cortex
+    displayName: Snowflake Cortex
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://${SNOWFLAKE_ACCOUNT}.snowflakecomputing.com/api/v2/cortex/v1
+    pricingStrategies:
+        - api
+    docsURL: https://docs.snowflake.com/en/user-guide/snowflake-cortex/cortex-rest-api

@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: minimaxai-minimax-m1-80k
+    displayName: MiniMax M1
+    owner:
+        kind: provider
+        name: jiekou
+    labels:
+        family: minimax
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: minimax
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 40000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 40000
+    releaseDate: 2026-01
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: minimaxai-minimax-m1-80k
+          releasedAt: 2026-01
+          originalName: minimaxai/minimax-m1-80k
+    pointer: minimaxai-minimax-m1-80k

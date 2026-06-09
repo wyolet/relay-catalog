@@ -1,0 +1,43 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openai-gpt-4o-mini
+    displayName: GPT-4o mini
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: gpt-mini
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt-mini
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 16384
+    contextWindowTotal: 128000
+    maxOutputTokens: 16384
+    knowledgeCutoff: 2023-09
+    releaseDate: "2024-07-18"
+    enabled: true
+    snapshots:
+        - name: openai-gpt-4o-mini
+          releasedAt: "2024-07-18"
+        - name: openai-gpt-4o-mini-2024-07-18
+          releasedAt: "2024-07-18"
+          originalName: openai/gpt-4o-mini-2024-07-18
+    pointer: openai-gpt-4o-mini

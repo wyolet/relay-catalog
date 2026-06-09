@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepcogito-cogito-v1-preview-qwen-32b
+    displayName: Cogito v1 Preview Qwen 32B
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32768
+    contextWindowTotal: 128000
+    maxOutputTokens: 32768
+    releaseDate: "2025-05-10"
+    enabled: true
+    snapshots:
+        - name: deepcogito-cogito-v1-preview-qwen-32b
+          releasedAt: "2025-05-10"
+          originalName: deepcogito/cogito-v1-preview-qwen-32B
+    pointer: deepcogito-cogito-v1-preview-qwen-32b

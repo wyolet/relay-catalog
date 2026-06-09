@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: meta-esmfold-on-nvidia
+    displayName: meta-esmfold via nvidia
+spec:
+    model: meta-esmfold
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - meta-esmfold

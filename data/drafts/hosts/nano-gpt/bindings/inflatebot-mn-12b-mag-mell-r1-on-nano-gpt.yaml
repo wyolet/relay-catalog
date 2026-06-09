@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: inflatebot-mn-12b-mag-mell-r1-on-nano-gpt
+    displayName: inflatebot-mn-12b-mag-mell-r1 via nano-gpt
+spec:
+    model: inflatebot-mn-12b-mag-mell-r1
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - inflatebot-mn-12b-mag-mell-r1

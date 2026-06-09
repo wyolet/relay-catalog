@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: readyart-ms3-2-the-omega-directive-24b-unslop-v2-0
+    displayName: Omega Directive 24B Unslop v2.0
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 32768
+    contextWindowTotal: 16384
+    maxOutputTokens: 32768
+    releaseDate: "2025-12-08"
+    enabled: true
+    snapshots:
+        - name: readyart-ms3-2-the-omega-directive-24b-unslop-v2-0
+          releasedAt: "2025-12-08"
+          originalName: ReadyArt/MS3.2-The-Omega-Directive-24B-Unslop-v2.0
+    pointer: readyart-ms3-2-the-omega-directive-24b-unslop-v2-0

@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: neuralmagic-meta-llama-3-1-8b-instruct-fp8
+    displayName: Llama 3.1 8B
+    owner:
+        kind: provider
+        name: stackit
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    releaseDate: "2024-07-23"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: neuralmagic-meta-llama-3-1-8b-instruct-fp8
+          releasedAt: "2024-07-23"
+          originalName: neuralmagic/Meta-Llama-3.1-8B-Instruct-FP8
+    pointer: neuralmagic-meta-llama-3-1-8b-instruct-fp8

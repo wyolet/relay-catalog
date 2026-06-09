@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-mistral-7b-instruct-v03-on-nvidia
+    displayName: mistralai-mistral-7b-instruct-v03 via nvidia
+spec:
+    model: mistralai-mistral-7b-instruct-v03
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-mistral-7b-instruct-v03

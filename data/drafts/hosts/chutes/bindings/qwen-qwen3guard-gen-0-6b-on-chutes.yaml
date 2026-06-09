@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3guard-gen-0-6b-on-chutes
+    displayName: qwen-qwen3guard-gen-0-6b via chutes
+spec:
+    model: qwen-qwen3guard-gen-0-6b
+    host: chutes
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3guard-gen-0-6b

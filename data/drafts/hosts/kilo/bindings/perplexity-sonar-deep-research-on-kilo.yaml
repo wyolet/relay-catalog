@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: perplexity-sonar-deep-research-on-kilo
+    displayName: perplexity-sonar-deep-research via kilo
+spec:
+    model: perplexity-sonar-deep-research
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - perplexity-sonar-deep-research

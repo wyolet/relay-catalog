@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: opencode-go-minimax-m3
+    displayName: minimax-m3 pricing
+    owner:
+        kind: host
+        id: opencode-go
+spec:
+    currency: USD
+    targetModels:
+        - minimax-m3
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.06
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.2
+    enabled: true

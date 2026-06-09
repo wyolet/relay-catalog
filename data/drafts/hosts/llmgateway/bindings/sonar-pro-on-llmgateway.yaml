@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: sonar-pro-on-llmgateway
+    displayName: sonar-pro via llmgateway
+spec:
+    model: sonar-pro
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - sonar-pro

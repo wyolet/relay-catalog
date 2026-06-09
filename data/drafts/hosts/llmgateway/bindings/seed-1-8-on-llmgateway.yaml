@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: seed-1-8-on-llmgateway
+    displayName: seed-1-8 via llmgateway
+spec:
+    model: seed-1-8
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - seed-1-8-251228

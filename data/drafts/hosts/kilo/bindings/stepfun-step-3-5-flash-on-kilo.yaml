@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: stepfun-step-3-5-flash-on-kilo
+    displayName: stepfun-step-3-5-flash via kilo
+spec:
+    model: stepfun-step-3-5-flash
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - stepfun-step-3-5-flash

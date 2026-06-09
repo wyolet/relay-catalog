@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-devstral-small-on-nano-gpt
+    displayName: mistralai-devstral-small via nano-gpt
+spec:
+    model: mistralai-devstral-small
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-devstral-small-2505

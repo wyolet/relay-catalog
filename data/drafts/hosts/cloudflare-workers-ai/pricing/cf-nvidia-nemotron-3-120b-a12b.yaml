@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: cloudflare-workers-ai-cf-nvidia-nemotron-3-120b-a12b
+    displayName: cf-nvidia-nemotron-3-120b-a12b pricing
+    owner:
+        kind: host
+        id: cloudflare-workers-ai
+spec:
+    currency: USD
+    targetModels:
+        - cf-nvidia-nemotron-3-120b-a12b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.5
+    enabled: true

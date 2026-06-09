@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: wandb-zai-org-glm-5-1
+    displayName: zai-org-glm-5-1 pricing
+    owner:
+        kind: host
+        id: wandb
+spec:
+    currency: USD
+    targetModels:
+        - zai-org-glm-5-1
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.26
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.4
+        - meter: tokens.output
+          unit: per_million
+          amount: 4.4
+    enabled: true

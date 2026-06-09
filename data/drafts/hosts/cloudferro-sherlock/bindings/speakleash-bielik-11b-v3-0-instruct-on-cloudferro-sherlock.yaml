@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: speakleash-bielik-11b-v3-0-instruct-on-cloudferro-sherlock
+    displayName: speakleash-bielik-11b-v3-0-instruct via cloudferro-sherlock
+spec:
+    model: speakleash-bielik-11b-v3-0-instruct
+    host: cloudferro-sherlock
+    adapter: openai
+    enabled: true
+    snapshots:
+        - speakleash-bielik-11b-v3-0-instruct

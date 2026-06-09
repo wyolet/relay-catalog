@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-tng-r1t2-chimera
+    displayName: DeepSeek TNG R1T2 Chimera
+    owner:
+        kind: provider
+        name: helicone
+    labels:
+        family: deepseek-thinking
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek-thinking
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 130000
+    contextWindowOutput: 163840
+    contextWindowTotal: 130000
+    maxOutputTokens: 163840
+    knowledgeCutoff: 2025-07
+    releaseDate: "2025-07-02"
+    enabled: true
+    snapshots:
+        - name: deepseek-tng-r1t2-chimera
+          releasedAt: "2025-07-02"
+    pointer: deepseek-tng-r1t2-chimera

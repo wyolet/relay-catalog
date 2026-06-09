@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claude-sonnet-4-5-20250929-thinking
+    displayName: claude-sonnet-4-5-20250929-thinking
+    owner:
+        kind: provider
+        name: 302ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 64000
+    contextWindowTotal: 200000
+    maxOutputTokens: 64000
+    knowledgeCutoff: 2025-03
+    releaseDate: "2025-09-30"
+    enabled: true
+    snapshots:
+        - name: claude-sonnet-4-5-20250929-thinking
+          releasedAt: "2025-09-30"
+    pointer: claude-sonnet-4-5-20250929-thinking

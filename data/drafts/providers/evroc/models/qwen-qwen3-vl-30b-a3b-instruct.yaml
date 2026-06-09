@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-vl-30b-a3b-instruct
+    displayName: Qwen3 VL 30B
+    owner:
+        kind: provider
+        name: evroc
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 100000
+    contextWindowOutput: 100000
+    contextWindowTotal: 100000
+    maxOutputTokens: 100000
+    releaseDate: "2025-07-30"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-vl-30b-a3b-instruct
+          releasedAt: "2025-07-30"
+          originalName: Qwen/Qwen3-VL-30B-A3B-Instruct
+    pointer: qwen-qwen3-vl-30b-a3b-instruct

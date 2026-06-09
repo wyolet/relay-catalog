@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-omni-turbo-on-llmgateway
+    displayName: qwen-omni-turbo via llmgateway
+spec:
+    model: qwen-omni-turbo
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-omni-turbo

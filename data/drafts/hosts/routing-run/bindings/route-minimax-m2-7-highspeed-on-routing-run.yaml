@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: route-minimax-m2-7-highspeed-on-routing-run
+    displayName: route-minimax-m2-7-highspeed via routing-run
+spec:
+    model: route-minimax-m2-7-highspeed
+    host: routing-run
+    adapter: openai
+    enabled: true
+    snapshots:
+        - route-minimax-m2-7-highspeed

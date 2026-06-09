@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: grok-4
+    displayName: Grok 4
+    owner:
+        kind: provider
+        name: abacus
+    labels:
+        family: grok
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: grok
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 16384
+    contextWindowTotal: 256000
+    maxOutputTokens: 16384
+    releaseDate: "2025-07-09"
+    enabled: true
+    snapshots:
+        - name: grok-4-0709
+          releasedAt: "2025-07-09"
+        - name: grok-4
+          releasedAt: "2024-07-09"
+    pointer: grok-4-0709

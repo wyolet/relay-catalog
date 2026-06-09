@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: anthropic-claude-4-5-haiku
+    displayName: Claude Haiku 4.5
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: claude-haiku
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: claude-haiku
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 64000
+    contextWindowTotal: 200000
+    maxOutputTokens: 64000
+    knowledgeCutoff: "2025-02-28"
+    releaseDate: "2025-10-15"
+    enabled: true
+    snapshots:
+        - name: anthropic-claude-4-5-haiku
+          releasedAt: "2025-10-15"
+          originalName: anthropic-claude-4.5-haiku
+    pointer: anthropic-claude-4-5-haiku

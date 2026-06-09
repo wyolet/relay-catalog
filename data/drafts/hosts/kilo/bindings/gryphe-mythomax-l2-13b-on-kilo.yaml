@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gryphe-mythomax-l2-13b-on-kilo
+    displayName: gryphe-mythomax-l2-13b via kilo
+spec:
+    model: gryphe-mythomax-l2-13b
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gryphe-mythomax-l2-13b

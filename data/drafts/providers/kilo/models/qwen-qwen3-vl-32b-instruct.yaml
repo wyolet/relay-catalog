@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-vl-32b-instruct
+    displayName: 'Qwen: Qwen3 VL 32B Instruct'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 32768
+    contextWindowTotal: 131072
+    maxOutputTokens: 32768
+    releaseDate: "2025-10-21"
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-vl-32b-instruct
+          releasedAt: "2025-10-21"
+          originalName: qwen/qwen3-vl-32b-instruct
+    pointer: qwen-qwen3-vl-32b-instruct

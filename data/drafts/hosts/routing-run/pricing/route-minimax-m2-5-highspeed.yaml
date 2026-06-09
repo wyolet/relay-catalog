@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: routing-run-route-minimax-m2-5-highspeed
+    displayName: route-minimax-m2-5-highspeed pricing
+    owner:
+        kind: host
+        id: routing-run
+spec:
+    currency: USD
+    targetModels:
+        - route-minimax-m2-5-highspeed
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.375
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.06
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.193
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.238
+    enabled: true

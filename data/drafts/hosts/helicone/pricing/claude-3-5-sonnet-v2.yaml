@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: helicone-claude-3-5-sonnet-v2
+    displayName: claude-3-5-sonnet-v2 pricing
+    owner:
+        kind: host
+        id: helicone
+spec:
+    currency: USD
+    targetModels:
+        - claude-3-5-sonnet-v2
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 3.75
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.30000000000000004
+        - meter: tokens.input
+          unit: per_million
+          amount: 3
+        - meter: tokens.output
+          unit: per_million
+          amount: 15
+    enabled: true

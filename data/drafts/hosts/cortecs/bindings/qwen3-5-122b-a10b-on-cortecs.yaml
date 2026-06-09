@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-5-122b-a10b-on-cortecs
+    displayName: qwen3-5-122b-a10b via cortecs
+spec:
+    model: qwen3-5-122b-a10b
+    host: cortecs
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-5-122b-a10b

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-claude-opus-4-thinking-32768
+    displayName: claude-opus-4-thinking-32768 pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - claude-opus-4-thinking-32768
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 14.994
+        - meter: tokens.output
+          unit: per_million
+          amount: 75.004
+    enabled: true

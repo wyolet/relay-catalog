@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: huihui-ai-qwen2-5-32b-instruct-abliterated-on-nano-gpt
+    displayName: huihui-ai-qwen2-5-32b-instruct-abliterated via nano-gpt
+spec:
+    model: huihui-ai-qwen2-5-32b-instruct-abliterated
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - huihui-ai-qwen2-5-32b-instruct-abliterated

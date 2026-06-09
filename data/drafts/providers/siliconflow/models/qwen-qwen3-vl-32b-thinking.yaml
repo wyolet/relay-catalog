@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-vl-32b-thinking
+    displayName: Qwen/Qwen3-VL-32B-Thinking
+    owner:
+        kind: provider
+        name: siliconflow
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262000
+    contextWindowOutput: 262000
+    contextWindowTotal: 262000
+    maxOutputTokens: 262000
+    releaseDate: "2025-10-21"
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-vl-32b-thinking
+          releasedAt: "2025-10-21"
+          originalName: Qwen/Qwen3-VL-32B-Thinking
+    pointer: qwen-qwen3-vl-32b-thinking

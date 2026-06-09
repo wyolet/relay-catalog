@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-max-on-abacus
+    displayName: qwen3-max via abacus
+spec:
+    model: qwen3-max
+    host: abacus
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-max

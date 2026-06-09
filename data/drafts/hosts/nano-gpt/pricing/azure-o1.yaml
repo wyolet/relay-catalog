@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-azure-o1
+    displayName: azure-o1 pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - azure-o1
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 14.994
+        - meter: tokens.output
+          unit: per_million
+          amount: 59.993
+    enabled: true

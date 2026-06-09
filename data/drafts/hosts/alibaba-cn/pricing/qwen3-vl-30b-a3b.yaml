@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-cn-qwen3-vl-30b-a3b
+    displayName: qwen3-vl-30b-a3b pricing
+    owner:
+        kind: host
+        id: alibaba-cn
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-vl-30b-a3b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.108
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.431
+        - meter: tokens.reasoning
+          unit: per_million
+          amount: 1.076
+    enabled: true

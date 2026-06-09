@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: unsloth-llama-3-2-3b-instruct-on-chutes
+    displayName: unsloth-llama-3-2-3b-instruct via chutes
+spec:
+    model: unsloth-llama-3-2-3b-instruct
+    host: chutes
+    adapter: openai
+    enabled: true
+    snapshots:
+        - unsloth-llama-3-2-3b-instruct

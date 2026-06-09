@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: empiriolabs-deepseek-v4-flash-el-on-poe
+    displayName: empiriolabs-deepseek-v4-flash-el via poe
+spec:
+    model: empiriolabs-deepseek-v4-flash-el
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - empiriolabs-deepseek-v4-flash-el

@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: openrouter-bodybuilder
+    displayName: Body Builder (beta)
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32768
+    contextWindowTotal: 128000
+    maxOutputTokens: 32768
+    releaseDate: "2026-03-15"
+    enabled: true
+    snapshots:
+        - name: openrouter-bodybuilder
+          releasedAt: "2026-03-15"
+          originalName: openrouter/bodybuilder
+    pointer: openrouter-bodybuilder

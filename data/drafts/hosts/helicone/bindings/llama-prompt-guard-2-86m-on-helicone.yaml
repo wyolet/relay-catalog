@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: llama-prompt-guard-2-86m-on-helicone
+    displayName: llama-prompt-guard-2-86m via helicone
+spec:
+    model: llama-prompt-guard-2-86m
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - llama-prompt-guard-2-86m

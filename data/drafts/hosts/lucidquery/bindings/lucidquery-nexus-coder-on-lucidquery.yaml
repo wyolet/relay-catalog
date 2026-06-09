@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: lucidquery-nexus-coder-on-lucidquery
+    displayName: lucidquery-nexus-coder via lucidquery
+spec:
+    model: lucidquery-nexus-coder
+    host: lucidquery
+    adapter: openai
+    enabled: true
+    snapshots:
+        - lucidquery-nexus-coder

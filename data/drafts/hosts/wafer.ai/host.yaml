@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: wafer.ai
+    displayName: Wafer
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://pass.wafer.ai/v1
+    pricingStrategies:
+        - api
+    docsURL: https://docs.wafer.ai/wafer-pass

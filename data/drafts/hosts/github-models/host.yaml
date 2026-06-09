@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: github-models
+    displayName: GitHub Models
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://models.github.ai/inference
+    pricingStrategies:
+        - api
+    docsURL: https://docs.github.com/en/github-models

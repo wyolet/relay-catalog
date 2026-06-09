@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: chutes-qwen-qwen3-235b-a22b-thinking
+    displayName: qwen-qwen3-235b-a22b-thinking pricing
+    owner:
+        kind: host
+        id: chutes
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen3-235b-a22b-thinking
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.055
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.11
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.6
+    enabled: true

@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: doubao-seed-1-8
+    displayName: doubao-seed-1-8-251215
+    owner:
+        kind: provider
+        name: 302ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 224000
+    contextWindowOutput: 64000
+    contextWindowTotal: 224000
+    maxOutputTokens: 64000
+    releaseDate: "2025-12-18"
+    enabled: true
+    snapshots:
+        - name: doubao-seed-1-8-251215
+          releasedAt: "2025-12-18"
+    pointer: doubao-seed-1-8-251215

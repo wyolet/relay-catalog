@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: open-mistral-7b
+    displayName: Mistral 7B
+    owner:
+        kind: provider
+        name: mistral
+    labels:
+        family: mistral
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8000
+    contextWindowOutput: 8000
+    contextWindowTotal: 8000
+    maxOutputTokens: 8000
+    knowledgeCutoff: 2023-12
+    releaseDate: "2023-09-27"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: open-mistral-7b
+          releasedAt: "2023-09-27"
+    pointer: open-mistral-7b

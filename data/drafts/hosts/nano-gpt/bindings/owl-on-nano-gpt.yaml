@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: owl-on-nano-gpt
+    displayName: owl via nano-gpt
+spec:
+    model: owl
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - owl

@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: meta-llama-llama-3-2-90b-vision-instruct
+    displayName: Llama 3.2 90B Vision Instruct
+    owner:
+        kind: provider
+        name: io-net
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 16000
+    contextWindowOutput: 4096
+    contextWindowTotal: 16000
+    maxOutputTokens: 4096
+    knowledgeCutoff: 2023-12
+    releaseDate: "2024-09-25"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: meta-llama-llama-3-2-90b-vision-instruct
+          releasedAt: "2024-09-25"
+          originalName: meta-llama/Llama-3.2-90B-Vision-Instruct
+    pointer: meta-llama-llama-3-2-90b-vision-instruct

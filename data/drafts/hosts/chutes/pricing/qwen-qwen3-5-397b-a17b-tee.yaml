@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: chutes-qwen-qwen3-5-397b-a17b-tee
+    displayName: qwen-qwen3-5-397b-a17b-tee pricing
+    owner:
+        kind: host
+        id: chutes
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen3-5-397b-a17b-tee
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.195
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.39
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.34
+    enabled: true

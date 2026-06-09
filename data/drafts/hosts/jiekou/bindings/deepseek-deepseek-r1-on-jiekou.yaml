@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-deepseek-r1-on-jiekou
+    displayName: deepseek-deepseek-r1 via jiekou
+spec:
+    model: deepseek-deepseek-r1
+    host: jiekou
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-deepseek-r1-0528

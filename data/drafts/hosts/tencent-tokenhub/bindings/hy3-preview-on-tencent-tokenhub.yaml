@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hy3-preview-on-tencent-tokenhub
+    displayName: hy3-preview via tencent-tokenhub
+spec:
+    model: hy3-preview
+    host: tencent-tokenhub
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hy3-preview

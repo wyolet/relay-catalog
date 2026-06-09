@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-r1-distill-qwen-14b
+    displayName: DeepSeek R1 Distill Qwen 14B
+    owner:
+        kind: provider
+        name: alibaba-cn
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 16384
+    contextWindowTotal: 32768
+    maxOutputTokens: 16384
+    releaseDate: "2025-01-01"
+    enabled: true
+    snapshots:
+        - name: deepseek-r1-distill-qwen-14b
+          releasedAt: "2025-01-01"
+    pointer: deepseek-r1-distill-qwen-14b

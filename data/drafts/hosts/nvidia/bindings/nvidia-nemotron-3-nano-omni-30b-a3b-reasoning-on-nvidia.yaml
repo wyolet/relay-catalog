@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-on-nvidia
+    displayName: nvidia-nemotron-3-nano-omni-30b-a3b-reasoning via nvidia
+spec:
+    model: nvidia-nemotron-3-nano-omni-30b-a3b-reasoning
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-nemotron-3-nano-omni-30b-a3b-reasoning

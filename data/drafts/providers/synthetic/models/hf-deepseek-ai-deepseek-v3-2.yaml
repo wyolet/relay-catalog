@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: hf-deepseek-ai-deepseek-v3-2
+    displayName: DeepSeek V3.2
+    owner:
+        kind: provider
+        name: synthetic
+    labels:
+        family: deepseek
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 162816
+    contextWindowOutput: 8000
+    contextWindowTotal: 162816
+    maxOutputTokens: 8000
+    releaseDate: "2025-12-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: hf-deepseek-ai-deepseek-v3-2
+          releasedAt: "2025-12-01"
+          originalName: hf:deepseek-ai/DeepSeek-V3.2
+    pointer: hf-deepseek-ai-deepseek-v3-2

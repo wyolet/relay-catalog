@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: poolside-laguna-m-1-free-on-kilo
+    displayName: poolside-laguna-m-1-free via kilo
+spec:
+    model: poolside-laguna-m-1-free
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - poolside-laguna-m-1-free

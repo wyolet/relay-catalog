@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: phi-4-mini-instruct-on-nano-gpt
+    displayName: phi-4-mini-instruct via nano-gpt
+spec:
+    model: phi-4-mini-instruct
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - phi-4-mini-instruct

@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: poe-openai-gpt-image-2
+    displayName: openai-gpt-image-2 pricing
+    owner:
+        kind: host
+        id: poe
+spec:
+    currency: USD
+    targetModels:
+        - openai-gpt-image-2
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 1.2626
+        - meter: tokens.input
+          unit: per_million
+          amount: 5.0505
+        - meter: tokens.output
+          unit: per_million
+          amount: 32.3232
+    enabled: true

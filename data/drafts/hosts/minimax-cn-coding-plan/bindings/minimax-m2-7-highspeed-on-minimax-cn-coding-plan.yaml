@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: minimax-m2-7-highspeed-on-minimax-cn-coding-plan
+    displayName: minimax-m2-7-highspeed via minimax-cn-coding-plan
+spec:
+    model: minimax-m2-7-highspeed
+    host: minimax-cn-coding-plan
+    adapter: anthropic
+    enabled: true
+    snapshots:
+        - minimax-m2-7-highspeed

@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: chutes-minimaxai-minimax-m2-5-tee
+    displayName: minimaxai-minimax-m2-5-tee pricing
+    owner:
+        kind: host
+        id: chutes
+spec:
+    currency: USD
+    targetModels:
+        - minimaxai-minimax-m2-5-tee
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.075
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.15
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.2
+    enabled: true

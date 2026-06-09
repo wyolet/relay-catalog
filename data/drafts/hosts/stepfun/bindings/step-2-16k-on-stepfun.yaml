@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: step-2-16k-on-stepfun
+    displayName: step-2-16k via stepfun
+spec:
+    model: step-2-16k
+    host: stepfun
+    adapter: openai
+    enabled: true
+    snapshots:
+        - step-2-16k

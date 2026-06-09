@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cohere-cohere-command-r-plus-on-github-models
+    displayName: cohere-cohere-command-r-plus via github-models
+spec:
+    model: cohere-cohere-command-r-plus
+    host: github-models
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cohere-cohere-command-r-plus

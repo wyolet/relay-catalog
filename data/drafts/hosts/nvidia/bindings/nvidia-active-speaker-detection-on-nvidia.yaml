@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nvidia-active-speaker-detection-on-nvidia
+    displayName: nvidia-active-speaker-detection via nvidia
+spec:
+    model: nvidia-active-speaker-detection
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nvidia-active-speaker-detection

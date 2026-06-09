@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: alibaba-token-plan
+    displayName: Alibaba Token Plan
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://token-plan.ap-southeast-1.maas.aliyuncs.com/compatible-mode/v1
+    pricingStrategies:
+        - api
+    docsURL: https://www.alibabacloud.com/help/en/model-studio/token-plan-overview

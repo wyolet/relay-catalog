@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-235b-a22b-thinking-on-helicone
+    displayName: qwen3-235b-a22b-thinking via helicone
+spec:
+    model: qwen3-235b-a22b-thinking
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-235b-a22b-thinking

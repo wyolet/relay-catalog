@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: zai-org-glm-4-5-air-thinking
+    displayName: GLM 4.5 Air (Thinking)
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 98304
+    contextWindowTotal: 128000
+    maxOutputTokens: 98304
+    releaseDate: "2024-01-01"
+    enabled: true
+    snapshots:
+        - name: zai-org-glm-4-5-air-thinking
+          releasedAt: "2024-01-01"
+          originalName: zai-org/GLM-4.5-Air:thinking
+    pointer: zai-org-glm-4-5-air-thinking

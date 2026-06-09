@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: inflection-inflection-3-pi-on-kilo
+    displayName: inflection-inflection-3-pi via kilo
+spec:
+    model: inflection-inflection-3-pi
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - inflection-inflection-3-pi

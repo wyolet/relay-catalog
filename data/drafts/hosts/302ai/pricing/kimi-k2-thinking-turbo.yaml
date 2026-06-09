@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: 302ai-kimi-k2-thinking-turbo
+    displayName: kimi-k2-thinking-turbo pricing
+    owner:
+        kind: host
+        id: 302ai
+spec:
+    currency: USD
+    targetModels:
+        - kimi-k2-thinking-turbo
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.265
+        - meter: tokens.output
+          unit: per_million
+          amount: 9.119
+    enabled: true

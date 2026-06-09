@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: greg-1-on-crof
+    displayName: greg-1 via crof
+spec:
+    model: greg-1
+    host: crof
+    adapter: openai
+    enabled: true
+    snapshots:
+        - greg-1

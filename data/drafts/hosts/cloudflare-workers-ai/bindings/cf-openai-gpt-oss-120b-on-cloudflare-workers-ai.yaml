@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: cf-openai-gpt-oss-120b-on-cloudflare-workers-ai
+    displayName: cf-openai-gpt-oss-120b via cloudflare-workers-ai
+spec:
+    model: cf-openai-gpt-oss-120b
+    host: cloudflare-workers-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - cf-openai-gpt-oss-120b

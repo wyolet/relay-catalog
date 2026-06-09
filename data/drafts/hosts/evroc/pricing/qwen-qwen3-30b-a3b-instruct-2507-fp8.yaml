@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: evroc-qwen-qwen3-30b-a3b-instruct-2507-fp8
+    displayName: qwen-qwen3-30b-a3b-instruct-2507-fp8 pricing
+    owner:
+        kind: host
+        id: evroc
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen3-30b-a3b-instruct-2507-fp8
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.35
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.42
+    enabled: true

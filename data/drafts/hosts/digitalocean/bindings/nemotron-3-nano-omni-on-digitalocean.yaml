@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nemotron-3-nano-omni-on-digitalocean
+    displayName: nemotron-3-nano-omni via digitalocean
+spec:
+    model: nemotron-3-nano-omni
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nemotron-3-nano-omni

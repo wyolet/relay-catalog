@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: core42-jais-30b-chat-on-github-models
+    displayName: core42-jais-30b-chat via github-models
+spec:
+    model: core42-jais-30b-chat
+    host: github-models
+    adapter: openai
+    enabled: true
+    snapshots:
+        - core42-jais-30b-chat

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: neuralwatt-glm-5-1-fast
+    displayName: glm-5-1-fast pricing
+    owner:
+        kind: host
+        id: neuralwatt
+spec:
+    currency: USD
+    targetModels:
+        - glm-5-1-fast
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.1
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.6
+    enabled: true

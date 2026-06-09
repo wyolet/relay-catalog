@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: ovhcloud-mistral-small-3-2-24b-instruct
+    displayName: mistral-small-3-2-24b-instruct pricing
+    owner:
+        kind: host
+        id: ovhcloud
+spec:
+    currency: USD
+    targetModels:
+        - mistral-small-3-2-24b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.31
+    enabled: true

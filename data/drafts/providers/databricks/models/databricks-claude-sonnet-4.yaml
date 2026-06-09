@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: databricks-claude-sonnet-4
+    displayName: Claude Sonnet 4.5
+    owner:
+        kind: provider
+        name: databricks
+    labels:
+        family: claude-sonnet
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: claude-sonnet
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 64000
+    contextWindowTotal: 200000
+    maxOutputTokens: 64000
+    knowledgeCutoff: "2025-07-31"
+    releaseDate: "2025-09-29"
+    enabled: true
+    snapshots:
+        - name: databricks-claude-sonnet-4
+          releasedAt: "2025-09-29"
+    pointer: databricks-claude-sonnet-4

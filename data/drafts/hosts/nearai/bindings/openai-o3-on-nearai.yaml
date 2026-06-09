@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-o3-on-nearai
+    displayName: openai-o3 via nearai
+spec:
+    model: openai-o3
+    host: nearai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-o3

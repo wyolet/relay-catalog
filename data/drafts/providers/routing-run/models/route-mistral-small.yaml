@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: route-mistral-small
+    displayName: Mistral Small 2503
+    owner:
+        kind: provider
+        name: routing-run
+    labels:
+        family: mistral-small
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral-small
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32768
+    contextWindowTotal: 128000
+    maxOutputTokens: 32768
+    knowledgeCutoff: 2025-06
+    releaseDate: "2026-03-16"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: route-mistral-small-2503
+          releasedAt: "2026-03-16"
+          originalName: route/mistral-small-2503
+    pointer: route-mistral-small-2503

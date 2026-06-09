@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-magistral-small-on-nvidia
+    displayName: mistralai-magistral-small via nvidia
+spec:
+    model: mistralai-magistral-small
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-magistral-small-2506

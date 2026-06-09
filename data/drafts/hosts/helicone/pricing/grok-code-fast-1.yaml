@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: helicone-grok-code-fast-1
+    displayName: grok-code-fast-1 pricing
+    owner:
+        kind: host
+        id: helicone
+spec:
+    currency: USD
+    targetModels:
+        - grok-code-fast-1
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.02
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.19999999999999998
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.5
+    enabled: true

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: upstage
+    displayName: Upstage
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.upstage.ai/v1/solar
+    pricingStrategies:
+        - api
+    docsURL: https://developers.upstage.ai/docs/apis/chat

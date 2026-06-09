@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: anthropic-claude-opus-4-7-thinking
+    displayName: Claude 4.7 Opus Thinking
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 128000
+    releaseDate: "2026-04-16"
+    enabled: true
+    snapshots:
+        - name: anthropic-claude-opus-4-7-thinking
+          releasedAt: "2026-04-16"
+          originalName: anthropic/claude-opus-4.7:thinking
+    pointer: anthropic-claude-opus-4-7-thinking

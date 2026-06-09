@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: jiekou-gemini-2-5-flash-preview-05-20
+    displayName: gemini-2-5-flash-preview-05-20 pricing
+    owner:
+        kind: host
+        id: jiekou
+spec:
+    currency: USD
+    targetModels:
+        - gemini-2-5-flash-preview-05-20
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.135
+        - meter: tokens.output
+          unit: per_million
+          amount: 3.15
+    enabled: true

@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-kilo-auto-small
+    displayName: kilo-auto-small pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - kilo-auto-small
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.05
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.4
+    enabled: true

@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: z-ai-glm-5-turbo
+    displayName: 'Z.ai: GLM 5 Turbo'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 202752
+    contextWindowOutput: 131072
+    contextWindowTotal: 202752
+    maxOutputTokens: 131072
+    releaseDate: "2026-03-15"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: z-ai-glm-5-turbo
+          releasedAt: "2026-03-15"
+          originalName: z-ai/glm-5-turbo
+    pointer: z-ai-glm-5-turbo

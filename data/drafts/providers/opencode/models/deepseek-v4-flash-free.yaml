@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-v4-flash-free
+    displayName: DeepSeek V4 Flash Free
+    owner:
+        kind: provider
+        name: opencode
+    labels:
+        family: deepseek-flash-free
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek-flash-free
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 128000
+    contextWindowTotal: 200000
+    maxOutputTokens: 128000
+    knowledgeCutoff: 2025-05
+    releaseDate: "2026-04-24"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: deepseek-v4-flash-free
+          releasedAt: "2026-04-24"
+    pointer: deepseek-v4-flash-free

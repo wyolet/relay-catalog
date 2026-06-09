@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: kilo-cohere-command-r7b-12
+    displayName: cohere-command-r7b-12 pricing
+    owner:
+        kind: host
+        id: kilo
+spec:
+    currency: USD
+    targetModels:
+        - cohere-command-r7b-12
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.0375
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.15
+    enabled: true

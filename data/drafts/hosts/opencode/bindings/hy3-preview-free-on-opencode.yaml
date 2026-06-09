@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: hy3-preview-free-on-opencode
+    displayName: hy3-preview-free via opencode
+spec:
+    model: hy3-preview-free
+    host: opencode
+    adapter: openai
+    enabled: true
+    snapshots:
+        - hy3-preview-free

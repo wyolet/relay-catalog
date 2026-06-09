@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: learnlm-1-5-pro-experimental-on-nano-gpt
+    displayName: learnlm-1-5-pro-experimental via nano-gpt
+spec:
+    model: learnlm-1-5-pro-experimental
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - learnlm-1-5-pro-experimental

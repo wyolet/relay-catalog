@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-ai-deepseek-v3-0324-tee-on-chutes
+    displayName: deepseek-ai-deepseek-v3-0324-tee via chutes
+spec:
+    model: deepseek-ai-deepseek-v3-0324-tee
+    host: chutes
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-ai-deepseek-v3-0324-tee

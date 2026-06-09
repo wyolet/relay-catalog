@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kimi-kimi-k2-6-on-orcarouter
+    displayName: kimi-kimi-k2-6 via orcarouter
+spec:
+    model: kimi-kimi-k2-6
+    host: orcarouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kimi-kimi-k2-6

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gte-large-en-v1-5-on-digitalocean
+    displayName: gte-large-en-v1-5 via digitalocean
+spec:
+    model: gte-large-en-v1-5
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gte-large-en-v1-5

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: meta-llama-llama-3-1-70b-instruct-on-openrouter
+    displayName: meta-llama-llama-3-1-70b-instruct via openrouter
+spec:
+    model: meta-llama-llama-3-1-70b-instruct
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - meta-llama-llama-3-1-70b-instruct

@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kuaishou-kat-coder-pro-v2
+    displayName: KAT-Coder-Pro-V2
+    owner:
+        kind: provider
+        name: zenmux
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 80000
+    contextWindowTotal: 256000
+    maxOutputTokens: 80000
+    releaseDate: "2026-03-30"
+    enabled: true
+    snapshots:
+        - name: kuaishou-kat-coder-pro-v2
+          releasedAt: "2026-03-30"
+          originalName: kuaishou/kat-coder-pro-v2
+    pointer: kuaishou-kat-coder-pro-v2

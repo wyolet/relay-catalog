@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: tee-qwen3-30b-a3b-instruct-on-nano-gpt
+    displayName: tee-qwen3-30b-a3b-instruct via nano-gpt
+spec:
+    model: tee-qwen3-30b-a3b-instruct
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - tee-qwen3-30b-a3b-instruct-2507

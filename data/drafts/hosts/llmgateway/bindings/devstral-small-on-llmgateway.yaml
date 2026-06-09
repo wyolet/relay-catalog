@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: devstral-small-on-llmgateway
+    displayName: devstral-small via llmgateway
+spec:
+    model: devstral-small
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - devstral-small-2507

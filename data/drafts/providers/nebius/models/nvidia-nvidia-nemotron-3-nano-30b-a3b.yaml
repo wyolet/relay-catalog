@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nvidia-nvidia-nemotron-3-nano-30b-a3b
+    displayName: Nemotron-3-Nano-30B-A3B
+    owner:
+        kind: provider
+        name: nebius
+    labels:
+        family: nemotron
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: nemotron
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 30000
+    contextWindowOutput: 4096
+    contextWindowTotal: 32000
+    maxOutputTokens: 4096
+    knowledgeCutoff: 2025-05
+    releaseDate: "2025-08-10"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nvidia-nvidia-nemotron-3-nano-30b-a3b
+          releasedAt: "2025-08-10"
+          originalName: nvidia/NVIDIA-Nemotron-3-Nano-30B-A3B
+    pointer: nvidia-nvidia-nemotron-3-nano-30b-a3b

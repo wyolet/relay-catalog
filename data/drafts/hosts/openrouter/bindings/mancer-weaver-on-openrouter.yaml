@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mancer-weaver-on-openrouter
+    displayName: mancer-weaver via openrouter
+spec:
+    model: mancer-weaver
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mancer-weaver

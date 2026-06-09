@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: inclusionai-ring-flash-2-0
+    displayName: inclusionAI/Ring-flash-2.0
+    owner:
+        kind: provider
+        name: siliconflow
+    labels:
+        family: ring
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: ring
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131000
+    contextWindowOutput: 131000
+    contextWindowTotal: 131000
+    maxOutputTokens: 131000
+    releaseDate: "2025-09-29"
+    enabled: true
+    snapshots:
+        - name: inclusionai-ring-flash-2-0
+          releasedAt: "2025-09-29"
+          originalName: inclusionAI/Ring-flash-2.0
+    pointer: inclusionai-ring-flash-2-0

@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-max
+    displayName: qwen3-max-2025-09-23
+    owner:
+        kind: provider
+        name: 302ai
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 258048
+    contextWindowOutput: 65536
+    contextWindowTotal: 258048
+    maxOutputTokens: 65536
+    knowledgeCutoff: 2025-04
+    releaseDate: "2025-09-24"
+    enabled: true
+    snapshots:
+        - name: qwen3-max-2025-09-23
+          releasedAt: "2025-09-24"
+        - name: qwen3-max
+          releasedAt: "2025-05-28"
+        - name: qwen3-max-2026-01-23
+          releasedAt: "2026-01-23"
+    pointer: qwen3-max-2025-09-23

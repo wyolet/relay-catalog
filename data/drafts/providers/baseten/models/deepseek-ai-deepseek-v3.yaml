@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-ai-deepseek-v3
+    displayName: DeepSeek V3 0324
+    owner:
+        kind: provider
+        name: baseten
+    labels:
+        family: deepseek
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: deepseek
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 164000
+    contextWindowOutput: 131000
+    contextWindowTotal: 164000
+    maxOutputTokens: 131000
+    knowledgeCutoff: 2024-12
+    releaseDate: "2025-03-24"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: deepseek-ai-deepseek-v3-0324
+          releasedAt: "2025-03-24"
+          originalName: deepseek-ai/DeepSeek-V3-0324
+        - name: deepseek-ai-deepseek-v3
+          releasedAt: "2024-12-26"
+          originalName: deepseek-ai/DeepSeek-V3
+    pointer: deepseek-ai-deepseek-v3-0324

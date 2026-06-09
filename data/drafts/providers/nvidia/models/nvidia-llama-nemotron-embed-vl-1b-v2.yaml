@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nvidia-llama-nemotron-embed-vl-1b-v2
+    displayName: llama-nemotron-embed-vl-1b-v2
+    owner:
+        kind: provider
+        name: nvidia
+    labels:
+        family: nemotron
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: nemotron
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 2048
+    contextWindowTotal: 32768
+    maxOutputTokens: 2048
+    releaseDate: "2026-02-10"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nvidia-llama-nemotron-embed-vl-1b-v2
+          releasedAt: "2026-02-10"
+          originalName: nvidia/llama-nemotron-embed-vl-1b-v2
+    pointer: nvidia-llama-nemotron-embed-vl-1b-v2

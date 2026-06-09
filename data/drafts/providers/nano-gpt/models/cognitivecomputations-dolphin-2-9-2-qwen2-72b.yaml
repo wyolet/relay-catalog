@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cognitivecomputations-dolphin-2-9-2-qwen2-72b
+    displayName: Dolphin 72b
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 4096
+    contextWindowTotal: 8192
+    maxOutputTokens: 4096
+    releaseDate: "2025-02-27"
+    enabled: true
+    snapshots:
+        - name: cognitivecomputations-dolphin-2-9-2-qwen2-72b
+          releasedAt: "2025-02-27"
+          originalName: cognitivecomputations/dolphin-2.9.2-qwen2-72b
+    pointer: cognitivecomputations-dolphin-2-9-2-qwen2-72b

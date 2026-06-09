@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: chatgpt-image
+    displayName: chatgpt-image-latest
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: gpt-image
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gpt-image
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+            - image
+    releaseDate: "2025-12-16"
+    enabled: true
+    snapshots:
+        - name: chatgpt-image-latest
+          releasedAt: "2025-12-16"
+    pointer: chatgpt-image-latest

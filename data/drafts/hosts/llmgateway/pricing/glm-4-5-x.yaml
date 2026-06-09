@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: llmgateway-glm-4-5-x
+    displayName: glm-4-5-x pricing
+    owner:
+        kind: host
+        id: llmgateway
+spec:
+    currency: USD
+    targetModels:
+        - glm-4-5-x
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.45
+        - meter: tokens.input
+          unit: per_million
+          amount: 2.2
+        - meter: tokens.output
+          unit: per_million
+          amount: 8.9
+    enabled: true

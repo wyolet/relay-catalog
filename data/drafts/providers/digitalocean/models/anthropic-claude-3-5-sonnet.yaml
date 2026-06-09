@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: anthropic-claude-3-5-sonnet
+    displayName: Claude 3.5 Sonnet
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: claude-sonnet
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: claude-sonnet
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 8192
+    contextWindowTotal: 200000
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2024-04
+    releaseDate: "2024-06-20"
+    enabled: true
+    snapshots:
+        - name: anthropic-claude-3-5-sonnet
+          releasedAt: "2024-06-20"
+          originalName: anthropic-claude-3.5-sonnet
+    pointer: anthropic-claude-3-5-sonnet

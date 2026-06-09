@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-coder-30b-a3b-instruct
+    displayName: 'Qwen: Qwen3 Coder 30B A3B Instruct'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 160000
+    contextWindowOutput: 32768
+    contextWindowTotal: 160000
+    maxOutputTokens: 32768
+    releaseDate: "2025-07-31"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-coder-30b-a3b-instruct
+          releasedAt: "2025-07-31"
+          originalName: qwen/qwen3-coder-30b-a3b-instruct
+    pointer: qwen-qwen3-coder-30b-a3b-instruct

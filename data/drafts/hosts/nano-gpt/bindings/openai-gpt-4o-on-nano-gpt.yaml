@@ -1,0 +1,14 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-4o-on-nano-gpt
+    displayName: openai-gpt-4o via nano-gpt
+spec:
+    model: openai-gpt-4o
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-4o
+        - openai-gpt-4o-2024-08-06
+        - openai-gpt-4o-2024-11-20

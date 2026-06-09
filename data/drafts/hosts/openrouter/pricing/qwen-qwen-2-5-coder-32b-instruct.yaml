@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: openrouter-qwen-qwen-2-5-coder-32b-instruct
+    displayName: qwen-qwen-2-5-coder-32b-instruct pricing
+    owner:
+        kind: host
+        id: openrouter
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen-2-5-coder-32b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.66
+        - meter: tokens.output
+          unit: per_million
+          amount: 1
+    enabled: true

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: ministral-3b-on-mistral
+    displayName: ministral-3b via mistral
+spec:
+    model: ministral-3b
+    host: mistral
+    adapter: openai
+    enabled: true
+    snapshots:
+        - ministral-3b-latest

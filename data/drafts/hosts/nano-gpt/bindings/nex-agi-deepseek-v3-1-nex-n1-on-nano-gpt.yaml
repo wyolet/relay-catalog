@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nex-agi-deepseek-v3-1-nex-n1-on-nano-gpt
+    displayName: nex-agi-deepseek-v3-1-nex-n1 via nano-gpt
+spec:
+    model: nex-agi-deepseek-v3-1-nex-n1
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nex-agi-deepseek-v3-1-nex-n1

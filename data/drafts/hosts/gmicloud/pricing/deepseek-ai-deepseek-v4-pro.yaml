@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: gmicloud-deepseek-ai-deepseek-v4-pro
+    displayName: deepseek-ai-deepseek-v4-pro pricing
+    owner:
+        kind: host
+        id: gmicloud
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-ai-deepseek-v4-pro
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.116
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.392
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.784
+    enabled: true

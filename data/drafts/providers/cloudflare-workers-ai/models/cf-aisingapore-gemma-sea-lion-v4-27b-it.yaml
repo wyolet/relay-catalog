@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cf-aisingapore-gemma-sea-lion-v4-27b-it
+    displayName: Gemma Sea Lion V4 27B It
+    owner:
+        kind: provider
+        name: cloudflare-workers-ai
+    labels:
+        family: gemma
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gemma
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 128000
+    contextWindowTotal: 128000
+    maxOutputTokens: 128000
+    releaseDate: "2025-09-23"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: cf-aisingapore-gemma-sea-lion-v4-27b-it
+          releasedAt: "2025-09-23"
+          originalName: '@cf/aisingapore/gemma-sea-lion-v4-27b-it'
+    pointer: cf-aisingapore-gemma-sea-lion-v4-27b-it

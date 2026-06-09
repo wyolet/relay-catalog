@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: soob3123-amoral-gemma3-27b-v2
+    displayName: Amoral Gemma3 27B v2
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: gemma
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: gemma
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 8192
+    contextWindowTotal: 32768
+    maxOutputTokens: 8192
+    releaseDate: "2025-05-23"
+    enabled: true
+    snapshots:
+        - name: soob3123-amoral-gemma3-27b-v2
+          releasedAt: "2025-05-23"
+          originalName: soob3123/amoral-gemma3-27B-v2
+    pointer: soob3123-amoral-gemma3-27b-v2

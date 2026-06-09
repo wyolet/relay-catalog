@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: fal-ai-elevenlabs-tts-multilingual-v2-on-digitalocean
+    displayName: fal-ai-elevenlabs-tts-multilingual-v2 via digitalocean
+spec:
+    model: fal-ai-elevenlabs-tts-multilingual-v2
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - fal-ai-elevenlabs-tts-multilingual-v2

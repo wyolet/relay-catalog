@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: helicone-gemma-3-12b-it
+    displayName: gemma-3-12b-it pricing
+    owner:
+        kind: host
+        id: helicone
+spec:
+    currency: USD
+    targetModels:
+        - gemma-3-12b-it
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.049999999999999996
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.09999999999999999
+    enabled: true

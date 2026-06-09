@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-7-max-on-llmgateway
+    displayName: qwen3-7-max via llmgateway
+spec:
+    model: qwen3-7-max
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-7-max

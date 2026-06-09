@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: wandb-openpipe-qwen3-14b-instruct
+    displayName: openpipe-qwen3-14b-instruct pricing
+    owner:
+        kind: host
+        id: wandb
+spec:
+    currency: USD
+    targetModels:
+        - openpipe-qwen3-14b-instruct
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.05
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.22
+    enabled: true

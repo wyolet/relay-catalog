@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: stepfun-step-3-7-flash-thinking-on-nano-gpt
+    displayName: stepfun-step-3-7-flash-thinking via nano-gpt
+spec:
+    model: stepfun-step-3-7-flash-thinking
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - stepfun-step-3-7-flash-thinking

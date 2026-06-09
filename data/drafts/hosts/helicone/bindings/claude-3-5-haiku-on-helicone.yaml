@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: claude-3-5-haiku-on-helicone
+    displayName: claude-3-5-haiku via helicone
+spec:
+    model: claude-3-5-haiku
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - claude-3-5-haiku

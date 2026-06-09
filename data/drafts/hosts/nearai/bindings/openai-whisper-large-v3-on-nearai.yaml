@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-whisper-large-v3-on-nearai
+    displayName: openai-whisper-large-v3 via nearai
+spec:
+    model: openai-whisper-large-v3
+    host: nearai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-whisper-large-v3

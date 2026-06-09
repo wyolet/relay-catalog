@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nvidia-nemotron-3-5-content-safety-free
+    displayName: Nemotron 3.5 Content Safety (free)
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: nemotron
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: nemotron
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    releaseDate: "2026-06-04"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: nvidia-nemotron-3-5-content-safety-free
+          releasedAt: "2026-06-04"
+          originalName: nvidia/nemotron-3.5-content-safety:free
+    pointer: nvidia-nemotron-3-5-content-safety-free

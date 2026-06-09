@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: bge-reranker-v2-m3
+    displayName: BGE Reranker v2 M3
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: bge
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: bge
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 1
+    contextWindowTotal: 8192
+    maxOutputTokens: 1
+    releaseDate: "2024-03-12"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: bge-reranker-v2-m3
+          releasedAt: "2024-03-12"
+    pointer: bge-reranker-v2-m3

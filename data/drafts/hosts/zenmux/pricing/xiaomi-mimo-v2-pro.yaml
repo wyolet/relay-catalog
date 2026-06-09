@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: zenmux-xiaomi-mimo-v2-pro
+    displayName: xiaomi-mimo-v2-pro pricing
+    owner:
+        kind: host
+        id: zenmux
+spec:
+    currency: USD
+    targetModels:
+        - xiaomi-mimo-v2-pro
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.4
+          aboveTokens: 256000
+        - meter: tokens.input
+          unit: per_million
+          amount: 1
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+          aboveTokens: 256000
+        - meter: tokens.output
+          unit: per_million
+          amount: 3
+        - meter: tokens.output
+          unit: per_million
+          amount: 6
+          aboveTokens: 256000
+    enabled: true

@@ -1,0 +1,28 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: llmgateway-gpt-5-5-pro
+    displayName: gpt-5-5-pro pricing
+    owner:
+        kind: host
+        id: llmgateway
+spec:
+    currency: USD
+    targetModels:
+        - gpt-5-5-pro
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 30
+        - meter: tokens.input
+          unit: per_million
+          amount: 60
+          aboveTokens: 272000
+        - meter: tokens.output
+          unit: per_million
+          amount: 180
+        - meter: tokens.output
+          unit: per_million
+          amount: 270
+          aboveTokens: 272000
+    enabled: true

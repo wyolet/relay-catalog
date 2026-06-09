@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: amazon-nova-2-lite-v1
+    displayName: 'Amazon: Nova 2 Lite'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - pdf
+            - text
+            - video
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 65535
+    contextWindowTotal: 1000000
+    maxOutputTokens: 65535
+    releaseDate: "2024-12-01"
+    enabled: true
+    snapshots:
+        - name: amazon-nova-2-lite-v1
+          releasedAt: "2024-12-01"
+          originalName: amazon/nova-2-lite-v1
+    pointer: amazon-nova-2-lite-v1

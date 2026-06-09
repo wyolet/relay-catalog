@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-r1-on-nano-gpt
+    displayName: deepseek-r1 via nano-gpt
+spec:
+    model: deepseek-r1
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-r1

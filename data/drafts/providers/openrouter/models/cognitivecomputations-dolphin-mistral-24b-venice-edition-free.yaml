@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: cognitivecomputations-dolphin-mistral-24b-venice-edition-free
+    displayName: Uncensored (free)
+    owner:
+        kind: provider
+        name: openrouter
+    labels:
+        family: mistral
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 32768
+    contextWindowTotal: 32768
+    maxOutputTokens: 32768
+    knowledgeCutoff: "2024-04-30"
+    releaseDate: "2025-07-09"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: cognitivecomputations-dolphin-mistral-24b-venice-edition-free
+          releasedAt: "2025-07-09"
+          originalName: cognitivecomputations/dolphin-mistral-24b-venice-edition:free
+    pointer: cognitivecomputations-dolphin-mistral-24b-venice-edition-free

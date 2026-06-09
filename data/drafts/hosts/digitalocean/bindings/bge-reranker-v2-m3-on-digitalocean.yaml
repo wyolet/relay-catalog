@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: bge-reranker-v2-m3-on-digitalocean
+    displayName: bge-reranker-v2-m3 via digitalocean
+spec:
+    model: bge-reranker-v2-m3
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - bge-reranker-v2-m3

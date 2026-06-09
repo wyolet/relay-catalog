@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: frogbot-grok-4-1-fast-reasoning
+    displayName: grok-4-1-fast-reasoning pricing
+    owner:
+        kind: host
+        id: frogbot
+spec:
+    currency: USD
+    targetModels:
+        - grok-4-1-fast-reasoning
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.05
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.5
+    enabled: true

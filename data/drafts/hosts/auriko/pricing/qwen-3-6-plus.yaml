@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: auriko-qwen-3-6-plus
+    displayName: qwen-3-6-plus pricing
+    owner:
+        kind: host
+        id: auriko
+spec:
+    currency: USD
+    targetModels:
+        - qwen-3-6-plus
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 2.5
+          aboveTokens: 256000
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.2
+          aboveTokens: 256000
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+          aboveTokens: 256000
+        - meter: tokens.output
+          unit: per_million
+          amount: 3
+        - meter: tokens.output
+          unit: per_million
+          amount: 6
+          aboveTokens: 256000
+    enabled: true

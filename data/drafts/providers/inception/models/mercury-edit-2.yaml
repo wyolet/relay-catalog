@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mercury-edit-2
+    displayName: Mercury Edit 2
+    owner:
+        kind: provider
+        name: inception
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 8192
+    contextWindowTotal: 128000
+    maxOutputTokens: 8192
+    releaseDate: "2026-03-30"
+    enabled: true
+    snapshots:
+        - name: mercury-edit-2
+          releasedAt: "2026-03-30"
+    pointer: mercury-edit-2

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: submodel
+    displayName: submodel
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://llm.submodel.ai/v1
+    pricingStrategies:
+        - api
+    docsURL: https://submodel.gitbook.io

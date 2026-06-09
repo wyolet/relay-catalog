@@ -1,0 +1,14 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: claude-sonnet-4-thinking-on-nano-gpt
+    displayName: claude-sonnet-4-thinking via nano-gpt
+spec:
+    model: claude-sonnet-4-thinking
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - claude-sonnet-4-thinking
+        - claude-sonnet-4-thinking-1024
+        - claude-sonnet-4-thinking-8192

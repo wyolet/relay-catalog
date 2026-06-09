@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: umans-flash-on-umans-ai-coding-plan
+    displayName: umans-flash via umans-ai-coding-plan
+spec:
+    model: umans-flash
+    host: umans-ai-coding-plan
+    adapter: openai
+    enabled: true
+    snapshots:
+        - umans-flash

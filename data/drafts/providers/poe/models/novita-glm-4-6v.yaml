@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: novita-glm-4-6v
+    displayName: glm-4.6v
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 131000
+    contextWindowOutput: 32768
+    contextWindowTotal: 131000
+    maxOutputTokens: 32768
+    releaseDate: "2025-12-09"
+    enabled: true
+    snapshots:
+        - name: novita-glm-4-6v
+          releasedAt: "2025-12-09"
+          originalName: novita/glm-4.6v
+    pointer: novita-glm-4-6v

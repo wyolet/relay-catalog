@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: glm-5-free-on-opencode
+    displayName: glm-5-free via opencode
+spec:
+    model: glm-5-free
+    host: opencode
+    adapter: openai
+    enabled: true
+    snapshots:
+        - glm-5-free

@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: chutes-zai-org-glm-4-7-tee
+    displayName: zai-org-glm-4-7-tee pricing
+    owner:
+        kind: host
+        id: chutes
+spec:
+    currency: USD
+    targetModels:
+        - zai-org-glm-4-7-tee
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.195
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.39
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.75
+    enabled: true

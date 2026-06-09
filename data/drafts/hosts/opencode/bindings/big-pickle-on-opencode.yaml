@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: big-pickle-on-opencode
+    displayName: big-pickle via opencode
+spec:
+    model: big-pickle
+    host: opencode
+    adapter: openai
+    enabled: true
+    snapshots:
+        - big-pickle

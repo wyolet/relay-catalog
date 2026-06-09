@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kat-coder-air-v1-on-nano-gpt
+    displayName: kat-coder-air-v1 via nano-gpt
+spec:
+    model: kat-coder-air-v1
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kat-coder-air-v1

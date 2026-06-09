@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: shisa-ai-shisa-v2-1-llama3-3-70b-on-nano-gpt
+    displayName: shisa-ai-shisa-v2-1-llama3-3-70b via nano-gpt
+spec:
+    model: shisa-ai-shisa-v2-1-llama3-3-70b
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - shisa-ai-shisa-v2-1-llama3-3-70b

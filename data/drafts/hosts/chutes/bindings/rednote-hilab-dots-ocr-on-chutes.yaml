@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: rednote-hilab-dots-ocr-on-chutes
+    displayName: rednote-hilab-dots-ocr via chutes
+spec:
+    model: rednote-hilab-dots-ocr
+    host: chutes
+    adapter: openai
+    enabled: true
+    snapshots:
+        - rednote-hilab-dots-ocr

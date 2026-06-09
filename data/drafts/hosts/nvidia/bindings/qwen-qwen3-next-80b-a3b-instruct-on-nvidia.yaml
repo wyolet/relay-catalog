@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-next-80b-a3b-instruct-on-nvidia
+    displayName: qwen-qwen3-next-80b-a3b-instruct via nvidia
+spec:
+    model: qwen-qwen3-next-80b-a3b-instruct
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-next-80b-a3b-instruct

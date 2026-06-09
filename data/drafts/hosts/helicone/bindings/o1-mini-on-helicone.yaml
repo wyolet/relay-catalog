@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: o1-mini-on-helicone
+    displayName: o1-mini via helicone
+spec:
+    model: o1-mini
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - o1-mini

@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: alibaba-qwen3-32b
+    displayName: Qwen3-32B
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131000
+    contextWindowOutput: 40960
+    contextWindowTotal: 131000
+    maxOutputTokens: 40960
+    releaseDate: "2025-04-30"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: alibaba-qwen3-32b
+          releasedAt: "2025-04-30"
+    pointer: alibaba-qwen3-32b

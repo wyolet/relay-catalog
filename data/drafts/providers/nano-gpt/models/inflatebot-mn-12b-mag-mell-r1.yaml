@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: inflatebot-mn-12b-mag-mell-r1
+    displayName: Mag Mell R1
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: mistral-nemo
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral-nemo
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 16384
+    contextWindowOutput: 8192
+    contextWindowTotal: 16384
+    maxOutputTokens: 8192
+    releaseDate: "2024-07-01"
+    enabled: true
+    snapshots:
+        - name: inflatebot-mn-12b-mag-mell-r1
+          releasedAt: "2024-07-01"
+          originalName: inflatebot/MN-12B-Mag-Mell-R1
+    pointer: inflatebot-mn-12b-mag-mell-r1

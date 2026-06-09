@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gpt-5-3-codex-on-frogbot
+    displayName: gpt-5-3-codex via frogbot
+spec:
+    model: gpt-5-3-codex
+    host: frogbot
+    adapter: openai
+    enabled: true
+    snapshots:
+        - gpt-5-3-codex

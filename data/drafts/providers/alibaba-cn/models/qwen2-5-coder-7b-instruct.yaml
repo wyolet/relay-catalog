@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen2-5-coder-7b-instruct
+    displayName: Qwen2.5-Coder 7B Instruct
+    owner:
+        kind: provider
+        name: alibaba-cn
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 8192
+    contextWindowTotal: 131072
+    maxOutputTokens: 8192
+    knowledgeCutoff: 2024-04
+    releaseDate: 2024-11
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen2-5-coder-7b-instruct
+          releasedAt: 2024-11
+    pointer: qwen2-5-coder-7b-instruct

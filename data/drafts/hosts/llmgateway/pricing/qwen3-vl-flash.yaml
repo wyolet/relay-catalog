@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: llmgateway-qwen3-vl-flash
+    displayName: qwen3-vl-flash pricing
+    owner:
+        kind: host
+        id: llmgateway
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-vl-flash
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.0044
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.022
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.215
+    enabled: true

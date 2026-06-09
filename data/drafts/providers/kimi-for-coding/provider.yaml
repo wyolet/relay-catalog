@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: kimi-for-coding
+    displayName: Kimi For Coding
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://www.kimi.com/code/docs/en/third-party-tools/other-coding-agents.html

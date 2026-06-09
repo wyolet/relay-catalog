@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: intel-qwen3-coder-480b-a35b-instruct-int4-mixed-ar-on-io-net
+    displayName: intel-qwen3-coder-480b-a35b-instruct-int4-mixed-ar via io-net
+spec:
+    model: intel-qwen3-coder-480b-a35b-instruct-int4-mixed-ar
+    host: io-net
+    adapter: openai
+    enabled: true
+    snapshots:
+        - intel-qwen3-coder-480b-a35b-instruct-int4-mixed-ar

@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: tencent-hy3-preview
+    displayName: 'Tencent: Hy3 Preview'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    maxOutputTokens: 262144
+    releaseDate: "2026-04-22"
+    enabled: true
+    snapshots:
+        - name: tencent-hy3-preview
+          releasedAt: "2026-04-22"
+          originalName: tencent/hy3-preview
+    pointer: tencent-hy3-preview

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-oss-120b-on-wandb
+    displayName: openai-gpt-oss-120b via wandb
+spec:
+    model: openai-gpt-oss-120b
+    host: wandb
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-oss-120b

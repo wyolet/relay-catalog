@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: anthracite-org-magnum-v4-72b-on-openrouter
+    displayName: anthracite-org-magnum-v4-72b via openrouter
+spec:
+    model: anthracite-org-magnum-v4-72b
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - anthracite-org-magnum-v4-72b

@@ -1,0 +1,29 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nebius-qwen-qwen3-next-80b-a3b-thinking
+    displayName: qwen-qwen3-next-80b-a3b-thinking pricing
+    owner:
+        kind: host
+        id: nebius
+spec:
+    currency: USD
+    targetModels:
+        - qwen-qwen3-next-80b-a3b-thinking
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.18
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.015
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.15
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.2
+        - meter: tokens.reasoning
+          unit: per_million
+          amount: 1.2
+    enabled: true

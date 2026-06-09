@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: google-veo-3
+    displayName: Veo-3
+    owner:
+        kind: provider
+        name: poe
+    labels:
+        family: veo
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: veo
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - video
+    contextWindowInput: 480
+    contextWindowTotal: 480
+    releaseDate: "2025-05-21"
+    enabled: true
+    snapshots:
+        - name: google-veo-3
+          releasedAt: "2025-05-21"
+          originalName: google/veo-3
+    pointer: google-veo-3

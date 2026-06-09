@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: poe-novita-kimi-k2-5
+    displayName: novita-kimi-k2-5 pricing
+    owner:
+        kind: host
+        id: poe
+spec:
+    currency: USD
+    targetModels:
+        - novita-kimi-k2-5
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.6
+        - meter: tokens.output
+          unit: per_million
+          amount: 3
+    enabled: true

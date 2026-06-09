@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: anthropic-claude-3-haiku
+    displayName: 'Anthropic: Claude 3 Haiku'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 200000
+    contextWindowOutput: 4096
+    contextWindowTotal: 200000
+    maxOutputTokens: 4096
+    releaseDate: "2024-03-07"
+    enabled: true
+    snapshots:
+        - name: anthropic-claude-3-haiku
+          releasedAt: "2024-03-07"
+          originalName: anthropic/claude-3-haiku
+    pointer: anthropic-claude-3-haiku

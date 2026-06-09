@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: grok-code-fast-1-on-frogbot
+    displayName: grok-code-fast-1 via frogbot
+spec:
+    model: grok-code-fast-1
+    host: frogbot
+    adapter: openai
+    enabled: true
+    snapshots:
+        - grok-code-fast-1

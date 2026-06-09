@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistralai-devstral-small
+    displayName: Devstral Small 2505
+    owner:
+        kind: provider
+        name: io-net
+    labels:
+        family: devstral
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: devstral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 4096
+    contextWindowTotal: 128000
+    maxOutputTokens: 4096
+    knowledgeCutoff: 2024-12
+    releaseDate: "2025-05-01"
+    enabled: true
+    snapshots:
+        - name: mistralai-devstral-small-2505
+          releasedAt: "2025-05-01"
+          originalName: mistralai/Devstral-Small-2505
+        - name: mistralai-devstral-small
+          releasedAt: "2025-05-07"
+          originalName: mistralai/devstral-small
+    pointer: mistralai-devstral-small-2505

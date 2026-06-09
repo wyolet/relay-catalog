@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-chat-completion-models-gpt-oss-120b-high-throughput-on-clarifai
+    displayName: openai-chat-completion-models-gpt-oss-120b-high-throughput via clarifai
+spec:
+    model: openai-chat-completion-models-gpt-oss-120b-high-throughput
+    host: clarifai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-chat-completion-models-gpt-oss-120b-high-throughput

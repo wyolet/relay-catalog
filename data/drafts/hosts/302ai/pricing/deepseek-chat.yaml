@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: 302ai-deepseek-chat
+    displayName: deepseek-chat pricing
+    owner:
+        kind: host
+        id: 302ai
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-chat
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.29
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.43
+    enabled: true

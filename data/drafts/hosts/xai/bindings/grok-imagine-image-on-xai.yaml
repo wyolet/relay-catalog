@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: grok-imagine-image-on-xai
+    displayName: grok-imagine-image via xai
+spec:
+    model: grok-imagine-image
+    host: xai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - grok-imagine-image

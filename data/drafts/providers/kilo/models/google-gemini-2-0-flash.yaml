@@ -1,0 +1,45 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: google-gemini-2-0-flash
+    displayName: 'Google: Gemini 2.0 Flash'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        audio: true
+        promptCache: true
+        fileInput: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - audio
+            - image
+            - pdf
+            - text
+            - video
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 8192
+    contextWindowTotal: 1048576
+    maxOutputTokens: 8192
+    releaseDate: "2024-12-11"
+    enabled: true
+    snapshots:
+        - name: google-gemini-2-0-flash-001
+          releasedAt: "2024-12-11"
+          originalName: google/gemini-2.0-flash-001
+        - name: google-gemini-2-0-flash
+          releasedAt: "2024-12-11"
+          originalName: google/gemini-2.0-flash
+    pointer: google-gemini-2-0-flash-001

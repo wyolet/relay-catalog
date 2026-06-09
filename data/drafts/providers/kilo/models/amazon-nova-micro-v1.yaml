@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: amazon-nova-micro-v1
+    displayName: 'Amazon: Nova Micro 1.0'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 5120
+    contextWindowTotal: 128000
+    maxOutputTokens: 5120
+    releaseDate: "2024-12-06"
+    enabled: true
+    snapshots:
+        - name: amazon-nova-micro-v1
+          releasedAt: "2024-12-06"
+          originalName: amazon/nova-micro-v1
+    pointer: amazon-nova-micro-v1

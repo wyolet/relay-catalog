@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-doubao-seed-2-0-mini
+    displayName: doubao-seed-2-0-mini pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - doubao-seed-2-0-mini
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.0493
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.4845
+    enabled: true

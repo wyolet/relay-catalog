@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-gemini-2-0-pro-exp-02-05
+    displayName: gemini-2-0-pro-exp-02-05 pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - gemini-2-0-pro-exp-02-05
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.989
+        - meter: tokens.output
+          unit: per_million
+          amount: 7.956
+    enabled: true

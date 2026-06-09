@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: tc-code
+    displayName: Auto
+    owner:
+        kind: provider
+        name: tencent-coding-plan
+    labels:
+        family: auto
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: auto
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 16384
+    contextWindowTotal: 131072
+    maxOutputTokens: 16384
+    releaseDate: "2026-03-08"
+    enabled: true
+    snapshots:
+        - name: tc-code-latest
+          releasedAt: "2026-03-08"
+    pointer: tc-code-latest

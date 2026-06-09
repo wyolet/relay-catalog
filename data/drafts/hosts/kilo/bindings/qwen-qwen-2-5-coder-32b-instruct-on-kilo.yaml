@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen-2-5-coder-32b-instruct-on-kilo
+    displayName: qwen-qwen-2-5-coder-32b-instruct via kilo
+spec:
+    model: qwen-qwen-2-5-coder-32b-instruct
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen-2-5-coder-32b-instruct

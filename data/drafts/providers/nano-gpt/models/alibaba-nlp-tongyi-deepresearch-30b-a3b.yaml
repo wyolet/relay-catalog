@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: alibaba-nlp-tongyi-deepresearch-30b-a3b
+    displayName: Tongyi DeepResearch 30B A3B
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        family: yi
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: yi
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 65536
+    contextWindowTotal: 128000
+    maxOutputTokens: 65536
+    releaseDate: "2025-08-26"
+    enabled: true
+    snapshots:
+        - name: alibaba-nlp-tongyi-deepresearch-30b-a3b
+          releasedAt: "2025-08-26"
+          originalName: Alibaba-NLP/Tongyi-DeepResearch-30B-A3B
+    pointer: alibaba-nlp-tongyi-deepresearch-30b-a3b

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: essentialai-rnj-1-instruct-on-openrouter
+    displayName: essentialai-rnj-1-instruct via openrouter
+spec:
+    model: essentialai-rnj-1-instruct
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - essentialai-rnj-1-instruct

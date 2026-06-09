@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openrouter-fusion-on-openrouter
+    displayName: openrouter-fusion via openrouter
+spec:
+    model: openrouter-fusion
+    host: openrouter
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openrouter-fusion

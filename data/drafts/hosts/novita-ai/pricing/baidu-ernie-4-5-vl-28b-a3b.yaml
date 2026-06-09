@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: novita-ai-baidu-ernie-4-5-vl-28b-a3b
+    displayName: baidu-ernie-4-5-vl-28b-a3b pricing
+    owner:
+        kind: host
+        id: novita-ai
+spec:
+    currency: USD
+    targetModels:
+        - baidu-ernie-4-5-vl-28b-a3b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.4
+        - meter: tokens.output
+          unit: per_million
+          amount: 5.6
+    enabled: true

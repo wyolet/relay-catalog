@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-anthropic-claude-opus-4-7-thinking
+    displayName: anthropic-claude-opus-4-7-thinking pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - anthropic-claude-opus-4-7-thinking
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.4998
+        - meter: tokens.input
+          unit: per_million
+          amount: 4.998
+        - meter: tokens.output
+          unit: per_million
+          amount: 25.007
+    enabled: true

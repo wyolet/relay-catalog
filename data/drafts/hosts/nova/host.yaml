@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: nova
+    displayName: Nova
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.nova.amazon.com/v1
+    pricingStrategies:
+        - api
+    docsURL: https://nova.amazon.com/dev/documentation

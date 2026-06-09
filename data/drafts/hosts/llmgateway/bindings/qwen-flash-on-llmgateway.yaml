@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-flash-on-llmgateway
+    displayName: qwen-flash via llmgateway
+spec:
+    model: qwen-flash
+    host: llmgateway
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-flash

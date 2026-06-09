@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: meta-llama-4-maverick-17b-128e-instruct-on-nvidia
+    displayName: meta-llama-4-maverick-17b-128e-instruct via nvidia
+spec:
+    model: meta-llama-4-maverick-17b-128e-instruct
+    host: nvidia
+    adapter: openai
+    enabled: true
+    snapshots:
+        - meta-llama-4-maverick-17b-128e-instruct

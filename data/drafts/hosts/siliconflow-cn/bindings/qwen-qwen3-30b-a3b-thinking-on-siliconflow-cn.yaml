@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen-qwen3-30b-a3b-thinking-on-siliconflow-cn
+    displayName: qwen-qwen3-30b-a3b-thinking via siliconflow-cn
+spec:
+    model: qwen-qwen3-30b-a3b-thinking
+    host: siliconflow-cn
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen-qwen3-30b-a3b-thinking-2507

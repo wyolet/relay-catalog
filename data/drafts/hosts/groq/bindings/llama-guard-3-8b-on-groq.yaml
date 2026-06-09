@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: llama-guard-3-8b-on-groq
+    displayName: llama-guard-3-8b via groq
+spec:
+    model: llama-guard-3-8b
+    host: groq
+    adapter: openai
+    enabled: true
+    snapshots:
+        - llama-guard-3-8b

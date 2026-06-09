@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistralai-ministral-8b
+    displayName: 'Mistral: Ministral 3 8B 2512'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - image
+            - text
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 32768
+    contextWindowTotal: 262144
+    maxOutputTokens: 32768
+    releaseDate: "2025-12-02"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mistralai-ministral-8b-2512
+          releasedAt: "2025-12-02"
+          originalName: mistralai/ministral-8b-2512
+    pointer: mistralai-ministral-8b-2512

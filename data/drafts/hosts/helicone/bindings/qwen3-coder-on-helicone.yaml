@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: qwen3-coder-on-helicone
+    displayName: qwen3-coder via helicone
+spec:
+    model: qwen3-coder
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-coder

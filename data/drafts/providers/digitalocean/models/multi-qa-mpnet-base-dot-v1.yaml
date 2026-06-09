@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: multi-qa-mpnet-base-dot-v1
+    displayName: Multi-QA-mpnet-base-dot-v1
+    owner:
+        kind: provider
+        name: digitalocean
+    labels:
+        family: text-embedding
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: text-embedding
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 512
+    contextWindowOutput: 768
+    contextWindowTotal: 512
+    maxOutputTokens: 768
+    releaseDate: "2021-08-30"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: multi-qa-mpnet-base-dot-v1
+          releasedAt: "2021-08-30"
+    pointer: multi-qa-mpnet-base-dot-v1

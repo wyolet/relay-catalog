@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: sapiens-ai-agnes-1-5-lite-on-zenmux
+    displayName: sapiens-ai-agnes-1-5-lite via zenmux
+spec:
+    model: sapiens-ai-agnes-1-5-lite
+    host: zenmux
+    adapter: openai
+    enabled: true
+    snapshots:
+        - sapiens-ai-agnes-1-5-lite

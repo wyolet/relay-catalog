@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: route-gemma-4-31b-it-on-routing-run
+    displayName: route-gemma-4-31b-it via routing-run
+spec:
+    model: route-gemma-4-31b-it
+    host: routing-run
+    adapter: openai
+    enabled: true
+    snapshots:
+        - route-gemma-4-31b-it

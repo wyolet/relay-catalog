@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: cloudflare-workers-ai
+    displayName: Cloudflare Workers AI
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://developers.cloudflare.com/workers-ai/models/

@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-oss-120b-on-stackit
+    displayName: openai-gpt-oss-120b via stackit
+spec:
+    model: openai-gpt-oss-120b
+    host: stackit
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-oss-120b

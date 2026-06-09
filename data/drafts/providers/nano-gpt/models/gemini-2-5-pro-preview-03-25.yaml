@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-2-5-pro-preview-03-25
+    displayName: Gemini 2.5 Pro Preview 0325
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1048756
+    contextWindowOutput: 65536
+    contextWindowTotal: 1048756
+    maxOutputTokens: 65536
+    releaseDate: "2025-03-25"
+    enabled: true
+    snapshots:
+        - name: gemini-2-5-pro-preview-03-25
+          releasedAt: "2025-03-25"
+          originalName: gemini-2.5-pro-preview-03-25
+    pointer: gemini-2-5-pro-preview-03-25

@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-deepseek-chat-v3-1
+    displayName: 'DeepSeek: DeepSeek V3.1'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 32768
+    contextWindowOutput: 7168
+    contextWindowTotal: 32768
+    maxOutputTokens: 7168
+    releaseDate: "2025-08-21"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: deepseek-deepseek-chat-v3-1
+          releasedAt: "2025-08-21"
+          originalName: deepseek/deepseek-chat-v3.1
+    pointer: deepseek-deepseek-chat-v3-1

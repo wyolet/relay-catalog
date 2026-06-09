@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: abacus-zai-org-glm-4-6
+    displayName: zai-org-glm-4-6 pricing
+    owner:
+        kind: host
+        id: abacus
+spec:
+    currency: USD
+    targetModels:
+        - zai-org-glm-4-6
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.6
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.2
+    enabled: true

@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: deepseek-ai-deepseek-ocr
+    displayName: deepseek-ai/DeepSeek-OCR
+    owner:
+        kind: provider
+        name: siliconflow-cn
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    maxOutputTokens: 8192
+    releaseDate: "2025-10-20"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: deepseek-ai-deepseek-ocr
+          releasedAt: "2025-10-20"
+          originalName: deepseek-ai/DeepSeek-OCR
+    pointer: deepseek-ai-deepseek-ocr

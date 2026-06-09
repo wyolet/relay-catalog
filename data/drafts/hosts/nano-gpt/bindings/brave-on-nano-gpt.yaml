@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: brave-on-nano-gpt
+    displayName: brave via nano-gpt
+spec:
+    model: brave
+    host: nano-gpt
+    adapter: openai
+    enabled: true
+    snapshots:
+        - brave

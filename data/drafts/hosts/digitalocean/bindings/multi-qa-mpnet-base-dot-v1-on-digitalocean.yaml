@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: multi-qa-mpnet-base-dot-v1-on-digitalocean
+    displayName: multi-qa-mpnet-base-dot-v1 via digitalocean
+spec:
+    model: multi-qa-mpnet-base-dot-v1
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - multi-qa-mpnet-base-dot-v1

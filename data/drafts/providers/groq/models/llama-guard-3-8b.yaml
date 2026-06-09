@@ -1,0 +1,35 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: llama-guard-3-8b
+    displayName: Llama Guard 3 8B
+    owner:
+        kind: provider
+        name: groq
+    labels:
+        family: llama
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: llama
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 8192
+    contextWindowOutput: 8192
+    contextWindowTotal: 8192
+    maxOutputTokens: 8192
+    releaseDate: "2024-07-23"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: llama-guard-3-8b
+          releasedAt: "2024-07-23"
+    pointer: llama-guard-3-8b

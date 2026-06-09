@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-baichuan4-turbo
+    displayName: baichuan4-turbo pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - baichuan4-turbo
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2.42
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.42
+    enabled: true

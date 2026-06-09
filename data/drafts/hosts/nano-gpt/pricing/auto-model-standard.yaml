@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-auto-model-standard
+    displayName: auto-model-standard pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - auto-model-standard
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 9.996
+        - meter: tokens.output
+          unit: per_million
+          amount: 19.992
+    enabled: true

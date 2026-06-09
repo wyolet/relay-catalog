@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: hy3-preview
+    displayName: Hy3 preview
+    owner:
+        kind: provider
+        name: tencent-tokenhub
+    labels:
+        family: Hy
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: Hy
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 64000
+    contextWindowTotal: 256000
+    maxOutputTokens: 64000
+    releaseDate: "2026-04-20"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: hy3-preview
+          releasedAt: "2026-04-20"
+    pointer: hy3-preview

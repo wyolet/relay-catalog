@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: openai-gpt-3-5-turbo-instruct-on-poe
+    displayName: openai-gpt-3-5-turbo-instruct via poe
+spec:
+    model: openai-gpt-3-5-turbo-instruct
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - openai-gpt-3-5-turbo-instruct

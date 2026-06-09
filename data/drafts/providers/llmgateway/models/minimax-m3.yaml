@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: minimax-m3
+    displayName: MiniMax-M3
+    owner:
+        kind: provider
+        name: llmgateway
+    labels:
+        family: minimax
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: minimax
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 512000
+    contextWindowOutput: 128000
+    contextWindowTotal: 512000
+    maxOutputTokens: 128000
+    releaseDate: "2026-06-01"
+    enabled: true
+    snapshots:
+        - name: minimax-m3
+          releasedAt: "2026-06-01"
+    pointer: minimax-m3

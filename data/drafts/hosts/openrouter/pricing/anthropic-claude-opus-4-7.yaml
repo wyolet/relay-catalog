@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: openrouter-anthropic-claude-opus-4-7
+    displayName: anthropic-claude-opus-4-7 pricing
+    owner:
+        kind: host
+        id: openrouter
+spec:
+    currency: USD
+    targetModels:
+        - anthropic-claude-opus-4-7
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 6.25
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 12.5
+          aboveTokens: 200000
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 1
+          aboveTokens: 200000
+        - meter: tokens.input
+          unit: per_million
+          amount: 5
+        - meter: tokens.input
+          unit: per_million
+          amount: 10
+          aboveTokens: 200000
+        - meter: tokens.output
+          unit: per_million
+          amount: 25
+        - meter: tokens.output
+          unit: per_million
+          amount: 37.5
+          aboveTokens: 200000
+    enabled: true

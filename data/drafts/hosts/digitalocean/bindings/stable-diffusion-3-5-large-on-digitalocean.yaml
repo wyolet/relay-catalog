@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: stable-diffusion-3-5-large-on-digitalocean
+    displayName: stable-diffusion-3-5-large via digitalocean
+spec:
+    model: stable-diffusion-3-5-large
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - stable-diffusion-3-5-large

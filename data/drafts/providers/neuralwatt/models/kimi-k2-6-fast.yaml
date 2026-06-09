@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kimi-k2-6-fast
+    displayName: Kimi K2.6 Fast
+    owner:
+        kind: provider
+        name: neuralwatt
+    labels:
+        family: kimi
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: kimi
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 262128
+    contextWindowOutput: 262128
+    contextWindowTotal: 262128
+    maxOutputTokens: 262128
+    releaseDate: "2026-04-21"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: kimi-k2-6-fast
+          releasedAt: "2026-04-21"
+          originalName: kimi-k2.6-fast
+    pointer: kimi-k2-6-fast

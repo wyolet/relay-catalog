@@ -1,0 +1,33 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: tencent-hunyuan-a13b-instruct
+    displayName: 'Tencent: Hunyuan A13B Instruct'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    maxOutputTokens: 131072
+    releaseDate: "2025-06-30"
+    enabled: true
+    snapshots:
+        - name: tencent-hunyuan-a13b-instruct
+          releasedAt: "2025-06-30"
+          originalName: tencent/hunyuan-a13b-instruct
+    pointer: tencent-hunyuan-a13b-instruct

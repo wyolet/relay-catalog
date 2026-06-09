@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: elevenlabs-elevenlabs-v3-on-poe
+    displayName: elevenlabs-elevenlabs-v3 via poe
+spec:
+    model: elevenlabs-elevenlabs-v3
+    host: poe
+    adapter: openai
+    enabled: true
+    snapshots:
+        - elevenlabs-elevenlabs-v3

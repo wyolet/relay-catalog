@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-free
+    displayName: 'NVIDIA: Nemotron 3 Nano Omni (free)'
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        family: nemotron
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: nemotron
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        audio: true
+        reasoning: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - audio
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 65536
+    contextWindowTotal: 256000
+    maxOutputTokens: 65536
+    releaseDate: "2026-04-28"
+    enabled: true
+    snapshots:
+        - name: nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-free
+          releasedAt: "2026-04-28"
+          originalName: nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free
+    pointer: nvidia-nemotron-3-nano-omni-30b-a3b-reasoning-free

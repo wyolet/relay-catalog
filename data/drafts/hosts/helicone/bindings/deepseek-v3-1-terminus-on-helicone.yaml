@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-v3-1-terminus-on-helicone
+    displayName: deepseek-v3-1-terminus via helicone
+spec:
+    model: deepseek-v3-1-terminus
+    host: helicone
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-v3-1-terminus

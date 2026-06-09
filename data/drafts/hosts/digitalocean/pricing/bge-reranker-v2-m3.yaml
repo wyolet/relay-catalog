@@ -1,0 +1,20 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: digitalocean-bge-reranker-v2-m3
+    displayName: bge-reranker-v2-m3 pricing
+    owner:
+        kind: host
+        id: digitalocean
+spec:
+    currency: USD
+    targetModels:
+        - bge-reranker-v2-m3
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.01
+        - meter: tokens.output
+          unit: per_million
+          amount: 0
+    enabled: true

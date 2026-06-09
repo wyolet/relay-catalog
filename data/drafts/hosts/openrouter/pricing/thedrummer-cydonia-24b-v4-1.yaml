@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: openrouter-thedrummer-cydonia-24b-v4-1
+    displayName: thedrummer-cydonia-24b-v4-1 pricing
+    owner:
+        kind: host
+        id: openrouter
+spec:
+    currency: USD
+    targetModels:
+        - thedrummer-cydonia-24b-v4-1
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.15
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.5
+    enabled: true

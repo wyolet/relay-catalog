@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: minimaxai-chat-completion-models-minimax-m2-5-high-throughput
+    displayName: MiniMax-M2.5 High Throughput
+    owner:
+        kind: provider
+        name: clarifai
+    labels:
+        family: minimax
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: minimax
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 204800
+    contextWindowOutput: 131072
+    contextWindowTotal: 204800
+    maxOutputTokens: 131072
+    releaseDate: "2026-02-12"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: minimaxai-chat-completion-models-minimax-m2-5-high-throughput
+          releasedAt: "2026-02-12"
+          originalName: minimaxai/chat-completion/models/MiniMax-M2_5-high-throughput
+    pointer: minimaxai-chat-completion-models-minimax-m2-5-high-throughput

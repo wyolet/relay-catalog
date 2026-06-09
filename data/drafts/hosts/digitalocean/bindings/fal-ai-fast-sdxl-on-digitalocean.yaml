@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: fal-ai-fast-sdxl-on-digitalocean
+    displayName: fal-ai-fast-sdxl via digitalocean
+spec:
+    model: fal-ai-fast-sdxl
+    host: digitalocean
+    adapter: openai
+    enabled: true
+    snapshots:
+        - fal-ai-fast-sdxl

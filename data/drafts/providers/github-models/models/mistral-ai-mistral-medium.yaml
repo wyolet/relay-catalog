@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mistral-ai-mistral-medium
+    displayName: Mistral Medium 3 (25.05)
+    owner:
+        kind: provider
+        name: github-models
+    labels:
+        family: mistral-medium
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: mistral-medium
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 128000
+    contextWindowOutput: 32768
+    contextWindowTotal: 128000
+    maxOutputTokens: 32768
+    knowledgeCutoff: 2024-09
+    releaseDate: "2025-05-01"
+    enabled: true
+    snapshots:
+        - name: mistral-ai-mistral-medium-2505
+          releasedAt: "2025-05-01"
+          originalName: mistral-ai/mistral-medium-2505
+    pointer: mistral-ai-mistral-medium-2505

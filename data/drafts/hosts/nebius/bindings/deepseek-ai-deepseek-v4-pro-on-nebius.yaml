@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-ai-deepseek-v4-pro-on-nebius
+    displayName: deepseek-ai-deepseek-v4-pro via nebius
+spec:
+    model: deepseek-ai-deepseek-v4-pro
+    host: nebius
+    adapter: openai
+    enabled: true
+    snapshots:
+        - deepseek-ai-deepseek-v4-pro

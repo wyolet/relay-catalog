@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mistralai-voxtral-small-24b-on-kilo
+    displayName: mistralai-voxtral-small-24b via kilo
+spec:
+    model: mistralai-voxtral-small-24b
+    host: kilo
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mistralai-voxtral-small-24b-2507

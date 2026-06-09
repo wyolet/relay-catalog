@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: intfloat-multilingual-e5-large-instruct-on-evroc
+    displayName: intfloat-multilingual-e5-large-instruct via evroc
+spec:
+    model: intfloat-multilingual-e5-large-instruct
+    host: evroc
+    adapter: openai
+    enabled: true
+    snapshots:
+        - intfloat-multilingual-e5-large-instruct

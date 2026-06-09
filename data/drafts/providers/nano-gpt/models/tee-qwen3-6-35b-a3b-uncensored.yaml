@@ -1,0 +1,36 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: tee-qwen3-6-35b-a3b-uncensored
+    displayName: Qwen3.6 35B A3B Uncensored TEE
+    owner:
+        kind: provider
+        name: nano-gpt
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 131072
+    contextWindowTotal: 131072
+    maxOutputTokens: 131072
+    releaseDate: "2026-05-23"
+    enabled: true
+    snapshots:
+        - name: tee-qwen3-6-35b-a3b-uncensored
+          releasedAt: "2026-05-23"
+          originalName: TEE/qwen3.6-35b-a3b-uncensored
+    pointer: tee-qwen3-6-35b-a3b-uncensored

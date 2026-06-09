@@ -1,0 +1,26 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: poe-anthropic-claude-opus-4-1
+    displayName: anthropic-claude-opus-4-1 pricing
+    owner:
+        kind: host
+        id: poe
+spec:
+    currency: USD
+    targetModels:
+        - anthropic-claude-opus-4-1
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 16
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 1.3
+        - meter: tokens.input
+          unit: per_million
+          amount: 13
+        - meter: tokens.output
+          unit: per_million
+          amount: 64
+    enabled: true

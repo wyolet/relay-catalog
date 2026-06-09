@@ -1,0 +1,34 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: microsoft-wizardlm-2-8x22b
+    displayName: WizardLM-2 8x22B
+    owner:
+        kind: provider
+        name: kilo
+    labels:
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 65535
+    contextWindowOutput: 8000
+    contextWindowTotal: 65535
+    maxOutputTokens: 8000
+    releaseDate: "2024-04-24"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: microsoft-wizardlm-2-8x22b
+          releasedAt: "2024-04-24"
+          originalName: microsoft/wizardlm-2-8x22b
+    pointer: microsoft-wizardlm-2-8x22b

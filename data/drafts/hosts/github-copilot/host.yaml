@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Host
+metadata:
+    name: github-copilot
+    displayName: GitHub Copilot
+    labels:
+        source: models.dev
+spec:
+    baseURL: https://api.githubcopilot.com
+    pricingStrategies:
+        - api
+    docsURL: https://docs.github.com/en/copilot

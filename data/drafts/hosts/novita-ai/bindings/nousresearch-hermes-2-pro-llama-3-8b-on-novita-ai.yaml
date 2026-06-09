@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: nousresearch-hermes-2-pro-llama-3-8b-on-novita-ai
+    displayName: nousresearch-hermes-2-pro-llama-3-8b via novita-ai
+spec:
+    model: nousresearch-hermes-2-pro-llama-3-8b
+    host: novita-ai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - nousresearch-hermes-2-pro-llama-3-8b

@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: nano-gpt-xiaomi-mimo-v2-5-pro
+    displayName: xiaomi-mimo-v2-5-pro pricing
+    owner:
+        kind: host
+        id: nano-gpt
+spec:
+    currency: USD
+    targetModels:
+        - xiaomi-mimo-v2-5-pro
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.0036
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.435
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.87
+    enabled: true

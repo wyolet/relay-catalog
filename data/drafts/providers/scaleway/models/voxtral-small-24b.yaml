@@ -1,0 +1,39 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: voxtral-small-24b
+    displayName: Voxtral Small 24B 2507
+    owner:
+        kind: provider
+        name: scaleway
+    labels:
+        family: voxtral
+        source: models.dev
+        source_version: "2026-06-09"
+spec:
+    family: voxtral
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        audio: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - audio
+        output:
+            - text
+    contextWindowInput: 32000
+    contextWindowOutput: 16384
+    contextWindowTotal: 32000
+    maxOutputTokens: 16384
+    releaseDate: "2025-07-01"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: voxtral-small-24b-2507
+          releasedAt: "2025-07-01"
+    pointer: voxtral-small-24b-2507

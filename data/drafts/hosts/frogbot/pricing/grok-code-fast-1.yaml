@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: frogbot-grok-code-fast-1
+    displayName: grok-code-fast-1 pricing
+    owner:
+        kind: host
+        id: frogbot
+spec:
+    currency: USD
+    targetModels:
+        - grok-code-fast-1
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.02
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.5
+    enabled: true

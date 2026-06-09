@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: grok-code-fast-1-on-jiekou
+    displayName: grok-code-fast-1 via jiekou
+spec:
+    model: grok-code-fast-1
+    host: jiekou
+    adapter: openai
+    enabled: true
+    snapshots:
+        - grok-code-fast-1
