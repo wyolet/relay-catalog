@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claude-fable-5
+    displayName: Claude Fable 5
+    owner:
+        kind: provider
+        name: anthropic
+    labels:
+        featured: "true"
+        family: claude
+        source: anthropic-docs
+        source_version: "2026-06-09"
+spec:
+    family: claude
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 128000
+    knowledgeCutoff: "2026-01"
+    releaseDate: "2026-06-09"
+    snapshots:
+        - name: claude-fable-5
+          releasedAt: "2026-06-09"
+    pointer: claude-fable-5
