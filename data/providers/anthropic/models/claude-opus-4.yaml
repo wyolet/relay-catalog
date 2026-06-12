@@ -211,6 +211,9 @@ spec:
         - name: claude-opus-4-6-20260205
           releasedAt: "2026-02-05"
     pointer: claude-opus-4-6
+    # Claude Code's 1M-context addressing form (verbatim to upstream).
+    aliases:
+        - claude-opus-4-6[1m]
 ---
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
@@ -252,6 +255,9 @@ spec:
         - name: claude-opus-4-7-20260416
           releasedAt: "2026-04-16"
     pointer: claude-opus-4-7
+    # Claude Code's 1M-context addressing form (verbatim to upstream).
+    aliases:
+        - claude-opus-4-7[1m]
 ---
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
@@ -293,3 +299,6 @@ spec:
         - name: claude-opus-4-8-20260528
           releasedAt: "2026-05-28"
     pointer: claude-opus-4-8
+    # Claude Code's 1M-context addressing form (verbatim to upstream).
+    aliases:
+        - claude-opus-4-8[1m]

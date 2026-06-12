@@ -39,3 +39,7 @@ spec:
         - name: claude-fable-5
           releasedAt: "2026-06-09"
     pointer: claude-fable-5
+    # Claude Code's 1M-context addressing form. Resolution-only matcher:
+    # routes to this model, "claude-fable-5[1m]" goes upstream verbatim.
+    aliases:
+        - claude-fable-5[1m]
