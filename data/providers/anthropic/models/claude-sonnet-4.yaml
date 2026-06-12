@@ -167,3 +167,6 @@ spec:
     snapshots:
         - name: claude-sonnet-4-6
     pointer: claude-sonnet-4-6
+    # Claude Code's 1M-context addressing form (verbatim to upstream).
+    aliases:
+        - claude-sonnet-4-6[1m]
