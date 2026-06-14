@@ -7,5 +7,5 @@ metadata:
 spec:
     model: gpt-4-1-nano
     host: openai
-    adapter: openai
+    adapter: openai_responses
     pricing: openai-gpt-4-1-nano

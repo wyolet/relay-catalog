@@ -7,5 +7,5 @@ metadata:
 spec:
     model: chatgpt-4o
     host: openai
-    adapter: openai
+    adapter: openai_responses
     pricing: openai-chatgpt-4o
