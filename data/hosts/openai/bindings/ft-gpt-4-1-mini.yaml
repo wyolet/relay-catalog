@@ -7,5 +7,5 @@ metadata:
 spec:
     model: ft-gpt-4-1-mini
     host: openai
-    adapter: openai
+    adapter: openai_responses
     pricing: openai-ft-gpt-4-1-mini

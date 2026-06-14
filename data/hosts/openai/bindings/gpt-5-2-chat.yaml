@@ -7,5 +7,5 @@ metadata:
 spec:
     model: gpt-5-2-chat
     host: openai
-    adapter: openai
+    adapter: openai_responses
     pricing: openai-gpt-5-2-chat
