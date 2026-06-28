@@ -9,23 +9,23 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      # The validator depends on github.com/wyolet/relay/app/catalogvalidate.
-      # relay is currently private — the catalog repo's go.mod points at
-      # ../relay via a `replace` directive, so CI clones both repos
-      # side-by-side. Once relay goes public we drop the replace and
-      # depend on a tagged version directly; the workflow simplifies to a
-      # single checkout.
+      # The validator imports github.com/wyolet/relay/app/catalogvalidate
+      # (+ app/manifest, app/model, app/meta). relay is a multi-module repo
+      # (root module + sdk submodule wired by go.work), so the catalog
+      # go.mod replaces BOTH github.com/wyolet/relay => ../relay and
+      # github.com/wyolet/relay/sdk => ../relay/sdk — hence the side-by-side
+      # checkout. relay is public now, so the checkout uses the default
+      # GITHUB_TOKEN; no PAT secret needed.
       - name: Check out relay-catalog
         uses: actions/checkout@v4
         with:
           path: relay-catalog
 
-      - name: Check out relay (private)
+      - name: Check out relay (side-by-side for the replace directives)
         uses: actions/checkout@v4
         with:
           repository: wyolet/relay
           path: relay
-          token: ${{ secrets.RELAY_RO_TOKEN }}
 
       - uses: actions/setup-go@v5
         with:

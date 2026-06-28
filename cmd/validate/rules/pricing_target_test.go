@@ -15,10 +15,13 @@ func TestPricingTargetHostBinding_OK(t *testing.T) {
 		{Model: &manifest.ModelDTO{
 			Metadata: manifest.WireMeta{Name: "gpt-x"},
 			Spec: manifest.ModelSpec{
-				Hosts:     []manifest.HostBindingDTO{{Host: "openai-host"}},
 				Snapshots: []model.Snapshot{{Name: "gpt-x", OriginalName: "gpt-x"}},
 				Pointer:   "gpt-x",
 			},
+		}},
+		{HostBinding: &manifest.HostBindingDTO{
+			Metadata: manifest.WireMeta{Name: "gpt-x@openai-host"},
+			Spec:     manifest.HostBindingSpec{Model: "gpt-x", Host: "openai-host"},
 		}},
 		{Pricing: &manifest.PricingDTO{
 			Metadata: manifest.WireMeta{Name: "p1", Owner: manifest.WireOwner{Kind: "host", Name: "openai-host"}},
@@ -38,11 +41,14 @@ func TestPricingTargetHostBinding_BindingMissing(t *testing.T) {
 		{Model: &manifest.ModelDTO{
 			Metadata: manifest.WireMeta{Name: "gpt-x"},
 			Spec: manifest.ModelSpec{
-				// Bound to anthropic-host, NOT openai-host
-				Hosts:     []manifest.HostBindingDTO{{Host: "anthropic-host"}},
 				Snapshots: []model.Snapshot{{Name: "gpt-x", OriginalName: "gpt-x"}},
 				Pointer:   "gpt-x",
 			},
+		}},
+		{HostBinding: &manifest.HostBindingDTO{
+			// Bound to anthropic-host, NOT openai-host
+			Metadata: manifest.WireMeta{Name: "gpt-x@anthropic-host"},
+			Spec:     manifest.HostBindingSpec{Model: "gpt-x", Host: "anthropic-host"},
 		}},
 		{Pricing: &manifest.PricingDTO{
 			Metadata: manifest.WireMeta{Name: "p1", Owner: manifest.WireOwner{Kind: "host", Name: "openai-host"}},
