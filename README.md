@@ -19,6 +19,21 @@ data/
 
 A name can appear in both trees (`openai` is both a Provider and a Host). They're independent entities; edit them separately.
 
+## Verified-only ships; everything else lives in `drafts/`
+
+The live `data/` tree is **verified-routable only**: an entry ships there once someone has held a real key for that host and confirmed a binding actually routes end-to-end. The published catalog's promise is "every model in here works."
+
+`data/drafts/` is the staging area for entries we **can't confirm yet** — typically a host with no free tier (Bedrock, Vertex, Azure, and most of the imported list), so we can author the YAML but can't test it. `manifest.LoadDir` skips `drafts/` entirely, so nothing there reaches a running relay.
+
+Promoting a host out of drafts:
+
+1. Get a key for the host.
+2. Confirm a binding routes (a real request returns through relay).
+3. `git mv data/drafts/hosts/<host> data/hosts/<host>` (and any provider models it needs).
+4. `go run ./cmd/validate ./data` clean, then PR.
+
+Demoting works the reverse way — if an entry can't be verified, it belongs in `drafts/`, not live. Don't ship a host that routes nothing.
+
 ## Docs
 
 Start with [`docs/README.md`](docs/README.md), then drill into:

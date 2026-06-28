@@ -11,6 +11,9 @@ import (
 // must be served by the host that owns the Pricing. Pricing is a
 // (Host, Model) tuple — pricing a model that doesn't actually bind to
 // the host produces phantom price rows that never apply at request time.
+//
+// Since HostBinding became a first-class entity, the (Model, Host) link
+// lives in standalone HostBinding documents, not on Model.Spec.
 func init() {
 	All = append(All, catalogvalidate.Rule{
 		Name:        "pricing-target-must-bind-to-host",
@@ -21,10 +24,20 @@ func init() {
 }
 
 func checkPricingTargetHostBinding(docs []manifest.Document) []catalogvalidate.Issue {
-	models := map[string]*manifest.ModelDTO{}
+	models := map[string]bool{}
+	// boundHosts maps a model name to the set of host names it binds to,
+	// collected from the standalone HostBinding documents.
+	boundHosts := map[string]map[string]bool{}
 	for _, d := range docs {
-		if d.Model != nil {
-			models[d.Model.Metadata.Name] = d.Model
+		switch {
+		case d.Model != nil:
+			models[d.Model.Metadata.Name] = true
+		case d.HostBinding != nil:
+			m, h := d.HostBinding.Spec.Model, d.HostBinding.Spec.Host
+			if boundHosts[m] == nil {
+				boundHosts[m] = map[string]bool{}
+			}
+			boundHosts[m][h] = true
 		}
 	}
 
@@ -44,12 +57,11 @@ func checkPricingTargetHostBinding(docs []manifest.Document) []catalogvalidate.I
 			continue
 		}
 		for i, mname := range d.Pricing.Spec.TargetModels {
-			m, ok := models[mname]
-			if !ok {
+			if !models[mname] {
 				// ValidateGraph already reports the ref-missing.
 				continue
 			}
-			if !hasBindingToHost(m, host) {
+			if !boundHosts[mname][host] {
 				out = append(out, catalogvalidate.Issue{
 					Severity: catalogvalidate.SeverityError,
 					Kind:     catalogvalidate.KindInvariant,
@@ -65,13 +77,4 @@ func checkPricingTargetHostBinding(docs []manifest.Document) []catalogvalidate.I
 		}
 	}
 	return out
-}
-
-func hasBindingToHost(m *manifest.ModelDTO, host string) bool {
-	for _, hb := range m.Spec.Hosts {
-		if hb.Host == host {
-			return true
-		}
-	}
-	return false
 }
