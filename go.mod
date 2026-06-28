@@ -2,7 +2,7 @@ module github.com/wyolet/relay-catalog
 
 go 1.25.6
 
-require github.com/wyolet/relay v0.0.0
+require github.com/wyolet/relay v0.4.2
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
@@ -26,7 +26,7 @@ require (
 	github.com/prometheus/procfs v0.16.1 // indirect
 	github.com/redis/go-redis/v9 v9.19.0 // indirect
 	github.com/rogpeppe/go-internal v1.14.1 // indirect
-	github.com/wyolet/relay/sdk v0.0.0 // indirect
+	github.com/wyolet/relay/sdk v0.2.0 // indirect
 	go.uber.org/atomic v1.11.0 // indirect
 	go.yaml.in/yaml/v2 v2.4.2 // indirect
 	golang.org/x/crypto v0.49.0 // indirect
@@ -36,7 +36,3 @@ require (
 	google.golang.org/protobuf v1.36.11 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
-
-replace github.com/wyolet/relay => ../relay
-
-replace github.com/wyolet/relay/sdk => ../relay/sdk
