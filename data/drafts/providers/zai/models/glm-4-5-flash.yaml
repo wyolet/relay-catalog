@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: glm-4-5-flash
+    displayName: GLM-4.5-Flash
+    owner:
+        kind: provider
+        name: zai
+    labels:
+        family: glm-flash
+        source: models.dev
+        source_version: "2026-07-12"
+spec:
+    family: glm-flash
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 98304
+    contextWindowTotal: 131072
+    maxOutputTokens: 98304
+    knowledgeCutoff: 2025-04
+    releaseDate: "2025-07-28"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: glm-4-5-flash
+          releasedAt: "2025-07-28"
+          originalName: glm-4.5-flash
+    pointer: glm-4-5-flash

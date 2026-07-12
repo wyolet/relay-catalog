@@ -2,7 +2,10 @@ module github.com/wyolet/relay-catalog
 
 go 1.25.6
 
-require github.com/wyolet/relay v0.4.2
+require (
+	github.com/wyolet/relay v0.4.2
+	gopkg.in/yaml.v3 v3.0.1
+)
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
@@ -34,5 +37,4 @@ require (
 	golang.org/x/sys v0.42.0 // indirect
 	golang.org/x/text v0.35.0 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
-	gopkg.in/yaml.v3 v3.0.1 // indirect
 )

@@ -1,0 +1,43 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kimi-k2-7-code-highspeed
+    displayName: Kimi K2.7 Code HighSpeed
+    owner:
+        kind: provider
+        name: moonshotai
+    labels:
+        family: kimi-k2
+        source: models.dev
+        source_version: "2026-07-12"
+spec:
+    family: kimi-k2
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    maxOutputTokens: 262144
+    knowledgeCutoff: 2025-01
+    releaseDate: "2026-06-12"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: kimi-k2-7-code-highspeed
+          releasedAt: "2026-06-12"
+          originalName: kimi-k2.7-code-highspeed
+    pointer: kimi-k2-7-code-highspeed

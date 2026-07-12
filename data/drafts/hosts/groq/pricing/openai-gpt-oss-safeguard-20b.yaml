@@ -11,9 +11,6 @@ spec:
     targetModels:
         - openai-gpt-oss-safeguard-20b
     rates:
-        - meter: tokens.cache_read
-          unit: per_million
-          amount: 0.037
         - meter: tokens.input
           unit: per_million
           amount: 0.075

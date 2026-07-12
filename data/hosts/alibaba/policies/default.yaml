@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: alibaba-default-rl
+  displayName: Alibaba Model Studio default rate limits
+  description: "Model Studio international (Singapore) default for qwen3-max/qwen-max: 600 RPM, 1M TPM, applied at the root-account level. Per alibabacloud.com/help/en/model-studio/rate-limit, 2026-07-12. Dated snapshots run lower (60 RPM / 100K TPM)."
+  owner:
+    kind: host
+    name: alibaba
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 600
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 1000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+  name: alibaba-default
+  displayName: Alibaba Model Studio default
+  owner:
+    kind: host
+    name: alibaba
+spec:
+  rateLimit: alibaba-default-rl

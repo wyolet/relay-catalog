@@ -9,7 +9,7 @@ metadata:
     labels:
         family: pixtral
         source: models.dev
-        source_version: "2026-06-09"
+        source_version: "2026-07-12"
 spec:
     family: pixtral
     capabilities:
@@ -36,6 +36,4 @@ spec:
     snapshots:
         - name: pixtral-12b
           releasedAt: "2024-09-01"
-        - name: pixtral-12b-2409
-          releasedAt: "2024-09-25"
     pointer: pixtral-12b

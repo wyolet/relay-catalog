@@ -1,0 +1,30 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: step-tts-2
+    displayName: Step TTS 2
+    owner:
+        kind: provider
+        name: stepfun
+    labels:
+        family: step
+        source: models.dev
+        source_version: "2026-07-12"
+spec:
+    family: step
+    capabilities:
+        chat: true
+        streaming: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - audio
+    releaseDate: "2026-03-01"
+    enabled: true
+    snapshots:
+        - name: step-tts-2
+          releasedAt: "2026-03-01"
+    pointer: step-tts-2

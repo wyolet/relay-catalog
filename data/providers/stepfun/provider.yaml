@@ -7,3 +7,5 @@ metadata:
         source: models.dev
 spec:
     docsURL: https://platform.stepfun.com/docs/zh/overview/concept
+    icon:
+        path: /provider/stepfun.png

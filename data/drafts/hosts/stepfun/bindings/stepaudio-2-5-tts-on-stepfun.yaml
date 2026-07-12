@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: stepaudio-2-5-tts-on-stepfun
+    displayName: stepaudio-2-5-tts via stepfun
+spec:
+    model: stepaudio-2-5-tts
+    host: stepfun
+    adapter: openai
+    enabled: true
+    snapshots:
+        - stepaudio-2-5-tts

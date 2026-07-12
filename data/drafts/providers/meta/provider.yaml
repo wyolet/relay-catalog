@@ -1,0 +1,9 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: meta
+    displayName: Meta
+    labels:
+        source: models.dev
+spec:
+    docsURL: https://dev.meta.ai/docs

@@ -1,0 +1,41 @@
+description: 'Featured models — generated index of Model metadata.labels.featured. Regenerate: go run ./cmd/validate -write-featured ./data. Not a seeded catalog kind; validate fails on drift.'
+providers:
+    - provider: alibaba
+      models:
+        - qwen3-7-max
+        - qwen3-7-plus
+    - provider: anthropic
+      models:
+        - claude-fable-5
+        - claude-opus-4-6
+        - claude-opus-4-7
+        - claude-opus-4-8
+        - claude-sonnet-4-6
+    - provider: deepseek
+      models:
+        - deepseek-v4-flash
+        - deepseek-v4-pro
+    - provider: google
+      models:
+        - gemini-3-5-flash
+    - provider: minimax
+      models:
+        - minimax-m3
+    - provider: moonshot
+      models:
+        - kimi-k2-7-code
+        - kimi-k2-7-code-highspeed
+    - provider: openai
+      models:
+        - gpt-5-5
+        - gpt-5-5-pro
+        - gpt-5-6
+        - gpt-5-6-luna
+        - gpt-5-6-sol
+        - gpt-5-6-terra
+    - provider: xai
+      models:
+        - grok-4-5
+    - provider: zhipuai
+      models:
+        - glm-5-2

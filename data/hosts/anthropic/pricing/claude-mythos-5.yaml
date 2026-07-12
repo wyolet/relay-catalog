@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: anthropic-claude-mythos-5
+    displayName: Claude Mythos 5 pricing
+    owner:
+        kind: host
+        id: anthropic
+spec:
+    currency: USD
+    targetModels:
+        - claude-mythos-5
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 10
+        - meter: tokens.output
+          unit: per_million
+          amount: 50
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 12.5
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 1

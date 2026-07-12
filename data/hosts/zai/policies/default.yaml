@@ -1,0 +1,10 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+  name: zai-default
+  displayName: Z.ai default
+  description: "Z.ai publishes no numeric rate limits — the per-account values are shown only in the authenticated console (z.ai/manage-apikey/rate-limits); docs state only the qualitative tier ordering Max > Pro > Lite. Anchor policy without relay-side caps — set your own after checking the console. Per docs.z.ai/devpack/usage-policy and docs.z.ai/help/faq, 2026-07-12."
+  owner:
+    kind: host
+    name: zai
+spec: {}

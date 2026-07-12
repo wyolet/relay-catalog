@@ -1,0 +1,37 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-omni-flash-preview
+    displayName: Gemini Omni Flash Preview
+    owner:
+        kind: provider
+        name: google
+    labels:
+        family: gemini
+        source: models.dev
+        source_version: "2026-07-12"
+spec:
+    family: gemini
+    capabilities:
+        chat: true
+        streaming: true
+        vision: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - video
+    contextWindowInput: 131072
+    contextWindowOutput: 65536
+    contextWindowTotal: 131072
+    maxOutputTokens: 65536
+    releaseDate: "2026-06-30"
+    enabled: true
+    snapshots:
+        - name: gemini-omni-flash-preview
+          releasedAt: "2026-06-30"
+    pointer: gemini-omni-flash-preview

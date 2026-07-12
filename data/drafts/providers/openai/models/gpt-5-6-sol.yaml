@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-5-6-sol
+    displayName: GPT-5.6 Sol
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: gpt
+        source: models.dev
+        source_version: "2026-07-12"
+spec:
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 922000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1050000
+    maxOutputTokens: 128000
+    knowledgeCutoff: "2026-02-16"
+    releaseDate: "2026-07-09"
+    enabled: true
+    snapshots:
+        - name: gpt-5-6-sol
+          releasedAt: "2026-07-09"
+          originalName: gpt-5.6-sol
+    pointer: gpt-5-6-sol

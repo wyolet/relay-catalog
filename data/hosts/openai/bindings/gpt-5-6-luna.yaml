@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: gpt-5-6-luna-on-openai
+    displayName: "GPT-5.6 Luna via openai"
+spec:
+    model: gpt-5-6-luna
+    host: openai
+    adapter: openai_responses
+    pricing: openai-gpt-5-6-luna

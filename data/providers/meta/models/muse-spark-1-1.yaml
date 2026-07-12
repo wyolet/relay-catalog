@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: muse-spark-1-1
+    displayName: Muse Spark 1.1
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: muse
+        source: models.dev
+        source_version: "2026-07-12"
+spec:
+    family: muse
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+            - video
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 32000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 32000
+    releaseDate: "2026-04-08"
+    snapshots:
+        - name: muse-spark-1-1
+          releasedAt: "2026-04-08"
+          originalName: muse-spark-1.1
+    pointer: muse-spark-1-1

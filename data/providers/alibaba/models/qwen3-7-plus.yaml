@@ -2,41 +2,41 @@
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
-  name: qwen3-7-plus
-  displayName: Qwen3.7 Plus
-  owner:
-    kind: provider
-    name: alibaba
-  labels:
-    family: qwen
-    source: models.dev
-    source_version: '2026-06-09'
+    name: qwen3-7-plus
+    displayName: Qwen3.7 Plus
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        featured: "true"
+        family: qwen
+        source: models.dev
+        source_version: "2026-06-09"
 spec:
-  family: qwen
-  capabilities:
-    chat: true
-    streaming: true
-    tools: true
-    vision: true
-    promptCache: true
-    reasoning: true
-    systemMessages: true
-  modalities:
-    input:
-    - text
-    - image
-    - video
-    output:
-    - text
-  contextWindowInput: 1000000
-  contextWindowOutput: 16384
-  contextWindowTotal: 1000000
-  maxOutputTokens: 16384
-  knowledgeCutoff: 2025-04
-  releaseDate: '2026-06-02'
-  enabled: true
-  snapshots:
-  - name: qwen3-7-plus
-    originalName: qwen3.7-plus
-    releasedAt: '2026-06-01'
-  pointer: qwen3-7-plus
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 16384
+    contextWindowTotal: 1000000
+    maxOutputTokens: 16384
+    knowledgeCutoff: 2025-04
+    releaseDate: "2026-06-02"
+    snapshots:
+        - name: qwen3-7-plus
+          releasedAt: "2026-06-02"
+          originalName: qwen3.7-plus
+    pointer: qwen3-7-plus

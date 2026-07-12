@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: step-tts-2-on-stepfun
+    displayName: step-tts-2 via stepfun
+spec:
+    model: step-tts-2
+    host: stepfun
+    adapter: openai
+    enabled: true
+    snapshots:
+        - step-tts-2

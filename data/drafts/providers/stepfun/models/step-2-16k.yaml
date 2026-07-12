@@ -8,7 +8,7 @@ metadata:
         name: stepfun
     labels:
         source: models.dev
-        source_version: "2026-06-09"
+        source_version: "2026-07-12"
 spec:
     capabilities:
         chat: true

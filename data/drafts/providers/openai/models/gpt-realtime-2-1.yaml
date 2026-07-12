@@ -1,0 +1,45 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-realtime-2-1
+    displayName: GPT-Realtime-2.1
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: gpt
+        source: models.dev
+        source_version: "2026-07-12"
+spec:
+    family: gpt
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        audio: true
+        promptCache: true
+        reasoning: true
+        audioInput: true
+        audioOutput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - audio
+            - image
+        output:
+            - text
+            - audio
+    contextWindowInput: 96000
+    contextWindowOutput: 32000
+    contextWindowTotal: 128000
+    maxOutputTokens: 32000
+    knowledgeCutoff: "2024-09-30"
+    releaseDate: "2026-07-06"
+    enabled: true
+    snapshots:
+        - name: gpt-realtime-2-1
+          releasedAt: "2026-07-06"
+          originalName: gpt-realtime-2.1
+    pointer: gpt-realtime-2-1

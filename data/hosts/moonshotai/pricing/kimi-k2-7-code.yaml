@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: moonshotai-kimi-k2-7-code
+    displayName: kimi-k2-7-code pricing
+    owner:
+        kind: host
+        id: moonshotai
+spec:
+    currency: USD
+    targetModels:
+        - kimi-k2-7-code
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.19
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.95
+        - meter: tokens.output
+          unit: per_million
+          amount: 4

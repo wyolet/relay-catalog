@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: step-3-7-flash-on-stepfun
+    displayName: step-3-7-flash via stepfun
+spec:
+    model: step-3-7-flash
+    host: stepfun
+    adapter: openai
+    enabled: true
+    snapshots:
+        - step-3-7-flash

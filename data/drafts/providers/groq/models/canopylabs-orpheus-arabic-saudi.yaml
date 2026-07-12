@@ -2,14 +2,14 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: canopylabs-orpheus-arabic-saudi
-    displayName: Orpheus Arabic Saudi
+    displayName: Canopy Labs Orpheus Arabic Saudi
     owner:
         kind: provider
         name: groq
     labels:
         family: canopylabs
         source: models.dev
-        source_version: "2026-06-09"
+        source_version: "2026-07-12"
 spec:
     family: canopylabs
     capabilities:
@@ -26,7 +26,6 @@ spec:
     contextWindowOutput: 50000
     contextWindowTotal: 4000
     maxOutputTokens: 50000
-    knowledgeCutoff: "2025-12-16"
     releaseDate: "2025-12-16"
     enabled: true
     snapshots:

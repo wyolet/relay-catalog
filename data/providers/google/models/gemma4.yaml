@@ -107,7 +107,6 @@ metadata:
         kind: provider
         name: google
     labels:
-        featured: "true"
         family: gemma4
         source: ollama-library
         source_version: '2026-05-20'

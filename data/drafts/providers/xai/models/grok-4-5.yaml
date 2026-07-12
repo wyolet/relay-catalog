@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: grok-4-5
+    displayName: Grok 4.5
+    owner:
+        kind: provider
+        name: xai
+    labels:
+        family: grok
+        source: models.dev
+        source_version: "2026-07-12"
+spec:
+    family: grok
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 500000
+    contextWindowOutput: 500000
+    contextWindowTotal: 500000
+    maxOutputTokens: 500000
+    releaseDate: "2026-07-08"
+    enabled: true
+    snapshots:
+        - name: grok-4-5
+          releasedAt: "2026-07-08"
+          originalName: grok-4.5
+    pointer: grok-4-5

@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: minimax-default-rl
+  displayName: MiniMax default rate limits
+  description: "MiniMax limits are per model, not per account tier: M2.x chat models 500 RPM / 20M TPM (encoded here); M3 is lower at 200 RPM / 10M TPM. Higher limits via api@minimax.io. Per platform.minimax.io/docs/guides/rate-limits, 2026-07-12."
+  owner:
+    kind: host
+    name: minimax
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 500
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 20000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+  name: minimax-default
+  displayName: MiniMax default
+  owner:
+    kind: host
+    name: minimax
+spec:
+  rateLimit: minimax-default-rl

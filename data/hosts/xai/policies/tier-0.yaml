@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: xai-tier-0-rl
+  displayName: xAI Tier 0 rate limits
+  description: "xAI tier 0 ($0 spend threshold), grok-4.5 reference: 150 requests/second, 50M TPM. Older grok-4.x models carry lower per-model limits. Per docs.x.ai/docs/key-information/consumption-and-rate-limits, 2026-07-12."
+  owner:
+    kind: host
+    name: xai
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 150
+      window: 1s
+      strategy: sliding-window
+    - meter: tokens
+      amount: 50000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+  name: xai-tier-0
+  displayName: xAI Tier 0
+  owner:
+    kind: host
+    name: xai
+spec:
+  rateLimit: xai-tier-0-rl

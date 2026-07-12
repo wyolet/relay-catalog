@@ -46,3 +46,6 @@ hosts:
     - id: stepfun
       pricingStrategies:
         - api
+    - id: meta
+      pricingStrategies:
+        - api

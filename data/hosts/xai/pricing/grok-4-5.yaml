@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: xai-grok-4-5
+    displayName: Grok 4.5 pricing
+    owner:
+        kind: host
+        id: xai
+spec:
+    currency: USD
+    targetModels:
+        - grok-4-5
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 1
+          aboveTokens: 200000
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.input
+          unit: per_million
+          amount: 4
+          aboveTokens: 200000
+        - meter: tokens.output
+          unit: per_million
+          amount: 6
+        - meter: tokens.output
+          unit: per_million
+          amount: 12
+          aboveTokens: 200000

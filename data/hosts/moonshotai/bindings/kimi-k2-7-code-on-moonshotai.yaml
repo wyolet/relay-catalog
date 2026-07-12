@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: kimi-k2-7-code-on-moonshotai
+    displayName: kimi-k2-7-code via moonshotai
+spec:
+    model: kimi-k2-7-code
+    host: moonshotai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - kimi-k2-7-code
