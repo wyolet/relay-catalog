@@ -7,3 +7,5 @@ metadata:
         source: models.dev
 spec:
     docsURL: https://docs.x.ai/docs/models
+    icon:
+        path: /provider/xai.png

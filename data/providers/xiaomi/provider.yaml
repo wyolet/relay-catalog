@@ -7,3 +7,5 @@ metadata:
         source: models.dev
 spec:
     docsURL: https://platform.xiaomimimo.com/#/docs
+    icon:
+        path: /provider/xiaomi.png

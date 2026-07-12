@@ -7,3 +7,5 @@ metadata:
         source: models.dev
 spec:
     docsURL: https://docs.perplexity.ai
+    icon:
+        path: /provider/perplexity.svg
