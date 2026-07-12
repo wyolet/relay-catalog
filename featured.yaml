@@ -2,34 +2,33 @@ description: 'Featured models — generated index of Model metadata.labels.featu
 providers:
     - provider: alibaba
       models:
-        - qwen3-5-397b
+        - qwen3-7-max
     - provider: anthropic
       models:
         - claude-fable-5
-        - claude-haiku-4-5
+        - claude-opus-4-6
+        - claude-opus-4-7
         - claude-opus-4-8
-        - claude-sonnet-5
+        - claude-sonnet-4-6
     - provider: deepseek
       models:
         - deepseek-v4-pro
     - provider: google
       models:
-        - gemini-3-1-pro-preview
         - gemini-3-5-flash
     - provider: minimax
       models:
-        - minimax-m2-7
-    - provider: mistral
-      models:
-        - mistral-large-3
+        - minimax-m3
     - provider: moonshot
       models:
-        - kimi-k2-6
+        - kimi-k2-7-code
     - provider: openai
       models:
-        - gpt-5-4-mini
         - gpt-5-5
         - gpt-5-6
+    - provider: xai
+      models:
+        - grok-4-5
     - provider: zhipuai
       models:
-        - glm-5-1
+        - glm-5-2
