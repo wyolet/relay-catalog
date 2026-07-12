@@ -3,6 +3,7 @@ providers:
     - provider: alibaba
       models:
         - qwen3-7-max
+        - qwen3-7-plus
     - provider: anthropic
       models:
         - claude-fable-5
@@ -12,6 +13,7 @@ providers:
         - claude-sonnet-4-6
     - provider: deepseek
       models:
+        - deepseek-v4-flash
         - deepseek-v4-pro
     - provider: google
       models:
@@ -26,6 +28,9 @@ providers:
       models:
         - gpt-5-5
         - gpt-5-6
+        - gpt-5-6-luna
+        - gpt-5-6-sol
+        - gpt-5-6-terra
     - provider: xai
       models:
         - grok-4-5

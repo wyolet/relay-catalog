@@ -8,6 +8,7 @@ metadata:
         kind: provider
         name: openai
     labels:
+        featured: "true"
         family: gpt
         source: models.dev
         source_version: "2026-07-12"
