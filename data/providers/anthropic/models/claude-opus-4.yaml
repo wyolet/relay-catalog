@@ -8,7 +8,6 @@ metadata:
         kind: provider
         name: anthropic
     labels:
-        featured: "true"
         family: claude
         source: litellm
         source_version: "2026-05-20"
@@ -49,7 +48,6 @@ metadata:
         kind: provider
         name: anthropic
     labels:
-        featured: "true"
         family: claude
         source: litellm
         source_version: "2026-05-20"
@@ -93,7 +91,6 @@ metadata:
         kind: provider
         name: anthropic
     labels:
-        featured: "true"
         family: claude
         source: litellm
         source_version: "2026-05-20"
@@ -138,7 +135,6 @@ metadata:
         kind: provider
         name: anthropic
     labels:
-        featured: "true"
         family: claude
         source: litellm
         source_version: "2026-05-20"
@@ -180,7 +176,6 @@ metadata:
         kind: provider
         name: anthropic
     labels:
-        featured: "true"
         family: claude
         source: litellm
         source_version: "2026-05-20"
@@ -224,7 +219,6 @@ metadata:
         kind: provider
         name: anthropic
     labels:
-        featured: "true"
         family: claude
         source: litellm
         source_version: "2026-05-20"
