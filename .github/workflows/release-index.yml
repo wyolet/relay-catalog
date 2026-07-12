@@ -1,0 +1,42 @@
+name: Update channel index
+
+# On every release tag, point the tagged schema channel's `latest` at it in
+# index.yaml on main. RELAY_CATALOG_VERSION=latest relays resolve through
+# that file. Re-pushing an older tag never downgrades the channel.
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          # Full history so the tagged commit is reachable for `git show`.
+          fetch-depth: 0
+
+      - name: Update index.yaml
+        run: |
+          set -eu
+          # The channel is the tagged tree's schema version, read from the
+          # tag's own data files (not main's, which may already be ahead).
+          channel=$(git show "${GITHUB_SHA}:data/providers/anthropic/provider.yaml" \
+            | sed -n 's|^apiVersion:.*/||p' | head -1)
+          pip install --quiet pyyaml
+          python3 .github/scripts/update_index.py "$channel" "${GITHUB_REF_NAME}"
+
+      - name: Commit
+        run: |
+          set -eu
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.yaml
+          git diff --cached --quiet && exit 0
+          git commit -m "index: channel latest -> ${GITHUB_REF_NAME}"
+          git push origin main
