@@ -35,13 +35,14 @@ func (s *stringSlice) String() string     { return fmt.Sprintf("%v", *s) }
 func (s *stringSlice) Set(v string) error { *s = append(*s, v); return nil }
 
 func main() {
-	var strict, list bool
+	var strict, list, regenFeatured bool
 	var skip stringSlice
 	flag.BoolVar(&strict, "strict", false, "promote warnings to errors before exit")
 	flag.BoolVar(&list, "list", false, "print rule registry and exit")
+	flag.BoolVar(&regenFeatured, "write-featured", false, "regenerate featured.yaml from Model featured labels and exit")
 	flag.Var(&skip, "skip", "suppress a named rule (repeatable)")
 	flag.Usage = func() {
-		fmt.Fprintln(os.Stderr, "usage: validate [--strict] [--list] [--skip <name>...] <dir>")
+		fmt.Fprintln(os.Stderr, "usage: validate [--strict] [--list] [--write-featured] [--skip <name>...] <dir>")
 		flag.PrintDefaults()
 	}
 	flag.Parse()
@@ -62,6 +63,16 @@ func main() {
 		os.Exit(2)
 	}
 
+	if regenFeatured {
+		path := featuredPath(dir)
+		if err := writeFeatured(path, generateFeatured(docs)); err != nil {
+			fmt.Fprintf(os.Stderr, "write %s: %v\n", path, err)
+			os.Exit(2)
+		}
+		fmt.Println("wrote", path)
+		return
+	}
+
 	skipSet := make(map[string]bool, len(skip))
 	for _, n := range skip {
 		skipSet[n] = true
@@ -69,6 +80,13 @@ func main() {
 
 	issues := catalogvalidate.ValidateGraph(docs)
 	issues = append(issues, catalogvalidate.RunRules(rules.All, docs, skipSet)...)
+
+	if want, ok, err := loadFeatured(featuredPath(dir)); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(2)
+	} else if ok {
+		issues = append(issues, checkFeatured(docs, want)...)
+	}
 
 	if strict {
 		issues = catalogvalidate.Promote(issues)
