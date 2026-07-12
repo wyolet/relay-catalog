@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: moonshotai-tier-4-rl
+  displayName: Moonshot Tier 4 rate limits
+  description: "Moonshot AI tier 4 ($1,000 cumulative recharge): 5,000 RPM, 4M TPM, enforced per account across all kimi models (extra keys add no quota); token usage counts request tokens + max_completion_tokens. Per platform.moonshot.ai/docs/pricing/limits (redirects to platform.kimi.ai), 2026-07-12."
+  owner:
+    kind: host
+    name: moonshotai
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 5000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 4000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+  name: moonshotai-tier-4
+  displayName: Moonshot Tier 4
+  owner:
+    kind: host
+    name: moonshotai
+spec:
+  rateLimit: moonshotai-tier-4-rl
