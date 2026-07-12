@@ -67,7 +67,6 @@ metadata:
         kind: provider
         name: moonshot
     labels:
-        featured: "true"
         family: kimi-k2.6
         source: ollama-library
         source_version: "2026-05-20"

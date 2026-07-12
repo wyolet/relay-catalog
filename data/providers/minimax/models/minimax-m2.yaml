@@ -95,7 +95,6 @@ metadata:
         kind: provider
         name: minimax
     labels:
-        featured: "true"
         family: minimax-m2.7
         source: ollama-library
         source_version: "2026-05-20"

@@ -2,17 +2,18 @@
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
-    name: qwen3-7-plus
-    displayName: Qwen3.7 Plus
+    name: kimi-k2-7-code
+    displayName: Kimi K2.7 Code
     owner:
         kind: provider
-        name: alibaba
+        name: moonshot
     labels:
-        family: qwen
+        featured: "true"
+        family: kimi-k2
         source: models.dev
-        source_version: "2026-06-09"
+        source_version: "2026-07-12"
 spec:
-    family: qwen
+    family: kimi-k2
     capabilities:
         chat: true
         streaming: true
@@ -28,14 +29,16 @@ spec:
             - video
         output:
             - text
-    contextWindowInput: 1000000
-    contextWindowOutput: 16384
-    contextWindowTotal: 1000000
-    maxOutputTokens: 16384
-    knowledgeCutoff: 2025-04
-    releaseDate: "2026-06-02"
+    contextWindowInput: 262144
+    contextWindowOutput: 262144
+    contextWindowTotal: 262144
+    maxOutputTokens: 262144
+    knowledgeCutoff: 2025-01
+    releaseDate: "2026-06-12"
+    tags:
+        - open-weights
     snapshots:
-        - name: qwen3-7-plus
-          releasedAt: "2026-06-02"
-          originalName: qwen3.7-plus
-    pointer: qwen3-7-plus
+        - name: kimi-k2-7-code
+          releasedAt: "2026-06-12"
+          originalName: kimi-k2.7-code
+    pointer: kimi-k2-7-code

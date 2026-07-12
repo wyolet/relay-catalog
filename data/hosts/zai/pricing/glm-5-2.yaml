@@ -2,25 +2,25 @@
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
-    name: alibaba-qwen3-7-max
-    displayName: qwen3-7-max pricing
+    name: zai-glm-5-2
+    displayName: glm-5-2 pricing
     owner:
         kind: host
-        id: alibaba
+        id: zai
 spec:
     currency: USD
     targetModels:
-        - qwen3-7-max
+        - glm-5-2
     rates:
         - meter: tokens.cache_creation
           unit: per_million
-          amount: 3.125
+          amount: 0
         - meter: tokens.cache_read
           unit: per_million
-          amount: 0.5
+          amount: 0.26
         - meter: tokens.input
           unit: per_million
-          amount: 2.5
+          amount: 1.4
         - meter: tokens.output
           unit: per_million
-          amount: 7.5
+          amount: 4.4

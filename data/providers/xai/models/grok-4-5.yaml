@@ -8,6 +8,7 @@ metadata:
         kind: provider
         name: xai
     labels:
+        featured: "true"
         family: grok
         source: models.dev
         source_version: "2026-07-12"

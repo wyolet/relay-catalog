@@ -1,13 +1,12 @@
-# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: HostBinding
 metadata:
-  name: qwen3-7-max-on-alibaba
-  displayName: qwen3-7-max via alibaba
+    name: qwen3-7-max-on-alibaba
+    displayName: qwen3-7-max via alibaba
 spec:
-  model: qwen3-7-max
-  host: alibaba
-  adapter: openai
-  enabled: true
-  snapshots:
-  - qwen3-7-max
+    model: qwen3-7-max
+    host: alibaba
+    adapter: openai
+    enabled: true
+    snapshots:
+        - qwen3-7-max
