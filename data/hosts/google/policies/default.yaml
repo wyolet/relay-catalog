@@ -1,0 +1,10 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+  name: google-default
+  displayName: Google Gemini API default
+  description: "Gemini API rate limits are per-project and tier-dependent; Google publishes the exact RPM/TPM only in the authenticated AI Studio dashboard (aistudio.google.com/rate-limit). Anchor policy without relay-side caps — set your own after checking the dashboard. Per ai.google.dev/gemini-api/docs/rate-limits, 2026-07-12."
+  owner:
+    kind: host
+    name: google
+spec: {}

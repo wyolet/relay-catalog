@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: meta-free-rl
+  displayName: Meta Model API Free rate limits
+  description: "Meta Model API Free tier: 60 RPM, 2M TPM, applied per team (all keys share one quota). Per dev.meta.ai/docs/getting-started/pricing-rate-limits, 2026-07-12."
+  owner:
+    kind: host
+    name: meta
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 60
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 2000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+  name: meta-free
+  displayName: Meta Model API Free
+  owner:
+    kind: host
+    name: meta
+spec:
+  rateLimit: meta-free-rl

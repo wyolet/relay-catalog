@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: meta-paid-rl
+  displayName: Meta Model API Paid rate limits
+  description: "Meta Model API Paid tier: 3,000 RPM, 4M TPM, applied per team. Per dev.meta.ai/docs/getting-started/pricing-rate-limits, 2026-07-12."
+  owner:
+    kind: host
+    name: meta
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 3000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 4000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+  name: meta-paid
+  displayName: Meta Model API Paid
+  owner:
+    kind: host
+    name: meta
+spec:
+  rateLimit: meta-paid-rl

@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: xiaomi-default-rl
+  displayName: Xiaomi MiMo default rate limits
+  description: "Xiaomi MiMo flat default for text models (mimo-v2.5/-pro): 100 RPM, 10M TPM, summed across all API keys of one account per model. No tier ladder documented. Per mimo.mi.com/docs/en-US/api/guidance/rate-limit, 2026-07-12."
+  owner:
+    kind: host
+    name: xiaomi
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 100
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 10000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+  name: xiaomi-default
+  displayName: Xiaomi MiMo default
+  owner:
+    kind: host
+    name: xiaomi
+spec:
+  rateLimit: xiaomi-default-rl

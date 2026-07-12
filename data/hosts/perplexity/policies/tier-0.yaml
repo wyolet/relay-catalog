@@ -1,0 +1,27 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: perplexity-tier-0-rl
+  displayName: Perplexity Tier 0 rate limits
+  description: "Perplexity Sonar API tier 0 ($0 cumulative spend): 50 RPM for sonar/sonar-pro. No TPM limit documented. Tier 5 ($5,000+) keeps the same RPM for these models. Per docs.perplexity.ai/docs/admin/rate-limits-usage-tiers, 2026-07-12."
+  owner:
+    kind: host
+    name: perplexity
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 50
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+  name: perplexity-tier-0
+  displayName: Perplexity Tier 0
+  owner:
+    kind: host
+    name: perplexity
+spec:
+  rateLimit: perplexity-tier-0-rl

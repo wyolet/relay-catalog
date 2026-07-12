@@ -1,0 +1,31 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: stepfun-v4-rl
+  displayName: StepFun V4 rate limits
+  description: "StepFun V4 (¥5,000 cumulative recharge): 20,000 RPM, 50M TPM. Pay-as-you-go API only; Step Plan subscriptions are quota-managed separately. Per platform.stepfun.com/docs/zh/guides/pricing/details, 2026-07-12."
+  owner:
+    kind: host
+    name: stepfun
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 20000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 50000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+  name: stepfun-v4
+  displayName: StepFun V4
+  owner:
+    kind: host
+    name: stepfun
+spec:
+  rateLimit: stepfun-v4-rl

@@ -1,0 +1,10 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+  name: mistral-default
+  displayName: Mistral La Plateforme default
+  description: "Mistral documents its tier ladder (Free, then Scale tiers unlocked at $20/$100/$500 cumulative billing) but publishes the actual RPS/TPM only in the authenticated admin console (admin.mistral.ai/plateforme/limits). Anchor policy without relay-side caps. Per docs.mistral.ai/admin/user-management-finops/tier, 2026-07-12."
+  owner:
+    kind: host
+    name: mistral
+spec: {}
