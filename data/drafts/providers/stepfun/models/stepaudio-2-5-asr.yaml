@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: stepaudio-2-5-asr
+    displayName: StepAudio 2.5 ASR
+    owner:
+        kind: provider
+        name: stepfun
+    labels:
+        family: step
+        source: models.dev
+        source_version: "2026-07-12"
+spec:
+    family: step
+    capabilities:
+        chat: true
+        streaming: true
+        audio: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - audio
+        output:
+            - text
+    releaseDate: "2026-04-24"
+    enabled: true
+    snapshots:
+        - name: stepaudio-2-5-asr
+          releasedAt: "2026-04-24"
+          originalName: stepaudio-2.5-asr
+    pointer: stepaudio-2-5-asr

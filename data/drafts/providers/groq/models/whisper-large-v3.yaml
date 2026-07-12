@@ -2,14 +2,14 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: whisper-large-v3
-    displayName: Whisper Large V3
+    displayName: Whisper
     owner:
         kind: provider
         name: groq
     labels:
         family: whisper
         source: models.dev
-        source_version: "2026-06-09"
+        source_version: "2026-07-12"
 spec:
     family: whisper
     capabilities:
@@ -23,11 +23,6 @@ spec:
             - audio
         output:
             - text
-    contextWindowInput: 448
-    contextWindowOutput: 448
-    contextWindowTotal: 448
-    maxOutputTokens: 448
-    knowledgeCutoff: 2023-09
     releaseDate: "2023-09-01"
     tags:
         - open-weights

@@ -2,14 +2,14 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: meta-llama-llama-prompt-guard-2-86m
-    displayName: Llama Prompt Guard 2 86M
+    displayName: Prompt Guard 2 86M
     owner:
         kind: provider
         name: groq
     labels:
         family: llama
         source: models.dev
-        source_version: "2026-06-09"
+        source_version: "2026-07-12"
 spec:
     family: llama
     capabilities:
@@ -25,13 +25,12 @@ spec:
     contextWindowOutput: 512
     contextWindowTotal: 512
     maxOutputTokens: 512
-    knowledgeCutoff: 2024-10
-    releaseDate: "2024-10-01"
+    releaseDate: "2025-05-29"
     tags:
         - open-weights
     enabled: true
     snapshots:
         - name: meta-llama-llama-prompt-guard-2-86m
-          releasedAt: "2024-10-01"
+          releasedAt: "2025-05-29"
           originalName: meta-llama/llama-prompt-guard-2-86m
     pointer: meta-llama-llama-prompt-guard-2-86m

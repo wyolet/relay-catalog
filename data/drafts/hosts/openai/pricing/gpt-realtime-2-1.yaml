@@ -1,0 +1,29 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: openai-gpt-realtime-2-1
+    displayName: gpt-realtime-2-1 pricing
+    owner:
+        kind: host
+        id: openai
+spec:
+    currency: USD
+    targetModels:
+        - gpt-realtime-2-1
+    rates:
+        - meter: tokens.audio_input
+          unit: per_million
+          amount: 32
+        - meter: tokens.audio_output
+          unit: per_million
+          amount: 64
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.4
+        - meter: tokens.input
+          unit: per_million
+          amount: 4
+        - meter: tokens.output
+          unit: per_million
+          amount: 24
+    enabled: true

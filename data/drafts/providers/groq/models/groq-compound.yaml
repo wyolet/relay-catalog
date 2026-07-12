@@ -9,14 +9,12 @@ metadata:
     labels:
         family: groq
         source: models.dev
-        source_version: "2026-06-09"
+        source_version: "2026-07-12"
 spec:
     family: groq
     capabilities:
         chat: true
         streaming: true
-        tools: true
-        reasoning: true
         systemMessages: true
     modalities:
         input:
@@ -27,7 +25,6 @@ spec:
     contextWindowOutput: 8192
     contextWindowTotal: 131072
     maxOutputTokens: 8192
-    knowledgeCutoff: "2025-09-04"
     releaseDate: "2025-09-04"
     enabled: true
     snapshots:

@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: moonshotai-kimi-k2-7-code-highspeed
+    displayName: kimi-k2-7-code-highspeed pricing
+    owner:
+        kind: host
+        id: moonshotai
+spec:
+    currency: USD
+    targetModels:
+        - kimi-k2-7-code-highspeed
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.38
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.9
+        - meter: tokens.output
+          unit: per_million
+          amount: 8
+    enabled: true

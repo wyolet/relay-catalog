@@ -9,14 +9,13 @@ metadata:
     labels:
         family: gpt-oss
         source: models.dev
-        source_version: "2026-06-09"
+        source_version: "2026-07-12"
 spec:
     family: gpt-oss
     capabilities:
         chat: true
         streaming: true
         tools: true
-        promptCache: true
         reasoning: true
         systemMessages: true
     modalities:
@@ -28,12 +27,12 @@ spec:
     contextWindowOutput: 65536
     contextWindowTotal: 131072
     maxOutputTokens: 65536
-    releaseDate: "2025-03-05"
+    releaseDate: "2025-10-29"
     tags:
         - open-weights
     enabled: true
     snapshots:
         - name: openai-gpt-oss-safeguard-20b
-          releasedAt: "2025-03-05"
+          releasedAt: "2025-10-29"
           originalName: openai/gpt-oss-safeguard-20b
     pointer: openai-gpt-oss-safeguard-20b

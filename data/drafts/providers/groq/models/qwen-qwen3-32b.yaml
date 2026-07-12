@@ -1,0 +1,38 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen-qwen3-32b
+    displayName: Qwen3-32B
+    owner:
+        kind: provider
+        name: groq
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-07-12"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 131072
+    contextWindowOutput: 40960
+    contextWindowTotal: 131072
+    maxOutputTokens: 40960
+    releaseDate: "2025-06-11"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: qwen-qwen3-32b
+          releasedAt: "2025-06-11"
+          originalName: qwen/qwen3-32b
+    pointer: qwen-qwen3-32b

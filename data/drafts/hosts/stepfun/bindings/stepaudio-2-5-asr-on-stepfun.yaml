@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: stepaudio-2-5-asr-on-stepfun
+    displayName: stepaudio-2-5-asr via stepfun
+spec:
+    model: stepaudio-2-5-asr
+    host: stepfun
+    adapter: openai
+    enabled: true
+    snapshots:
+        - stepaudio-2-5-asr

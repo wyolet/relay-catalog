@@ -1,0 +1,42 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-5-2-codex
+    displayName: GPT-5.2 Codex
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        family: gpt-codex
+        source: models.dev
+        source_version: "2026-07-12"
+spec:
+    family: gpt-codex
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 272000
+    contextWindowOutput: 128000
+    contextWindowTotal: 400000
+    maxOutputTokens: 128000
+    knowledgeCutoff: "2025-08-31"
+    releaseDate: "2025-12-11"
+    enabled: true
+    snapshots:
+        - name: gpt-5-2-codex
+          releasedAt: "2025-12-11"
+          originalName: gpt-5.2-codex
+    pointer: gpt-5-2-codex

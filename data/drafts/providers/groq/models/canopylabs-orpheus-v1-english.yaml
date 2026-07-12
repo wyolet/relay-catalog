@@ -2,14 +2,14 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: canopylabs-orpheus-v1-english
-    displayName: Orpheus V1 English
+    displayName: Canopy Labs Orpheus V1 English
     owner:
         kind: provider
         name: groq
     labels:
         family: canopylabs
         source: models.dev
-        source_version: "2026-06-09"
+        source_version: "2026-07-12"
 spec:
     family: canopylabs
     capabilities:
@@ -26,7 +26,6 @@ spec:
     contextWindowOutput: 50000
     contextWindowTotal: 4000
     maxOutputTokens: 50000
-    knowledgeCutoff: "2025-12-19"
     releaseDate: "2025-12-19"
     enabled: true
     snapshots:

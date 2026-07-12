@@ -9,7 +9,7 @@ metadata:
     labels:
         family: o-mini
         source: models.dev
-        source_version: "2026-06-09"
+        source_version: "2026-07-12"
 spec:
     family: o-mini
     capabilities:

@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: mimo-v2-5-pro-ultraspeed
+    displayName: MiMo-V2.5-Pro-UltraSpeed
+    owner:
+        kind: provider
+        name: xiaomi
+    labels:
+        family: mimo
+        source: models.dev
+        source_version: "2026-07-12"
+spec:
+    family: mimo
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 131072
+    contextWindowTotal: 1048576
+    maxOutputTokens: 131072
+    knowledgeCutoff: 2024-12
+    releaseDate: "2026-06-08"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: mimo-v2-5-pro-ultraspeed
+          releasedAt: "2026-06-08"
+          originalName: mimo-v2.5-pro-ultraspeed
+    pointer: mimo-v2-5-pro-ultraspeed

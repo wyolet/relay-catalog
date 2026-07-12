@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: mimo-v2-5-pro-ultraspeed-on-xiaomi
+    displayName: mimo-v2-5-pro-ultraspeed via xiaomi
+spec:
+    model: mimo-v2-5-pro-ultraspeed
+    host: xiaomi
+    adapter: openai
+    enabled: true
+    snapshots:
+        - mimo-v2-5-pro-ultraspeed

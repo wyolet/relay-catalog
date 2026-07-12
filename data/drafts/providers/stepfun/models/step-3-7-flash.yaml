@@ -1,0 +1,40 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: step-3-7-flash
+    displayName: Step 3.7 Flash
+    owner:
+        kind: provider
+        name: stepfun
+    labels:
+        source: models.dev
+        source_version: "2026-07-12"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 256000
+    contextWindowOutput: 256000
+    contextWindowTotal: 256000
+    maxOutputTokens: 256000
+    knowledgeCutoff: "2026-01-01"
+    releaseDate: "2026-05-29"
+    tags:
+        - open-weights
+    enabled: true
+    snapshots:
+        - name: step-3-7-flash
+          releasedAt: "2026-05-29"
+          originalName: step-3.7-flash
+    pointer: step-3-7-flash

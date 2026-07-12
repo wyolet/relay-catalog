@@ -1,36 +1,38 @@
-# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
     name: deepseek-chat
+    displayName: DeepSeek Chat
     owner:
         kind: provider
         name: deepseek
     labels:
         family: deepseek
-        source: litellm
-        source_version: "2026-05-20"
+        source: models.dev
+        source_version: "2026-07-12"
 spec:
-    hosts:
-        - host: deepseek
-          adapter: openai
     family: deepseek
     capabilities:
         chat: true
         streaming: true
         tools: true
-        parallelTools: true
         promptCache: true
-        structuredOutputs: true
         systemMessages: true
     modalities:
         input:
             - text
         output:
             - text
-    contextWindowInput: 131072
-    contextWindowOutput: 8192
-    contextWindowTotal: 131072
+    contextWindowInput: 1000000
+    contextWindowOutput: 384000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 384000
+    knowledgeCutoff: 2025-09
+    releaseDate: "2025-12-01"
+    tags:
+        - open-weights
+    enabled: true
     snapshots:
         - name: deepseek-chat
+          releasedAt: "2025-12-01"
     pointer: deepseek-chat
