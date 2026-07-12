@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: openai-gpt-5-6-luna
+    displayName: GPT-5.6 Luna pricing
+    owner:
+        kind: host
+        id: openai
+spec:
+    currency: USD
+    targetModels:
+        - gpt-5-6-luna
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 1.25
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 2.5
+          aboveTokens: 272000
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.2
+          aboveTokens: 272000
+        - meter: tokens.input
+          unit: per_million
+          amount: 1
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+          aboveTokens: 272000
+        - meter: tokens.output
+          unit: per_million
+          amount: 6
+        - meter: tokens.output
+          unit: per_million
+          amount: 9
+          aboveTokens: 272000
