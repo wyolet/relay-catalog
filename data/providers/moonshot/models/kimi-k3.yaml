@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kimi-k3
+    displayName: Kimi K3
+    description: Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work.
+    owner:
+        kind: provider
+        name: moonshot
+    labels:
+        featured: "true"
+        family: kimi-k3
+        source: models.dev
+        source_version: "2026-07-24"
+spec:
+    family: kimi-k3
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 131072
+    contextWindowTotal: 1048576
+    maxOutputTokens: 131072
+    releaseDate: "2026-07-16"
+    tags:
+        - open-weights
+    snapshots:
+        - name: kimi-k3
+          releasedAt: "2026-07-16"
+    pointer: kimi-k3
