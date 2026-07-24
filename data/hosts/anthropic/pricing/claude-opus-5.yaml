@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: anthropic-claude-opus-5
+    displayName: Claude Opus 5 pricing
+    owner:
+        kind: host
+        id: anthropic
+spec:
+    currency: USD
+    targetModels:
+        - claude-opus-5
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 5
+        - meter: tokens.output
+          unit: per_million
+          amount: 25
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 6.25
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.5
