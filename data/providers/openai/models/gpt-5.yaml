@@ -14,6 +14,9 @@ metadata:
 spec:
     family: gpt
     capabilities:
+        unsupportedParams:
+            - temperature
+            - top_p
         chat: true
         streaming: true
         tools: true
