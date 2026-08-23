@@ -8,7 +8,6 @@ metadata:
         kind: provider
         name: zhipuai
     labels:
-        featured: "true"
         family: glm
         source: models.dev
         source_version: "2026-07-12"

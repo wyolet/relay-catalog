@@ -2,15 +2,17 @@
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
-    name: grok-4-5
-    displayName: Grok 4.5
+    name: grok-4-6
+    displayName: Grok 4.6
+    description: xAI's frontier model for long-running agents, coding, knowledge work, and visual projects.
     owner:
         kind: provider
         name: xai
     labels:
+        featured: "true"
         family: grok
         source: models.dev
-        source_version: "2026-07-12"
+        source_version: "2026-08-23"
 spec:
     family: grok
     capabilities:
@@ -20,6 +22,7 @@ spec:
         vision: true
         promptCache: true
         reasoning: true
+        structuredOutputs: true
         fileInput: true
         systemMessages: true
     modalities:
@@ -33,9 +36,10 @@ spec:
     contextWindowOutput: 500000
     contextWindowTotal: 500000
     maxOutputTokens: 500000
-    releaseDate: "2026-07-08"
+    knowledgeCutoff: "2026-02"
+    releaseDate: "2026-08-12"
     snapshots:
-        - name: grok-4-5
-          releasedAt: "2026-07-08"
-          originalName: grok-4.5
-    pointer: grok-4-5
+        - name: grok-4-6
+          releasedAt: "2026-08-12"
+          originalName: grok-4.6
+    pointer: grok-4-6

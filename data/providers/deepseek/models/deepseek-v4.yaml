@@ -27,8 +27,13 @@ spec:
     snapshots:
         - name: deepseek-v4-flash-cloud
           originalName: deepseek-v4-flash:cloud
+        - name: deepseek-v4-flash-0731
+          originalName: deepseek-v4-flash:0731
+          releasedAt: "2026-07-31"
         - name: deepseek-v4-flash-free
           originalName: deepseek-v4-flash-free
+        - name: deepseek-v4-flash
+          originalName: deepseek-v4-flash
     pointer: deepseek-v4-flash-cloud
 ---
 apiVersion: relay.wyolet.dev/v1alpha2
@@ -59,4 +64,6 @@ spec:
     snapshots:
         - name: deepseek-v4-pro-cloud
           originalName: deepseek-v4-pro:cloud
+        - name: deepseek-v4-pro
+          originalName: deepseek-v4-pro
     pointer: deepseek-v4-pro-cloud

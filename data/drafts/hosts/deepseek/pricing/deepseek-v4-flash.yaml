@@ -1,0 +1,23 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: deepseek-deepseek-v4-flash
+    displayName: deepseek-v4-flash pricing
+    owner:
+        kind: host
+        id: deepseek
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-v4-flash
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.0028
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.14
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.28
+    enabled: true

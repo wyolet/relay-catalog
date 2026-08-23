@@ -3,6 +3,11 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: Host
 metadata:
     name: deepseek
-    displayName: Deepseek
+    displayName: DeepSeek
+    labels:
+        source: models.dev
 spec:
-    baseURL: ""
+    baseURL: https://api.deepseek.com
+    pricingStrategies:
+        - api
+    docsURL: https://api-docs.deepseek.com

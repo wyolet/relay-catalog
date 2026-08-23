@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: glm-5-3-on-zai
+    displayName: glm-5-3 via zai
+spec:
+    model: glm-5-3
+    host: zai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - glm-5-3

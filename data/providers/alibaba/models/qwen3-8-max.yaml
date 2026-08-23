@@ -2,36 +2,44 @@
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
-    name: qwen3-7-max
-    displayName: Qwen3.7 Max
+    name: qwen3-8-max
+    displayName: Qwen3.8 Max
+    description: 2.4-trillion-parameter MoE flagship for coding, professional work, multimodal understanding, and long-horizon agentic workflows.
     owner:
         kind: provider
         name: alibaba
     labels:
+        featured: "true"
         family: qwen
         source: models.dev
-        source_version: "2026-06-09"
+        source_version: "2026-08-23"
 spec:
     family: qwen
     capabilities:
         chat: true
         streaming: true
         tools: true
+        vision: true
         promptCache: true
         reasoning: true
+        structuredOutputs: true
+        fileInput: true
         systemMessages: true
     modalities:
         input:
             - text
+            - image
+            - video
+            - pdf
         output:
             - text
     contextWindowInput: 1000000
-    contextWindowOutput: 65536
+    contextWindowOutput: 131072
     contextWindowTotal: 1000000
-    maxOutputTokens: 65536
-    releaseDate: "2026-05-21"
+    maxOutputTokens: 131072
+    releaseDate: "2026-08-03"
     snapshots:
-        - name: qwen3-7-max
-          releasedAt: "2026-05-21"
-          originalName: qwen3.7-max
-    pointer: qwen3-7-max
+        - name: qwen3-8-max
+          releasedAt: "2026-08-03"
+          originalName: qwen3.8-max
+    pointer: qwen3-8-max

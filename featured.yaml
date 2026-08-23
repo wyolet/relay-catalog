@@ -2,8 +2,8 @@ description: 'Featured models — generated index of Model metadata.labels.featu
 providers:
     - provider: alibaba
       models:
-        - qwen3-7-max
         - qwen3-7-plus
+        - qwen3-8-max
     - provider: anthropic
       models:
         - claude-fable-5
@@ -17,7 +17,7 @@ providers:
         - deepseek-v4-pro
     - provider: google
       models:
-        - gemini-3-6-flash
+        - gemini-3-7-flash
     - provider: minimax
       models:
         - minimax-m3
@@ -36,7 +36,7 @@ providers:
         - gpt-5-6-terra
     - provider: xai
       models:
-        - grok-4-5
+        - grok-4-6
     - provider: zhipuai
       models:
-        - glm-5-2
+        - glm-5-3
