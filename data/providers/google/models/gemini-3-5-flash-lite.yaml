@@ -44,6 +44,9 @@ spec:
           originalName: gemini-3.5-flash-lite
           releasedAt: "2026-07-21"
     pointer: gemini-3-5-flash-lite
+    # Google's rolling "latest" name; sent upstream verbatim.
+    aliases:
+        - gemini-flash-lite-latest
     tags:
         - cost-optimized
         - multimodal

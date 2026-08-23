@@ -8,4 +8,4 @@ spec:
     model: deepseek-v4-flash
     host: ollama-cloud
     adapter: openai
-    snapshots: [deepseek-v4-flash-cloud]
+    snapshots: [deepseek-v4-flash-cloud, deepseek-v4-flash-0731]

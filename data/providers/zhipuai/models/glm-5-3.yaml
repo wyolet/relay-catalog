@@ -2,23 +2,26 @@
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
-    name: qwen3-7-max
-    displayName: Qwen3.7 Max
+    name: glm-5-3
+    displayName: GLM-5.3
+    description: Flagship GLM model for long-horizon coding, agents, and complex project delivery.
     owner:
         kind: provider
-        name: alibaba
+        name: zhipuai
     labels:
-        family: qwen
+        featured: "true"
+        family: glm
         source: models.dev
-        source_version: "2026-06-09"
+        source_version: "2026-08-23"
 spec:
-    family: qwen
+    family: glm
     capabilities:
         chat: true
         streaming: true
         tools: true
         promptCache: true
         reasoning: true
+        structuredOutputs: true
         systemMessages: true
     modalities:
         input:
@@ -26,12 +29,12 @@ spec:
         output:
             - text
     contextWindowInput: 1000000
-    contextWindowOutput: 65536
+    contextWindowOutput: 131072
     contextWindowTotal: 1000000
-    maxOutputTokens: 65536
-    releaseDate: "2026-05-21"
+    maxOutputTokens: 131072
+    releaseDate: "2026-08-14"
     snapshots:
-        - name: qwen3-7-max
-          releasedAt: "2026-05-21"
-          originalName: qwen3.7-max
-    pointer: qwen3-7-max
+        - name: glm-5-3
+          releasedAt: "2026-08-14"
+          originalName: glm-5.3
+    pointer: glm-5-3
