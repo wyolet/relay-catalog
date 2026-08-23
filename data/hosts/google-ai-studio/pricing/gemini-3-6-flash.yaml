@@ -11,16 +11,17 @@ spec:
     currency: USD
     targetModels:
         - gemini-3-6-flash
+    # Promotional rate through 2026-12-31; doubles (1.50/7.50/0.15) from 2027-01-01.
     rates:
         - meter: tokens.input
           unit: per_million
-          amount: 1.50
+          amount: 0.75
         - meter: tokens.audio_input
           unit: per_million
-          amount: 1.50
+          amount: 0.75
         - meter: tokens.output
           unit: per_million
-          amount: 7.50
+          amount: 3.75
         - meter: tokens.cache_read
           unit: per_million
-          amount: 0.15
+          amount: 0.075
