@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: glm-5-3-flash
+    displayName: GLM-5.3-Flash
+    description: Native multimodal GLM model for efficient coding and long-horizon agent tasks.
+    owner:
+        kind: provider
+        name: zhipuai
+    labels:
+        family: glm
+        source: models.dev
+        source_version: "2026-09-02"
+spec:
+    family: glm
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+            - pdf
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 131072
+    contextWindowTotal: 1000000
+    maxOutputTokens: 131072
+    releaseDate: "2026-08-26"
+    snapshots:
+        - name: glm-5-3-flash
+          releasedAt: "2026-08-26"
+          originalName: glm-5.3-flash
+    pointer: glm-5-3-flash

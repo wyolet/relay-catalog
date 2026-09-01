@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-8-flash
+    displayName: Qwen3.8 Flash
+    description: Qwen vision-language model for visual reasoning, documents, and agent tasks.
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-09-02"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 131072
+    contextWindowTotal: 1000000
+    maxOutputTokens: 131072
+    releaseDate: "2026-08-26"
+    snapshots:
+        - name: qwen3-8-flash
+          releasedAt: "2026-08-26"
+          originalName: qwen3.8-flash
+    pointer: qwen3-8-flash
