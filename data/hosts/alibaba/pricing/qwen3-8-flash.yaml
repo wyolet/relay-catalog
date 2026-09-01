@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: alibaba-qwen3-8-flash
+    displayName: qwen3-8-flash pricing
+    owner:
+        kind: host
+        id: alibaba
+spec:
+    currency: USD
+    targetModels:
+        - qwen3-8-flash
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.016
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.15
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.47
