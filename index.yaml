@@ -5,4 +5,4 @@
 # release-index workflow on tag push; do not edit by hand.
 channels:
     v1alpha2:
-        latest: v0.1.4
+        latest: v0.1.5
