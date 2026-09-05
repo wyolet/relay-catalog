@@ -2,44 +2,45 @@
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
-    name: gpt-5-5
-    displayName: GPT-5.5
+    name: gpt-6-astra
+    displayName: GPT-6 Astra
+    description: OpenAI's most capable model for complex reasoning, coding, computer use, research, and document creation.
     owner:
         kind: provider
         name: openai
     labels:
-        family: gpt
-        source: litellm
-        source_version: "2026-05-20"
+        featured: "true"
+        family: gpt-astra
+        source: models.dev
+        source_version: "2026-09-05"
 spec:
-    family: gpt
+    family: gpt-astra
     capabilities:
+        unsupportedParams:
+            - temperature
+            - top_p
         chat: true
         streaming: true
         tools: true
-        parallelTools: true
         vision: true
         promptCache: true
         reasoning: true
         structuredOutputs: true
-        batch: true
-        webSearch: true
         fileInput: true
         systemMessages: true
     modalities:
         input:
             - text
             - image
-            - file
+            - pdf
         output:
             - text
-    contextWindowInput: 1050000
+    contextWindowInput: 922000
     contextWindowOutput: 128000
     contextWindowTotal: 1050000
+    maxOutputTokens: 128000
+    releaseDate: "2026-09-04"
     snapshots:
-        - name: gpt-5-5
-          originalName: gpt-5.5
-        - name: gpt-5-5-2026-04-23
-          releasedAt: "2026-04-23"
-          originalName: gpt-5.5-2026-04-23
-    pointer: gpt-5-5
+        - name: gpt-6-astra
+          releasedAt: "2026-09-04"
+    pointer: gpt-6-astra

@@ -2,18 +2,19 @@
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
-    name: gemini-3-7-flash
-    displayName: Gemini 3.7 Flash
-    description: High-efficiency Gemini model for agentic workflows, coding, and multimodal reasoning.
+    name: gemini-3-8-flash
+    displayName: Gemini 3.8 Flash
+    description: Google's most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows.
     owner:
         kind: provider
         name: google
     labels:
-        family: gemini-3-7-flash
+        featured: "true"
+        family: gemini-3-8-flash
         source: models.dev
-        source_version: "2026-08-23"
+        source_version: "2026-09-05"
 spec:
-    family: gemini-3-7-flash
+    family: gemini-3-8-flash
     capabilities:
         chat: true
         streaming: true
@@ -38,14 +39,17 @@ spec:
             - text
     contextWindowInput: 1048576
     contextWindowOutput: 65536
-    knowledgeCutoff: "2026-03"
-    releaseDate: "2026-08-13"
+    releaseDate: "2026-09-02"
     snapshots:
-        - name: gemini-3-7-flash
-          originalName: gemini-3.7-flash
-          releasedAt: "2026-08-13"
-    pointer: gemini-3-7-flash
+        - name: gemini-3-8-flash
+          originalName: gemini-3.8-flash
+          releasedAt: "2026-09-02"
+    pointer: gemini-3-8-flash
+    # Google's rolling "latest" name; sent upstream verbatim.
+    aliases:
+        - gemini-flash-latest
     tags:
+        - newest
         - multimodal
         - thinking
         - structured-outputs
