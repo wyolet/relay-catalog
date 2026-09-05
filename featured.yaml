@@ -18,7 +18,7 @@ providers:
         - deepseek-v4-pro
     - provider: google
       models:
-        - gemini-3-7-flash
+        - gemini-3-8-flash
     - provider: minimax
       models:
         - minimax-m3
@@ -29,12 +29,12 @@ providers:
         - kimi-k3
     - provider: openai
       models:
-        - gpt-5-5
         - gpt-5-5-pro
         - gpt-5-6
         - gpt-5-6-luna
         - gpt-5-6-sol
         - gpt-5-6-terra
+        - gpt-6-astra
     - provider: xai
       models:
         - grok-4-6
