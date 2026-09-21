@@ -5,7 +5,8 @@ metadata:
     name: cogito-2-1-on-ollama-self
     displayName: "Cogito 2.1 via ollama-self"
 spec:
+    # A signed-in Ollama also proxies the :cloud snapshot through its own local API, alongside the locally pulled tags.
     model: cogito-2-1
     host: ollama-self
     adapter: openai
-    snapshots: [cogito-2-1-latest, cogito-2-1-671b]
+    snapshots: [cogito-2-1-latest, cogito-2-1-671b, cogito-2-1-671b-cloud]

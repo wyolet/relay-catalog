@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: muse-spark-1-3-on-opencode-zen
+    displayName: "Muse Spark 1.3 via opencode-zen"
+spec:
+    model: muse-spark-1-3
+    host: opencode-zen
+    adapter: openai
+    snapshots: [muse-spark-1-3]

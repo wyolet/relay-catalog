@@ -5,7 +5,8 @@ metadata:
     name: qwen3-coder-next-on-ollama-self
     displayName: "Qwen 3 Coder Next via ollama-self"
 spec:
+    # A signed-in Ollama also proxies the :cloud snapshot through its own local API, alongside the locally pulled tags.
     model: qwen3-coder-next
     host: ollama-self
     adapter: openai
-    snapshots: [qwen3-coder-next-latest, qwen3-coder-next-q4-k-m, qwen3-coder-next-q8-0]
+    snapshots: [qwen3-coder-next-latest, qwen3-coder-next-q4-k-m, qwen3-coder-next-q8-0, qwen3-coder-next-cloud]

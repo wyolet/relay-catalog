@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: glm-5-3-flashx-on-zai
+    displayName: glm-5-3-flashx via zai
+spec:
+    model: glm-5-3-flashx
+    host: zai
+    adapter: openai
+    enabled: true
+    snapshots:
+        - glm-5-3-flashx

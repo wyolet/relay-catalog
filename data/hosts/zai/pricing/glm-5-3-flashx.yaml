@@ -2,26 +2,26 @@
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
-    name: zai-glm-5-3-flash
-    displayName: glm-5-3-flash pricing
+    name: zai-glm-5-3-flashx
+    displayName: glm-5-3-flashx pricing
     owner:
         kind: host
         id: zai
 spec:
     currency: USD
     targetModels:
-        - glm-5-3-flash
+        - glm-5-3-flashx
     rates:
-        # Promo rate ended; matches models.dev + Z.AI pricing page as of 2026-09-21.
+        # Cache writes are free for a limited time on Z.AI's published rate card.
         - meter: tokens.cache_creation
           unit: per_million
           amount: 0
         - meter: tokens.cache_read
           unit: per_million
-          amount: 0.03
+          amount: 0.075
         - meter: tokens.input
           unit: per_million
-          amount: 0.15
+          amount: 0.37
         - meter: tokens.output
           unit: per_million
-          amount: 0.5
+          amount: 1.25
