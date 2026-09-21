@@ -14,7 +14,7 @@ providers:
         - claude-sonnet-4-6
     - provider: deepseek
       models:
-        - deepseek-v4-flash
+        - deepseek-v4-1-flash
         - deepseek-v4-pro
     - provider: google
       models:

@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: deepseek-v4-1-flash-on-ollama-self
+    displayName: "DeepSeek V4.1 Flash via ollama-self"
+spec:
+    # A signed-in Ollama proxies the :cloud snapshot through its own local API, so the keyless self-hosted host serves it too.
+    model: deepseek-v4-1-flash
+    host: ollama-self
+    adapter: openai
+    snapshots: [deepseek-v4-1-flash-cloud]
