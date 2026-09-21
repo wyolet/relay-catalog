@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: muse-spark-1-3
+    displayName: Muse Spark 1.3
+    description: Multimodal reasoning model for long-running agentic, multi-agent, and coding workflows, with better long-horizon agent collaboration and instruction following than Muse Spark 1.2.
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: muse
+        source: models.dev
+        source_version: "2026-09-21"
+spec:
+    family: muse
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        fileInput: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+            - pdf
+            - audio
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 131072
+    contextWindowTotal: 1048576
+    maxOutputTokens: 131072
+    releaseDate: "2026-09-02"
+    snapshots:
+        - name: muse-spark-1-3
+          releasedAt: "2026-09-02"
+          originalName: muse-spark-1.3
+    pointer: muse-spark-1-3
