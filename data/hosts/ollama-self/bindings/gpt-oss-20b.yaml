@@ -5,7 +5,8 @@ metadata:
     name: gpt-oss-20b-on-ollama-self
     displayName: "GPT OSS 20B via ollama-self"
 spec:
+    # A signed-in Ollama also proxies the :cloud snapshot through its own local API, alongside the locally pulled tags.
     model: gpt-oss-20b
     host: ollama-self
     adapter: openai
-    snapshots: [gpt-oss-20b]
+    snapshots: [gpt-oss-20b, gpt-oss-20b-cloud]

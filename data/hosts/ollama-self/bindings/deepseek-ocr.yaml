@@ -5,7 +5,8 @@ metadata:
     name: deepseek-ocr-on-ollama-self
     displayName: "DeepSeek OCR via ollama-self"
 spec:
+    # A signed-in Ollama also proxies the :cloud snapshot through its own local API, alongside the locally pulled tags.
     model: deepseek-ocr
     host: ollama-self
     adapter: openai
-    snapshots: [deepseek-ocr-latest]
+    snapshots: [deepseek-ocr-latest, deepseek-ocr-cloud]

@@ -5,7 +5,8 @@ metadata:
     name: qwen3-5-397b-on-ollama-self
     displayName: "Qwen 3.5 397B via ollama-self"
 spec:
+    # A signed-in Ollama also proxies the :cloud snapshot through its own local API, alongside the locally pulled tags.
     model: qwen3-5-397b
     host: ollama-self
     adapter: openai
-    snapshots: [qwen3-5-397b]
+    snapshots: [qwen3-5-397b, qwen3-5-397b-cloud]

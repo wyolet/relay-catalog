@@ -5,7 +5,8 @@ metadata:
     name: gemma4-31b-on-ollama-self
     displayName: "Gemma 4 31B via ollama-self"
 spec:
+    # A signed-in Ollama also proxies the :cloud snapshot through its own local API, alongside the locally pulled tags.
     model: gemma4-31b
     host: ollama-self
     adapter: openai
-    snapshots: [gemma4-31b]
+    snapshots: [gemma4-31b, gemma4-31b-cloud]

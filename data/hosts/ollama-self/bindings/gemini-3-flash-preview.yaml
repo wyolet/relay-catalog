@@ -5,7 +5,8 @@ metadata:
     name: gemini-3-flash-preview-on-ollama-self
     displayName: "Gemini 3 Flash (Preview) via ollama-self"
 spec:
+    # A signed-in Ollama also proxies the :cloud snapshot through its own local API, alongside the locally pulled tags.
     model: gemini-3-flash-preview
     host: ollama-self
     adapter: openai
-    snapshots: [gemini-3-flash-preview-latest]
+    snapshots: [gemini-3-flash-preview-latest, gemini-3-flash-preview-cloud]

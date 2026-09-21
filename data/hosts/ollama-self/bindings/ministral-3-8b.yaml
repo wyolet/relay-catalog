@@ -5,7 +5,8 @@ metadata:
     name: ministral-3-8b-on-ollama-self
     displayName: "Ministral 3 8B via ollama-self"
 spec:
+    # A signed-in Ollama also proxies the :cloud snapshot through its own local API, alongside the locally pulled tags.
     model: ministral-3-8b
     host: ollama-self
     adapter: openai
-    snapshots: [ministral-3-8b]
+    snapshots: [ministral-3-8b, ministral-3-8b-cloud]

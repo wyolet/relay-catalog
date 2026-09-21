@@ -5,7 +5,8 @@ metadata:
     name: glm-ocr-on-ollama-self
     displayName: "GLM OCR via ollama-self"
 spec:
+    # A signed-in Ollama also proxies the :cloud snapshot through its own local API, alongside the locally pulled tags.
     model: glm-ocr
     host: ollama-self
     adapter: openai
-    snapshots: [glm-ocr-latest]
+    snapshots: [glm-ocr-latest, glm-ocr-cloud]

@@ -5,7 +5,8 @@ metadata:
     name: nemotron-3-super-on-ollama-self
     displayName: "Nemotron 3 Super via ollama-self"
 spec:
+    # A signed-in Ollama also proxies the :cloud snapshot through its own local API, alongside the locally pulled tags.
     model: nemotron-3-super
     host: ollama-self
     adapter: openai
-    snapshots: [nemotron-3-super-latest, nemotron-3-super-120b]
+    snapshots: [nemotron-3-super-latest, nemotron-3-super-120b, nemotron-3-super-cloud]

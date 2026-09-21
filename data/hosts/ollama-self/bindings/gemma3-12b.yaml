@@ -5,7 +5,8 @@ metadata:
     name: gemma3-12b-on-ollama-self
     displayName: "Gemma 3 12B via ollama-self"
 spec:
+    # A signed-in Ollama also proxies the :cloud snapshot through its own local API, alongside the locally pulled tags.
     model: gemma3-12b
     host: ollama-self
     adapter: openai
-    snapshots: [gemma3-12b]
+    snapshots: [gemma3-12b, gemma3-12b-cloud]
