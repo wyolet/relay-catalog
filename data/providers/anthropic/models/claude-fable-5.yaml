@@ -8,7 +8,6 @@ metadata:
         kind: provider
         name: anthropic
     labels:
-        featured: "true"
         family: claude
         source: anthropic-docs
         source_version: "2026-06-09"

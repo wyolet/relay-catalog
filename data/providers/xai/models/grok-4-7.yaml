@@ -2,19 +2,19 @@
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
-    name: glm-5-3-flash
-    displayName: GLM-5.3-Flash
-    description: Native multimodal GLM model for efficient coding and long-horizon agent tasks.
+    name: grok-4-7
+    displayName: Grok 4.7
+    description: xAI's frontier model for long-running agents, coding, knowledge work, and visual projects.
     owner:
         kind: provider
-        name: zhipuai
+        name: xai
     labels:
         featured: "true"
-        family: glm
+        family: grok
         source: models.dev
-        source_version: "2026-09-02"
+        source_version: "2026-09-23"
 spec:
-    family: glm
+    family: grok
     capabilities:
         chat: true
         streaming: true
@@ -29,17 +29,19 @@ spec:
         input:
             - text
             - image
-            - video
             - pdf
         output:
             - text
-    contextWindowInput: 1000000
-    contextWindowOutput: 131072
-    contextWindowTotal: 1000000
-    maxOutputTokens: 131072
-    releaseDate: "2026-08-26"
+    contextWindowInput: 500000
+    contextWindowOutput: 500000
+    contextWindowTotal: 500000
+    maxOutputTokens: 500000
+    knowledgeCutoff: "2026-05"
+    releaseDate: "2026-09-21"
     snapshots:
-        - name: glm-5-3-flash
-          releasedAt: "2026-08-26"
-          originalName: glm-5.3-flash
-    pointer: glm-5-3-flash
+        - name: grok-4-7
+          releasedAt: "2026-09-21"
+          originalName: grok-4.7
+    pointer: grok-4-7
+    aliases:
+        - grok-4.7-latest

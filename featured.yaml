@@ -6,11 +6,9 @@ providers:
         - qwen3-8-max
     - provider: anthropic
       models:
-        - claude-fable-5
         - claude-fable-5-1
         - claude-opus-4-6
-        - claude-opus-4-8
-        - claude-opus-5
+        - claude-opus-5-5
         - claude-sonnet-4-6
     - provider: deepseek
       models:
@@ -24,20 +22,19 @@ providers:
         - minimax-m3
     - provider: moonshot
       models:
-        - kimi-k2-7-code
-        - kimi-k2-7-code-highspeed
         - kimi-k3
     - provider: openai
       models:
-        - gpt-5-5-pro
         - gpt-5-6
-        - gpt-5-6-luna
-        - gpt-5-6-sol
         - gpt-5-6-terra
         - gpt-6-astra
+        - gpt-6-luna
+        - gpt-6-sol
     - provider: xai
       models:
         - grok-4-6
+        - grok-4-7
     - provider: zhipuai
       models:
         - glm-5-3
+        - glm-5-3-flash

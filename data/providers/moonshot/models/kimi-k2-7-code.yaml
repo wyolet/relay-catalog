@@ -8,7 +8,6 @@ metadata:
         kind: provider
         name: moonshot
     labels:
-        featured: "true"
         family: kimi-k2
         source: models.dev
         source_version: "2026-07-12"
