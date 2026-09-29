@@ -7,9 +7,8 @@ providers:
     - provider: anthropic
       models:
         - claude-fable-5-1
-        - claude-opus-4-6
         - claude-opus-5-5
-        - claude-sonnet-4-6
+        - claude-sonnet-5-5
     - provider: deepseek
       models:
         - deepseek-v4-1-flash
