@@ -1,0 +1,48 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gpt-6-1-sol
+    displayName: GPT-6.1 Sol
+    description: OpenAI model for complex coding and agentic workflows.
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        featured: "true"
+        family: gpt-sol
+        source: models.dev
+        source_version: "2026-09-29"
+spec:
+    family: gpt-sol
+    capabilities:
+        unsupportedParams:
+            - temperature
+            - top_p
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 922000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1050000
+    maxOutputTokens: 128000
+    knowledgeCutoff: "2026-04-30"
+    releaseDate: "2026-09-29"
+    snapshots:
+        - name: gpt-6-1-sol
+          originalName: gpt-6.1-sol
+          releasedAt: "2026-09-29"
+    pointer: gpt-6-1-sol
