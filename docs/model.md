@@ -43,6 +43,8 @@ Each `hosts[]` entry:
 
 `chat`, `embeddings`, `streaming`, `tools`, `parallelTools`, `vision`, `audio`, `promptCache`, `reasoning`, `jsonMode`, `structuredOutputs`, `batch`, `computerUse`, `webSearch`, `fileInput`, `audioInput`, `audioOutput`, `systemMessages`, `assistantPrefill`.
 
+Two non-boolean fields describe effort control on reasoning models (both require `reasoning: true`). `reasoningEfforts` lists the levels the model accepts, ordered low to high, from `none`, `minimal`, `low`, `medium`, `high`, `xhigh`, `max`; omit it when the model has no effort control. `defaultReasoningEffort` is the level the vendor applies when the request sets none, and must be one of the listed levels. Take both from the vendor's API docs.
+
 ### Modalities
 
 | Field | Type | Description |
