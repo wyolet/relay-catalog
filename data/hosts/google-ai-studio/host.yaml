@@ -9,6 +9,7 @@ metadata:
         kind: system
 spec:
     baseURL: https://generativelanguage.googleapis.com/v1beta/openai
+    path: /chat/completions
     homepageURL: https://ai.google.dev/
     docsURL: https://ai.google.dev/gemini-api/docs/openai
     icon:

@@ -6,7 +6,7 @@ metadata:
     labels:
         source: models.dev
 spec:
-    baseURL: https://api.xiaomimimo.com/v1
+    baseURL: https://api.xiaomimimo.com
     pricingStrategies:
         - api
     docsURL: https://platform.xiaomimimo.com/#/docs

@@ -6,7 +6,7 @@ metadata:
     labels:
         source: models.dev
 spec:
-    baseURL: https://api.stepfun.com/v1
+    baseURL: https://api.stepfun.com
     pricingStrategies:
         - api
     docsURL: https://platform.stepfun.com/docs/zh/overview/concept

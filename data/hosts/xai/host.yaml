@@ -6,7 +6,7 @@ metadata:
     labels:
         source: models.dev
 spec:
-    baseURL: https://api.x.ai/v1
+    baseURL: https://api.x.ai
     pricingStrategies:
         - api
     docsURL: https://docs.x.ai/docs/models
