@@ -26,6 +26,13 @@ spec:
         webSearch: true
         fileInput: true
         systemMessages: true
+        reasoningEfforts:
+            - none
+            - low
+            - medium
+            - high
+            - xhigh
+        defaultReasoningEffort: medium
     modalities:
         input:
             - text
