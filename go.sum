@@ -128,10 +128,10 @@ github.com/tetratelabs/wabin v0.0.0-20230304001439-f6f874872834 h1:ZF+QBjOI+tILZ
 github.com/tetratelabs/wabin v0.0.0-20230304001439-f6f874872834/go.mod h1:m9ymHTgNSEjuxvw8E7WWe4Pl4hZQHXONY8wE6dMLaRk=
 github.com/tetratelabs/wazero v1.11.0 h1:+gKemEuKCTevU4d7ZTzlsvgd1uaToIDtlQlmNbwqYhA=
 github.com/tetratelabs/wazero v1.11.0/go.mod h1:eV28rsN8Q+xwjogd7f4/Pp4xFxO7uOGbLcD/LzB1wiU=
-github.com/wyolet/relay v0.10.3 h1:yd0xh6JeffM9WiFQgYKiCTpVVcIvVJ/arozLO6y/7Vs=
-github.com/wyolet/relay v0.10.3/go.mod h1:bKG2xaUcupxkSj/Nce3p+qkH1XS1SFVfZleIzZtlg6Q=
-github.com/wyolet/relay/sdk v0.7.11 h1:7S2f+QXOOtdkNKCp313fKACLL6pmzu4wHaCiXQNbffE=
-github.com/wyolet/relay/sdk v0.7.11/go.mod h1:AS59jEyShhVpZw5treL1bOh+fY7o87z8R//UOV1xjoc=
+github.com/wyolet/relay v0.10.5 h1:gpxFwrXpTxYjgeOJ7R8Yo7BfpvwCUKh27RBDiW77voA=
+github.com/wyolet/relay v0.10.5/go.mod h1:uM98tNsMegL9L+o6Z0JZd8wdCfEBWK8YMFqFEbsWsa4=
+github.com/wyolet/relay/sdk v0.7.14 h1:DlNL3UZCANWmIeqJpuiEurLCfjHNJmoRZVolGyFjqpg=
+github.com/wyolet/relay/sdk v0.7.14/go.mod h1:8K1r5/1pfiZW+tcyJlxXF3RLcNg9ATMb7VtuBRDAUP0=
 github.com/x448/float16 v0.8.4 h1:qLwI1I70+NjRFUR3zs1JPUCgaCXSh3SW62uAKT1mSBM=
 github.com/x448/float16 v0.8.4/go.mod h1:14CWIYCyZA/cWjXOioeEpHeN/83MdbZDRQHoFcYsOfg=
 github.com/zeebo/xxh3 v1.1.0 h1:s7DLGDK45Dyfg7++yxI0khrfwq9661w9EN78eP/UZVs=
