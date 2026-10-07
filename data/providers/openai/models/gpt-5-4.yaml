@@ -25,6 +25,13 @@ spec:
         batch: true
         fileInput: true
         systemMessages: true
+        reasoningEfforts:
+            - none
+            - low
+            - medium
+            - high
+            - xhigh
+        defaultReasoningEffort: none
     modalities:
         input:
             - text
@@ -70,6 +77,13 @@ spec:
         webSearch: true
         fileInput: true
         systemMessages: true
+        reasoningEfforts:
+            - none
+            - low
+            - medium
+            - high
+            - xhigh
+        defaultReasoningEffort: none
     modalities:
         input:
             - text
@@ -115,6 +129,13 @@ spec:
         webSearch: true
         fileInput: true
         systemMessages: true
+        reasoningEfforts:
+            - none
+            - low
+            - medium
+            - high
+            - xhigh
+        defaultReasoningEffort: none
     modalities:
         input:
             - text

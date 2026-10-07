@@ -27,6 +27,13 @@ spec:
         structuredOutputs: true
         systemMessages: true
         fileInput: true
+        reasoningEfforts:
+            - low
+            - medium
+            - high
+            - xhigh
+            - max
+        defaultReasoningEffort: high
     modalities:
         input:
             - text

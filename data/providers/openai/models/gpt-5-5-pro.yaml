@@ -21,6 +21,11 @@ spec:
         reasoning: true
         fileInput: true
         systemMessages: true
+        reasoningEfforts:
+            - medium
+            - high
+            - xhigh
+        defaultReasoningEffort: high
     modalities:
         input:
             - text

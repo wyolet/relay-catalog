@@ -3,7 +3,7 @@ module github.com/wyolet/relay-catalog
 go 1.26.0
 
 require (
-	github.com/wyolet/relay v0.10.3
+	github.com/wyolet/relay v0.10.5
 	gopkg.in/yaml.v3 v3.0.1
 )
 
@@ -37,7 +37,7 @@ require (
 	github.com/redis/go-redis/v9 v9.19.0 // indirect
 	github.com/tetratelabs/wabin v0.0.0-20230304001439-f6f874872834 // indirect
 	github.com/tetratelabs/wazero v1.11.0 // indirect
-	github.com/wyolet/relay/sdk v0.7.11 // indirect
+	github.com/wyolet/relay/sdk v0.7.14 // indirect
 	go.opentelemetry.io/proto/otlp v1.9.0 // indirect
 	go.uber.org/atomic v1.11.0 // indirect
 	go.yaml.in/yaml/v2 v2.4.2 // indirect
