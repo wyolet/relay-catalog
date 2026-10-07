@@ -6,5 +6,5 @@ metadata:
     displayName: OpenCode Zen
     description: "OpenCode's curated model gateway. OpenAI-compatible endpoint at /v1/chat/completions; some models also expose /v1/messages (Anthropic shape) and /v1/responses. Authentication: Bearer $OPENCODE_API_KEY."
 spec:
-    baseURL: https://opencode.ai/zen/v1
+    baseURL: https://opencode.ai/zen
     homepageURL: https://opencode.ai

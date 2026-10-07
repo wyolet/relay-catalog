@@ -6,7 +6,7 @@ metadata:
     labels:
         source: models.dev
 spec:
-    baseURL: https://api.mistral.ai/v1
+    baseURL: https://api.mistral.ai
     pricingStrategies:
         - api
     docsURL: https://docs.mistral.ai/getting-started/models/

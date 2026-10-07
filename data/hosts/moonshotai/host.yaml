@@ -6,7 +6,7 @@ metadata:
     labels:
         source: models.dev
 spec:
-    baseURL: https://api.moonshot.ai/v1
+    baseURL: https://api.moonshot.ai
     pricingStrategies:
         - api
     docsURL: https://platform.moonshot.ai/docs/api/chat

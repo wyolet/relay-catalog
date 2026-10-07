@@ -8,6 +8,7 @@ metadata:
         source: models.dev
 spec:
     baseURL: https://api.z.ai/api/paas/v4
+    path: /chat/completions
     pricingStrategies:
         - api
     docsURL: https://docs.z.ai
