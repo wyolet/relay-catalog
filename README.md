@@ -78,3 +78,20 @@ Each rule lives in its own file: an `init()` that appends a `catalogvalidate.Rul
 ### Mixed-kind files
 
 The tier-policy files (`data/hosts/<host>/policies/tier-N.yaml`) bundle a `RateLimit` and a `Policy` document in one file via `---`. yaml-language-server can't switch schemas per-document, so these files have no IDE directive — they still validate fully at CI time via the Go validator.
+
+## Release asset
+
+Every `v*` tag attaches the flattened SDK catalog to that tag's GitHub release:
+
+- `https://github.com/wyolet/relay-catalog/releases/download/<tag>/catalog.json.gz`
+- `https://github.com/wyolet/relay-catalog/releases/download/<tag>/catalog.json.gz.sha256` — `<hex>  catalog.json.gz`, checkable with `sha256sum -c`.
+
+To fetch the newest catalog, read `channels.<channel>.latest` from `https://raw.githubusercontent.com/wyolet/relay-catalog/main/index.yaml` for the schema channel your SDK reads (e.g. `v1alpha2`) and use that tag in the URL above. Avoid `/releases/latest/download/`: it ignores schema channels.
+
+The asset is reproducible from the tag. From a checkout of `<tag>`:
+
+```bash
+go run ./cmd/embed -o catalog.json.gz -generated-at "$(git show -s --format=%cI HEAD)" -version <tag> ./data
+```
+
+The output format comes from the `github.com/wyolet/relay` version pinned in `go.mod`; bump it before tagging when relay changes the format.

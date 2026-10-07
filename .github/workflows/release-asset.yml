@@ -1,0 +1,35 @@
+name: Release asset
+
+# Attaches the flattened SDK catalog to the tag's release. generatedAt is the tagged commit's time, so the asset rebuilds byte-identically from the tag.
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: write
+
+jobs:
+  asset:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+
+      - name: Build catalog.json.gz
+        run: |
+          set -eu
+          go run ./cmd/embed -o catalog.json.gz -generated-at "$(git show -s --format=%cI HEAD)" -version "$GITHUB_REF_NAME" ./data
+          sha256sum catalog.json.gz > catalog.json.gz.sha256
+
+      - name: Upload to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -eu
+          # Create only when missing, so notes on an existing release stay untouched.
+          gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1 || gh release create "$GITHUB_REF_NAME" --verify-tag --notes ""
+          gh release upload "$GITHUB_REF_NAME" catalog.json.gz catalog.json.gz.sha256 --clobber
