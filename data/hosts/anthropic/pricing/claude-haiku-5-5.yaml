@@ -40,3 +40,10 @@ spec:
           unit: per_million
           amount: 0.05
           aboveTokens: 100000
+        - meter: tokens.cache_creation_1h
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.cache_creation_1h
+          unit: per_million
+          amount: 1
+          aboveTokens: 100000

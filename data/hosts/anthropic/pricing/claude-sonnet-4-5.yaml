@@ -32,3 +32,6 @@ spec:
           unit: per_million
           amount: 22.5
           aboveTokens: 200000
+        - meter: tokens.cache_creation_1h
+          unit: per_million
+          amount: 6
