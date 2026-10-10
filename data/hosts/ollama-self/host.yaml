@@ -5,12 +5,9 @@ metadata:
     name: ollama-self
     displayName: Ollama (self-hosted)
     description: "Operator-run Ollama instance. baseURL is per-deployment; the catalog ships an empty default that the operator must configure."
-    # User-owned (not system) so the operator can set baseURL via the standard
-    # CRUD edit — its endpoint is per-deployment, not catalog-fixed. owner.id is
-    # left empty (single-user relay); a future seed pass can stamp the
-    # superadmin id once users have ids.
+    # The endpoint is per-deployment: an admin sets baseURL with a CRUD edit or an overlay.
     owner:
-        kind: user
+        kind: system
 spec:
     baseURL: ""
     # Self-hosted Ollama needs no API key — routing injects a synthetic

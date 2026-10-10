@@ -88,9 +88,9 @@ spec:
     contextWindowOutput: 163840
     contextWindowTotal: 163840
     snapshots:
-        - name: deepseek-v3-1-671b
+        - name: deepseek-v3-1-671b-cloud
           originalName: deepseek-v3.1:671b-cloud
-    pointer: deepseek-v3-1-671b
+    pointer: deepseek-v3-1-671b-cloud
 ---
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
