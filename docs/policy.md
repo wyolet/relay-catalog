@@ -6,11 +6,11 @@ A **RateLimit** is a budget: how many requests/tokens are allowed per window, an
 
 ## RateLimit
 
-`kind: RateLimit`. Files live under `data/policies/`.
+`kind: RateLimit`. Files live under `data/hosts/<host>/policies/`, paired with their Policy in the same file.
 
 ### Metadata
 
-Standard. `owner.kind: host`, `owner.id: <host-name>`.
+Standard. `owner.kind: host`, `owner.name: <host-name>`.
 
 ### Spec
 
@@ -39,22 +39,23 @@ Standard. `owner.kind: host`, `owner.id: <host-name>`.
 
 ## Policy
 
-`kind: Policy`. Files live under `data/policies/`.
+`kind: Policy`. Files live under `data/hosts/<host>/policies/`, paired with their RateLimit in the same file.
 
 ### Metadata
 
-Standard. `owner.kind: host`, `owner.id: <host-name>`. A Policy is referenced by Host `spec.policies[]` and `spec.defaultPolicy` *by name*.
+Standard. `owner.kind: host`, `owner.name: <host-name>`. A Policy is referenced by Host `spec.policies[]` and `spec.defaultPolicy` *by name*.
 
 ### Spec
 
 | Field | Required | Type | Description |
 |---|---|---|---|
-| `rateLimit` | no | string | Name of the **single** [RateLimit](#ratelimit) this policy enforces. A Policy can reference at most one. |
-| `models` | no | `[]string` | Allow-list of Model names. Empty/absent = all models the host serves. |
+| `rateLimit` | no | string | Name of the **single** [RateLimit](#ratelimit) this policy enforces. Mutually exclusive with `rlBindings`. |
+| `rlBindings` | no | `[]RLBinding` | Per-model rate-limit map. Each entry has `models` (modelref DSL strings) and `rateLimit` (name). Mutually exclusive with `rateLimit`. |
+| `models` | no | `[]string` | Modelref DSL allow-list. Empty/absent = all models the host serves. |
 | `hostKeys` | no | `[]string` | Host-key names the policy may use for upstream auth. |
 | `keySelection` | no | string | Strategy for picking a host-key. `prioritized` (default), `round-robin`, `least-recently-used`. |
-| `skipDefaultLimits` | no | bool | Bypass host/system default rate limits for this policy. |
 | `includeDeprecated` | no | bool | Allow deprecated models through this policy. |
+| `payloadLoggingEnabled` | no | bool | Enable payload (request/response body) logging for requests under this policy. |
 | `enabled` | no | bool | Defaults to true. |
 
 ## Example (combined file)
@@ -62,7 +63,8 @@ Standard. `owner.kind: host`, `owner.id: <host-name>`. A Policy is referenced by
 `data/hosts/anthropic/policies/tier-1.yaml`:
 
 ```yaml
-apiVersion: relay.wyolet.dev/v1
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/RateLimit.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: RateLimit
 metadata:
   name: anthropic-tier-1-rl
@@ -82,7 +84,7 @@ spec:
       window: 1m
       strategy: sliding-window
 ---
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Policy
 metadata:
   name: anthropic-tier-1

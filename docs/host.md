@@ -10,7 +10,7 @@ Each host lives in its own folder: `data/hosts/<name>/host.yaml`. The folder als
 
 | Field | Required | Description |
 |---|---|---|
-| `name` | yes | DNS-1123 slug. Referenced by Model (`spec.hosts[].host`) and Pricing (`metadata.owner.id`). |
+| `name` | yes | DNS-1123 slug. Referenced by HostBinding (`spec.host`) and Pricing (`metadata.owner.name`). |
 | `displayName` | no | Human-readable label shown in UIs. |
 | `description` | no | Free text. |
 | `owner` | no | Omit entirely for catalog-shipped (system-owned) Hosts. Relay defaults absent owners to system ownership. |
@@ -34,7 +34,8 @@ Each host lives in its own folder: `data/hosts/<name>/host.yaml`. The folder als
 ## Example
 
 ```yaml
-apiVersion: relay.wyolet.dev/v1
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Host.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Host
 metadata:
   name: anthropic
@@ -51,6 +52,6 @@ spec:
 
 ## Relationships
 
-- Referenced by **Model** via `spec.hosts[].host` (Models declare which Hosts can serve them).
-- Referenced by **Pricing** via `metadata.owner.id` (Pricing always attaches to the Host that bills it — different Hosts can charge different rates for the same Model).
+- Referenced by **[HostBinding](model.md#hostbinding)** via `spec.host` (HostBindings declare which Host serves a Model).
+- Referenced by **Pricing** via `metadata.owner.name` (Pricing always attaches to the Host that bills it — different Hosts can charge different rates for the same Model).
 - References **[Policy](policy.md)** by name via `spec.policies[]` and `spec.defaultPolicy`.

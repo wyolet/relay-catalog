@@ -10,7 +10,7 @@ Files live under `data/providers/<name>/provider.yaml`. The provider's models li
 
 | Field | Required | Description |
 |---|---|---|
-| `name` | yes | DNS-1123 slug. Referenced by Model via `metadata.owner.id`. |
+| `name` | yes | DNS-1123 slug. Referenced by Model via `metadata.owner.name`. |
 | `displayName` | no | Human-readable label. |
 | `description` | no | Free text. |
 | `owner` | no | Omit for catalog-shipped (system-owned) Providers. |
@@ -33,7 +33,8 @@ Note: Provider has **no** `baseURL`, `consoleURL`, or `backend` — those are Ho
 ## Example
 
 ```yaml
-apiVersion: relay.wyolet.dev/v1
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Provider.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Provider
 metadata:
   name: anthropic
@@ -48,7 +49,7 @@ spec:
 
 ## Relationships
 
-- Referenced by **Model** via `metadata.owner.id` (every Model belongs to exactly one Provider).
+- Referenced by **Model** via `metadata.owner.name` (every Model belongs to exactly one Provider).
 - Provider references nothing else.
 
 ## Provider vs. Host

@@ -12,6 +12,7 @@ data/
     models/<model>.yaml
   hosts/<host>/
     host.yaml
+    bindings/<model>.yaml         # HostBinding: which adapter routes <model> via this host
     pricing/<model>.yaml          # pricing for <model> when served via this host
     policies/<policy>.yaml        # tier policy + its rate limit (two docs per file)
 ```
@@ -21,15 +22,15 @@ data/
 ## Shape of every document
 
 ```yaml
-apiVersion: relay.wyolet.dev/v1
-kind: <Host | Provider | Model | Pricing | Policy | RateLimit>
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: <Host | Provider | Model | Pricing | Policy | RateLimit | HostBinding>
 metadata:
   name: <stable-slug>          # required, DNS-1123, unique within its kind
   displayName: <human label>   # optional
   description: <free text>     # optional
   owner:                       # omit entirely for catalog-shipped (system-owned) entities
     kind: <provider|host|user> # required when present
-    id:   <name of owner>
+    name: <name of owner>
   labels: { key: value, ... }  # optional
 spec:
   ...                          # kind-specific
@@ -47,21 +48,24 @@ spec:
 
 - [Host](host.md) — an upstream API endpoint relay talks to.
 - [Provider](provider.md) — the vendor brand that publishes models.
-- [Model](model.md) — a callable model and how it's served.
+- [Model](model.md) — a callable model and its capabilities.
+- [HostBinding](host.md#hostbinding) — routes one Model through one Host via a named adapter.
 - [Pricing](pricing.md) — billing rates per model per host.
 - [Policy & RateLimit](policy.md) — usage tiers a host publishes.
 
 ## How relay consumes this
 
-`relay seed --from <dir>` walks the tree, parses each YAML, dispatches on `kind`, resolves name references to UUIDs, and upserts into Postgres. The loader lives in `app/manifest/` in the relay repo; wire DTOs are in `app/manifest/dto.go`. That file is the source of truth when the docs disagree.
+The relay seeder walks the tree, parses each YAML (dispatching on `kind`), resolves name references to UUIDs, and upserts into Postgres. The loader lives in `app/manifest/` in the relay repo; wire DTOs are in `app/manifest/dto.go`. That file is the source of truth when the docs disagree.
 
 ## Entity graph
 
 ```
-Provider ◄── owner.id ── Model ── spec.hosts[].host ──► Host ◄─ owner ── Pricing ── targetModels[] ──► Model
+Provider ◄── owner.name ── Model
+                              ▲
+                              │ spec.model
+                           HostBinding ── spec.host ──► Host ◄─ owner ── Pricing ── targetModels[] ──► Model
                                                           ▲
                                                           ├─ spec.policies[] ──► Policy ── spec.rateLimit ──► RateLimit
-                                                          │                       │                            ▲
-                                                          │                       └─ spec.models[] ─► Model    │
-                                                          └─────────────────────── owner ──────────────────────┘
+                                                          │                                                      ▲
+                                                          └─────────────────────── owner ───────────────────────┘
 ```
