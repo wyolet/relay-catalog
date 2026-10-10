@@ -26,7 +26,7 @@ Each `rates[]` entry:
 
 | Field | Required | Type | Description |
 |---|---|---|---|
-| `meter` | **yes** | string | Billing dimension. One of `tokens.input`, `tokens.output`, `tokens.cache_read`, `tokens.cache_creation`, `tokens.reasoning`, `tokens.audio_input`, `tokens.audio_output`, `tokens.accepted_prediction`, `tokens.rejected_prediction`, `tokens.server_tool_use_input`, `tokens.server_tool_use_output`. A meter for a part of another (`tokens.reasoning` inside output, `tokens.audio_input` inside input) charges that part at its own rate; without one the part bills inside its whole. |
+| `meter` | **yes** | string | Billing dimension. One of `tokens.input`, `tokens.output`, `tokens.cache_read`, `tokens.cache_creation`, `tokens.cache_creation_1h`, `tokens.reasoning`, `tokens.audio_input`, `tokens.audio_output`, `tokens.accepted_prediction`, `tokens.rejected_prediction`, `tokens.server_tool_use_input`, `tokens.server_tool_use_output`. A meter for a part of another (`tokens.reasoning` inside output, `tokens.audio_input` inside input, `tokens.cache_creation_1h` — writes to a 1-hour cache — inside cache_creation) charges that part at its own rate; without one the part bills inside its whole. |
 | `unit` | **yes** | string | `per_million` (tokens) or `per_unit`. |
 | `amount` | **yes** | float | Cost in `currency` per `unit`. |
 | `aboveTokens` | no | int | Context-length tier: the rate applies when the request's prompt length (input + cache reads + cache writes) reaches this many tokens, and then bills the whole meter. Omit for flat pricing. |

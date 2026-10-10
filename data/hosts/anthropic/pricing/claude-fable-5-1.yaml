@@ -25,3 +25,6 @@ spec:
         - meter: tokens.cache_read
           unit: per_million
           amount: 0.25
+        - meter: tokens.cache_creation_1h
+          unit: per_million
+          amount: 20
