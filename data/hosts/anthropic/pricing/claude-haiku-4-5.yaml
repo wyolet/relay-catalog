@@ -23,4 +23,4 @@ spec:
           amount: 1.25
         - meter: tokens.cache_read
           unit: per_million
-          amount: 0.09999999999999999
+          amount: 0.1

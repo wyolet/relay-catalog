@@ -26,15 +26,15 @@ Each `rates[]` entry:
 
 | Field | Required | Type | Description |
 |---|---|---|---|
-| `meter` | **yes** | string | Billing dimension. Known values: `tokens.input`, `tokens.output`, `tokens.cache_write`, `tokens.cache_read`. |
-| `unit` | **yes** | string | Billing unit. Currently always `per_million`. |
+| `meter` | **yes** | string | Billing dimension. One of `tokens.input`, `tokens.output`, `tokens.cache_read`, `tokens.cache_creation`, `tokens.reasoning`, `tokens.audio_input`, `tokens.audio_output`, `tokens.accepted_prediction`, `tokens.rejected_prediction`, `tokens.server_tool_use_input`, `tokens.server_tool_use_output`. A meter for a part of another (`tokens.reasoning` inside output, `tokens.audio_input` inside input) charges that part at its own rate; without one the part bills inside its whole. |
+| `unit` | **yes** | string | `per_million` (tokens) or `per_unit`. |
 | `amount` | **yes** | float | Cost in `currency` per `unit`. |
-| `aboveTokens` | no | int | Tiered pricing threshold — this rate applies only for usage above this many tokens (in the current request/window). Omit for flat pricing. |
+| `aboveTokens` | no | int | Context-length tier: the rate applies when the request's prompt length (input + cache reads + cache writes) reaches this many tokens, and then bills the whole meter. Omit for flat pricing. |
 
 ## Example
 
 ```yaml
-apiVersion: relay.wyolet.dev/v1
+apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
   name: anthropic-claude-3-haiku-20240307
@@ -52,7 +52,7 @@ spec:
     - meter: tokens.output
       unit: per_million
       amount: 1.25
-    - meter: tokens.cache_write
+    - meter: tokens.cache_creation
       unit: per_million
       amount: 0.30
     - meter: tokens.cache_read
