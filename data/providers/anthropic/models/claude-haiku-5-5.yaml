@@ -1,0 +1,58 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: claude-haiku-5-5
+    displayName: Claude Haiku 5.5
+    owner:
+        kind: provider
+        name: anthropic
+    labels:
+        featured: "true"
+        family: claude
+        source: models.dev
+        source_version: "2026-10-10"
+spec:
+    family: claude
+    capabilities:
+        unsupportedParams:
+            - temperature
+            - top_p
+            - top_k
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        systemMessages: true
+        fileInput: true
+        reasoningEfforts:
+            - low
+            - medium
+            - high
+            - xhigh
+            - max
+        defaultReasoningEffort: medium
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 128000
+    knowledgeCutoff: "2026-06"
+    releaseDate: "2026-10-07"
+    snapshots:
+        - name: claude-haiku-5-5
+          releasedAt: "2026-10-07"
+    pointer: claude-haiku-5-5
+    # Claude Code's 1M-context addressing form. Resolution-only matcher:
+    # routes to this model, "claude-haiku-5-5[1m]" goes upstream verbatim.
+    aliases:
+        - claude-haiku-5-5[1m]

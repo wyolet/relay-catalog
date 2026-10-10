@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: anthropic-claude-haiku-5-5
+    displayName: Claude Haiku 5.5 pricing
+    owner:
+        kind: host
+        id: anthropic
+spec:
+    currency: USD
+    targetModels:
+        - claude-haiku-5-5
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.5
+          aboveTokens: 100000
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.5
+          aboveTokens: 100000
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.125
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.625
+          aboveTokens: 100000
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.01
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.05
+          aboveTokens: 100000
