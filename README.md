@@ -95,3 +95,16 @@ go run ./cmd/embed -o catalog.json.gz -generated-at "$(git show -s --format=%cI 
 ```
 
 The output format comes from the `github.com/wyolet/relay` version pinned in `go.mod`; bump it before tagging when relay changes the format.
+
+### Data tree
+
+Every `v*` tag also attaches the live data tree, the YAML relay seeds from (`data/` without `drafts/`):
+
+- `https://github.com/wyolet/relay-catalog/releases/download/<tag>/relay-catalog-data-<tag>.tar.gz`
+- `https://github.com/wyolet/relay-catalog/releases/download/<tag>/relay-catalog-data-<tag>.tar.gz.sha256`
+
+Verify where it was built with `gh attestation verify relay-catalog-data-<tag>.tar.gz --repo wyolet/relay-catalog`. Consumers pin its sha256, so a published tarball is never replaced: re-running the release job with identical bytes uploads nothing, and different bytes fail the run. The tarball is reproducible from the tag with git alone, on any platform (`git archive` uses its built-in gzip):
+
+```bash
+scripts/data-tarball.sh <tag> <tag> out
+```
