@@ -3,6 +3,7 @@ providers:
     - provider: alibaba
       models:
         - qwen3-7-plus
+        - qwen3-8-flash
         - qwen3-8-max
     - provider: anthropic
       models:
@@ -24,6 +25,9 @@ providers:
     - provider: minimax
       models:
         - minimax-m3
+    - provider: mistral
+      models:
+        - mistral-large-4
     - provider: moonshot
       models:
         - kimi-k3
@@ -33,7 +37,6 @@ providers:
         - gpt-6-1-sol
         - gpt-6-astra
         - gpt-6-luna
-        - gpt-6-sol
     - provider: xai
       models:
         - grok-4-6

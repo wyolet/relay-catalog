@@ -49,7 +49,6 @@ spec:
     aliases:
         - gemini-flash-latest
     tags:
-        - newest
         - multimodal
         - thinking
         - structured-outputs
