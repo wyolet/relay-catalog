@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: qwen3-8-omni-flash
+    displayName: Qwen3.8 Omni Flash
+    description: Qwen omni model for text, vision, audio, and multimodal agent tasks.
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        family: qwen
+        source: models.dev
+        source_version: "2026-10-18"
+spec:
+    family: qwen
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+            - video
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 131072
+    contextWindowTotal: 1000000
+    maxOutputTokens: 131072
+    releaseDate: "2026-09-17"
+    snapshots:
+        - name: qwen3-8-omni-flash
+          releasedAt: "2026-09-17"
+          originalName: qwen3.8-omni-flash
+    pointer: qwen3-8-omni-flash

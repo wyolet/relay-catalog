@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: muse-spark-open
+    displayName: Muse Spark Open
+    description: Meta's 816B total / 42B active open-weight multimodal reasoning model for coding and long-horizon agentic work.
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        family: muse
+        source: models.dev
+        source_version: "2026-10-18"
+spec:
+    family: muse
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 131072
+    contextWindowTotal: 1048576
+    maxOutputTokens: 131072
+    releaseDate: "2026-10-15"
+    knowledgeCutoff: "2026-01-04"
+    snapshots:
+        - name: muse-spark-open-cloud
+          releasedAt: "2026-10-15"
+          originalName: muse-spark-open:cloud
+    pointer: muse-spark-open-cloud
+    tags:
+        - open-weights

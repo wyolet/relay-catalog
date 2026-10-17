@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+  name: mistral-large-4-on-mistral
+  displayName: mistral-large-4 via mistral
+spec:
+  model: mistral-large-4
+  host: mistral
+  adapter: openai
+  enabled: true
+  snapshots:
+  - mistral-large-4

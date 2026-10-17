@@ -1,0 +1,41 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: step-5-preview
+    displayName: Step 5 Preview
+    description: StepFun's next-generation flagship base model for coding and professional knowledge work, with native text, image, and video input.
+    owner:
+        kind: provider
+        name: stepfun
+    labels:
+        source: models.dev
+        source_version: "2026-10-18"
+spec:
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 65536
+    contextWindowTotal: 1000000
+    maxOutputTokens: 65536
+    releaseDate: "2026-09-16"
+    tags:
+        - preview
+    enabled: true
+    snapshots:
+        - name: step-5-preview
+          releasedAt: "2026-09-16"
+    pointer: step-5-preview

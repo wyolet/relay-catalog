@@ -40,6 +40,10 @@ spec:
     contextWindowOutput: 65536
     knowledgeCutoff: "2026-03"
     releaseDate: "2026-08-13"
+    # No shutdown date: Google keeps the endpoint and routes its requests to gemini-3.8-flash.
+    deprecation:
+        status: deprecated
+        replacement: gemini-3-8-flash
     snapshots:
         - name: gemini-3-7-flash
           originalName: gemini-3.7-flash

@@ -1,0 +1,24 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: stepfun-step-5-preview
+    displayName: step-5-preview pricing
+    owner:
+        kind: host
+        id: stepfun
+spec:
+    currency: USD
+    targetModels:
+        - step-5-preview
+    # api.stepfun.com bills in RMB (7 / 0.70 cache hit / 20 per 1M), converted at the rate the step-3-5-flash sheet uses. Cache hits rose from 0.35 to 0.70 RMB on 2026-10-14.
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.096
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.959
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.741
+    enabled: true

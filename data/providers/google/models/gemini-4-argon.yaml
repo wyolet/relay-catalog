@@ -1,0 +1,56 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: gemini-4-argon
+    displayName: Gemini 4 Argon
+    description: Google's flagship reasoning model for complex software engineering, deep math and science, and long-horizon autonomous agents.
+    owner:
+        kind: provider
+        name: google
+    labels:
+        featured: "true"
+        family: gemini-4-argon
+        source: models.dev
+        source_version: "2026-10-18"
+spec:
+    family: gemini-4-argon
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        parallelTools: true
+        vision: true
+        reasoning: true
+        structuredOutputs: true
+        promptCache: true
+        batch: true
+        webSearch: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - audio
+            - video
+            - file
+        output:
+            - text
+    # 65536 is the default synchronous output cap; Google's long-decode mode raises it to the full context.
+    contextWindowInput: 1048576
+    contextWindowOutput: 65536
+    releaseDate: "2026-10-13"
+    knowledgeCutoff: "2026-03"
+    snapshots:
+        - name: gemini-4-argon
+          originalName: gemini-4-argon
+          releasedAt: "2026-10-13"
+    pointer: gemini-4-argon
+    tags:
+        - newest
+        - premium
+        - multimodal
+        - thinking
+        - structured-outputs
+        - agentic

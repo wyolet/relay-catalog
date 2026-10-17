@@ -1,0 +1,11 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: muse-spark-open-on-ollama-cloud
+    displayName: "Muse Spark Open via ollama-cloud"
+spec:
+    model: muse-spark-open
+    host: ollama-cloud
+    adapter: openai
+    snapshots: [muse-spark-open-cloud]

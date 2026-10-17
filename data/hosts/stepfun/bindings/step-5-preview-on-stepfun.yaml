@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: step-5-preview-on-stepfun
+    displayName: step-5-preview via stepfun
+spec:
+    model: step-5-preview
+    host: stepfun
+    adapter: openai
+    enabled: true
+    snapshots:
+        - step-5-preview
