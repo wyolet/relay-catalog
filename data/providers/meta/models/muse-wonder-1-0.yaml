@@ -1,0 +1,49 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: muse-wonder-1-0
+    displayName: Muse Wonder 1.0
+    description: Meta's frontier multimodal reasoning model for personal and professional agents, long-horizon coding, and computer use. In preview on the Meta Model API.
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        featured: "true"
+        family: muse
+        source: models.dev
+        source_version: "2026-10-18"
+spec:
+    family: muse
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        fileInput: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+            - pdf
+            - audio
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 131072
+    contextWindowTotal: 1048576
+    maxOutputTokens: 131072
+    releaseDate: "2026-10-12"
+    snapshots:
+        - name: muse-wonder-1-0
+          releasedAt: "2026-10-12"
+          originalName: muse-wonder-1.0
+    pointer: muse-wonder-1-0
+    tags:
+        - preview

@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Pricing
+metadata:
+    name: meta-muse-wonder-1-0
+    displayName: Muse Wonder 1.0 pricing
+    owner:
+        kind: host
+        id: meta
+spec:
+    currency: USD
+    targetModels:
+        - muse-wonder-1-0
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.20
+        - meter: tokens.input
+          unit: per_million
+          amount: 4.00
+        - meter: tokens.output
+          unit: per_million
+          amount: 20.00

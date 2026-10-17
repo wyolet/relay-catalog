@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+  name: mistral-large-4
+  displayName: Mistral Large 4
+  description: Mistral's 1T-parameter multimodal MoE for reasoning, coding, and agentic work. In public preview.
+  owner:
+    kind: provider
+    name: mistral
+  labels:
+    family: mistral-large-4
+    source: models.dev
+    source_version: "2026-10-18"
+spec:
+  family: mistral-large-4
+  capabilities:
+    chat: true
+    streaming: true
+    tools: true
+    vision: true
+    promptCache: true
+    reasoning: true
+    structuredOutputs: true
+    systemMessages: true
+  modalities:
+    input:
+    - text
+    - image
+    output:
+    - text
+  contextWindowInput: 1048576
+  contextWindowOutput: 262144
+  contextWindowTotal: 1048576
+  maxOutputTokens: 262144
+  releaseDate: '2026-10-06'
+  tags:
+  - preview
+  enabled: true
+  snapshots:
+  - name: mistral-large-4
+    releasedAt: '2026-10-06'
+  - name: mistral-large-4-cloud
+    releasedAt: '2026-10-06'
+    originalName: mistral-large-4:cloud
+  pointer: mistral-large-4

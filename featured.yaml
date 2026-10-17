@@ -17,6 +17,10 @@ providers:
     - provider: google
       models:
         - gemini-3-8-flash
+        - gemini-4-argon
+    - provider: meta
+      models:
+        - muse-wonder-1-0
     - provider: minimax
       models:
         - minimax-m3

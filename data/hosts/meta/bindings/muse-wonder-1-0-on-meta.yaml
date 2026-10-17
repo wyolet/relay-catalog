@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: HostBinding
+metadata:
+    name: muse-wonder-1-0-on-meta
+    displayName: muse-wonder-1-0 via meta
+spec:
+    model: muse-wonder-1-0
+    host: meta
+    adapter: openai
+    enabled: true
+    snapshots:
+        - muse-wonder-1-0
