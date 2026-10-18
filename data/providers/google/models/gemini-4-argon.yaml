@@ -47,7 +47,6 @@ spec:
           releasedAt: "2026-10-13"
     pointer: gemini-4-argon
     tags:
-        - newest
         - premium
         - multimodal
         - thinking
