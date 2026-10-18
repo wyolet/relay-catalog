@@ -6,7 +6,7 @@ metadata:
     displayName: Orca Mini 3B
     owner:
         kind: provider
-        name: microsoft
+        name: pankajmathur
     labels:
         source: ollama-library
         source_version: '2026-05-20'
@@ -36,7 +36,7 @@ metadata:
     displayName: Orca Mini 7B
     owner:
         kind: provider
-        name: microsoft
+        name: pankajmathur
     labels:
         source: ollama-library
         source_version: '2026-05-20'
@@ -66,7 +66,7 @@ metadata:
     displayName: Orca Mini 13B
     owner:
         kind: provider
-        name: microsoft
+        name: pankajmathur
     labels:
         source: ollama-library
         source_version: '2026-05-20'
@@ -96,7 +96,7 @@ metadata:
     displayName: Orca Mini 70B
     owner:
         kind: provider
-        name: microsoft
+        name: pankajmathur
     labels:
         source: ollama-library
         source_version: '2026-05-20'

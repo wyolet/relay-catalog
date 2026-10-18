@@ -3,7 +3,7 @@ apiVersion: relay.wyolet.dev/v1alpha2
 kind: HostBinding
 metadata:
     name: ft-gpt-3-5-turbo-0125-on-openai
-    displayName: "Fine-tuned GPT-3.5 Turbo (2025-01-25) via openai"
+    displayName: "Fine-tuned GPT-3.5 Turbo (2024-01-25) via openai"
 spec:
     model: ft-gpt-3-5-turbo-0125
     host: openai
