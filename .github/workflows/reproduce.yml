@@ -1,0 +1,49 @@
+name: Reproduce latest release
+
+# Rebuilds the newest tag in index.yaml with the pinned tools and compares the published sums, so a builder change shows up when the pin moves.
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/catalog-tools.env, .github/workflows/reproduce.yml]
+  pull_request:
+    paths: [.github/catalog-tools.env, .github/workflows/reproduce.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      # Full history: the tag's commit is built, not the checked-out one.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+          fetch-depth: 0
+
+      - name: Load the catalog tools image
+        run: grep '^CATALOG_TOOLS_IMAGE=' .github/catalog-tools.env >> "$GITHUB_ENV"
+
+      - name: Rebuild and compare
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          tag=$(sed -n 's/^ *latest: *//p' index.yaml | sort -V | tail -1)
+          [ -n "$tag" ] || { echo "::error::index.yaml names no tag"; exit 1; }
+          docker run --rm --user "$(id -u):$(id -g)" -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" \
+            catalog-server build --repo . --ref "$(git rev-parse "$tag^{commit}")" --version "$tag" --out out
+          gh release download "$tag" --pattern '*.sha256' --dir published
+          sum() { cut -d' ' -f1 "$1"; }
+          data="relay-catalog-data-${tag}.tar.gz.sha256"
+          [ "$(sum "out/$data")" = "$(sum "published/$data")" ] \
+            || { echo "::error::$tag data tarball does not reproduce; it depends only on git, so the builder is wrong"; exit 1; }
+          echo "$tag data tarball reproduces"
+          if [ "$(sum out/catalog.json.gz.sha256)" = "$(sum published/catalog.json.gz.sha256)" ]; then
+            echo "$tag catalog.json.gz reproduces"
+          else
+            echo "::warning::$tag catalog.json.gz differs from the published file: this builder composes differently, and the catalog server serves the published file for such tags"
+          fi

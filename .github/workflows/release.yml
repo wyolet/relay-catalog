@@ -15,23 +15,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # The default depth-1 fetch holds the tagged commit, all the build reads.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
-      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
-        with:
-          go-version-file: go.mod
+      - name: Load the catalog tools image
+        run: grep '^CATALOG_TOOLS_IMAGE=' .github/catalog-tools.env >> "$GITHUB_ENV"
 
       # Both rebuild byte-identically from the tag: generatedAt is the tagged commit's time, and the tarball comes from git archive.
-      - name: Build the data tarball
-        run: scripts/data-tarball.sh "$GITHUB_REF_NAME" "$GITHUB_SHA" out
-
-      - name: Build catalog.json.gz
+      - name: Build the data tarball and catalog.json.gz
         run: |
-          set -eu
-          go run ./cmd/embed -o out/catalog.json.gz -generated-at "$(git show -s --format=%cI HEAD)" -version "$GITHUB_REF_NAME" ./data
-          (cd out && sha256sum catalog.json.gz > catalog.json.gz.sha256)
+          docker run --rm --user "$(id -u):$(id -g)" -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" \
+            catalog-server build --repo . --ref "$GITHUB_SHA" --version "$GITHUB_REF_NAME" --out out
 
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:

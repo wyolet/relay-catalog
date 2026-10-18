@@ -9,20 +9,13 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     steps:
-      # The validator imports tagged github.com/wyolet/relay (app/catalogvalidate
-      # + app/manifest/model/meta/pricing), resolved from the module proxy — no
-      # side-by-side checkout or replace directive needed.
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-go@v5
-        with:
-          go-version-file: go.mod
-
-      - name: Unit tests (rules)
-        run: go test ./...
+      - name: Load the catalog tools image
+        run: grep '^CATALOG_TOOLS_IMAGE=' .github/catalog-tools.env >> "$GITHUB_ENV"
 
       - name: Validate catalog data
-        run: go run ./cmd/validate ./data
+        run: docker run --rm -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" catalog-validate --curation ./data
 
       # Old tags have no .gitattributes, so release tooling keeps the pathspec; the two must agree.
       - name: Release archive matches the data pathspec
