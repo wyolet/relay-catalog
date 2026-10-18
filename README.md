@@ -30,7 +30,7 @@ Promoting a host out of drafts:
 1. Get a key for the host.
 2. Confirm a binding routes (a real request returns through relay).
 3. `git mv data/drafts/hosts/<host> data/hosts/<host>` (and any provider models it needs).
-4. `go run ./cmd/validate ./data` clean, then PR.
+4. Validate clean (see [Validation](#validation)), then PR.
 
 Demoting works the reverse way — if an entry can't be verified, it belongs in `drafts/`, not live. Don't ship a host that routes nothing.
 
@@ -54,32 +54,35 @@ Three layers, all enforced in CI:
 
 2. **Per-entity** — relay's `Validate()` methods enforce intra-entity invariants (e.g. "host-owned policy must not list hostKeys"). Runs implicitly during manifest parsing.
 
-3. **Graph + curation** — `go run ./cmd/validate ./data` runs:
+3. **Graph + curation** — relay's `catalog-validate --curation ./data` runs:
    - relay's schema-generic graph linter (`catalogvalidate.ValidateGraph`) — cross-refs, owner mismatches, duplicate names, orphan warnings
-   - this repo's curation rules under `cmd/validate/rules/` — content conventions specific to wyolet's catalog (icon presence, pricing-target-host-binding, tier-policy completeness, ...)
+   - the curation rules — content conventions for a published catalog (icon presence, pricing-target-host-binding, tier-policy completeness, ...)
    - every Model's `spec.family` is listed in `families.yaml`; a new lineage is added there first
    - a set `spec.productLine` is one of its family's `lines` in `families.yaml`
+   - `featured.yaml` matches the Models' `featured` labels
+
+The tools run from relay's `catalog-server` image, pinned in [`.github/catalog-tools.env`](.github/catalog-tools.env). From the repo root:
 
 ```bash
-go run ./cmd/validate ./data           # default: warn on hints, fail on errors
-go run ./cmd/validate --strict ./data  # promote warnings to errors (release prep)
-go run ./cmd/validate --list           # list every rule with description + severity
-go run ./cmd/validate --skip <name>... # suppress specific rules
+source .github/catalog-tools.env
+docker run --rm -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" catalog-validate --curation ./data                    # warn on hints, fail on errors
+docker run --rm -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" catalog-validate --strict --curation ./data           # promote warnings to errors (release prep)
+docker run --rm "$CATALOG_TOOLS_IMAGE" catalog-validate --list                                                      # list every rule with description + severity
+docker run --rm -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" catalog-validate --curation --skip <name> ./data      # suppress a rule (repeatable)
+docker run --rm --user "$(id -u):$(id -g)" -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" catalog-validate --write-featured ./data  # regenerate featured.yaml
 ```
+
+The image is linux/amd64 only: on arm64 hosts add `--platform linux/amd64`, and `-e GOGC=off` if the tool crashes under qemu emulation. From a relay checkout next to this one, the same tool runs as `go run ./cmd/catalog-validate --curation ../relay-catalog/data`.
 
 CI runs the validator on every push + PR. Failure surfaces the exact issue with kind / source field / target.
 
 ### Adding a curation rule
 
-```
-cmd/validate/rules/<rule_name>.go
-```
-
-Each rule lives in its own file: an `init()` that appends a `catalogvalidate.Rule` to `All`, plus a pure `Check func([]manifest.Document) []Issue`. Unit-test in `<rule_name>_test.go`. See existing rules (`provider_icon.go`, `pricing_target.go`, `host_tier_policy.go`) as templates.
+Curation rules live in relay, in `app/catalogvalidate/curation`: one file per rule defining a `catalogvalidate.Rule`, listed in `Rules` in `curation.go`, with tests beside it. A new rule reaches this repo's CI when [`.github/catalog-tools.env`](.github/catalog-tools.env) is bumped to a relay release that has it.
 
 ### Mixed-kind files
 
-The tier-policy files (`data/hosts/<host>/policies/<policy>.yaml`) bundle a `RateLimit` and a `Policy` document in one file via `---`. yaml-language-server can't switch schemas per-document, so these files have no IDE directive — they still validate fully at CI time via the Go validator.
+The tier-policy files (`data/hosts/<host>/policies/<policy>.yaml`) bundle a `RateLimit` and a `Policy` document in one file via `---`. yaml-language-server can't switch schemas per-document, so these files have no IDE directive — they still validate fully in CI via `catalog-validate`.
 
 ## Release asset
 
@@ -92,13 +95,15 @@ To fetch the newest catalog, read `channels.<channel>.latest` from `https://raw.
 
 Verify where an asset was built with `gh attestation verify <file> --repo wyolet/relay-catalog`. Consumers pin the published sha256s, so a published asset is never replaced: re-running the release workflow with identical bytes uploads nothing, and different bytes fail the run.
 
-The asset is reproducible from the tag. From a checkout of `<tag>`:
+Both release files are built by relay's `catalog-server build` from the image pinned in [`.github/catalog-tools.env`](.github/catalog-tools.env). To reproduce a release, from a checkout that has `<tag>`:
 
 ```bash
-go run ./cmd/embed -o catalog.json.gz -generated-at "$(git show -s --format=%cI HEAD)" -version <tag> ./data
+source .github/catalog-tools.env
+docker run --rm --user "$(id -u):$(id -g)" -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" \
+  catalog-server build --repo . --ref "$(git rev-parse <tag>^{commit})" --version <tag> --out out
 ```
 
-The output format comes from the `github.com/wyolet/relay` version pinned in `go.mod`; bump it before tagging when relay changes the format.
+This writes both files and their `.sha256` files to `out/`; compare those with the release's (`gh release download <tag> -R wyolet/relay-catalog -p '*.sha256'`). The catalog's format comes from the pinned relay version, so a newer image may compose an old tag differently; the data tarball depends only on git. The reproduce workflow runs this check for the latest tag whenever the pin changes.
 
 ### Data tree
 
@@ -107,10 +112,6 @@ Every `v*` tag also attaches the live data tree, the YAML relay seeds from (`dat
 - `https://github.com/wyolet/relay-catalog/releases/download/<tag>/relay-catalog-data-<tag>.tar.gz`
 - `https://github.com/wyolet/relay-catalog/releases/download/<tag>/relay-catalog-data-<tag>.tar.gz.sha256`
 
-The tarball is reproducible from the tag with git alone, on any platform (`git archive` uses its built-in gzip):
-
-```bash
-scripts/data-tarball.sh <tag> <tag> out
-```
+The tarball is `git archive --format=tar.gz <tag> -- data ':(exclude)data/drafts'`, reproducible from the tag with git alone on any platform (`git archive` uses its built-in gzip); the `catalog-server build` command above writes it too.
 
 `.gitattributes` limits `git archive` and GitHub's source archives to the same tree, so they never contain tooling. Release tooling keeps the explicit pathspec because older tags have no `.gitattributes`; CI fails when the two disagree.
