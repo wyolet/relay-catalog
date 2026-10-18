@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: upstage
     labels:
-        family: solar-pro
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: solar-pro
+    family: solar
     capabilities:
         chat: true
         tools: false

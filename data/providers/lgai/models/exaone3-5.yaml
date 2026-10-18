@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: lgai
     labels:
-        family: exaone3.5
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: exaone3.5
+    family: exaone
     capabilities:
         chat: true
         tools: true
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: lgai
     labels:
-        family: exaone3.5
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: exaone3.5
+    family: exaone
     capabilities:
         chat: true
         tools: true
@@ -66,11 +64,10 @@ metadata:
         kind: provider
         name: lgai
     labels:
-        family: exaone3.5
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: exaone3.5
+    family: exaone
     capabilities:
         chat: true
         tools: true

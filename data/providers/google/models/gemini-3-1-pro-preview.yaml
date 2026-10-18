@@ -9,11 +9,10 @@ metadata:
         kind: provider
         name: google
     labels:
-        family: gemini-3-1-pro-preview
         source: google-ai-studio
         source_version: "2026-05-21"
 spec:
-    family: gemini-3-1-pro-preview
+    family: gemini
     capabilities:
         chat: true
         streaming: true

@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: deepseek
     labels:
-        family: deepscaler
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: deepscaler
+    family: deepseek
     capabilities:
         chat: true
         tools: false

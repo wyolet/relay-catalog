@@ -9,7 +9,6 @@ metadata:
         name: anthropic
     labels:
         featured: "true"
-        family: claude
         source: anthropic-docs
         source_version: "2026-09-02"
 spec:

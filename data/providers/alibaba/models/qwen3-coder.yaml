@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: alibaba
     labels:
-        family: qwen3-coder
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: qwen3-coder
+    family: qwen
     capabilities:
         chat: true
         tools: true
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: alibaba
     labels:
-        family: alibaba
         source: litellm
         source_version: "2026-05-20"
 spec:
-    family: alibaba
+    family: qwen
     capabilities:
         chat: true
         streaming: true

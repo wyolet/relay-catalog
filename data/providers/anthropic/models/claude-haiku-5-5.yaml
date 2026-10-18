@@ -9,7 +9,6 @@ metadata:
         name: anthropic
     labels:
         featured: "true"
-        family: claude
         source: models.dev
         source_version: "2026-10-10"
 spec:

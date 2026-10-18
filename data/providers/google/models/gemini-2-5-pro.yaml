@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: google
     labels:
-        family: gemini-2-5-pro
         source: google-ai-studio
         source_version: "2026-05-21"
 spec:
-    family: gemini-2-5-pro
+    family: gemini
     capabilities:
         chat: true
         streaming: true

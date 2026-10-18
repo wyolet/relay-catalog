@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: meta
     labels:
-        family: llama3-gradient
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: llama3-gradient
+    family: llama
     capabilities:
         chat: true
         tools: false

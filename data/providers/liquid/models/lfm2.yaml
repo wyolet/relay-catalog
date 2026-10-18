@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: liquid
     labels:
-        family: lfm2
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: lfm2
+    family: lfm
     capabilities:
         chat: true
         tools: true

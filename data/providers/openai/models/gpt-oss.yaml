@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: openai
     labels:
-        family: openai
         source: litellm
         source_version: "2026-05-20"
 spec:
-    family: openai
+    family: gpt-oss
     capabilities:
         chat: true
         streaming: true
@@ -41,11 +40,10 @@ metadata:
         kind: provider
         name: openai
     labels:
-        family: openai
         source: litellm
         source_version: "2026-05-20"
 spec:
-    family: openai
+    family: gpt-oss
     capabilities:
         chat: true
         streaming: true

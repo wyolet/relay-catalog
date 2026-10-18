@@ -9,7 +9,6 @@ metadata:
         kind: provider
         name: meta
     labels:
-        family: muse
         source: models.dev
         source_version: "2026-09-21"
 spec:

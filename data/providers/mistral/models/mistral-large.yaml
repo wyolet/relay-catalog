@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: mistral
     labels:
-        family: mistral-large
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: mistral-large
+    family: mistral
     capabilities:
         chat: true
         tools: true
@@ -39,7 +38,6 @@ metadata:
         kind: provider
         name: mistral
     labels:
-        family: mistral
         source: litellm
         source_version: "2026-05-20"
 spec:
@@ -70,11 +68,10 @@ metadata:
         kind: provider
         name: mistral
     labels:
-        family: mistral-large-3
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: mistral-large-3
+    family: mistral
     capabilities:
         chat: true
         tools: true

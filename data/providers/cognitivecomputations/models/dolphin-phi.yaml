@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: cognitivecomputations
     labels:
-        family: dolphin-phi
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: dolphin-phi
+    family: phi
     capabilities:
         chat: true
         tools: false

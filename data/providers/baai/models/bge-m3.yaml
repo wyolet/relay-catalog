@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: baai
     labels:
-        family: bge-m3
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: bge-m3
+    family: bge
     capabilities:
         chat: false
         embeddings: true

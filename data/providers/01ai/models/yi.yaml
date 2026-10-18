@@ -8,7 +8,6 @@ metadata:
         kind: provider
         name: 01ai
     labels:
-        family: yi
         source: ollama-library
         source_version: '2026-05-20'
 spec:
@@ -37,7 +36,6 @@ metadata:
         kind: provider
         name: 01ai
     labels:
-        family: yi
         source: ollama-library
         source_version: '2026-05-20'
 spec:
@@ -66,7 +64,6 @@ metadata:
         kind: provider
         name: 01ai
     labels:
-        family: yi
         source: ollama-library
         source_version: '2026-05-20'
 spec:

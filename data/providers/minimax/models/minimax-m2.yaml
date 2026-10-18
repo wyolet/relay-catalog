@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: minimax
     labels:
-        family: minimax-m2
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: minimax-m2
+    family: minimax
     capabilities:
         chat: true
         tools: true
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: minimax
     labels:
-        family: minimax-m2.1
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: minimax-m2.1
+    family: minimax
     capabilities:
         chat: true
         tools: true
@@ -66,11 +64,10 @@ metadata:
         kind: provider
         name: minimax
     labels:
-        family: minimax-m2.5
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: minimax-m2.5
+    family: minimax
     capabilities:
         chat: true
         tools: true
@@ -95,11 +92,10 @@ metadata:
         kind: provider
         name: minimax
     labels:
-        family: minimax-m2.7
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: minimax-m2.7
+    family: minimax
     capabilities:
         chat: true
         tools: true

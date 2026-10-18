@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: 01ai
     labels:
-        family: yi-coder
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: yi-coder
+    family: yi
     capabilities:
         chat: true
         tools: false
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: 01ai
     labels:
-        family: yi-coder
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: yi-coder
+    family: yi
     capabilities:
         chat: true
         tools: false

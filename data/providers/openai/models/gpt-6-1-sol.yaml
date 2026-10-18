@@ -10,11 +10,10 @@ metadata:
         name: openai
     labels:
         featured: "true"
-        family: gpt-sol
         source: models.dev
         source_version: "2026-09-29"
 spec:
-    family: gpt-sol
+    family: gpt
     capabilities:
         unsupportedParams:
             - temperature

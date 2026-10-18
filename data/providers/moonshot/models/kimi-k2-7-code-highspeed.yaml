@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: moonshot
     labels:
-        family: kimi-k2
         source: models.dev
         source_version: "2026-07-12"
 spec:
-    family: kimi-k2
+    family: kimi
     capabilities:
         chat: true
         streaming: true

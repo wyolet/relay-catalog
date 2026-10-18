@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: liquid
     labels:
-        family: laguna-xs.2
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: laguna-xs.2
+    family: laguna
     capabilities:
         chat: true
         tools: true

@@ -9,11 +9,10 @@ metadata:
         name: openai
     labels:
         featured: "true"
-        family: gpt-mini
         source: models.dev
         source_version: "2026-07-12"
 spec:
-    family: gpt-mini
+    family: gpt
     capabilities:
         chat: true
         streaming: true

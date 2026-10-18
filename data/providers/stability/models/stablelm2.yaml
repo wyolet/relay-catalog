@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: stability
     labels:
-        family: stablelm2
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: stablelm2
+    family: stablelm
     capabilities:
         chat: true
         tools: false
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: stability
     labels:
-        family: stablelm2
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: stablelm2
+    family: stablelm
     capabilities:
         chat: true
         tools: false

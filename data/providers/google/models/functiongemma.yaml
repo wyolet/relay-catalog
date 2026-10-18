@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: google
     labels:
-        family: functiongemma
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: functiongemma
+    family: gemma
     capabilities:
         chat: true
         tools: true

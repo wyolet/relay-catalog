@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: zhipuai
     labels:
-        family: zhipuai
         source: litellm
         source_version: "2026-05-20"
 spec:
-    family: zhipuai
+    family: glm
     capabilities:
         chat: true
         streaming: true

@@ -10,11 +10,10 @@ metadata:
         name: deepseek
     labels:
         featured: "true"
-        family: deepseek-v4-1-flash
         source: models.dev
         source_version: "2026-09-21"
 spec:
-    family: deepseek-v4-1-flash
+    family: deepseek
     capabilities:
         chat: true
         streaming: true

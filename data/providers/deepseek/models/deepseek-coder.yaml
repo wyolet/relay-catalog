@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: deepseek
     labels:
-        family: deepseek-coder
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: deepseek-coder
+    family: deepseek
     capabilities:
         chat: true
         tools: false
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: deepseek
     labels:
-        family: deepseek-coder
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: deepseek-coder
+    family: deepseek
     capabilities:
         chat: true
         tools: false
@@ -66,11 +64,10 @@ metadata:
         kind: provider
         name: deepseek
     labels:
-        family: deepseek-coder
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: deepseek-coder
+    family: deepseek
     capabilities:
         chat: true
         tools: false

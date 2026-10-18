@@ -10,11 +10,10 @@ metadata:
         name: google
     labels:
         featured: "true"
-        family: gemini-3-8-flash
         source: models.dev
         source_version: "2026-09-05"
 spec:
-    family: gemini-3-8-flash
+    family: gemini
     capabilities:
         chat: true
         streaming: true

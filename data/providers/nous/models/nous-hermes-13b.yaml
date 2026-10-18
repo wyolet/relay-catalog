@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: nous
     labels:
-        family: nous-hermes
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: nous-hermes
+    family: llama
     capabilities:
         chat: true
         tools: false

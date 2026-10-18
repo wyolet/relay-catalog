@@ -8,7 +8,6 @@ metadata:
     kind: provider
     name: google
   labels:
-    family: gemma
     source: models.dev
     source_version: '2026-06-09'
 spec:

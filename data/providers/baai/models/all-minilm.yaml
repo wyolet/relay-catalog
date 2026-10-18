@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: baai
     labels:
-        family: all-minilm
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: all-minilm
+    family: minilm
     capabilities:
         chat: false
         embeddings: true
@@ -35,11 +34,10 @@ metadata:
         kind: provider
         name: baai
     labels:
-        family: all-minilm
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: all-minilm
+    family: minilm
     capabilities:
         chat: false
         embeddings: true

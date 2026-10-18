@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: openbmb
     labels:
-        family: minicpm-v
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: minicpm-v
+    family: qwen
     capabilities:
         chat: true
         tools: false

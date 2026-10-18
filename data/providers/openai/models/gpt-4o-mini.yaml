@@ -8,7 +8,6 @@ metadata:
         kind: provider
         name: openai
     labels:
-        family: gpt
         source: litellm
         source_version: "2026-05-20"
 spec:
@@ -48,7 +47,6 @@ metadata:
         kind: provider
         name: openai
     labels:
-        family: gpt
         source: litellm
         source_version: "2026-05-20"
 spec:
@@ -86,7 +84,6 @@ metadata:
         kind: provider
         name: openai
     labels:
-        family: gpt
         source: litellm
         source_version: "2026-05-20"
 spec:
@@ -124,7 +121,6 @@ metadata:
         kind: provider
         name: openai
     labels:
-        family: gpt
         source: litellm
         source_version: "2026-05-20"
 spec:

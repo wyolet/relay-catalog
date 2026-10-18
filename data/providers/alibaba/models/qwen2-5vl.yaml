@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: alibaba
     labels:
-        family: qwen2.5vl
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: qwen2.5vl
+    family: qwen
     capabilities:
         chat: true
         tools: false
@@ -38,11 +37,10 @@ metadata:
         kind: provider
         name: alibaba
     labels:
-        family: qwen2.5vl
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: qwen2.5vl
+    family: qwen
     capabilities:
         chat: true
         tools: false
@@ -68,11 +66,10 @@ metadata:
         kind: provider
         name: alibaba
     labels:
-        family: qwen2.5vl
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: qwen2.5vl
+    family: qwen
     capabilities:
         chat: true
         tools: false
@@ -98,11 +95,10 @@ metadata:
         kind: provider
         name: alibaba
     labels:
-        family: qwen2.5vl
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: qwen2.5vl
+    family: qwen
     capabilities:
         chat: true
         tools: false

@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: tii
     labels:
-        family: falcon3
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: falcon3
+    family: falcon
     capabilities:
         chat: true
         tools: false
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: tii
     labels:
-        family: falcon3
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: falcon3
+    family: falcon
     capabilities:
         chat: true
         tools: false
@@ -66,11 +64,10 @@ metadata:
         kind: provider
         name: tii
     labels:
-        family: falcon3
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: falcon3
+    family: falcon
     capabilities:
         chat: true
         tools: false
@@ -95,11 +92,10 @@ metadata:
         kind: provider
         name: tii
     labels:
-        family: falcon3
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: falcon3
+    family: falcon
     capabilities:
         chat: true
         tools: false

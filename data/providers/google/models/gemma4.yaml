@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: google
     labels:
-        family: gemma4
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: gemma4
+    family: gemma
     capabilities:
         chat: true
         tools: true
@@ -39,11 +38,10 @@ metadata:
         kind: provider
         name: google
     labels:
-        family: gemma4
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: gemma4
+    family: gemma
     capabilities:
         chat: true
         tools: true
@@ -76,11 +74,10 @@ metadata:
         kind: provider
         name: google
     labels:
-        family: gemma4
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: gemma4
+    family: gemma
     capabilities:
         chat: true
         tools: true
@@ -107,11 +104,10 @@ metadata:
         kind: provider
         name: google
     labels:
-        family: gemma4
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: gemma4
+    family: gemma
     capabilities:
         chat: true
         tools: true

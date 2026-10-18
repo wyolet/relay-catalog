@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: microsoft
     labels:
-        family: phi4
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: phi4
+    family: phi
     capabilities:
         chat: true
         tools: false
@@ -39,11 +38,10 @@ metadata:
         kind: provider
         name: microsoft
     labels:
-        family: phi4-mini
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: phi4-mini
+    family: phi
     capabilities:
         chat: true
         tools: true
@@ -70,11 +68,10 @@ metadata:
         kind: provider
         name: microsoft
     labels:
-        family: phi4-reasoning
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: phi4-reasoning
+    family: phi
     capabilities:
         chat: true
         tools: false
@@ -101,11 +98,10 @@ metadata:
         kind: provider
         name: microsoft
     labels:
-        family: phi4-mini-reasoning
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: phi4-mini-reasoning
+    family: phi
     capabilities:
         chat: true
         tools: false

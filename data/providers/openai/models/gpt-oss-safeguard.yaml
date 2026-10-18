@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: openai
     labels:
-        family: gpt-oss-safeguard
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: gpt-oss-safeguard
+    family: gpt-oss
     capabilities:
         chat: true
         tools: false
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: openai
     labels:
-        family: gpt-oss-safeguard
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: gpt-oss-safeguard
+    family: gpt-oss
     capabilities:
         chat: true
         tools: false

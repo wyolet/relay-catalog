@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: internlm
     labels:
-        family: internlm2
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: internlm2
+    family: internlm
     capabilities:
         chat: true
         tools: false
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: internlm
     labels:
-        family: internlm2
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: internlm2
+    family: internlm
     capabilities:
         chat: true
         tools: false

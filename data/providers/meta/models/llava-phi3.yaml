@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: meta
     labels:
-        family: llava-phi3
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: llava-phi3
+    family: phi
     capabilities:
         chat: true
         tools: false

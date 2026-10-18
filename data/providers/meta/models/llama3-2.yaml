@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: meta
     labels:
-        family: llama3.2
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: llama3.2
+    family: llama
     capabilities:
         chat: true
         tools: true
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: meta
     labels:
-        family: llama3.2
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: llama3.2
+    family: llama
     capabilities:
         chat: true
         tools: true
