@@ -1,0 +1,124 @@
+name: Release
+
+# build -> publish -> index: index.yaml never names a tag before its assets are published.
+# Consumers pin the published sha256s, so a published asset is never replaced: a re-run with identical bytes is a no-op, different bytes fail the run.
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  # Read-only token; only the built files cross into the job that can write the release.
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-go@b7ad1dad31e06c5925ef5d2fc7ad053ef454303e # v7.0.0
+        with:
+          go-version-file: go.mod
+
+      # Both rebuild byte-identically from the tag: generatedAt is the tagged commit's time, and the tarball comes from git archive.
+      - name: Build the data tarball
+        run: scripts/data-tarball.sh "$GITHUB_REF_NAME" "$GITHUB_SHA" out
+
+      - name: Build catalog.json.gz
+        run: |
+          set -eu
+          go run ./cmd/embed -o out/catalog.json.gz -generated-at "$(git show -s --format=%cI HEAD)" -version "$GITHUB_REF_NAME" ./data
+          (cd out && sha256sum catalog.json.gz > catalog.json.gz.sha256)
+
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: release
+          path: out/
+          retention-days: 1
+
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
+    steps:
+      - uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: release
+
+      # Consumers verify with: gh attestation verify <file> --repo wyolet/relay-catalog
+      - name: Attest build provenance
+        uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6 # v4.2.2
+        with:
+          subject-path: |
+            catalog.json.gz
+            relay-catalog-data-${{ github.ref_name }}.tar.gz
+
+      - name: Upload to release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+          tag="$GITHUB_REF_NAME"
+          # Create only when missing, so notes on an existing release stay untouched.
+          gh release view "$tag" >/dev/null 2>&1 || gh release create "$tag" --verify-tag --notes ""
+          assets=$(gh release view "$tag" --json assets -q '.assets[].name')
+          mkdir published
+          upload_once() {
+            local file=$1
+            if printf '%s\n' "$assets" | grep -qxF "$file"; then
+              gh release download "$tag" --pattern "$file" --dir published
+              cmp -s "$file" "published/$file" \
+                || { echo "::error::$file is already published with different bytes; it is never replaced"; exit 1; }
+              echo "$file is already published with identical bytes"
+            else
+              gh release upload "$tag" "$file"
+            fi
+          }
+          for file in catalog.json.gz "relay-catalog-data-${tag}.tar.gz"; do
+            upload_once "$file"
+            upload_once "$file.sha256"
+          done
+
+  # Points the tagged schema channel's `latest` at this tag in index.yaml on main; relays on RELAY_CATALOG_VERSION=latest resolve through it. An older tag never downgrades the channel.
+  index:
+    needs: publish
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    # Serialises pushes to main across tag runs.
+    concurrency:
+      group: release-index
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: main
+          # Full history so the tagged commit is reachable for `git show`.
+          fetch-depth: 0
+
+      - name: Update index.yaml
+        run: |
+          set -eu
+          # The channel is the tagged tree's schema version, read from the
+          # tag's own data files (not main's, which may already be ahead).
+          channel=$(git show "${GITHUB_SHA}:data/providers/anthropic/provider.yaml" \
+            | sed -n 's|^apiVersion:.*/||p' | head -1)
+          pip install --quiet pyyaml
+          python3 .github/scripts/update_index.py "$channel" "${GITHUB_REF_NAME}"
+
+      - name: Commit
+        run: |
+          set -eu
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add index.yaml
+          git diff --cached --quiet && exit 0
+          git commit -m "index: channel latest -> ${GITHUB_REF_NAME}"
+          git push origin main

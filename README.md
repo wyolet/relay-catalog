@@ -87,7 +87,9 @@ Every `v*` tag attaches the flattened SDK catalog to that tag's GitHub release:
 - `https://github.com/wyolet/relay-catalog/releases/download/<tag>/catalog.json.gz`
 - `https://github.com/wyolet/relay-catalog/releases/download/<tag>/catalog.json.gz.sha256` — `<hex>  catalog.json.gz`, checkable with `sha256sum -c`.
 
-To fetch the newest catalog, read `channels.<channel>.latest` from `https://raw.githubusercontent.com/wyolet/relay-catalog/main/index.yaml` for the schema channel your SDK reads (e.g. `v1alpha2`) and use that tag in the URL above. Avoid `/releases/latest/download/`: it ignores schema channels.
+To fetch the newest catalog, read `channels.<channel>.latest` from `https://raw.githubusercontent.com/wyolet/relay-catalog/main/index.yaml` for the schema channel your SDK reads (e.g. `v1alpha2`) and use that tag in the URL above. Avoid `/releases/latest/download/`: it ignores schema channels. The release workflow updates `index.yaml` only after the tag's assets are published.
+
+Verify where an asset was built with `gh attestation verify <file> --repo wyolet/relay-catalog`. Consumers pin the published sha256s, so a published asset is never replaced: re-running the release workflow with identical bytes uploads nothing, and different bytes fail the run.
 
 The asset is reproducible from the tag. From a checkout of `<tag>`:
 
@@ -104,8 +106,10 @@ Every `v*` tag also attaches the live data tree, the YAML relay seeds from (`dat
 - `https://github.com/wyolet/relay-catalog/releases/download/<tag>/relay-catalog-data-<tag>.tar.gz`
 - `https://github.com/wyolet/relay-catalog/releases/download/<tag>/relay-catalog-data-<tag>.tar.gz.sha256`
 
-Verify where it was built with `gh attestation verify relay-catalog-data-<tag>.tar.gz --repo wyolet/relay-catalog`. Consumers pin its sha256, so a published tarball is never replaced: re-running the release job with identical bytes uploads nothing, and different bytes fail the run. The tarball is reproducible from the tag with git alone, on any platform (`git archive` uses its built-in gzip):
+The tarball is reproducible from the tag with git alone, on any platform (`git archive` uses its built-in gzip):
 
 ```bash
 scripts/data-tarball.sh <tag> <tag> out
 ```
+
+`.gitattributes` limits `git archive` and GitHub's source archives to the same tree, so they never contain tooling. Release tooling keeps the explicit pathspec because older tags have no `.gitattributes`; CI fails when the two disagree.

@@ -1,0 +1,5 @@
+# git archive and GitHub source archives contain only the live data tree.
+/* export-ignore
+/.* export-ignore
+/data -export-ignore
+/data/drafts export-ignore
