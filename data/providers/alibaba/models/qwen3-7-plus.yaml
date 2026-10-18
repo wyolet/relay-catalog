@@ -13,6 +13,7 @@ metadata:
         source_version: "2026-06-09"
 spec:
     family: qwen
+    productLine: plus
     capabilities:
         chat: true
         streaming: true

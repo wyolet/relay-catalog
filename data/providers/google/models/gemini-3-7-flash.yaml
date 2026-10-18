@@ -13,6 +13,7 @@ metadata:
         source_version: "2026-08-23"
 spec:
     family: gemini
+    productLine: flash
     capabilities:
         chat: true
         streaming: true

@@ -3,12 +3,12 @@ module github.com/wyolet/relay-catalog
 go 1.26.0
 
 require (
-	github.com/wyolet/relay v0.10.5
+	github.com/wyolet/relay v0.11.4
 	gopkg.in/yaml.v3 v3.0.1
 )
 
 require (
-	github.com/1password/onepassword-sdk-go v0.4.0 // indirect
+	github.com/1password/onepassword-sdk-go v0.4.1 // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/danielgtaylor/huma/v2 v2.37.3 // indirect
@@ -22,6 +22,7 @@ require (
 	github.com/golang-migrate/migrate/v4 v4.19.1 // indirect
 	github.com/google/uuid v1.6.0 // indirect
 	github.com/ianlancetaylor/demangle v0.0.0-20251118225945-96ee0021ea0f // indirect
+	github.com/jackc/pgerrcode v0.0.0-20220416144525-469b46aa5efa // indirect
 	github.com/jackc/pgpassfile v1.0.0 // indirect
 	github.com/jackc/pgservicefile v0.0.0-20240606120523-5a60cdf6a761 // indirect
 	github.com/jackc/pgx/v5 v5.9.2 // indirect
@@ -37,7 +38,8 @@ require (
 	github.com/redis/go-redis/v9 v9.19.0 // indirect
 	github.com/tetratelabs/wabin v0.0.0-20230304001439-f6f874872834 // indirect
 	github.com/tetratelabs/wazero v1.11.0 // indirect
-	github.com/wyolet/relay/sdk v0.7.14 // indirect
+	github.com/wyolet/relay/auth v0.3.0 // indirect
+	github.com/wyolet/relay/sdk v0.7.22 // indirect
 	go.opentelemetry.io/proto/otlp v1.9.0 // indirect
 	go.uber.org/atomic v1.11.0 // indirect
 	go.yaml.in/yaml/v2 v2.4.2 // indirect

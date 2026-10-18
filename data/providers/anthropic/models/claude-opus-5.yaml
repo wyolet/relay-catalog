@@ -12,6 +12,7 @@ metadata:
         source_version: "2026-07-24"
 spec:
     family: claude
+    productLine: opus
     capabilities:
         unsupportedParams:
             - temperature

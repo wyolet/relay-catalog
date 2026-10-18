@@ -13,6 +13,7 @@ metadata:
         source_version: "2026-09-29"
 spec:
     family: claude
+    productLine: sonnet
     capabilities:
         unsupportedParams:
             - temperature

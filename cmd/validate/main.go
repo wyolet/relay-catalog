@@ -5,6 +5,8 @@
 //  2. catalogvalidate.RunRules with rules.All — this repo's curation
 //     conventions (e.g. tag completeness, pricing-target invariants).
 //  3. checkFamilies — every Model's spec.family is in families.yaml.
+//  4. checkProductLines — a set spec.productLine is one of its family's
+//     lines in families.yaml.
 //
 // Flags:
 //
@@ -88,6 +90,7 @@ func main() {
 		os.Exit(2)
 	}
 	issues = append(issues, checkFamilies(docs, allowed)...)
+	issues = append(issues, checkProductLines(docs, allowed)...)
 
 	if want, ok, err := loadFeatured(featuredPath(dir)); err != nil {
 		fmt.Fprintln(os.Stderr, err)

@@ -14,6 +14,7 @@ metadata:
         source_version: "2026-09-02"
 spec:
     family: qwen
+    productLine: flash
     capabilities:
         chat: true
         streaming: true

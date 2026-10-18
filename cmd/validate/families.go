@@ -1,7 +1,8 @@
 // families.yaml is the allowlist of Model spec.family values. A family is the
 // base model lineage, so an import that writes a versioned or product-line
 // value (gemini-3-flash, gemma3, gpt-mini) fails here instead of splitting a
-// lineage into many families.
+// lineage into many families. Each family also lists its allowed
+// spec.productLine values, so a line is only valid under its own family.
 package main
 
 import (
@@ -19,6 +20,10 @@ type familiesManifest struct {
 	Families []struct {
 		Name    string   `yaml:"name"`
 		Aliases []string `yaml:"aliases,omitempty"`
+		Lines   []struct {
+			Name    string   `yaml:"name"`
+			Aliases []string `yaml:"aliases,omitempty"`
+		} `yaml:"lines,omitempty"`
 	} `yaml:"families"`
 }
 
@@ -26,7 +31,9 @@ func familiesPath(dir string) string {
 	return filepath.Join(dir, "..", "families.yaml")
 }
 
-func loadFamilies(path string) (map[string]bool, error) {
+// loadFamilies maps every allowed family to the set of its product-line names.
+// Aliases are importer-only and stay out of both.
+func loadFamilies(path string) (map[string]map[string]bool, error) {
 	b, err := os.ReadFile(path)
 	if err != nil {
 		return nil, err
@@ -35,19 +42,26 @@ func loadFamilies(path string) (map[string]bool, error) {
 	if err := yaml.Unmarshal(b, &m); err != nil {
 		return nil, fmt.Errorf("%s: %w", path, err)
 	}
-	out := make(map[string]bool, len(m.Families))
+	out := make(map[string]map[string]bool, len(m.Families))
 	for _, f := range m.Families {
-		out[f.Name] = true
+		lines := make(map[string]bool, len(f.Lines))
+		for _, l := range f.Lines {
+			lines[l.Name] = true
+		}
+		out[f.Name] = lines
 	}
 	return out, nil
 }
 
 // checkFamilies reports every model whose spec.family is missing or not in
 // the allowlist.
-func checkFamilies(docs []manifest.Document, allowed map[string]bool) []catalogvalidate.Issue {
+func checkFamilies(docs []manifest.Document, allowed map[string]map[string]bool) []catalogvalidate.Issue {
 	var out []catalogvalidate.Issue
 	for _, d := range docs {
-		if d.Model == nil || allowed[d.Model.Spec.Family] {
+		if d.Model == nil {
+			continue
+		}
+		if _, ok := allowed[d.Model.Spec.Family]; ok {
 			continue
 		}
 		msg := fmt.Sprintf("%q is not in families.yaml — use the base model's family, or add a new lineage there", d.Model.Spec.Family)
@@ -59,6 +73,29 @@ func checkFamilies(docs []manifest.Document, allowed map[string]bool) []catalogv
 			Kind:     catalogvalidate.KindInvariant,
 			Source:   catalogvalidate.Ref{Kind: "Model", Name: d.Model.Metadata.Name, Field: "spec.family"},
 			Message:  msg,
+		})
+	}
+	return out
+}
+
+// checkProductLines reports every model whose spec.productLine is set but not
+// a line of its family. Empty is always allowed; an unknown family is left to
+// checkFamilies.
+func checkProductLines(docs []manifest.Document, allowed map[string]map[string]bool) []catalogvalidate.Issue {
+	var out []catalogvalidate.Issue
+	for _, d := range docs {
+		if d.Model == nil || d.Model.Spec.ProductLine == "" {
+			continue
+		}
+		lines, ok := allowed[d.Model.Spec.Family]
+		if !ok || lines[d.Model.Spec.ProductLine] {
+			continue
+		}
+		out = append(out, catalogvalidate.Issue{
+			Severity: catalogvalidate.SeverityError,
+			Kind:     catalogvalidate.KindInvariant,
+			Source:   catalogvalidate.Ref{Kind: "Model", Name: d.Model.Metadata.Name, Field: "spec.productLine"},
+			Message:  fmt.Sprintf("%q is not a line of family %q in families.yaml — leave it empty, or add the line there", d.Model.Spec.ProductLine, d.Model.Spec.Family),
 		})
 	}
 	return out

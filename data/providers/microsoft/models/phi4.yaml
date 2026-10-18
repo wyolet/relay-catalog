@@ -74,6 +74,7 @@ metadata:
         source_version: "2026-05-20"
 spec:
     family: phi
+    productLine: reasoning
     capabilities:
         chat: true
         tools: false
@@ -105,6 +106,7 @@ metadata:
         source_version: "2026-05-20"
 spec:
     family: phi
+    productLine: reasoning
     capabilities:
         chat: true
         tools: false
