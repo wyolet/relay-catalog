@@ -2,19 +2,20 @@
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Model
 metadata:
-    name: granite3n-e2b
-    displayName: Granite 3N E2B
+    name: athene-v2
+    displayName: Athene V2
     owner:
         kind: provider
-        name: ibm
+        name: nexusflow
     labels:
         source: ollama-library
-        source_version: '2026-05-20'
+        source_version: "2026-05-20"
 spec:
-    family: granite
+    family: qwen
+    productLine: athene
     capabilities:
         chat: true
-        tools: false
+        tools: true
         vision: false
         reasoning: false
     modalities:
@@ -22,7 +23,10 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-11-12"
     snapshots:
-        - name: granite3n-e2b
-          originalName: granite3n:e2b
-    pointer: granite3n-e2b
+        - name: athene-v2-latest
+          originalName: athene-v2:latest
+        - name: athene-v2-72b
+          originalName: athene-v2:72b
+    pointer: athene-v2-72b

@@ -1,0 +1,9 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Provider.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Provider
+metadata:
+    name: pankajmathur
+    displayName: Pankaj Mathur
+    description: Pankaj Mathur — model originator.
+spec:
+    homepageURL: https://huggingface.co/pankajmathur

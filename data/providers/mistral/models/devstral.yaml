@@ -59,6 +59,6 @@ spec:
     snapshots:
         - name: devstral-2-latest
           originalName: devstral-2:latest
-        - name: devstral-2-32b
-          originalName: devstral-2:32b
-    pointer: devstral-2-32b
+        - name: devstral-2-123b
+          originalName: devstral-2:123b
+    pointer: devstral-2-123b
