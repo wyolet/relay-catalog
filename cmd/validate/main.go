@@ -5,12 +5,15 @@
 //  2. catalogvalidate.RunRules with rules.All — this repo's curation
 //     conventions (e.g. tag completeness, pricing-target invariants).
 //  3. checkFamilies — every Model's spec.family is in families.yaml.
+//  4. checkLatest — every model dated, latest tags match the newest
+//     release per provider family (latest.go).
 //
 // Flags:
 //
 //	--strict          promote warnings to errors before exit
 //	--skip <name>     suppress a named rule (repeatable)
 //	--list            print rule registry (name, severity, description) and exit
+//	--write-latest    rewrite the latest tags in the data tree and exit
 //
 // Exit codes:
 //
@@ -36,14 +39,15 @@ func (s *stringSlice) String() string     { return fmt.Sprintf("%v", *s) }
 func (s *stringSlice) Set(v string) error { *s = append(*s, v); return nil }
 
 func main() {
-	var strict, list, regenFeatured bool
+	var strict, list, regenFeatured, regenLatest bool
 	var skip stringSlice
 	flag.BoolVar(&strict, "strict", false, "promote warnings to errors before exit")
 	flag.BoolVar(&list, "list", false, "print rule registry and exit")
 	flag.BoolVar(&regenFeatured, "write-featured", false, "regenerate featured.yaml from Model featured labels and exit")
+	flag.BoolVar(&regenLatest, "write-latest", false, "set the latest tag on the newest model of each provider family and exit")
 	flag.Var(&skip, "skip", "suppress a named rule (repeatable)")
 	flag.Usage = func() {
-		fmt.Fprintln(os.Stderr, "usage: validate [--strict] [--list] [--write-featured] [--skip <name>...] <dir>")
+		fmt.Fprintln(os.Stderr, "usage: validate [--strict] [--list] [--write-featured] [--write-latest] [--skip <name>...] <dir>")
 		flag.PrintDefaults()
 	}
 	flag.Parse()
@@ -74,6 +78,16 @@ func main() {
 		return
 	}
 
+	if regenLatest {
+		n, err := writeLatest(dir, docs)
+		if err != nil {
+			fmt.Fprintf(os.Stderr, "write latest tags: %v\n", err)
+			os.Exit(2)
+		}
+		fmt.Printf("updated %d files\n", n)
+		return
+	}
+
 	skipSet := make(map[string]bool, len(skip))
 	for _, n := range skip {
 		skipSet[n] = true
@@ -81,6 +95,7 @@ func main() {
 
 	issues := catalogvalidate.ValidateGraph(docs)
 	issues = append(issues, catalogvalidate.RunRules(rules.All, docs, skipSet)...)
+	issues = append(issues, checkLatest(docs)...)
 
 	allowed, err := loadFamilies(familiesPath(dir))
 	if err != nil {
