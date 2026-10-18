@@ -1,0 +1,79 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: anthropic-build-rl
+  displayName: Anthropic Build — standard models
+  description: "ITPM is metered as uncached input; cache writes, which Anthropic also counts, aren't. Anthropic's combined Opus 4.x and Sonnet 4.x buckets are metered per model here. Source: https://platform.claude.com/docs/en/api/rate-limits"
+  owner:
+    kind: host
+    name: anthropic
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 5000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens.input
+      amount: 5000000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens.output
+      amount: 1000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: anthropic-build-fable-rl
+  displayName: Anthropic Build — Fable and Mythos
+  description: "ITPM is metered as uncached input; cache writes, which Anthropic also counts, aren't. Anthropic's combined Fable 5.x and Mythos 5.x buckets are metered per model here. Source: https://platform.claude.com/docs/en/api/rate-limits"
+  owner:
+    kind: host
+    name: anthropic
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 2000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens.input
+      amount: 1500000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens.output
+      amount: 300000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+  name: anthropic-build
+  displayName: Anthropic Build
+  owner:
+    kind: host
+    name: anthropic
+spec:
+  rlBindings:
+    - models:
+        - anthropic/claude-fable-5
+        - anthropic/claude-fable-5-1
+        - anthropic/claude-mythos-5
+      rateLimit: anthropic-build-fable-rl
+    - models:
+        - anthropic/claude-opus-5-5
+        - anthropic/claude-opus-5
+        - anthropic/claude-opus-4-8
+        - anthropic/claude-opus-4-7
+        - anthropic/claude-opus-4-6
+        - anthropic/claude-opus-4-5
+        - anthropic/claude-sonnet-5-5
+        - anthropic/claude-sonnet-5
+        - anthropic/claude-sonnet-4-6
+        - anthropic/claude-sonnet-4-5
+        - anthropic/claude-haiku-5-5
+        - anthropic/claude-haiku-4-5
+      rateLimit: anthropic-build-rl
