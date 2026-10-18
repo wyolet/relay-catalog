@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-02-21"
     snapshots:
         - name: gemma-2b
           originalName: gemma:2b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-02-21"
     snapshots:
         - name: gemma-7b
           originalName: gemma:7b

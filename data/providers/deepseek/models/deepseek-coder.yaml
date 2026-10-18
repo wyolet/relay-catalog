@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-10-29"
     snapshots:
         - name: deepseek-coder-1-3b
           originalName: deepseek-coder:1.3b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-10-29"
     snapshots:
         - name: deepseek-coder-6-7b
           originalName: deepseek-coder:6.7b
@@ -78,6 +80,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-11-01"
     snapshots:
         - name: deepseek-coder-33b
           originalName: deepseek-coder:33b

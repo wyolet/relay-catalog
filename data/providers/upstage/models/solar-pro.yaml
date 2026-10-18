@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-09-09"
     snapshots:
         - name: solar-pro-latest
           originalName: solar-pro:latest

@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2026-04-29"
     snapshots:
         - name: granite4-1-3b
           originalName: granite4.1:3b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2026-04-29"
     snapshots:
         - name: granite4-1-8b
           originalName: granite4.1:8b
@@ -78,6 +80,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2026-04-29"
     snapshots:
         - name: granite4-1-30b
           originalName: granite4.1:30b

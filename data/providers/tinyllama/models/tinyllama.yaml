@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-12-30"
     snapshots:
         - name: tinyllama-latest
           originalName: tinyllama:latest

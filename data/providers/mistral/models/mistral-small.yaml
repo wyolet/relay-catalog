@@ -54,6 +54,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-03-17"
     snapshots:
         - name: mistral-small3-1-latest
           originalName: mistral-small3.1:latest
@@ -85,6 +86,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-06-20"
     snapshots:
         - name: mistral-small3-2-latest
           originalName: mistral-small3.2:latest

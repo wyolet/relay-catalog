@@ -20,6 +20,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-04-16"
     snapshots:
         - name: snowflake-arctic-embed-22m
           originalName: snowflake-arctic-embed:22m
@@ -46,6 +47,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-04-16"
     snapshots:
         - name: snowflake-arctic-embed-110m
           originalName: snowflake-arctic-embed:110m
@@ -72,6 +74,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-04-16"
     snapshots:
         - name: snowflake-arctic-embed-137m
           originalName: snowflake-arctic-embed:137m
@@ -98,6 +101,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-04-16"
     snapshots:
         - name: snowflake-arctic-embed-335m
           originalName: snowflake-arctic-embed:335m

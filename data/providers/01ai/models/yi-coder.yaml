@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-09-05"
     snapshots:
         - name: yi-coder-1-5b
           originalName: yi-coder:1.5b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-09-05"
     snapshots:
         - name: yi-coder-9b
           originalName: yi-coder:9b

@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-01-18"
     snapshots:
         - name: stablelm2-1-6b
           originalName: stablelm2:1.6b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-04-08"
     snapshots:
         - name: stablelm2-12b
           originalName: stablelm2:12b

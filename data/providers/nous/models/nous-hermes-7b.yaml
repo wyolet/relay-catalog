@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-07-25"
     snapshots:
         - name: nous-hermes-7b
           originalName: nous-hermes:7b

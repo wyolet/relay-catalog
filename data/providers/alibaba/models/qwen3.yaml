@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-04-29"
     snapshots:
         - name: qwen3-0-6b
           originalName: qwen3:0.6b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-04-29"
     snapshots:
         - name: qwen3-1-7b
           originalName: qwen3:1.7b
@@ -78,6 +80,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-04-29"
     snapshots:
         - name: qwen3-4b
           originalName: qwen3:4b
@@ -106,6 +109,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-04-29"
     snapshots:
         - name: qwen3-8b
           originalName: qwen3:8b
@@ -134,6 +138,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-04-29"
     snapshots:
         - name: qwen3-14b
           originalName: qwen3:14b
@@ -162,6 +167,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-04-29"
     snapshots:
         - name: qwen3-30b
           originalName: qwen3:30b
@@ -190,6 +196,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-04-29"
     snapshots:
         - name: qwen3-32b
           originalName: qwen3:32b
@@ -218,6 +225,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-04-29"
     snapshots:
         - name: qwen3-235b
           originalName: qwen3:235b

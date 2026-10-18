@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-04-16"
     snapshots:
         - name: granite3-3-latest
           originalName: granite3.3:latest

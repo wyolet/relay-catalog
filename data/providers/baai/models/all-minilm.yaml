@@ -20,6 +20,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2021-08-30"
     snapshots:
         - name: all-minilm-22m
           originalName: all-minilm:22m
@@ -46,6 +47,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2021-08-30"
     snapshots:
         - name: all-minilm-33m
           originalName: all-minilm:33m

@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-10-16"
     snapshots:
         - name: mistrallite-latest
           originalName: mistrallite:latest

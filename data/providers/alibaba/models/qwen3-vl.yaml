@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-10-21"
     snapshots:
         - name: qwen3-vl-2b
           originalName: qwen3-vl:2b
@@ -52,6 +53,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-10-15"
     snapshots:
         - name: qwen3-vl-4b
           originalName: qwen3-vl:4b
@@ -81,6 +83,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-10-15"
     snapshots:
         - name: qwen3-vl-8b
           originalName: qwen3-vl:8b
@@ -110,6 +113,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-10-04"
     snapshots:
         - name: qwen3-vl-30b
           originalName: qwen3-vl:30b
@@ -139,6 +143,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-10-21"
     snapshots:
         - name: qwen3-vl-32b
           originalName: qwen3-vl:32b
@@ -168,6 +173,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-09-23"
     snapshots:
         - name: qwen3-vl-235b
           originalName: qwen3-vl:235b

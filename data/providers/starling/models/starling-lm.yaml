@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-11-25"
     snapshots:
         - name: starling-lm-latest
           originalName: starling-lm:latest

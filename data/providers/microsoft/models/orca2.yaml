@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-11-21"
     snapshots:
         - name: orca2-7b
           originalName: orca2:7b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-11-21"
     snapshots:
         - name: orca2-13b
           originalName: orca2:13b

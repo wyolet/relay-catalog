@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-18"
     snapshots:
         - name: granite3-1-moe-1b
           originalName: granite3.1-moe:1b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-18"
     snapshots:
         - name: granite3-1-moe-3b
           originalName: granite3.1-moe:3b

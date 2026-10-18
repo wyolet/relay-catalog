@@ -24,6 +24,7 @@ spec:
             - audio
         output:
             - text
+    releaseDate: "2025-06-26"
     snapshots:
         - name: gemma3n-e2b
           originalName: gemma3n:e2b
@@ -54,6 +55,7 @@ spec:
             - audio
         output:
             - text
+    releaseDate: "2025-06-26"
     snapshots:
         - name: gemma3n-e4b
           originalName: gemma3n:e4b

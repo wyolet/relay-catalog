@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-07-31"
     snapshots:
         - name: shieldgemma-2b
           originalName: shieldgemma:2b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-07-31"
     snapshots:
         - name: shieldgemma-9b
           originalName: shieldgemma:9b
@@ -78,6 +80,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-07-31"
     snapshots:
         - name: shieldgemma-27b
           originalName: shieldgemma:27b

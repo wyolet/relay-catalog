@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-09"
     snapshots:
         - name: exaone3-5-2-4b
           originalName: exaone3.5:2.4b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-09"
     snapshots:
         - name: exaone3-5-7-8b
           originalName: exaone3.5:7.8b
@@ -78,6 +80,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-09"
     snapshots:
         - name: exaone3-5-32b
           originalName: exaone3.5:32b

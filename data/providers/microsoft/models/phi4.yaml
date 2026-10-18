@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-12"
     snapshots:
         - name: phi4-latest
           originalName: phi4:latest
@@ -52,6 +53,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-02-26"
     snapshots:
         - name: phi4-mini-latest
           originalName: phi4-mini:latest
@@ -82,6 +84,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-04-30"
     snapshots:
         - name: phi4-reasoning-latest
           originalName: phi4-reasoning:latest
@@ -112,6 +115,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-04-30"
     snapshots:
         - name: phi4-mini-reasoning-latest
           originalName: phi4-mini-reasoning:latest

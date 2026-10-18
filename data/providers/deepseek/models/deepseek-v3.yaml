@@ -53,6 +53,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-08-21"
     snapshots:
         - name: deepseek-v3-1-latest
           originalName: deepseek-v3.1:latest
@@ -85,6 +86,7 @@ spec:
     contextWindowInput: 163840
     contextWindowOutput: 163840
     contextWindowTotal: 163840
+    releaseDate: "2025-08-21"
     snapshots:
         - name: deepseek-v3-1-671b-cloud
           originalName: deepseek-v3.1:671b-cloud

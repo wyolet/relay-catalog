@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-10-26"
     snapshots:
         - name: zephyr-latest
           originalName: zephyr:latest

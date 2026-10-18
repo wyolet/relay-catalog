@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-05-23"
     snapshots:
         - name: aya-8b
           originalName: aya:8b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-05-23"
     snapshots:
         - name: aya-35b
           originalName: aya:35b

@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-10-24"
     snapshots:
         - name: aya-expanse-8b
           originalName: aya-expanse:8b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-10-24"
     snapshots:
         - name: aya-expanse-32b
           originalName: aya-expanse:32b

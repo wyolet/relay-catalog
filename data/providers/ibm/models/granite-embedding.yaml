@@ -20,6 +20,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-18"
     snapshots:
         - name: granite-embedding-30m
           originalName: granite-embedding:30m
@@ -46,6 +47,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-18"
     snapshots:
         - name: granite-embedding-278m
           originalName: granite-embedding:278m

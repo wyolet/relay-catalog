@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-08-14"
     snapshots:
         - name: gemma3-270m
           originalName: gemma3:270m
@@ -52,6 +53,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-03-12"
     snapshots:
         - name: gemma3-1b
           originalName: gemma3:1b
@@ -81,6 +83,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-03-12"
     snapshots:
         - name: gemma3-4b
           originalName: gemma3:4b
@@ -112,6 +115,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-03-12"
     snapshots:
         - name: gemma3-12b
           originalName: gemma3:12b
@@ -143,6 +147,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-03-12"
     snapshots:
         - name: gemma3-27b
           originalName: gemma3:27b

@@ -20,6 +20,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-03-07"
     snapshots:
         - name: mxbai-embed-large-latest
           originalName: mxbai-embed-large:latest

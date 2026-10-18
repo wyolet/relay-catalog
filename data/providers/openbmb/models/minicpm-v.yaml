@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2024-08-04"
     snapshots:
         - name: minicpm-v-latest
           originalName: minicpm-v:latest

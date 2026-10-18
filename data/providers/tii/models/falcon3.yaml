@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-17"
     snapshots:
         - name: falcon3-1b
           originalName: falcon3:1b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-17"
     snapshots:
         - name: falcon3-3b
           originalName: falcon3:3b
@@ -78,6 +80,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-17"
     snapshots:
         - name: falcon3-7b
           originalName: falcon3:7b
@@ -106,6 +109,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-17"
     snapshots:
         - name: falcon3-10b
           originalName: falcon3:10b

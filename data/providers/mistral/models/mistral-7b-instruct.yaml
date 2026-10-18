@@ -24,6 +24,7 @@ spec:
     contextWindowInput: 8192
     contextWindowOutput: 8192
     contextWindowTotal: 8192
+    releaseDate: "2023-09-27"
     snapshots:
         - name: mistral-7b-instruct-v0-1
           originalName: mistral-7B-Instruct-v0.1
@@ -54,6 +55,7 @@ spec:
     contextWindowInput: 32768
     contextWindowOutput: 32768
     contextWindowTotal: 32768
+    releaseDate: "2023-12-11"
     snapshots:
         - name: mistral-7b-instruct-v0-2
           originalName: mistral-7B-Instruct-v0.2

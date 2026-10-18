@@ -23,6 +23,7 @@ spec:
     contextWindowInput: 8192
     contextWindowOutput: 8192
     contextWindowTotal: 8192
+    releaseDate: "2024-04-18"
     snapshots:
         - name: llama3
           originalName: llama3
@@ -52,6 +53,7 @@ spec:
     contextWindowInput: 8192
     contextWindowOutput: 8192
     contextWindowTotal: 8192
+    releaseDate: "2024-04-18"
     snapshots:
         - name: llama3-8b
           originalName: llama3:8b
@@ -81,6 +83,7 @@ spec:
     contextWindowInput: 8192
     contextWindowOutput: 8192
     contextWindowTotal: 8192
+    releaseDate: "2024-04-18"
     snapshots:
         - name: llama3-70b
           originalName: llama3:70b

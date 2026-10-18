@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-10-29"
     snapshots:
         - name: openhermes-latest
           originalName: openhermes:latest

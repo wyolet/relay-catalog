@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-08-24"
     snapshots:
         - name: codellama-7b
           originalName: codellama:7b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-08-24"
     snapshots:
         - name: codellama-13b
           originalName: codellama:13b
@@ -78,6 +80,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-08-24"
     snapshots:
         - name: codellama-34b
           originalName: codellama:34b
@@ -106,6 +109,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-01-29"
     snapshots:
         - name: codellama-70b
           originalName: codellama:70b

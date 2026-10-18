@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-12-18"
     snapshots:
         - name: functiongemma-latest
           originalName: functiongemma:latest

@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-01-01"
     snapshots:
         - name: nous-hermes2-10-7b
           originalName: nous-hermes2:10.7b

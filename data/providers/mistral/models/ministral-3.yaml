@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-12-02"
     snapshots:
         - name: ministral-3-3b
           originalName: ministral-3:3b
@@ -54,6 +55,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-12-02"
     snapshots:
         - name: ministral-3-8b
           originalName: ministral-3:8b
@@ -85,6 +87,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-12-02"
     snapshots:
         - name: ministral-3-14b
           originalName: ministral-3:14b

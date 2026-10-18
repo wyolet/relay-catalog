@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-02-10"
     snapshots:
         - name: deepscaler-latest
           originalName: deepscaler:latest

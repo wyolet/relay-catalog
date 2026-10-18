@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-01-13"
     snapshots:
         - name: medgemma1-5-latest
           originalName: medgemma1.5:latest

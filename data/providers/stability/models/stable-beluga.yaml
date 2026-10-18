@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-07-27"
     snapshots:
         - name: stable-beluga-7b
           originalName: stable-beluga:7b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-07-27"
     snapshots:
         - name: stable-beluga-13b
           originalName: stable-beluga:13b
@@ -78,6 +80,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-07-20"
     snapshots:
         - name: stable-beluga-70b
           originalName: stable-beluga:70b
