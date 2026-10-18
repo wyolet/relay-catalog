@@ -33,6 +33,7 @@ spec:
     contextWindowInput: 200000
     contextWindowOutput: 64000
     contextWindowTotal: 200000
+    releaseDate: "2025-10-15"
     snapshots:
         - name: claude-haiku-4-5
         - name: claude-haiku-4-5-20251001

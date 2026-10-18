@@ -27,6 +27,7 @@ spec:
     contextWindowInput: 200000
     contextWindowOutput: 100000
     contextWindowTotal: 200000
+    releaseDate: "2025-01-31"
     snapshots:
         - name: o3-mini
         - name: o3-mini-2025-01-31

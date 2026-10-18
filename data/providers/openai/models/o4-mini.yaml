@@ -32,6 +32,7 @@ spec:
     contextWindowInput: 200000
     contextWindowOutput: 100000
     contextWindowTotal: 200000
+    releaseDate: "2025-04-16"
     snapshots:
         - name: o4-mini
         - name: o4-mini-2025-04-16

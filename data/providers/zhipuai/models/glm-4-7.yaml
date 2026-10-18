@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-12-22"
     snapshots:
         - name: glm-4-7-cloud
           originalName: glm-4.7:cloud
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2026-01-19"
     snapshots:
         - name: glm-4-7-flash-cloud
           originalName: glm-4.7-flash:cloud

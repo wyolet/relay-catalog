@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-05-29"
     snapshots:
         - name: codestral-latest
           originalName: codestral:latest

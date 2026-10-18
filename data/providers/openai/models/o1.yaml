@@ -33,6 +33,7 @@ spec:
     contextWindowInput: 200000
     contextWindowOutput: 100000
     contextWindowTotal: 200000
+    releaseDate: "2024-12-05"
     snapshots:
         - name: o1
         - name: o1-2024-12-17
