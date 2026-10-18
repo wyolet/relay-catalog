@@ -39,6 +39,7 @@ families:
         - name: ocr
         - name: pro
         - name: r
+        - name: r1-1776
     - name: exaone
       lines:
         - name: deep
