@@ -50,6 +50,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-02-18"
     snapshots:
         - name: r1-1776-671b
           originalName: r1-1776:671b
