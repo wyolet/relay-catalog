@@ -4,6 +4,7 @@
 //     linter (refs, owners, snapshots, dupes, orphan warnings).
 //  2. catalogvalidate.RunRules with rules.All — this repo's curation
 //     conventions (e.g. tag completeness, pricing-target invariants).
+//  3. checkFamilies — every Model's spec.family is in families.yaml.
 //
 // Flags:
 //
@@ -80,6 +81,13 @@ func main() {
 
 	issues := catalogvalidate.ValidateGraph(docs)
 	issues = append(issues, catalogvalidate.RunRules(rules.All, docs, skipSet)...)
+
+	allowed, err := loadFamilies(familiesPath(dir))
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(2)
+	}
+	issues = append(issues, checkFamilies(docs, allowed)...)
 
 	if want, ok, err := loadFeatured(featuredPath(dir)); err != nil {
 		fmt.Fprintln(os.Stderr, err)

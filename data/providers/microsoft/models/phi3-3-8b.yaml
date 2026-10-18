@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: microsoft
     labels:
-        family: phi3
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: phi3
+    family: phi
     capabilities:
         chat: true
         tools: false

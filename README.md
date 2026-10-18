@@ -57,6 +57,7 @@ Three layers, all enforced in CI:
 3. **Graph + curation** — `go run ./cmd/validate ./data` runs:
    - relay's schema-generic graph linter (`catalogvalidate.ValidateGraph`) — cross-refs, owner mismatches, duplicate names, orphan warnings
    - this repo's curation rules under `cmd/validate/rules/` — content conventions specific to wyolet's catalog (icon presence, pricing-target-host-binding, tier-policy completeness, ...)
+   - every Model's `spec.family` is listed in `families.yaml`; a new lineage is added there first
 
 ```bash
 go run ./cmd/validate ./data           # default: warn on hints, fail on errors

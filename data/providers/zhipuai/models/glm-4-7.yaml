@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: zhipuai
     labels:
-        family: glm-4.7
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: glm-4.7
+    family: glm
     capabilities:
         chat: true
         tools: true
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: zhipuai
     labels:
-        family: glm-4.7-flash
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: glm-4.7-flash
+    family: glm
     capabilities:
         chat: true
         tools: true

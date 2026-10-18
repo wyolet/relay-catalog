@@ -10,11 +10,10 @@ metadata:
         name: google
     labels:
         featured: "true"
-        family: gemini-4-argon
         source: models.dev
         source_version: "2026-10-18"
 spec:
-    family: gemini-4-argon
+    family: gemini
     capabilities:
         chat: true
         streaming: true

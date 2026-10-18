@@ -8,7 +8,6 @@ metadata:
         kind: provider
         name: bigcode
     labels:
-        family: starcoder
         source: ollama-library
         source_version: "2026-05-20"
 spec:

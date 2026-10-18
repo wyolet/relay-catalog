@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: deepseek
     labels:
-        family: deepseek-v4-flash
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: deepseek-v4-flash
+    family: deepseek
     capabilities:
         chat: true
         tools: true
@@ -45,11 +44,10 @@ metadata:
         name: deepseek
     labels:
         featured: "true"
-        family: deepseek-v4-pro
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: deepseek-v4-pro
+    family: deepseek
     capabilities:
         chat: true
         tools: true

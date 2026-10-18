@@ -11,6 +11,7 @@ metadata:
         source: models.dev
         source_version: "2026-10-18"
 spec:
+    family: step
     capabilities:
         chat: true
         streaming: true

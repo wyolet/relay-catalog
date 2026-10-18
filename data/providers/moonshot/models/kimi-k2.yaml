@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: moonshot
     labels:
-        family: kimi-k2
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: kimi-k2
+    family: kimi
     capabilities:
         chat: true
         tools: true
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: moonshot
     labels:
-        family: kimi-k2.5
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: kimi-k2.5
+    family: kimi
     capabilities:
         chat: true
         tools: true
@@ -67,11 +65,10 @@ metadata:
         kind: provider
         name: moonshot
     labels:
-        family: kimi-k2.6
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: kimi-k2.6
+    family: kimi
     capabilities:
         chat: true
         tools: true

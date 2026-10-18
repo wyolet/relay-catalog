@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: cohere
     labels:
-        family: command-r
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: command-r
+    family: command
     capabilities:
         chat: true
         tools: true
@@ -39,11 +38,10 @@ metadata:
         kind: provider
         name: cohere
     labels:
-        family: command-r-plus
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: command-r-plus
+    family: command
     capabilities:
         chat: true
         tools: true

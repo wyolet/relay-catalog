@@ -9,7 +9,6 @@ metadata:
         name: alibaba
     labels:
         featured: "true"
-        family: qwen
         source: models.dev
         source_version: "2026-06-09"
 spec:

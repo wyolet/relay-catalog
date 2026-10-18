@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: zhipuai
     labels:
-        family: glm-ocr
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: glm-ocr
+    family: glm
     capabilities:
         chat: true
         tools: false

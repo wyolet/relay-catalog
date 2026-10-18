@@ -8,7 +8,6 @@ metadata:
         kind: provider
         name: google
     labels:
-        family: gemma
         source: ollama-library
         source_version: '2026-05-20'
 spec:
@@ -37,7 +36,6 @@ metadata:
         kind: provider
         name: google
     labels:
-        family: gemma
         source: ollama-library
         source_version: '2026-05-20'
 spec:

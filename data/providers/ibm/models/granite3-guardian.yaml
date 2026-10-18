@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: ibm
     labels:
-        family: granite3-guardian
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: granite3-guardian
+    family: granite
     capabilities:
         chat: true
         tools: false
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: ibm
     labels:
-        family: granite3-guardian
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: granite3-guardian
+    family: granite
     capabilities:
         chat: true
         tools: false

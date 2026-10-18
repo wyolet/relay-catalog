@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: meta
     labels:
-        family: meta
         source: litellm
         source_version: "2026-05-20"
 spec:
-    family: meta
+    family: llama
     capabilities:
         chat: true
         streaming: true
@@ -38,11 +37,10 @@ metadata:
         kind: provider
         name: meta
     labels:
-        family: meta
         source: litellm
         source_version: "2026-05-20"
 spec:
-    family: meta
+    family: llama
     capabilities:
         chat: true
         streaming: true
@@ -68,11 +66,10 @@ metadata:
         kind: provider
         name: meta
     labels:
-        family: meta
         source: litellm
         source_version: "2026-05-20"
 spec:
-    family: meta
+    family: llama
     capabilities:
         chat: true
         streaming: true
@@ -98,11 +95,10 @@ metadata:
         kind: provider
         name: meta
     labels:
-        family: meta
         source: litellm
         source_version: "2026-05-20"
 spec:
-    family: meta
+    family: llama
     capabilities:
         chat: true
         streaming: true

@@ -1,0 +1,55 @@
+# Allowed Model spec.family values. A family is the base model lineage a model ships
+# under, with no version, size or product line in it; a fine-tune takes its base
+# model's family. validate fails on any other value.
+#
+# aliases map an importer's family names (models.dev's) onto a family; a name that
+# starts with "<family>-" or "<family><digit>" maps without an alias.
+families:
+    - name: arctic
+    - name: aya
+    - name: bge
+    - name: claude
+    - name: cogito
+    - name: command
+    - name: dbrx
+    - name: deepseek
+    - name: exaone
+    - name: falcon
+    - name: gemini
+    - name: gemma
+    - name: glm
+      aliases: [codegeex]
+    - name: gpt
+      aliases: [chatgpt, o, o-mini, o-pro]
+    - name: gpt-oss
+    - name: granite
+    - name: grok
+    - name: internlm
+    - name: kimi
+    - name: laguna
+    - name: lfm
+    - name: llama
+      aliases: [codellama]
+    - name: mimo
+    - name: minilm
+    - name: minimax
+    - name: mistral
+      aliases: [codestral, devstral, leanstral, magistral, mathstral, ministral, mixtral, pixtral, voxtral]
+    - name: muse
+    - name: mxbai
+    - name: nemotron
+    - name: nomic-embed
+    - name: olmo
+    - name: paraphrase-multilingual
+    - name: phi
+    - name: qwen
+      aliases: [codeqwen, qvq, qwq]
+    - name: smollm
+    - name: solar
+    - name: stable-beluga
+    - name: stable-code
+    - name: stablelm
+    - name: starcoder
+    - name: step
+    - name: tinyllama
+    - name: yi

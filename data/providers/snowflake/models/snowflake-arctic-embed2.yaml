@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: snowflake
     labels:
-        family: snowflake-arctic-embed2
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: snowflake-arctic-embed2
+    family: arctic
     capabilities:
         chat: false
         embeddings: true
@@ -35,11 +34,10 @@ metadata:
         kind: provider
         name: snowflake
     labels:
-        family: snowflake-arctic-embed2
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: snowflake-arctic-embed2
+    family: arctic
     capabilities:
         chat: false
         embeddings: true

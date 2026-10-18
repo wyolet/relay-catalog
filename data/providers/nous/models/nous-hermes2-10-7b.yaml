@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: nous
     labels:
-        family: nous-hermes2
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: nous-hermes2
+    family: solar
     capabilities:
         chat: true
         tools: false

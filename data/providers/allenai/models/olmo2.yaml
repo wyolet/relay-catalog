@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: allenai
     labels:
-        family: olmo2
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: olmo2
+    family: olmo
     capabilities:
         chat: true
         tools: false
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: allenai
     labels:
-        family: olmo2
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: olmo2
+    family: olmo
     capabilities:
         chat: true
         tools: false

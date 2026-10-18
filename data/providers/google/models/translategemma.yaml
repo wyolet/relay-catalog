@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: google
     labels:
-        family: translategemma
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: translategemma
+    family: gemma
     capabilities:
         chat: true
         tools: false
@@ -38,11 +37,10 @@ metadata:
         kind: provider
         name: google
     labels:
-        family: translategemma
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: translategemma
+    family: gemma
     capabilities:
         chat: true
         tools: false

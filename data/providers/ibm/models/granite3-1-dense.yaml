@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: ibm
     labels:
-        family: granite3.1-dense
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: granite3.1-dense
+    family: granite
     capabilities:
         chat: true
         tools: true
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: ibm
     labels:
-        family: granite3.1-dense
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: granite3.1-dense
+    family: granite
     capabilities:
         chat: true
         tools: true

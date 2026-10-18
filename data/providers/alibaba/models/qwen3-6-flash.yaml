@@ -8,11 +8,10 @@ metadata:
     kind: provider
     name: alibaba
   labels:
-    family: qwen3.6
     source: models.dev
     source_version: '2026-06-09'
 spec:
-  family: qwen3.6
+  family: qwen
   capabilities:
     chat: true
     streaming: true

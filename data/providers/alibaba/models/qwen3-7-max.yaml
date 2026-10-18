@@ -8,7 +8,6 @@ metadata:
         kind: provider
         name: alibaba
     labels:
-        family: qwen
         source: models.dev
         source_version: "2026-06-09"
 spec:

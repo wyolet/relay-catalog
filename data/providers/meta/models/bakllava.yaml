@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: meta
     labels:
-        family: bakllava
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: bakllava
+    family: mistral
     capabilities:
         chat: true
         tools: false

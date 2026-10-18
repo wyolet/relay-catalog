@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: stability
     labels:
-        family: stablelm-zephyr
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: stablelm-zephyr
+    family: stablelm
     capabilities:
         chat: true
         tools: false

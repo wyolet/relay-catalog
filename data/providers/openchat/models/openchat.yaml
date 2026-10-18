@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: openchat
     labels:
-        family: openchat
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: openchat
+    family: mistral
     capabilities:
         chat: true
         tools: false

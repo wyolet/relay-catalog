@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: intel
     labels:
-        family: neural-chat
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: neural-chat
+    family: mistral
     capabilities:
         chat: true
         tools: false

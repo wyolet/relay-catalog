@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: cognitivecomputations
     labels:
-        family: dolphincoder
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: dolphincoder
+    family: starcoder
     capabilities:
         chat: true
         tools: false
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: cognitivecomputations
     labels:
-        family: dolphincoder
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: dolphincoder
+    family: starcoder
     capabilities:
         chat: true
         tools: false

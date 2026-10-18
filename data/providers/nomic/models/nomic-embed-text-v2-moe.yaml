@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: nomic
     labels:
-        family: nomic-embed-text-v2-moe
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: nomic-embed-text-v2-moe
+    family: nomic-embed
     capabilities:
         chat: false
         embeddings: true

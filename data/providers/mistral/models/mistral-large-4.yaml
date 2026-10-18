@@ -10,11 +10,10 @@ metadata:
     name: mistral
   labels:
     featured: "true"
-    family: mistral-large-4
     source: models.dev
     source_version: "2026-10-18"
 spec:
-  family: mistral-large-4
+  family: mistral
   capabilities:
     chat: true
     streaming: true

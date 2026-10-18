@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: deepseek
     labels:
-        family: r1-1776
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: r1-1776
+    family: deepseek
     capabilities:
         chat: true
         tools: false
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: deepseek
     labels:
-        family: r1-1776
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: r1-1776
+    family: deepseek
     capabilities:
         chat: true
         tools: false

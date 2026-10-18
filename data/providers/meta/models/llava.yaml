@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: meta
     labels:
-        family: llava
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: llava
+    family: llama
     capabilities:
         chat: true
         tools: false
@@ -38,11 +37,10 @@ metadata:
         kind: provider
         name: meta
     labels:
-        family: llava
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: llava
+    family: llama
     capabilities:
         chat: true
         tools: false
@@ -68,11 +66,10 @@ metadata:
         kind: provider
         name: meta
     labels:
-        family: llava
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: llava
+    family: yi
     capabilities:
         chat: true
         tools: false

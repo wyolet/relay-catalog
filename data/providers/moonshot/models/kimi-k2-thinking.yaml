@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: moonshot
     labels:
-        family: kimi-k2-thinking
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: kimi-k2-thinking
+    family: kimi
     capabilities:
         chat: true
         tools: true

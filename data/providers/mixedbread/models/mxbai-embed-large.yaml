@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: mixedbread
     labels:
-        family: mxbai-embed-large
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: mxbai-embed-large
+    family: mxbai
     capabilities:
         chat: false
         embeddings: true

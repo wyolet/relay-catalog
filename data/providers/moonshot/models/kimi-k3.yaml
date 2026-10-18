@@ -10,11 +10,10 @@ metadata:
         name: moonshot
     labels:
         featured: "true"
-        family: kimi-k3
         source: models.dev
         source_version: "2026-07-24"
 spec:
-    family: kimi-k3
+    family: kimi
     capabilities:
         chat: true
         streaming: true

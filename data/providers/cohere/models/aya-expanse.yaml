@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: cohere
     labels:
-        family: aya-expanse
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: aya-expanse
+    family: aya
     capabilities:
         chat: true
         tools: true
@@ -37,11 +36,10 @@ metadata:
         kind: provider
         name: cohere
     labels:
-        family: aya-expanse
         source: ollama-library
         source_version: '2026-05-20'
 spec:
-    family: aya-expanse
+    family: aya
     capabilities:
         chat: true
         tools: true

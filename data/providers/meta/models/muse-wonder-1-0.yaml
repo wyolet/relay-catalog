@@ -10,7 +10,6 @@ metadata:
         name: meta
     labels:
         featured: "true"
-        family: muse
         source: models.dev
         source_version: "2026-10-18"
 spec:

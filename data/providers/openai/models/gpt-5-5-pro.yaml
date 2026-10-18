@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: openai
     labels:
-        family: gpt-pro
         source: models.dev
         source_version: "2026-07-12"
 spec:
-    family: gpt-pro
+    family: gpt
     capabilities:
         chat: true
         streaming: true

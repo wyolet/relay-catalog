@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: alibaba
     labels:
-        family: qwq
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: qwq
+    family: qwen
     capabilities:
         chat: true
         tools: true

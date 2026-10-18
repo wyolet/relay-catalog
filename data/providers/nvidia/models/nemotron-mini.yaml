@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: nvidia
     labels:
-        family: nemotron-mini
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: nemotron-mini
+    family: nemotron
     capabilities:
         chat: true
         tools: true

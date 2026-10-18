@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: openai
     labels:
-        family: o-series
         source: litellm
         source_version: "2026-05-20"
 spec:
-    family: o-series
+    family: gpt
     capabilities:
         chat: true
         streaming: true

@@ -8,11 +8,10 @@ metadata:
         kind: provider
         name: cognitivecomputations
     labels:
-        family: dolphin-mistral
         source: ollama-library
         source_version: "2026-05-20"
 spec:
-    family: dolphin-mistral
+    family: mistral
     capabilities:
         chat: true
         tools: false
