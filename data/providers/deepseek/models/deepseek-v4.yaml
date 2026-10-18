@@ -12,6 +12,7 @@ metadata:
         source_version: "2026-05-20"
 spec:
     family: deepseek
+    productLine: flash
     capabilities:
         chat: true
         tools: true
@@ -49,6 +50,7 @@ metadata:
         source_version: "2026-05-20"
 spec:
     family: deepseek
+    productLine: pro
     capabilities:
         chat: true
         tools: true

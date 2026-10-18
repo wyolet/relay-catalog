@@ -20,7 +20,35 @@ Files live under `data/providers/<provider>/models/<model-name>.yaml`.
 | Field | Type | Description |
 |---|---|---|
 | `family` | string | The base model lineage the model ships under (`claude`, `gpt`, `llama`, …), from [`families.yaml`](../families.yaml). No version, size or product line: `gemini-3-flash` is `gemini`, `qwen2.5-coder` is `qwen`. A fine-tune takes its base model's family (a Llama fine-tune is `llama`), whoever publishes it. |
+| `productLine` | string | Optional. The vendor's named tier or variant inside the family (`opus`, `flash-lite`, `coder`), from that family's `lines` in [`families.yaml`](../families.yaml). Leave it out when the model has none. See [Family and product line](#family-and-product-line). |
 | `version` | string | Free-form version string. |
+
+#### Family and product line
+
+| | `family` | `productLine` |
+|---|---|---|
+| Names | the base model lineage | the vendor's named tier or variant inside that family |
+| Allowed values | `families.yaml` `families[].name` | the family's `lines[].name`; empty is always allowed |
+| Never contains | a version, size or line | a version or size |
+| Fine-tunes | the base model's family | a vendor fine-tuning target keeps its base's line (`ft-o4-mini` → `o`); a third-party fine-tune takes its publisher's brand, or stays empty under a descriptive name |
+
+Two tests settle the unclear cases:
+
+- **A suffix that composes is a modifier, not a line.** A model sits in exactly one line. `mini` attaches to `gpt-4o-mini`, `o4-mini` and `phi4-mini`, so it is a size and never a `productLine`. A word can still be a line in another family: Gemini `pro` never combines with `flash`, so it is one.
+- **The slug is the vendor's name, lowercased.** Drop the family word when it stands apart ("Claude Opus" → `opus`, "Gemini Flash-Lite" → `flash-lite`, "Mistral Large" → `large`); keep the whole word when the vendor fuses it (`codegemma`, `codellama`, `devstral`, `qwq`, `codegeex`).
+
+| Model | `family` | `productLine` | Why |
+|---|---|---|---|
+| `claude-opus-4-8` | `claude` | `opus` | named tier |
+| `gemini-3-1-flash-lite` | `gemini` | `flash-lite` | named tier |
+| `ministral-3-8b` | `mistral` | `ministral` | fused vendor name; `8b` is a size |
+| `qwen3-coder-plus` | `qwen` | `coder` | the variant wins over the tier |
+| `o4-mini` | `gpt` | `o` | `mini` is a size |
+| `hermes3-8b` | `llama` | `hermes` | fine-tune, publisher's brand |
+| `gpt-4o-mini` | `gpt` | (empty) | `4o` is a version, `mini` a size |
+| `llama2-uncensored-7b` | `llama` | (empty) | descriptive fine-tune name, not a brand |
+
+The validator rejects a `productLine` that is not one of its family's lines, so `opus` under `gpt` fails. Line `aliases` in `families.yaml` only map importer family names onto a line and are not valid values.
 
 ### Capabilities
 
@@ -96,6 +124,7 @@ metadata:
     name: anthropic
 spec:
   family: claude
+  productLine: sonnet
   capabilities:
     chat: true
     streaming: true

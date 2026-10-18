@@ -12,6 +12,7 @@ metadata:
         source_version: "2026-05-20"
 spec:
     family: mistral
+    productLine: starling
     capabilities:
         chat: true
         tools: false

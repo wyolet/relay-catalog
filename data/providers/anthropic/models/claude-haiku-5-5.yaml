@@ -13,6 +13,7 @@ metadata:
         source_version: "2026-10-10"
 spec:
     family: claude
+    productLine: haiku
     capabilities:
         unsupportedParams:
             - temperature

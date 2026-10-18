@@ -14,6 +14,7 @@ metadata:
     source_version: "2026-10-18"
 spec:
   family: mistral
+  productLine: large
   capabilities:
     chat: true
     streaming: true

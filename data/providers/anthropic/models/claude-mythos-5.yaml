@@ -12,6 +12,7 @@ metadata:
         source_version: "2026-07-12"
 spec:
     family: claude
+    productLine: mythos
     capabilities:
         chat: true
         streaming: true

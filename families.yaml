@@ -4,49 +4,201 @@
 #
 # aliases map an importer's family names (models.dev's) onto a family; a name that
 # starts with "<family>-", "<family>." or "<family><digit>" maps without an alias.
+#
+# lines lists the allowed spec.productLine values for a family: the vendor's named
+# tier or variant inside it, never a version or size. A model's productLine is empty
+# or one of its family's line names; a family without lines accepts only empty.
+# Line aliases are importer-only, mapping a models.dev family remainder onto a line,
+# and are never valid productLine values.
 families:
     - name: arctic
     - name: aya
+      lines:
+        - name: expanse
     - name: bge
     - name: claude
+      lines:
+        - name: fable
+        - name: haiku
+        - name: mythos
+        - name: opus
+        - name: sonnet
     - name: command
+      lines:
+        - name: a
+        - name: r
+        - name: r-plus
     - name: dbrx
     - name: deepseek
+      lines:
+        - name: coder
+        - name: cogito
+        - name: deepcoder
+        - name: deepscaler
+        - name: flash
+        - name: ocr
+        - name: pro
+        - name: r
     - name: exaone
+      lines:
+        - name: deep
     - name: falcon
     - name: gemini
+      lines:
+        - name: flash
+        - name: flash-lite
+        - name: pro
     - name: gemma
+      lines:
+        - name: codegemma
+        - name: embeddinggemma
+        - name: functiongemma
+        - name: medgemma
+        - name: shieldgemma
+        - name: translategemma
     - name: glm
       aliases: [codegeex]
+      lines:
+        - name: air
+        - name: codegeex
+        - name: flash
+        - name: ocr
     - name: gpt
       aliases: [chatgpt, o, o-mini, o-pro]
+      lines:
+        - name: astra
+        - name: codex
+        - name: luna
+        - name: o
+          aliases: [o-mini, o-pro]
+        - name: sol
+        - name: terra
     - name: gpt-oss
+      lines:
+        - name: safeguard
     - name: granite
+      lines:
+        - name: code
+        - name: embedding
+        - name: guardian
+        - name: vision
     - name: grok
+      lines:
+        - name: build
+        - name: imagine
     - name: internlm
     - name: kimi
+      lines:
+        - name: code
     - name: laguna
     - name: lfm
     - name: llama
       aliases: [codellama]
+      lines:
+        - name: chatqa
+        - name: codellama
+        - name: cogito
+        - name: dolphin
+        - name: gradient
+        - name: groq
+        - name: guard
+        - name: hermes
+        - name: llava
+        - name: nemotron
+        - name: orca
+        - name: phind
+        - name: stable-beluga
+        - name: vision
     - name: mimo
+      lines:
+        - name: flash
+        - name: omni
+        - name: pro
     - name: minilm
     - name: minimax
     - name: mistral
       aliases: [codestral, devstral, leanstral, magistral, mathstral, ministral, mixtral, pixtral, voxtral]
+      lines:
+        - name: bakllava
+        - name: codestral
+        - name: devstral
+        - name: dolphin
+        - name: embed
+        - name: hermes
+        - name: large
+        - name: leanstral
+        - name: magistral
+        - name: mathstral
+        - name: medium
+        - name: ministral
+        - name: mistrallite
+        - name: mixtral
+        - name: nemo
+        - name: neural-chat
+        - name: openchat
+        - name: openhermes
+        - name: openorca
+        - name: pixtral
+        - name: samantha
+        - name: small
+        - name: solar
+        - name: starling
+        - name: voxtral
+        - name: zephyr
     - name: muse
+      lines:
+        - name: spark
+        - name: wonder
     - name: mxbai
     - name: nemotron
+      lines:
+        - name: cascade
+        - name: mini
+        - name: nano
+        - name: super
     - name: nomic-embed
     - name: olmo
     - name: paraphrase-multilingual
     - name: phi
+      lines:
+        - name: dolphin
+        - name: llava
+        - name: reasoning
+        - name: solar
     - name: qwen
       aliases: [codeqwen, qvq, qwq]
+      lines:
+        - name: asr
+        - name: athene
+        - name: codeqwen
+        - name: coder
+        - name: cogito
+        - name: embedding
+        - name: flash
+        - name: math
+        - name: max
+        - name: minicpm
+        - name: mt
+        - name: omni
+        - name: plus
+        - name: qvq
+        - name: qwq
+        - name: turbo
+        - name: vl
     - name: smollm
     - name: stable-code
     - name: stablelm
+      lines:
+        - name: zephyr
     - name: starcoder
+      lines:
+        - name: dolphin
     - name: step
     - name: tinyllama
+      lines:
+        - name: dolphin
     - name: yi
+      lines:
+        - name: coder
+        - name: hermes
+        - name: llava
