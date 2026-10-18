@@ -1,0 +1,294 @@
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: openai-grow-gpt-5-rl
+  displayName: OpenAI Grow — GPT-5 family and chat-latest models
+  description: "TPM counts input plus output tokens. Values from each model's page, linked from https://developers.openai.com/api/docs/guides/rate-limits"
+  owner:
+    kind: host
+    name: openai
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 15000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 40000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: openai-grow-gpt-5-5-pro-rl
+  displayName: OpenAI Grow — GPT-5.5 pro
+  description: "TPM counts input plus output tokens. Values from each model's page, linked from https://developers.openai.com/api/docs/guides/rate-limits"
+  owner:
+    kind: host
+    name: openai
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 2000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 4000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: openai-grow-gpt-5-mini-rl
+  displayName: OpenAI Grow — GPT-5 mini, nano and luna models
+  description: "TPM counts input plus output tokens. Values from each model's page, linked from https://developers.openai.com/api/docs/guides/rate-limits"
+  owner:
+    kind: host
+    name: openai
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 30000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 180000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: openai-grow-gpt-4o-rl
+  displayName: OpenAI Grow — GPT-4o, GPT-4.1, o1, o3 and audio models
+  description: "TPM counts input plus output tokens. Values from each model's page, linked from https://developers.openai.com/api/docs/guides/rate-limits"
+  owner:
+    kind: host
+    name: openai
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 10000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 30000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: openai-grow-gpt-4o-mini-rl
+  displayName: OpenAI Grow — GPT-4o mini, GPT-4.1 mini and nano, o3-mini, o4-mini
+  description: "TPM counts input plus output tokens. Values from each model's page, linked from https://developers.openai.com/api/docs/guides/rate-limits"
+  owner:
+    kind: host
+    name: openai
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 30000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 150000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: openai-grow-gpt-4-turbo-rl
+  displayName: OpenAI Grow — GPT-4 Turbo
+  description: "TPM counts input plus output tokens. Values from each model's page, linked from https://developers.openai.com/api/docs/guides/rate-limits"
+  owner:
+    kind: host
+    name: openai
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 10000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 2000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: openai-grow-gpt-4-rl
+  displayName: OpenAI Grow — GPT-4
+  description: "TPM counts input plus output tokens. Values from each model's page, linked from https://developers.openai.com/api/docs/guides/rate-limits"
+  owner:
+    kind: host
+    name: openai
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 10000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 1000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: openai-grow-gpt-3-5-turbo-rl
+  displayName: OpenAI Grow — GPT-3.5 Turbo
+  description: "TPM counts input plus output tokens. Values from each model's page, linked from https://developers.openai.com/api/docs/guides/rate-limits"
+  owner:
+    kind: host
+    name: openai
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 10000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 50000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: openai-grow-gpt-4o-search-rl
+  displayName: OpenAI Grow — GPT-4o search preview
+  description: "TPM counts input plus output tokens. Values from each model's page, linked from https://developers.openai.com/api/docs/guides/rate-limits"
+  owner:
+    kind: host
+    name: openai
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 1000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 3000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: RateLimit
+metadata:
+  name: openai-grow-realtime-rl
+  displayName: OpenAI Grow — realtime models
+  description: "TPM counts input plus output tokens. Values from each model's page, linked from https://developers.openai.com/api/docs/guides/rate-limits"
+  owner:
+    kind: host
+    name: openai
+spec:
+  enabled: true
+  rules:
+    - meter: requests
+      amount: 20000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens
+      amount: 15000000
+      window: 1m
+      strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Policy
+metadata:
+  name: openai-grow
+  displayName: OpenAI Grow
+  owner:
+    kind: host
+    name: openai
+spec:
+  rlBindings:
+    - models:
+        - openai/gpt-5
+        - openai/gpt-5-1
+        - openai/gpt-5-1-chat
+        - openai/gpt-5-2
+        - openai/gpt-5-2-chat
+        - openai/gpt-5-3-chat
+        - openai/gpt-5-4
+        - openai/gpt-5-5
+        - openai/gpt-5-6
+        - openai/gpt-5-6-sol
+        - openai/gpt-5-6-terra
+        - openai/gpt-5-chat
+        - openai/gpt-6-1-sol
+        - openai/gpt-6-astra
+        - openai/gpt-6-sol
+      rateLimit: openai-grow-gpt-5-rl
+    - models:
+        - openai/gpt-5-5-pro
+      rateLimit: openai-grow-gpt-5-5-pro-rl
+    - models:
+        - openai/gpt-5-4-mini
+        - openai/gpt-5-4-nano
+        - openai/gpt-5-6-luna
+        - openai/gpt-5-mini
+        - openai/gpt-5-nano
+        - openai/gpt-6-luna
+      rateLimit: openai-grow-gpt-5-mini-rl
+    - models:
+        - openai/chatgpt-4o
+        - openai/gpt-4-1
+        - openai/gpt-4o
+        - openai/gpt-4o-audio
+        - openai/gpt-audio
+        - openai/gpt-audio-1-5
+        - openai/gpt-audio-mini
+        - openai/o1
+        - openai/o3
+      rateLimit: openai-grow-gpt-4o-rl
+    - models:
+        - openai/gpt-4-1-mini
+        - openai/gpt-4-1-nano
+        - openai/gpt-4o-mini
+        - openai/gpt-4o-mini-audio
+        - openai/gpt-4o-mini-search
+        - openai/o3-mini
+        - openai/o4-mini
+      rateLimit: openai-grow-gpt-4o-mini-rl
+    - models:
+        - openai/gpt-4-0125
+        - openai/gpt-4-1106
+        - openai/gpt-4-turbo
+      rateLimit: openai-grow-gpt-4-turbo-rl
+    - models:
+        - openai/gpt-4
+        - openai/gpt-4-0314
+        - openai/gpt-4-0613
+      rateLimit: openai-grow-gpt-4-rl
+    - models:
+        - openai/gpt-3-5-turbo
+        - openai/gpt-3-5-turbo-0125
+        - openai/gpt-3-5-turbo-1106
+      rateLimit: openai-grow-gpt-3-5-turbo-rl
+    - models:
+        - openai/gpt-4o-search
+      rateLimit: openai-grow-gpt-4o-search-rl
+    - models:
+        - openai/gpt-4o-mini-realtime
+        - openai/gpt-4o-realtime
+        - openai/gpt-realtime
+        - openai/gpt-realtime-1-5
+        - openai/gpt-realtime-2
+        - openai/gpt-realtime-mini
+      rateLimit: openai-grow-realtime-rl

@@ -60,15 +60,14 @@ Standard. `owner.kind: host`, `owner.name: <host-name>`. A Policy is referenced 
 
 ## Example (combined file)
 
-`data/hosts/anthropic/policies/tier-1.yaml`:
+`data/hosts/anthropic/policies/start.yaml` (excerpt):
 
 ```yaml
-# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/RateLimit.schema.json
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: RateLimit
 metadata:
-  name: anthropic-tier-1-rl
-  displayName: Anthropic Tier 1 rate limits
+  name: anthropic-start-rl
+  displayName: Anthropic Start — standard models
   owner:
     kind: host
     name: anthropic
@@ -76,37 +75,44 @@ spec:
   enabled: true
   rules:
     - meter: requests
-      amount: 50
+      amount: 1000
       window: 1m
       strategy: sliding-window
-    - meter: tokens
-      amount: 30000
+    - meter: tokens.input
+      amount: 2000000
+      window: 1m
+      strategy: sliding-window
+    - meter: tokens.output
+      amount: 400000
       window: 1m
       strategy: sliding-window
 ---
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Policy
 metadata:
-  name: anthropic-tier-1
-  displayName: Anthropic Tier 1
+  name: anthropic-start
+  displayName: Anthropic Start
   owner:
     kind: host
     name: anthropic
 spec:
-  rateLimit: anthropic-tier-1-rl
+  rlBindings:
+    - models:
+        - anthropic/claude-opus-5-5
+        - anthropic/claude-sonnet-5-5
+      rateLimit: anthropic-start-rl
 ```
 
-The corresponding Host then lists `anthropic-tier-1` (and its siblings) under `spec.policies`:
+The corresponding Host then lists `anthropic-start` (and its siblings) under `spec.policies`:
 
 ```yaml
 # data/hosts/anthropic/host.yaml — excerpt
 spec:
   policies:
-    - anthropic-tier-1
-    - anthropic-tier-2
-    - anthropic-tier-3
-    - anthropic-tier-4
-  defaultPolicy: anthropic-tier-1
+    - anthropic-start
+    - anthropic-build
+    - anthropic-scale
+  defaultPolicy: anthropic-start
 ```
 
 ## Validation rules enforced by relay

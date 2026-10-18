@@ -37,27 +37,27 @@ Each `rates[]` entry:
 apiVersion: relay.wyolet.dev/v1alpha2
 kind: Pricing
 metadata:
-  name: anthropic-claude-3-haiku-20240307
+  name: anthropic-claude-haiku-4-5
   owner:
     kind: host
     id: anthropic
 spec:
   currency: USD
   targetModels:
-    - claude-3-haiku-20240307
+    - claude-haiku-4-5
   rates:
     - meter: tokens.input
       unit: per_million
-      amount: 0.25
+      amount: 1
     - meter: tokens.output
       unit: per_million
-      amount: 1.25
+      amount: 5
     - meter: tokens.cache_creation
       unit: per_million
-      amount: 0.30
+      amount: 1.25
     - meter: tokens.cache_read
       unit: per_million
-      amount: 0.03
+      amount: 0.1
 ```
 
 Tiered example (different rate above a token threshold):

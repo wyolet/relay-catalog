@@ -16,10 +16,8 @@ FEATURED = {
     "gpt-5-1", "gpt-5-1-chat", "gpt-5-2", "gpt-5-2-chat", "gpt-5-3-chat",
     "gpt-5-4", "gpt-5-4-mini", "gpt-5-4-nano", "gpt-5-5",
     # Anthropic claude 4*
-    "claude-haiku-4-5", "claude-4-sonnet", "claude-sonnet-4",
-    "claude-sonnet-4-5", "claude-sonnet-4-6", "claude-4-opus", "claude-opus-4",
-    "claude-opus-4-1", "claude-opus-4-5", "claude-opus-4-6", "claude-opus-4-7",
-    "claude-opus-4-8",
+    "claude-haiku-4-5", "claude-sonnet-4-5", "claude-sonnet-4-6",
+    "claude-opus-4-5", "claude-opus-4-6", "claude-opus-4-7", "claude-opus-4-8",
     # Google gemini 3*
     "gemini-3-1-flash-lite-preview", "gemini-3-1-flash-lite",
     "gemini-3-1-pro-preview", "gemini-3-5-flash", "gemini-3-flash-preview",

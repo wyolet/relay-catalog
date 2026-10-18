@@ -78,7 +78,7 @@ Each rule lives in its own file: an `init()` that appends a `catalogvalidate.Rul
 
 ### Mixed-kind files
 
-The tier-policy files (`data/hosts/<host>/policies/tier-N.yaml`) bundle a `RateLimit` and a `Policy` document in one file via `---`. yaml-language-server can't switch schemas per-document, so these files have no IDE directive — they still validate fully at CI time via the Go validator.
+The tier-policy files (`data/hosts/<host>/policies/<policy>.yaml`) bundle a `RateLimit` and a `Policy` document in one file via `---`. yaml-language-server can't switch schemas per-document, so these files have no IDE directive — they still validate fully at CI time via the Go validator.
 
 ## Release asset
 
