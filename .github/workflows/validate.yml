@@ -23,3 +23,12 @@ jobs:
 
       - name: Validate catalog data
         run: go run ./cmd/validate ./data
+
+      # Old tags have no .gitattributes, so release tooling keeps the pathspec; the two must agree.
+      - name: Release archive matches the data pathspec
+        run: |
+          set -euo pipefail
+          archive=$(git archive --format=tar HEAD | sha256sum)
+          pathspec=$(git archive --format=tar HEAD -- data ':(exclude)data/drafts' | sha256sum)
+          [ "$archive" = "$pathspec" ] \
+            || { echo "::error::git archive HEAD differs from data/ minus data/drafts; .gitattributes must keep release archives to that tree"; exit 1; }

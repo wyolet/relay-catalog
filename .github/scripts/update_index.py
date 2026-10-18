@@ -14,7 +14,7 @@ HEADER = """\
 # the newest catalog release published for it. Relays started with
 # RELAY_CATALOG_VERSION=latest resolve through this file, so an old binary
 # never fetches a catalog schema it can't parse. Updated by the
-# release-index workflow on tag push; do not edit by hand.
+# release workflow on tag push; do not edit by hand.
 """
 
 
