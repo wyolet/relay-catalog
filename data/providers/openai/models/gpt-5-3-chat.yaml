@@ -34,6 +34,7 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 16384
     contextWindowTotal: 128000
+    releaseDate: "2026-03-03"
     snapshots:
         - name: gpt-5-3-chat-latest
           originalName: gpt-5.3-chat-latest

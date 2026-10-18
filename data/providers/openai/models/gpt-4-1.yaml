@@ -34,6 +34,7 @@ spec:
     contextWindowInput: 1047576
     contextWindowOutput: 32768
     contextWindowTotal: 1047576
+    releaseDate: "2025-04-14"
     snapshots:
         - name: gpt-4-1
           originalName: gpt-4.1
@@ -77,6 +78,7 @@ spec:
     contextWindowInput: 1047576
     contextWindowOutput: 32768
     contextWindowTotal: 1047576
+    releaseDate: "2025-04-14"
     snapshots:
         - name: gpt-4-1-mini
           originalName: gpt-4.1-mini
@@ -119,6 +121,7 @@ spec:
     contextWindowInput: 1047576
     contextWindowOutput: 32768
     contextWindowTotal: 1047576
+    releaseDate: "2025-04-14"
     snapshots:
         - name: gpt-4-1-nano
           originalName: gpt-4.1-nano

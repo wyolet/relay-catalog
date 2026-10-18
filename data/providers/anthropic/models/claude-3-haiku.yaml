@@ -29,6 +29,7 @@ spec:
     contextWindowInput: 200000
     contextWindowOutput: 4096
     contextWindowTotal: 200000
+    releaseDate: "2024-03-07"
     snapshots:
         - name: claude-3-haiku-20240307
           releasedAt: "2024-03-07"

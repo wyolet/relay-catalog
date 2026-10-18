@@ -33,6 +33,7 @@ spec:
     contextWindowInput: 200000
     contextWindowOutput: 32000
     contextWindowTotal: 200000
+    releaseDate: "2025-05-14"
     snapshots:
         - name: claude-4-opus-20250514
           releasedAt: "2025-05-14"
@@ -72,6 +73,7 @@ spec:
     contextWindowInput: 200000
     contextWindowOutput: 32000
     contextWindowTotal: 200000
+    releaseDate: "2025-05-14"
     deprecation:
         status: sunset
         sunsetDate: "2026-05-14"
@@ -162,6 +164,7 @@ spec:
     contextWindowInput: 200000
     contextWindowOutput: 64000
     contextWindowTotal: 200000
+    releaseDate: "2025-11-24"
     snapshots:
         - name: claude-opus-4-5
         - name: claude-opus-4-5-20251101
@@ -207,6 +210,7 @@ spec:
     contextWindowInput: 1000000
     contextWindowOutput: 128000
     contextWindowTotal: 1000000
+    releaseDate: "2026-02-04"
     snapshots:
         - name: claude-opus-4-6
         - name: claude-opus-4-6-20260205
@@ -256,6 +260,7 @@ spec:
     contextWindowInput: 1000000
     contextWindowOutput: 128000
     contextWindowTotal: 1000000
+    releaseDate: "2026-04-14"
     snapshots:
         - name: claude-opus-4-7
         - name: claude-opus-4-7-20260416
@@ -309,6 +314,7 @@ spec:
     contextWindowInput: 1000000
     contextWindowOutput: 128000
     contextWindowTotal: 1000000
+    releaseDate: "2026-05-28"
     snapshots:
         - name: claude-opus-4-8
         - name: claude-opus-4-8-20260528

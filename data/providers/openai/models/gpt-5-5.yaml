@@ -42,6 +42,7 @@ spec:
     contextWindowInput: 1050000
     contextWindowOutput: 128000
     contextWindowTotal: 1050000
+    releaseDate: "2026-04-23"
     snapshots:
         - name: gpt-5-5
           originalName: gpt-5.5

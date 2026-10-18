@@ -139,6 +139,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-02-23"
     snapshots:
         - name: qwen3-5-27b
           originalName: qwen3.5:27b

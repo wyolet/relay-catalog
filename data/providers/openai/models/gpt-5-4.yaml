@@ -41,6 +41,7 @@ spec:
     contextWindowInput: 1050000
     contextWindowOutput: 128000
     contextWindowTotal: 1050000
+    releaseDate: "2026-03-05"
     snapshots:
         - name: gpt-5-4
           originalName: gpt-5.4
@@ -92,6 +93,7 @@ spec:
     contextWindowInput: 272000
     contextWindowOutput: 128000
     contextWindowTotal: 272000
+    releaseDate: "2026-03-17"
     snapshots:
         - name: gpt-5-4-mini
           originalName: gpt-5.4-mini
@@ -143,6 +145,7 @@ spec:
     contextWindowInput: 272000
     contextWindowOutput: 128000
     contextWindowTotal: 272000
+    releaseDate: "2026-03-17"
     snapshots:
         - name: gpt-5-4-nano
           originalName: gpt-5.4-nano

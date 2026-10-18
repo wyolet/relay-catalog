@@ -37,6 +37,7 @@ spec:
     contextWindowInput: 1048576
     contextWindowOutput: 65536
     knowledgeCutoff: "2025-01-01"
+    releaseDate: "2026-05-07"
     snapshots:
         - name: gemini-3-1-flash-lite
           originalName: gemini-3.1-flash-lite

@@ -33,6 +33,7 @@ spec:
             - text
     contextWindowInput: 1048576
     contextWindowOutput: 65536
+    releaseDate: "2025-06-17"
     snapshots:
         - name: gemini-2-5-pro
           originalName: gemini-2.5-pro

@@ -80,6 +80,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-04-21"
     snapshots:
         - name: kimi-k2-6-cloud
           originalName: kimi-k2.6:cloud

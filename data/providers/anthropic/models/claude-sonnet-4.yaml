@@ -34,6 +34,7 @@ spec:
     contextWindowInput: 1000000
     contextWindowOutput: 64000
     contextWindowTotal: 1000000
+    releaseDate: "2025-05-14"
     snapshots:
         - name: claude-4-sonnet-20250514
           releasedAt: "2025-05-14"
@@ -73,6 +74,7 @@ spec:
     contextWindowInput: 1000000
     contextWindowOutput: 64000
     contextWindowTotal: 1000000
+    releaseDate: "2025-05-14"
     deprecation:
         status: sunset
         sunsetDate: "2026-05-14"
@@ -116,6 +118,7 @@ spec:
     contextWindowInput: 200000
     contextWindowOutput: 64000
     contextWindowTotal: 200000
+    releaseDate: "2025-09-29"
     snapshots:
         - name: claude-sonnet-4-5
         - name: claude-sonnet-4-5-20250929
@@ -162,6 +165,7 @@ spec:
     contextWindowInput: 1000000
     contextWindowOutput: 64000
     contextWindowTotal: 1000000
+    releaseDate: "2026-02-17"
     snapshots:
         - name: claude-sonnet-4-6
     pointer: claude-sonnet-4-6

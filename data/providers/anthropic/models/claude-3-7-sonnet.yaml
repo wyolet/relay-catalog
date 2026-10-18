@@ -34,6 +34,7 @@ spec:
     contextWindowInput: 200000
     contextWindowOutput: 64000
     contextWindowTotal: 200000
+    releaseDate: "2025-02-19"
     deprecation:
         status: sunset
         sunsetDate: "2026-02-19"
