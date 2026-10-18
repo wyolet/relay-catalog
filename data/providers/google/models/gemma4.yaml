@@ -120,6 +120,7 @@ spec:
             - audio
         output:
             - text
+    releaseDate: "2026-04-02"
     snapshots:
         - name: gemma4-31b
           originalName: gemma4:31b

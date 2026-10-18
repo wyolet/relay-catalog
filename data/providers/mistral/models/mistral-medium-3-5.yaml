@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-04-29"
     snapshots:
         - name: mistral-medium-3-5-latest
           originalName: mistral-medium-3.5:latest

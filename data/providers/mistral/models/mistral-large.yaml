@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-11-01"
     snapshots:
         - name: mistral-large-latest
           originalName: mistral-large:latest

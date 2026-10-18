@@ -20,6 +20,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-06-03"
     snapshots:
         - name: qwen3-embedding-0-6b
           originalName: qwen3-embedding:0.6b

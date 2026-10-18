@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-06"
     snapshots:
         - name: llama3-3-latest
           originalName: llama3.3:latest
