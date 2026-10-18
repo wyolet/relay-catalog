@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2026-04-28"
     snapshots:
         - name: nemotron3-latest
           originalName: nemotron3:latest

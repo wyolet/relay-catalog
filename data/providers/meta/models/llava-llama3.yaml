@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2024-04-26"
     snapshots:
         - name: llava-llama3-latest
           originalName: llava-llama3:latest

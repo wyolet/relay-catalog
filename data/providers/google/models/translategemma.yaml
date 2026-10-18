@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-01-15"
     snapshots:
         - name: translategemma-4b
           originalName: translategemma:4b
@@ -52,6 +53,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-01-15"
     snapshots:
         - name: translategemma-27b
           originalName: translategemma:27b

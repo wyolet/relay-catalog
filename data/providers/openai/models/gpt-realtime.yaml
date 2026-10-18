@@ -30,6 +30,7 @@ spec:
     contextWindowInput: 32000
     contextWindowOutput: 4096
     contextWindowTotal: 32000
+    releaseDate: "2025-08-28"
     snapshots:
         - name: gpt-realtime
         - name: gpt-realtime-2025-08-28
@@ -67,6 +68,7 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 4096
     contextWindowTotal: 128000
+    releaseDate: "2025-10-06"
     snapshots:
         - name: gpt-realtime-mini
         - name: gpt-realtime-mini-2025-10-06
@@ -106,6 +108,7 @@ spec:
     contextWindowInput: 32000
     contextWindowOutput: 4096
     contextWindowTotal: 32000
+    releaseDate: "2026-02-23"
     snapshots:
         - name: gpt-realtime-1-5
           originalName: gpt-realtime-1.5
@@ -142,6 +145,7 @@ spec:
     contextWindowInput: 32000
     contextWindowOutput: 4096
     contextWindowTotal: 32000
+    releaseDate: "2026-05-07"
     snapshots:
         - name: gpt-realtime-2
     pointer: gpt-realtime-2

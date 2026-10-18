@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-02-26"
     snapshots:
         - name: granite3-2-vision-latest
           originalName: granite3.2-vision:latest

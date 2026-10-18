@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-07-20"
     snapshots:
         - name: llama2-uncensored-7b
           originalName: llama2-uncensored:7b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-08-03"
     snapshots:
         - name: llama2-uncensored-70b
           originalName: llama2-uncensored:70b

@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-01-11"
     snapshots:
         - name: nous-hermes2-mixtral-latest
           originalName: nous-hermes2-mixtral:latest

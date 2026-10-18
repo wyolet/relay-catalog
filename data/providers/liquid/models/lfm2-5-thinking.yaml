@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2026-01-20"
     snapshots:
         - name: lfm2-5-thinking-latest
           originalName: lfm2.5-thinking:latest

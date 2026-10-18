@@ -24,6 +24,7 @@ spec:
             - audio
         output:
             - text
+    releaseDate: "2026-04-02"
     snapshots:
         - name: gemma4-e2b
           originalName: gemma4:e2b
@@ -54,6 +55,7 @@ spec:
             - audio
         output:
             - text
+    releaseDate: "2026-04-02"
     snapshots:
         - name: gemma4-e4b
           originalName: gemma4:e4b
@@ -90,6 +92,7 @@ spec:
             - audio
         output:
             - text
+    releaseDate: "2026-04-02"
     snapshots:
         - name: gemma4-26b
           originalName: gemma4:26b
@@ -120,6 +123,7 @@ spec:
             - audio
         output:
             - text
+    releaseDate: "2026-04-02"
     snapshots:
         - name: gemma4-31b
           originalName: gemma4:31b

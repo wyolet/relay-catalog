@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-11-12"
     snapshots:
         - name: qwen2-5-coder-0-5b
           originalName: qwen2.5-coder:0.5b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-09-19"
     snapshots:
         - name: qwen2-5-coder-1-5b
           originalName: qwen2.5-coder:1.5b
@@ -78,6 +80,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-11-12"
     snapshots:
         - name: qwen2-5-coder-3b
           originalName: qwen2.5-coder:3b
@@ -106,6 +109,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-09-19"
     snapshots:
         - name: qwen2-5-coder-7b
           originalName: qwen2.5-coder:7b
@@ -134,6 +138,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-11-12"
     snapshots:
         - name: qwen2-5-coder-14b
           originalName: qwen2.5-coder:14b
@@ -162,6 +167,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-11-12"
     snapshots:
         - name: qwen2-5-coder-32b
           originalName: qwen2.5-coder:32b

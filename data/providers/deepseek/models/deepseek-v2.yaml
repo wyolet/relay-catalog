@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-05-16"
     snapshots:
         - name: deepseek-v2-16b
           originalName: deepseek-v2:16b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-05-06"
     snapshots:
         - name: deepseek-v2-236b
           originalName: deepseek-v2:236b
@@ -78,6 +80,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-09-05"
     snapshots:
         - name: deepseek-v2-5-latest
           originalName: deepseek-v2.5:latest

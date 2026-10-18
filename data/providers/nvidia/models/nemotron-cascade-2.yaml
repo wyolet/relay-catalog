@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2026-03-18"
     snapshots:
         - name: nemotron-cascade-2-latest
           originalName: nemotron-cascade-2:latest

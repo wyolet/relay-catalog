@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-04-29"
     snapshots:
         - name: llama3-gradient-latest
           originalName: llama3-gradient:latest

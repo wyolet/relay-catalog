@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-01-21"
     snapshots:
         - name: tinydolphin-latest
           originalName: tinydolphin:latest

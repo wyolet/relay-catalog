@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-03-02"
     snapshots:
         - name: qwen3-5-0-8b
           originalName: qwen3.5:0.8b
@@ -52,6 +53,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-03-02"
     snapshots:
         - name: qwen3-5-2b
           originalName: qwen3.5:2b
@@ -81,6 +83,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-03-02"
     snapshots:
         - name: qwen3-5-4b
           originalName: qwen3.5:4b
@@ -110,6 +113,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-03-02"
     snapshots:
         - name: qwen3-5-9b
           originalName: qwen3.5:9b
@@ -139,6 +143,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-02-23"
     snapshots:
         - name: qwen3-5-27b
           originalName: qwen3.5:27b
@@ -168,6 +173,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-02-24"
     snapshots:
         - name: qwen3-5-35b
           originalName: qwen3.5:35b
@@ -197,6 +203,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-02-24"
     snapshots:
         - name: qwen3-5-122b
           originalName: qwen3.5:122b
@@ -226,6 +233,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-02-16"
     snapshots:
         - name: qwen3-5-397b
           originalName: qwen3.5:397b

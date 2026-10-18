@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-01-30"
     snapshots:
         - name: glm-ocr-latest
           originalName: glm-ocr:latest

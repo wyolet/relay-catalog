@@ -20,6 +20,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-09-12"
     snapshots:
         - name: bge-large-latest
           originalName: bge-large:latest

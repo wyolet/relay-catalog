@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-05-19"
     snapshots:
         - name: medgemma-4b
           originalName: medgemma:4b
@@ -52,6 +53,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-07-09"
     snapshots:
         - name: medgemma-27b
           originalName: medgemma:27b

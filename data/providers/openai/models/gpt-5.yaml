@@ -44,6 +44,7 @@ spec:
     contextWindowInput: 272000
     contextWindowOutput: 128000
     contextWindowTotal: 272000
+    releaseDate: "2025-08-07"
     snapshots:
         - name: gpt-5
         - name: gpt-5-2025-08-07
@@ -83,6 +84,7 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 16384
     contextWindowTotal: 128000
+    releaseDate: "2025-08-07"
     snapshots:
         - name: gpt-5-chat
         - name: gpt-5-chat-latest
@@ -130,6 +132,7 @@ spec:
     contextWindowInput: 272000
     contextWindowOutput: 128000
     contextWindowTotal: 272000
+    releaseDate: "2025-08-07"
     snapshots:
         - name: gpt-5-mini
         - name: gpt-5-mini-2025-08-07
@@ -178,6 +181,7 @@ spec:
     contextWindowInput: 272000
     contextWindowOutput: 128000
     contextWindowTotal: 272000
+    releaseDate: "2025-08-07"
     snapshots:
         - name: gpt-5-nano
         - name: gpt-5-nano-2025-08-07

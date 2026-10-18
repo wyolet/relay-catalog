@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2023-10-05"
     snapshots:
         - name: llava-7b
           originalName: llava:7b
@@ -52,6 +53,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2023-10-05"
     snapshots:
         - name: llava-13b
           originalName: llava:13b
@@ -81,6 +83,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2024-01-31"
     snapshots:
         - name: llava-34b
           originalName: llava:34b

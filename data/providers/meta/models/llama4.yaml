@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-04-05"
     snapshots:
         - name: llama4-latest
           originalName: llama4:latest

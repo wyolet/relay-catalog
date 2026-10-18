@@ -68,6 +68,7 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 16384
     contextWindowTotal: 128000
+    releaseDate: "2026-02-23"
     snapshots:
         - name: gpt-audio-1-5
           originalName: gpt-audio-1.5
@@ -105,6 +106,7 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 16384
     contextWindowTotal: 128000
+    releaseDate: "2025-10-06"
     snapshots:
         - name: gpt-audio-mini
         - name: gpt-audio-mini-2025-10-06

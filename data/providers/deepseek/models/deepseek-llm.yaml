@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-11-29"
     snapshots:
         - name: deepseek-llm-7b
           originalName: deepseek-llm:7b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-11-29"
     snapshots:
         - name: deepseek-llm-67b
           originalName: deepseek-llm:67b

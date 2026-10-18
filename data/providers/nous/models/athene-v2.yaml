@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-11-12"
     snapshots:
         - name: athene-v2-latest
           originalName: athene-v2:latest

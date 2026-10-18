@@ -42,6 +42,7 @@ spec:
     contextWindowInput: 272000
     contextWindowOutput: 128000
     contextWindowTotal: 272000
+    releaseDate: "2025-12-11"
     snapshots:
         - name: gpt-5-2
           originalName: gpt-5.2
@@ -85,6 +86,7 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 16384
     contextWindowTotal: 128000
+    releaseDate: "2025-12-11"
     snapshots:
         - name: gpt-5-2-chat-latest
           originalName: gpt-5.2-chat-latest

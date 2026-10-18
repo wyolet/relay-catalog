@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2023-10-12"
     snapshots:
         - name: bakllava-latest
           originalName: bakllava:latest

@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-05-21"
     snapshots:
         - name: phi3-14b
           originalName: phi3:14b

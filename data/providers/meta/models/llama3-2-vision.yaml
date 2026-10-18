@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2024-09-25"
     snapshots:
         - name: llama3-2-vision-11b
           originalName: llama3.2-vision:11b
@@ -52,6 +53,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2024-09-25"
     snapshots:
         - name: llama3-2-vision-90b
           originalName: llama3.2-vision:90b

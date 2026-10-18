@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-10-02"
     snapshots:
         - name: dolphin-mistral-latest
           originalName: dolphin-mistral:latest

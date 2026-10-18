@@ -24,6 +24,7 @@ spec:
     contextWindowInput: 131072
     contextWindowOutput: 131072
     contextWindowTotal: 131072
+    releaseDate: "2025-08-05"
     snapshots:
         - name: gpt-oss-20b
           originalName: gpt-oss:20b
@@ -56,6 +57,7 @@ spec:
     contextWindowInput: 131072
     contextWindowOutput: 131072
     contextWindowTotal: 131072
+    releaseDate: "2025-08-05"
     snapshots:
         - name: gpt-oss-120b
           originalName: gpt-oss:120b

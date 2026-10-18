@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-10-20"
     snapshots:
         - name: deepseek-ocr-latest
           originalName: deepseek-ocr:latest

@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-13"
     snapshots:
         - name: command-r7b-latest
           originalName: command-r7b:latest
@@ -52,6 +53,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-02-27"
     snapshots:
         - name: command-r7b-arabic-latest
           originalName: command-r7b-arabic:latest

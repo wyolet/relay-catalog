@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-11-19"
     snapshots:
         - name: cogito-2-1-latest
           originalName: cogito-2.1:latest

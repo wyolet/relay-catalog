@@ -26,6 +26,7 @@ spec:
     contextWindowInput: 8192
     contextWindowOutput: 4096
     contextWindowTotal: 8192
+    releaseDate: "2023-03-14"
     snapshots:
         - name: gpt-4
     pointer: gpt-4
@@ -58,6 +59,7 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 4096
     contextWindowTotal: 128000
+    releaseDate: "2024-01-25"
     deprecation:
         status: sunset
         sunsetDate: "2026-03-26"
@@ -90,6 +92,7 @@ spec:
     contextWindowInput: 8192
     contextWindowOutput: 4096
     contextWindowTotal: 8192
+    releaseDate: "2023-03-14"
     deprecation:
         status: sunset
         sunsetDate: "2026-03-26"
@@ -124,6 +127,7 @@ spec:
     contextWindowInput: 8192
     contextWindowOutput: 4096
     contextWindowTotal: 8192
+    releaseDate: "2023-06-13"
     deprecation:
         status: sunset
         sunsetDate: "2025-06-06"
@@ -159,6 +163,7 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 4096
     contextWindowTotal: 128000
+    releaseDate: "2023-11-06"
     deprecation:
         status: sunset
         sunsetDate: "2026-03-26"
@@ -198,6 +203,7 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 4096
     contextWindowTotal: 128000
+    releaseDate: "2023-11-06"
     snapshots:
         - name: gpt-4-turbo
         - name: gpt-4-turbo-2024-04-09

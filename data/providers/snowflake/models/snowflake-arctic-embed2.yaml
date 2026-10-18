@@ -46,6 +46,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-04"
     snapshots:
         - name: snowflake-arctic-embed2-568m
           originalName: snowflake-arctic-embed2:568m

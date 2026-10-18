@@ -32,6 +32,7 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 16384
     contextWindowTotal: 128000
+    releaseDate: "2024-05-13"
     snapshots:
         - name: gpt-4o
         - name: gpt-4o-2024-05-13
@@ -73,6 +74,7 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 16384
     contextWindowTotal: 128000
+    releaseDate: "2024-10-17"
     snapshots:
         - name: gpt-4o-audio-preview
         - name: gpt-4o-audio-preview-2024-12-17
@@ -112,6 +114,7 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 4096
     contextWindowTotal: 128000
+    releaseDate: "2024-10-01"
     snapshots:
         - name: gpt-4o-realtime-preview
         - name: gpt-4o-realtime-preview-2024-12-17
@@ -153,6 +156,7 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 16384
     contextWindowTotal: 128000
+    releaseDate: "2025-03-11"
     snapshots:
         - name: gpt-4o-search-preview
         - name: gpt-4o-search-preview-2025-03-11

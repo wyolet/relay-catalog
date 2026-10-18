@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-05-13"
     snapshots:
         - name: falcon2-latest
           originalName: falcon2:latest

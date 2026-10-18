@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-11-26"
     snapshots:
         - name: olmo2-7b
           originalName: olmo2:7b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-11-26"
     snapshots:
         - name: olmo2-13b
           originalName: olmo2:13b

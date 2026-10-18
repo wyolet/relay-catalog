@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-04-15"
     snapshots:
         - name: codeqwen-latest
           originalName: codeqwen:latest

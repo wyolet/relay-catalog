@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-07-26"
     snapshots:
         - name: starcoder-latest
           originalName: starcoder:latest

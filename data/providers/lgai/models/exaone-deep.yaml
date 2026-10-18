@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-03-18"
     snapshots:
         - name: exaone-deep-2-4b
           originalName: exaone-deep:2.4b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-03-18"
     snapshots:
         - name: exaone-deep-7-8b
           originalName: exaone-deep:7.8b
@@ -78,6 +80,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-03-18"
     snapshots:
         - name: exaone-deep-32b
           originalName: exaone-deep:32b

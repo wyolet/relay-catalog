@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2026-04-28"
     snapshots:
         - name: laguna-xs-2-latest
           originalName: laguna-xs.2:latest

@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-08-20"
     snapshots:
         - name: phi3-5-latest
           originalName: phi3.5:latest

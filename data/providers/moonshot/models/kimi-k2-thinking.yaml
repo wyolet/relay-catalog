@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-11-06"
     snapshots:
         - name: kimi-k2-thinking-cloud
           originalName: kimi-k2-thinking:cloud

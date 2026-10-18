@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-07-18"
     snapshots:
         - name: mistral-nemo-latest
           originalName: mistral-nemo:latest

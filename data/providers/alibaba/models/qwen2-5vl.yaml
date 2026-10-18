@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-01-28"
     snapshots:
         - name: qwen2-5vl-3b
           originalName: qwen2.5vl:3b
@@ -52,6 +53,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-01-28"
     snapshots:
         - name: qwen2-5vl-7b
           originalName: qwen2.5vl:7b
@@ -81,6 +83,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-03-25"
     snapshots:
         - name: qwen2-5vl-32b
           originalName: qwen2.5vl:32b
@@ -110,6 +113,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2025-01-28"
     snapshots:
         - name: qwen2-5vl-72b
           originalName: qwen2.5vl:72b

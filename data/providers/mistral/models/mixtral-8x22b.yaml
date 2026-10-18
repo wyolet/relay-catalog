@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-04-17"
     snapshots:
         - name: mixtral-8x22b
           originalName: mixtral:8x22b
@@ -52,6 +53,7 @@ spec:
     contextWindowInput: 65536
     contextWindowOutput: 65536
     contextWindowTotal: 65536
+    releaseDate: "2024-04-17"
     snapshots:
         - name: mixtral-8x22b-instruct-v0-1
           originalName: mixtral-8x22B-Instruct-v0.1

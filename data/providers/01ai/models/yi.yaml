@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-11-01"
     snapshots:
         - name: yi-6b
           originalName: yi:6b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-03-06"
     snapshots:
         - name: yi-9b
           originalName: yi:9b
@@ -78,6 +80,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-11-01"
     snapshots:
         - name: yi-34b
           originalName: yi:34b

@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2026-02-24"
     snapshots:
         - name: lfm2-latest
           originalName: lfm2:latest

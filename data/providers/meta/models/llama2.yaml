@@ -23,6 +23,7 @@ spec:
     contextWindowInput: 4096
     contextWindowOutput: 4096
     contextWindowTotal: 4096
+    releaseDate: "2023-07-18"
     snapshots:
         - name: llama2
           originalName: llama2
@@ -52,6 +53,7 @@ spec:
     contextWindowInput: 4096
     contextWindowOutput: 4096
     contextWindowTotal: 4096
+    releaseDate: "2023-07-18"
     snapshots:
         - name: llama2-7b
           originalName: llama2:7b
@@ -81,6 +83,7 @@ spec:
     contextWindowInput: 4096
     contextWindowOutput: 4096
     contextWindowTotal: 4096
+    releaseDate: "2023-07-18"
     snapshots:
         - name: llama2-13b
           originalName: llama2:13b
@@ -110,6 +113,7 @@ spec:
     contextWindowInput: 4096
     contextWindowOutput: 4096
     contextWindowTotal: 4096
+    releaseDate: "2023-07-18"
     snapshots:
         - name: llama2-70b
           originalName: llama2:70b

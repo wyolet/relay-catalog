@@ -35,7 +35,7 @@ spec:
   contextWindowTotal: 32768
   maxOutputTokens: 2048
   knowledgeCutoff: 2024-04
-  releaseDate: 2024-12
+  releaseDate: "2025-03-26"
   tags:
   - open-weights
   enabled: true

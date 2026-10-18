@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-08-08"
     snapshots:
         - name: qwen2-math-1-5b
           originalName: qwen2-math:1.5b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-08-08"
     snapshots:
         - name: qwen2-math-7b
           originalName: qwen2-math:7b
@@ -78,6 +80,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-08-08"
     snapshots:
         - name: qwen2-math-72b
           originalName: qwen2-math:72b

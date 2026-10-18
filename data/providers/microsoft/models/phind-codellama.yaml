@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-08-28"
     snapshots:
         - name: phind-codellama-latest
           originalName: phind-codellama:latest

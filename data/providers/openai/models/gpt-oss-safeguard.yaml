@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-10-29"
     snapshots:
         - name: gpt-oss-safeguard-20b
           originalName: gpt-oss-safeguard:20b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-10-29"
     snapshots:
         - name: gpt-oss-safeguard-120b
           originalName: gpt-oss-safeguard:120b

@@ -31,6 +31,7 @@ spec:
     contextWindowInput: 128000
     contextWindowOutput: 4096
     contextWindowTotal: 128000
+    releaseDate: "2024-08-15"
     snapshots:
         - name: chatgpt-4o-latest
     pointer: chatgpt-4o-latest

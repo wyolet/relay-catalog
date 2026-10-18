@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-04-22"
     snapshots:
         - name: qwen3-6-27b
           originalName: qwen3.6:27b
@@ -52,6 +53,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-04-16"
     snapshots:
         - name: qwen3-6-35b
           originalName: qwen3.6:35b

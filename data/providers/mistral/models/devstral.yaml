@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-12-09"
     snapshots:
         - name: devstral-latest
           originalName: devstral:latest
@@ -52,6 +53,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-12-09"
     snapshots:
         - name: devstral-2-latest
           originalName: devstral-2:latest

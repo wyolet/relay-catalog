@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2026-03-16"
     snapshots:
         - name: nemotron-3-nano-4b
           originalName: nemotron-3-nano:4b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-12-15"
     snapshots:
         - name: nemotron-3-nano-30b
           originalName: nemotron-3-nano:30b

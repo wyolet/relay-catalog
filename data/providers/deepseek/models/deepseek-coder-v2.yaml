@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-06-17"
     snapshots:
         - name: deepseek-coder-v2-16b
           originalName: deepseek-coder-v2:16b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-06-17"
     snapshots:
         - name: deepseek-coder-v2-236b
           originalName: deepseek-coder-v2:236b
@@ -80,6 +82,7 @@ spec:
     contextWindowInput: 32768
     contextWindowOutput: 8192
     contextWindowTotal: 32768
+    releaseDate: "2024-06-17"
     snapshots:
         - name: deepseek-coder-v2-instruct
           originalName: deepseek-coder-v2-instruct
@@ -110,6 +113,7 @@ spec:
     contextWindowInput: 32768
     contextWindowOutput: 8192
     contextWindowTotal: 32768
+    releaseDate: "2024-06-17"
     snapshots:
         - name: deepseek-coder-v2-lite-instruct
           originalName: deepseek-coder-v2-lite-instruct

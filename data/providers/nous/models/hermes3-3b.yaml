@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-03"
     snapshots:
         - name: hermes3-3b
           originalName: hermes3:3b

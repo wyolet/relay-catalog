@@ -23,6 +23,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2024-04-25"
     snapshots:
         - name: llava-phi3-latest
           originalName: llava-phi3:latest

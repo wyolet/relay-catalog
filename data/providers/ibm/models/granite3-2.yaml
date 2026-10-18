@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-02-26"
     snapshots:
         - name: granite3-2-2b
           originalName: granite3.2:2b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-02-26"
     snapshots:
         - name: granite3-2-8b
           originalName: granite3.2:8b

@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-12-29"
     snapshots:
         - name: dolphin3-latest
           originalName: dolphin3:latest

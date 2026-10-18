@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2026-02-03"
     snapshots:
         - name: qwen3-coder-next-latest
           originalName: qwen3-coder-next:latest

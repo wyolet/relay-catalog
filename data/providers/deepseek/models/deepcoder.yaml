@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-04-07"
     snapshots:
         - name: deepcoder-1-5b
           originalName: deepcoder:1.5b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-04-07"
     snapshots:
         - name: deepcoder-14b
           originalName: deepcoder:14b

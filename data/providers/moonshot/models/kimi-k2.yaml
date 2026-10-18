@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2025-07-11"
     snapshots:
         - name: kimi-k2-1t-cloud
           originalName: kimi-k2:1t-cloud
@@ -51,6 +52,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-01-27"
     snapshots:
         - name: kimi-k2-5-cloud
           originalName: kimi-k2.5:cloud
@@ -80,6 +82,7 @@ spec:
             - image
         output:
             - text
+    releaseDate: "2026-04-21"
     snapshots:
         - name: kimi-k2-6-cloud
           originalName: kimi-k2.6:cloud

@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-10-31"
     snapshots:
         - name: smollm2-135m
           originalName: smollm2:135m
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-10-31"
     snapshots:
         - name: smollm2-360m
           originalName: smollm2:360m
@@ -78,6 +80,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-10-31"
     snapshots:
         - name: smollm2-1-7b
           originalName: smollm2:1.7b

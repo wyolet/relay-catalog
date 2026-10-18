@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-04-28"
     snapshots:
         - name: llama3-chatqa-8b
           originalName: llama3-chatqa:8b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-04-28"
     snapshots:
         - name: llama3-chatqa-70b
           originalName: llama3-chatqa:70b

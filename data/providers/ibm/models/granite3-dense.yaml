@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-10-21"
     snapshots:
         - name: granite3-dense-2b
           originalName: granite3-dense:2b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-10-21"
     snapshots:
         - name: granite3-dense-8b
           originalName: granite3-dense:8b

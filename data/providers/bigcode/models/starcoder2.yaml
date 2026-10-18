@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-02-28"
     snapshots:
         - name: starcoder2-3b
           originalName: starcoder2:3b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-02-28"
     snapshots:
         - name: starcoder2-7b
           originalName: starcoder2:7b
@@ -78,6 +80,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-02-28"
     snapshots:
         - name: starcoder2-15b
           originalName: starcoder2:15b

@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-03-08"
     snapshots:
         - name: dolphincoder-7b
           originalName: dolphincoder:7b
@@ -50,6 +51,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2024-03-04"
     snapshots:
         - name: dolphincoder-15b
           originalName: dolphincoder:15b

@@ -22,6 +22,7 @@ spec:
             - text
         output:
             - text
+    releaseDate: "2023-09-29"
     snapshots:
         - name: mistral-openorca-latest
           originalName: mistral-openorca:latest
