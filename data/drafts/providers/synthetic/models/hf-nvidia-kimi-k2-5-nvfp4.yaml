@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: hf-nvidia-kimi-k2-5-nvfp4

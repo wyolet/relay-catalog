@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: HostBinding
 metadata:
     name: envoid-llama-3-05-nt-storybreaker-ministral-70b-on-nano-gpt

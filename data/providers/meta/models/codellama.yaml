@@ -1,5 +1,5 @@
-# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
-apiVersion: relay.wyolet.dev/v1alpha2
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: codellama-7b
@@ -29,7 +29,7 @@ spec:
           originalName: codellama:7b
     pointer: codellama-7b
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: codellama-13b
@@ -59,7 +59,7 @@ spec:
           originalName: codellama:13b
     pointer: codellama-13b
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: codellama-34b
@@ -89,7 +89,7 @@ spec:
           originalName: codellama:34b
     pointer: codellama-34b
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: codellama-70b

@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Pricing
 metadata:
     name: nano-gpt-deepseek-deepseek-v4-flash-thinking

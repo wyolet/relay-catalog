@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: cognitivecomputations-dolphin-2-9-2-qwen2-72b

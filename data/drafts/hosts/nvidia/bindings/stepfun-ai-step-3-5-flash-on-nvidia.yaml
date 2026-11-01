@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: HostBinding
 metadata:
     name: stepfun-ai-step-3-5-flash-on-nvidia

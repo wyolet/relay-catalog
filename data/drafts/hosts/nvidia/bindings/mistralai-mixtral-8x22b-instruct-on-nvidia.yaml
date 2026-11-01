@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: HostBinding
 metadata:
     name: mistralai-mixtral-8x22b-instruct-on-nvidia

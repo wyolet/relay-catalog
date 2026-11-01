@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Pricing
 metadata:
     name: kilo-google-gemini-2-5-flash-lite-preview-09

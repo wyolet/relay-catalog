@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: HostBinding
 metadata:
     name: xiaomi-mimo-v2-omni-on-kilo

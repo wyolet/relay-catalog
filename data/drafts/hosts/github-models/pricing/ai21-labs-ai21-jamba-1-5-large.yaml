@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Pricing
 metadata:
     name: github-models-ai21-labs-ai21-jamba-1-5-large

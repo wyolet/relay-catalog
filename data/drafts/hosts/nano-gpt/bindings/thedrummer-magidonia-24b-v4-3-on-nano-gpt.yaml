@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: HostBinding
 metadata:
     name: thedrummer-magidonia-24b-v4-3-on-nano-gpt

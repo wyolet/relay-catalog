@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: HostBinding
 metadata:
     name: hf-meta-llama-llama-4-maverick-17b-128e-instruct-fp8-on-synthetic

@@ -1,5 +1,5 @@
-# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
-apiVersion: relay.wyolet.dev/v1alpha2
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: qwen3-0-6b
@@ -28,7 +28,7 @@ spec:
           originalName: qwen3:0.6b
     pointer: qwen3-0-6b
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: qwen3-1-7b
@@ -57,7 +57,7 @@ spec:
           originalName: qwen3:1.7b
     pointer: qwen3-1-7b
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: qwen3-4b
@@ -86,7 +86,7 @@ spec:
           originalName: qwen3:4b
     pointer: qwen3-4b
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: qwen3-8b
@@ -115,7 +115,7 @@ spec:
           originalName: qwen3:8b
     pointer: qwen3-8b
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: qwen3-14b
@@ -144,7 +144,7 @@ spec:
           originalName: qwen3:14b
     pointer: qwen3-14b
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: qwen3-30b
@@ -173,7 +173,7 @@ spec:
           originalName: qwen3:30b
     pointer: qwen3-30b
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: qwen3-32b
@@ -202,7 +202,7 @@ spec:
           originalName: qwen3:32b
     pointer: qwen3-32b
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: qwen3-235b
