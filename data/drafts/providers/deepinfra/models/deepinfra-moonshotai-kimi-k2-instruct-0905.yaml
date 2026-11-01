@@ -1,5 +1,5 @@
-# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
-apiVersion: relay.wyolet.dev/v1alpha2
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: deepinfra-moonshotai-kimi-k2-instruct-0905

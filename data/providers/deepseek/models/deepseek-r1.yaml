@@ -1,5 +1,5 @@
-# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
-apiVersion: relay.wyolet.dev/v1alpha2
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: deepseek-r1-1-5b
@@ -29,7 +29,7 @@ spec:
           originalName: deepseek-r1:1.5b
     pointer: deepseek-r1-1-5b
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: deepseek-r1-7b
@@ -59,7 +59,7 @@ spec:
           originalName: deepseek-r1:7b
     pointer: deepseek-r1-7b
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: deepseek-r1-8b
@@ -89,7 +89,7 @@ spec:
           originalName: deepseek-r1:8b
     pointer: deepseek-r1-8b
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: deepseek-r1-14b
@@ -119,7 +119,7 @@ spec:
           originalName: deepseek-r1:14b
     pointer: deepseek-r1-14b
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: deepseek-r1-32b
@@ -149,7 +149,7 @@ spec:
           originalName: deepseek-r1:32b
     pointer: deepseek-r1-32b
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: deepseek-r1-70b
@@ -179,7 +179,7 @@ spec:
           originalName: deepseek-r1:70b
     pointer: deepseek-r1-70b
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: deepseek-r1-671b

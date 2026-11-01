@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: RateLimit
 metadata:
   name: meta-paid-rl
@@ -19,7 +19,7 @@ spec:
       window: 1m
       strategy: sliding-window
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Policy
 metadata:
   name: meta-paid
@@ -28,4 +28,5 @@ metadata:
     kind: host
     name: meta
 spec:
-  rateLimit: meta-paid-rl
+  rateLimits:
+  - ref: meta-paid-rl

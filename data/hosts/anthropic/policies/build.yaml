@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: RateLimit
 metadata:
   name: anthropic-build-rl
@@ -23,7 +23,7 @@ spec:
       window: 1m
       strategy: sliding-window
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: RateLimit
 metadata:
   name: anthropic-build-fable-rl
@@ -48,7 +48,7 @@ spec:
       window: 1m
       strategy: sliding-window
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Policy
 metadata:
   name: anthropic-build
@@ -57,13 +57,14 @@ metadata:
     kind: host
     name: anthropic
 spec:
-  rlBindings:
-    - models:
+  rateLimits:
+    - ref: anthropic-build-fable-rl
+      models:
         - anthropic/claude-fable-5
         - anthropic/claude-fable-5-1
         - anthropic/claude-mythos-5
-      rateLimit: anthropic-build-fable-rl
-    - models:
+    - ref: anthropic-build-rl
+      models:
         - anthropic/claude-opus-5-5
         - anthropic/claude-opus-5
         - anthropic/claude-opus-4-8
@@ -76,4 +77,3 @@ spec:
         - anthropic/claude-sonnet-4-5
         - anthropic/claude-haiku-5-5
         - anthropic/claude-haiku-4-5
-      rateLimit: anthropic-build-rl

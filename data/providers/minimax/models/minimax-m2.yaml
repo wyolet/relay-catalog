@@ -1,5 +1,5 @@
-# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
-apiVersion: relay.wyolet.dev/v1alpha2
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: minimax-m2
@@ -28,7 +28,7 @@ spec:
           originalName: minimax-m2:cloud
     pointer: minimax-m2-cloud
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: minimax-m2-1
@@ -57,7 +57,7 @@ spec:
           originalName: minimax-m2.1:cloud
     pointer: minimax-m2-1-cloud
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: minimax-m2-5
@@ -86,7 +86,7 @@ spec:
           originalName: minimax-m2.5:cloud
     pointer: minimax-m2-5-cloud
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: minimax-m2-7

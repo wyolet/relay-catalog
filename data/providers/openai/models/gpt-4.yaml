@@ -1,5 +1,5 @@
-# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
-apiVersion: relay.wyolet.dev/v1alpha2
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: gpt-4
@@ -31,7 +31,7 @@ spec:
         - name: gpt-4
     pointer: gpt-4
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: gpt-4-0125
@@ -67,7 +67,7 @@ spec:
         - name: gpt-4-0125-preview
     pointer: gpt-4-0125-preview
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: gpt-4-0314
@@ -100,7 +100,7 @@ spec:
         - name: gpt-4-0314
     pointer: gpt-4-0314
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: gpt-4-0613
@@ -135,7 +135,7 @@ spec:
         - name: gpt-4-0613
     pointer: gpt-4-0613
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: gpt-4-1106
@@ -171,7 +171,7 @@ spec:
         - name: gpt-4-1106-preview
     pointer: gpt-4-1106-preview
 ---
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
     name: gpt-4-turbo

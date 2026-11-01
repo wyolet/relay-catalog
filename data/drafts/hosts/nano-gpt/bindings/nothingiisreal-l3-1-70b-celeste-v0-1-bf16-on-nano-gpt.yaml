@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: HostBinding
 metadata:
     name: nothingiisreal-l3-1-70b-celeste-v0-1-bf16-on-nano-gpt

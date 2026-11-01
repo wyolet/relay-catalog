@@ -1,4 +1,4 @@
-apiVersion: relay.wyolet.dev/v1alpha2
+apiVersion: relay.wyolet.dev/v1alpha3
 kind: HostBinding
 metadata:
     name: hf-nvidia-nvidia-nemotron-3-super-120b-a12b-nvfp4-on-synthetic
