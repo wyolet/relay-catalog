@@ -25,6 +25,7 @@ providers:
     - provider: minimax
       models:
         - minimax-m3
+        - minimax-m3-1-flash
     - provider: mistral
       models:
         - mistral-large-4
@@ -39,7 +40,6 @@ providers:
         - gpt-6-luna
     - provider: xai
       models:
-        - grok-4-6
         - grok-4-7
     - provider: zhipuai
       models:
