@@ -9,7 +9,6 @@ metadata:
         kind: provider
         name: moonshot
     labels:
-        featured: "true"
         source: models.dev
         source_version: "2026-07-24"
 spec:
@@ -40,4 +39,6 @@ spec:
     snapshots:
         - name: kimi-k3
           releasedAt: "2026-07-16"
+        - name: kimi-k3-cloud
+          originalName: kimi-k3:cloud
     pointer: kimi-k3

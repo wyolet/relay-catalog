@@ -1,0 +1,53 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha2/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha2
+kind: Model
+metadata:
+    name: kimi-k3-1-pro
+    displayName: Kimi K3.1 Pro
+    description: Multimodal Kimi model with 1M context and always-on reasoning for coding, 3D creation, financial research, and agentic work.
+    owner:
+        kind: provider
+        name: moonshot
+    labels:
+        featured: "true"
+        source: models.dev
+        source_version: "2026-11-07"
+spec:
+    family: kimi
+    capabilities:
+        unsupportedParams:
+            - temperature
+            - top_p
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        systemMessages: true
+        reasoningEfforts:
+            - low
+            - high
+            - max
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 131072
+    contextWindowTotal: 1048576
+    maxOutputTokens: 131072
+    releaseDate: "2026-10-23"
+    tags:
+        - open-weights
+    snapshots:
+        - name: kimi-k3-1-pro
+          releasedAt: "2026-10-23"
+          originalName: kimi-k3.1-pro
+        - name: kimi-k3-1-pro-cloud
+          originalName: kimi-k3.1-pro:cloud
+    pointer: kimi-k3-1-pro

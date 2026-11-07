@@ -14,29 +14,29 @@ spec:
     rates:
         - meter: tokens.cache_creation
           unit: per_million
-          amount: 3.125
-        - meter: tokens.cache_creation
-          unit: per_million
-          amount: 6.25
-          aboveTokens: 272000
-        - meter: tokens.cache_read
-          unit: per_million
-          amount: 0.25
-        - meter: tokens.cache_read
-          unit: per_million
-          amount: 0.5
-          aboveTokens: 272000
-        - meter: tokens.input
-          unit: per_million
           amount: 2.5
-        - meter: tokens.input
+        - meter: tokens.cache_creation
           unit: per_million
           amount: 5
           aboveTokens: 272000
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.4
+          aboveTokens: 272000
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.input
+          unit: per_million
+          amount: 4
+          aboveTokens: 272000
         - meter: tokens.output
           unit: per_million
-          amount: 15
+          amount: 12
         - meter: tokens.output
           unit: per_million
-          amount: 22.5
+          amount: 18
           aboveTokens: 272000

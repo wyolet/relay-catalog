@@ -9,7 +9,6 @@ metadata:
         kind: provider
         name: xai
     labels:
-        featured: "true"
         source: models.dev
         source_version: "2026-08-23"
 spec:

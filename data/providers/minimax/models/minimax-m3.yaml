@@ -27,10 +27,10 @@ spec:
             - video
         output:
             - text
-    contextWindowInput: 512000
-    contextWindowOutput: 128000
-    contextWindowTotal: 512000
-    maxOutputTokens: 128000
+    contextWindowInput: 1000000
+    contextWindowOutput: 524288
+    contextWindowTotal: 1000000
+    maxOutputTokens: 524288
     releaseDate: "2026-06-01"
     tags:
         - open-weights
@@ -39,4 +39,6 @@ spec:
         - name: minimax-m3
           releasedAt: "2026-06-01"
           originalName: MiniMax-M3
+        - name: minimax-m3-cloud
+          originalName: minimax-m3:cloud
     pointer: minimax-m3
