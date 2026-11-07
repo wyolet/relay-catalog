@@ -9,6 +9,7 @@ metadata:
         kind: provider
         name: minimax
     labels:
+        featured: "true"
         source: models.dev
         source_version: "2026-11-07"
 spec:
