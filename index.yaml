@@ -7,4 +7,4 @@ channels:
     v1alpha2:
         latest: v0.1.19
     v1alpha3:
-        latest: v0.2.0
+        latest: v0.2.1
