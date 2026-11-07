@@ -5,6 +5,6 @@
 # release workflow on tag push; do not edit by hand.
 channels:
     v1alpha2:
-        latest: v0.1.19
+        latest: v0.1.20
     v1alpha3:
         latest: v0.2.1
