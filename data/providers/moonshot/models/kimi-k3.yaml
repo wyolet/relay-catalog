@@ -9,7 +9,6 @@ metadata:
         kind: provider
         name: moonshot
     labels:
-        featured: "true"
         source: models.dev
         source_version: "2026-07-24"
 spec:
