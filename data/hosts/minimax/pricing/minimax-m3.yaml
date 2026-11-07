@@ -11,13 +11,25 @@ spec:
     rates:
         - meter: tokens.cache_read
           unit: per_million
+          amount: 0.06
+        - meter: tokens.cache_read
+          unit: per_million
           amount: 0.12
+          aboveTokens: 512000
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
         - meter: tokens.input
           unit: per_million
           amount: 0.6
+          aboveTokens: 512000
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.2
         - meter: tokens.output
           unit: per_million
           amount: 2.4
+          aboveTokens: 512000
     targetModels:
         - minimax-m3
     enabled: true

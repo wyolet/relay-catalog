@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: kimi-k3-on-ollama-self
+    displayName: "Kimi K3 via ollama-self"
+spec:
+    # A signed-in Ollama proxies the :cloud snapshot through its own local API, so the keyless self-hosted host serves it too.
+    model: kimi-k3
+    host: ollama-self
+    adapter: openai
+    snapshots: [kimi-k3-cloud]

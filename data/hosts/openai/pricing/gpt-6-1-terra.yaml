@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: openai-gpt-6-1-terra
+    displayName: GPT-6.1 Terra pricing
+    owner:
+        kind: host
+        id: openai
+spec:
+    currency: USD
+    targetModels:
+        - gpt-6-1-terra
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 1.25
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 2.5
+          aboveTokens: 272000
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.05
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.1
+          aboveTokens: 272000
+        - meter: tokens.input
+          unit: per_million
+          amount: 1
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+          aboveTokens: 272000
+        - meter: tokens.output
+          unit: per_million
+          amount: 5
+        - meter: tokens.output
+          unit: per_million
+          amount: 7.5
+          aboveTokens: 272000
