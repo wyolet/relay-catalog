@@ -48,4 +48,6 @@ spec:
         - name: kimi-k3-1-pro
           releasedAt: "2026-10-23"
           originalName: kimi-k3.1-pro
+        - name: kimi-k3-1-pro-cloud
+          originalName: kimi-k3.1-pro:cloud
     pointer: kimi-k3-1-pro
