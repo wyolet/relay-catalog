@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: kimi-k3-1-pro-on-moonshotai
+    displayName: "Kimi K3.1 Pro via moonshotai"
+spec:
+    model: kimi-k3-1-pro
+    host: moonshotai
+    adapter: openai
+    pricing: moonshotai-kimi-k3-1-pro
+    snapshots:
+        - kimi-k3-1-pro

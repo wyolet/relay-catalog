@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: minimax-m3-1-flash-on-minimax
+    displayName: MiniMax-M3.1-Flash via minimax
+spec:
+    model: minimax-m3-1-flash
+    host: minimax
+    adapter: anthropic
+    enabled: true
+    snapshots:
+        - minimax-m3-1-flash

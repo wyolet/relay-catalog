@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: minimax-minimax-m3-1-flash
+    displayName: MiniMax-M3.1-Flash pricing
+    owner:
+        kind: host
+        id: minimax
+spec:
+    currency: USD
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.015
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.15
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.6
+    targetModels:
+        - minimax-m3-1-flash
+    enabled: true
