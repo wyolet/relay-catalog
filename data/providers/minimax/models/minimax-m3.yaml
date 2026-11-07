@@ -39,4 +39,6 @@ spec:
         - name: minimax-m3
           releasedAt: "2026-06-01"
           originalName: MiniMax-M3
+        - name: minimax-m3-cloud
+          originalName: minimax-m3:cloud
     pointer: minimax-m3

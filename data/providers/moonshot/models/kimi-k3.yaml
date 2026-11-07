@@ -39,4 +39,6 @@ spec:
     snapshots:
         - name: kimi-k3
           releasedAt: "2026-07-16"
+        - name: kimi-k3-cloud
+          originalName: kimi-k3:cloud
     pointer: kimi-k3
