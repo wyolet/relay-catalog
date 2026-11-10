@@ -1,0 +1,52 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Model
+metadata:
+    name: claude-fable-5-2
+    displayName: Claude Fable 5.2
+    owner:
+        kind: provider
+        name: anthropic
+    labels:
+        featured: "true"
+        source: models.dev
+        source_version: "2026-11-09"
+spec:
+    family: claude
+    productLine: fable
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        systemMessages: true
+        reasoningEfforts:
+            - low
+            - medium
+            - high
+            - xhigh
+            - max
+        defaultReasoningEffort: high
+    modalities:
+        input:
+            - text
+            - image
+        output:
+            - text
+    contextWindowInput: 1000000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1000000
+    maxOutputTokens: 128000
+    knowledgeCutoff: "2026-06"
+    releaseDate: "2026-11-09"
+    snapshots:
+        - name: claude-fable-5-2
+          releasedAt: "2026-11-09"
+    pointer: claude-fable-5-2
+    # Claude Code's 1M-context addressing form. Resolution-only matcher:
+    # routes to this model, "claude-fable-5-2[1m]" goes upstream verbatim.
+    aliases:
+        - claude-fable-5-2[1m]

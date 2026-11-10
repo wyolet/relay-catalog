@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: anthropic-claude-fable-5-2
+    displayName: Claude Fable 5.2 pricing
+    owner:
+        kind: host
+        id: anthropic
+spec:
+    currency: USD
+    targetModels:
+        - claude-fable-5-2
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 8
+        - meter: tokens.output
+          unit: per_million
+          amount: 40
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 10
+        # 0.025x base input on Fable 5.2 (vs the 0.1x standard multiplier).
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.cache_creation_1h
+          unit: per_million
+          amount: 16
