@@ -84,6 +84,10 @@ Curation rules live in relay, in `app/catalogvalidate/curation`: one file per ru
 
 The tier-policy files (`data/hosts/<host>/policies/<policy>.yaml`) bundle a `RateLimit` and a `Policy` document in one file via `---`. yaml-language-server can't switch schemas per-document, so these files have no IDE directive — they still validate fully in CI via `catalog-validate`.
 
+## Releasing
+
+Patches are never tagged by hand. A push to `main` that changes `data/` outside `data/drafts/` is validated, tagged as the next patch of the highest minor (`vX.Y.N` → `vX.Y.N+1`) and released by the Auto release workflow. A new minor starts a schema channel: tag it by hand, and the tag push releases it.
+
 ## Release asset
 
 Every `v*` tag attaches the flattened SDK catalog to that tag's GitHub release:

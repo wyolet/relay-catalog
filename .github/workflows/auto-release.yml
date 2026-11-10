@@ -1,0 +1,76 @@
+name: Auto release
+
+# A validated data change on main is released as the next patch of the current minor. A new minor starts a schema channel and is still tagged by hand.
+
+on:
+  push:
+    branches: [main]
+    # drafts/ is outside the release archive, so changing it alone releases nothing new.
+    paths: ["data/**", "!data/drafts/**"]
+
+permissions:
+  contents: read
+
+# Runs queue instead of cancelling, so each tag is computed after the previous one exists.
+concurrency:
+  group: auto-release
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    uses: ./.github/workflows/validate.yml
+
+  tag:
+    needs: validate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    outputs:
+      tag: ${{ steps.next.outputs.tag }}
+    steps:
+      # Full history: every tag and the trees they point at.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          fetch-depth: 0
+
+      - name: Tag the next patch
+        id: next
+        run: |
+          set -euo pipefail
+          semver='^v[0-9]+\.[0-9]+\.[0-9]+$'
+          channel_of() {
+            git show "$1:data/providers/anthropic/provider.yaml" | sed -n 's|^apiVersion:.*/||p' | head -1
+          }
+
+          # A re-run for an already tagged commit reuses that tag; publishing it again is a no-op.
+          existing=$(git tag --points-at "$GITHUB_SHA" | grep -E "$semver" | sort -V | tail -1 || true)
+          if [ -n "$existing" ]; then
+            echo "$GITHUB_SHA is already tagged $existing"
+            echo "tag=$existing" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # The highest minor is main's; lower minors are maintenance lines released from their own branches.
+          latest=$(git tag -l --sort=-v:refname | grep -E "$semver" | head -1 || true)
+          [ -n "$latest" ] || { echo "::error::no vX.Y.Z tag to continue from"; exit 1; }
+          if [ "$(channel_of "$GITHUB_SHA")" != "$(channel_of "$latest")" ]; then
+            echo "::notice::the schema channel differs from $latest's; tag the new minor by hand"
+            exit 0
+          fi
+
+          IFS=. read -r major minor patch <<<"${latest#v}"
+          next="v${major}.${minor}.$((patch + 1))"
+          # Fails rather than moves the tag if it already exists.
+          git push origin "${GITHUB_SHA}:refs/tags/${next}"
+          echo "tag=$next" >> "$GITHUB_OUTPUT"
+
+  release:
+    needs: tag
+    if: needs.tag.outputs.tag != ''
+    uses: ./.github/workflows/release.yml
+    with:
+      tag: ${{ needs.tag.outputs.tag }}
+    permissions:
+      contents: write
+      id-token: write
+      attestations: write
