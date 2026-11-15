@@ -1,0 +1,8 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Host.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Host
+metadata:
+    name: perplexity
+    displayName: Perplexity
+spec:
+    baseURL: ""
