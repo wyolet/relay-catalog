@@ -5,9 +5,9 @@ name: Reproduce latest release
 on:
   push:
     branches: [main]
-    paths: [.github/catalog-tools.env, .github/workflows/reproduce.yml]
+    paths: [.github/catalog-tools.env, .github/workflows/reproduce.yml, .github/scripts/build_mcp.sh]
   pull_request:
-    paths: [.github/catalog-tools.env, .github/workflows/reproduce.yml]
+    paths: [.github/catalog-tools.env, .github/workflows/reproduce.yml, .github/scripts/build_mcp.sh]
   workflow_dispatch:
 
 permissions:
@@ -47,12 +47,16 @@ jobs:
           else
             echo "::warning::$tag catalog.json.gz differs from the published file: this builder composes differently, and the catalog server serves the published file for such tags"
           fi
-          # Tags released before the builder knew mcp/ have no mcp tarball; one built now isn't compared.
+          # The mcp tarball is released from git alone; check it the same way, and against the builder when it writes one too.
           mcp="mcp-catalog-data-${tag}.tar.gz.sha256"
-          if [ -f "published/$mcp" ] && [ -f "out/$mcp" ]; then
-            [ "$(sum "out/$mcp")" = "$(sum "published/$mcp")" ] \
-              || { echo "::error::$tag mcp tarball does not reproduce; it depends only on git, so the builder is wrong"; exit 1; }
+          if [ -f "published/$mcp" ]; then
+            .github/scripts/build_mcp.sh "$(git rev-parse "$tag^{commit}")" "$tag" mcp-out
+            [ -f "mcp-out/$mcp" ] && [ "$(sum "mcp-out/$mcp")" = "$(sum "published/$mcp")" ] \
+              || { echo "::error::$tag mcp tarball does not reproduce with git archive"; exit 1; }
             echo "$tag mcp tarball reproduces"
-          elif [ -f "published/$mcp" ]; then
-            echo "::warning::$tag publishes an mcp tarball that the pinned builder doesn't build"
+            if [ -f "out/$mcp" ]; then
+              [ "$(sum "out/$mcp")" = "$(sum "published/$mcp")" ] \
+                || { echo "::error::$tag mcp tarball from catalog-server differs from the published one; the catalog server would never match it"; exit 1; }
+              echo "$tag mcp tarball reproduces with catalog-server"
+            fi
           fi

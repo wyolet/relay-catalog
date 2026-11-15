@@ -1,6 +1,8 @@
 # relay-catalog
 
-Curated catalog data for the **relay** project. Two top-level concepts: **Providers** (vendors that publish models) and **Hosts** (API endpoints relay talks to). Everything else lives under one of these. MCP server templates for an MCP gateway live in a separate tree, [`mcp/`](#mcp-server-templates).
+Curated catalog data for the **relay** project. Two top-level concepts: **Providers** (vendors that publish models) and **Hosts** (API endpoints relay talks to). Everything else lives under one of these.
+
+A third top-level tree, [`mcp/`](#mcp-server-templates), holds MCP server templates for an MCP gateway, under the same verified-only rule.
 
 Relay consumes these YAML files via `relay seed --from <dir>`. User-specific and system-runtime config (users, default rate limits) stays in the relay repo — it is not curated here.
 
@@ -143,6 +145,6 @@ A tag whose tree has live `mcp/` documents also attaches them:
 - `https://github.com/wyolet/relay-catalog/releases/download/<tag>/mcp-catalog-data-<tag>.tar.gz`
 - `https://github.com/wyolet/relay-catalog/releases/download/<tag>/mcp-catalog-data-<tag>.tar.gz.sha256`
 
-The tarball is `git archive --format=tar.gz <tag> -- mcp ':(exclude)mcp/drafts'`, so its paths start with `mcp/`. `catalog-server build` writes it only from relay releases that know the `mcp/` tree; a release built by an older pinned image ships without it. Its channel is the last segment of the `apiVersion` its documents share, independent of `data/`'s, and the catalog server indexes it in `/mcp/index.yaml`, never in `index.yaml`.
+The tarball is `git archive --format=tar.gz <tag> -- mcp ':(exclude)mcp/drafts'`, so its paths start with `mcp/`. The release workflow builds it with [`.github/scripts/build_mcp.sh`](.github/scripts/build_mcp.sh), git alone with the same arguments and environment as relay's `catalog-server build`, so it doesn't wait for a relay release; when the pinned builder also writes it, the two must be byte-identical. `.github/scripts/build_mcp.sh $(git rev-parse <tag>^{commit}) <tag> out` reproduces it from a checkout. Its channel is the last segment of the `apiVersion` its documents share, independent of `data/`'s, and the catalog server indexes it in `/mcp/index.yaml`, never in `index.yaml`.
 
 `.gitattributes` limits `git archive` and GitHub's source archives to the live `data/` and `mcp/` trees, so they never contain tooling. Release tooling keeps the explicit pathspecs because older tags have no `.gitattributes`; CI fails when the two disagree.
