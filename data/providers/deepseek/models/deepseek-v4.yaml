@@ -23,7 +23,7 @@ spec:
             - text
         output:
             - text
-    releaseDate: "2026-08-12"
+    releaseDate: "2026-08-13"
     snapshots:
         - name: deepseek-v4-pro-cloud
           originalName: deepseek-v4-pro:cloud
