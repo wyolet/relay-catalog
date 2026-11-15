@@ -1,12 +1,12 @@
 name: Auto release
 
-# A validated data change on main is released as the next patch of the current minor. A new minor starts a schema channel and is still tagged by hand.
+# A validated data or mcp change on main is released as the next patch of the current minor. A new minor starts a schema channel and is still tagged by hand.
 
 on:
   push:
     branches: [main]
-    # drafts/ is outside the release archive, so changing it alone releases nothing new.
-    paths: ["data/**", "!data/drafts/**"]
+    # drafts/ is outside the release archives, so changing it alone releases nothing new.
+    paths: ["data/**", "!data/drafts/**", "mcp/**", "!mcp/drafts/**"]
 
 permissions:
   contents: read

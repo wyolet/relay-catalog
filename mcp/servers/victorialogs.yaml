@@ -1,0 +1,32 @@
+apiVersion: wymcp.wyolet.dev/v1alpha1
+kind: MCPTemplate
+metadata:
+  name: victorialogs
+spec:
+  title: VictoriaLogs
+  description: |-
+    LogsQL queries, fields, streams, hit statistics and documentation of a VictoriaLogs instance, through a VictoriaLogs MCP server you run in streamable HTTP mode behind HTTP Basic auth.
+    The credential is an APIKey: url is the server's MCP endpoint (for example https://vl-mcp.example.com/mcp), key is the base64 of user:password.
+  publisher: VictoriaMetrics
+  homepage: https://github.com/VictoriaMetrics/mcp-victorialogs
+  iconURL: https://victoriametrics.com/icons/favicon.ico
+  categories:
+    - observability
+    - logs
+  slots:
+    - name: url
+      type: config
+      target:
+        urlVar: url
+      credentialField: APIKey.url
+      required: true
+    - name: auth
+      type: secret
+      target:
+        header: Authorization
+        format: Basic {value}
+      credentialField: APIKey.key
+      required: true
+  runtime:
+    kind: remote
+    url: "{url}"

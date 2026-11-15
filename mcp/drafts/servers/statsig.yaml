@@ -1,0 +1,23 @@
+apiVersion: wymcp.wyolet.dev/v1alpha1
+kind: MCPTemplate
+metadata:
+  name: statsig
+spec:
+  title: Statsig
+  description: Feature gates, experiments, dynamic configs and analytics of a Statsig project. The credential is an APIKey whose key is a Statsig Console API key.
+  publisher: Statsig
+  homepage: https://docs.statsig.com/integrations/mcp
+  iconURL: https://www.statsig.com/favicon.ico
+  categories:
+    - feature-flags
+    - experimentation
+  slots:
+    - name: apiKey
+      type: secret
+      target:
+        header: statsig-api-key
+      credentialField: APIKey.key
+      required: true
+  runtime:
+    kind: remote
+    url: https://api.statsig.com/v1/mcp

@@ -1,0 +1,24 @@
+apiVersion: wymcp.wyolet.dev/v1alpha1
+kind: MCPTemplate
+metadata:
+  name: paddle-sandbox
+spec:
+  title: Paddle (sandbox)
+  description: Paddle Billing in its sandbox, covering products, prices, customers, subscriptions, transactions and simulated webhooks. The credential is an APIKey whose key is a Paddle sandbox API key (pdl_sdbx_...).
+  publisher: Paddle
+  homepage: https://developer.paddle.com/
+  iconURL: https://assets.paddle.com/assets/logo/paddle-logo-square-black-on-yellow.png
+  categories:
+    - payments
+    - billing
+  slots:
+    - name: apiKey
+      type: secret
+      target:
+        header: Authorization
+        format: Bearer {value}
+      credentialField: APIKey.key
+      required: true
+  runtime:
+    kind: remote
+    url: https://sandbox-mcp.paddle.com/mcp
