@@ -1,0 +1,12 @@
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: muse-ember-1-0-on-meta
+    displayName: muse-ember-1-0 via meta
+spec:
+    model: muse-ember-1-0
+    host: meta
+    adapter: openai
+    enabled: true
+    snapshots:
+        - muse-ember-1-0

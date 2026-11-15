@@ -17,10 +17,12 @@ providers:
         - deepseek-v4-pro
     - provider: google
       models:
-        - gemini-3-8-flash
         - gemini-4-argon
+        - gemini-4-carbon
+        - gemini-4-hydrogen
     - provider: meta
       models:
+        - muse-ember-1-0
         - muse-wonder-1-0
     - provider: minimax
       models:

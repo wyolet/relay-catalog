@@ -9,7 +9,6 @@ metadata:
         kind: provider
         name: google
     labels:
-        featured: "true"
         source: models.dev
         source_version: "2026-09-05"
 spec:

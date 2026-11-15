@@ -148,6 +148,7 @@ families:
         - name: zephyr
     - name: muse
       lines:
+        - name: ember
         - name: spark
         - name: wonder
     - name: mxbai
