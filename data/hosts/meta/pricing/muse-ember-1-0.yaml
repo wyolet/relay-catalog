@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: meta-muse-ember-1-0
+    displayName: Muse Ember 1.0 pricing
+    owner:
+        kind: host
+        id: meta
+spec:
+    currency: USD
+    targetModels:
+        - muse-ember-1-0
+    rates:
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.004
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.012
+          aboveTokens: 200000
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.10
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.30
+          aboveTokens: 200000
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.50
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.50
+          aboveTokens: 200000

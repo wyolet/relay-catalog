@@ -4,7 +4,7 @@ kind: Model
 metadata:
     name: gemini-4-argon
     displayName: Gemini 4 Argon
-    description: Google's flagship reasoning model for complex software engineering, deep math and science, and long-horizon autonomous agents.
+    description: Google's efficient Gemini 4 frontier reasoning model, with faster responses and lower token spend per turn than Gemini 4 Carbon.
     owner:
         kind: provider
         name: google

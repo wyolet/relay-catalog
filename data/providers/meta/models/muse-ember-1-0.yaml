@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Model
+metadata:
+    name: muse-ember-1-0
+    displayName: Muse Ember 1.0
+    description: Meta's efficient execution model in the Muse family for bounded, high-volume work such as sub-agent tasks, tool calls, and routing.
+    owner:
+        kind: provider
+        name: meta
+    labels:
+        featured: "true"
+        source: models.dev
+        source_version: "2026-11-15"
+spec:
+    family: muse
+    productLine: ember
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        fileInput: true
+        audioInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+            - pdf
+            - audio
+        output:
+            - text
+    contextWindowInput: 1048576
+    contextWindowOutput: 524288
+    contextWindowTotal: 1048576
+    maxOutputTokens: 524288
+    releaseDate: "2026-11-09"
+    snapshots:
+        - name: muse-ember-1-0
+          releasedAt: "2026-11-09"
+          originalName: muse-ember-1.0
+    pointer: muse-ember-1-0
