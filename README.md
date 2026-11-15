@@ -47,12 +47,13 @@ mcp/
 ```
 
 - Every document has `apiVersion: wymcp.wyolet.dev/v1alpha1` and is an `MCPTemplate` or a `CredentialTemplate`. A file holds exactly one `MCPTemplate`, named like the file. Credential templates the gateway ships (`APIKey`, `BasicAuth`, `DatabaseDSN`, `OAuthApp`) are referenced, never redeclared.
-- `spec` carries the slots and runtime the gateway routes with, plus display fields: `title`, `description`, `publisher`, `homepage`, `iconURL` (an absolute `https` URL; no icon files here) and `categories`.
+- `metadata` carries the display fields beside `name`: `title`, `description` (at most 2000 characters, no control characters but newline), `publisher`, `homepage`, `iconURL` (an absolute `https` URL; no icon files here) and `categories`.
+- `spec` carries only the slots and runtime the gateway routes with. A slot may have a `title` (≤100 characters), a `description` (≤500) telling people what to enter, and an `example` (≤200); a `secret` slot takes no example.
 - A template for a server people run themselves has the whole endpoint as a slot (`runtime.url: "{url}"`).
 
 **Verified-only, as for `data/`:** an entry leaves `mcp/drafts/` only after it has been routed end to end through a gateway: the template applied, an instance created from it, and an MCP client listing the server's tools and calling a read-only one through the gateway. Entries that need a credential nobody has tested with, or that only support OAuth sign-in, stay in drafts. Promote with `git mv mcp/drafts/servers/<name>.yaml mcp/servers/`, and say in the PR how it was routed.
 
-CI checks the tree's structure (`.github/scripts/validate_mcp.py`): the shared `apiVersion`, the two kinds, names and the one-template-per-file rule. The gateway validates the schema when it seeds.
+CI checks the tree's structure (`.github/scripts/validate_mcp.py`): the shared `apiVersion`, the two kinds, names, the one-template-per-file rule, display fields in `metadata` and the length limits above. The gateway validates the schema when it seeds.
 
 ## Docs
 

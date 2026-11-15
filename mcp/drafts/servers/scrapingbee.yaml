@@ -2,16 +2,18 @@ apiVersion: wymcp.wyolet.dev/v1alpha1
 kind: MCPTemplate
 metadata:
   name: scrapingbee
-spec:
   title: ScrapingBee
-  description: Scrapes web pages and searches Google, Amazon, Walmart and YouTube through the ScrapingBee API. The credential is an APIKey whose key is a ScrapingBee API key.
+  description: Scrapes web pages and searches Google, Amazon, Walmart and YouTube through the ScrapingBee API.
   publisher: ScrapingBee
   homepage: https://github.com/ScrapingBee/mcp-server
   categories:
     - web-scraping
     - search
+spec:
   slots:
     - name: apiKey
+      title: API key
+      description: A ScrapingBee API key.
       type: secret
       target:
         header: Authorization

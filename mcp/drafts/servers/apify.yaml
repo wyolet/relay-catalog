@@ -2,17 +2,19 @@ apiVersion: wymcp.wyolet.dev/v1alpha1
 kind: MCPTemplate
 metadata:
   name: apify
-spec:
   title: Apify
-  description: Runs Apify Store scrapers, crawlers and automations and returns their data. The credential is an APIKey whose key is an Apify API token.
+  description: Runs Apify Store scrapers, crawlers and automations and returns their data.
   publisher: Apify
   homepage: https://docs.apify.com/platform/integrations/mcp
   iconURL: https://mcp.apify.com/images/apify-icon.png
   categories:
     - web-scraping
     - automation
+spec:
   slots:
     - name: apiKey
+      title: API token
+      description: An Apify API token.
       type: secret
       target:
         header: Authorization
