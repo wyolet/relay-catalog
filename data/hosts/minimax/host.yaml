@@ -10,3 +10,5 @@ spec:
     pricingStrategies:
         - api
     docsURL: https://platform.minimax.io/docs/guides/quickstart
+    icon:
+        path: /provider/minimax.png

@@ -10,3 +10,5 @@ spec:
     pricingStrategies:
         - api
     docsURL: https://dev.meta.ai/docs
+    icon:
+        path: /provider/meta.png

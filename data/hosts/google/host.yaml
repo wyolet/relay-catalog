@@ -10,3 +10,5 @@ spec:
     pricingStrategies:
         - api
     docsURL: https://ai.google.dev/gemini-api/docs/models
+    icon:
+        path: /provider/google-ai-studio.svg

@@ -10,3 +10,5 @@ spec:
     pricingStrategies:
         - api
     docsURL: https://docs.x.ai/docs/models
+    icon:
+        path: /provider/xai.png

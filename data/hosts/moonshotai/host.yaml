@@ -10,3 +10,5 @@ spec:
     pricingStrategies:
         - api
     docsURL: https://platform.moonshot.ai/docs/api/chat
+    icon:
+        path: /provider/moonshotai.png
