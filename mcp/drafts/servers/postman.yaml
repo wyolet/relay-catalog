@@ -2,17 +2,19 @@ apiVersion: wymcp.wyolet.dev/v1alpha1
 kind: MCPTemplate
 metadata:
   name: postman
-spec:
   title: Postman
-  description: Workspaces, collections, environments, specs and monitors of a Postman account. The credential is an APIKey whose key is a Postman API key; EU accounts use https://mcp.eu.postman.com/mcp.
+  description: Workspaces, collections, environments, specs and monitors of a Postman account. EU accounts use https://mcp.eu.postman.com/mcp.
   publisher: Postman
   homepage: https://www.postman.com/product/mcp-server/
   iconURL: https://raw.githubusercontent.com/postmanlabs/postman-mcp-server/main/icon.png
   categories:
     - api
     - developer-tools
+spec:
   slots:
     - name: apiKey
+      title: API key
+      description: A Postman API key.
       type: secret
       target:
         header: Authorization

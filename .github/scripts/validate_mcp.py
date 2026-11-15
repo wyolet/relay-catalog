@@ -5,7 +5,9 @@ Usage: validate_mcp.py [root]   (default: mcp)
 Every file is YAML; every document is an MCPTemplate or a CredentialTemplate
 with a metadata.name, and all share one apiVersion, whose last segment is the
 tree's release channel. Each file holds exactly one MCPTemplate, named like the
-file. The schema itself is checked by the gateway that seeds these documents.
+file. Display keys live in metadata and slot help stays within the gateway's
+limits; the rest of the schema is checked by the gateway that seeds these
+documents.
 """
 import os
 import sys
@@ -15,6 +17,41 @@ import yaml
 KINDS = {"MCPTemplate", "CredentialTemplate"}
 # The gateway ships these and refuses a document of the same name.
 BUILTIN_CREDENTIAL_TEMPLATES = {"APIKey", "BasicAuth", "DatabaseDSN", "OAuthApp"}
+DISPLAY_KEYS = {"title", "description", "publisher", "homepage", "iconURL", "categories"}
+METADATA_DESCRIPTION_MAX = 2000
+SLOT_TEXT_MAX = {"title": 100, "description": 500, "example": 200}
+
+
+def check_display(doc, where):
+    errors = []
+    spec, meta = doc.get("spec"), doc.get("metadata")
+    if isinstance(spec, dict):
+        for key in sorted(DISPLAY_KEYS & spec.keys()):
+            errors.append(f"{where}: spec.{key} belongs in metadata.{key}")
+    desc = meta.get("description") if isinstance(meta, dict) else None
+    if desc is not None:
+        if not isinstance(desc, str):
+            errors.append(f"{where}: metadata.description is not a string")
+        elif len(desc) > METADATA_DESCRIPTION_MAX:
+            errors.append(f"{where}: metadata.description is {len(desc)} chars, max {METADATA_DESCRIPTION_MAX}")
+        elif any(ord(c) < 32 and c != "\n" or ord(c) == 127 for c in desc):
+            errors.append(f"{where}: metadata.description holds a control character other than newline")
+    slots = spec.get("slots") if isinstance(spec, dict) else None
+    for i, slot in enumerate(slots if isinstance(slots, list) else []):
+        if not isinstance(slot, dict):
+            continue
+        at = f"{where} slot {slot.get('name', i)!r}"
+        for key, limit in SLOT_TEXT_MAX.items():
+            val = slot.get(key)
+            if val is None:
+                continue
+            if not isinstance(val, str):
+                errors.append(f"{at}: {key} is not a string")
+            elif len(val) > limit:
+                errors.append(f"{at}: {key} is {len(val)} chars, max {limit}")
+        if "example" in slot and slot.get("type") == "secret":
+            errors.append(f"{at}: a secret slot takes no example")
+    return errors
 
 
 def main():
@@ -57,6 +94,7 @@ def main():
                 if not isinstance(doc_name, str) or not doc_name:
                     errors.append(f"{where}: no metadata.name")
                     continue
+                errors.extend(check_display(doc, where))
                 if kind == "MCPTemplate":
                     templates += 1
                     if doc_name != stem:

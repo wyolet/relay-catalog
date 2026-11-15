@@ -2,17 +2,19 @@ apiVersion: wymcp.wyolet.dev/v1alpha1
 kind: MCPTemplate
 metadata:
   name: github
-spec:
   title: GitHub
-  description: Repositories, issues, pull requests, code search and Actions on github.com, through GitHub's hosted MCP server. The credential is an APIKey whose key is a GitHub personal access token; the token's scopes decide what the tools may do.
+  description: Repositories, issues, pull requests, code search and Actions on github.com, through GitHub's hosted MCP server.
   publisher: GitHub
   homepage: https://github.com/github/github-mcp-server
   iconURL: https://github.githubassets.com/favicons/favicon.svg
   categories:
     - developer-tools
     - source-control
+spec:
   slots:
     - name: token
+      title: Personal access token
+      description: A GitHub personal access token; its scopes decide what the tools may do.
       type: secret
       target:
         header: Authorization

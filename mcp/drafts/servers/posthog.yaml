@@ -2,16 +2,18 @@ apiVersion: wymcp.wyolet.dev/v1alpha1
 kind: MCPTemplate
 metadata:
   name: posthog
-spec:
   title: PostHog
-  description: Product analytics, feature flags, experiments and error tracking of a PostHog project. The credential is an APIKey whose key is a PostHog personal API key created with the MCP Server preset.
+  description: Product analytics, feature flags, experiments and error tracking of a PostHog project.
   publisher: PostHog
   homepage: https://posthog.com/docs/model-context-protocol
   categories:
     - analytics
     - feature-flags
+spec:
   slots:
     - name: apiKey
+      title: Personal API key
+      description: A PostHog personal API key created with the MCP Server preset.
       type: secret
       target:
         header: Authorization
