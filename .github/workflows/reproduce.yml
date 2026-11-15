@@ -47,3 +47,12 @@ jobs:
           else
             echo "::warning::$tag catalog.json.gz differs from the published file: this builder composes differently, and the catalog server serves the published file for such tags"
           fi
+          # Tags released before the builder knew mcp/ have no mcp tarball; one built now isn't compared.
+          mcp="mcp-catalog-data-${tag}.tar.gz.sha256"
+          if [ -f "published/$mcp" ] && [ -f "out/$mcp" ]; then
+            [ "$(sum "out/$mcp")" = "$(sum "published/$mcp")" ] \
+              || { echo "::error::$tag mcp tarball does not reproduce; it depends only on git, so the builder is wrong"; exit 1; }
+            echo "$tag mcp tarball reproduces"
+          elif [ -f "published/$mcp" ]; then
+            echo "::warning::$tag publishes an mcp tarball that the pinned builder doesn't build"
+          fi

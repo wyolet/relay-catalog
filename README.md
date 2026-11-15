@@ -1,6 +1,6 @@
 # relay-catalog
 
-Curated catalog data for the **relay** project. Two top-level concepts: **Providers** (vendors that publish models) and **Hosts** (API endpoints relay talks to). Everything else lives under one of these.
+Curated catalog data for the **relay** project. Two top-level concepts: **Providers** (vendors that publish models) and **Hosts** (API endpoints relay talks to). Everything else lives under one of these. MCP server templates for an MCP gateway live in a separate tree, [`mcp/`](#mcp-server-templates).
 
 Relay consumes these YAML files via `relay seed --from <dir>`. User-specific and system-runtime config (users, default rate limits) stays in the relay repo — it is not curated here.
 
@@ -33,6 +33,24 @@ Promoting a host out of drafts:
 4. Validate clean (see [Validation](#validation)), then PR.
 
 Demoting works the reverse way — if an entry can't be verified, it belongs in `drafts/`, not live. Don't ship a host that routes nothing.
+
+## MCP server templates
+
+`mcp/` holds templates for remote MCP servers, read by an MCP gateway rather than by relay. It is a sibling of `data/` and never part of relay's seed, its channel index or `catalog.json.gz`.
+
+```
+mcp/
+  servers/<name>.yaml          # one MCPTemplate named <name>, plus any CredentialTemplate it needs
+  drafts/servers/<name>.yaml   # same layout; never released
+```
+
+- Every document has `apiVersion: wymcp.wyolet.dev/v1alpha1` and is an `MCPTemplate` or a `CredentialTemplate`. A file holds exactly one `MCPTemplate`, named like the file. Credential templates the gateway ships (`APIKey`, `BasicAuth`, `DatabaseDSN`, `OAuthApp`) are referenced, never redeclared.
+- `spec` carries the slots and runtime the gateway routes with, plus display fields: `title`, `description`, `publisher`, `homepage`, `iconURL` (an absolute `https` URL; no icon files here) and `categories`.
+- A template for a server people run themselves has the whole endpoint as a slot (`runtime.url: "{url}"`).
+
+**Verified-only, as for `data/`:** an entry leaves `mcp/drafts/` only after it has been routed end to end through a gateway: the template applied, an instance created from it, and an MCP client listing the server's tools and calling a read-only one through the gateway. Entries that need a credential nobody has tested with, or that only support OAuth sign-in, stay in drafts. Promote with `git mv mcp/drafts/servers/<name>.yaml mcp/servers/`, and say in the PR how it was routed.
+
+CI checks the tree's structure (`.github/scripts/validate_mcp.py`): the shared `apiVersion`, the two kinds, names and the one-template-per-file rule. The gateway validates the schema when it seeds.
 
 ## Docs
 
@@ -86,7 +104,7 @@ The tier-policy files (`data/hosts/<host>/policies/<policy>.yaml`) bundle a `Rat
 
 ## Releasing
 
-Patches are never tagged by hand. A push to `main` that changes `data/` outside `data/drafts/` is validated, tagged as the next patch of the highest minor (`vX.Y.N` → `vX.Y.N+1`) and released by the Auto release workflow. A new minor starts a schema channel: tag it by hand, and the tag push releases it.
+Patches are never tagged by hand. A push to `main` that changes `data/` outside `data/drafts/`, or `mcp/` outside `mcp/drafts/`, is validated, tagged as the next patch of the highest minor (`vX.Y.N` → `vX.Y.N+1`) and released by the Auto release workflow. A new minor starts a schema channel: tag it by hand, and the tag push releases it.
 
 ## Release asset
 
@@ -118,4 +136,13 @@ Every `v*` tag also attaches the live data tree, the YAML relay seeds from (`dat
 
 The tarball is `git archive --format=tar.gz <tag> -- data ':(exclude)data/drafts'`, reproducible from the tag with git alone on any platform (`git archive` uses its built-in gzip); the `catalog-server build` command above writes it too.
 
-`.gitattributes` limits `git archive` and GitHub's source archives to the same tree, so they never contain tooling. Release tooling keeps the explicit pathspec because older tags have no `.gitattributes`; CI fails when the two disagree.
+### MCP tree
+
+A tag whose tree has live `mcp/` documents also attaches them:
+
+- `https://github.com/wyolet/relay-catalog/releases/download/<tag>/mcp-catalog-data-<tag>.tar.gz`
+- `https://github.com/wyolet/relay-catalog/releases/download/<tag>/mcp-catalog-data-<tag>.tar.gz.sha256`
+
+The tarball is `git archive --format=tar.gz <tag> -- mcp ':(exclude)mcp/drafts'`, so its paths start with `mcp/`. `catalog-server build` writes it only from relay releases that know the `mcp/` tree; a release built by an older pinned image ships without it. Its channel is the last segment of the `apiVersion` its documents share, independent of `data/`'s, and the catalog server indexes it in `/mcp/index.yaml`, never in `index.yaml`.
+
+`.gitattributes` limits `git archive` and GitHub's source archives to the live `data/` and `mcp/` trees, so they never contain tooling. Release tooling keeps the explicit pathspecs because older tags have no `.gitattributes`; CI fails when the two disagree.

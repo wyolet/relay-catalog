@@ -1,5 +1,7 @@
-# git archive and GitHub source archives contain only the live data tree.
+# git archive and GitHub source archives contain only the live data and mcp trees.
 /* export-ignore
 /.* export-ignore
 /data -export-ignore
 /data/drafts export-ignore
+/mcp -export-ignore
+/mcp/drafts export-ignore

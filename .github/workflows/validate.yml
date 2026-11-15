@@ -18,11 +18,17 @@ jobs:
       - name: Validate catalog data
         run: docker run --rm -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" catalog-validate --curation ./data
 
+      # Structural only: the MCP template schema is checked by the gateway that seeds it.
+      - name: Validate mcp documents
+        run: |
+          pip install --quiet pyyaml
+          python3 .github/scripts/validate_mcp.py mcp
+
       # Old tags have no .gitattributes, so release tooling keeps the pathspec; the two must agree.
-      - name: Release archive matches the data pathspec
+      - name: Release archive matches the data and mcp pathspecs
         run: |
           set -euo pipefail
           archive=$(git archive --format=tar HEAD | sha256sum)
-          pathspec=$(git archive --format=tar HEAD -- data ':(exclude)data/drafts' | sha256sum)
+          pathspec=$(git archive --format=tar HEAD -- data ':(exclude)data/drafts' mcp ':(exclude)mcp/drafts' | sha256sum)
           [ "$archive" = "$pathspec" ] \
-            || { echo "::error::git archive HEAD differs from data/ minus data/drafts; .gitattributes must keep release archives to that tree"; exit 1; }
+            || { echo "::error::git archive HEAD differs from data/ and mcp/ minus their drafts; .gitattributes must keep release archives to those trees"; exit 1; }

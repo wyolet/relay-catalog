@@ -34,11 +34,15 @@ jobs:
       - name: Load the catalog tools image
         run: grep '^CATALOG_TOOLS_IMAGE=' .github/catalog-tools.env >> "$GITHUB_ENV"
 
-      # Both rebuild byte-identically from the tag: generatedAt is the tagged commit's time, and the tarball comes from git archive.
-      - name: Build the data tarball and catalog.json.gz
+      # All rebuild byte-identically from the tag: generatedAt is the tagged commit's time, and the tarballs come from git archive.
+      - name: Build the data tarball, catalog.json.gz and the mcp tarball
         run: |
           docker run --rm --user "$(id -u):$(id -g)" -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" \
             catalog-server build --repo . --ref "$(git rev-parse HEAD)" --version "$TAG" --out out
+          # A builder older than the mcp tarball writes none; the release then ships without it.
+          if [ -n "$(git ls-tree -d --name-only HEAD -- mcp)" ] && [ ! -f "out/mcp-catalog-data-${TAG}.tar.gz" ]; then
+            echo "::notice::no mcp-catalog-data-${TAG}.tar.gz: the pinned catalog-server doesn't build it, or mcp/ has no live documents"
+          fi
 
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
@@ -58,18 +62,28 @@ jobs:
         with:
           name: release
 
+      - name: List the release files
+        id: files
+        run: |
+          set -euo pipefail
+          files="catalog.json.gz relay-catalog-data-${TAG}.tar.gz"
+          if [ -f "mcp-catalog-data-${TAG}.tar.gz" ]; then
+            files="$files mcp-catalog-data-${TAG}.tar.gz"
+          fi
+          echo "names=$files" >> "$GITHUB_OUTPUT"
+          { echo 'paths<<EOF'; tr ' ' '\n' <<<"$files"; echo EOF; } >> "$GITHUB_OUTPUT"
+
       # Consumers verify with: gh attestation verify <file> --repo wyolet/relay-catalog
       - name: Attest build provenance
         uses: actions/attest@1e69f48acb82d1966a394da916b4c1698aa569d6 # v4.2.2
         with:
-          subject-path: |
-            catalog.json.gz
-            relay-catalog-data-${{ env.TAG }}.tar.gz
+          subject-path: ${{ steps.files.outputs.paths }}
 
       - name: Upload to release
         env:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
+          FILES: ${{ steps.files.outputs.names }}
         run: |
           set -euo pipefail
           tag="$TAG"
@@ -88,7 +102,7 @@ jobs:
               gh release upload "$tag" "$file"
             fi
           }
-          for file in catalog.json.gz "relay-catalog-data-${tag}.tar.gz"; do
+          for file in $FILES; do
             upload_once "$file"
             upload_once "$file.sha256"
           done
