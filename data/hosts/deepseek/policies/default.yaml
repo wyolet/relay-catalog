@@ -1,0 +1,10 @@
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Policy
+metadata:
+  name: deepseek-default
+  displayName: DeepSeek default
+  description: "DeepSeek publishes no RPM/TPM tiers, only per-account concurrency: 2,500 for deepseek-flash and 500 for deepseek-v4-pro. Anchor policy without relay-side caps. Per api-docs.deepseek.com/quick_start/pricing, 2026-11-15."
+  owner:
+    kind: host
+    name: deepseek
+spec: {}

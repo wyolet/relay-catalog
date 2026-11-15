@@ -2,21 +2,23 @@
 apiVersion: relay.wyolet.dev/v1alpha3
 kind: Pricing
 metadata:
-    name: deepseek-deepseek-deepseek-chat
+    name: deepseek-deepseek-v4-pro
+    displayName: DeepSeek V4 Pro pricing
     owner:
         kind: host
         id: deepseek
 spec:
     currency: USD
     targetModels:
-        - deepseek-deepseek-chat
+        - deepseek-v4-pro
+    # Off-peak rates. Weekday peak (01:00-04:00, 06:00-10:00 UTC) bills double: 0.044/1.32/3.96 cache/input/output.
     rates:
-        - meter: tokens.input
-          unit: per_million
-          amount: 0.28
-        - meter: tokens.output
-          unit: per_million
-          amount: 0.42
         - meter: tokens.cache_read
           unit: per_million
-          amount: 0.028
+          amount: 0.022
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.66
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.98

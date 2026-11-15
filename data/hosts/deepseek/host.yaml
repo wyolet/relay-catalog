@@ -10,4 +10,8 @@ spec:
     baseURL: https://api.deepseek.com
     pricingStrategies:
         - api
+    homepageURL: https://www.deepseek.com
     docsURL: https://api-docs.deepseek.com
+    statusPageURL: https://status.deepseek.com
+    icon:
+        path: /provider/deepseek.png
