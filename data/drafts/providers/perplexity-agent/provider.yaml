@@ -1,9 +1,0 @@
-apiVersion: relay.wyolet.dev/v1alpha3
-kind: Provider
-metadata:
-    name: perplexity-agent
-    displayName: Perplexity Agent
-    labels:
-        source: models.dev
-spec:
-    docsURL: https://docs.perplexity.ai/docs/agent-api/models
