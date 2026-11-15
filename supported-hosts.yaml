@@ -25,9 +25,6 @@ hosts:
     - id: cerebras
       pricingStrategies:
         - api
-    - id: perplexity
-      pricingStrategies:
-        - api
     - id: moonshotai
       pricingStrategies:
         - api
