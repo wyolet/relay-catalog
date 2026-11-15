@@ -41,7 +41,7 @@ spec:
 - **`metadata.name` is the public slug.** Cross-references between documents use names, not UUIDs. Relay's seeder resolves names to internal IDs on load. Renaming a published name is breaking — use aliases on Model, or new entries elsewhere.
 - **Filenames mirror the slug** (without redundant prefixes — the directory already says which host). E.g. `data/hosts/anthropic/pricing/claude-opus-4-5-20251101.yaml`, not `anthropic-claude-opus-4-5-20251101.yaml`.
 - **`enabled` defaults to true.** Set `enabled: false` to disable without deleting.
-- **Icons reference frontend assets by path** (e.g. `/provider/anthropic.svg`). The SVGs live in the relay frontend's `public/`, not here.
+- **Icons ship with the catalog.** `icon.path: /provider/<file>` names `data/icons/<file>`. See [Icons](#icons).
 - **One entity per file**, except for Policy + its RateLimit which are paired in one file (two YAML documents separated by `---`).
 
 ## Kinds
@@ -52,6 +52,17 @@ spec:
 - [HostBinding](host.md#hostbinding) — routes one Model through one Host via a named adapter.
 - [Pricing](pricing.md) — billing rates per model per host.
 - [Policy & RateLimit](policy.md) — usage tiers a host publishes.
+
+## Icons
+
+Host and Provider logos are files in `data/icons/`, flat, named after the slug they mostly serve (`anthropic.svg`, `z-ai.png`). `icon.path` is the URL path `/provider/<file>`, which maps to `data/icons/<file>`. Several entities may share one file.
+
+- Formats: `svg`, `png`, `jpg`, `jpeg`, `webp`. Prefer svg when the vendor publishes a real vector; raster at about 256 px.
+- Size: at most 64 KiB per file.
+- SVGs are served same-origin, so they must not contain `<script>`, `<foreignObject>`, `on*=` event attributes, or external `href`s.
+- Take logos from the vendor's own site or brand assets, not third-party icon packs.
+
+Icons ship in the release tarball with the manifests; the YAML loader skips non-YAML files. Files under `data/drafts/` are not shipped, so an icon a draft needs still goes in `data/icons/`.
 
 ## How relay consumes this
 

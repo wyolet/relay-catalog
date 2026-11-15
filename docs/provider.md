@@ -26,7 +26,7 @@ All fields optional — Provider exists primarily as a referenceable owner for M
 | `homepageURL` | string | Vendor homepage. |
 | `docsURL` | string | Developer documentation root. |
 | `statusPageURL` | string | Status page. |
-| `icon.path` | string | Relative path to logo asset in the frontend's `public/`. |
+| `icon.path` | string | `/provider/<file>`; the file lives in `data/icons/<file>`. See [Icons](README.md#icons). |
 
 Note: Provider has **no** `baseURL`, `consoleURL`, or `backend` — those are Host concerns.
 

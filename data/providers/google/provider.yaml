@@ -7,4 +7,4 @@ metadata:
     description: Google — model originator.
 spec:
     icon:
-        path: /provider/google-ai-studio.svg
+        path: /provider/gemini.png

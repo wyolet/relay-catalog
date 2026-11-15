@@ -27,7 +27,7 @@ Each host lives in its own folder: `data/hosts/<name>/host.yaml`. The folder als
 | `docsURL` | no | string | Developer documentation. |
 | `consoleURL` | no | string | Web dashboard / console. |
 | `statusPageURL` | no | string | Incident/status page. |
-| `icon.path` | no | string | Relative path to logo asset under the frontend's `public/`. |
+| `icon.path` | no | string | `/provider/<file>`; the file lives in `data/icons/<file>`. See [Icons](README.md#icons). |
 | `policies` | no | `[]string` | Names of [Policies](policy.md) this host publishes. Each must be enabled and owned by this host. |
 | `defaultPolicy` | no | string | Fallback policy name. Must appear in `policies`. |
 
