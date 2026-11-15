@@ -1,0 +1,23 @@
+apiVersion: wymcp.wyolet.dev/v1alpha1
+kind: MCPTemplate
+metadata:
+  name: context7
+spec:
+  title: Context7
+  description: Current, version-specific documentation and code examples for libraries and frameworks. Works without a key; an API key from context7.com raises the rate limits and reaches private repositories.
+  publisher: Upstash
+  homepage: https://context7.com
+  iconURL: https://context7.com/favicon.ico
+  categories:
+    - documentation
+    - developer-tools
+  slots:
+    - name: apiKey
+      type: secret
+      target:
+        header: Authorization
+        format: Bearer {value}
+      credentialField: APIKey.key
+  runtime:
+    kind: remote
+    url: https://mcp.context7.com/mcp

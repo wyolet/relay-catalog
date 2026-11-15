@@ -1,0 +1,22 @@
+apiVersion: wymcp.wyolet.dev/v1alpha1
+kind: MCPTemplate
+metadata:
+  name: monday
+spec:
+  title: monday.com
+  description: Boards, items, updates and users of a monday.com account. The credential is an APIKey whose key is a monday.com API token.
+  publisher: monday.com
+  homepage: https://github.com/mondaycom/mcp
+  categories:
+    - project-management
+  slots:
+    - name: apiKey
+      type: secret
+      target:
+        header: Authorization
+        format: Bearer {value}
+      credentialField: APIKey.key
+      required: true
+  runtime:
+    kind: remote
+    url: https://mcp.monday.com/mcp
