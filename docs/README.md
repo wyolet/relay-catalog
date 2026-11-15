@@ -55,12 +55,15 @@ spec:
 
 ## Icons
 
-Host and Provider logos are files in `data/icons/`, flat, named after the slug they mostly serve (`anthropic.svg`, `z-ai.png`). `icon.path` is the URL path `/provider/<file>`, which maps to `data/icons/<file>`. Several entities may share one file.
+Host and Provider logos are files in `data/icons/`, flat, named after the slug they mostly serve (`anthropic.png`, `z-ai.png`). `icon.path` is the URL path `/provider/<file>`, which maps to `data/icons/<file>`. Several entities may share one file.
 
-- Formats: `svg`, `png`, `jpg`, `jpeg`, `webp`. Prefer svg when the vendor publishes a real vector; raster at about 256 px.
-- Size: at most 64 KiB per file.
-- SVGs are served same-origin, so they must not contain `<script>`, `<foreignObject>`, `on*=` event attributes, or external `href`s.
-- Take logos from the vendor's own site or brand assets, not third-party icon packs.
+- Format: PNG only, 256×256, at most 64 KiB. Run large or gradient-heavy files through `pngquant`.
+- Background, so the logo reads on both light and dark UI:
+  - transparent by default, with the mark trimmed and centred at about 80% of the canvas;
+  - a white square behind a mark that is mostly black ink (OpenAI, Ollama);
+  - a black square behind a mark that is white ink only;
+  - a logo whose brand is a filled tile (Anthropic, Groq) keeps its tile, filling the canvas.
+- Source: the vendor's own brand page, site icons (SVG favicon, apple-touch-icon, web manifest), or their GitHub or Hugging Face org avatar. Rasterize vectors at 1024 px before scaling down. No third-party icon packs.
 
 Icons ship in the release tarball with the manifests; the YAML loader skips non-YAML files. Files under `data/drafts/` are not shipped, so an icon a draft needs still goes in `data/icons/`.
 

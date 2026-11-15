@@ -11,4 +11,4 @@ spec:
     consoleURL: https://platform.openai.com
     statusPageURL: https://status.openai.com
     icon:
-        path: /provider/openai.svg
+        path: /provider/openai.png

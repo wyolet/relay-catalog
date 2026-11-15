@@ -7,4 +7,4 @@ metadata:
     description: Microsoft — model originator.
 spec:
     icon:
-        path: /provider/microsoft.webp
+        path: /provider/microsoft.png

@@ -44,7 +44,7 @@ spec:
   docsURL: https://docs.anthropic.com
   statusPageURL: https://status.anthropic.com
   icon:
-    path: /provider/anthropic.svg
+    path: /provider/anthropic.png
 ```
 
 ## Relationships

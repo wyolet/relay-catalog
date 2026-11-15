@@ -44,7 +44,7 @@ Start with [`docs/README.md`](docs/README.md), then drill into:
 - [Pricing](docs/pricing.md)
 - [Policy & RateLimit](docs/policy.md)
 
-Logo files live in [`data/icons/`](data/icons/) and are referenced from YAML by path: `icon.path: /provider/anthropic.svg` names `data/icons/anthropic.svg`. See [Icons](docs/README.md#icons).
+Logo files live in [`data/icons/`](data/icons/) and are referenced from YAML by path: `icon.path: /provider/anthropic.png` names `data/icons/anthropic.png`. See [Icons](docs/README.md#icons).
 
 ## Validation
 
