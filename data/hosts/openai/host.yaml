@@ -12,3 +12,6 @@ spec:
     statusPageURL: https://status.openai.com
     icon:
         path: /provider/openai.png
+    requestParamRenames:
+        openai:
+            max_tokens: max_completion_tokens
