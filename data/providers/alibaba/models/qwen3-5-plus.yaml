@@ -33,6 +33,10 @@ spec:
   maxOutputTokens: 65536
   knowledgeCutoff: 2025-04
   releaseDate: '2026-02-16'
+  deprecation:
+    status: deprecated
+    sunsetDate: "2027-01-19"
+    replacement: qwen3-8-flash
   enabled: true
   snapshots:
   - name: qwen3-5-plus

@@ -9,4 +9,4 @@ spec:
     model: nemotron-3-nano-30b
     host: ollama-self
     adapter: openai
-    snapshots: [nemotron-3-nano-30b, nemotron-3-nano-30b-cloud]
+    snapshots: [nemotron-3-nano-30b]

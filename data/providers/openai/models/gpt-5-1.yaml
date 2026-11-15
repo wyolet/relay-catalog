@@ -41,6 +41,10 @@ spec:
     contextWindowOutput: 128000
     contextWindowTotal: 272000
     releaseDate: "2025-11-13"
+    deprecation:
+        status: deprecated
+        sunsetDate: "2027-04-01"
+        replacement: gpt-6-sol
     snapshots:
         - name: gpt-5-1
           originalName: gpt-5.1
@@ -48,42 +52,3 @@ spec:
           releasedAt: "2025-11-13"
           originalName: gpt-5.1-2025-11-13
     pointer: gpt-5-1
----
-apiVersion: relay.wyolet.dev/v1alpha3
-kind: Model
-metadata:
-    name: gpt-5-1-chat
-    displayName: GPT-5.1 Chat
-    owner:
-        kind: provider
-        name: openai
-    labels:
-        source: litellm
-        source_version: "2026-05-20"
-spec:
-    family: gpt
-    capabilities:
-        chat: true
-        streaming: true
-        vision: true
-        promptCache: true
-        reasoning: true
-        structuredOutputs: true
-        webSearch: true
-        fileInput: true
-        systemMessages: true
-    modalities:
-        input:
-            - text
-            - image
-            - file
-        output:
-            - text
-    contextWindowInput: 128000
-    contextWindowOutput: 16384
-    contextWindowTotal: 128000
-    releaseDate: "2025-11-13"
-    snapshots:
-        - name: gpt-5-1-chat-latest
-          originalName: gpt-5.1-chat-latest
-    pointer: gpt-5-1-chat-latest

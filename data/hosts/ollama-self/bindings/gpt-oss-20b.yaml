@@ -9,4 +9,4 @@ spec:
     model: gpt-oss-20b
     host: ollama-self
     adapter: openai
-    snapshots: [gpt-oss-20b, gpt-oss-20b-cloud]
+    snapshots: [gpt-oss-20b]

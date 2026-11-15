@@ -9,4 +9,4 @@ spec:
     model: gemma3-12b
     host: ollama-self
     adapter: openai
-    snapshots: [gemma3-12b, gemma3-12b-cloud]
+    snapshots: [gemma3-12b]

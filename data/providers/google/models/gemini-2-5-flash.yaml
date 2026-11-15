@@ -35,6 +35,10 @@ spec:
     contextWindowInput: 1048576
     contextWindowOutput: 65536
     releaseDate: "2025-06-17"
+    deprecation:
+        status: deprecated
+        sunsetDate: "2026-12-01"
+        replacement: gemini-3-5-flash-lite
     snapshots:
         - name: gemini-2-5-flash
           originalName: gemini-2.5-flash

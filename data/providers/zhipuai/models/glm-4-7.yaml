@@ -1,33 +1,3 @@
-# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Model.schema.json
-apiVersion: relay.wyolet.dev/v1alpha3
-kind: Model
-metadata:
-    name: glm-4-7
-    displayName: GLM 4.7
-    owner:
-        kind: provider
-        name: zhipuai
-    labels:
-        source: ollama-library
-        source_version: "2026-05-20"
-spec:
-    family: glm
-    capabilities:
-        chat: true
-        tools: true
-        vision: false
-        reasoning: true
-    modalities:
-        input:
-            - text
-        output:
-            - text
-    releaseDate: "2025-12-22"
-    snapshots:
-        - name: glm-4-7-cloud
-          originalName: glm-4.7:cloud
-    pointer: glm-4-7-cloud
----
 apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:
@@ -54,6 +24,6 @@ spec:
             - text
     releaseDate: "2026-01-19"
     snapshots:
-        - name: glm-4-7-flash-cloud
-          originalName: glm-4.7-flash:cloud
-    pointer: glm-4-7-flash-cloud
+        - name: glm-4-7-flash-latest
+          originalName: glm-4.7-flash:latest
+    pointer: glm-4-7-flash-latest
