@@ -30,6 +30,7 @@ Each host lives in its own folder: `data/hosts/<name>/host.yaml`. The folder als
 | `icon.path` | no | string | `/provider/<file>`; the file lives in `data/icons/<file>`. See [Icons](README.md#icons). |
 | `policies` | no | `[]string` | Names of [Policies](policy.md) this host publishes. Each must be enabled and owned by this host. |
 | `defaultPolicy` | no | string | Fallback policy name. Must appear in `policies`. |
+| `requestParamRenames` | no | `map[adapter]map[string]string` | Top-level request-body keys the host expects under another name, per binding adapter: `{openai: {max_tokens: max_completion_tokens}}`. Relay renames them before sending. Relays older than v0.21 ignore it. |
 
 ## Example
 
