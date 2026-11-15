@@ -10,3 +10,5 @@ spec:
     pricingStrategies:
         - api
     docsURL: https://www.alibabacloud.com/help/en/model-studio/models
+    icon:
+        path: /provider/alibaba.png

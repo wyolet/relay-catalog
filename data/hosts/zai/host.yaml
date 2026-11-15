@@ -12,3 +12,5 @@ spec:
     pricingStrategies:
         - api
     docsURL: https://docs.z.ai
+    icon:
+        path: /provider/z-ai.png

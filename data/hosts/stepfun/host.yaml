@@ -10,3 +10,5 @@ spec:
     pricingStrategies:
         - api
     docsURL: https://platform.stepfun.com/docs/zh/overview/concept
+    icon:
+        path: /provider/stepfun.png

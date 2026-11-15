@@ -10,3 +10,5 @@ spec:
     pricingStrategies:
         - api
     docsURL: https://docs.mistral.ai/getting-started/models/
+    icon:
+        path: /provider/mistral.png

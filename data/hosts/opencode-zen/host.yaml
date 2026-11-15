@@ -8,3 +8,5 @@ metadata:
 spec:
     baseURL: https://opencode.ai/zen
     homepageURL: https://opencode.ai
+    icon:
+        path: /provider/opencode.svg
