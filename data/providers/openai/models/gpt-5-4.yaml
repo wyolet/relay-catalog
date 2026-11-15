@@ -146,6 +146,10 @@ spec:
     contextWindowOutput: 128000
     contextWindowTotal: 272000
     releaseDate: "2026-03-17"
+    deprecation:
+        status: deprecated
+        sunsetDate: "2027-04-01"
+        replacement: gpt-6-luna
     snapshots:
         - name: gpt-5-4-nano
           originalName: gpt-5.4-nano

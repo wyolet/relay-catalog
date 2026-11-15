@@ -9,4 +9,4 @@ spec:
     model: ministral-3-14b
     host: ollama-self
     adapter: openai
-    snapshots: [ministral-3-14b, ministral-3-14b-cloud]
+    snapshots: [ministral-3-14b]

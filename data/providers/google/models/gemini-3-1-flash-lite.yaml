@@ -39,6 +39,10 @@ spec:
     contextWindowOutput: 65536
     knowledgeCutoff: "2025-01-01"
     releaseDate: "2026-05-07"
+    deprecation:
+        status: deprecated
+        sunsetDate: "2027-05-07"
+        replacement: gemini-3-5-flash-lite
     snapshots:
         - name: gemini-3-1-flash-lite
           originalName: gemini-3.1-flash-lite

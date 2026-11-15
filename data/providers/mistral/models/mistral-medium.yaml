@@ -31,6 +31,10 @@ spec:
   maxOutputTokens: 262144
   knowledgeCutoff: 2025-05
   releaseDate: '2025-08-12'
+  deprecation:
+    status: deprecated
+    sunsetDate: "2027-04-30"
+    replacement: mistral-large-4
   enabled: true
   snapshots:
   - name: mistral-medium-latest

@@ -34,6 +34,10 @@ spec:
   contextWindowTotal: 262144
   maxOutputTokens: 65536
   releaseDate: '2026-02-15'
+  deprecation:
+    status: deprecated
+    sunsetDate: "2027-01-19"
+    replacement: qwen3-8-flash
   tags:
   - open-weights
   enabled: true

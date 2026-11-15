@@ -34,6 +34,10 @@ spec:
     maxOutputTokens: 262144
     knowledgeCutoff: 2025-01
     releaseDate: "2026-06-12"
+    deprecation:
+        status: deprecated
+        sunsetDate: "2026-12-31"
+        replacement: kimi-k3-1-pro-highspeed
     tags:
         - open-weights
     snapshots:

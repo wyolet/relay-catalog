@@ -1,34 +1,3 @@
-# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Model.schema.json
-apiVersion: relay.wyolet.dev/v1alpha3
-kind: Model
-metadata:
-    name: gemma3-270m
-    displayName: Gemma 3 270M
-    owner:
-        kind: provider
-        name: google
-    labels:
-        source: ollama-library
-        source_version: '2026-05-20'
-spec:
-    family: gemma
-    capabilities:
-        chat: true
-        tools: false
-        vision: true
-        reasoning: false
-    modalities:
-        input:
-            - text
-            - image
-        output:
-            - text
-    releaseDate: "2025-08-14"
-    snapshots:
-        - name: gemma3-270m
-          originalName: gemma3:270m
-    pointer: gemma3-270m
----
 apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
 metadata:

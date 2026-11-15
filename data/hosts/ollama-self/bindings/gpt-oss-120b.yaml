@@ -8,4 +8,4 @@ spec:
     model: gpt-oss-120b
     host: ollama-self
     adapter: openai
-    snapshots: [gpt-oss-120b, gpt-oss-120b-cloud]
+    snapshots: [gpt-oss-120b]

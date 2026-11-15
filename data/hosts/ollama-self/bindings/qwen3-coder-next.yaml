@@ -9,4 +9,4 @@ spec:
     model: qwen3-coder-next
     host: ollama-self
     adapter: openai
-    snapshots: [qwen3-coder-next-latest, qwen3-coder-next-q4-k-m, qwen3-coder-next-q8-0, qwen3-coder-next-cloud]
+    snapshots: [qwen3-coder-next-latest, qwen3-coder-next-q4-k-m, qwen3-coder-next-q8-0]

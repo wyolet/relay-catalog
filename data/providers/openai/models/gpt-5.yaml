@@ -45,50 +45,15 @@ spec:
     contextWindowOutput: 128000
     contextWindowTotal: 272000
     releaseDate: "2025-08-07"
+    deprecation:
+        status: deprecated
+        sunsetDate: "2026-12-11"
+        replacement: gpt-6-1-sol
     snapshots:
         - name: gpt-5
         - name: gpt-5-2025-08-07
           releasedAt: "2025-08-07"
     pointer: gpt-5
----
-apiVersion: relay.wyolet.dev/v1alpha3
-kind: Model
-metadata:
-    name: gpt-5-chat
-    displayName: GPT-5 Chat
-    owner:
-        kind: provider
-        name: openai
-    labels:
-        source: litellm
-        source_version: "2026-05-20"
-spec:
-    family: gpt
-    capabilities:
-        chat: true
-        streaming: true
-        vision: true
-        promptCache: true
-        reasoning: true
-        structuredOutputs: true
-        batch: true
-        fileInput: true
-        systemMessages: true
-    modalities:
-        input:
-            - text
-            - image
-            - file
-        output:
-            - text
-    contextWindowInput: 128000
-    contextWindowOutput: 16384
-    contextWindowTotal: 128000
-    releaseDate: "2025-08-07"
-    snapshots:
-        - name: gpt-5-chat
-        - name: gpt-5-chat-latest
-    pointer: gpt-5-chat
 ---
 apiVersion: relay.wyolet.dev/v1alpha3
 kind: Model
@@ -133,6 +98,10 @@ spec:
     contextWindowOutput: 128000
     contextWindowTotal: 272000
     releaseDate: "2025-08-07"
+    deprecation:
+        status: deprecated
+        sunsetDate: "2026-12-11"
+        replacement: gpt-6-1-terra
     snapshots:
         - name: gpt-5-mini
         - name: gpt-5-mini-2025-08-07
@@ -182,6 +151,10 @@ spec:
     contextWindowOutput: 128000
     contextWindowTotal: 272000
     releaseDate: "2025-08-07"
+    deprecation:
+        status: deprecated
+        sunsetDate: "2026-12-11"
+        replacement: gpt-6-luna
     snapshots:
         - name: gpt-5-nano
         - name: gpt-5-nano-2025-08-07
