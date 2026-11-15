@@ -35,13 +35,31 @@ jobs:
         run: grep '^CATALOG_TOOLS_IMAGE=' .github/catalog-tools.env >> "$GITHUB_ENV"
 
       # All rebuild byte-identically from the tag: generatedAt is the tagged commit's time, and the tarballs come from git archive.
-      - name: Build the data tarball, catalog.json.gz and the mcp tarball
+      - name: Build the data tarball and catalog.json.gz
         run: |
           docker run --rm --user "$(id -u):$(id -g)" -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" \
             catalog-server build --repo . --ref "$(git rev-parse HEAD)" --version "$TAG" --out out
-          # A builder older than the mcp tarball writes none; the release then ships without it.
-          if [ -n "$(git ls-tree -d --name-only HEAD -- mcp)" ] && [ ! -f "out/mcp-catalog-data-${TAG}.tar.gz" ]; then
-            echo "::notice::no mcp-catalog-data-${TAG}.tar.gz: the pinned catalog-server doesn't build it, or mcp/ has no live documents"
+
+      # Built with git alone, so it doesn't wait for a relay release; a builder that also writes it must agree byte for byte.
+      - name: Build the mcp tarball
+        run: |
+          set -euo pipefail
+          name="mcp-catalog-data-${TAG}.tar.gz"
+          if [ -z "$(git ls-tree -d --name-only HEAD -- mcp)" ]; then
+            [ ! -f "out/$name" ] || { echo "::error::the builder wrote $name for a tree without mcp/"; exit 1; }
+            exit 0
+          fi
+          pip install --quiet pyyaml
+          python3 .github/scripts/validate_mcp.py mcp
+          .github/scripts/build_mcp.sh "$(git rev-parse HEAD)" "$TAG" mcp-out
+          if [ -f "out/$name" ]; then
+            cmp -s "out/$name" "mcp-out/$name" \
+              || { echo "::error::catalog-server and git archive built different $name; the catalog server would never match the published sum"; exit 1; }
+          fi
+          if [ -f "mcp-out/$name" ]; then
+            cp "mcp-out/$name" "mcp-out/$name.sha256" out/
+          elif [ -f "out/$name" ]; then
+            echo "::error::the builder wrote $name, git archive found no live documents"; exit 1
           fi
 
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2

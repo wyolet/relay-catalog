@@ -29,6 +29,8 @@ Ownership rules behind the layout:
 
 A name can appear in **both** trees (`openai`, `anthropic` are both a Provider and a Host). That's expected; they're separate concepts that happen to share a slug.
 
+A third top-level tree, `mcp/` (beside `data/`), holds MCP server templates for an MCP gateway, not relay. Same verified-only rule: an entry leaves `mcp/drafts/` only after it was routed end to end through a gateway ([README](README.md#mcp-server-templates)).
+
 ## `drafts/` = unverified; the live tree = verified-routable only
 
 `data/drafts/` mirrors the layout (`drafts/hosts/`, `drafts/providers/`) and is **skipped by `manifest.LoadDir`** — nothing there reaches a running relay. It's the staging area for entries we authored but **can't confirm route**, almost always because the host has no free tier (Bedrock, Vertex, Azure, and the bulk of the imported list).
