@@ -62,7 +62,7 @@ Start with [`docs/README.md`](docs/README.md), then drill into:
 - [Pricing](docs/pricing.md)
 - [Policy & RateLimit](docs/policy.md)
 
-Logo assets currently live in the relay frontend's `public/` folder and are referenced from YAML by path (e.g. `/provider/anthropic.svg`).
+Logo files live in [`data/icons/`](data/icons/) and are referenced from YAML by path: `icon.path: /provider/anthropic.png` names `data/icons/anthropic.png`. See [Icons](docs/README.md#icons).
 
 ## Validation
 

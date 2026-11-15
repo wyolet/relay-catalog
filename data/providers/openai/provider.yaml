@@ -10,4 +10,4 @@ spec:
     docsURL: https://platform.openai.com/docs
     statusPageURL: https://status.openai.com
     icon:
-        path: /provider/openai.svg
+        path: /provider/openai.png

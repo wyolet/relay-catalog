@@ -14,4 +14,4 @@ spec:
     consoleURL: https://console.aws.amazon.com/bedrock/
     statusPageURL: https://health.aws.amazon.com/health/status
     icon:
-      path: /provider/amazon-bedrock.svg
+      path: /provider/amazon-bedrock.png

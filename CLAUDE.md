@@ -52,7 +52,7 @@ Don't move user-specific or per-deployment runtime config here.
 - `metadata.name` is the stable slug. Once published, do not rename — relay references it. Add aliases on Model, or new entries elsewhere.
 - One entity per file, **except** Policy + RateLimit which are paired in one file as two YAML docs.
 - **Filenames mirror the slug minus the host prefix** — the directory already says which host. `data/hosts/anthropic/pricing/claude-opus-4-5-20251101.yaml`, not `anthropic-claude-opus-4-5-20251101.yaml`. The `metadata.name` inside still carries the full slug for cross-refs.
-- Logos referenced by path (e.g. `/provider/anthropic.svg`); the image lives in the relay frontend's `public/` folder.
+- Logos live in `data/icons/<file>` and are referenced as `icon.path: /provider/<file>` ([rules](docs/README.md#icons)).
 - Deprecation: don't delete entries. Mark deprecated, point at a replacement where applicable.
 - Pricing edits: append a new file or new rate entry rather than mutating historical pricing in place — relay attributes historical usage to the rate that was active at the time. Only edit existing files to correct genuine data-entry errors.
 

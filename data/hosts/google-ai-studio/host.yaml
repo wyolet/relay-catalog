@@ -13,4 +13,4 @@ spec:
     homepageURL: https://ai.google.dev/
     docsURL: https://ai.google.dev/gemini-api/docs/openai
     icon:
-        path: /provider/google-ai-studio.svg
+        path: /provider/gemini.png
