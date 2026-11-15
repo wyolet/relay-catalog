@@ -1,12 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
 apiVersion: relay.wyolet.dev/v1alpha3
 kind: HostBinding
 metadata:
     name: deepseek-v4-pro-on-deepseek
-    displayName: deepseek-v4-pro via deepseek
+    displayName: "DeepSeek V4 Pro via deepseek"
 spec:
     model: deepseek-v4-pro
     host: deepseek
     adapter: openai
-    enabled: true
+    pricing: deepseek-deepseek-v4-pro
     snapshots:
         - deepseek-v4-pro
