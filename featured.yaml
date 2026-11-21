@@ -5,6 +5,7 @@ providers:
         - qwen3-7-plus
         - qwen3-8-flash
         - qwen3-8-max
+        - qwen4-max
     - provider: anthropic
       models:
         - claude-fable-5-2
@@ -20,6 +21,7 @@ providers:
         - gemini-4-argon
         - gemini-4-carbon
         - gemini-4-hydrogen
+        - gemini-4-neon
     - provider: meta
       models:
         - muse-ember-1-0
@@ -38,6 +40,8 @@ providers:
       models:
         - gpt-6-1-sol
         - gpt-6-1-terra
+        - gpt-6-2-astra
+        - gpt-6-2-sol
         - gpt-6-astra
         - gpt-6-luna
     - provider: xai
