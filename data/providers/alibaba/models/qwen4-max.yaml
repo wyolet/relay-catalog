@@ -1,0 +1,44 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Model
+metadata:
+    name: qwen4-max
+    displayName: Qwen4 Max
+    description: Flagship multimodal model for coding, office productivity, frontend design, and complex agentic tasks.
+    owner:
+        kind: provider
+        name: alibaba
+    labels:
+        featured: "true"
+        source: models.dev
+        source_version: "2026-11-21"
+spec:
+    family: qwen
+    productLine: max
+    capabilities:
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        fileInput: true
+        systemMessages: true
+    modalities:
+        input:
+            - text
+            - image
+            - video
+        output:
+            - text
+    contextWindowInput: 991808
+    contextWindowOutput: 131072
+    contextWindowTotal: 1000000
+    maxOutputTokens: 131072
+    releaseDate: "2026-11-16"
+    snapshots:
+        - name: qwen4-max
+          releasedAt: "2026-11-16"
+          originalName: qwen4-max
+    pointer: qwen4-max

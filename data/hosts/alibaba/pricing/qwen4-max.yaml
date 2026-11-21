@@ -1,0 +1,26 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: alibaba-qwen4-max
+    displayName: qwen4-max pricing
+    owner:
+        kind: host
+        id: alibaba
+spec:
+    currency: USD
+    targetModels:
+        - qwen4-max
+    rates:
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 1.875
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.075
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 4.5

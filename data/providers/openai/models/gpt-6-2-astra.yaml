@@ -1,0 +1,54 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Model.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Model
+metadata:
+    name: gpt-6-2-astra
+    displayName: GPT-6.2 Astra
+    description: OpenAI frontier reasoning model for coding, computer use, and professional work such as slides, spreadsheets, and documents.
+    owner:
+        kind: provider
+        name: openai
+    labels:
+        featured: "true"
+        source: models.dev
+        source_version: "2026-11-21"
+spec:
+    family: gpt
+    productLine: astra
+    capabilities:
+        unsupportedParams:
+            - temperature
+            - top_p
+        chat: true
+        streaming: true
+        tools: true
+        vision: true
+        promptCache: true
+        reasoning: true
+        structuredOutputs: true
+        fileInput: true
+        systemMessages: true
+        reasoningEfforts:
+            - low
+            - medium
+            - high
+            - xhigh
+            - max
+    modalities:
+        input:
+            - text
+            - image
+            - pdf
+        output:
+            - text
+    contextWindowInput: 922000
+    contextWindowOutput: 128000
+    contextWindowTotal: 1050000
+    maxOutputTokens: 128000
+    knowledgeCutoff: "2026-05-18"
+    releaseDate: "2026-11-17"
+    snapshots:
+        - name: gpt-6-2-astra
+          originalName: gpt-6.2-astra
+          releasedAt: "2026-11-17"
+    pointer: gpt-6-2-astra
