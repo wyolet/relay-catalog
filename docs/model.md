@@ -108,6 +108,7 @@ A model may expose multiple dated snapshots (e.g. `claude-sonnet-5-5` plus `clau
 | `documentation` | string | Markdown or URL. |
 | `license` | string | License identifier. |
 | `providerModelPageURL` | string | Vendor's product page. |
+| `icon.path` | string | Optional. `/provider/<file>`, the logo of this one model when it differs from its family's and its provider's. See [Icons](README.md#icons). |
 | `enabled` | bool | Defaults to true. |
 
 ## Example

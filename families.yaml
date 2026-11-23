@@ -10,6 +10,9 @@
 # or one of its family's line names; a family without lines accepts only empty.
 # Line aliases are importer-only, mapping a models.dev family remainder onto a line,
 # and are never valid productLine values.
+#
+# icon.path is the logo of the family's models when the model brand differs from its
+# publisher's (Claude and Anthropic); see docs/README.md#icons.
 families:
     - name: arctic
     - name: aya
@@ -17,6 +20,8 @@ families:
         - name: expanse
     - name: bge
     - name: claude
+      icon:
+        path: /provider/claude.png
       lines:
         - name: fable
         - name: haiku
@@ -45,6 +50,8 @@ families:
         - name: deep
     - name: falcon
     - name: gemini
+      icon:
+        path: /provider/gemini.png
       lines:
         - name: flash
         - name: flash-lite
@@ -84,11 +91,15 @@ families:
         - name: guardian
         - name: vision
     - name: grok
+      icon:
+        path: /provider/grok.png
       lines:
         - name: build
         - name: imagine
     - name: internlm
     - name: kimi
+      icon:
+        path: /provider/kimi.png
       lines:
         - name: code
     - name: laguna
@@ -168,6 +179,8 @@ families:
         - name: reasoning
         - name: solar
     - name: qwen
+      icon:
+        path: /provider/qwen.png
       aliases: [codeqwen, qvq, qwq]
       lines:
         - name: asr
