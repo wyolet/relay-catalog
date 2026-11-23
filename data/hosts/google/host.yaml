@@ -3,7 +3,7 @@ apiVersion: relay.wyolet.dev/v1alpha3
 kind: Host
 metadata:
     name: google
-    displayName: Gemini API
+    displayName: Google
     description: "Google's Gemini API, keyed from Google AI Studio. Serves Gemini and Gemma in the native generateContent shape, and Gemini in an OpenAI-compatible shape under /v1beta/openai."
     owner:
         kind: system
@@ -17,4 +17,4 @@ spec:
     docsURL: https://ai.google.dev/gemini-api/docs/models
     consoleURL: https://aistudio.google.com/apikey
     icon:
-        path: /provider/gemini.png
+        path: /provider/google.png
