@@ -3,7 +3,7 @@ apiVersion: relay.wyolet.dev/v1alpha3
 kind: Host
 metadata:
     name: google-ai-studio
-    displayName: "Google AI Studio (Gemini)"
+    displayName: "Gemini API (OpenAI-compatible)"
     description: "Google AI Studio's OpenAI-compatible endpoint for Gemini models. Accepts OpenAI-shaped chat completions requests at the /v1beta/openai base path, covering streaming, structured outputs, function calling, and vision. This compatibility layer is currently in beta per Google's documentation."
     owner:
         kind: system

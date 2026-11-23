@@ -2,7 +2,7 @@ apiVersion: relay.wyolet.dev/v1alpha3
 kind: Host
 metadata:
     name: google
-    displayName: Google
+    displayName: Gemini API
     labels:
         source: models.dev
 spec:
