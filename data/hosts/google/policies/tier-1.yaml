@@ -3,7 +3,7 @@ kind: RateLimit
 metadata:
     name: google-tier-1-rl
     displayName: Gemini API Tier 1 rate limits
-    description: "Gemini API Tier 1 (active billing account linked; $250 billing cap). Representative relay-side caps — actual upstream limits vary per model per ai.google.dev/gemini-api/docs/rate-limits. Tier 1 generally grants 1000–2000 RPM for flash models."
+    description: "Gemini API Tier 1: an active billing account linked. Billing cap $250; spend rate limit $10 per 10 minutes. Google publishes per-model RPM, TPM and RPD only in the AI Studio dashboard (aistudio.google.com/rate-limit), per project; the caps here are relay-side approximations, so set your own from the dashboard. Per aistudio.google.com/docs/rate-limits, 2026-11-24."
     owner:
         kind: host
         name: google

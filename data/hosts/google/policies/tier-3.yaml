@@ -3,7 +3,7 @@ kind: RateLimit
 metadata:
     name: google-tier-3-rl
     displayName: Gemini API Tier 3 rate limits
-    description: "Gemini API Tier 3 (paid $1,000 and 30 days since the first payment). Representative relay-side caps per ai.google.dev/gemini-api/docs/rate-limits. Tier 3 provides the highest available limits for production deployments."
+    description: "Gemini API Tier 3: paid $1,000 and 30 days since the first successful payment. Billing cap $20,000 and up; spend rate limit $200 per 10 minutes. Google publishes per-model RPM, TPM and RPD only in the AI Studio dashboard (aistudio.google.com/rate-limit), per project; the caps here are relay-side approximations, so set your own from the dashboard. Per aistudio.google.com/docs/rate-limits, 2026-11-24."
     owner:
         kind: host
         name: google

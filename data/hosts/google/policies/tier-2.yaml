@@ -3,7 +3,7 @@ kind: RateLimit
 metadata:
     name: google-tier-2-rl
     displayName: Gemini API Tier 2 rate limits
-    description: "Gemini API Tier 2 (paid $100 and 3 days since the first payment; $2,000 billing cap). Representative relay-side caps per ai.google.dev/gemini-api/docs/rate-limits. Tier 2 roughly doubles Tier 1 limits."
+    description: "Gemini API Tier 2: paid $100 and 3 days since the first successful payment. Billing cap $2,000; spend rate limit $200 per 10 minutes. Google publishes per-model RPM, TPM and RPD only in the AI Studio dashboard (aistudio.google.com/rate-limit), per project; the caps here are relay-side approximations, so set your own from the dashboard. Per aistudio.google.com/docs/rate-limits, 2026-11-24."
     owner:
         kind: host
         name: google

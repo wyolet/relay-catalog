@@ -3,7 +3,7 @@ kind: RateLimit
 metadata:
     name: google-free-rl
     displayName: Gemini API Free tier rate limits
-    description: "Gemini API Free tier (no billing account required). Representative relay-side caps — actual upstream limits vary per model (e.g. gemini-2.5-flash-lite is 30 RPM free, 2.5-pro is 5 RPM free). Numbers are conservative floor across models per ai.google.dev/gemini-api/docs/rate-limits."
+    description: "Gemini API Free tier: an active project or free trial, no billing account. Google publishes per-model RPM, TPM and RPD only in the AI Studio dashboard (aistudio.google.com/rate-limit), per project; the caps here are relay-side approximations, so set your own from the dashboard. Per aistudio.google.com/docs/rate-limits, 2026-11-24."
     owner:
         kind: host
         name: google
