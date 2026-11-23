@@ -57,6 +57,8 @@ families:
         - name: flash-lite
         - name: pro
     - name: gemma
+      icon:
+        path: /provider/gemma.png
       lines:
         - name: codegemma
         - name: embeddinggemma

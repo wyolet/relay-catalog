@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: google-gemini-4-hydrogen
+    displayName: Gemini 4 Hydrogen pricing
+    owner:
+        kind: host
+        id: google
+spec:
+    currency: USD
+    targetModels:
+        - gemini-4-hydrogen
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.50
+        - meter: tokens.output
+          unit: per_million
+          amount: 7.50
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.075

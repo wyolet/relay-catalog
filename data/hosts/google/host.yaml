@@ -1,14 +1,20 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Host.schema.json
 apiVersion: relay.wyolet.dev/v1alpha3
 kind: Host
 metadata:
     name: google
     displayName: Gemini API
-    labels:
-        source: models.dev
+    description: "Google's Gemini API, keyed from Google AI Studio. Serves Gemini and Gemma in the native generateContent shape, and Gemini in an OpenAI-compatible shape under /v1beta/openai."
+    owner:
+        kind: system
 spec:
     baseURL: https://generativelanguage.googleapis.com
+    paths:
+        openai: /v1beta/openai/chat/completions
     pricingStrategies:
         - api
+    homepageURL: https://ai.google.dev/
     docsURL: https://ai.google.dev/gemini-api/docs/models
+    consoleURL: https://aistudio.google.com/apikey
     icon:
         path: /provider/gemini.png

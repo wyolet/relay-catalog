@@ -1,0 +1,32 @@
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: RateLimit
+metadata:
+    name: google-tier-3-rl
+    displayName: Gemini API Tier 3 rate limits
+    description: "Gemini API Tier 3 ($1000+ cumulative spend). Representative relay-side caps per ai.google.dev/gemini-api/docs/rate-limits. Tier 3 provides the highest available limits for production deployments."
+    owner:
+        kind: host
+        name: google
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 5000
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens
+          amount: 16000000
+          window: 1m
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Policy
+metadata:
+    name: google-tier-3
+    displayName: Gemini API Tier 3
+    owner:
+        kind: host
+        name: google
+spec:
+    rateLimits:
+    - ref: google-tier-3-rl

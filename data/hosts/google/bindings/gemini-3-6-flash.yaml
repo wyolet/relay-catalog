@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: gemini-3-6-flash-on-google
+    displayName: "Gemini 3.6 Flash via google"
+spec:
+    model: gemini-3-6-flash
+    host: google
+    adapter: openai
+    pricing: google-gemini-3-6-flash
+    snapshots: [gemini-3-6-flash]
