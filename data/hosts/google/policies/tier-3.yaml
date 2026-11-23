@@ -3,7 +3,7 @@ kind: RateLimit
 metadata:
     name: google-tier-3-rl
     displayName: Gemini API Tier 3 rate limits
-    description: "Gemini API Tier 3 ($1000+ cumulative spend). Representative relay-side caps per ai.google.dev/gemini-api/docs/rate-limits. Tier 3 provides the highest available limits for production deployments."
+    description: "Gemini API Tier 3 (paid $1,000 and 30 days since the first payment). Representative relay-side caps per ai.google.dev/gemini-api/docs/rate-limits. Tier 3 provides the highest available limits for production deployments."
     owner:
         kind: host
         name: google

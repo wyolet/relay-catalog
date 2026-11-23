@@ -3,7 +3,7 @@ kind: RateLimit
 metadata:
     name: google-tier-2-rl
     displayName: Gemini API Tier 2 rate limits
-    description: "Gemini API Tier 2 ($250+ cumulative spend). Representative relay-side caps per ai.google.dev/gemini-api/docs/rate-limits. Tier 2 roughly doubles Tier 1 limits."
+    description: "Gemini API Tier 2 (paid $100 and 3 days since the first payment; $2,000 billing cap). Representative relay-side caps per ai.google.dev/gemini-api/docs/rate-limits. Tier 2 roughly doubles Tier 1 limits."
     owner:
         kind: host
         name: google
