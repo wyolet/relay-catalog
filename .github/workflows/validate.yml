@@ -16,7 +16,7 @@ jobs:
         run: grep '^CATALOG_TOOLS_IMAGE=' .github/catalog-tools.env >> "$GITHUB_ENV"
 
       - name: Validate catalog data
-        run: docker run --rm -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" catalog-validate --curation ./data
+        run: docker run --rm -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" catalog-validate --curation --families data/families.yaml ./data
 
       # Structural only: the MCP template schema is checked by the gateway that seeds it.
       - name: Validate mcp documents

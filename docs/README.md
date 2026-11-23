@@ -55,7 +55,15 @@ spec:
 
 ## Icons
 
-Host and Provider logos are files in `data/icons/`, flat, named after the slug they mostly serve (`anthropic.png`, `z-ai.png`). `icon.path` is the URL path `/provider/<file>`, which maps to `data/icons/<file>`. Several entities may share one file.
+Logos are files in `data/icons/`, flat, named after the slug they mostly serve (`anthropic.png`, `z-ai.png`). `icon.path` is the URL path `/provider/<file>`, which maps to `data/icons/<file>`. Several entities may share one file.
+
+A Host and a Provider each carry their own `spec.icon.path`. A model's logo is the first one set of:
+
+1. the Model's `spec.icon.path`;
+2. its family's `icon.path` in [`families.yaml`](../data/families.yaml);
+3. its Provider's `spec.icon.path`.
+
+A family gets an icon only when the model brand has its own mark, distinct from the publisher's: `claude` (Anthropic), `gemini` (Google), `grok` (xAI), `kimi` (Moonshot AI), `qwen` (Alibaba). It applies to every model of the family, whoever publishes or hosts it. A Model sets its own only to differ from both.
 
 - Format: PNG only, 256×256, at most 64 KiB. Run large or gradient-heavy files through `pngquant`.
 - Background, so the logo reads on both light and dark UI:
