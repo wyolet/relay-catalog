@@ -75,25 +75,25 @@ Three layers, all enforced in CI:
 
 2. **Per-entity** — relay's `Validate()` methods enforce intra-entity invariants (e.g. "host-owned policy must not list hostKeys"). Runs implicitly during manifest parsing.
 
-3. **Graph + curation** — relay's `catalog-validate --curation ./data` runs:
+3. **Graph + curation** — relay's `catalog-validate --curation --families data/families.yaml ./data` runs:
    - relay's schema-generic graph linter (`catalogvalidate.ValidateGraph`) — cross-refs, owner mismatches, duplicate names, orphan warnings
    - the curation rules — content conventions for a published catalog (icon presence, pricing-target-host-binding, tier-policy completeness, ...)
-   - every Model's `spec.family` is listed in `families.yaml`; a new lineage is added there first
-   - a set `spec.productLine` is one of its family's `lines` in `families.yaml`
+   - every Model's `spec.family` is listed in `data/families.yaml`; a new lineage is added there first
+   - a set `spec.productLine` is one of its family's `lines` in `data/families.yaml`
    - `featured.yaml` matches the Models' `featured` labels
 
 The tools run from relay's `catalog-server` image, pinned in [`.github/catalog-tools.env`](.github/catalog-tools.env). From the repo root:
 
 ```bash
 source .github/catalog-tools.env
-docker run --rm -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" catalog-validate --curation ./data                    # warn on hints, fail on errors
-docker run --rm -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" catalog-validate --strict --curation ./data           # promote warnings to errors (release prep)
+docker run --rm -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" catalog-validate --curation --families data/families.yaml ./data                    # warn on hints, fail on errors
+docker run --rm -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" catalog-validate --strict --curation --families data/families.yaml ./data           # promote warnings to errors (release prep)
 docker run --rm "$CATALOG_TOOLS_IMAGE" catalog-validate --list                                                      # list every rule with description + severity
-docker run --rm -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" catalog-validate --curation --skip <name> ./data      # suppress a rule (repeatable)
+docker run --rm -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" catalog-validate --curation --families data/families.yaml --skip <name> ./data      # suppress a rule (repeatable)
 docker run --rm --user "$(id -u):$(id -g)" -v "$PWD:/src" -w /src "$CATALOG_TOOLS_IMAGE" catalog-validate --write-featured ./data  # regenerate featured.yaml
 ```
 
-The image is linux/amd64 only: on arm64 hosts add `--platform linux/amd64`, and `-e GOGC=off` if the tool crashes under qemu emulation. From a relay checkout next to this one, the same tool runs as `go run ./cmd/catalog-validate --curation ../relay-catalog/data`.
+The image is linux/amd64 only: on arm64 hosts add `--platform linux/amd64`, and `-e GOGC=off` if the tool crashes under qemu emulation. From a relay checkout next to this one, the same tool runs as `go run ./cmd/catalog-validate --curation --families ../relay-catalog/data/families.yaml ../relay-catalog/data`.
 
 CI runs the validator on every push + PR. Failure surfaces the exact issue with kind / source field / target.
 

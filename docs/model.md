@@ -19,8 +19,8 @@ Files live under `data/providers/<provider>/models/<model-name>.yaml`.
 
 | Field | Type | Description |
 |---|---|---|
-| `family` | string | The base model lineage the model ships under (`claude`, `gpt`, `llama`, …), from [`families.yaml`](../families.yaml). No version, size or product line: `gemini-3-flash` is `gemini`, `qwen2.5-coder` is `qwen`. A fine-tune takes its base model's family (a Llama fine-tune is `llama`), whoever publishes it. |
-| `productLine` | string | Optional. The vendor's named tier or variant inside the family (`opus`, `flash-lite`, `coder`), from that family's `lines` in [`families.yaml`](../families.yaml). Leave it out when the model has none. See [Family and product line](#family-and-product-line). |
+| `family` | string | The base model lineage the model ships under (`claude`, `gpt`, `llama`, …), from [`families.yaml`](../data/families.yaml). No version, size or product line: `gemini-3-flash` is `gemini`, `qwen2.5-coder` is `qwen`. A fine-tune takes its base model's family (a Llama fine-tune is `llama`), whoever publishes it. |
+| `productLine` | string | Optional. The vendor's named tier or variant inside the family (`opus`, `flash-lite`, `coder`), from that family's `lines` in [`families.yaml`](../data/families.yaml). Leave it out when the model has none. See [Family and product line](#family-and-product-line). |
 | `version` | string | Free-form version string. |
 
 #### Family and product line
