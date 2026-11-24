@@ -10,3 +10,4 @@ spec:
     adapter: openai
     upstreamName: openai.gpt-oss-20b-1:0
     pricing: amazon-bedrock-gpt-oss-20b
+    snapshots: [gpt-oss-20b]

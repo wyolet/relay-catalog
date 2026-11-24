@@ -11,3 +11,4 @@ spec:
     # Global inference profile; on-demand use needs a profile id. Geo profiles (us., in.) bill 10% more. Foundation model id: moonshotai.kimi-k3.1
     upstreamName: global.moonshotai.kimi-k3.1
     pricing: amazon-bedrock-kimi-k3-1-pro-highspeed
+    snapshots: [kimi-k3-1-pro-highspeed]

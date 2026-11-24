@@ -10,3 +10,4 @@ spec:
     adapter: openai
     upstreamName: mistral.ministral-3-8b-instruct
     pricing: amazon-bedrock-ministral-3-8b
+    snapshots: [ministral-3-8b]

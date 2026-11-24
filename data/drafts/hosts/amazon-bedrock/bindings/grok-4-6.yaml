@@ -11,3 +11,4 @@ spec:
     # Global inference profile; on-demand use needs a profile id. Geo profiles (us.) bill 10% more. Foundation model id: xai.grok-4.6
     upstreamName: global.xai.grok-4.6
     pricing: amazon-bedrock-grok-4-6
+    snapshots: [grok-4-6]

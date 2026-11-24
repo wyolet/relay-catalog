@@ -11,3 +11,4 @@ spec:
     # Global inference profile; on-demand use needs a profile id. Geo profiles (us.) bill 10% more. Foundation model id: openai.gpt-6.2-astra
     upstreamName: global.openai.gpt-6.2-astra
     pricing: amazon-bedrock-gpt-6-2-astra
+    snapshots: [gpt-6-2-astra]

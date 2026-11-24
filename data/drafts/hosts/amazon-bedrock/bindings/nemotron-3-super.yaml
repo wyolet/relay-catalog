@@ -10,3 +10,4 @@ spec:
     adapter: openai
     upstreamName: nvidia.nemotron-super-3-120b
     pricing: amazon-bedrock-nemotron-3-super
+    snapshots: [nemotron-3-super-120b]

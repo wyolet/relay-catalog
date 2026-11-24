@@ -11,3 +11,4 @@ spec:
     # Global inference profile; on-demand use needs a profile id. Geo profiles (us., eu., au., jp.) bill 10% more. Foundation model id: anthropic.claude-opus-5-5
     upstreamName: global.anthropic.claude-opus-5-5
     pricing: amazon-bedrock-claude-opus-5-5
+    snapshots: [claude-opus-5-5]

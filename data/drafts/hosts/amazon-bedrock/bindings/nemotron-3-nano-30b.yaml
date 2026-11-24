@@ -10,3 +10,4 @@ spec:
     adapter: openai
     upstreamName: nvidia.nemotron-nano-3-30b
     pricing: amazon-bedrock-nemotron-3-nano-30b
+    snapshots: [nemotron-3-nano-30b]

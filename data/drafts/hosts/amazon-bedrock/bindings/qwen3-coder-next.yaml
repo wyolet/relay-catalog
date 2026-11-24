@@ -10,3 +10,4 @@ spec:
     adapter: openai
     upstreamName: qwen.qwen3-coder-next
     pricing: amazon-bedrock-qwen3-coder-next
+    snapshots: [qwen3-coder-next-q8-0]
