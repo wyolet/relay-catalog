@@ -1,9 +1,9 @@
 apiVersion: relay.wyolet.dev/v1alpha3
 kind: RateLimit
 metadata:
-    name: google-tier-3-rl
-    displayName: Gemini API Tier 3 rate limits
-    description: "Gemini API Tier 3: paid $1,000 and 30 days since the first successful payment. Billing cap $20,000 and up; spend rate limit $200 per 10 minutes. Google publishes per-model RPM, TPM and RPD only in the AI Studio dashboard (aistudio.google.com/rate-limit), per project; the caps here are relay-side approximations, so set your own from the dashboard. Per aistudio.google.com/docs/rate-limits, 2026-11-24."
+    name: google-tier-3-pro-3-1-rl
+    displayName: Gemini API Tier 3 — Gemini 3.1 Pro
+    description: "Per model: requests per minute, input tokens per minute; no daily limit. Limits read from the AI Studio rate-limit page of a Tier 1 project and its tier comparison, 2026-11-24; Google sets them per project and may differ on yours."
     owner:
         kind: host
         name: google
@@ -11,12 +11,184 @@ spec:
     enabled: true
     rules:
         - meter: requests
-          amount: 5000
+          amount: 2000
           window: 1m
           strategy: sliding-window
-        - meter: tokens
-          amount: 16000000
+        - meter: tokens.input
+          amount: 8000000
           window: 1m
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: RateLimit
+metadata:
+    name: google-tier-3-pro-2-5-rl
+    displayName: Gemini API Tier 3 — Gemini 2.5 Pro
+    description: "Per model: requests per minute, input tokens per minute; no daily limit. Limits read from the AI Studio rate-limit page of a Tier 1 project and its tier comparison, 2026-11-24; Google sets them per project and may differ on yours."
+    owner:
+        kind: host
+        name: google
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 2000
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens.input
+          amount: 8000000
+          window: 1m
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: RateLimit
+metadata:
+    name: google-tier-3-flash-rl
+    displayName: Gemini API Tier 3 — Gemini Flash (3, 3.6, 3.8) and Gemini 4 Hydrogen
+    description: "Per model: requests per minute, input tokens per minute; no daily limit. Limits read from the AI Studio rate-limit page of a Tier 1 project and its tier comparison, 2026-11-24; Google sets them per project and may differ on yours."
+    owner:
+        kind: host
+        name: google
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 20000
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens.input
+          amount: 20000000
+          window: 1m
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: RateLimit
+metadata:
+    name: google-tier-3-flash-2-5-rl
+    displayName: Gemini API Tier 3 — Gemini 2.5 Flash
+    description: "Per model: requests per minute, input tokens per minute; no daily limit. Limits read from the AI Studio rate-limit page of a Tier 1 project and its tier comparison, 2026-11-24; Google sets them per project and may differ on yours."
+    owner:
+        kind: host
+        name: google
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 20000
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens.input
+          amount: 20000000
+          window: 1m
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: RateLimit
+metadata:
+    name: google-tier-3-flash-lite-rl
+    displayName: Gemini API Tier 3 — Gemini Flash Lite (3.1, 3.5)
+    description: "Per model: requests per minute, input tokens per minute; no daily limit. Limits read from the AI Studio rate-limit page of a Tier 1 project and its tier comparison, 2026-11-24; Google sets them per project and may differ on yours."
+    owner:
+        kind: host
+        name: google
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 30000
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens.input
+          amount: 30000000
+          window: 1m
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: RateLimit
+metadata:
+    name: google-tier-3-flash-lite-2-5-rl
+    displayName: Gemini API Tier 3 — Gemini 2.5 Flash Lite
+    description: "Per model: requests per minute, input tokens per minute; no daily limit. Limits read from the AI Studio rate-limit page of a Tier 1 project and its tier comparison, 2026-11-24; Google sets them per project and may differ on yours."
+    owner:
+        kind: host
+        name: google
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 30000
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens.input
+          amount: 30000000
+          window: 1m
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: RateLimit
+metadata:
+    name: google-tier-3-gemini-4-rl
+    displayName: Gemini API Tier 3 — Gemini 4 Argon and Carbon
+    description: "Per model: requests per minute, input tokens per minute; no daily limit. Limits read from the AI Studio rate-limit page of a Tier 1 project and its tier comparison, 2026-11-24; Google sets them per project and may differ on yours."
+    owner:
+        kind: host
+        name: google
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 10000
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens.input
+          amount: 20000000
+          window: 1m
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: RateLimit
+metadata:
+    name: google-tier-3-gemini-4-neon-rl
+    displayName: Gemini API Tier 3 — Gemini 4 Neon
+    description: "Per model: requests per minute, input tokens per minute; no daily limit. Limits read from the AI Studio rate-limit page of a Tier 1 project and its tier comparison, 2026-11-24; Google sets them per project and may differ on yours."
+    owner:
+        kind: host
+        name: google
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 20000
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens.input
+          amount: 20000000
+          window: 1m
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: RateLimit
+metadata:
+    name: google-tier-3-gemma-rl
+    displayName: Gemini API Tier 3 — Gemma 4
+    description: "Per model: requests per minute, input tokens per minute, requests per day. Limits read from the AI Studio rate-limit page of a Tier 1 project and its tier comparison, 2026-11-24; Google sets them per project and may differ on yours."
+    owner:
+        kind: host
+        name: google
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 30
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens.input
+          amount: 16000
+          window: 1m
+          strategy: sliding-window
+        - meter: requests
+          amount: 14400
+          window: 24h
           strategy: sliding-window
 ---
 apiVersion: relay.wyolet.dev/v1alpha3
@@ -24,9 +196,43 @@ kind: Policy
 metadata:
     name: google-tier-3
     displayName: Gemini API Tier 3
+    description: "Gemini API Tier 3: paid $1,000 and 30 days since the first successful payment. Billing cap $20,000 and up; spend rate limit $200 per 10 minutes. Per aistudio.google.com/docs/rate-limits, 2026-11-24."
     owner:
         kind: host
         name: google
 spec:
     rateLimits:
-    - ref: google-tier-3-rl
+        - ref: google-tier-3-pro-3-1-rl
+          models:
+            - google/gemini-3-1-pro-preview
+            - google/gemini-3-1-pro-preview-customtools
+        - ref: google-tier-3-pro-2-5-rl
+          models:
+            - google/gemini-2-5-pro
+        - ref: google-tier-3-flash-rl
+          models:
+            - google/gemini-3-8-flash
+            - google/gemini-3-6-flash
+            - google/gemini-3-flash-preview
+            - google/gemini-4-hydrogen
+        - ref: google-tier-3-flash-2-5-rl
+          models:
+            - google/gemini-2-5-flash
+        - ref: google-tier-3-flash-lite-rl
+          models:
+            - google/gemini-3-5-flash-lite
+            - google/gemini-3-1-flash-lite
+        - ref: google-tier-3-flash-lite-2-5-rl
+          models:
+            - google/gemini-2-5-flash-lite
+        - ref: google-tier-3-gemini-4-rl
+          models:
+            - google/gemini-4-argon
+            - google/gemini-4-carbon
+        - ref: google-tier-3-gemini-4-neon-rl
+          models:
+            - google/gemini-4-neon
+        - ref: google-tier-3-gemma-rl
+          models:
+            - google/gemma-4-31b-it
+            - google/gemma-4-26b-a4b-it
