@@ -8,6 +8,7 @@ spec:
     model: qwen3-coder-next
     host: amazon-bedrock
     adapter: openai
+    enabled: false
     upstreamName: qwen.qwen3-coder-next
     pricing: amazon-bedrock-qwen3-coder-next
     snapshots: [qwen3-coder-next-q8-0]
