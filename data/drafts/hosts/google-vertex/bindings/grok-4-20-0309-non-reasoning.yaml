@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: grok-4-20-0309-non-reasoning-on-google-vertex
+    displayName: "Grok 4.20 (Non-Reasoning) via google-vertex"
+spec:
+    model: grok-4-20-0309-non-reasoning
+    host: google-vertex
+    adapter: openai
+    upstreamName: xai/grok-4.20-non-reasoning
+    pricing: google-vertex-grok-4-20-0309-non-reasoning
+    snapshots: [grok-4-20-0309-non-reasoning]

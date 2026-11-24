@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: grok-4-3-on-google-vertex
+    displayName: "Grok 4.3 via google-vertex"
+spec:
+    model: grok-4-3
+    host: google-vertex
+    adapter: openai
+    upstreamName: xai/grok-4.3
+    pricing: google-vertex-grok-4-3
+    snapshots: [grok-4-3]

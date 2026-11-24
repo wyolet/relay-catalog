@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: google-vertex-gemma-4-26b-a4b-it
+    displayName: Gemma 4 26B A4B IT pricing
+    description: "The page lists one rate, with no regional variant. Source: https://cloud.google.com/model-garden/pricing, read 2026-11-24."
+    owner:
+        kind: host
+        id: google-vertex
+spec:
+    currency: USD
+    targetModels:
+        - gemma-4-26b-a4b-it
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.15
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.6
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.015

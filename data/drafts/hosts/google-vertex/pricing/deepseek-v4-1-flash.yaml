@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: google-vertex-deepseek-v4-1-flash
+    displayName: DeepSeek V4.1 Flash pricing
+    description: "The page lists one rate, with no regional variant. Source: https://cloud.google.com/model-garden/partner-models/pricing, read 2026-11-24."
+    owner:
+        kind: host
+        id: google-vertex
+spec:
+    currency: USD
+    targetModels:
+        - deepseek-v4-1-flash
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.3
+        - meter: tokens.output
+          unit: per_million
+          amount: 1.2
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.03

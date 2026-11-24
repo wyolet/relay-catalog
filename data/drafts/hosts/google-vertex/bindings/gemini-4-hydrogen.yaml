@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: gemini-4-hydrogen-on-google-vertex
+    displayName: "Gemini 4 Hydrogen via google-vertex"
+spec:
+    model: gemini-4-hydrogen
+    host: google-vertex
+    adapter: gemini
+    pricing: google-vertex-gemini-4-hydrogen
+    snapshots: [gemini-4-hydrogen]

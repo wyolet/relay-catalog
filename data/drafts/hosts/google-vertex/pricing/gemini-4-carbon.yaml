@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: google-vertex-gemini-4-carbon
+    displayName: Gemini 4 Carbon pricing
+    description: "Standard pay-as-you-go on the global endpoint; non-global endpoints bill 10% more. Promotional rate through 2026-11-30, applied as 50% credits on net spend; 4.00/20.00/0.20 from 2026-12-01. Source: https://cloud.google.com/model-garden/pricing, read 2026-11-24."
+    owner:
+        kind: host
+        id: google-vertex
+spec:
+    currency: USD
+    targetModels:
+        - gemini-4-carbon
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.output
+          unit: per_million
+          amount: 10
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.1

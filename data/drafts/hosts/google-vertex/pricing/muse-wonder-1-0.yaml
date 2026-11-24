@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: google-vertex-muse-wonder-1-0
+    displayName: Muse Wonder 1.0 pricing
+    description: "Global endpoint, the only one listed. Source: https://cloud.google.com/model-garden/partner-models/pricing, read 2026-11-24."
+    owner:
+        kind: host
+        id: google-vertex
+spec:
+    currency: USD
+    targetModels:
+        - muse-wonder-1-0
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 4
+        - meter: tokens.output
+          unit: per_million
+          amount: 20
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.2

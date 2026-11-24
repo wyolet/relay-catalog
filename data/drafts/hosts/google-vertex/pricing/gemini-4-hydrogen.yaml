@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: google-vertex-gemini-4-hydrogen
+    displayName: Gemini 4 Hydrogen pricing
+    description: "Standard pay-as-you-go on the global endpoint; non-global endpoints bill 10% more. Cache writes are not billed until 2027-01-12 (1.875 from then). Source: https://cloud.google.com/model-garden/pricing, read 2026-11-24."
+    owner:
+        kind: host
+        id: google-vertex
+spec:
+    currency: USD
+    targetModels:
+        - gemini-4-hydrogen
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 1.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 7.5
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.075

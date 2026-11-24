@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: gemini-4-argon-on-google-vertex
+    displayName: "Gemini 4 Argon via google-vertex"
+spec:
+    model: gemini-4-argon
+    host: google-vertex
+    adapter: gemini
+    pricing: google-vertex-gemini-4-argon
+    snapshots: [gemini-4-argon]
