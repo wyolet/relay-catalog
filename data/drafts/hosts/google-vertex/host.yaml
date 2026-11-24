@@ -9,6 +9,9 @@ metadata:
         kind: system
 spec:
     baseURL: https://aiplatform.googleapis.com
+    paths:
+        openai: /v1/projects/{project}/locations/{location}/endpoints/openapi/chat/completions
+        openai_responses: /v1/projects/{project}/locations/{location}/publishers/meta/v1/responses
     backend:
         location: global
     pricingStrategies:

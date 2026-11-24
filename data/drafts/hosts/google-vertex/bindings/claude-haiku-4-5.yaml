@@ -7,6 +7,6 @@ metadata:
 spec:
     model: claude-haiku-4-5
     host: google-vertex
-    adapter: anthropic
+    adapter: vertex_anthropic
     pricing: google-vertex-claude-haiku-4-5
     snapshots: [claude-haiku-4-5]

@@ -7,6 +7,6 @@ metadata:
 spec:
     model: claude-fable-5-1
     host: google-vertex
-    adapter: anthropic
+    adapter: vertex_anthropic
     pricing: google-vertex-claude-fable-5-1
     snapshots: [claude-fable-5-1]

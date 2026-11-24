@@ -7,6 +7,6 @@ metadata:
 spec:
     model: claude-sonnet-5
     host: google-vertex
-    adapter: anthropic
+    adapter: vertex_anthropic
     pricing: google-vertex-claude-sonnet-5
     snapshots: [claude-sonnet-5]

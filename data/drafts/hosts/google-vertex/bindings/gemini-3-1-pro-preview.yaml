@@ -7,6 +7,6 @@ metadata:
 spec:
     model: gemini-3-1-pro-preview
     host: google-vertex
-    adapter: gemini
+    adapter: vertex_gemini
     pricing: google-vertex-gemini-3-1-pro-preview
     snapshots: [gemini-3-1-pro-preview]

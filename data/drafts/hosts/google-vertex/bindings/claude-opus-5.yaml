@@ -7,6 +7,6 @@ metadata:
 spec:
     model: claude-opus-5
     host: google-vertex
-    adapter: anthropic
+    adapter: vertex_anthropic
     pricing: google-vertex-claude-opus-5
     snapshots: [claude-opus-5]

@@ -7,6 +7,6 @@ metadata:
 spec:
     model: gemini-4-argon
     host: google-vertex
-    adapter: gemini
+    adapter: vertex_gemini
     pricing: google-vertex-gemini-4-argon
     snapshots: [gemini-4-argon]
