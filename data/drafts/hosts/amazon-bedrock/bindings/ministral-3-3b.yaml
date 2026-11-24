@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: ministral-3-3b-on-amazon-bedrock
+    displayName: "Ministral 3 3B via amazon-bedrock"
+spec:
+    model: ministral-3-3b
+    host: amazon-bedrock
+    adapter: openai
+    upstreamName: mistral.ministral-3-3b-instruct
+    pricing: amazon-bedrock-ministral-3-3b

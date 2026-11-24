@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: gpt-6-2-sol-on-amazon-bedrock
+    displayName: "GPT-6.2 Sol via amazon-bedrock"
+spec:
+    model: gpt-6-2-sol
+    host: amazon-bedrock
+    adapter: openai
+    # inference profile: global.openai.gpt-6.2-sol (us. also exists); bedrock-runtime has no in-Region on-demand for the plain id
+    upstreamName: openai.gpt-6.2-sol
+    pricing: amazon-bedrock-gpt-6-2-sol

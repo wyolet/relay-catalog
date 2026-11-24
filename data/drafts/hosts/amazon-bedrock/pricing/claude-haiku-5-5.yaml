@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: amazon-bedrock-claude-haiku-5-5
+    displayName: Claude Haiku 5.5 pricing
+    description: "Global cross-Region inference rates, Standard tier; cache writes are the 5-minute and 1-hour rates. Geo profiles (us., ca., eu., au., jp.) cost 10% more. Prompts over 100,000 tokens bill at the Long Context row. Source: https://aws.amazon.com/bedrock/pricing/ (Anthropic, Global Cross-region Inference table), read 2026-11-24."
+    owner:
+        kind: host
+        id: amazon-bedrock
+spec:
+    currency: USD
+    targetModels:
+        - claude-haiku-5-5
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.1
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.5
+          aboveTokens: 100000
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.output
+          unit: per_million
+          amount: 2.5
+          aboveTokens: 100000
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.125
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 0.625
+          aboveTokens: 100000
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.01
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.05
+          aboveTokens: 100000
+        - meter: tokens.cache_creation_1h
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.cache_creation_1h
+          unit: per_million
+          amount: 1
+          aboveTokens: 100000

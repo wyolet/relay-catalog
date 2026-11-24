@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: kimi-k3-1-pro-highspeed-on-amazon-bedrock
+    displayName: "Kimi K3.1 Pro Highspeed via amazon-bedrock"
+spec:
+    model: kimi-k3-1-pro-highspeed
+    host: amazon-bedrock
+    adapter: openai
+    # inference profile: global.moonshotai.kimi-k3.1 (us., in. also exist); bedrock-runtime has no in-Region on-demand for the plain id
+    upstreamName: moonshotai.kimi-k3.1
+    pricing: amazon-bedrock-kimi-k3-1-pro-highspeed

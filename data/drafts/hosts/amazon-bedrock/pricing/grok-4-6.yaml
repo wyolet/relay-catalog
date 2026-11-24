@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: amazon-bedrock-grok-4-6
+    displayName: Grok 4.6 pricing
+    description: "Global cross-Region inference rates, Standard tier; AWS publishes no cache-write rate. Geo profiles (us.) cost 10% more. Source: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-xai-grok-4-6.html, read 2026-11-24."
+    owner:
+        kind: host
+        id: amazon-bedrock
+spec:
+    currency: USD
+    targetModels:
+        - grok-4-6
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.output
+          unit: per_million
+          amount: 6
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.5

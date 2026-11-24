@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: glm-5-3-on-amazon-bedrock
+    displayName: "GLM-5.3 via amazon-bedrock"
+spec:
+    model: glm-5-3
+    host: amazon-bedrock
+    adapter: openai
+    # inference profile: global.zai.glm-5.3 (us. also exists); bedrock-runtime has no in-Region on-demand for the plain id
+    upstreamName: zai.glm-5.3
+    pricing: amazon-bedrock-glm-5-3

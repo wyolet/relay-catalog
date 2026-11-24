@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: claude-sonnet-4-6-on-amazon-bedrock
+    displayName: "Claude Sonnet 4.6 via amazon-bedrock"
+spec:
+    model: claude-sonnet-4-6
+    host: amazon-bedrock
+    adapter: anthropic
+    # inference profile: global.anthropic.claude-sonnet-4-6 (us., eu., au., jp. also exist); bedrock-runtime has no in-Region on-demand for the plain id
+    upstreamName: anthropic.claude-sonnet-4-6
+    pricing: amazon-bedrock-claude-sonnet-4-6

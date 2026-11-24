@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: claude-opus-4-7-on-amazon-bedrock
+    displayName: "Claude Opus 4.7 via amazon-bedrock"
+spec:
+    model: claude-opus-4-7
+    host: amazon-bedrock
+    adapter: anthropic
+    # inference profile: global.anthropic.claude-opus-4-7 (us., eu., jp., au. also exist); bedrock-runtime has no in-Region on-demand for the plain id
+    upstreamName: anthropic.claude-opus-4-7
+    pricing: amazon-bedrock-claude-opus-4-7

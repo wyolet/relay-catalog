@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: grok-4-6-on-amazon-bedrock
+    displayName: "Grok 4.6 via amazon-bedrock"
+spec:
+    model: grok-4-6
+    host: amazon-bedrock
+    adapter: openai
+    # inference profile: global.xai.grok-4.6 (us. also exists); bedrock-runtime has no in-Region on-demand for the plain id
+    upstreamName: xai.grok-4.6
+    pricing: amazon-bedrock-grok-4-6

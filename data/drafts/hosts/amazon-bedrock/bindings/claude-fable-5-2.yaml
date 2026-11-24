@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: claude-fable-5-2-on-amazon-bedrock
+    displayName: "Claude Fable 5.2 via amazon-bedrock"
+spec:
+    model: claude-fable-5-2
+    host: amazon-bedrock
+    adapter: anthropic
+    # inference profile: global.anthropic.claude-fable-5-2 (us. also exists); bedrock-runtime has no in-Region on-demand for the plain id
+    upstreamName: anthropic.claude-fable-5-2
+    pricing: amazon-bedrock-claude-fable-5-2

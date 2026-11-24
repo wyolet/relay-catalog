@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: nemotron-3-super-on-amazon-bedrock
+    displayName: "Nemotron 3 Super via amazon-bedrock"
+spec:
+    model: nemotron-3-super
+    host: amazon-bedrock
+    adapter: openai
+    upstreamName: nvidia.nemotron-super-3-120b
+    pricing: amazon-bedrock-nemotron-3-super

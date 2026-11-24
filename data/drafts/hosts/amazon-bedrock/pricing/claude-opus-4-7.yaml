@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: amazon-bedrock-claude-opus-4-7
+    displayName: Claude Opus 4.7 pricing
+    description: "Global cross-Region inference rates, Standard tier; cache writes are the 5-minute and 1-hour rates. Geo profiles (us., eu., jp., au.) cost 10% more. Source: https://aws.amazon.com/bedrock/pricing/ (Anthropic, Global Cross-region Inference table), read 2026-11-24."
+    owner:
+        kind: host
+        id: amazon-bedrock
+spec:
+    currency: USD
+    targetModels:
+        - claude-opus-4-7
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 5
+        - meter: tokens.output
+          unit: per_million
+          amount: 25
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 6.25
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.cache_creation_1h
+          unit: per_million
+          amount: 10
