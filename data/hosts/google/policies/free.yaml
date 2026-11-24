@@ -1,0 +1,167 @@
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: RateLimit
+metadata:
+    name: google-free-flash-rl
+    displayName: Gemini API Free — Gemini Flash (3, 3.6, 3.8) and Gemini 4 Hydrogen
+    description: "Per model: requests per minute, input tokens per minute, requests per day. Limits read from the AI Studio rate-limit page of a Tier 1 project and its tier comparison, 2026-11-24; Google sets them per project and may differ on yours."
+    owner:
+        kind: host
+        name: google
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 5
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens.input
+          amount: 250000
+          window: 1m
+          strategy: sliding-window
+        - meter: requests
+          amount: 20
+          window: 24h
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: RateLimit
+metadata:
+    name: google-free-flash-2-5-rl
+    displayName: Gemini API Free — Gemini 2.5 Flash
+    description: "Per model: requests per minute, input tokens per minute, requests per day. Limits read from the AI Studio rate-limit page of a Tier 1 project and its tier comparison, 2026-11-24; Google sets them per project and may differ on yours."
+    owner:
+        kind: host
+        name: google
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 5
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens.input
+          amount: 250000
+          window: 1m
+          strategy: sliding-window
+        - meter: requests
+          amount: 20
+          window: 24h
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: RateLimit
+metadata:
+    name: google-free-flash-lite-rl
+    displayName: Gemini API Free — Gemini Flash Lite (3.1, 3.5)
+    description: "Per model: requests per minute, input tokens per minute, requests per day. Limits read from the AI Studio rate-limit page of a Tier 1 project and its tier comparison, 2026-11-24; Google sets them per project and may differ on yours."
+    owner:
+        kind: host
+        name: google
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 10
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens.input
+          amount: 250000
+          window: 1m
+          strategy: sliding-window
+        - meter: requests
+          amount: 500
+          window: 24h
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: RateLimit
+metadata:
+    name: google-free-flash-lite-2-5-rl
+    displayName: Gemini API Free — Gemini 2.5 Flash Lite
+    description: "Per model: requests per minute, input tokens per minute, requests per day. Limits read from the AI Studio rate-limit page of a Tier 1 project and its tier comparison, 2026-11-24; Google sets them per project and may differ on yours."
+    owner:
+        kind: host
+        name: google
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 10
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens.input
+          amount: 250000
+          window: 1m
+          strategy: sliding-window
+        - meter: requests
+          amount: 20
+          window: 24h
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: RateLimit
+metadata:
+    name: google-free-gemma-rl
+    displayName: Gemini API Free — Gemma 4
+    description: "Per model: requests per minute, input tokens per minute, requests per day. Limits read from the AI Studio rate-limit page of a Tier 1 project and its tier comparison, 2026-11-24; Google sets them per project and may differ on yours."
+    owner:
+        kind: host
+        name: google
+spec:
+    enabled: true
+    rules:
+        - meter: requests
+          amount: 30
+          window: 1m
+          strategy: sliding-window
+        - meter: tokens.input
+          amount: 16000
+          window: 1m
+          strategy: sliding-window
+        - meter: requests
+          amount: 14400
+          window: 24h
+          strategy: sliding-window
+---
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Policy
+metadata:
+    name: google-free
+    displayName: Gemini API Free
+    description: "Gemini API Free: an active project or free trial, no billing account. Models without free quota are not allowed. Per aistudio.google.com/docs/rate-limits, 2026-11-24."
+    owner:
+        kind: host
+        name: google
+spec:
+    models:
+        - google/gemini-3-8-flash
+        - google/gemini-3-6-flash
+        - google/gemini-3-flash-preview
+        - google/gemini-4-hydrogen
+        - google/gemini-2-5-flash
+        - google/gemini-3-5-flash-lite
+        - google/gemini-3-1-flash-lite
+        - google/gemini-2-5-flash-lite
+        - google/gemma-4-31b-it
+        - google/gemma-4-26b-a4b-it
+    rateLimits:
+        - ref: google-free-flash-rl
+          models:
+            - google/gemini-3-8-flash
+            - google/gemini-3-6-flash
+            - google/gemini-3-flash-preview
+            - google/gemini-4-hydrogen
+        - ref: google-free-flash-2-5-rl
+          models:
+            - google/gemini-2-5-flash
+        - ref: google-free-flash-lite-rl
+          models:
+            - google/gemini-3-5-flash-lite
+            - google/gemini-3-1-flash-lite
+        - ref: google-free-flash-lite-2-5-rl
+          models:
+            - google/gemini-2-5-flash-lite
+        - ref: google-free-gemma-rl
+          models:
+            - google/gemma-4-31b-it
+            - google/gemma-4-26b-a4b-it
