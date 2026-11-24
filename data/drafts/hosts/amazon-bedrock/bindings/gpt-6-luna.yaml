@@ -7,7 +7,7 @@ metadata:
 spec:
     model: gpt-6-luna
     host: amazon-bedrock
-    adapter: openai
-    # inference profile: global.openai.gpt-6-luna (us. also exists); bedrock-runtime has no in-Region on-demand for the plain id
-    upstreamName: openai.gpt-6-luna
+    adapter: openai_responses
+    # Global inference profile; on-demand use needs a profile id. Geo profiles (us.) bill 10% more. Foundation model id: openai.gpt-6-luna
+    upstreamName: global.openai.gpt-6-luna
     pricing: amazon-bedrock-gpt-6-luna

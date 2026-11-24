@@ -8,6 +8,6 @@ spec:
     model: claude-haiku-4-5
     host: amazon-bedrock
     adapter: anthropic
-    # inference profile: global.anthropic.claude-haiku-4-5-20251001-v1:0 (us., eu., au., jp., in. also exist); bedrock-runtime has no in-Region on-demand for the plain id
-    upstreamName: anthropic.claude-haiku-4-5-20251001-v1:0
+    # Global inference profile; on-demand use needs a profile id. Geo profiles (us., eu., au., jp., in.) bill 10% more. Foundation model id: anthropic.claude-haiku-4-5-20251001-v1:0
+    upstreamName: global.anthropic.claude-haiku-4-5-20251001-v1:0
     pricing: amazon-bedrock-claude-haiku-4-5

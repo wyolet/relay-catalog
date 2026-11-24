@@ -8,6 +8,6 @@ spec:
     model: claude-fable-5-2
     host: amazon-bedrock
     adapter: anthropic
-    # inference profile: global.anthropic.claude-fable-5-2 (us. also exists); bedrock-runtime has no in-Region on-demand for the plain id
-    upstreamName: anthropic.claude-fable-5-2
+    # Global inference profile; on-demand use needs a profile id. Geo profiles (us.) bill 10% more. Foundation model id: anthropic.claude-fable-5-2
+    upstreamName: global.anthropic.claude-fable-5-2
     pricing: amazon-bedrock-claude-fable-5-2

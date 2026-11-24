@@ -8,6 +8,6 @@ spec:
     model: grok-4-6
     host: amazon-bedrock
     adapter: openai
-    # inference profile: global.xai.grok-4.6 (us. also exists); bedrock-runtime has no in-Region on-demand for the plain id
-    upstreamName: xai.grok-4.6
+    # Global inference profile; on-demand use needs a profile id. Geo profiles (us.) bill 10% more. Foundation model id: xai.grok-4.6
+    upstreamName: global.xai.grok-4.6
     pricing: amazon-bedrock-grok-4-6

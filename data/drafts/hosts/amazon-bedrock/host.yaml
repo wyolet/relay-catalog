@@ -8,7 +8,9 @@ metadata:
 spec:
     baseURL: https://bedrock-runtime.us-east-1.amazonaws.com
     paths:
+        anthropic: /anthropic/v1/messages
         openai: /openai/v1/chat/completions
+        openai_responses: /openai/v1/responses
     backend:
         region: us-east-1
     pricingStrategies:

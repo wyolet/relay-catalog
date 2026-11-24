@@ -7,7 +7,7 @@ metadata:
 spec:
     model: gpt-5-6-sol
     host: amazon-bedrock
-    adapter: openai
-    # inference profile: global.openai.gpt-5.6-sol (us. also exists); bedrock-runtime has no in-Region on-demand for the plain id
-    upstreamName: openai.gpt-5.6-sol
+    adapter: openai_responses
+    # Global inference profile; on-demand use needs a profile id. Geo profiles (us.) bill 10% more. Foundation model id: openai.gpt-5.6-sol
+    upstreamName: global.openai.gpt-5.6-sol
     pricing: amazon-bedrock-gpt-5-6-sol

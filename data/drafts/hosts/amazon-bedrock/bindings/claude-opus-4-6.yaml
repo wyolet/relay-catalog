@@ -7,7 +7,8 @@ metadata:
 spec:
     model: claude-opus-4-6
     host: amazon-bedrock
-    adapter: anthropic
-    # inference profile: global.anthropic.claude-opus-4-6-v1 (us., eu., au. also exist); bedrock-runtime has no in-Region on-demand for the plain id
-    upstreamName: anthropic.claude-opus-4-6-v1
+    adapter: bedrock_anthropic
+    enabled: false
+    # Global inference profile; on-demand use needs a profile id. Geo profiles (us., eu., au.) bill 10% more. Foundation model id: anthropic.claude-opus-4-6-v1
+    upstreamName: global.anthropic.claude-opus-4-6-v1
     pricing: amazon-bedrock-claude-opus-4-6
