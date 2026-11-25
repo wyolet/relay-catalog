@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: google-vertex-gemini-3-1-pro-preview-customtools
+    displayName: Gemini 3.1 Pro Preview Custom Tools pricing
+    description: "Priced as Gemini 3.1 Pro Preview per https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/gemini/3-1-pro; global endpoint only. Requests over 200K input tokens bill every token at the long-context rate. Source: https://cloud.google.com/model-garden/pricing, read 2026-11-24."
+    owner:
+        kind: host
+        id: google-vertex
+spec:
+    currency: USD
+    targetModels:
+        - gemini-3-1-pro-preview-customtools
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.output
+          unit: per_million
+          amount: 12
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.input
+          unit: per_million
+          amount: 4
+          aboveTokens: 200000
+        - meter: tokens.output
+          unit: per_million
+          amount: 18
+          aboveTokens: 200000
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.4
+          aboveTokens: 200000

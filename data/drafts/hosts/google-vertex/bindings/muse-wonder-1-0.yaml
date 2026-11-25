@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: muse-wonder-1-0-on-google-vertex
+    displayName: "Muse Wonder 1.0 via google-vertex"
+spec:
+    model: muse-wonder-1-0
+    host: google-vertex
+    adapter: openai_responses
+    pricing: google-vertex-muse-wonder-1-0
+    snapshots: [muse-wonder-1-0]

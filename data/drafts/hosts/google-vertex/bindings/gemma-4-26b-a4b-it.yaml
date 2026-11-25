@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: gemma-4-26b-a4b-it-on-google-vertex
+    displayName: "Gemma 4 26B A4B IT via google-vertex"
+spec:
+    model: gemma-4-26b-a4b-it
+    host: google-vertex
+    adapter: openai
+    upstreamName: google/gemma-4-26b-a4b-it-maas
+    pricing: google-vertex-gemma-4-26b-a4b-it
+    snapshots: [gemma-4-26b-a4b-it]

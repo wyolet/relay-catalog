@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: gpt-oss-120b-on-google-vertex
+    displayName: "GPT OSS 120B via google-vertex"
+spec:
+    model: gpt-oss-120b
+    host: google-vertex
+    adapter: openai
+    upstreamName: openai/gpt-oss-120b-maas
+    pricing: google-vertex-gpt-oss-120b
+    snapshots: [gpt-oss-120b]
