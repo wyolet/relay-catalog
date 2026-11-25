@@ -1,10 +1,9 @@
-# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Policy.schema.json
 apiVersion: relay.wyolet.dev/v1alpha3
 kind: Policy
 metadata:
-  name: bedrock-default
-  displayName: Amazon Bedrock (default)
-  description: "Placeholder upstream policy. No relay-side caps — Bedrock service quotas are per-(account, region, model) and the upstream's own quota response governs. Operators with a known quota should clone this and attach a host-owned RateLimit."
+  name: amazon-bedrock-default
+  displayName: Amazon Bedrock default
+  description: "Bedrock quotas are per AWS account, Region and model (tokens per minute, and requests per minute for some models), and are viewed and raised in AWS Service Quotas. Anchor policy without relay-side caps — set your own after checking your account's quotas. Per docs.aws.amazon.com/bedrock/latest/userguide/quotas-runtime.html, 2026-11-24."
   owner:
     kind: host
     name: amazon-bedrock

@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: glm-5-3-on-amazon-bedrock
+    displayName: "GLM-5.3 via amazon-bedrock"
+spec:
+    model: glm-5-3
+    host: amazon-bedrock
+    adapter: openai
+    # Global inference profile; on-demand use needs a profile id. Geo profiles (us.) bill 10% more. Foundation model id: zai.glm-5.3
+    upstreamName: global.zai.glm-5.3
+    pricing: amazon-bedrock-glm-5-3
+    snapshots: [glm-5-3]

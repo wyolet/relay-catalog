@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: claude-haiku-5-5-on-amazon-bedrock
+    displayName: "Claude Haiku 5.5 via amazon-bedrock"
+spec:
+    model: claude-haiku-5-5
+    host: amazon-bedrock
+    adapter: anthropic
+    # Global inference profile; on-demand use needs a profile id. Geo profiles (us., ca., eu., au., jp.) bill 10% more. Foundation model id: anthropic.claude-haiku-5-5
+    upstreamName: global.anthropic.claude-haiku-5-5
+    pricing: amazon-bedrock-claude-haiku-5-5
+    snapshots: [claude-haiku-5-5]

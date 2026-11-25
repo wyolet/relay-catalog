@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: gpt-oss-20b-on-amazon-bedrock
+    displayName: "GPT OSS 20B via amazon-bedrock"
+spec:
+    model: gpt-oss-20b
+    host: amazon-bedrock
+    adapter: openai
+    upstreamName: openai.gpt-oss-20b-1:0
+    pricing: amazon-bedrock-gpt-oss-20b
+    snapshots: [gpt-oss-20b]

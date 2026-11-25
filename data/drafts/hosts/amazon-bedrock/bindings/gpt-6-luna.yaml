@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: gpt-6-luna-on-amazon-bedrock
+    displayName: "GPT-6 Luna via amazon-bedrock"
+spec:
+    model: gpt-6-luna
+    host: amazon-bedrock
+    adapter: openai_responses
+    # Global inference profile; on-demand use needs a profile id. Geo profiles (us.) bill 10% more. Foundation model id: openai.gpt-6-luna
+    upstreamName: global.openai.gpt-6-luna
+    pricing: amazon-bedrock-gpt-6-luna
+    snapshots: [gpt-6-luna]

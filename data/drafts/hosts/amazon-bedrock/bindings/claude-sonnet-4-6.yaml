@@ -1,0 +1,15 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: claude-sonnet-4-6-on-amazon-bedrock
+    displayName: "Claude Sonnet 4.6 via amazon-bedrock"
+spec:
+    model: claude-sonnet-4-6
+    host: amazon-bedrock
+    adapter: bedrock_anthropic
+    enabled: false
+    # Global inference profile; on-demand use needs a profile id. Geo profiles (us., eu., au., jp.) bill 10% more. Foundation model id: anthropic.claude-sonnet-4-6
+    upstreamName: global.anthropic.claude-sonnet-4-6
+    pricing: amazon-bedrock-claude-sonnet-4-6
+    snapshots: [claude-sonnet-4-6]

@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: qwen3-coder-next-on-amazon-bedrock
+    displayName: "Qwen 3 Coder Next via amazon-bedrock"
+spec:
+    model: qwen3-coder-next
+    host: amazon-bedrock
+    adapter: openai
+    enabled: false
+    upstreamName: qwen.qwen3-coder-next
+    pricing: amazon-bedrock-qwen3-coder-next
+    snapshots: [qwen3-coder-next-q8-0]
