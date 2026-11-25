@@ -8,5 +8,6 @@ spec:
     model: gemini-3-6-flash
     host: google-vertex
     adapter: vertex_gemini
+    enabled: false
     pricing: google-vertex-gemini-3-6-flash
     snapshots: [gemini-3-6-flash]

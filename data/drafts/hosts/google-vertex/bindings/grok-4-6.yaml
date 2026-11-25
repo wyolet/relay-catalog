@@ -8,6 +8,7 @@ spec:
     model: grok-4-6
     host: google-vertex
     adapter: openai
+    enabled: false
     upstreamName: xai/grok-4.6
     pricing: google-vertex-grok-4-6
     snapshots: [grok-4-6]
