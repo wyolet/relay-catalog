@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: amazon-bedrock-gpt-6-sol
+    displayName: GPT-6 Sol pricing
+    description: "Global cross-Region inference rates, Standard tier; cache write is the 30-minute rate. The us. geo profile costs 10% more. Requests over 272,000 input tokens bill wholly at the long-context rates. Source: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-openai-gpt-6-sol.html, read 2026-11-24."
+    owner:
+        kind: host
+        id: amazon-bedrock
+spec:
+    currency: USD
+    targetModels:
+        - gpt-6-sol
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.input
+          unit: per_million
+          amount: 4
+          aboveTokens: 272000
+        - meter: tokens.output
+          unit: per_million
+          amount: 10
+        - meter: tokens.output
+          unit: per_million
+          amount: 15
+          aboveTokens: 272000
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 2.5
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 5
+          aboveTokens: 272000
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.2
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.4
+          aboveTokens: 272000

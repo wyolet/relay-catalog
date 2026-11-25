@@ -1,0 +1,10 @@
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Policy
+metadata:
+  name: google-vertex-default
+  displayName: Google Agent Platform default
+  description: "Agent Platform quotas are per project, per region and per model, and are viewed and raised in the Google Cloud console (Quotas & System Limits). Anchor policy without relay-side caps; set your own from the project's quota page. Per docs.cloud.google.com/gemini-enterprise-agent-platform/models, 2026-11-24."
+  owner:
+    kind: host
+    name: google-vertex
+spec: {}

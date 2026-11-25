@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: amazon-bedrock-nemotron-3-nano-30b
+    displayName: Nemotron 3 Nano 30B pricing
+    description: "In-Region on-demand rates for US East (N. Virginia), Standard tier; no cross-Region profile in commercial Regions, and some other Regions cost more. Source: https://aws.amazon.com/bedrock/pricing/ (NVIDIA), read 2026-11-24."
+    owner:
+        kind: host
+        id: amazon-bedrock
+spec:
+    currency: USD
+    targetModels:
+        - nemotron-3-nano-30b
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 0.06
+        - meter: tokens.output
+          unit: per_million
+          amount: 0.24

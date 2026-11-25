@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: amazon-bedrock-claude-fable-5-1
+    displayName: Claude Fable 5.1 pricing
+    description: "Global cross-Region inference rates, Standard tier; cache writes are the 5-minute and 1-hour rates. Geo profiles (us.) cost 10% more. Source: https://aws.amazon.com/bedrock/pricing/ (Anthropic, Global Cross-region Inference table), read 2026-11-24."
+    owner:
+        kind: host
+        id: amazon-bedrock
+spec:
+    currency: USD
+    targetModels:
+        - claude-fable-5-1
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 10
+        - meter: tokens.output
+          unit: per_million
+          amount: 50
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 12.5
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.25
+        - meter: tokens.cache_creation_1h
+          unit: per_million
+          amount: 20

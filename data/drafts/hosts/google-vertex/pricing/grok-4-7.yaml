@@ -1,0 +1,36 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: google-vertex-grok-4-7
+    displayName: Grok 4.7 pricing
+    description: "Requests over 200K input tokens bill every token at the long-context rate. The page lists one rate, with no regional variant. Source: https://cloud.google.com/model-garden/partner-models/pricing, read 2026-11-24."
+    owner:
+        kind: host
+        id: google-vertex
+spec:
+    currency: USD
+    targetModels:
+        - grok-4-7
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 2
+        - meter: tokens.output
+          unit: per_million
+          amount: 6
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.input
+          unit: per_million
+          amount: 4
+          aboveTokens: 200000
+        - meter: tokens.output
+          unit: per_million
+          amount: 12
+          aboveTokens: 200000
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 1
+          aboveTokens: 200000

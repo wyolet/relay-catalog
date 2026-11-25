@@ -1,0 +1,13 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: glm-5-2-on-google-vertex
+    displayName: "GLM-5.2 via google-vertex"
+spec:
+    model: glm-5-2
+    host: google-vertex
+    adapter: openai
+    upstreamName: zai-org/glm-5.2-maas
+    pricing: google-vertex-glm-5-2
+    snapshots: [glm-5-2]

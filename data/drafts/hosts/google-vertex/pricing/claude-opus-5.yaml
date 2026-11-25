@@ -1,0 +1,30 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: google-vertex-claude-opus-5
+    displayName: Claude Opus 5 pricing
+    description: "Global endpoint; regional and multi-region endpoints bill 10% more. Source: https://cloud.google.com/model-garden/partner-models/pricing, read 2026-11-24."
+    owner:
+        kind: host
+        id: google-vertex
+spec:
+    currency: USD
+    targetModels:
+        - claude-opus-5
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 5
+        - meter: tokens.output
+          unit: per_million
+          amount: 25
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 6.25
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.5
+        - meter: tokens.cache_creation_1h
+          unit: per_million
+          amount: 10

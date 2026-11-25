@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: muse-spark-1-3-on-google-vertex
+    displayName: "Muse Spark 1.3 via google-vertex"
+spec:
+    model: muse-spark-1-3
+    host: google-vertex
+    adapter: openai_responses
+    pricing: google-vertex-muse-spark-1-3
+    snapshots: [muse-spark-1-3]

@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: claude-fable-5-on-amazon-bedrock
+    displayName: "Claude Fable 5 via amazon-bedrock"
+spec:
+    model: claude-fable-5
+    host: amazon-bedrock
+    adapter: anthropic
+    # Global inference profile; on-demand use needs a profile id. Geo profiles (us.) bill 10% more. Foundation model id: anthropic.claude-fable-5
+    upstreamName: global.anthropic.claude-fable-5
+    pricing: amazon-bedrock-claude-fable-5
+    snapshots: [claude-fable-5]

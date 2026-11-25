@@ -1,0 +1,24 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Host.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Host
+metadata:
+    name: google-vertex
+    displayName: "Google Agent Platform (Vertex AI)"
+    description: "Google Cloud's Gemini Enterprise Agent Platform, formerly Vertex AI. Serves Gemini through generateContent, Claude through rawPredict in the Anthropic Messages shape, and partner and open models through OpenAI-compatible endpoints, all under a per-project path on the global endpoint. Authenticates with Google Cloud credentials."
+    owner:
+        kind: system
+spec:
+    baseURL: https://aiplatform.googleapis.com
+    paths:
+        openai: /v1/projects/{project}/locations/{location}/endpoints/openapi/chat/completions
+        openai_responses: /v1/projects/{project}/locations/{location}/publishers/meta/v1/responses
+    backend:
+        location: global
+    pricingStrategies:
+        - api
+    homepageURL: https://cloud.google.com/products/gemini-enterprise-agent-platform
+    docsURL: https://docs.cloud.google.com/gemini-enterprise-agent-platform/models
+    consoleURL: https://console.cloud.google.com/agent-platform/model-garden
+    statusPageURL: https://status.cloud.google.com
+    icon:
+        path: /provider/google.png

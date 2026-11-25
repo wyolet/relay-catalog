@@ -1,0 +1,27 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/Pricing.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: Pricing
+metadata:
+    name: amazon-bedrock-kimi-k3
+    displayName: Kimi K3 pricing
+    description: "Global cross-Region inference rates, Standard tier; cache write is the 30-minute rate. Geo profiles (us., in.) cost 10% more. Source: https://docs.aws.amazon.com/bedrock/latest/userguide/model-card-moonshot-ai-kimi-k3.html, read 2026-11-24."
+    owner:
+        kind: host
+        id: amazon-bedrock
+spec:
+    currency: USD
+    targetModels:
+        - kimi-k3
+    rates:
+        - meter: tokens.input
+          unit: per_million
+          amount: 3
+        - meter: tokens.output
+          unit: per_million
+          amount: 15
+        - meter: tokens.cache_creation
+          unit: per_million
+          amount: 3.75
+        - meter: tokens.cache_read
+          unit: per_million
+          amount: 0.3

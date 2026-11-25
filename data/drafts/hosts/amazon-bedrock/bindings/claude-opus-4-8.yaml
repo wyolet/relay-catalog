@@ -1,0 +1,14 @@
+# yaml-language-server: $schema=https://relay-api.wyolet.dev/schemas/v1alpha3/HostBinding.schema.json
+apiVersion: relay.wyolet.dev/v1alpha3
+kind: HostBinding
+metadata:
+    name: claude-opus-4-8-on-amazon-bedrock
+    displayName: "Claude Opus 4.8 via amazon-bedrock"
+spec:
+    model: claude-opus-4-8
+    host: amazon-bedrock
+    adapter: anthropic
+    # Global inference profile; on-demand use needs a profile id. Geo profiles (us., eu., jp., au.) bill 10% more. Foundation model id: anthropic.claude-opus-4-8
+    upstreamName: global.anthropic.claude-opus-4-8
+    pricing: amazon-bedrock-claude-opus-4-8
+    snapshots: [claude-opus-4-8]
